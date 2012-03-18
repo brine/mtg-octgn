@@ -1,0 +1,98 @@
+3.0.2
+-Temporarily changed the morph function to allow the Dark Ascension Double-Faced cards to transform without requiring their autoscript tags.
+-Alignment properly sorts tokens and copied cards now.
+
+3.0.1
+-Double-clicking the library is reverted back to drawing a card.
+-The first shuffle will check to see if there's an update to your game definition.
+-Fixed Wurmcoil Engine's token creation crashing the game
+-Card alignment now groups nonland cards (with no attachments or markers) in pairs of four
+-Cards are now aligned in specific positions, normal cards stack downwards from the top, while cards with attachments or markers stack upwards from the bottom.
+-Artifacts, Enchantments and Planeswalkers were combined into the same alignment sort group to make the script more efficient.
+
+--------
+
+3.0.0
+-Major update release to coincide with the new OCTGN development team's first major release
+
+Game Functions:
+-Double-clicking a card in the Library, Graveyard, or Exiled Zone will now cast that card (similar to hand), and any CAST autoscript tags will be triggered
+-All double-faced cards use the new "alternate image" features in OCTGN to "flip" the cards, instead of swapping between tokens
+-All functionality involving the transform cards swapping between tokens is removed
+-Morph/Transform function has been redesigned
+-Cascade functionality implemented (may be buggy)
+-Using the "Attach card" action on a card without a target will remove it from the attachcards list (effectively "unattaches" a card)
+-Added "Pick a random card" action (CTRL+R shortcut) for the Graveyard and Exiled Zone, which will publically display the name of a random card in that group (for abilities like the Innistrad "random card from the graveyard" cards)
+
+Autoscripts:
+-Autoscript recognition system has been overhauled, new bugs may have been created
+-the autoscript processing script now breaks each tag up into parts and processes each part individually (so tags like destroy.token[somwurm1, 1].token[somwurm2, 1]; will now work)
+-Complete overhaul in the method in which card tags are extracted
+-M10, ARB, CON added to autoscript tags
+-All token-generating autoscript tags rely on the "marker/tokens" set definition instead of the tokens found in their originating sets.
+
+Auto-Align:
+-Auto-Align script will update the cattach dictionary if either part of a card/attachment pair has left the table
+-the MOVETO autoscript will run now recognizes TABLE and STACK destinations.  STACK will trigger any CAST autoscript tags, and TABLE will trigger ETB autoscript tags.
+-moveto[graveyard] autoscript now triggers DESTROY autoscript tags.
+-Card alignment no longer asks if the player is on the inverted side of the table (now automatic).
+-Cleaned up auto-align to support the new "move to back" python function
+
+Misc.:
+-Auras will check for a target as they're cast, then automatically attach themselves to the target when it resolves
+-if the target leaves the table, the aura will be countered (sent to graveyard) 
+-Fixed bug where the card name wasn't hoverable in the resolve script's chat log message
+-The "Tags" card property has been removed from the deck editor
+
+
+--------
+
+2.0.16:
+-Quick fix for the command zone's cards being hidden for other players.
+
+2.0.15:
+-Fixed Koth of the Hammer's 3rd ability loyalty cost
+-The transform scripts have been made a little more efficient
+-zeniths now work properly again
+-All tokens are now included in the Markers set, and the autoscript tags have been regenerated for this
+
+2.0.14:
+-Nonland cards are now sorted by card type
+-Cards with the Morph tag will ask if you want to cast it face-down.
+-Added autoscript tag functions for transform[], highlight[] and untapped[]
+-Added groundwork for the Morph mechanic in autoscript tags
+-Innistrad added to autoscript tags
+-Transform mechanic functionality added
+-Resolve autoscript modified to exile the Transform card and put a token of the Day card onto the battlefield instead.
+-Destroy autoscript modified to put the exiled Transform card into graveyard after a token is destroyed
+-Morph function modified to manually transform a double-faced card instead of morphing it.
+-Streamlined the player counter tab, now displays Life, Poison, Hand count, and Commander revive count
+-Doesn't Untap highlight is now black
+-Added dark red highlight: Attacking + Doesn't Untap
+-Added dark yellow highlight: Blocking + Doesn't Untap
+-Required OCTGN version has been returned to 0.9.3.2 to allow OCTGNwLobby compatibility
+
+2.0.13:
+-Magic 2012 added to autoscript tags
+-Blocking can now trigger autoscript abilities
+-Fixed an issue with attached cards aligning in the wrong locations for certain players.
+-Autoscripts that make multiple tokens now make the correct number of tokens.
+
+2.0.12:
+-New Phyrexia added to autoscript tags
+-Auto-align and attachment can be disabled through the "enable/disable autoscripts" action
+
+2.0.11:
+-Command Zone is now defaulted face-up
+-New zone for planes and schemes, face-down
+-"Commander Toggle" action adds/removes the "Commander Not-In-Play" marker
+-Any cards with the "commander Not-In-Play" marker will not be affected by the auto-alignment scripts
+-Added a Commander counter to keep track of how many times its been revived
+-Commander counter shows up for quick reference in the player tab
+-Fixed issue with the player on the left side's attached cards showing up on the right side instead
+
+2.0.10
+-Cards can now properly attach to lands
+-Lands with markers on them will not group together with other lands of the same name
+-Lands that have been attached to will not group together either.
+-Card alignment bug fixes
