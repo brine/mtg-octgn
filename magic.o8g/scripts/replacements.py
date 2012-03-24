@@ -191,7 +191,6 @@ tokenTypes = {
     'snake11m': ('1 / 1 Multicolor Green Blue Snake', '0d09c8cd-2263-4bf5-b745-31c08f2fba5f'),
     'soldier11w': ('1 / 1 White Soldier', '9668a327-cd7e-4284-8065-0e6c0a96941d'),
     'soldierally11w': ('1 / 1 White Soldier Ally', '9624bca2-94bd-4f9b-96f4-5a1ce682974f'),
-    'sorinemblem': ('Sorin, Lord of Innistrad', 'b916e959-5a1d-4903-850a-95544f6ae566'),
     'sparkelemental31r': ('3 / 1 Red Spark Elemental', 'caecab65-fca4-40e3-8a7a-d2fd19a90bca'),
     'spawn22c': ('2 / 2 Colorless Spawn', '1f910c89-a64f-434c-9e92-4f4a2351d32b'),
     'spider12g': ('1 / 2 Green Spider', 'e48bb912-1d32-42c1-9e5c-59a4f30c9c25'),
@@ -234,11 +233,15 @@ tokenTypes = {
     'wolvesofthehunt11g': ('1 / 1 Green Wolves of The Hunt', '66dea368-12dc-4cb7-b01a-4cc6d76a1c46'),
     'worm11m': ('1 / 1 Multicolor Black Green Worm', 'fd6aa5b4-3be4-4826-91af-48ad8472216a'),
     'wurm33c': ('3 / 3 Colorless Wurm', '7876a3ed-19ab-41fb-8d41-d2e82aea5d96'),
-    'wurm33c': ('3 / 3 Colorless Wurm', '1659c37d-5fa6-43e4-8fe7-19bef8d6964d'),
+    'wurm33c2': ('3 / 3 Colorless Wurm', '1659c37d-5fa6-43e4-8fe7-19bef8d6964d'),
     'wurm66g': ('6 / 6 Green Wurm', '4e259c1c-f66a-444a-9c08-6e6bdc42db23'),
     'wurm66b': ('6 / 6 Black Wurm', '5e914c05-f6a8-46f3-bd58-e32c83c386a7'),
     'wurm**g': ('* / * Green Wurm', '6c6cf231-531b-4273-a6e5-383c476ec1c7'),
     'zombie22b': ('2 / 2 Black Zombie', 'ad05cb9d-19c2-4e3f-ba53-ca7ef54765b7'),
     'zombiegiant55b': ('5 / 5 Black Zombie Giant', '84f5b8a0-050e-4078-88e2-0f9dd6182ea0'),
-    'zombiewizard11m': ('1 / 1 Multicolor Blue Black Zombie Wizard', '7c543985-82bc-4173-8d6c-3a901f65c4bf')
+    'zombiewizard11m': ('1 / 1 Multicolor Blue Black Zombie Wizard', '7c543985-82bc-4173-8d6c-3a901f65c4bf'),
+    'elspethemblem': ('Elspeth, Knight-Errant', '10281a72-4654-4416-a24a-293ce0d732ea'),
+    'kothemblem': ('Koth of the Hammer', '38365196-9a15-4f78-a525-d01a80f94ace'),
+    'venseremblem': ('Venser, the Sojourner', '3ec344de-90cb-480e-94be-96ff4ff774af'),
+    'sorinemblem': ('Sorin, Lord of Innistrad', 'b916e959-5a1d-4903-850a-95544f6ae566')
 }
