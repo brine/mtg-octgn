@@ -17,7 +17,8 @@ counters = {
     'phylactery': ('Phylactery counter', '756f94b6-7c73-4a59-be29-f596693d9410'),
     'eon': ('Eon counter', 'f18a0845-efbb-473f-a8b9-9448ca2b3939'),
     'wish': ('Wish counter', '30e9d5d4-f867-4604-8acf-2630303f6855'),
-    'study': ('Study counter', 'cfb948cb-accf-41f5-894e-bf0cb2eaa19c')
+    'study': ('Study counter', 'cfb948cb-accf-41f5-894e-bf0cb2eaa19c'),
+    'slime': ('Slime counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f')
 }
 
 scriptMarkers = {

@@ -143,11 +143,27 @@ def stackPlay(card):
   mute()
   castinittext = autoscript(card, getTags(card, 'castinit'))
   if castinittext == None: return
+  targettext = ""
+  if card.Subtype != None and re.search(r'Aura', card.Subtype):
+    target = (card for card in table if card.targetedBy)
+    targetcount = sum(1 for card in table if card.targetedBy)
+    if targetcount == 1:
+      for targetcard in target:
+        while getGlobalVariable('cattach') == 'CHECKOUT':
+           whisper("Global card attachment dictionary is currently in use, please wait.")
+           return CRASH
+        cattach = eval(getGlobalVariable('cattach'))
+        setGlobalVariable('cattach', 'CHECKOUT')
+        cattach[card._id] = targetcard._id
+        targetcard.target(False)
+        setGlobalVariable('cattach', str(cattach))
+        targettext = ", targeting {}".format(targetcard)
   card.moveToTable(0,0)
-  card.markers[scriptMarkers['cast']] += 1
   casttext = autoscript(card, getTags(card, 'cast'))
-  notify("{} casts {}{}{}.".format(me, card, castinittext, casttext))
+  card.markers[scriptMarkers['cast']] += 1
+  notify("{} casts {}{}{}{}.".format(me, card, castinittext, casttext, targettext))
   if card.Type != None and re.search(r'Land', card.Type):
+    delay = rnd(1, 1000)
     stackResolve(card)
   cardalign()
 
@@ -519,7 +535,7 @@ def cardcount(search, card):
   elif search == "cost":
     qty = card.markers[scriptMarkers['cost']]
     card.markers[scriptMarkers['cost']] -= qty 
-  elif re.search(r'marker\.', search):
+  elif re.search(r'marker', search):
     marker = search[search.find("marker")+7:]
     addmarker = counters[marker]
     qty = card.markers[addmarker]
@@ -594,17 +610,19 @@ def autocost(card, tag):
       marker = scriptMarkers['x']
     else:
       marker = scriptMarkers['cost']
-    if qty == "1":
+    if qty == "bool":
       if confirm("{}'s {}: Pay additional/alternate cost?".format(card.name, type)):
         card.markers[marker] = 1
         cost = ", paying {} cost".format(type.title())
       else:
         cost = ""
-    else:
+    elif qty == "ask":
       amount = askInteger("{}'s {}: Paying how many times?".format(card.name, type), 0)
       if amount == None: amount = 0
       card.markers[marker] = amount
       cost = ", paying {} {} times".format(type.title(), amount)
+    else:
+      card.markers[marker] = cardcount(qty)
     return cost
 
 def autotransform(card, tag):
@@ -639,7 +657,7 @@ def autotoken(card, tag):
         elif modtag == 'tap':
           token.orientation = Rot90
         elif re.search(r'marker', modtag):
-          (marker, type, quant) = modtag.split('.')
+          (marker, type, quant) = modtag.split('_')
           token.markers[counters[type]] += cardcount(qty, token)
     tokentext = "{} {}/{} {} {}".format(quantity, token.Power, token.Toughness, token.Color, token.name)
     cardalign()
