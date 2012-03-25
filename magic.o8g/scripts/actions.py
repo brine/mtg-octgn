@@ -89,8 +89,6 @@ def gain1Life(group, x = 0, y = 0):
 
 def scoop(group, x = 0, y = 0):
     mute()
-    cattach.clear()
-    cstack.clear()
     if not confirm("Are you sure you want to scoop?"): return
     me.life = 20
     me.poison = 0
