@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<game name="Magic: the Gathering" id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" octgnVersion="3.0.0.8" version="3.0.4" markersize="14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Game.xsd">
+<game name="Magic: the Gathering" id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" octgnVersion="3.0.1.0" version="3.0.5" markersize="14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Game.xsd">
   <scripts>
     <script src="r18" />
     <script src="r19" />
@@ -9,6 +9,7 @@
   <globalvariables> 
     <globalvariable name="globaltags" value="{ }"/>
     <globalvariable name="cattach" value="{ }"/>
+    <globalvariable name="smartmarker" value=""/>
   </globalvariables>
   <card back="r01" front="r02" width="63" height="88" cornerRadius="2">
     <property name="Cost" type="String" ignoreText="true" />
@@ -48,6 +49,7 @@
     <groupaction menu="Gain 1 Life" shortcut="ctrl+W" execute="gain1Life" />
     <groupaction menu="Enable/Disable Autoscripts" execute="disable" />
     <groupaction menu="Re-align Cards" execute="align" />
+    <groupaction menu="Clear Global Variables Cache" execute="clearCache" />
     <cardaction menu="Tap/Untap or Resolve" shortcut="ctrl+G" default="true" execute="resolve" />
     <cardaction menu="Don't Untap during Untap Step" shortcut="ctrl+V" execute="doesNotUntap" />
     <cardaction menu="Attack" shortcut="ctrl+A" execute="attack" />
@@ -57,7 +59,6 @@
     <cardaction menu="Morph/Transform" shortcut="ctrl+F" execute="morph" />
     <cardaction menu="Flip" shortcut="ctrl+shift+F" execute="flip" />
     <cardaction menu="Clone Card" shortcut="ctrl+C" batchExecute="clone" />
-    <groupaction menu="Clear Global Variables Cache" execute="clearCache" />
     <cardaction menu="Destroy Card" shortcut="del" execute="destroy" />
     <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
     <cardaction menu="Move to Top of Libary" shortcut="ctrl+Y" execute="tolibrary" />
@@ -66,6 +67,7 @@
     <cardaction menu="Clear Card" shortcut="esc" execute="clear" />
     <cardaction menu="Use Activated Ability" shortcut="ctrl+Z" execute="activate" />
     <cardactions menu="Add Counters...">
+      <cardaction menu="Auto-Add Counter" shortcut="ctrl+1" execute="autoAddMarker" />
       <cardaction menu="Add +1/+1 Counter" shortcut="ctrl+2" execute="addPlusOneMarker" />
       <cardaction menu="Add -1/-1 Counter" shortcut="ctrl+3" execute="addMinusOneMarker" />        
       <cardaction menu="Add Loyalty Counter" shortcut="ctrl+4" execute="addLoyaltyMarker" />
@@ -76,16 +78,19 @@
       <cardaction menu="Add Spore Counter" shortcut="ctrl+9" execute="addSporeMarker" />  
     </cardactions>  
     <cardactions menu="Remove Counters...">
+      <cardaction menu="Auto-Remove Counter" shortcut="ctrl+shift+1" execute="autoRemoveMarker" />
       <cardaction menu="Remove +1/+1 Counter" shortcut="ctrl+shift+2" execute="removePlusOneMarker" />
       <cardaction menu="Remove -1/-1 Counter" shortcut="ctrl+shift+3" execute="removeMinusOneMarker" />
       <cardaction menu="Remove Loyalty Counter" shortcut="ctrl+shift+4" execute="removeLoyaltyMarker" />
       <cardaction menu="Remove Level Counter" shortcut="ctrl+shift+5" execute="removeLevelMarker" />
-      <cardaction menu="Remove Charge Counter" shortcut="ctrl+shift+6" execute="removeChargeMarker" />     
-      <cardaction menu="Remove Quest Counter" shortcut="ctrl+shift+7" execute="removeQuestMarker" />       
-      <cardaction menu="Remove Time Counter" shortcut="ctrl+shift+8" execute="removeTimeMarker" />        
+      <cardaction menu="Remove Charge Counter" shortcut="ctrl+shift+6" execute="removeChargeMarker" />
+      <cardaction menu="Remove Quest Counter" shortcut="ctrl+shift+7" execute="removeQuestMarker" />
+      <cardaction menu="Remove Time Counter" shortcut="ctrl+shift+8" execute="removeTimeMarker" />
       <cardaction menu="Remove Spore Counter" shortcut="ctrl+shift+9" execute="removeSporeMarker" />
     </cardactions>
-    <cardaction menu="Add other counter..." shortcut="ctrl+0" batchExecute="addMarker" /> 
+    <cardaction menu="Add Smart-Counter" shortcut="ctrl+shift+S" execute="smartMarker" />
+    <cardaction menu="Add Other Counter..." shortcut="ctrl+0" batchExecute="addMarker" />
+    <cardaction menu="Auto-Create Token" shortcut="ctrl+shift+T" execute="autoCreateToken" />
     <cardaction menu="Commander Toggle" execute="generaltoggle" />
     <cardaction menu="Check Card Rulings (on Gatherer)" execute="rulings" />
     <cardaction menu="Submit Tags" execute="submitTags" />

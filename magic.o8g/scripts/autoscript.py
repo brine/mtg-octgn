@@ -234,6 +234,9 @@ def trigAbility(card, tagclass, pile):
     if 'marker' in inittag:
       for tag in inittag['marker']:
         text += automarker(card, stackcard, tag)
+    if 'smartmarker' in inittag:
+      for tag in inittag['smartmarker']:
+        text += autosmartmarker(card, tag)
     if 'highlight' in inittag:
       for tag in inittag['highlight']:
         text += autohighlight(card, tag)
@@ -277,6 +280,9 @@ def stackResolve(stackcard, type):
   if 'marker' in resolvetag:
     for tag in resolvetag['marker']:
       text += automarker(card, stackcard, tag)
+  if 'smartmarker' in resolvetag:
+    for tag in resolvetag['smartmarker']:
+      text += autosmartmarker(card, tag)
   if 'highlight' in resolvetag:
     for tag in resolvetag['highlight']:
       text += autohighlight(card, tag)
@@ -672,6 +678,72 @@ def autountapped(card, untapped):
   card.orientation = Rot0
   return ", untapped"
 
+def autosmartmarker(card, marker):
+  if marker in counters:
+    setGlobalVariable("smartmarker", marker)
+    notify("{} sets the Smart Counter to {}.".format(me, counters[marker][0]))
+  return ""
+
 ############################
 #Smart Token/Markers
 ############################
+
+def autoCreateToken(card, x = 0, y = 0):
+  mute()
+  text = ""
+  tokens = getTags(card, 'autotoken')
+  if tokens != "":
+    for token in tokens:
+      addtoken = tokenTypes[token]
+      tokencard = table.create(addtoken[1], x, y, 1, persist = False)
+      x, y = table.offset(x, y)
+      text += "{}/{} {} {}, ".format(tokencard.Power, tokencard.Toughness, tokencard.Color, tokencard.name)
+    if autoscripts == True: cardalign()
+    notify("{} creates {}.".format(me, text[0:-2]))
+
+def autoAddMarker(card, x = 0, y = 0):
+  mute()
+  text = ""
+  markers = getTags(card, 'automarker')
+  if markers != "":
+    for marker in markers:
+      addmarker = counters[marker]
+      if marker == "minusoneminusone" and counters["plusoneplusone"] in card.markers:
+        card.markers[counters["plusoneplusone"]] -= 1
+      elif marker == "plusoneplusone" and counters["minusoneminusone"] in card.markers:
+        card.markers[counters["minusoneminusone"]] -= 1
+      else:
+        card.markers[addmarker] += 1
+      text += "one {}, ".format(addmarker[0])
+    notify("{} adds {} to {}.".format(me, text[0:-2], card))
+
+def autoRemoveMarker(card, x = 0, y = 0):
+  mute()
+  text = ""
+  markers = getTags(card, 'automarker')
+  if markers != "":
+    for marker in markers:
+      addmarker = counters[marker]
+      if addmarker in card.markers:
+        card.markers[addmarker] -= 1
+        text += "one {}, ".format(addmarker[0])
+    if text != "":
+      notify("{} removes {} from {}.".format(me, text[0:-2], card))
+
+def smartMarker(card, x = 0, y = 0):
+  mute()
+  marker = getGlobalVariable("smartmarker")
+  if marker == "": 
+    whisper("No counters available")
+    return
+  if marker == "minusoneminusone" and counters["plusoneplusone"] in card.markers:
+    card.markers[counters["plusoneplusone"]] -= 1
+    notify("{} adds one -1/-1 counter to {}.".format(me, card))
+  elif marker == "plusoneplusone" and counters["minusoneminusone"] in card.markers:
+    card.markers[counters["minusoneminusone"]] -= 1
+    notify("{} adds one -1/-1 counter to {}.".format(me, card))
+  else:
+    addmarker = counters[marker]
+    card.markers[addmarker] += 1
+    notify("{} adds one {} to {}.".format(me, addmarker[0], card))
+    
