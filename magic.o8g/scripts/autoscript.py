@@ -376,14 +376,14 @@ def cardalign():
     whisper("Global card attachment dictionary is currently in use, please wait.")
     return CRASH
   cattach = eval(getGlobalVariable('cattach'))
-  setGlobalVariable('cattach', 'CHECKOUT')
-  group1 = [cardid for cardid in cattach if Card(cattach[cardid]).group.name != "Table"]
+  setGlobalVariable('cattach', 'CHECKOUT') not in table
+  group1 = [cardid for cardid in cattach if Card(cattach[cardid]) not in table]
   for cardid in group1:
     if Card(cardid).Subtype != None and re.search(r'Aura', Card(cardid).Subtype) and Card(cardid).controller == me:
       Card(cardid).moveTo(me.Graveyard)
       notify("{}'s {} was destroyed".format(me, Card(cardid)))
     del cattach[cardid]
-  group2 = [cardid for cardid in cattach if Card(cardid).group.name != "Table"]
+  group2 = [cardid for cardid in cattach if Card(cardid) not in table]
   for cardid in group2:
     del cattach[cardid]
   setGlobalVariable('cattach', str(cattach))
