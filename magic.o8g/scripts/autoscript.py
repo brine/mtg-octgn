@@ -56,7 +56,7 @@ def getTags(card, key):
     return CRASH
   savedtags = eval(getGlobalVariable('globaltags'))
   setGlobalVariable('globaltags', 'CHECKOUT')
-  if re.search(r"//", card.name) and not card.Type!= None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
+  if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
     if card.isAlternateImage == True:
       cardname = (card.name)[(card.name).find("/")+3:]
     else:
