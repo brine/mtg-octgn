@@ -367,11 +367,37 @@ def stackAttach(card):
 
 def align(group, x = 0, y = 0):
   mute()
-  cardalign()
-  notify("{} re-aligns his cards on the table".format(me))
+  if autoscripts == True:
+    cardalign()
+    notify("{} re-aligns his cards on the table".format(me))
 
 def cardalign():
   mute()
+  global playerside
+  global sideflip
+  if sideflip == 0:
+    return BREAK
+  if Table.isTwoSided():
+    if playerside == None:
+      if me.hasInvertedTable():
+        playerside = -1
+      else:
+        playerside = 1
+    if sideflip == None:
+      playersort = sorted(players, key=lambda player: player._id)
+      playercount = [p for p in playersort if me.hasInvertedTable() == p.hasInvertedTable()]
+      if len(playercount) > 2:
+        whisper("Cannot align: Too many players on your side of the table.")
+        sideflip = 0
+        return BREAK
+      if playercount[0] == me:
+        sideflip = 1
+      else:
+        sideflip = -1
+  else:
+    whisper("Cannot align: Two-sided table is required for card alignment.")
+    sideflip = 0
+    return BREAK
   while getGlobalVariable('cattach') == 'CHECKOUT':
     whisper("Global card attachment dictionary is currently in use, please wait.")
     return CRASH
@@ -387,26 +413,6 @@ def cardalign():
   for cardid in group2:
     del cattach[cardid]
   setGlobalVariable('cattach', str(cattach))
-  global playerside
-  global sideflip
-  if Table.isTwoSided():
-    if playerside == None:
-      if me.hasInvertedTable():
-        playerside = -1
-      else:
-        playerside = 1
-    if sideflip == None:
-      if len(players) > 2 and len(players) < 5:
-        playersort = sorted(players, key=lambda player: player._id)
-        if playersort[0] == me or playersort[1] == me:
-          sideflip = 1
-        else:
-          sideflip = -1
-      else:
-        sideflip = 1
-  else:
-    playerside = 1
-    sideflip = 1
   stackcount = 0
   stackcards = (card for card in table
         if scriptMarkers['cast'] in card.markers
