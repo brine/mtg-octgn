@@ -56,11 +56,11 @@ def getTags(card, key):
     return CRASH
   savedtags = eval(getGlobalVariable('globaltags'))
   setGlobalVariable('globaltags', 'CHECKOUT')
-  if re.search(r"//", card.name):
-    if card.isAlternateImage == True or card.orientation & Rot180 == Rot180:
-      cardname = (card.name)[(card.name).find("/")+2:]
+  if re.search(r"//", card.name) and not card.Type!= None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
+    if card.isAlternateImage == True:
+      cardname = (card.name)[(card.name).find("/")+3:]
     else:
-      cardname = (card.name)[:(card.name).find("/")]
+      cardname = (card.name)[:(card.name).find("/")-1]
   else:
     cardname = card.name
   encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
@@ -125,11 +125,11 @@ def getTags(card, key):
     return ""
 
 def submitTags(card, x = 0, y = 0):
-  if re.search(r"//", card.name):
-    if card.isAlternateImage == True or card.orientation & Rot180 == Rot180:
-      cardname = (card.name)[(card.name).find("/")+2:]
+  if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
+    if card.isAlternateImage == True:
+      cardname = (card.name)[(card.name).find("/")+3:]
     else:
-      cardname = (card.name)[:(card.name).find("/")]
+      cardname = (card.name)[:(card.name).find("/")-1]
   else:
     cardname = card.name
   encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
@@ -143,9 +143,12 @@ def submitTags(card, x = 0, y = 0):
 
 def morph(card, x = 0, y = 0):
     mute()
-    if card.isAlternateImage == True or re.search(r'DFC', card.Rarity):
+    if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
       card.switchImage
-      notify("{} transforms {}.".format(me, card))
+      if re.search(r'DFC', card.Rarity):
+        notify("{} transforms {}.".format(me, card))
+      else:
+        notify("{} flips {}.".format(me, card))
     else:
       if card.isFaceUp == True:
         notify("{} morphs {} face down.".format(me, card))
@@ -216,6 +219,8 @@ def trigAbility(card, tagclass, pile):
         return text
     if getTags(card, tagclass) != '':
         stackcard = table.create(card.model, 0, 0, 1)
+        if card.isAlternateImage == True:
+          stackcard.switchImage
         if re.search(r'activate', tagclass):
           stackcard.markers[scriptMarkers['activate']] += int(tagclass[-1])
         else:

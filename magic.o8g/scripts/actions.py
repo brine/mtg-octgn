@@ -231,7 +231,7 @@ def exile(card, x = 0, y = 0):
 def attack(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    if card.orientation == Rot90 or card.orientation == 270:
+    if card.orientation == Rot90:
       if confirm("Cannot attack: already tapped. Continue?") != True: return
     elif card.highlight == AttackColor or card.highlight == AttackDoesntUntapColor:
       if confirm("Cannot attack: already attacking. Continue?") != True: return
@@ -253,7 +253,7 @@ def attack(card, x = 0, y = 0):
 def attackWithoutTapping(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    if card.orientation == Rot90 or card.orientation == 270:
+    if card.orientation == Rot90:
       if confirm("Cannot attack: {} is tapped. Continue?".format(card)) != True: return
     elif card.highlight == AttackColor or card.highlight == AttackDoesntUntapColor:
       if confirm("Cannot attack: already attacking. Continue?") != True: return
@@ -337,11 +337,12 @@ def doesNotUntap(card, x = 0, y = 0):
 
 def flip(card, x = 0, y = 0):
     mute()
-    if card.orientation & Rot180 == Rot180:
-      notify("{} unflips {}.".format(me, card))
+    if card.isFaceUp == True:
+      notify("{} flips {} face down.".format(me, card))
+      card.isFaceUp = False
     else:
-      notify("{} flips {}.".format(me, card))
-    card.orientation ^= Rot180
+      card.isFaceUp = True
+      notify("{} flips {} face up.".format(me, card))
 
 def clear(card, x = 0, y = 0):
     notify("{} clears {}.".format(me, card))
@@ -350,7 +351,9 @@ def clear(card, x = 0, y = 0):
 
 def clone(cards, x = 0, y = 0):
     for c in cards:
-      table.create(c.model, x, y, 1)
+      copy = table.create(c.model, x, y, 1)
+      if c.isAlternateImage == True:
+        copy.switchImage
       x, y = table.offset(x, y)
 
 def addMarker(cards, x = 0, y = 0):
