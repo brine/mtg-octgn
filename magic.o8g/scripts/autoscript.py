@@ -210,6 +210,8 @@ def trigAbility(card, tagclass, pile):
         card.markers[scriptMarkers['cast']] = 1
         for markers in markerdict:
             card.markers[scriptMarkers[markers]] += markerdict[markers]
+        if card.Type != None and re.search(r'Land', card.Type):
+             text += stackResolve(card, 'resolve')
         cardalign()
         return text
     if getTags(card, tagclass) != '':
