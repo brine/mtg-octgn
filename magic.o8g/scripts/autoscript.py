@@ -69,33 +69,52 @@ def getTags(card, key):
     if code != 200:
       whisper('tag database is currently unavailable.')
       fulltag = tags[cardname]
-    tagpieces = fulltag.split('; ')
     tagdict = { }
-    for t in tagpieces:
-     if t != "":
-       t2 = t.split('.')
-       tagdict[t2[0]] = t2[1:]
+    classpieces = fulltag.split('; ')
+    for classes in classpieces:
+     if classes != "":
+       actionlist = classes.split('.')
+       actiondict = { }
+       for actionpieces in actionlist[1:]:
+         actionname = actionpieces[:actionpieces.find("[")]
+         actionparam = actionpieces[actionpieces.find("[")+1:actionpieces.find("]")]
+         if actionname == 'token':
+           if not 'autotoken' in tagdict:
+             tagdict['autotoken'] = [ ]
+           tokenname = actionparam[:actionparam.find(",")]
+           if not tokenname in tagdict['autotoken']:
+             tagdict['autotoken'].append(tokenname)
+         if actionname == 'marker':
+           if not 'automarker' in tagdict:
+             tagdict['automarker'] = [ ]
+           markername = actionparam[:actionparam.find(",")]
+           if not markername in tagdict['automarker']:
+             tagdict['automarker'].append(markername)
+         if not actionname in actiondict:
+           actiondict[actionname] = [ ]
+         actiondict[actionname].append(actionparam)
+       tagdict[actionlist[0]] = actiondict
     savedtags[cardname] = tagdict
   setGlobalVariable('globaltags', str(savedtags))
   if key == 'allactivate':
     st = savedtags[cardname]
-    if 'activateinit1' in st: text11 = st['activateinit1']
+    if 'initactivate1' in st: text11 = st['initactivate1']
     else: text11 = ''
     if 'activate1' in st: text12 = st['activate1']
     else: text12 = ''
-    if 'activateinit2' in st: text21 = st['activateinit2']
+    if 'initactivate2' in st: text21 = st['initactivate2']
     else: text21 = ''
     if 'activate2' in st: text22 = st['activate2']
     else: text22 = ''
-    if 'activateinit3' in st: text31 = st['activateinit3']
+    if 'initactivate3' in st: text31 = st['initactivate3']
     else: text31 = ''
     if 'activate3' in st: text32 = st['activate3']
     else: text32 = ''
-    if 'activateinit4' in st: text41 = st['activateinit4']
+    if 'initactivate4' in st: text41 = st['initactivate4']
     else: text41 = ''
     if 'activate4' in st: text42 = st['activate4']
     else: text42 = ''
-    if 'activateinit5' in st: text51 = st['activateinit5']
+    if 'initactivate5' in st: text51 = st['initactivate5']
     else: text51 = ''
     if 'activate5' in st: text52 = st['activate5']
     else: text52 = ''
@@ -139,189 +158,156 @@ def morph(card, x = 0, y = 0):
 #Card Functions -- Autoscripted  
 ##################################
 
-def stackPlay(card):
-  mute()
-  castinittext = autoscript(card, getTags(card, 'castinit'))
-  if castinittext == None: return
-  targettext = ""
-  if card.Subtype != None and re.search(r'Aura', card.Subtype):
-    target = (card for card in table if card.targetedBy)
-    targetcount = sum(1 for card in table if card.targetedBy)
-    if targetcount == 1:
-      for targetcard in target:
-        while getGlobalVariable('cattach') == 'CHECKOUT':
-           whisper("Global card attachment dictionary is currently in use, please wait.")
-           return CRASH
-        cattach = eval(getGlobalVariable('cattach'))
-        setGlobalVariable('cattach', 'CHECKOUT')
-        cattach[card._id] = targetcard._id
-        targetcard.target(False)
-        setGlobalVariable('cattach', str(cattach))
-        targettext = ", targeting {}".format(targetcard)
-  card.moveToTable(0,0)
-  casttext = autoscript(card, getTags(card, 'cast'))
-  card.markers[scriptMarkers['cast']] += 1
-  notify("{} casts {}{}{}{}.".format(me, card, castinittext, casttext, targettext))
-  if card.Type != None and re.search(r'Land', card.Type):
-    delay = rnd(1, 1000)
-    stackResolve(card)
-  cardalign()
+def trigAbility(card, tagclass, pile):
+    mute()
+    markerdict = { }
+    text = ""
+    inittag = getTags(card, 'init{}'.format(tagclass))
+    if tagclass == 'cast' and card.Subtype != None and re.search(r'Aura', card.Subtype):
+      target = (card for card in table if card.targetedBy)
+      targetcount = sum(1 for card in table if card.targetedBy)
+      if targetcount == 1:
+        for targetcard in target:
+          while getGlobalVariable('cattach') == 'CHECKOUT':
+             whisper("Global card attachment dictionary is currently in use, please wait.")
+             return CRASH
+          cattach = eval(getGlobalVariable('cattach'))
+          setGlobalVariable('cattach', 'CHECKOUT')
+          cattach[card._id] = targetcard._id
+          targetcard.target(False)
+          setGlobalVariable('cattach', str(cattach))
+          text += ", targeting {}".format(targetcard)
+    if 'marker' in inittag:
+        for markertag in inittag['marker']:
+            (markername, qty) = markertag.split(', ')
+            count = card.markers[counters[markername]]
+            if count + cardcount(card, card, qty) < 0:
+                if not confirm("Not enough {} counters to remove!\nContinue?".format(markername)): return BREAK
+    if 'tapped' in inittag and card.orientation == Rot90:
+        if not confirm("{} is already tapped!\nContinue?".format(card)): return BREAK
+    if 'untapped' in inittag and card.orientation == Rot0:
+        if not confirm("{} is already untapped!\nContinue?".format(card)): return BREAK
+    if 'cost' in inittag:
+        for costtag in inittag['cost']:
+            (cost, type) = costtag.split(', ')
+            if cost in scriptMarkers:
+                marker = cost
+            else:
+                marker = 'cost'
+            if type == "ask":
+                if confirm("{}'s {}: Pay additional/alternate cost?".format(card.name, cost)):
+                    markerdict[marker] = 1
+                    text += ", paying {} cost".format(cost.title())
+            elif type == "num":
+                qty = askInteger("{}'s {}: Paying how many times?".format(card.name, cost), 0)
+                if qty == None: qty = 0
+                markerdict[marker] = qty
+                text += ", paying {} {} times".format(cost.title(), qty)
+            else:
+                markerdict[marker] = cardcount(card, card, type)
+    if tagclass == 'cast':
+        card.moveToTable(0,0)
+        card.markers[scriptMarkers['cast']] = 1
+        for markers in markerdict:
+            card.markers[scriptMarkers[markers]] += markerdict[markers]
+        cardalign()
+        return text
+    if getTags(card, tagclass) != '':
+        stackcard = table.create(card.model, 0, 0, 1)
+        if re.search(r'activate', tagclass):
+          stackcard.markers[scriptMarkers['activate']] += int(tagclass[-1])
+        else:
+            stackcard.markers[scriptMarkers[tagclass]] += 1
+        cstack[stackcard] = card
+        for markers in markerdict:
+            stackcard.markers[scriptMarkers[markers]] += markerdict[markers]
+    else:
+        stackcard = card
+    if 'life' in inittag:
+      for tag in inittag['life']:
+        text += autolife(card, stackcard, tag)
+    if 'token' in inittag:
+      for tag in inittag['token']:
+        text += autotoken(card, stackcard, tag)
+    if 'marker' in inittag:
+      for tag in inittag['marker']:
+        text += automarker(card, stackcard, tag)
+    if 'highlight' in inittag:
+      for tag in inittag['highlight']:
+        text += autohighlight(card, tag)
+    if 'tapped' in inittag:
+      for tag in inittag['tapped']:
+        text += autotapped(card, tag)
+    if 'untapped' in inittag:
+      for tag in inittag['untapped']:
+        text += autountapped(card, tag)
+    if 'transform' in inittag:
+      for tag in inittag['transform']:
+        text += autotransform(card, tag)
+    if 'moveto' in inittag:
+      for tag in inittag['moveto']:
+        text += automoveto(card, tag)
+    elif pile == "table":
+        card.moveToTable(0,0)
+    elif pile != '':
+        card.moveTo(me.piles[pile])
+    cardalign()
+    return text
 
-def stackResolve(card):
+def stackResolve(stackcard, type):
   mute()
-  if card in cstack:
-    stackcard = cstack[card]
-  if scriptMarkers['cast'] in card.markers:
-    resolvecost = getTags(card, 'resolvecost')
-    if scriptMarkers['cost'] in card.markers and resolvecost != '':
-      resolvetext = autoscript(card, resolvecost)
-    else:
-      resolvetext = autoscript(card, getTags(card, 'resolve'))
-    if scriptMarkers['cost'] in card.markers and getTags(card, 'etbcost') != '':
-      newcard = table.create(card.model, 0, 0, 1)
-      newcard.markers[scriptMarkers['etb']] += 1
-      newcard.markers[scriptMarkers['cost']] += card.markers[scriptMarkers['cost']]
-      cstack[newcard] = card
-    elif not scriptMarkers['cost'] in card.markers and getTags(card, 'etb') != '':
-      newcard = table.create(card.model, 0, 0, 1)
-      newcard.markers[scriptMarkers['etb']] += 1
-      cstack[newcard] = card
-    card.markers[scriptMarkers['cast']] = 0
-    card.markers[scriptMarkers['cost']] = 0
-    card.markers[scriptMarkers['x']] = 0
-    trigtype = ""
-  elif scriptMarkers['attack'] in card.markers:
-    attackcost = getTags(card, 'attackcost')
-    if scriptMarkers['cost'] in card.markers and attackcost != '':
-      resolvetext = autoscript(stackcard, attackcost)
-    else:
-      resolvetext = autoscript(stackcard, getTags(card, 'attack'))
-    trigtype = "'s attack trigger"
-  elif scriptMarkers['block'] in card.markers:
-    blockcost = getTags(card, 'blockcost')
-    if scriptMarkers['cost'] in card.markers and blockcost != '':
-      resolvetext = autoscript(stackcard, blockcost)
-    else:
-      resolvetext = autoscript(stackcard, getTags(card, 'block'))
-    trigtype = "'s block trigger"
-  elif scriptMarkers['etb'] in card.markers:
-    etbcost = getTags(card, 'etbcost')
-    if scriptMarkers['cost'] in card.markers and etbcost != '':
-      resolvetext = autoscript(stackcard, etbcost)
-    else:
-      resolvetext = autoscript(stackcard, getTags(card, 'etb'))
-    trigtype = "'s enters-play trigger"
-  elif scriptMarkers['destroy'] in card.markers:
-    destroycost = getTags(card, 'destroycost')
-    if scriptMarkers['cost'] in card.markers and destroycost != '':
-      resolvetext = autoscript(stackcard, destroycost)
-    else:
-      resolvetext = autoscript(stackcard, getTags(card, 'destroy')) 
-    trigtype = "'s destroy trigger"
-  elif scriptMarkers['exile'] in card.markers:
-    exilecost = getTags(card, 'exilecost')
-    if scriptMarkers['cost'] in card.markers and exilecost != '':
-      resolvetext = autoscript(card, exilecost)
-    else:
-      resolvetext = autoscript(card, getTags(card, 'exile'))
-    trigtype = "'s exile trigger"
-  elif scriptMarkers['activate'] in card.markers:
-    markercount = card.markers[scriptMarkers['activate']]
-    activatecost = getTags(card, 'activatecost{}'.format(markercount))
-    if scriptMarkers['cost'] in card.markers and activatecost != '':
-      resolvetext = autoscript(stackcard, activatecost)
-    else:
-      resolvetext = autoscript(stackcard, getTags(card, 'activate{}'.format(markercount)))
-    trigtype = "'s ability {} trigger".format(markercount)
-  if card in cstack or re.search(r'Instant', card.Type) or re.search(r'Sorcery', card.Type):
-    card.moveTo(me.Graveyard)
-  notify("{} resolves {}{}{}.".format(me, card, trigtype, resolvetext))
-  cardalign()
-
-def stackAttack(card, tap):
-  mute()
-  attackinittext = autoscript(card, getTags(card, 'attackinit'))
-  if attackinittext == None: return
-  if card.orientation == Rot90:
-    if not confirm("Cannot attack: {} is already tapped. Continue?".format(card.name)): return
-  if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
-    card.highlight = AttackDoesntUntapColor
+  text = ''
+  if stackcard in cstack:
+    card = cstack[stackcard]
   else:
-    card.highlight = AttackColor
-  if tap == True:
-    card.orientation |= Rot90
-  if getTags(card, 'attack') != '':
-    newcard = table.create(card.model, 0, 0, 1)
-    newcard.markers[scriptMarkers['cost']] = card.markers[scriptMarkers['cost']]
-    card.markers[scriptMarkers['cost']] = 0
-    newcard.markers[scriptMarkers['x']] = card.markers[scriptMarkers['x']]
-    card.markers[scriptMarkers['x']] = 0
-    newcard.markers[scriptMarkers['attack']] += 1
-    cstack[newcard] = card
-  notify("{} attacks with {}{}.".format(me, card, attackinittext))
-    
-def stackBlock(card):
-  mute()
-  blockinittext = autoscript(card, getTags(card, 'blockinit'))
-  if blockinittext == None: return
-  if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
-    card.highlight = BlockDoesntUntapColor
+    card = stackcard
+  cost = getTags(stackcard, 'cost{}'.format(type))
+  if scriptMarkers['cost'] in stackcard.markers and cost != '':
+    resolvetag = cost
   else:
-    card.highlight = BlockColor
-  if getTags(card, 'block') != '':
-    newcard = table.create(card.model, 0, 0, 1)
-    newcard.markers[scriptMarkers['cost']] = card.markers[scriptMarkers['cost']]
-    card.markers[scriptMarkers['cost']] = 0
-    newcard.markers[scriptMarkers['x']] = card.markers[scriptMarkers['x']]
-    card.markers[scriptMarkers['x']] = 0
-    newcard.markers[scriptMarkers['block']] += 1
-    cstack[newcard] = card
-  notify("{} blocks with {}{}.".format(me, card, blockinittext))
-
-def stackDestroy(card):
-  mute()
-  destroyinittext = autoscript(card, getTags(card, 'destroyinit'))
-  if destroyinittext == None: return
-  card.moveTo(me.Graveyard)
-  if getTags(card, 'destroy') != '':
-    newcard = table.create(card.model, 0, 0, 1)
-    newcard.markers[scriptMarkers['cost']] = card.markers[scriptMarkers['cost']]
-    card.markers[scriptMarkers['cost']] = 0
-    newcard.markers[scriptMarkers['x']] = card.markers[scriptMarkers['x']]
-    card.markers[scriptMarkers['x']] = 0
-    newcard.markers[scriptMarkers['destroy']] += 1
-    cstack[newcard] = card
-  notify("{} destroys {}{}.".format(me, card, destroyinittext))
- 
-def stackExile(card):
-  mute()
-  exileinittext = autoscript(card, getTags(card, 'exileinit'))
-  if exileinittext == None: return
-  card.moveTo(me.piles['Exiled Zone'])
-  if getTags(card, 'exile') != '':
-    newcard = table.create(card.model, 0, 0, 1)
-    newcard.markers[scriptMarkers['cost']] = card.markers[scriptMarkers['cost']]
-    card.markers[scriptMarkers['cost']] = 0
-    newcard.markers[scriptMarkers['x']] = card.markers[scriptMarkers['x']]
-    card.markers[scriptMarkers['x']] = 0
-    newcard.markers[scriptMarkers['exile']] += 1
-    cstack[newcard] = card
-  notify("{} exiles {}{}.".format(me, card, exileinittext))
- 
-def stackActivate(card):
-  mute()
-  num = askInteger("Activate which ability?\n{}".format(getTags(card, 'allactivate')), 1)
-  if num == None: return
-  activateinittext = autoscript(card, getTags(card, 'activateinit{}'.format(num)))
-  if activateinittext == None: return
-  newcard = table.create(card.model, 0, 0, 1)
-  newcard.markers[scriptMarkers['activate']] += num
-  newcard.markers[scriptMarkers['cost']] = card.markers[scriptMarkers['cost']]
-  card.markers[scriptMarkers['cost']] = 0
-  newcard.markers[scriptMarkers['x']] = card.markers[scriptMarkers['x']]
-  card.markers[scriptMarkers['x']] = 0
-  cstack[newcard] = card
-  notify("{} activates {}'s {} ability{}.".format(me, card, num, activateinittext))
+    resolvetag = getTags(stackcard, type)
+  if 'life' in resolvetag:
+    for tag in resolvetag['life']:
+      text += autolife(card, stackcard, tag)
+  if 'token' in resolvetag:
+    for tag in resolvetag['token']:
+      text += autotoken(card, stackcard, tag)
+  if 'marker' in resolvetag:
+    for tag in resolvetag['marker']:
+      text += automarker(card, stackcard, tag)
+  if 'highlight' in resolvetag:
+    for tag in resolvetag['highlight']:
+      text += autohighlight(card, tag)
+  if 'tapped' in resolvetag:
+    for tag in resolvetag['tapped']:
+      text += autotapped(card, tag)
+  if 'untapped' in resolvetag:
+    for tag in resolvetag['untapped']:
+      text += autountapped(card, tag)
+  if 'transform' in resolvetag:
+    for tag in resolvetag['transform']:
+      text += autotransform(card, tag)
+  if 'moveto' in resolvetag:
+    for tag in resolvetag['moveto']:
+      text += automoveto(card, tag)
+  if stackcard in cstack:
+      del cstack[stackcard]
+  if type == 'resolve' and stackcard.Type != None and not re.search(r'Instant', stackcard.Type) and not re.search(r'Sorcery', stackcard.Type):
+    if scriptMarkers['cost'] in stackcard.markers and getTags(stackcard, 'etbcost') != '':
+      newcard = table.create(stackcard.model, 0, 0, 1)
+      newcard.markers[scriptMarkers['etb']] += 1
+      newcard.markers[scriptMarkers['cost']] += stackcard.markers[scriptMarkers['cost']]
+      cstack[newcard] = stackcard
+    elif not scriptMarkers['cost'] in stackcard.markers and getTags(stackcard, 'etb') != '':
+      newcard = table.create(stackcard.model, 0, 0, 1)
+      newcard.markers[scriptMarkers['etb']] += 1
+      cstack[newcard] = stackcard
+    for marker in scriptMarkers:
+      stackcard.markers[scriptMarkers[marker]] = 0
+  else:
+    stackcard.moveTo(me.Graveyard)
+  cardalign()
+  return text
 
 ############################
 #Modifiers
@@ -520,7 +506,7 @@ def cardalign():
       card.moveToTable(x, y - yyy*playerside*cattachcount[Card(origc)]*9)
       card.sendToBack()
 
-def cardcount(search, card):
+def cardcount(card, stackcard, search):
   multiplier = 1
   if re.search(r'-', search):
     search = search.replace('-', '')
@@ -530,10 +516,10 @@ def cardcount(search, card):
     search = search[search.find("*")+1:]
     multiplier = multiplier * intval
   if search == "x":
-    qty = card.markers[scriptMarkers['x']]
+    qty = stackcard.markers[scriptMarkers['x']]
     card.markers[scriptMarkers['x']] -= qty 
   elif search == "cost":
-    qty = card.markers[scriptMarkers['cost']]
+    qty = stackcard.markers[scriptMarkers['cost']]
     card.markers[scriptMarkers['cost']] -= qty 
   elif re.search(r'marker', search):
     marker = search[search.find("marker")+7:]
@@ -550,80 +536,51 @@ def cardcount(search, card):
 #Autoscript
 ############################
 
-def autoscript(card, taglist):
-  autotext = ""
-  for tags in taglist:
-    p1 = tags[:tags.find("[")]
-    p2 = tags[tags.find("[")+1:tags.find("]")]
-    if p1 == "marker":
-      (markername, qty) = p2.split(', ')
-      count = card.markers[counters[markername]]
-      if count + cardcount(qty, card) < 0:
-        whisper("not enough {} counters to remove!".format(markername))
-        return
-    elif p1 == "tapped" and card.orientation == Rot90:
-      whisper("{} is already tapped!".format(card))
-      return
-    elif p1 == "untapped" and card.orientation == Rot0:
-      whisper("{} is already untapped!".format(card))
-      return
-  for tags in taglist:
-    text = ""
-    p1 = tags[:tags.find("[")]
-    p2 = tags[tags.find("[")+1:tags.find("]")]
-    if p1 == "cost":
-      text = autocost(card, p2)
-    elif p1 == "token":
-      text = autotoken(card, p2)
-    elif p1 == "marker":
-      text = automarker(card, p2)
-    elif p1 == "highlight":
-      text = autohighlight(card, p2)
-    elif p1 == "tapped":
-      text = autotapped(card, p2)
-    elif p1 == "untapped":
-      text = autountapped(card, p2)
-    elif p1 == "moveto":
-      text = automoveto(card, p2)
-    elif p1 == "transform":
-      text = autotransform(card, p2)
-    elif p1 == "life":
-      text = autolife(card, p2)
-    else:
-      text = ""
-    if text == None:
-      return
-    autotext += text
-  return autotext
 
-def autolife(card, tag):
-  qty = cardcount(tag)
+def automoveto(card, pile):
+    cardowner = card.owner
+    cards = card
+    position = re.sub("[^0-9]", "", pile)
+    if position != "":
+      pos = int(position)
+      cards.moveTo(cardowner.Library, pos)
+      text = "{} from top of library".format(pos)
+    if re.search(r'top', pile):
+      cards.moveTo(cardowner.Library)
+      text = "top of library"
+    elif re.search(r'bottom', pile):
+      cards.moveToBottom(cardowner.Library)
+      text = "bottom of library"
+    elif re.search(r'shuffle', pile):
+      librarycount = len(cardowner.Library)
+      n = rnd(0, librarycount)
+      cards.moveTo(cardowner.Library, n)
+      cardowner.Library.shuffle()
+      text = "library and shuffled"
+    elif re.search(r'exile', pile):
+      trigAbility(card, 'exile', 'Exiled Zone')
+      text = "exile"
+    elif re.search(r'hand', pile):
+      cards.moveTo(cardowner.hand)
+      text = "hand"
+    elif re.search(r'graveyard', pile):
+      trigAbility(card, 'destroy', 'Graveyard')
+      text = "graveyard"
+    elif re.search(r'stack', pile):
+      stackPlay(card)
+      text = "stack"
+    elif re.search(r'table', pile):
+      stackResolve(card)
+      text = "table"
+    return ", moving to {}".format(text)
+
+def autolife(card, stackcard, tag):
+  qty = cardcount(card, stackcard, tag)
   me.Life += qty
   if qty >= 0:
-    return ", gaining {} life".format(qty)
+    return ", {} life".format(qty)
   else:
-    return ", losing {} life".format(qty)
-
-def autocost(card, tag):
-    (type, qty) = tag.split(', ')
-    if type == 'x':
-      marker = scriptMarkers['x']
-    else:
-      marker = scriptMarkers['cost']
-    if qty == "bool":
-      if confirm("{}'s {}: Pay additional/alternate cost?".format(card.name, type)):
-        card.markers[marker] = 1
-        cost = ", paying {} cost".format(type.title())
-      else:
-        cost = ""
-    elif qty == "ask":
-      amount = askInteger("{}'s {}: Paying how many times?".format(card.name, type), 0)
-      if amount == None: amount = 0
-      card.markers[marker] = amount
-      cost = ", paying {} {} times".format(type.title(), amount)
-    else:
-      card.markers[marker] = cardcount(qty)
-    return cost
+    return ", {} life".format(qty)
 
 def autotransform(card, tag):
   if tag == "no": return ""
@@ -632,7 +589,7 @@ def autotransform(card, tag):
   card.switchImage
   return ", transforming to {}".format(card)
 
-def autotoken(card, tag):
+def autotoken(card, stackcard, tag):
   tag2 = tag.split(', ')
   name = tag2[0]
   qty = tag2[1]
@@ -640,7 +597,7 @@ def autotoken(card, tag):
     modifiers = tag2[2:]
   else:
     modifiers = ""
-  quantity = cardcount(qty, card)
+  quantity = cardcount(card, stackcard, qty)
   if quantity == 1:
     quant = ""
   else:
@@ -658,16 +615,16 @@ def autotoken(card, tag):
           token.orientation = Rot90
         elif re.search(r'marker', modtag):
           (marker, type, quant) = modtag.split('_')
-          token.markers[counters[type]] += cardcount(qty, token)
+          token.markers[counters[type]] += cardcount(token, stackcard, qty)
     tokentext = "{} {}/{} {} {}".format(quantity, token.Power, token.Toughness, token.Color, token.name)
     cardalign()
     return ", creating {} token{}".format(tokentext, quant)
   else:
     return ""
 
-def automarker(card, tag):
+def automarker(card, stackcard, tag):
   (markername, qty) = tag.split(', ')
-  quantity = cardcount(qty, card)
+  quantity = cardcount(card, stackcard, qty)
   if quantity == 1:
     quant = ""
   else:
@@ -676,8 +633,6 @@ def automarker(card, tag):
   card.markers[addmarker] += quantity
   if quantity > 0:
       sign = "+"
-  elif quantity < 0:
-      sign = "-"
   else:
       sign = ""
   return ", {}{} {}{}".format(sign, quantity, addmarker[0], quant)
@@ -714,43 +669,6 @@ def autotapped(card, tapped):
 def autountapped(card, untapped):
   card.orientation = Rot0
   return ", untapped"
-
-def automoveto(card, pile):
-    cardowner = card.owner
-    cards = card
-    position = re.sub("[^0-9]", "", pile)
-    if position != "":
-      pos = int(position)
-      cards.moveTo(cardowner.Library, pos)
-      text = "{} from top of library".format(pos)
-    if re.search(r'top', pile):
-      cards.moveTo(cardowner.Library)
-      text = "top of library"
-    elif re.search(r'bottom', pile):
-      cards.moveToBottom(cardowner.Library)
-      text = "bottom of library"
-    elif re.search(r'shuffle', pile):
-      librarycount = len(cardowner.Library)
-      n = rnd(0, librarycount)
-      cards.moveTo(cardowner.Library, n)
-      cardowner.Library.shuffle()
-      text = "library and shuffled"
-    elif re.search(r'exile', pile):
-      stackExile(card)
-      text = "exile"
-    elif re.search(r'hand', pile):
-      cards.moveTo(cardowner.hand)
-      text = "hand"
-    elif re.search(r'graveyard', pile):
-      stackDestroy(card)
-      text = "graveyard"
-    elif re.search(r'stack', pile):
-      stackPlay(card)
-      text = "stack"
-    elif re.search(r'table', pile):
-      stackResolve(card)
-      text = "table"
-    return ", moving to {}".format(text)
 
 ############################
 #Smart Token/Markers

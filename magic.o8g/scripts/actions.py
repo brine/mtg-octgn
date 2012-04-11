@@ -153,7 +153,8 @@ def token(group, x = 0, y = 0):
 def play(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    stackPlay(card)
+    text = trigAbility(card, 'cast', 'table')
+    notify("{} casts {}{}.".format(me, card, text))
   else:
     src = card.group
     card.moveToTable(0, 0)
@@ -162,8 +163,28 @@ def play(card, x = 0, y = 0):
 def resolve(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    if scriptMarkers['etb'] in card.markers or scriptMarkers['cast'] in card.markers or scriptMarkers['attack'] in card.markers or scriptMarkers['block'] in card.markers or scriptMarkers['exile'] in card.markers or scriptMarkers['activate'] in card.markers or scriptMarkers['destroy'] in card.markers:
-      stackResolve(card)
+    if scriptMarkers['attack'] in card.markers:
+      text = stackResolve(card, 'attack')
+      notify("{}'s {} attack trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers ['block'] in card.markers:
+      text = stackResolve(card, 'block')
+      notify("{}'s {} block trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers ['destroy'] in card.markers:
+      text = stackResolve(card, 'destroy')
+      notify("{}'s {} destroy trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers ['exile'] in card.markers:
+      text = stackResolve(card, 'exile')
+      notify("{}'s {} exile trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers ['cast'] in card.markers:
+      text = stackResolve(card, 'resolve')
+      notify("{} resolves {}{}.".format(me, card, text))
+    elif scriptMarkers ['etb'] in card.markers:
+      text = stackResolve(card, 'etb')
+      notify("{}'s {} enters-play trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers ['activate'] in card.markers:
+      num = card.markers[scriptMarkers['activate']]
+      text = stackResolve(card, 'activate{}'.format(num))
+      notify("{}'s {} ability #{} trigger resolves{}.".format(me, card, num, text))
     else:
       card.orientation ^= Rot90
       if card.orientation & Rot90 == Rot90:
@@ -181,7 +202,14 @@ def destroy(card, x = 0, y = 0):
   mute()
   src = card.group
   if autoscripts == True and src == table:
-    stackDestroy(card)
+    for marker in scriptMarkers:
+
+      if scriptMarkers[marker] in card.markers:
+        card.moveTo(me.Graveyard)
+        notify("{}'s {} was countered.".format(me, card))
+        return
+    text = trigAbility(card, 'destroy', 'Graveyard')
+    notify("{} destroys {}{}.".format(me, card, text))
   else:
     card.moveTo(me.Graveyard)
     if src == table:
@@ -193,7 +221,8 @@ def exile(card, x = 0, y = 0):
   mute()
   src = card.group
   if autoscripts == True and src == table:
-    stackExile(card)
+    text = trigAbility(card, 'exile', 'Exiled Zone')
+    notify("{} exiles {}{}.".format(me, card, text))
   else:
     fromText = " from the battlefield" if src == table else " from their " + src.name
     card.moveTo(me.piles['Exiled Zone'])
@@ -202,7 +231,17 @@ def exile(card, x = 0, y = 0):
 def attack(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    stackAttack(card, True)
+    if card.orientation == Rot90 or card.orientation == 270:
+      if confirm("Cannot attack: already tapped. Continue?") != True: return
+    elif card.highlight == AttackColor or card.highlight == AttackDoesntUntapColor:
+      if confirm("Cannot attack: already attacking. Continue?") != True: return
+    card.orientation |= Rot90
+    if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
+      card.highlight = AttackDoesntUntapColor
+    else:
+      card.highlight = AttackColor
+    text = trigAbility(card, 'attack', '')
+    notify("{} attacks with {}{}.".format(me, card, text))
   else:
     card.orientation |= Rot90
     if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
@@ -214,7 +253,16 @@ def attack(card, x = 0, y = 0):
 def attackWithoutTapping(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    stackAttack(card, False)
+    if card.orientation == Rot90 or card.orientation == 270:
+      if confirm("Cannot attack: {} is tapped. Continue?".format(card)) != True: return
+    elif card.highlight == AttackColor or card.highlight == AttackDoesntUntapColor:
+      if confirm("Cannot attack: already attacking. Continue?") != True: return
+    if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
+      card.highlight = AttackDoesntUntapColor
+    else:
+      card.highlight = AttackColor
+    text = trigAbility(card, 'attack', '')
+    notify("{} attacks with {}{}.".format(me, card, text))
   else:
     if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
       card.highlight = AttackDoesntUntapColor
@@ -225,7 +273,12 @@ def attackWithoutTapping(card, x = 0, y = 0):
 def block(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    stackBlock(card)
+    if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
+      card.highlight = BlockDoesntUntapColor
+    else:
+      card.highlight = BlockColor
+    text = trigAbility(card, 'block', '')
+    notify("{} blocks with {}{}.".format(me, card, text))
   else:
     if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
       card.highlight = BlockDoesntUntapColor
@@ -236,7 +289,10 @@ def block(card, x = 0, y = 0):
 def activate(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    stackActivate(card)
+    num = askInteger("Activate which ability?\n{}".format(getTags(card, 'allactivate')), 1)
+    if num == None: return
+    text = trigAbility(card, 'activate{}'.format(num), '')
+    notify("{} activates ability #{} on {}{}.".format(me, num, card, text))
   else:
     notify("{} uses {}'s ability.".format(me, card))
 
