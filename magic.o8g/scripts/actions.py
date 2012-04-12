@@ -518,7 +518,7 @@ def randomPick(group):
     mute()
     card = group.random()
     if card == None: return
-    notify("{} randomly picks {} from {}.".format(me, card, group))
+    notify("{} randomly picks {} from their {}.".format(me, card, group.name))
 
 def mulligan(group):
     mute()

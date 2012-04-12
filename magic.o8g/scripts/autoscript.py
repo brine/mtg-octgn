@@ -144,11 +144,11 @@ def submitTags(card, x = 0, y = 0):
 def morph(card, x = 0, y = 0):
     mute()
     if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
-      card.switchImage
       if re.search(r'DFC', card.Rarity):
         notify("{} transforms {}.".format(me, card))
       else:
         notify("{} flips {}.".format(me, card))
+      card.switchImage
     else:
       if card.isFaceUp == True:
         notify("{} morphs {} face down.".format(me, card))
@@ -187,9 +187,9 @@ def trigAbility(card, tagclass, pile):
             if count + cardcount(card, card, qty) < 0:
                 if not confirm("Not enough {} counters to remove!\nContinue?".format(markername)): return BREAK
     if 'tapped' in inittag and card.orientation == Rot90:
-        if not confirm("{} is already tapped!\nContinue?".format(card)): return BREAK
+        if not confirm("{} is already tapped!\nContinue?".format(card.name)): return BREAK
     if 'untapped' in inittag and card.orientation == Rot0:
-        if not confirm("{} is already untapped!\nContinue?".format(card)): return BREAK
+        if not confirm("{} is already untapped!\nContinue?".format(card.name)): return BREAK
     if 'cost' in inittag:
         for costtag in inittag['cost']:
             (cost, type) = costtag.split(', ')
@@ -306,7 +306,7 @@ def stackResolve(stackcard, type):
   if stackcard in cstack:
       del cstack[stackcard]
   if type == 'resolve' and stackcard.Type != None and not re.search(r'Instant', stackcard.Type) and not re.search(r'Sorcery', stackcard.Type):
-    if scriptMarkers['cost'] in stackcard.markers and getTags(stackcard, 'etbcost') != '':
+    if scriptMarkers['cost'] in stackcard.markers and getTags(stackcard, 'costetb') != '':
       newcard = table.create(stackcard.model, 0, 0, 1)
       newcard.markers[scriptMarkers['etb']] += 1
       newcard.markers[scriptMarkers['cost']] += stackcard.markers[scriptMarkers['cost']]
@@ -452,7 +452,7 @@ def cardalign():
         and not card._id in cattach]
   cardsort = sorted(tablecards, key=lambda card:(card.Type, card.name))
   for card in cardsort:
-      if re.search(r'Land', card.Type) or re.search(r'Planeswalker', card.Type):
+      if re.search(r'Land', card.Type) or re.search(r'Planeswalker', card.Type) or re.search(r'Emblem', card.Type):
         if len(card.markers) == 0 and not card._id in dict([(v, k) for k, v in cattach.iteritems()]):
           if not card.name in landdict or landdict[card.name] == 0:
             landdict[card.name] = 1
