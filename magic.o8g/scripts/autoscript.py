@@ -204,10 +204,11 @@ def trigAbility(card, tagclass, pile):
             elif type == "num":
                 qty = askInteger("{}'s {}: Paying how many times?".format(card.name, cost), 0)
                 if qty == None: qty = 0
-                markerdict[marker] = qty
+                if qty != 0: markerdict[marker] = qty
                 text += ", paying {} {} times".format(cost.title(), qty)
             else:
-                markerdict[marker] = cardcount(card, card, type)
+                qty = cardcount(card, card, type)
+                if qty != 0: markerdict[marker] = qty
     if tagclass == 'cast':
         card.moveToTable(0,0)
         card.markers[scriptMarkers['cast']] = 1
@@ -217,7 +218,11 @@ def trigAbility(card, tagclass, pile):
              text += stackResolve(card, 'resolve')
         cardalign()
         return text
-    if getTags(card, tagclass) != '':
+    if 'cost' in markerdict:
+        trigtype = "cost{}".format(tagclass)
+    else:
+        trigtype = tagclass
+    if getTags(card, trigtype) != '':
         stackcard = table.create(card.model, 0, 0, 1)
         if card.isAlternateImage == True:
           stackcard.switchImage
@@ -260,7 +265,8 @@ def trigAbility(card, tagclass, pile):
     elif pile == "table":
         card.moveToTable(0,0)
     elif pile != '':
-        card.moveTo(me.piles[pile])
+        cardowner = card.owner
+        card.moveTo(cardowner.piles[pile])
     cardalign()
     return text
 
@@ -276,6 +282,12 @@ def stackResolve(stackcard, type):
     resolvetag = cost
   else:
     resolvetag = getTags(stackcard, type)
+  if 'persist' in resolvetag:
+    for tag in resolvetag['persist']:
+      text += autopersist(card, stackcard, tag)
+  if 'undying' in resolvetag:
+    for tag in resolvetag['undying']:
+      text += autoundying(card, stackcard, tag)
   if 'life' in resolvetag:
     for tag in resolvetag['life']:
       text += autolife(card, stackcard, tag)
@@ -555,6 +567,23 @@ def cardcount(card, stackcard, search):
 #Autoscript
 ############################
 
+def autopersist(card, stackcard, persist):
+  if card.group.name == "Graveyard":
+    card.moveToTable(0,0)
+    stackResolve(card, 'resolve')
+    card.markers[counters['minusoneminusone']] += 1
+    return ", persisting"
+  else:
+    return ""
+
+def autoundying(card, stackcard, undying):
+  if card.group.name == "Graveyard":
+    card.moveToTable(0,0)
+    stackResolve(card, 'resolve')
+    card.markers[counters['plusoneplusone']] += 1
+    return ", undying"
+  else:
+    return ""
 
 def automoveto(card, pile):
     cardowner = card.owner
@@ -586,10 +615,11 @@ def automoveto(card, pile):
       trigAbility(card, 'destroy', 'Graveyard')
       text = "graveyard"
     elif re.search(r'stack', pile):
-      stackPlay(card)
+      trigAbility(card, 'cast', 'table')
       text = "stack"
     elif re.search(r'table', pile):
-      stackResolve(card)
+      card.moveToTable(0,0)
+      stackResolve(card, 'resolve')
       text = "table"
     return ", moving to {}".format(text)
 

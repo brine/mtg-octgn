@@ -18,6 +18,10 @@ counters = {
     'eon': ('Eon counter', 'f18a0845-efbb-473f-a8b9-9448ca2b3939'),
     'wish': ('Wish counter', '30e9d5d4-f867-4604-8acf-2630303f6855'),
     'study': ('Study counter', 'cfb948cb-accf-41f5-894e-bf0cb2eaa19c'),
+    'ki': ('Ki counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f'),
+    'hatchling': ('Hatchling counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f'),
+    'eyeball': ('Eyeball counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f'),
+    'lore': ('Lore counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f'),
     'slime': ('Slime counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f')
 }
 
