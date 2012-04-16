@@ -534,9 +534,15 @@ def mulligan(group):
         card.moveTo(me.hand)
 
 def draw(group, x = 0, y = 0):
-    if len(group) == 0: return
     mute()
-    group[0].moveTo(me.hand)
+    if len(group) == 0: return
+    card = group[0]
+    card.moveTo(me.hand)
+    if re.search(r'Miracle {', card.Rules):
+      if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.name, card.Rules)): 
+        text = trigAbility(card, 'cast', 'table')
+        notify("{} draws and casts {} with Miracle{}.".format(me, card, text))
+        return
     notify("{} draws a card.".format(me))
 
 def drawMany(group, count = None):
