@@ -128,7 +128,8 @@ def setDie(group, x = 0, y = 0):
     mute()
     global diesides
     diesides = askInteger("How many sides?\n\n2 = Coin\n6 = Chaos", diesides)
-    dieFunct(diesides)
+    if not diesides = None:
+      dieFunct(diesides)
 
 def rollDie(group, x = 0, y = 0):
     mute()
@@ -467,21 +468,32 @@ def tolibraryposition(card, x = 0, y = 0):
 def tohand(card, x = 0, y = 0):
     mute()
     src = card.group
-    fromText = "Battlefield" if src == table else src.name
-    notify("{} moves {} from {} to Hand.".format(me, card, fromText))
+    if src == table:
+      notify("{} moves {} to their hand from the battlefield.".format(me, card))
+    else:
+      if card.isFaceUp == False:
+        if confirm("Reveal {} to all players?".format(card.name)):
+          card.isFaceUp = True
+          rnd(10,100)
+        else:
+          card = "a card"
+      notify("{} moves {} to their hand from their {}.".format(me, card, src.name))
     card.moveTo(me.hand)
 
 def randomDiscard(group):
     mute()
     card = group.random()
     if card == None: return
-    card.moveTo(me.Graveyard)
+    card.isFaceUp = True
+    rnd(10,100)
     notify("{} randomly discards {}.".format(me, card))
+    card.moveTo(me.Graveyard)
 
 def randomPick(group):
     mute()
     card = group.random()
     if card == None: return
+    rnd(10,100)
     notify("{} randomly picks {} from their {}.".format(me, card, group.name))
 
 def mulligan(group):

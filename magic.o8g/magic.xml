@@ -60,7 +60,7 @@
     <cardaction menu="Destroy Card" shortcut="del" execute="destroy" />
     <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
     <cardaction menu="Move to Top of Libary" shortcut="ctrl+Y" execute="tolibrary" />
-    <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
+    <cardaction menu="Move to a Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
     <cardaction menu="Move to Hand" shortcut="ctrl+H" execute="tohand" />
     <cardaction menu="Clear Card" shortcut="esc" execute="clear" />
     <cardaction menu="Use Activated Ability" shortcut="ctrl+Z" execute="activate" />
@@ -109,20 +109,20 @@
       <groupaction menu="Mill X Cards" execute="mill" />
       <groupaction menu="Exile X Cards" execute="exileMany" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
-      <cardaction menu="Discard Top Card" shortcut="del" execute="destroy" />
-      <cardaction menu="Exile Top Card" shortcut="ctrl+E" execute="exile" />
-      <cardaction menu="Move Top Card to Hand (reveal)" shortcut="ctrl+H" execute="tohand" />
-      <groupaction menu="Reveal/Hide Top Card" shortcut="ctrl+shift+R" execute="revealtoplibrary" />
+      <cardaction menu="Discard Card" shortcut="del" execute="destroy" />
+      <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
+      <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
+      <groupaction menu="Reveal/Hide Card" shortcut="ctrl+R" execute="revealtoplibrary" />
     </group>
     <group name="Graveyard" shortcut="del" visibility="all" width="63" height="88" icon="r12">
       <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
       <groupaction menu="Exile all cards" execute="exileAll" />
       <groupaction menu="Shuffle all cards into Library" execute="shuffleIntoLibrary" />
-      <cardaction menu="Move Top Card to Hand (reveal)" shortcut="ctrl+H" execute="tohand" />
-      <cardaction menu="Exile Top Card" shortcut="ctrl+E" execute="exile" />
-      <cardaction menu="Cast Top Card" default="true" execute="play" />
-      <cardaction menu="Move Top Card to Library" shortcut="ctrl+Y" execute="tolibrary" />
+      <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
+      <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
+      <cardaction menu="Cast Card" default="true" execute="play" />
+      <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" />
       <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
       <cardaction menu="Submit Tags" execute="submitTags" />
     </group>
@@ -130,10 +130,10 @@
       <groupaction menu="Shuffle all cards into Library" execute="shuffleIntoLibrary" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
       <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />
-      <cardaction menu="Move Top Card to Hand (reveal)" shortcut="ctrl+H" execute="tohand" />
-      <cardaction menu="Discard Top Card" shortcut="del" execute="destroy" /> 
-      <cardaction menu="Cast Top Card" default="true" execute="play" />
-      <cardaction menu="Move Top Card to Library" shortcut="ctrl+Y" execute="tolibrary" /> 
+      <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
+      <cardaction menu="Discard Card" shortcut="del" execute="destroy" /> 
+      <cardaction menu="Cast Card" default="true" execute="play" />
+      <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" /> 
       <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />      
     </group>
     <group name="Sideboard" visibility="me" width="63" height="88" icon="r14" collapsed="true">
