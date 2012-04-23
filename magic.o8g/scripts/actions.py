@@ -538,6 +538,7 @@ def draw(group, x = 0, y = 0):
     if len(group) == 0: return
     card = group[0]
     card.moveTo(me.hand)
+    rnd(10,100)
     if re.search(r'Miracle {', card.Rules):
       if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.name, card.Rules)): 
         text = trigAbility(card, 'cast', 'table')
@@ -570,7 +571,7 @@ def shuffleIntoLibrary(group = me.Graveyard):
     mute()
     Library = me.Library
     for c in group: c.moveTo(Library)
-    time.sleep(1)
+    rnd(100,1000)
     Library.shuffle()
     notify("{} shuffles {} into Library.".format(me, group.name))
 
