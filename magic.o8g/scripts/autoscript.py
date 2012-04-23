@@ -462,7 +462,7 @@ def cardalign():
         and not scriptMarkers['x'] in card.markers
         and not counters['general'] in card.markers
         and not card._id in cattach]
-  cardsort = sorted(tablecards, key=lambda card:(card.Type, card.name))
+  cardsort = sorted(tablecards, key=lambda card:(sortlist(card), card.name))
   for card in cardsort:
       if re.search(r'Land', card.Type) or re.search(r'Planeswalker', card.Type) or re.search(r'Emblem', card.Type):
         if len(card.markers) == 0 and not card._id in dict([(v, k) for k, v in cattach.iteritems()]):
@@ -536,6 +536,15 @@ def cardalign():
       cattachcount[Card(origc)] += 1
       card.moveToTable(x, y - yyy*playerside*cattachcount[Card(origc)]*9)
       card.sendToBack()
+
+def sortlist(card):
+  if re.search(r"Land", card.Type): return "A"
+  elif re.search(r"Planeswalker", card.Type): return "B"
+  elif re.search(r"Emblem", card.Type): return "C"
+  elif re.search(r"Creature", card.Type): return "D"
+  elif re.search(r"Artifact", card.Type): return "E"
+  elif re.search(r"Enchantment", card.Type): return "F"
+  else: return "G"
 
 def cardcount(card, stackcard, search):
   multiplier = 1

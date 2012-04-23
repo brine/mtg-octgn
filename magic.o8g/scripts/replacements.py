@@ -22,6 +22,7 @@ counters = {
     'hatchling': ('Hatchling counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f'),
     'eyeball': ('Eyeball counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f'),
     'lore': ('Lore counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f'),
+    'awakening': ('Awakening counter', 'a3174d98-53c8-42ad-bbb7-aa6f3e5d446e'),
     'slime': ('Slime counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f')
 }
 
