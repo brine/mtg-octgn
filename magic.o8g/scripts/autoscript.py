@@ -465,47 +465,33 @@ def cardalign():
   cardsort = sorted(tablecards, key=lambda card:(sortlist(card), card.name))
   for card in cardsort:
       if re.search(r'Land', card.Type) or re.search(r'Planeswalker', card.Type) or re.search(r'Emblem', card.Type):
-        if len(card.markers) == 0 and not card._id in dict([(v, k) for k, v in cattach.iteritems()]):
-          if not card.name in landdict or landdict[card.name] == 0:
-            landdict[card.name] = 1
-            landorder.append(card.name)
-            xpos = len(landorder)
-            ypos = 1
-          elif landdict[card.name] >= 3:
-            landdict[card.name] = 0
-            xpos = landorder.index(card.name) + 1
-            landorder[landorder.index(card.name)] = ['BLANK']
-            ypos = 4
-          else:
-            landdict[card.name] += 1
-            xpos = landorder.index(card.name) + 1
-            ypos = landdict[card.name]
-        else:
-          landorder.append('BLANK')
-          xpos = len(landorder)
-          ypos = 4
-        card.moveToTable(sideflip * xpos * 80, playerside * 170 - 44 + playerside * 9 * ypos)
+        vardict = landdict
+        varorder = landorder
+        yshift = 170
       else:
-        if len(card.markers) == 0 and not card._id in dict([(v, k) for k, v in cattach.iteritems()]):
-          if not card.name in carddict or carddict[card.name] == 0:
-            carddict[card.name] = 1
-            cardorder.append(card.name)
-            xpos = len(cardorder)
+        vardict = carddict
+        varorder = cardorder
+        yshift = 45
+      if len(card.markers) == 0 and not card._id in dict([(v, k) for k, v in cattach.iteritems()]):
+          if not card.name in vardict or vardict[card.name] == 0:
+            vardict[card.name] = 1
+            varorder.append(card.name)
+            xpos = len(varorder)
             ypos = 1
-          elif carddict[card.name] >= 3:
-            carddict[card.name] = 0
-            xpos = cardorder.index(card.name) + 1
-            cardorder[cardorder.index(card.name)] = ['BLANK']
+          elif vardict[card.name] >= 3:
+            vardict[card.name] = 0
+            xpos = varorder.index(card.name) + 1
+            varorder[varorder.index(card.name)] = ['BLANK']
             ypos = 4
           else:
-            carddict[card.name] += 1
-            xpos = cardorder.index(card.name) + 1
-            ypos = carddict[card.name]
-        else:
-          cardorder.append('BLANK')
-          xpos = len(cardorder)
+            vardict[card.name] += 1
+            xpos = varorder.index(card.name) + 1
+            ypos = vardict[card.name]
+      else:
+          varorder.append('BLANK')
+          xpos = len(varorder)
           ypos = 4
-        card.moveToTable(sideflip * xpos * 80, playerside * 45- 44 + playerside * 9 * ypos)
+      card.moveToTable(sideflip * xpos * 80, playerside * yshift - 44 + playerside * 9 * ypos)
   cattachcount = { }
   attachcardsgroup = [card for card in table
         if card.controller == me
