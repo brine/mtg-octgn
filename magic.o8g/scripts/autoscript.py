@@ -317,6 +317,12 @@ def stackResolve(stackcard, type):
       text += automoveto(card, tag)
   if stackcard in cstack:
       del cstack[stackcard]
+  if type == 'miracle':
+    if card in me.hand:
+      casttext = trigAbility(card, 'cast', 'table')
+      text += ", casting{}".format(casttext)
+    else:
+      text += ", countered"
   if type == 'resolve' and stackcard.Type != None and not re.search(r'Instant', stackcard.Type) and not re.search(r'Sorcery', stackcard.Type):
     if scriptMarkers['cost'] in stackcard.markers and getTags(stackcard, 'costetb') != '':
       newcard = table.create(stackcard.model, 0, 0, 1)
@@ -440,7 +446,8 @@ def cardalign():
         or scriptMarkers['exile'] in card.markers
         or scriptMarkers['etb'] in card.markers
         or scriptMarkers['cost'] in card.markers
-        or scriptMarkers['x'] in card.markers)
+        or scriptMarkers['x'] in card.markers
+        or scriptMarkers['miracle'] in card.markers)
   for card in stackcards:
       if card.controller == me:
         card.moveToTable(0, 0 + 10 * stackcount)
@@ -460,6 +467,7 @@ def cardalign():
         and not scriptMarkers['etb'] in card.markers
         and not scriptMarkers['cost'] in card.markers
         and not scriptMarkers['x'] in card.markers
+        and not scriptMarkers['miracle'] in card.markers
         and not counters['general'] in card.markers
         and not card._id in cattach]
   cardsort = sorted(tablecards, key=lambda card:(sortlist(card), card.name))
@@ -504,6 +512,7 @@ def cardalign():
         and not scriptMarkers['etb'] in card.markers
         and not scriptMarkers['cost'] in card.markers
         and not scriptMarkers['x'] in card.markers
+        and not scriptMarkers['miracle'] in card.markers
         and not counters['general'] in card.markers
         and card._id in cattach]
   attachcards= sorted(attachcardsgroup, key=lambda card: card.name)

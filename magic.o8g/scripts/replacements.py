@@ -91,7 +91,8 @@ scriptMarkers = {
     'attack': ('Attack trigger: ' + me.name, '9f8ff955-97b7-4881-a0a5-823a7413a6d6'),
     'block': ('Block trigger: ' + me.name, '759e7a00-e6f1-4cfb-9f74-d8ff58e44e30'),
     'activate': ('Activated ability trigger: ' + me.name, '2dd4da20-eec5-47e9-9adc-2b502ebc4f5d'),
-    'exile': ('Exile trigger: ' + me.name, '9f315796-c2b2-4159-bcf6-3e28ecddfbc9')
+    'exile': ('Exile trigger: ' + me.name, '9f315796-c2b2-4159-bcf6-3e28ecddfbc9'),
+    'miracle': ('Miracle trigger: ' + me.name, 'aee4bba3-9375-4f14-9882-5d8d6fdd1660')
 }
 
 tokenTypes = {

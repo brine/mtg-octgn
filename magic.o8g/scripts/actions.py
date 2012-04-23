@@ -22,6 +22,7 @@ DoesntUntapColor = "#000000"
 AutoscriptColor = "#0000ff"
 AttackDoesntUntapColor = "#660000"
 BlockDoesntUntapColor = "#333300"
+MiracleColor = "#1D7CF2"
 
 #---------------------------------------------------------------------------
 # Global variables
@@ -163,7 +164,10 @@ def play(card, x = 0, y = 0):
 def resolve(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    if scriptMarkers['attack'] in card.markers:
+    if scriptMarkers['miracle'] in card.markers:
+      text = stackResolve(card, 'miracle')
+      notify("{}'s {} Miracle trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers['attack'] in card.markers:
       text = stackResolve(card, 'attack')
       notify("{}'s {} attack trigger resolves{}.".format(me, card, text))
     elif scriptMarkers ['block'] in card.markers:
@@ -540,9 +544,17 @@ def draw(group, x = 0, y = 0):
     card.moveTo(me.hand)
     rnd(10,100)
     if re.search(r'Miracle {', card.Rules):
-      if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.name, card.Rules)): 
-        text = trigAbility(card, 'cast', 'table')
-        notify("{} draws and casts {} with Miracle{}.".format(me, card, text))
+      if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.name, card.Rules)):
+        if autoscripts == True:
+          miracletrig = table.create(card.model, 0, 0, 1)
+          miracletrig.markers[scriptMarkers['miracle']] += 1
+          cstack[miracletrig] = card
+          card.highlight = MiracleColor
+          cardalign()
+        else:
+          miracletrig = card
+          miracletrig.moveToTable(0,0)
+        notify("{} draws {}, triggering the Miracle.".format(me, miracletrig))
         return
     notify("{} draws a card.".format(me))
 
