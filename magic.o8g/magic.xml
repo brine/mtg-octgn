@@ -30,9 +30,8 @@
   </card>
   <table name="Table" visibility="undefined" ordered="false" width="640" height="480" board="r23" boardPosition="-7,-27,76,190" background="r16" backgroundStyle="uniformToFill">
     <groupaction menu="Clean-up Targets and Combat" shortcut="esc" execute="clearAll" />
-    <groupaction menu="Roll 6-sided/Planar Die" shortcut="ctrl+R" execute="roll6" />
-    <groupaction menu="Roll 20-sided Die" shortcut="ctrl+shift+R" execute="roll20" />
-    <groupaction menu="Flip a Coin" shortcut="ctrl+C" execute="flipCoin" />
+    <groupaction menu="Roll Die" shortcut="ctrl+R" execute="rollDie" />
+    <groupaction menu="Change Die" shortcut="ctrl+shift+R" execute="setDie" />
     <groupaction menu="Create a Token..." shortcut="ctrl+shift+T" execute="token" />
     <groupaction menu="Respond" shortcut="Enter" execute="respond" />
     <groupaction menu="Pass Priority" shortcut="Tab" execute="passPriority" />
@@ -47,15 +46,14 @@
     </groupactions>
     <groupaction menu="Lose 1 Life" shortcut="ctrl+Q" execute="lose1Life" />
     <groupaction menu="Gain 1 Life" shortcut="ctrl+W" execute="gain1Life" />
-    <groupaction menu="Enable/Disable Autoscripts" execute="disable" />
     <groupaction menu="Re-align Cards" execute="align" />
-    <groupaction menu="Clear Global Variables Cache" execute="clearCache" />
+    <groupaction menu="Enable/Disable Autoscripts" execute="disable" />
     <cardaction menu="Tap/Untap or Resolve" default="true" execute="resolve" />
     <cardaction menu="Don't Untap during Untap Step" shortcut="ctrl+V" execute="doesNotUntap" />
     <cardaction menu="Attack" shortcut="ctrl+A" execute="attack" />
     <cardaction menu="Attack without tapping" shortcut="ctrl+shift+A" execute="attackWithoutTapping" />
     <cardaction menu="Block" shortcut="ctrl+B" execute="block" />
-    <cardaction menu="Attach" shortcut="ctrl+Q" execute="attach" />
+    <cardaction menu="Attach to Targeted Card" shortcut="ctrl+Q" execute="attach" />
     <cardaction menu="Morph/Transform/Flip Card" shortcut="ctrl+F" execute="morph" />
     <cardaction menu="Flip Face-Up/Down" shortcut="ctrl+shift+F" execute="flip" />
     <cardaction menu="Clone Card" shortcut="ctrl+C" batchExecute="clone" />
@@ -66,32 +64,22 @@
     <cardaction menu="Move to Hand" shortcut="ctrl+H" execute="tohand" />
     <cardaction menu="Clear Card" shortcut="esc" execute="clear" />
     <cardaction menu="Use Activated Ability" shortcut="ctrl+Z" execute="activate" />
-    <cardactions menu="Add Counters...">
+    <cardactions menu="Add/Remove Counters...">
+      <cardaction menu="Add Smart-Counter" shortcut="ctrl+shift+S" execute="smartMarker" />
       <cardaction menu="Auto-Add Counter" shortcut="ctrl+1" execute="autoAddMarker" />
       <cardaction menu="Add +1/+1 Counter" shortcut="ctrl+2" execute="addPlusOneMarker" />
-      <cardaction menu="Add -1/-1 Counter" shortcut="ctrl+3" execute="addMinusOneMarker" />        
+      <cardaction menu="Add -1/-1 Counter" shortcut="ctrl+3" execute="addMinusOneMarker" />
       <cardaction menu="Add Loyalty Counter" shortcut="ctrl+4" execute="addLoyaltyMarker" />
-      <cardaction menu="Add Level Counter" shortcut="ctrl+5" execute="addLevelMarker" />        
-      <cardaction menu="Add Charge Counter" shortcut="ctrl+6" execute="addChargeMarker" />        
-      <cardaction menu="Add Quest Counter" shortcut="ctrl+7" execute="addQuestMarker" />        
-      <cardaction menu="Add Time Counter" shortcut="ctrl+8" execute="addTimeMarker" />        
-      <cardaction menu="Add Spore Counter" shortcut="ctrl+9" execute="addSporeMarker" />  
-    </cardactions>  
-    <cardactions menu="Remove Counters...">
+      <cardaction menu="Add Charge Counter" shortcut="ctrl+5" execute="addChargeMarker" />
       <cardaction menu="Auto-Remove Counter" shortcut="ctrl+shift+1" execute="autoRemoveMarker" />
       <cardaction menu="Remove +1/+1 Counter" shortcut="ctrl+shift+2" execute="removePlusOneMarker" />
       <cardaction menu="Remove -1/-1 Counter" shortcut="ctrl+shift+3" execute="removeMinusOneMarker" />
       <cardaction menu="Remove Loyalty Counter" shortcut="ctrl+shift+4" execute="removeLoyaltyMarker" />
-      <cardaction menu="Remove Level Counter" shortcut="ctrl+shift+5" execute="removeLevelMarker" />
-      <cardaction menu="Remove Charge Counter" shortcut="ctrl+shift+6" execute="removeChargeMarker" />
-      <cardaction menu="Remove Quest Counter" shortcut="ctrl+shift+7" execute="removeQuestMarker" />
-      <cardaction menu="Remove Time Counter" shortcut="ctrl+shift+8" execute="removeTimeMarker" />
-      <cardaction menu="Remove Spore Counter" shortcut="ctrl+shift+9" execute="removeSporeMarker" />
+      <cardaction menu="Remove Charge Counter" shortcut="ctrl+shift+5" execute="removeChargeMarker" />
+      <cardaction menu="Add Other Counter..." shortcut="ctrl+0" batchExecute="addMarker" />
     </cardactions>
-    <cardaction menu="Add Smart-Counter" shortcut="ctrl+shift+S" execute="smartMarker" />
-    <cardaction menu="Add Other Counter..." shortcut="ctrl+0" batchExecute="addMarker" />
     <cardaction menu="Auto-Create Token" shortcut="ctrl+shift+T" execute="autoCreateToken" />
-    <cardaction menu="Commander Toggle" execute="generaltoggle" />
+    <cardaction menu="Commander Toggle / Exclude from Alignment" execute="generaltoggle" />
     <cardaction menu="Check Card Rulings (on Gatherer)" execute="rulings" />
     <cardaction menu="Submit Tags" execute="submitTags" />
   </table>
@@ -111,9 +99,9 @@
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Return to Library" shortcut="ctrl+Y" execute="tolibrary" />
       <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
+      <cardaction menu="Submit Tags" execute="submitTags" />
       <groupaction menu="Mulligan" shortcut="ctrl+M" execute="mulligan" />
       <groupaction menu="Random Discard" execute="randomDiscard" />
-      <cardaction menu="Submit Tags" execute="submitTags" />
     </hand>
     <group name="Library" shortcut="ctrl+I" visibility="none" width="63" height="88" icon="r11">
       <groupaction menu="Draw" shortcut="ctrl+D" default ="true" execute="draw" />
@@ -124,7 +112,7 @@
       <cardaction menu="Discard Top Card" shortcut="del" execute="destroy" />
       <cardaction menu="Exile Top Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Move Top Card to Hand (reveal)" shortcut="ctrl+H" execute="tohand" />
-      <groupaction menu="Reveal/Hide Top Card" shortcut="ctrl+shift+R" execute="revealtoplibrary" />  
+      <groupaction menu="Reveal/Hide Top Card" shortcut="ctrl+shift+R" execute="revealtoplibrary" />
     </group>
     <group name="Graveyard" shortcut="del" visibility="all" width="63" height="88" icon="r12">
       <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />

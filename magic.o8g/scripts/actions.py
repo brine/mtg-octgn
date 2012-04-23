@@ -44,7 +44,10 @@ def showCurrentPhase(group, x = 0, y = 0):
 
 def nextPhase(group, x = 0, y = 0):
     global phaseIdx
-    phaseIdx += 1
+    if phaseIdx == 10:
+      phaseIdx = 1
+    else:
+      phaseIdx += 1
     showCurrentPhase(group)
 
 def goToUpkeep(group, x = 0, y = 0):
@@ -119,29 +122,38 @@ def clearAll(group, x = 0, y = 0):
       if card.controller == me:
           card.highlight = None
 
-def roll6(group, x = 0, y = 0):
+diesides = 6
+
+def setDie(group, x = 0, y = 0):
     mute()
-    n = rnd(1, 6)
-    if n == 1:
+    global diesides
+    diesides = askInteger("How many sides?\n\n2 = Coin\n6 = Chaos", diesides)
+    dieFunct(diesides)
+
+def rollDie(group, x = 0, y = 0):
+    mute()
+    global diesides
+    dieFunct(diesides)
+
+def dieFunct(num):
+    if num == 6:
+      n = rnd(1, 6)
+      if n == 1:
         notify("{} rolls 1 (PLANESWALK) on a 6-sided die.".format(me))
-    elif n == 6:
+      elif n == 6:
         notify("{} rolls 6 (CHAOS) on a 6-sided die.".format(me))
-    else:
+      else:
         notify("{} rolls {} on a 6-sided die.".format(me, n))
-
-def roll20(group, x = 0, y = 0):
-    mute()
-    n = rnd(1, 20)
-    notify("{} rolls {} on a 20-sided die.".format(me, n))
-
-def flipCoin(group, x = 0, y = 0):
-    mute()
-    n = rnd(1, 2)
-    if n == 1:
-        notify("{} flips heads.".format(me))
+    elif num == 2:
+      n = rnd(1, 2)
+      if n == 1:
+        notify("{} rolls 1 (HEADS) on a 2-sided die.".format(me))
+      else:
+        notify("{} rolls 2 (TAILS) on a 2-sided die.".format(me))
     else:
-        notify("{} flips tails.".format(me))
-
+      n = rnd(1, num)
+      notify("{} rolls {} on a {}-sided die.".format(me, n, num))
+      
 def token(group, x = 0, y = 0):
     card, quantity = askCard("[Rarity] = 'Token'")
     if quantity == 0: return
@@ -389,30 +401,10 @@ def addLoyaltyMarker(card, x = 0, y = 0):
     notify("{} adds a Loyalty counter to {}.".format(me, card))
     card.markers[counters['loyalty']] += 1
 
-def addLevelMarker(card, x = 0, y = 0):
-    mute()
-    notify("{} adds a Level counter to {}.".format(me, card))
-    card.markers[counters['level']] += 1
-
 def addChargeMarker(card, x = 0, y = 0):
     mute()
     notify("{} adds a Charge counter to {}.".format(me, card))
     card.markers[counters['charge']] += 1
-
-def addQuestMarker(card, x = 0, y = 0):
-    mute()
-    notify("{} adds a Quest counter to {}.".format(me, card))
-    card.markers[counters['quest']] += 1
-
-def addTimeMarker(card, x = 0, y = 0):
-    mute()
-    notify("{} adds a Time counter to {}.".format(me, card))
-    card.markers[counters['time']] += 1
-
-def addSporeMarker(card, x = 0, y = 0):
-    mute()
-    notify("{} adds a Spore counter to {}.".format(me, card))
-    card.markers[counters['spore']] += 1
 
 def removePlusOneMarker(card, x = 0, y = 0):
     mute()
@@ -438,41 +430,9 @@ def removeLoyaltyMarker(card, x = 0, y = 0):
       markername = addmarker[0]
       notify("{} removes a {} from {}".format(me, markername, card))
 
-def removeLevelMarker(card, x = 0, y = 0):
-    mute()
-    addmarker = counters['level']
-    if addmarker in card.markers:
-      card.markers[addmarker] -= 1
-      markername = addmarker[0]
-      notify("{} removes a {} from {}".format(me, markername, card))
-
 def removeChargeMarker(card, x = 0, y = 0):
     mute()
     addmarker = counters['charge']
-    if addmarker in card.markers:
-      card.markers[addmarker] -= 1
-      markername = addmarker[0]
-      notify("{} removes a {} from {}".format(me, markername, card))
-
-def removeQuestMarker(card, x = 0, y = 0):
-    mute()
-    addmarker = counters['quest']
-    if addmarker in card.markers:
-      card.markers[addmarker] -= 1
-      markername = addmarker[0]
-      notify("{} removes a {} from {}".format(me, markername, card))
-
-def removeTimeMarker(card, x = 0, y = 0):
-    mute()
-    addmarker = counters['time']
-    if addmarker in card.markers:
-      card.markers[addmarker] -= 1
-      markername = addmarker[0]
-      notify("{} removes a {} from {}".format(me, markername, card))
-
-def removeSporeMarker(card, x = 0, y = 0):
-    mute()
-    addmarker = counters['spore']
     if addmarker in card.markers:
       card.markers[addmarker] -= 1
       markername = addmarker[0]
