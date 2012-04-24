@@ -128,7 +128,7 @@ def setDie(group, x = 0, y = 0):
     mute()
     global diesides
     diesides = askInteger("How many sides?\n\n2 = Coin\n6 = Chaos", diesides)
-    if not diesides = None:
+    if not diesides == None:
       dieFunct(diesides)
 
 def rollDie(group, x = 0, y = 0):
