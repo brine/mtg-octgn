@@ -122,13 +122,14 @@ def clearAll(group, x = 0, y = 0):
       if card.controller == me:
           card.highlight = None
 
-diesides = 6
+diesides = 20
 
 def setDie(group, x = 0, y = 0):
     mute()
     global diesides
-    diesides = askInteger("How many sides?\n\n2 = Coin\n6 = Chaos", diesides)
-    if not diesides == None:
+    num = askInteger("How many sides?\n\n2 = Coin\n6 = Chaos", diesides)
+    if num != None and num > 0:
+      diesides = num
       dieFunct(diesides)
 
 def rollDie(group, x = 0, y = 0):
