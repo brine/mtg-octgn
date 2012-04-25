@@ -169,7 +169,8 @@ def play(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
     text = trigAbility(card, 'cast', 'table')
-    notify("{} casts {}{}.".format(me, card, text))
+    if text != "BREAK":
+      notify("{} casts {}{}.".format(me, card, text))
   else:
     src = card.group
     card.moveToTable(0, 0)
@@ -227,7 +228,8 @@ def destroy(card, x = 0, y = 0):
         notify("{}'s {} was countered.".format(me, card))
         return
     text = trigAbility(card, 'destroy', 'Graveyard')
-    notify("{} destroys {}{}.".format(me, card, text))
+    if text != "BREAK":
+      notify("{} destroys {}{}.".format(me, card, text))
   else:
     card.moveTo(me.Graveyard)
     if src == table:
@@ -240,7 +242,8 @@ def exile(card, x = 0, y = 0):
   src = card.group
   if autoscripts == True and src == table:
     text = trigAbility(card, 'exile', 'Exiled Zone')
-    notify("{} exiles {}{}.".format(me, card, text))
+    if text != "BREAK":
+      notify("{} exiles {}{}.".format(me, card, text))
   else:
     fromText = " from the battlefield" if src == table else " from their " + src.name
     card.moveTo(me.piles['Exiled Zone'])
@@ -259,7 +262,8 @@ def attack(card, x = 0, y = 0):
     else:
       card.highlight = AttackColor
     text = trigAbility(card, 'attack', '')
-    notify("{} attacks with {}{}.".format(me, card, text))
+    if text != "BREAK":
+      notify("{} attacks with {}{}.".format(me, card, text))
   else:
     card.orientation |= Rot90
     if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
@@ -280,7 +284,8 @@ def attackWithoutTapping(card, x = 0, y = 0):
     else:
       card.highlight = AttackColor
     text = trigAbility(card, 'attack', '')
-    notify("{} attacks with {}{}.".format(me, card, text))
+    if text != "BREAK":
+      notify("{} attacks with {}{}.".format(me, card, text))
   else:
     if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
       card.highlight = AttackDoesntUntapColor
@@ -296,7 +301,8 @@ def block(card, x = 0, y = 0):
     else:
       card.highlight = BlockColor
     text = trigAbility(card, 'block', '')
-    notify("{} blocks with {}{}.".format(me, card, text))
+    if text != "BREAK":
+      notify("{} blocks with {}{}.".format(me, card, text))
   else:
     if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
       card.highlight = BlockDoesntUntapColor
@@ -310,7 +316,8 @@ def activate(card, x = 0, y = 0):
     num = askInteger("Activate which ability?\n{}".format(getTags(card, 'allactivate')), 1)
     if num == None: return
     text = trigAbility(card, 'activate{}'.format(num), '')
-    notify("{} activates ability #{} on {}{}.".format(me, num, card, text))
+    if text != "BREAK":
+      notify("{} activates ability #{} on {}{}.".format(me, num, card, text))
   else:
     notify("{} uses {}'s ability.".format(me, card))
 

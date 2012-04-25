@@ -185,11 +185,11 @@ def trigAbility(card, tagclass, pile):
             (markername, qty) = markertag.split(', ')
             count = card.markers[counters[markername]]
             if count + cardcount(card, card, qty) < 0:
-                if not confirm("Not enough {} counters to remove!\nContinue?".format(markername)): return BREAK
+                if not confirm("Not enough {} counters to remove!\nContinue?".format(markername)): return "BREAK"
     if 'tapped' in inittag and card.orientation == Rot90:
-        if not confirm("{} is already tapped!\nContinue?".format(card.name)): return BREAK
+        if not confirm("{} is already tapped!\nContinue?".format(card.name)): return "BREAK"
     if 'untapped' in inittag and card.orientation == Rot0:
-        if not confirm("{} is already untapped!\nContinue?".format(card.name)): return BREAK
+        if not confirm("{} is already untapped!\nContinue?".format(card.name)): return "BREAK"
     if 'cost' in inittag:
         for costtag in inittag['cost']:
             (cost, type) = costtag.split(', ')
@@ -391,15 +391,15 @@ def stackAttach(card):
 def align(group, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    cardalign()
-    notify("{} re-aligns his cards on the table".format(me))
+    if cardalign() != "BREAK":
+      notify("{} re-aligns his cards on the table".format(me))
 
 def cardalign():
   mute()
   global playerside
   global sideflip
   if sideflip == 0:
-    return BREAK
+    return "BREAK"
   if Table.isTwoSided():
     if playerside == None:
       if me.hasInvertedTable():
@@ -412,7 +412,7 @@ def cardalign():
       if len(playercount) > 2:
         whisper("Cannot align: Too many players on your side of the table.")
         sideflip = 0
-        return BREAK
+        return "BREAK"
       if playercount[0] == me:
         sideflip = 1
       else:
@@ -420,7 +420,7 @@ def cardalign():
   else:
     whisper("Cannot align: Two-sided table is required for card alignment.")
     sideflip = 0
-    return BREAK
+    return "BREAK"
   while getGlobalVariable('cattach') == 'CHECKOUT':
     whisper("Global card attachment dictionary is currently in use, please wait.")
     return CRASH
@@ -611,17 +611,17 @@ def automoveto(card, pile):
       cardowner.Library.shuffle()
       text = "library and shuffled"
     elif re.search(r'exile', pile):
-      trigAbility(card, 'exile', 'Exiled Zone')
-      text = "exile"
+      if trigAbility(card, 'exile', 'Exiled Zone') != "BREAK":
+        text = "exile"
     elif re.search(r'hand', pile):
       cards.moveTo(cardowner.hand)
       text = "hand"
     elif re.search(r'graveyard', pile):
-      trigAbility(card, 'destroy', 'Graveyard')
-      text = "graveyard"
+      if trigAbility(card, 'destroy', 'Graveyard') != "BREAK":
+        text = "graveyard"
     elif re.search(r'stack', pile):
-      trigAbility(card, 'cast', 'table')
-      text = "stack"
+      if trigAbility(card, 'cast', 'table') != "BREAK":
+        text = "stack"
     elif re.search(r'table', pile):
       card.moveToTable(0,0)
       stackResolve(card, 'resolve')
