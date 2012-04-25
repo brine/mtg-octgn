@@ -23,7 +23,7 @@ def shuffle(group, x = 0, y = 0):
     if versioncheck == None:
       (url, code) = webRead('http://octgn.gamersjudgement.com/OCTGN/game.txt')
       if code == 200:
-        if url != gameVersion:
+        if url == gameVersion:
           whisper("Your game definition is up-to-date")
         else:
           notify("{}'s game definition is out-of-date!".format(me))
