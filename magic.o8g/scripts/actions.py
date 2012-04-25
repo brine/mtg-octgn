@@ -17,11 +17,11 @@ phases = [
     "It is now {}'s ENDING Phase"]
 
 AttackColor = "#ff0000"
-BlockColor = "#ffff00"
+BlockColor = "#00ff00"
 DoesntUntapColor = "#000000"
 AutoscriptColor = "#0000ff"
 AttackDoesntUntapColor = "#660000"
-BlockDoesntUntapColor = "#333300"
+BlockDoesntUntapColor = "#007700"
 MiracleColor = "#1D7CF2"
 
 #---------------------------------------------------------------------------
@@ -127,7 +127,7 @@ diesides = 20
 def setDie(group, x = 0, y = 0):
     mute()
     global diesides
-    num = askInteger("How many sides?\n\n2 = Coin\n6 = Chaos", diesides)
+    num = askInteger("How many sides?\n\nFor Coin, enter 2.\nFor Chaos die, enter 6.", diesides)
     if num != None and num > 0:
       diesides = num
       dieFunct(diesides)
