@@ -590,6 +590,7 @@ def autoundying(card, stackcard, undying):
     return ""
 
 def automoveto(card, pile):
+    rnd(100,1000)
     cardowner = card.owner
     cards = card
     position = re.sub("[^0-9]", "", pile)
