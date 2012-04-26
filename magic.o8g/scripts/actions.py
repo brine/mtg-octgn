@@ -480,12 +480,13 @@ def tohand(card, x = 0, y = 0):
       notify("{} moves {} to their hand from the battlefield.".format(me, card))
     else:
       if card.isFaceUp == False:
-        if confirm("Reveal {} to all players?".format(card.name)):
+        if confirm("Reveal to all players?"):
           card.isFaceUp = True
           rnd(10,100)
+          cardname = card
         else:
-          card = "a card"
-      notify("{} moves {} to their hand from their {}.".format(me, card, src.name))
+          cardname = "a card"
+      notify("{} moves {} to their hand from their {}.".format(me, cardname, src.name))
     card.moveTo(me.hand)
 
 def randomDiscard(group):
