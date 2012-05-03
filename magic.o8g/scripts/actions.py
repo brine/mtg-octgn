@@ -461,7 +461,8 @@ def tolibrary(card, x = 0, y = 0):
 def tolibraryposition(card, x = 0, y = 0):
     mute()
     pos = askInteger("Move to what position?\nNOTE: 0 is the top.", 0)
-    fromText = "Battlefield" if src == table else src.name
+    src = card.group
+    fromText = "the Battlefield" if src == table else src.name
     if pos == None: return
     if pos > len(me.Library):
       notify("{} moves {} from {} to Library (bottom).".format(me, card, fromText))
