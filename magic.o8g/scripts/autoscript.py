@@ -12,7 +12,8 @@ versioncheck = None
 
 def clearCache(group, x = 0, y = 0):
   if confirm("Reset the Autoscript Tag cache?"):
-    setGlobalVariable('globaltags', "{ }")
+    global savedtags
+    savedtags = { }
     notify("{} reset the global tag cache.".format(me))
   if confirm("Reset the Attachment Dictionary?"):
     setGlobalVariable('cattach', "{ }")
@@ -49,13 +50,11 @@ def disable(card, x = 0, y = 0):
     autoscripts = False
     notify("{} disables autoscripts".format(me))
 
+savedtags = { }
+
 def getTags(card, key):
   mute()
-  while getGlobalVariable('globaltags') == 'CHECKOUT':
-    whisper("Global card tag dictionary is currently in use, please wait.")
-    return CRASH
-  savedtags = eval(getGlobalVariable('globaltags'))
-  setGlobalVariable('globaltags', 'CHECKOUT')
+  global savedtags
   if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
     if card.isAlternateImage == True:
       cardname = (card.name)[(card.name).find("/")+3:]
@@ -95,7 +94,6 @@ def getTags(card, key):
          actiondict[actionname].append(actionparam)
        tagdict[actionlist[0]] = actiondict
     savedtags[cardname] = tagdict
-  setGlobalVariable('globaltags', str(savedtags))
   if key == 'allactivate':
     st = savedtags[cardname]
     if 'initactivate1' in st: text11 = st['initactivate1']
@@ -141,7 +139,7 @@ def submitTags(card, x = 0, y = 0):
   else:
       whisper("cannot connect to online database.")
 
-def morph(card, x = 0, y = 0):
+def transform(card, x = 0, y = 0):
     mute()
     if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
       if re.search(r'DFC', card.Rarity):
