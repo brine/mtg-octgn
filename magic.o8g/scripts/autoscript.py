@@ -180,12 +180,6 @@ def trigAbility(card, tagclass, pile):
           targetcard.target(False)
           setGlobalVariable('cattach', str(cattach))
           text += ", targeting {}".format(targetcard)
-    if 'marker' in inittag:
-        for markertag in inittag['marker']:
-            (markername, qty) = markertag.split(', ')
-            count = card.markers[counters[markername]]
-            if count + cardcount(card, card, qty) < 0:
-                if not confirm("Not enough {} counters to remove!\nContinue?".format(markername)): return "BREAK"
     if 'tapped' in inittag and card.orientation == Rot90:
         if not confirm("{} is already tapped!\nContinue?".format(card.name)): return "BREAK"
     if 'untapped' in inittag and card.orientation == Rot0:
@@ -209,6 +203,12 @@ def trigAbility(card, tagclass, pile):
             else:
                 qty = cardcount(card, card, type)
                 if qty != 0: markerdict[marker] = qty
+    if 'marker' in inittag:
+        for markertag in inittag['marker']:
+            (markername, qty) = markertag.split(', ')
+            count = card.markers[counters[markername]]
+            if count + cardcount(card, card, qty) < 0:
+                if not confirm("Not enough {} counters to remove!\nContinue?".format(markername)): return "BREAK"
     if tagclass == 'cast':
         card.moveToTable(0,0)
         card.markers[scriptMarkers['cast']] = 1
