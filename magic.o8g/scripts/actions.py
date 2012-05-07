@@ -169,7 +169,7 @@ def morph(card, x = 0, y = 0):
   mute()
   src = card.group
   notify("{} casts a card face-down from their {}.".format(me, src.name))
-  card.moveToTable(0, 0, True)
+  card.moveToTable(0,0,True)
   if autoscripts == True:
     card.markers[scriptMarkers['cast']] = 1
     cardalign()
