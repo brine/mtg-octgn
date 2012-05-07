@@ -94,7 +94,8 @@
     <counter name="Colorless" icon="r10" />
     <counter name="General" icon="r22" />
     <hand name="Hand" shortcut="ctrl+H" visibility="me" width="63" height="88" icon="r15">
-      <cardaction menu="Cast Spell" default="true" execute="play" />
+      <cardaction menu="Cast Spell" default="true" shortcut="ctrl+c" execute="play" />
+      <cardaction menu="Cast Face-Down (Morph)" default="ctrl+F" execute="morph" />
       <cardaction menu="Discard Card" shortcut="del" execute="destroy" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Return to Library" shortcut="ctrl+Y" execute="tolibrary" />
@@ -109,6 +110,8 @@
       <groupaction menu="Mill X Cards" execute="mill" />
       <groupaction menu="Exile X Cards" execute="exileMany" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <cardaction menu="Cast Card" default="ctrl+C" execute="play" />
+      <cardaction menu="Cast Face-Down (Morph)" default="ctrl+F" execute="morph" />
       <cardaction menu="Discard Card" shortcut="del" execute="destroy" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
@@ -121,7 +124,8 @@
       <groupaction menu="Shuffle all cards into Library" execute="shuffleIntoLibrary" />
       <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
-      <cardaction menu="Cast Card" default="true" execute="play" />
+      <cardaction menu="Cast Card" default="true" shortcut="ctrl+c" execute="play" />
+      <cardaction menu="Cast Face-Down (Morph)" default="ctrl+F" execute="morph" />
       <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" />
       <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
       <cardaction menu="Submit Tags" execute="submitTags" />
@@ -132,7 +136,8 @@
       <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />
       <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
       <cardaction menu="Discard Card" shortcut="del" execute="destroy" /> 
-      <cardaction menu="Cast Card" default="true" execute="play" />
+      <cardaction menu="Cast Card" default="true" shortcut="ctrl+c" execute="play" />
+      <cardaction menu="Cast Face-Down (Morph)" default="ctrl+F" execute="morph" />
       <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" /> 
       <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />      
     </group>
