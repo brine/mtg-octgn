@@ -267,6 +267,7 @@ def trigAbility(card, tagclass, pile):
     elif pile != '':
         cardowner = card.owner
         card.moveTo(cardowner.piles[pile])
+    stackcard.sendToFront()
     cardalign()
     return text
 
