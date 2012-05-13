@@ -508,12 +508,19 @@ def randomDiscard(group):
     notify("{} randomly discards {}.".format(me, card))
     card.moveTo(me.Graveyard)
 
-def randomPick(group):
+def randomPick(group, x = 0, y = 0):
     mute()
     card = group.random()
     if card == None: return
-    rnd(10,100)
-    notify("{} randomly picks {} from their {}.".format(me, card, group.name))
+    card.select()
+    card.target(True)
+    if not card.isFaceUp:
+      if confirm("Reveal selected card?"): card.isFaceUp = True
+      rnd(10,100)
+    if group == table:
+      notify("{} randomly picks {}'s {} on the battlefield.".format(me, card.controller, card))
+    else:
+      notify("{} randomly picks {} from their {}.".format(me, card, group.name))
 
 def mulligan(group):
     mute()
