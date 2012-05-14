@@ -678,17 +678,24 @@ def autotoken(card, stackcard, tag):
 def automarker(card, stackcard, tag):
   (markername, qty) = tag.split(', ')
   quantity = cardcount(card, stackcard, qty)
+  originalquantity = quantity
   if quantity == 1:
     quant = ""
   else:
     quant = "s"
   addmarker = counters[markername]
+  while markername == "plusoneplusone" and counters["minusoneminusone"] in card.markers and quantity > 0:
+    card.markers[counters["minusoneminusone"]] -= 1
+    quantity -= 1
+  while markername == "minusoneminusone" and counters["plusoneplusone"] in card.markers and quantity > 0:
+    card.markers[counters["plusoneplusone"]] -= 1
+    quantity -= 1
   card.markers[addmarker] += quantity
-  if quantity > 0:
+  if originalquantity > 0:
       sign = "+"
   else:
       sign = ""
-  return ", {}{} {}{}".format(sign, quantity, addmarker[0], quant)
+  return ", {}{} {}{}".format(sign, originalquantity, addmarker[0], quant)
 
 def autohighlight(card, color):
   if color == "nountap":
