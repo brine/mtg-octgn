@@ -191,6 +191,9 @@ def resolve(card, x = 0, y = 0):
     if scriptMarkers['miracle'] in card.markers:
       text = stackResolve(card, 'miracle')
       notify("{}'s {} Miracle trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers['cycle'] in card.markers:
+      text = stackResolve(card, 'cycle')
+      notify("{}'s {} cycle trigger resolves{}.".format(me, card, text))
     elif scriptMarkers['attack'] in card.markers:
       text = stackResolve(card, 'attack')
       notify("{}'s {} attack trigger resolves{}.".format(me, card, text))
@@ -329,6 +332,16 @@ def activate(card, x = 0, y = 0):
       notify("{} activates ability #{} on {}{}.".format(me, num, card, text))
   else:
     notify("{} uses {}'s ability.".format(me, card))
+
+def cycle(card, x = 0, y = 0):
+  mute()
+  if autoscripts == True:
+    text = trigAbility(card, 'cycle', 'Graveyard')
+    if text != "BREAK":
+      notify("{} cycles {}{}.".format(me, card, text))
+  else:
+    card.moveTo(me.Graveyard)
+    notify("{} cycles {}.".format(me, card))
 
 def rulings(card, x = 0, y = 0):
   mute()
