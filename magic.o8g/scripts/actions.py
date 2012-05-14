@@ -414,11 +414,6 @@ def addPlusOneMarker(card, x = 0, y = 0):
     else:
         card.markers[counters['plusoneplusone']] += 1
 
-def addLoyaltyMarker(card, x = 0, y = 0):
-    mute()
-    notify("{} adds a Loyalty counter to {}.".format(me, card))
-    card.markers[counters['loyalty']] += 1
-
 def addChargeMarker(card, x = 0, y = 0):
     mute()
     notify("{} adds a Charge counter to {}.".format(me, card))
@@ -435,14 +430,6 @@ def removePlusOneMarker(card, x = 0, y = 0):
 def removeMinusOneMarker(card, x = 0, y = 0):
     mute()
     addmarker = counters['minusoneminusone']
-    if addmarker in card.markers:
-      card.markers[addmarker] -= 1
-      markername = addmarker[0]
-      notify("{} removes a {} from {}".format(me, markername, card))
-
-def removeLoyaltyMarker(card, x = 0, y = 0):
-    mute()
-    addmarker = counters['loyalty']
     if addmarker in card.markers:
       card.markers[addmarker] -= 1
       markername = addmarker[0]
@@ -515,7 +502,7 @@ def randomPick(group, x = 0, y = 0):
     card.select()
     card.target(True)
     if not card.isFaceUp:
-      if confirm("Reveal selected card?"): card.isFaceUp = True
+      if confirm("Reveal randomly-picked {}?".format(card.name)): card.isFaceUp = True
       rnd(10,100)
     if group == table:
       notify("{} randomly picks {}'s {} on the battlefield.".format(me, card.controller, card))
