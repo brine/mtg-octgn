@@ -341,7 +341,7 @@ def stackResolve(stackcard, type):
     for marker in scriptMarkers:
       stackcard.markers[scriptMarkers[marker]] = 0
   else:
-    stackcard.moveTo(me.Graveyard)
+    stackcard.moveTo(stackcard.owner.Graveyard)
   cardalign()
   return text
 
@@ -434,7 +434,7 @@ def cardalign():
   group1 = [cardid for cardid in cattach if Card(cattach[cardid]) not in table]
   for cardid in group1:
     if Card(cardid).Subtype != None and re.search(r'Aura', Card(cardid).Subtype) and Card(cardid).controller == me:
-      Card(cardid).moveTo(me.Graveyard)
+      Card(cardid).moveTo(Card(cardid).owner.Graveyard)
       notify("{}'s {} was destroyed".format(me, Card(cardid)))
     del cattach[cardid]
   group2 = [cardid for cardid in cattach if Card(cardid) not in table]
@@ -599,30 +599,29 @@ def autoundying(card, stackcard, undying):
 
 def automoveto(card, pile):
     rnd(100,1000)
-    cardowner = card.owner
     cards = card
     position = re.sub("[^0-9]", "", pile)
     if position != "":
       pos = int(position)
-      cards.moveTo(cardowner.Library, pos)
+      cards.moveTo(card.owner.Library, pos)
       text = "{} from top of library".format(pos)
     if re.search(r'top', pile):
-      cards.moveTo(cardowner.Library)
+      cards.moveTo(card.owner.Library)
       text = "top of library"
     elif re.search(r'bottom', pile):
-      cards.moveToBottom(cardowner.Library)
+      cards.moveToBottom(card.owner.Library)
       text = "bottom of library"
     elif re.search(r'shuffle', pile):
-      librarycount = len(cardowner.Library)
+      librarycount = len(card.owner.Library)
       n = rnd(0, librarycount)
-      cards.moveTo(cardowner.Library, n)
-      cardowner.Library.shuffle()
+      cards.moveTo(card.owner.Library, n)
+      card.owner.Library.shuffle()
       text = "library and shuffled"
     elif re.search(r'exile', pile):
       if trigAbility(card, 'exile', 'Exiled Zone') != "BREAK":
         text = "exile"
     elif re.search(r'hand', pile):
-      cards.moveTo(cardowner.hand)
+      cards.moveTo(card.owner.hand)
       text = "hand"
     elif re.search(r'graveyard', pile):
       if trigAbility(card, 'destroy', 'Graveyard') != "BREAK":

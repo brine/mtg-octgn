@@ -102,17 +102,16 @@ def scoop(group, x = 0, y = 0):
     me.red = 0
     me.green = 0
     me.colorless = 0
+    me.general = 0
+    for card in me.Library: card.moveTo(card.owner.Library)
     myCards = (card for card in table
-                    if card.owner == me)
-    for card in myCards: 
-        card.moveTo(me.Library)
-    Library = me.Library
-    for c in me.Graveyard: c.moveTo(Library)
-    for c in me.hand: c.moveTo(Library)
+                    if card.controller == me)
+    for card in myCards:
+        card.moveTo(card.owner.Library)
+    for card in me.Graveyard: card.moveTo(card.owner.Library)
+    for card in me.hand: card.moveTo(card.owner.Library)
     exile = me.piles['Exiled Zone']
-    for c in exile: c.moveTo(Library)
-    uselessvar = rnd(10, 1000)
-    Library.shuffle()
+    for card in exile: card.moveTo(card.owner.Library)
     notify("{} scoops.".format(me))
 
 def clearAll(group, x = 0, y = 0):
@@ -236,14 +235,14 @@ def destroy(card, x = 0, y = 0):
     for marker in scriptMarkers:
 
       if scriptMarkers[marker] in card.markers:
-        card.moveTo(me.Graveyard)
+        card.moveTo(card.owner.Graveyard)
         notify("{}'s {} was countered.".format(me, card))
         return
     text = trigAbility(card, 'destroy', 'Graveyard')
     if text != "BREAK":
       notify("{} destroys {}{}.".format(me, card, text))
   else:
-    card.moveTo(me.Graveyard)
+    card.moveTo(card.owner.Graveyard)
     if src == table:
       notify("{} destroys {}.".format(me, card, fromText))
     else:
@@ -258,7 +257,7 @@ def exile(card, x = 0, y = 0):
       notify("{} exiles {}{}.".format(me, card, text))
   else:
     fromText = " from the battlefield" if src == table else " from their " + src.name
-    card.moveTo(me.piles['Exiled Zone'])
+    card.moveTo(card.owner.piles['Exiled Zone'])
     notify("{} exiles {}{}.".format(me, card, fromText))
 
 def attack(card, x = 0, y = 0):
@@ -340,7 +339,7 @@ def cycle(card, x = 0, y = 0):
     if text != "BREAK":
       notify("{} cycles {}{}.".format(me, card, text))
   else:
-    card.moveTo(me.Graveyard)
+    card.moveTo(card.owner.Graveyard)
     notify("{} cycles {}.".format(me, card))
 
 def rulings(card, x = 0, y = 0):
@@ -397,9 +396,9 @@ def clear(card, x = 0, y = 0):
     card.target(False)
 
 def clone(cards, x = 0, y = 0):
-    for c in cards:
-      copy = table.create(c.model, x, y, 1)
-      if c.isAlternateImage == True:
+    for card in cards:
+      copy = table.create(card.model, x, y, 1)
+      if card.isAlternateImage == True:
         copy.switchImage
       x, y = table.offset(x, y)
 
@@ -407,9 +406,9 @@ def addMarker(cards, x = 0, y = 0):
     mute()
     marker, quantity = askMarker()
     if quantity == 0: return
-    for c in cards:
-        c.markers[marker] += quantity
-        notify("{} adds {} {} counters to {}.".format(me, quantity, marker[0], c))
+    for card in cards:
+        card.markers[marker] += quantity
+        notify("{} adds {} {} counters to {}.".format(me, quantity, marker[0], card))
 
 def addMinusOneMarker(card, x = 0, y = 0):
     mute()
@@ -465,7 +464,7 @@ def tolibrary(card, x = 0, y = 0):
     src = card.group
     fromText = "Battlefield" if src == table else src.name
     notify("{} moves {} from {} to Library.".format(me, card, fromText))
-    card.moveTo(me.Library)
+    card.moveTo(card.owner.Library)
 
 def tolibraryposition(card, x = 0, y = 0):
     mute()
@@ -475,13 +474,13 @@ def tolibraryposition(card, x = 0, y = 0):
     if pos == None: return
     if pos > len(me.Library):
       notify("{} moves {} from {} to Library (bottom).".format(me, card, fromText))
-      card.moveToBottom(me.Library)
+      card.moveToBottom(card.owner.Library)
     elif pos == 0:
       notify("{} moves {} from {} to Library (top).".format(me, card, fromText))
-      card.moveTo(me.Library)
+      card.moveTo(card.owner.Library)
     else:
       notify("{} moves {} from {} to Library ({} from top).".format(me, card, fromText, pos))
-      card.moveTo(me.Library, pos)
+      card.moveTo(card.owner.Library, pos)
 
 def tohand(card, x = 0, y = 0):
     mute()
@@ -497,7 +496,7 @@ def tohand(card, x = 0, y = 0):
         else:
           cardname = "a card"
       notify("{} moves {} to their hand from their {}.".format(me, cardname, src.name))
-    card.moveTo(me.hand)
+    card.moveTo(card.owner.hand)
 
 def randomDiscard(group):
     mute()
@@ -506,7 +505,7 @@ def randomDiscard(group):
     card.isFaceUp = True
     rnd(10,100)
     notify("{} randomly discards {}.".format(me, card))
-    card.moveTo(me.Graveyard)
+    card.moveTo(card.owner.Graveyard)
 
 def randomPick(group, x = 0, y = 0):
     mute()
@@ -529,17 +528,17 @@ def mulligan(group):
     if not confirm("Mulligan down to %i ?" % newCount): return
     notify("{} mulligans down to {}".format(me, newCount))
     for card in group:
-        card.moveTo(me.Library)
+        card.moveTo(card.owner.Library)
     uselessvar = rnd(10, 1000)
     me.Library.shuffle()
     for card in me.Library.top(newCount):
-        card.moveTo(me.hand)
+        card.moveTo(card.owner.hand)
 
 def draw(group, x = 0, y = 0):
     mute()
     if len(group) == 0: return
     card = group[0]
-    card.moveTo(me.hand)
+    card.moveTo(card.owner.hand)
     rnd(10,100)
     if re.search(r'Miracle {', card.Rules):
       if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.name, card.Rules)):
@@ -560,35 +559,26 @@ def drawMany(group, count = None):
     if len(group) == 0: return
     mute()
     if count == None: count = askInteger("Draw how many cards?", 7)
-    for c in group.top(count): c.moveTo(me.hand)
+    for card in group.top(count): card.moveTo(card.owner.hand)
     notify("{} draws {} cards.".format(me, count))
 
 def mill(group = me.Library, count = None):
     if len(group) == 0: return
     mute()
     if count == None: count = askInteger("Mill how many cards?", 1)
-    for c in group.top(count): c.moveTo(me.Graveyard)
+    for card in group.top(count): card.moveTo(card.owner.Graveyard)
     notify("{} mills top {} cards from Library.".format(me, count))
 
 def exileMany(group = me.Library, count = None):
     if len(group) == 0: return
     mute()
     if count == None: count = askInteger("Exile how many cards?", 1)
-    for c in group.top(count): c.moveTo(me.piles['Exiled Zone'])
+    for card in group.top(count): card.moveTo(card.owner.piles['Exiled Zone'])
     notify("{} exiles top {} cards from Library.".format(me, count))
-
-def shuffleIntoLibrary(group = me.Graveyard):
-    mute()
-    Library = me.Library
-    for c in group: c.moveTo(Library)
-    rnd(100,1000)
-    Library.shuffle()
-    notify("{} shuffles {} into Library.".format(me, group.name))
 
 def moveIntoLibrary(group):
     mute()
-    Library = me.Library
-    for c in group: c.moveTo(Library)
+    for card in group: card.moveTo(card.owner.Library)
     notify("{} moves all cards from {} into Library.".format(me, group.name))
 
 def revealtoplibrary(group, x = 0, y = 0):
@@ -602,6 +592,5 @@ def revealtoplibrary(group, x = 0, y = 0):
 
 def exileAll(group):
     mute()
-    exiledZone = me.piles['Exiled Zone']
-    for c in group: c.moveTo(exiledZone)
+    for card in group: card.moveTo(card.owner.piles['Exiled Zone'])
     notify("{} exiles all cards from {}".format(me, group.name))
