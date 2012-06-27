@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<game name="Magic: the Gathering" id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" octgnVersion="3.0.1.4" version="3.0.8" markersize="14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Game.xsd">
+<game name="Magic: the Gathering" id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" octgnVersion="3.0.1.4" version="3.0.9" markersize="14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Game.xsd">
   <scripts>
     <script src="r18" />
     <script src="r19" />
@@ -94,6 +94,7 @@
     <hand name="Hand" shortcut="ctrl+H" visibility="me" width="63" height="88" icon="r15">
       <cardaction menu="Cast Spell" default="true" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
+      <cardaction menu="Suspend Card" execute="suspend" />
       <cardaction menu="Discard Card" shortcut="del" execute="destroy" />
       <cardaction menu="Cycle Card" execute="cycle" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />

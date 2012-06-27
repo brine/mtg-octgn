@@ -187,7 +187,17 @@ def play(card, x = 0, y = 0):
 def resolve(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    if scriptMarkers['miracle'] in card.markers:
+    if scriptMarkers['suspend'] in card.markers:
+      if counters['time'] in card.markers:
+        card.markers[counters['time']] -= 1
+      if counters['time'] in card.markers:
+        notify("{} removed a time counter from suspended {}.".format(me, card))
+      else:
+        card.markers[scriptMarkers['suspend']] = 0
+        text = trigAbility(card, 'cast', 'table')
+        if text != "BREAK":
+          notify("{} casts suspended {}{}.".format(me, card, text))
+    elif scriptMarkers['miracle'] in card.markers:
       text = stackResolve(card, 'miracle')
       notify("{}'s {} Miracle trigger resolves{}.".format(me, card, text))
     elif scriptMarkers['cycle'] in card.markers:

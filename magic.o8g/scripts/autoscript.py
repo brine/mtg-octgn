@@ -155,6 +155,16 @@ def transform(card, x = 0, y = 0):
         card.isFaceUp = True
         notify("{} morphs {} face up.".format(me, card))
 
+def suspend(card, x = 0, y = 0):
+  mute()
+  num = askInteger("Suspending {}, what is X?\n(To cancel, choose 0.)".format(card.name), 0)
+  if num != 0:
+    card.moveToTable(0,0)
+    card.markers[scriptMarkers['suspend']] = 1
+    card.markers[counters['time']] = num
+    cardalign()
+    notify("{} suspends {} for {}.".format(me, card, num))
+
 ##################################
 #Card Functions -- Autoscripted  
 ##################################
@@ -462,6 +472,8 @@ def cardalign():
   carddict = { }
   landorder = [ ]
   landdict = { }
+  suspendorder = [ ]
+  suspenddict = { }
   tablecards = [card for card in table
         if card.controller == me
         and not scriptMarkers['cast'] in card.markers
@@ -479,10 +491,14 @@ def cardalign():
         and not card._id in cattach]
   cardsort = sorted(tablecards, key=lambda card:(sortlist(card), card.name))
   for card in cardsort:
-      if re.search(r'Land', card.Type) or re.search(r'Planeswalker', card.Type) or re.search(r'Emblem', card.Type):
+      if scriptMarkers['suspend'] in card.markers:
+        vardict = suspenddict
+        varorder = suspendorder
+        yshift = 249
+      elif re.search(r'Land', card.Type) or re.search(r'Planeswalker', card.Type) or re.search(r'Emblem', card.Type):
         vardict = landdict
         varorder = landorder
-        yshift = 170
+        yshift = 161
       else:
         vardict = carddict
         varorder = cardorder
