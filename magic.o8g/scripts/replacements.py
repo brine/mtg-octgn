@@ -304,9 +304,11 @@ tokenTypes = {
     'spirit11u': ('1/1 Blue Spirit', '61f7504f-a29d-4f88-8a2d-58706bf08360'),
     'human11r': ('1/1 Red Human', 'f05acb33-16f2-41a4-acb5-dad4e6659b90'),
     'insect11g3': ('1/1 Green Insect', '2bce1692-5bba-4c10-8e72-2f8c7107bca0'),
+    'drake22u': ('2/2 Blue Drake', '254765e9-be8a-4f98-93ce-15b6ee29fed5'),
     'elspethemblem': ("Elspeth's Emblem", '10281a72-4654-4416-a24a-293ce0d732ea'),
     'kothemblem': ("Koth's Emblem", '38365196-9a15-4f78-a525-d01a80f94ace'),
     'venseremblem': ("Venser's Emblem", '3ec344de-90cb-480e-94be-96ff4ff774af'),
     'sorinemblem': ("Sorin's Emblem", 'b916e959-5a1d-4903-850a-95544f6ae566'),
-    'tamiyoemblem': ("Tamiyo's Emblem", '638f93d1-0c9d-45b5-a0c3-487d4590a7a3')
+    'tamiyoemblem': ("Tamiyo's Emblem", '638f93d1-0c9d-45b5-a0c3-487d4590a7a3'),
+    'lilianaemblem': ("Liliana's Emblem", '87d3cdb3-a9bd-4fc0-9f47-36d0a17344ff')
 }
