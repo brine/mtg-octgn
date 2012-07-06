@@ -64,6 +64,19 @@ def getTags(card, key):
     cardname = card.name
   encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
   if not cardname in savedtags:
+    rules = card.Rules
+    if re.search(r'creature token', rules):
+      encodedcardname += '&token'
+    if re.search(r'counter', rules):
+      encodedcardname += "&counter"
+    if re.search(r'{} enters the battlefield'.format(card.name), rules):
+      encodedcardname += '&etb'
+    if re.search(r'{} dies'.format(card.name), rules):
+      encodedcardname += '&destroy'
+    if re.search(r'{} attacks'.format(card.name), rules):
+      encodedcardname += '&attack'
+    if re.search(r'{} blocks'.format(card.name), rules):
+      encodedcardname += '&block'
     (fulltag, code) = webRead('http://octgn.gamersjudgement.com/tags.php?id={}'.format(encodedcardname))
     if code != 200:
       whisper('tag database is currently unavailable.')
