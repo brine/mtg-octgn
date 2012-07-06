@@ -586,11 +586,6 @@ def exileMany(group = me.Library, count = None):
     for card in group.top(count): card.moveTo(card.owner.piles['Exiled Zone'])
     notify("{} exiles top {} cards from Library.".format(me, count))
 
-def moveIntoLibrary(group):
-    mute()
-    for card in group: card.moveTo(card.owner.Library)
-    notify("{} moves all cards from {} into Library.".format(me, group.name))
-
 def revealtoplibrary(group, x = 0, y = 0):
     mute()
     if group[0].isFaceUp:
@@ -603,4 +598,19 @@ def revealtoplibrary(group, x = 0, y = 0):
 def exileAll(group):
     mute()
     for card in group: card.moveTo(card.owner.piles['Exiled Zone'])
-    notify("{} exiles all cards from {}".format(me, group.name))
+    notify("{} exiles all cards from {}.".format(me, group.name))
+
+def graveyardAll(group):
+    mute()
+    for card in group: card.moveTo(card.owner.piles['Graveyard'])
+    notify("{} moves all cards from their {} to Graveyard.".format(me, group.name))
+
+def libraryTopAll(group):
+    mute()
+    for card in group: card.moveTo(card.owner.piles['Library'])
+    notify("{} moves all cards from their {} to top of Library.".format(me, group.name))
+
+def libraryBottomAll(group):
+    mute()
+    for card in group: card.moveTo(card.owner.piles['Library'])
+    notify("{} moves all cards from their {} to bottom of Library.".format(me, group.name))
