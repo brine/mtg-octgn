@@ -365,6 +365,7 @@ def stackResolve(stackcard, type):
       stackcard.markers[scriptMarkers[marker]] = 0
   else:
     stackcard.moveTo(stackcard.owner.Graveyard)
+  stackcard.sendToFront()
   cardalign()
   return text
 
@@ -424,49 +425,53 @@ def align(group, x = 0, y = 0):
 
 def cardalign():
   mute()
-  global playerside
-  global sideflip
-  if sideflip == 0:
+  global playerside  ##Stores the Y-axis multiplier to determine which side of the table to align to
+  global sideflip  ##Stores the X-axis multiplier to determine if cards align on the left or right half
+  if sideflip == 0:  ##the 'disabled' state for alignment so the alignment positioning doesn't have to process each time
     return "BREAK"
   if Table.isTwoSided():
-    if playerside == None:
+    if playerside == None:  ##script skips this if playerside has already been determined
       if me.hasInvertedTable():
-        playerside = -1
+        playerside = -1  #inverted (negative) side of the table
       else:
         playerside = 1
-    if sideflip == None:
-      playersort = sorted(players, key=lambda player: player._id)
-      playercount = [p for p in playersort if me.hasInvertedTable() == p.hasInvertedTable()]
-      if len(playercount) > 2:
+    if sideflip == None:  ##script skips this if sideflip has already beend determined
+      playersort = sorted(players, key=lambda player: player._id)  ##makes a sorted players list so its consistent between all players
+      playercount = [p for p in playersort if me.hasInvertedTable() == p.hasInvertedTable()]  ##counts the number of players on your side of the table
+      if len(playercount) > 2:  ##since alignment only works with a maximum of two players on each side
         whisper("Cannot align: Too many players on your side of the table.")
-        sideflip = 0
+        sideflip = 0  ##disables alignment for the rest of the play session
         return "BREAK"
-      if playercount[0] == me:
+      if playercount[0] == me:  ##if you're the 'first' player on this side, you go on the positive (right) side
         sideflip = 1
       else:
         sideflip = -1
-  else:
+  else:  ##the case where two-sided table is disabled
     whisper("Cannot align: Two-sided table is required for card alignment.")
-    sideflip = 0
+    sideflip = 0  ##disables alignment for the rest of the play session
     return "BREAK"
-  while getGlobalVariable('cattach') == 'CHECKOUT':
+  while getGlobalVariable('cattach') == 'CHECKOUT':  ##prevents simultaneous manipulation of the attachment dictionary
     whisper("Global card attachment dictionary is currently in use, please wait.")
     return "BREAK"
-  cattach = eval(getGlobalVariable('cattach'))
-  setGlobalVariable('cattach', 'CHECKOUT') not in table
-  group1 = [cardid for cardid in cattach if Card(cattach[cardid]) not in table]
+  cattach = eval(getGlobalVariable('cattach'))  ##converts attachment dict to a real dictionary
+  setGlobalVariable('cattach', 'CHECKOUT')  ##checks out the attachment dict to prevent others from simultaneously changing it
+  group1 = [cardid for cardid in cattach if Card(cattach[cardid]) not in table]  ##selects attachment cards missing their original targets
   for cardid in group1:
-    if Card(cardid).Subtype != None and re.search(r'Aura', Card(cardid).Subtype) and Card(cardid).controller == me:
-      Card(cardid).moveTo(Card(cardid).owner.Graveyard)
+    if Card(cardid).Subtype != None and re.search(r'Aura', Card(cardid).Subtype) and Card(cardid).controller == me:  ##if the attachment is an aura you control
+      Card(cardid).moveTo(Card(cardid).owner.Graveyard)  ##destroy the aura
       notify("{}'s {} was destroyed".format(me, Card(cardid)))
-    del cattach[cardid]
-  group2 = [cardid for cardid in cattach if Card(cardid) not in table]
+    del cattach[cardid]  ##cleans up the attachment dict when the targeted card is no longer on the battlefield
+  group2 = [cardid for cardid in cattach if Card(cardid) not in table]  ##selects targeted cards whose attachment cards are now missing
   for cardid in group2:
-    del cattach[cardid]
-  setGlobalVariable('cattach', str(cattach))
+    del cattach[cardid]  ##clean up attachment dict
+  setGlobalVariable('cattach', str(cattach))  ##returns the attachment dict to the global variable and checks it back in
+  carddict = { }
+  cardorder = [[],[],[],[],[],[],[]]
+  attachlist = [ ]
   stackcount = 0
-  stackcards = (card for card in table
-        if scriptMarkers['cast'] in card.markers
+  for card in table:
+    if card.controller == me and not counters['general'] in card.markers:
+      if (scriptMarkers['cast'] in card.markers
         or scriptMarkers['activate'] in card.markers
         or scriptMarkers['attack'] in card.markers
         or scriptMarkers['block'] in card.markers
@@ -476,84 +481,42 @@ def cardalign():
         or scriptMarkers['cost'] in card.markers
         or scriptMarkers['x'] in card.markers
         or scriptMarkers['cycle'] in card.markers
-        or scriptMarkers['miracle'] in card.markers)
-  for card in stackcards:
-      if card.controller == me:
-        card.moveToTable(0, 0 + 10 * stackcount)
-      stackcount += 1
-  cardorder = [ ]
-  carddict = { }
-  landorder = [ ]
-  landdict = { }
-  suspendorder = [ ]
-  suspenddict = { }
-  tablecards = [card for card in table
-        if card.controller == me
-        and not scriptMarkers['cast'] in card.markers
-        and not scriptMarkers['activate'] in card.markers
-        and not scriptMarkers['attack'] in card.markers
-        and not scriptMarkers['block'] in card.markers
-        and not scriptMarkers['destroy'] in card.markers
-        and not scriptMarkers['exile'] in card.markers
-        and not scriptMarkers['etb'] in card.markers
-        and not scriptMarkers['cost'] in card.markers
-        and not scriptMarkers['x'] in card.markers
-        and not scriptMarkers['cycle'] in card.markers
-        and not scriptMarkers['miracle'] in card.markers
-        and not counters['general'] in card.markers
-        and not card._id in cattach]
-  cardsort = sorted(tablecards, key=lambda card:(sortlist(card), card.name))
-  for card in cardsort:
-      if scriptMarkers['suspend'] in card.markers:
-        vardict = suspenddict
-        varorder = suspendorder
-        yshift = 249
-      elif re.search(r'Land', card.Type) or re.search(r'Planeswalker', card.Type) or re.search(r'Emblem', card.Type):
-        vardict = landdict
-        varorder = landorder
-        yshift = 161
+        or scriptMarkers['miracle'] in card.markers):
+          card.moveToTable(0, 10 * stackcount)
+          stackcount += 1
+      elif not card._id in cattach:
+        dictname = card.name
+        for marker in card.markers:
+          dictname += marker[0]
+          dictname += str(card.markers[marker])
+        if card._id in dict([(v, k) for k, v in cattach.iteritems()]):
+          dictname += str(card._id)
+        if not dictname in carddict:
+          carddict[dictname] = []
+          if scriptMarkers["suspend"] in card.markers: cardorder[6].append(dictname)
+          elif re.search(r"Land", card.Type): cardorder[3].append(dictname)
+          elif re.search(r"Planeswalker", card.Type): cardorder[4].append(dictname)
+          elif re.search(r"Emblem", card.Type): cardorder[5].append(dictname)
+          elif re.search(r"Creature", card.Type): cardorder[0].append(dictname)
+          elif re.search(r"Artifact", card.Type): cardorder[1].append(dictname)
+          elif re.search(r"Enchantment", card.Type): cardorder[2].append(dictname)
+          else: cardorder[6].append(dictname)
+        carddict[dictname].append(card)
       else:
-        vardict = carddict
-        varorder = cardorder
-        yshift = 45
-      if len(card.markers) == 0 and not card._id in dict([(v, k) for k, v in cattach.iteritems()]):
-          if not card.name in vardict or vardict[card.name] == 0:
-            vardict[card.name] = 1
-            varorder.append(card.name)
-            xpos = len(varorder)
-            ypos = 1
-          elif vardict[card.name] >= 3:
-            vardict[card.name] = 0
-            xpos = varorder.index(card.name) + 1
-            varorder[varorder.index(card.name)] = ['BLANK']
-            ypos = 4
-          else:
-            vardict[card.name] += 1
-            xpos = varorder.index(card.name) + 1
-            ypos = vardict[card.name]
-      else:
-          varorder.append('BLANK')
-          xpos = len(varorder)
-          ypos = 4
-      card.moveToTable(sideflip * xpos * 80, playerside * yshift - 44 + playerside * 9 * ypos)
+        attachlist.insert(0, card)
+  xpos = 80
+  ypos = 35
+  for cardtype in cardorder:
+    if cardorder.index(cardtype) == 3 or cardorder.index(cardtype) == 6:
+      xpos = 80
+      ypos += 120
+    for cardname in cardtype:
+      for card in carddict[cardname]:
+        card.moveToTable(sideflip * xpos, playerside * ypos)
+        xpos += 9
+      xpos += 70
   cattachcount = { }
-  attachcardsgroup = [card for card in table
-        if card.controller == me
-        and not scriptMarkers['cast'] in card.markers
-        and not scriptMarkers['activate'] in card.markers
-        and not scriptMarkers['attack'] in card.markers
-        and not scriptMarkers['block'] in card.markers
-        and not scriptMarkers['destroy'] in card.markers
-        and not scriptMarkers['exile'] in card.markers
-        and not scriptMarkers['etb'] in card.markers
-        and not scriptMarkers['cost'] in card.markers
-        and not scriptMarkers['x'] in card.markers
-        and not scriptMarkers['cycle'] in card.markers
-        and not scriptMarkers['miracle'] in card.markers
-        and not counters['general'] in card.markers
-        and card._id in cattach]
-  attachcards= sorted(attachcardsgroup, key=lambda card: card.name)
-  for card in attachcards:
+  for card in attachlist:
     origc = cattach[card._id]
     (x, y) = Card(origc).position
     if playerside*y < 0:
@@ -568,15 +531,6 @@ def cardalign():
       cattachcount[Card(origc)] += 1
       card.moveToTable(x, y - yyy*playerside*cattachcount[Card(origc)]*9)
       card.sendToBack()
-
-def sortlist(card):
-  if re.search(r"Land", card.Type): return "A"
-  elif re.search(r"Planeswalker", card.Type): return "B"
-  elif re.search(r"Emblem", card.Type): return "C"
-  elif re.search(r"Creature", card.Type): return "D"
-  elif re.search(r"Artifact", card.Type): return "E"
-  elif re.search(r"Enchantment", card.Type): return "F"
-  else: return "G"
 
 def cardcount(card, stackcard, search):
   multiplier = 1
