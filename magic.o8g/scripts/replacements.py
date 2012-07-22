@@ -76,7 +76,11 @@ counters = {
     'currency': ('Currency counter', 'ed87dd52-9441-4233-818f-21e3d99ea03f'),
     'sleep': ('Sleep counter', 'fb2f69b1-f3a9-48a9-be78-fc4de06316c3'),
     'pop': ('Pop counter', '7323299a-5629-4f7b-a379-a6ed10728c87'),
-    'despair': ('Despair counter', 'd6a26d9e-d015-4279-ad18-59cd24065358')
+    'despair': ('Despair counter', 'd6a26d9e-d015-4279-ad18-59cd24065358'),
+    'pressure': ('Pressure counter', '99bf7053-16a9-4742-a24c-2e038281bd1a'),
+    'petrification': ('Petrification counter', '30e61000-ac2e-417d-91c5-b86f33256564'),
+    'gold': ('Gold counter', 'e2797e92-0e4a-42ce-ac98-2b2d9958b1a1'),
+    'infection': ('Petrification counter', 'f495743e-9ce0-48ee-92c4-952aa5012860')
 
 }
 
