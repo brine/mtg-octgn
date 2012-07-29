@@ -612,5 +612,5 @@ def libraryTopAll(group):
 
 def libraryBottomAll(group):
     mute()
-    for card in group: card.moveTo(card.owner.piles['Library'])
+    for card in group: card.moveToBottom(card.owner.piles['Library'])
     notify("{} moves all cards from their {} to bottom of Library.".format(me, group.name))
