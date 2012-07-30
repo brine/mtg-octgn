@@ -387,9 +387,9 @@ def stackAttach(card):
     return CRASH
   cattach = eval(getGlobalVariable('cattach'))
   setGlobalVariable('cattach', 'CHECKOUT')
-  target = (card for card in table if card.targetedBy)
-  targetcount = sum(1 for card in table if card.targetedBy)
-  if targetcount == 0:
+  target = [cards for cards in table if cards.targetedBy]
+  if len(target) == 0 or (len(target) == 1 and card in target):
+    card.target(False)
     if card._id in dict([(v, k) for k, v in cattach.iteritems()]):
       card2 = [k for k, v in cattach.iteritems() if v == card._id]
       for card3 in card2:
@@ -401,17 +401,13 @@ def stackAttach(card):
       notify("{} unattaches {} from {}.".format(me, card, Card(card2)))
     else:
       align = False
-  elif targetcount == 1:
+  elif len(target) == 1:
     for targetcard in target:
-      if card == targetcard:
-        del cattach[card._id]
-        notify("{} unattaches {} from {}.".format(me, card, targetcard))
-      else:
-        cattach[card._id] = targetcard._id
-        targetcard.target(False)
-        notify("{} attaches {} to {}.".format(me, card, targetcard))
+      cattach[card._id] = targetcard._id
+      targetcard.target(False)
+      notify("{} attaches {} to {}.".format(me, card, targetcard))
   else:
-    whisper("Incorrect targets, select only 1 target.")
+    whisper("Incorrect targets, select up to 1 target.")
     align = False
   setGlobalVariable('cattach', str(cattach))
   if align == True:
@@ -469,6 +465,19 @@ def cardalign():
   cardorder = [[],[],[],[],[],[],[]]
   attachlist = [ ]
   stackcount = 0
+  yshift = [{'Blank1': 0},{'Blank2': 0},{'Blank3': 0}]
+  for attachid in cattach:
+    targetcard = Card(cattach[attachid])
+    if scriptMarkers["suspend"] in targetcard.markers:
+      yshift[2][targetcard] = yshift[2].get(targetcard, 0) + 1
+    elif re.search(r"Land", targetcard.Type) or re.search(r"Planeswalker", targetcard.Type) or re.search(r"Emblem", targetcard.Type):
+      yshift[1][targetcard] = yshift[1].get(targetcard, 0) + 1
+    elif re.search(r"Creature", targetcard.Type) or re.search(r"Artifact", targetcard.Type) or re.search(r"Enchantment", targetcard.Type):
+      yshift[0][targetcard] = yshift[0].get(targetcard, 0) + 1
+    else:
+      yshift[2][targetcard] = yshift[2].get(targetcard, 0) + 1
+  for shiftdict in yshift:
+    yshift[yshift.index(shiftdict)] = max(shiftdict.itervalues())
   for card in table:
     if card.controller == me and not counters['general'] in card.markers:
       if (scriptMarkers['cast'] in card.markers
@@ -505,14 +514,17 @@ def cardalign():
       else:
         attachlist.insert(0, card)
   xpos = 80
-  ypos = 35
+  ypos = 5 + 10*yshift[0]
   for cardtype in cardorder:
-    if cardorder.index(cardtype) == 3 or cardorder.index(cardtype) == 6:
+    if cardorder.index(cardtype) == 3:
       xpos = 80
-      ypos += 120
+      ypos += 93 + 10*yshift[1]
+    elif cardorder.index(cardtype) == 6:
+      xpos = 80
+      ypos += 93 + 10*yshift[2]
     for cardname in cardtype:
       for card in carddict[cardname]:
-        card.moveToTable(sideflip * xpos, playerside * ypos)
+        card.moveToTable(sideflip * xpos, playerside * ypos + (44*playerside - 44))
         xpos += 9
       xpos += 70
   cattachcount = { }
