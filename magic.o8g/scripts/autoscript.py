@@ -19,20 +19,25 @@ def clearCache(group, x = 0, y = 0):
     setGlobalVariable('cattach', "{ }")
     notify("{} reset the global attachment dictionary.".format(me))
 
-def shuffle(group, x = 0, y = 0):
+def versionCheck():
     global versioncheck
     if versioncheck == None:
       (url, code) = webRead('http://octgn.gamersjudgement.com/OCTGN/game.txt')
-      if code == 200:
-        if url == gameVersion:
-          whisper("Your game definition is up-to-date")
-        else:
-          notify("{}'s game definition is out-of-date!".format(me))
-          if confirm("There is a new game definition available! Your version {}. Current version {}.\nClicking yes will open your browser to the location of the most recent version.".format(gameVersion, url)):
-            openUrl('http://octgn.gamersjudgement.com/viewtopic.php?f=8&t=195')
-      else:
-          whisper("Newest game definition version is unavailable at the moment")
+      if code != 200:
+        whisper("Newest game definition version is unavailable at the moment")
+        return
+      currentVers = url.split('.')
+      installedVers = gameVersion.split('.')
+      if len(installedVers) < 3:
+        whisper("Your game definition does not follow the correct version conventions.  It is most likely outdated or modified from its official release.")
+      elif currentVers[0] != installedVers[0] or currentVers[1] != installedVers[1] or currentVers[2] != installedVers[2]:
+        notify("{}'s game definition ({}) is out-of-date!".format(me, gameVersion))
+        if confirm("There is a new game definition available! Your version {}. Current version {}.\nClicking yes will open your browser to the location of the most recent version.".format(gameVersion, url)):
+          openUrl('http://octgn.gamersjudgement.com/viewtopic.php?f=8&t=195')
       versioncheck = True
+
+def shuffle(group, x = 0, y = 0):
+    versionCheck()
     for card in group:
       if card.isFaceUp:
         card.isFaceUp = False
