@@ -4,7 +4,7 @@
 import re
 
 phases = [
-    'It is currently in the Pre-game Setup Phase',
+    "It is now the Pre-game Setup Phase",
     "It is now {}'s UNTAP Step",
     "It is now {}'s UPKEEP Step",
     "It is now {}'s DRAW Step",
@@ -48,11 +48,11 @@ def nextPhase(group, x = 0, y = 0):
       phaseIdx = 1
     else:
       phaseIdx += 1
+    if phaseIdx == 1:
+      untapStep(group)
     showCurrentPhase(group)
 
-def goToUpkeep(group, x = 0, y = 0):
-    global phaseIdx
-    phaseIdx = 2
+def untapStep(group, x = 0, y = 0):
     mute()
     myCards = (card for card in table
                     if card.controller == me
@@ -63,7 +63,12 @@ def goToUpkeep(group, x = 0, y = 0):
         else:
           card.orientation &= ~Rot90
           card.highlight = None
-    notify("{} untaps and enters the UPKEEP Step.".format(me))
+
+def goToUpkeep(group, x = 0, y = 0):
+    global phaseIdx
+    phaseIdx = 2
+    untapStep(group)
+    showCurrentPhase(group)
 
 def goToFirstMain(group, x = 0, y = 0):
     global phaseIdx
@@ -508,7 +513,7 @@ def tohand(card, x = 0, y = 0):
       notify("{} moves {} to their hand from their {}.".format(me, cardname, src.name))
     card.moveTo(card.owner.hand)
 
-def randomDiscard(group):
+def randomDiscard(group, x = 0, y = 0):
     mute()
     card = group.random()
     if card == None: return
@@ -531,7 +536,7 @@ def randomPick(group, x = 0, y = 0):
     else:
       notify("{} randomly picks {} from their {}.".format(me, card, group.name))
 
-def mulligan(group):
+def mulligan(group, x = 0, y = 0):
     mute()
     newCount = len(group) - 1
     if newCount < 0: return
@@ -565,24 +570,24 @@ def draw(group, x = 0, y = 0):
         return
     notify("{} draws a card.".format(me))
 
-def drawMany(group, count = None):
+def drawMany(group, x = 0, y = 0):
     if len(group) == 0: return
     mute()
-    if count == None: count = askInteger("Draw how many cards?", 7)
+    count = askInteger("Draw how many cards?", 7)
     for card in group.top(count): card.moveTo(card.owner.hand)
     notify("{} draws {} cards.".format(me, count))
 
-def mill(group = me.Library, count = None):
+def mill(group, x = 0, y = 0):
     if len(group) == 0: return
     mute()
-    if count == None: count = askInteger("Mill how many cards?", 1)
+    count = askInteger("Mill how many cards?", 1)
     for card in group.top(count): card.moveTo(card.owner.Graveyard)
     notify("{} mills top {} cards from Library.".format(me, count))
 
-def exileMany(group = me.Library, count = None):
+def exileMany(group, x = 0, y = 0):
     if len(group) == 0: return
     mute()
-    if count == None: count = askInteger("Exile how many cards?", 1)
+    count = askInteger("Exile how many cards?", 1)
     for card in group.top(count): card.moveTo(card.owner.piles['Exiled Zone'])
     notify("{} exiles top {} cards from Library.".format(me, count))
 
@@ -595,22 +600,22 @@ def revealtoplibrary(group, x = 0, y = 0):
         group[0].isFaceUp = True
         notify("{} reveals {} from top of Library.".format(me, group[0]))
 
-def exileAll(group):
+def exileAll(group, x = 0, y = 0):
     mute()
     for card in group: card.moveTo(card.owner.piles['Exiled Zone'])
     notify("{} exiles all cards from {}.".format(me, group.name))
 
-def graveyardAll(group):
+def graveyardAll(group, x = 0, y = 0):
     mute()
     for card in group: card.moveTo(card.owner.piles['Graveyard'])
     notify("{} moves all cards from their {} to Graveyard.".format(me, group.name))
 
-def libraryTopAll(group):
+def libraryTopAll(group, x = 0, y = 0):
     mute()
     for card in group: card.moveTo(card.owner.piles['Library'])
     notify("{} moves all cards from their {} to top of Library.".format(me, group.name))
 
-def libraryBottomAll(group):
+def libraryBottomAll(group, x = 0, y = 0):
     mute()
     for card in group: card.moveToBottom(card.owner.piles['Library'])
     notify("{} moves all cards from their {} to bottom of Library.".format(me, group.name))
