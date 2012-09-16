@@ -311,7 +311,7 @@ def attackWithoutTapping(card, x = 0, y = 0):
       card.highlight = AttackColor
     text = trigAbility(card, 'attack', '')
     if text != "BREAK":
-      notify("{} attacks with {}{}.".format(me, card, text))
+      notify("{} attacks without tapping with {}{}.".format(me, card, text))
   else:
     if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
       card.highlight = AttackDoesntUntapColor
