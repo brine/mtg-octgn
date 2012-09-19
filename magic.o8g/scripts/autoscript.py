@@ -9,6 +9,7 @@ sideflip = None
 cstack = { }
 
 versioncheck = None
+tokencheck = None
 
 def clearCache(group, x = 0, y = 0):
   if confirm("Reset the Autoscript Tag cache?"):
@@ -36,12 +37,30 @@ def versionCheck():
           openUrl('http://octgn.gamersjudgement.com/viewtopic.php?f=8&t=195')
       versioncheck = True
 
+def tokenCheck():
+  mute()
+  global tokencheck
+  if tokencheck == None:
+    card = table.create('82d6958f-6103-497b-8691-7eb3bf71aa20', 0, 0, 1)
+
+    if card == None:
+
+      notify("{}'s markers & tokens set definition is out-of!-date!".format(me))
+      if confirm("Your Markers & Tokens set is not the most recent version! Please download and install the newest version.\nClicking yes will open your browser to the location of the most recent version."):
+        openUrl('http://octgn.gamersjudgement.com/viewtopic.php?f=8&t=195')
+      tokencheck = False
+    else:
+      card.moveTo(me.Graveyard)
+      tokencheck = True
+
 def shuffle(group, x = 0, y = 0):
     versionCheck()
+    tokenCheck()
     for card in group:
       if card.isFaceUp:
         card.isFaceUp = False
     group.shuffle()
+    notify("{} shuffled their deck".format(me))
 
 autoscripts = True
 
@@ -666,20 +685,24 @@ def autotoken(card, stackcard, tag):
   if quantity != 0:
     addtoken = tokenTypes[name]
     tokens = table.create(addtoken[1], 0, 0, quantity, persist = False)
-    if quantity == 1:
-      tokens = [tokens]
-    for token in tokens:
-      for modtag in modifiers:
-        if modtag == 'attack':
-          token.highlight = AttackColor
-        elif modtag == 'tap':
-          token.orientation = Rot90
-        elif re.search(r'marker', modtag):
-          (marker, type, quant) = modtag.split('_')
-          token.markers[counters[type]] += cardcount(token, stackcard, qty)
-    tokentext = "{} {}/{} {} {}".format(quantity, token.Power, token.Toughness, token.Color, token.name)
-    cardalign()
-    return ", creating {} token{}".format(tokentext, quant)
+    if (quantity == 1 and tokens == None) or (quantity > 1 and len(tokens) == 0):
+      confirm("Cannot create {}'s token -- your markers & tokens set definition is missing this token.".format(stackcard.name))
+      return ""
+    else:
+      if quantity == 1:
+        tokens = [tokens]
+      for token in tokens:
+        for modtag in modifiers:
+          if modtag == 'attack':
+            token.highlight = AttackColor
+          elif modtag == 'tap':
+            token.orientation = Rot90
+          elif re.search(r'marker', modtag):
+            (marker, type, quant) = modtag.split('_')
+            token.markers[counters[type]] += cardcount(token, stackcard, qty)
+      tokentext = "{} {}/{} {} {}".format(quantity, token.Power, token.Toughness, token.Color, token.name)
+      cardalign()
+      return ", creating {} token{}".format(tokentext, quant)
   else:
     return ""
 
@@ -756,6 +779,9 @@ def autoCreateToken(card, x = 0, y = 0):
     for token in tokens:
       addtoken = tokenTypes[token]
       tokencard = table.create(addtoken[1], x, y, 1, persist = False)
+      if tokencard == None:
+        confirm("Cannot create {}'s token -- your markers & tokens set definition is missing this token.".format(card))
+        return
       x, y = table.offset(x, y)
       text += "{}/{} {} {}, ".format(tokencard.Power, tokencard.Toughness, tokencard.Color, tokencard.name)
     if autoscripts == True: cardalign()
