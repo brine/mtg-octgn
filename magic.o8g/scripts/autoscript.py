@@ -195,7 +195,7 @@ def transform(card, x = 0, y = 0):
 def suspend(card, x = 0, y = 0):
   mute()
   num = askInteger("Suspending {}, what is X?\n(To cancel, choose 0.)".format(card.name), 0)
-  if num != 0:
+  if num != 0 and num != None:
     card.moveToTable(0,0)
     card.markers[scriptMarkers['suspend']] = 1
     card.markers[counters['time']] = num

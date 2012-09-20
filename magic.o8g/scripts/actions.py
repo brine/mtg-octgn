@@ -484,6 +484,7 @@ def tolibrary(card, x = 0, y = 0):
 def tolibraryposition(card, x = 0, y = 0):
     mute()
     pos = askInteger("Move to what position?\nNOTE: 0 is the top.", 0)
+    if pos == None: return
     src = card.group
     fromText = "the Battlefield" if src == table else src.name
     if pos == None: return
@@ -574,6 +575,7 @@ def drawMany(group, x = 0, y = 0):
     if len(group) == 0: return
     mute()
     count = askInteger("Draw how many cards?", 7)
+    if count == None: return
     for card in group.top(count): card.moveTo(card.owner.hand)
     notify("{} draws {} cards.".format(me, count))
 
@@ -581,6 +583,7 @@ def mill(group, x = 0, y = 0):
     if len(group) == 0: return
     mute()
     count = askInteger("Mill how many cards?", 1)
+    if count == None: return
     for card in group.top(count): card.moveTo(card.owner.Graveyard)
     notify("{} mills top {} cards from Library.".format(me, count))
 
@@ -588,6 +591,7 @@ def exileMany(group, x = 0, y = 0):
     if len(group) == 0: return
     mute()
     count = askInteger("Exile how many cards?", 1)
+    if count == None: return
     for card in group.top(count): card.moveTo(card.owner.piles['Exiled Zone'])
     notify("{} exiles top {} cards from Library.".format(me, count))
 
