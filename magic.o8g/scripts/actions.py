@@ -511,6 +511,8 @@ def tohand(card, x = 0, y = 0):
           cardname = card
         else:
           cardname = "a card"
+      else:
+        cardname = card
       notify("{} moves {} to their hand from their {}.".format(me, cardname, src.name))
     card.moveTo(card.owner.hand)
 
