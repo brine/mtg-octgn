@@ -80,7 +80,8 @@ counters = {
     'pressure': ('Pressure counter', '99bf7053-16a9-4742-a24c-2e038281bd1a'),
     'petrification': ('Petrification counter', '30e61000-ac2e-417d-91c5-b86f33256564'),
     'gold': ('Gold counter', 'e2797e92-0e4a-42ce-ac98-2b2d9958b1a1'),
-    'infection': ('Petrification counter', 'f495743e-9ce0-48ee-92c4-952aa5012860')
+    'infection': ('Petrification counter', 'f495743e-9ce0-48ee-92c4-952aa5012860'),
+    'filibuster': ('Filibuster counter', '7ea9761d-4ed0-4b24-b921-67106a5d7782')
 
 }
 
