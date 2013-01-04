@@ -181,9 +181,28 @@ def morph(card, x = 0, y = 0):
 def play(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    text = trigAbility(card, 'cast', 'table')
+    text = autoParser(card, 'cast')
     if text != "BREAK":
-      notify("{} casts {}{}.".format(me, card, text))
+      if card.Subtype != None and re.search(r'Aura', card.Subtype):
+        target = (card for card in table if card.targetedBy)
+        targetcount = sum(1 for card in table if card.targetedBy)
+        if targetcount == 1:
+          for targetcard in target:
+            while getGlobalVariable('cattach') == 'CHECKOUT':
+               whisper("Global card attachment dictionary is currently in use, please wait.")
+               return CRASH
+            cattach = eval(getGlobalVariable('cattach'))
+            setGlobalVariable('cattach', 'CHECKOUT')
+            cattach[card._id] = targetcard._id
+            targetcard.target(False)
+            setGlobalVariable('cattach', str(cattach))
+            text += ", targeting {}".format(targetcard)
+      if re.search('Land', card.Type):
+        text += autoParser(card, 'cast', True)
+        notify("{} plays {}{}.".format(me, card, text))
+      else:
+        notify("{} casts {}{}.".format(me, card, text))
+      cardalign()
   else:
     src = card.group
     card.moveToTable(0, 0)
@@ -199,37 +218,42 @@ def resolve(card, x = 0, y = 0):
         notify("{} removed a time counter from suspended {}.".format(me, card))
       else:
         card.markers[scriptMarkers['suspend']] = 0
-        text = trigAbility(card, 'cast', 'table')
+        text = autoParser(card, 'cast', True)
         if text != "BREAK":
           notify("{} casts suspended {}{}.".format(me, card, text))
-    elif scriptMarkers['miracle'] in card.markers:
-      text = stackResolve(card, 'miracle')
-      notify("{}'s {} Miracle trigger resolves{}.".format(me, card, text))
-    elif scriptMarkers['cycle'] in card.markers:
-      text = stackResolve(card, 'cycle')
-      notify("{}'s {} cycle trigger resolves{}.".format(me, card, text))
-    elif scriptMarkers['attack'] in card.markers:
-      text = stackResolve(card, 'attack')
-      notify("{}'s {} attack trigger resolves{}.".format(me, card, text))
-    elif scriptMarkers ['block'] in card.markers:
-      text = stackResolve(card, 'block')
-      notify("{}'s {} block trigger resolves{}.".format(me, card, text))
-    elif scriptMarkers ['destroy'] in card.markers:
-      text = stackResolve(card, 'destroy')
-      notify("{}'s {} destroy trigger resolves{}.".format(me, card, text))
-    elif scriptMarkers ['exile'] in card.markers:
-      text = stackResolve(card, 'exile')
-      notify("{}'s {} exile trigger resolves{}.".format(me, card, text))
     elif scriptMarkers ['cast'] in card.markers:
-      text = stackResolve(card, 'resolve')
+      text = autoParser(card, 'cast', True)
       notify("{} resolves {}{}.".format(me, card, text))
     elif scriptMarkers ['etb'] in card.markers:
-      text = stackResolve(card, 'etb')
+      text = autoParser(card, 'etb', True)
       notify("{}'s {} enters-play trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers['cycle'] in card.markers:
+      text = autoParser(card, 'cycle', True)
+      notify("{}'s {} cycle trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers['attack'] in card.markers:
+      text = autoParser(card, 'attack', True)
+      notify("{}'s {} attack trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers ['block'] in card.markers:
+      text = autoParser(card, 'block', True)
+      notify("{}'s {} block trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers ['destroy'] in card.markers:
+      text = autoParser(card, 'destroy', True)
+      notify("{}'s {} destroy trigger resolves{}.".format(me, card, text))
+    elif scriptMarkers ['exile'] in card.markers:
+      text = autoParser(card, 'exile', True)
+      notify("{}'s {} exile trigger resolves{}.".format(me, card, text))
     elif scriptMarkers ['activate'] in card.markers:
       num = card.markers[scriptMarkers['activate']]
-      text = stackResolve(card, 'activate{}'.format(num))
+      text = autoParser(card, 'activate{}'.format(num), True)
       notify("{}'s {} ability #{} trigger resolves{}.".format(me, card, num, text))
+    elif scriptMarkers['miracle'] in card.markers:
+      origcard = cstack[card]
+      del cstack[card]
+      card.moveTo(card.owner.Graveyard)
+      if origcard in me.hand:
+        play(origcard)
+      else:
+        notify("{}'s {} Miracle trigger is countered.".format(me, card))
     else:
       card.orientation ^= Rot90
       if card.orientation & Rot90 == Rot90:
@@ -248,12 +272,12 @@ def destroy(card, x = 0, y = 0):
   src = card.group
   if autoscripts == True and src == table:
     for marker in scriptMarkers:
-
       if scriptMarkers[marker] in card.markers:
         card.moveTo(card.owner.Graveyard)
         notify("{}'s {} was countered.".format(me, card))
         return
-    text = trigAbility(card, 'destroy', 'Graveyard')
+    text = autoParser(card, 'destroy')
+    card.moveTo(card.owner.Graveyard)
     if text != "BREAK":
       notify("{} destroys {}{}.".format(me, card, text))
   else:
@@ -267,7 +291,8 @@ def exile(card, x = 0, y = 0):
   mute()
   src = card.group
   if autoscripts == True and src == table:
-    text = trigAbility(card, 'exile', 'Exiled Zone')
+    text = autoParser(card, 'exile')
+    card.moveTo(card.owner.piles['Exiled Zone'])
     if text != "BREAK":
       notify("{} exiles {}{}.".format(me, card, text))
   else:
@@ -287,7 +312,7 @@ def attack(card, x = 0, y = 0):
       card.highlight = AttackDoesntUntapColor
     else:
       card.highlight = AttackColor
-    text = trigAbility(card, 'attack', '')
+    text = autoParser(card, 'attack')
     if text != "BREAK":
       notify("{} attacks with {}{}.".format(me, card, text))
   else:
@@ -309,7 +334,7 @@ def attackWithoutTapping(card, x = 0, y = 0):
       card.highlight = AttackDoesntUntapColor
     else:
       card.highlight = AttackColor
-    text = trigAbility(card, 'attack', '')
+    text = autoParser(card, 'attack')
     if text != "BREAK":
       notify("{} attacks without tapping with {}{}.".format(me, card, text))
   else:
@@ -326,7 +351,7 @@ def block(card, x = 0, y = 0):
       card.highlight = BlockDoesntUntapColor
     else:
       card.highlight = BlockColor
-    text = trigAbility(card, 'block', '')
+    text = autoParser(card, 'block')
     if text != "BREAK":
       notify("{} blocks with {}{}.".format(me, card, text))
   else:
@@ -339,9 +364,10 @@ def block(card, x = 0, y = 0):
 def activate(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    num = askInteger("Activate which ability?\n{}".format(getTags(card, 'allactivate')), 1)
+    (tags, list) = getTags(card, 'allactivate')
+    num = multipleChoice("Choose an Ability to Activate", list, str(tags), card.name)
     if num == None: return
-    text = trigAbility(card, 'activate{}'.format(num), '')
+    text = autoParser(card, 'activate{}'.format(num))
     if text != "BREAK":
       notify("{} activates ability #{} on {}{}.".format(me, num, card, text))
   else:
@@ -350,7 +376,7 @@ def activate(card, x = 0, y = 0):
 def cycle(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    text = trigAbility(card, 'cycle', 'Graveyard')
+    text = autoParser(card, 'cycle')
     if text != "BREAK":
       notify("{} cycles {}{}.".format(me, card, text))
   else:

@@ -10,13 +10,14 @@ cstack = { }
 
 versioncheck = None
 tokencheck = None
+offlinedisable = False
 
 def clearCache(group, x = 0, y = 0):
   if confirm("Reset the Autoscript Tag cache?"):
     global savedtags
     savedtags = { }
     notify("{} reset the global tag cache.".format(me))
-  if confirm("Reset the Attachment Dictionary?"):
+  if confirm("Reset the Attachment Dictionary?\nNote: Cards will no longer be attached."):
     setGlobalVariable('cattach', "{ }")
     notify("{} reset the global attachment dictionary.".format(me))
 
@@ -24,8 +25,9 @@ def versionCheck():
     global versioncheck
     if versioncheck == None:
       (url, code) = webRead('http://octgn.gamersjudgement.com/OCTGN/game.txt')
-      if code != 200:
+      if code != 200 or url == "":
         whisper("Newest game definition version is unavailable at the moment")
+        versioncheck = False
         return
       currentVers = url.split('.')
       installedVers = gameVersion.split('.')
@@ -45,7 +47,7 @@ def tokenCheck():
 
     if card == None:
 
-      notify("{}'s markers & tokens set definition is out-of!-date!".format(me))
+      notify("{}'s markers & tokens set definition is out-of-date!".format(me))
       if confirm("Your Markers & Tokens set is not the most recent version! Please download and install the newest version.\nClicking yes will open your browser to the location of the most recent version."):
         openUrl('http://octgn.gamersjudgement.com/viewtopic.php?f=8&t=195')
       tokencheck = False
@@ -78,7 +80,7 @@ savedtags = { }
 
 def getTags(card, key):
   mute()
-  global savedtags
+  global savedtags, offlinedisable
   if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
     if card.isAlternateImage == True:
       cardname = (card.name)[(card.name).find("/")+3:]
@@ -101,10 +103,18 @@ def getTags(card, key):
       encodedcardname += '&attack'
     if re.search(r'{} blocks'.format(card.name), rules):
       encodedcardname += '&block'
-    (fulltag, code) = webRead('http://octgn.gamersjudgement.com/tags.php?id={}'.format(encodedcardname))
-    if code != 200:
-      whisper('tag database is currently unavailable.')
-      fulltag = tags[cardname]
+    if offlinedisable == False:
+      (fulltag, code) = webRead('http://octgn.gamersjudgement.com/tags2.php?id={}'.format(encodedcardname), 7000)
+      if code == 204:
+        fulltag = ""
+      elif code != 200:
+        whisper('tag database is currently unavailable, using offline tag cache')
+        offlinedisable = True
+    if offlinedisable == True:
+        if cardname in offlineTags:
+          fulltag = offlineTags[cardname]
+        else:
+          fulltag = ""
     tagdict = { }
     classpieces = fulltag.split('; ')
     for classes in classpieces:
@@ -132,28 +142,17 @@ def getTags(card, key):
        tagdict[actionlist[0]] = actiondict
     savedtags[cardname] = tagdict
   if key == 'allactivate':
-    st = savedtags[cardname]
-    if 'initactivate1' in st: text11 = st['initactivate1']
-    else: text11 = ''
-    if 'activate1' in st: text12 = st['activate1']
-    else: text12 = ''
-    if 'initactivate2' in st: text21 = st['initactivate2']
-    else: text21 = ''
-    if 'activate2' in st: text22 = st['activate2']
-    else: text22 = ''
-    if 'initactivate3' in st: text31 = st['initactivate3']
-    else: text31 = ''
-    if 'activate3' in st: text32 = st['activate3']
-    else: text32 = ''
-    if 'initactivate4' in st: text41 = st['initactivate4']
-    else: text41 = ''
-    if 'activate4' in st: text42 = st['activate4']
-    else: text42 = ''
-    if 'initactivate5' in st: text51 = st['initactivate5']
-    else: text51 = ''
-    if 'activate5' in st: text52 = st['activate5']
-    else: text52 = ''
-    return "1) {}\n  --> {}\n2) {}\n  --> {}\n3) {}\n  --> {}\n4) {}\n  --> {}\n5) {}\n  --> {}".format(text11, text12, text21, text22, text31, text32, text41, text42, text51, text52)
+    tagstring = ''
+    for st in savedtags[cardname]: tagstring += st
+    count = 0
+    returntext = []
+    for lines in card.Rules.splitlines():
+      count += 1
+      if re.search('activate{}'.format(str(count)), tagstring):
+        returntext.append((True, '{}\n'.format(lines)))
+      else:
+        returntext.append((False, '{}\n'.format(lines)))
+    return (savedtags[cardname], returntext)
   if key in savedtags[cardname]:
     return savedtags[cardname][key]
   else:
@@ -168,11 +167,11 @@ def submitTags(card, x = 0, y = 0):
   else:
     cardname = card.name
   encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
-  (url, code) = webRead('http://octgn.gamersjudgement.com/tags.php?id={}'.format(encodedcardname))
-  if code == 200:
-    if url != "":
+  (url, code) = webRead('http://octgn.gamersjudgement.com/tags2.php?id={}'.format(encodedcardname))
+  if code == 200 or code == 204:
+    if code == 200:
       if not confirm("Submit an edit?\n{}".format(url)): return()
-    openUrl('http://octgn.gamersjudgement.com/submit.php?id={}'.format(encodedcardname))
+    openUrl('http://octgn.gamersjudgement.com/submit2.php?id={}'.format(encodedcardname))
   else:
       whisper("cannot connect to online database.")
 
@@ -206,189 +205,127 @@ def suspend(card, x = 0, y = 0):
 #Card Functions -- Autoscripted  
 ##################################
 
-def trigAbility(card, tagclass, pile):
-    mute()
-    markerdict = { }
-    text = ""
-    inittag = getTags(card, 'init{}'.format(tagclass))
-####aura attachment####
-    if tagclass == 'cast' and card.Subtype != None and re.search(r'Aura', card.Subtype):
-      target = (card for card in table if card.targetedBy)
-      targetcount = sum(1 for card in table if card.targetedBy)
-      if targetcount == 1:
-        for targetcard in target:
-          while getGlobalVariable('cattach') == 'CHECKOUT':
-             whisper("Global card attachment dictionary is currently in use, please wait.")
-             return CRASH
-          cattach = eval(getGlobalVariable('cattach'))
-          setGlobalVariable('cattach', 'CHECKOUT')
-          cattach[card._id] = targetcard._id
-          targetcard.target(False)
-          setGlobalVariable('cattach', str(cattach))
-          text += ", targeting {}".format(targetcard)
-####init tag checking####
-    if 'tapped' in inittag and card.orientation == Rot90:
-        if not confirm("{} is already tapped!\nContinue?".format(card.name)): return "BREAK"
-    if 'untapped' in inittag and card.orientation == Rot0:
-        if not confirm("{} is already untapped!\nContinue?".format(card.name)): return "BREAK"
-    if 'cost' in inittag:
-        for costtag in inittag['cost']:
-            (cost, type) = costtag.split(', ')
-            if cost in scriptMarkers:
-                marker = cost
-            else:
-                marker = 'cost'
-            if type == "ask":
-                if confirm("{}'s {}: Pay additional/alternate cost?".format(card.name, cost)):
-                    markerdict[marker] = 1
-                    text += ", paying {} cost".format(cost.title())
-            elif type == "num":
-                qty = askInteger("{}'s {}: Paying how many times?".format(card.name, cost), 0)
-                if qty == None: qty = 0
-                if qty != 0: markerdict[marker] = qty
-                text += ", paying {} {} times".format(cost.title(), qty)
-            else:
-                qty = cardcount(card, card, type)
-                if qty != 0: markerdict[marker] = qty
-    if 'marker' in inittag:
-        for markertag in inittag['marker']:
-            (markername, qty) = markertag.split(', ')
-            count = card.markers[counters[markername]]
-            if count + cardcount(card, card, qty) < 0:
-                if not confirm("Not enough {} counters to remove!\nContinue?".format(markername)): return "BREAK"
-####cast moves card to table####
-    if tagclass == 'cast':
-        card.moveToTable(0,0)
-        card.markers[scriptMarkers['cast']] = 1
-        for markers in markerdict:
-            card.markers[scriptMarkers[markers]] += markerdict[markers]
-        if card.Type != None and re.search(r'Land', card.Type):
-             text += stackResolve(card, 'resolve')
-        cardalign()
-        return text
-####cost modifier####
-    if 'cost' in markerdict:
-        trigtype = "cost{}".format(tagclass)
+def autoParser(c, tagclass, res = False):
+  mute()
+  markerdict = { }
+  text = ""
+  restag = ""
+  if res == True:
+    if c in cstack:
+      stackcard = c
+      card = cstack[c]
+      restag = "res"
     else:
-        trigtype = tagclass
-####create the triggered copy####
-    if trigtype == 'cycle' or getTags(card, trigtype) != '':
+      notify("ERROR: {}'s source cannot be identified! Can't be resolved.".format(c))
+      return "BREAK"
+  else:
+    stackcard = c
+    card = c
+#####INITCHECKS######
+  inittag = getTags(card, 'init{}{}'.format(restag, tagclass))
+  if 'tapped' in inittag and card.orientation == Rot90:
+    if not confirm("{} is already tapped!\nContinue?".format(card.name)):
+      return "BREAK"
+  if 'untapped' in inittag and card.orientation == Rot0:
+    if not confirm("{} is already untapped!\nContinue?".format(card.name)):
+      return "BREAK"
+  if 'cost' in inittag:
+    for ctag in inittag['cost']:
+      (cost, type) = ctag.split(', ')
+      if cost in scriptMarkers:
+        marker = cost
+      else:
+        marker = 'cost'
+      if type == "ask":
+        if confirm("{}'s {}: Pay additional/alternate cost?".format(card.name, cost)):
+          markerdict[marker] = 1
+          text += ", paying {} cost".format(cost.title())
+      elif type == "num":
+        qty = askInteger("{}'s {}: Paying how many times?".format(card.name, cost), 0)
+        if qty == None: qty = 0
+        if qty != 0: markerdict[marker] = qty
+        if qty == 1: text += ", paying {} once".format(cost.title())
+        else: text += ", paying {} {} times".format(cost.title(), qty)
+      else:
+        qty = cardcount(card, stackcard, type)
+        if qty != 0: markerdict[marker] = qty
+  if 'marker' in inittag:
+    for markertag in inittag['marker']:
+      (markername, qty) = markertag.split(', ')
+      count = card.markers[counters[markername]]
+      if count + cardcount(card, stackcard, qty) < 0:
+        if not confirm("Not enough {} counters to remove!\nContinue?".format(markername)): return "BREAK"
+#####Move Card/Create Trigger#####
+  if 'cost' in markerdict or scriptMarkers['cost'] in card.markers:
+    costtag = "cost"
+  else:
+    costtag = ""
+  if res == False:
+    if tagclass == 'etb':
+      markerdict['cost'] = card.markers[scriptMarkers['cost']]
+      markerdict['x'] = card.markers[scriptMarkers['x']]
+    if tagclass == 'cast':
+      card.moveToTable(0,0)
+      stackcard.markers[scriptMarkers['cast']] = 1
+    else:
+      if tagclass == 'cycle' or getTags(card, "{}res{}".format(costtag, tagclass)) != '':
         stackcard = table.create(card.model, 0, 0, 1)
         if card.isAlternateImage == True:
           stackcard.switchImage
         if re.search(r'activate', tagclass):
-          stackcard.markers[scriptMarkers['activate']] += int(tagclass[-1])
+          markerdict['activate'] = int(tagclass[-1])
         else:
-            stackcard.markers[scriptMarkers[tagclass]] += 1
-        cstack[stackcard] = card
-        for markers in markerdict:
-            stackcard.markers[scriptMarkers[markers]] += markerdict[markers]
-    else:
-        stackcard = card
+          markerdict[tagclass] = 1
+    cstack[stackcard] = card
+  for markers in markerdict:
+    stackcard.markers[scriptMarkers[markers]] += markerdict[markers]
 ####autoscripts####
-    if 'life' in inittag:
-      for tag in inittag['life']:
+  for tags in [inittag, getTags(card, "{}{}{}".format(costtag, restag, tagclass))]:
+    if 'persist' in tags:
+      for tag in tags['persist']:
+        text += autopersist(card, stackcard, tag)
+    if 'undying' in tags:
+      for tag in tags['undying']:
+        text += autoundying(card, stackcard, tag)
+    if 'life' in tags:
+      for tag in tags['life']:
         text += autolife(card, stackcard, tag)
-    if 'token' in inittag:
-      for tag in inittag['token']:
+    if 'token' in tags:
+      for tag in tags['token']:
         text += autotoken(card, stackcard, tag)
-    if 'marker' in inittag:
-      for tag in inittag['marker']:
+    if 'marker' in tags:
+      for tag in tags['marker']:
         text += automarker(card, stackcard, tag)
-    if 'smartmarker' in inittag:
-      for tag in inittag['smartmarker']:
+    if 'smartmarker' in tags:
+      for tag in tags['smartmarker']:
         text += autosmartmarker(card, tag)
-    if 'highlight' in inittag:
-      for tag in inittag['highlight']:
+    if 'highlight' in tags:
+      for tag in tags['highlight']:
         text += autohighlight(card, tag)
-    if 'tapped' in inittag:
-      for tag in inittag['tapped']:
+    if 'tapped' in tags:
+      for tag in tags['tapped']:
         text += autotapped(card, tag)
-    if 'untapped' in inittag:
-      for tag in inittag['untapped']:
+    if 'untapped' in tags:
+      for tag in tags['untapped']:
         text += autountapped(card, tag)
-    if 'transform' in inittag:
-      for tag in inittag['transform']:
+    if 'transform' in tags:
+      for tag in tags['transform']:
         text += autotransform(card, tag)
-    if 'moveto' in inittag:
-      for tag in inittag['moveto']:
+    if 'moveto' in tags:
+      for tag in tags['moveto']:
         text += automoveto(card, tag)
-    elif pile == "table":
-        card.moveToTable(0,0)
-    elif pile != '':
-        cardowner = card.owner
-        card.moveTo(cardowner.piles[pile])
-    stackcard.sendToFront()
-    cardalign()
-    return text
-
-def stackResolve(stackcard, type):
-  mute()
-  text = ''
-  if stackcard in cstack:
-    card = cstack[stackcard]
-  else:
-    card = stackcard
-  cost = getTags(stackcard, 'cost{}'.format(type))
-  if scriptMarkers['cost'] in stackcard.markers and cost != '':
-    resolvetag = cost
-  else:
-    resolvetag = getTags(stackcard, type)
-  if 'persist' in resolvetag:
-    for tag in resolvetag['persist']:
-      text += autopersist(card, stackcard, tag)
-  if 'undying' in resolvetag:
-    for tag in resolvetag['undying']:
-      text += autoundying(card, stackcard, tag)
-  if 'life' in resolvetag:
-    for tag in resolvetag['life']:
-      text += autolife(card, stackcard, tag)
-  if 'token' in resolvetag:
-    for tag in resolvetag['token']:
-      text += autotoken(card, stackcard, tag)
-  if 'marker' in resolvetag:
-    for tag in resolvetag['marker']:
-      text += automarker(card, stackcard, tag)
-  if 'smartmarker' in resolvetag:
-    for tag in resolvetag['smartmarker']:
-      text += autosmartmarker(card, tag)
-  if 'highlight' in resolvetag:
-    for tag in resolvetag['highlight']:
-      text += autohighlight(card, tag)
-  if 'tapped' in resolvetag:
-    for tag in resolvetag['tapped']:
-      text += autotapped(card, tag)
-  if 'untapped' in resolvetag:
-    for tag in resolvetag['untapped']:
-      text += autountapped(card, tag)
-  if 'transform' in resolvetag:
-    for tag in resolvetag['transform']:
-      text += autotransform(card, tag)
-  if 'moveto' in resolvetag:
-    for tag in resolvetag['moveto']:
-      text += automoveto(card, tag)
-  if stackcard in cstack:
-      del cstack[stackcard]
-  if type == 'miracle':
-    if card in me.hand:
-      casttext = trigAbility(card, 'cast', 'table')
-      text += ", casting{}".format(casttext)
+  if res == True:
+    if tagclass == 'cast':
+      stackcard.markers[scriptMarkers['cast']] = 0
+      if getTags(stackcard, "{}resetb".format(costtag)):
+        autoParser(card, 'etb')
+      stackcard.markers[scriptMarkers['cost']] = 0
+      stackcard.markers[scriptMarkers['x']] = 0
+      if re.search('Instant', stackcard.Type) or re.search('Sorcery', stackcard.Type):
+        stackcard.moveTo(stackcard.owner.Graveyard)
     else:
-      text += ", countered"
-  if type == 'resolve' and stackcard.Type != None and not re.search(r'Instant', stackcard.Type) and not re.search(r'Sorcery', stackcard.Type):
-    if scriptMarkers['cost'] in stackcard.markers and getTags(stackcard, 'costetb') != '':
-      newcard = table.create(stackcard.model, 0, 0, 1)
-      newcard.markers[scriptMarkers['etb']] += 1
-      newcard.markers[scriptMarkers['cost']] += stackcard.markers[scriptMarkers['cost']]
-      cstack[newcard] = stackcard
-    elif not scriptMarkers['cost'] in stackcard.markers and getTags(stackcard, 'etb') != '':
-      newcard = table.create(stackcard.model, 0, 0, 1)
-      newcard.markers[scriptMarkers['etb']] += 1
-      cstack[newcard] = stackcard
-    for marker in scriptMarkers:
-      stackcard.markers[scriptMarkers[marker]] = 0
-  else:
-    stackcard.moveTo(stackcard.owner.Graveyard)
+      stackcard.moveTo(stackcard.owner.Graveyard)
+    del cstack[stackcard]
   stackcard.sendToFront()
   cardalign()
   return text
@@ -637,16 +574,18 @@ def automoveto(card, pile):
       card.owner.Library.shuffle()
       text = "library and shuffled"
     elif re.search(r'exile', pile):
-      if trigAbility(card, 'exile', 'Exiled Zone') != "BREAK":
+      if autoParser(cards, 'exile') != "BREAK":
+        cards.moveTo(card.owner.piles['Exiled Zone'])
         text = "exile"
     elif re.search(r'hand', pile):
       cards.moveTo(card.owner.hand)
       text = "hand"
     elif re.search(r'graveyard', pile):
-      if trigAbility(card, 'destroy', 'Graveyard') != "BREAK":
+      if autoParser(cards, 'destroy') != "BREAK":
+        cards.moveTo(card.owner.Graveyard)
         text = "graveyard"
     elif re.search(r'stack', pile):
-      if trigAbility(card, 'cast', 'table') != "BREAK":
+      if autoParser(cards, 'cast') != "BREAK":
         text = "stack"
     elif re.search(r'table', pile):
       card.moveToTable(0,0)
