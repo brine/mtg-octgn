@@ -210,7 +210,7 @@ def autoParser(c, tagclass, res = False):
   markerdict = { }
   text = ""
   restag = ""
-  if res == True:
+  if res == True and not tagclass == "cast":
     if c in cstack:
       stackcard = c
       card = cstack[c]
@@ -276,7 +276,7 @@ def autoParser(c, tagclass, res = False):
           markerdict['activate'] = int(tagclass[-1])
         else:
           markerdict[tagclass] = 1
-    cstack[stackcard] = card
+      cstack[stackcard] = card
   for markers in markerdict:
     stackcard.markers[scriptMarkers[markers]] += markerdict[markers]
 ####autoscripts####
@@ -325,7 +325,7 @@ def autoParser(c, tagclass, res = False):
         stackcard.moveTo(stackcard.owner.Graveyard)
     else:
       stackcard.moveTo(stackcard.owner.Graveyard)
-    del cstack[stackcard]
+      del cstack[stackcard]
   stackcard.sendToFront()
   cardalign()
   return text
@@ -538,7 +538,7 @@ def cardcount(card, stackcard, search):
 def autopersist(card, stackcard, persist):
   if card.group.name == "Graveyard":
     card.moveToTable(0,0)
-    stackResolve(card, 'resolve')
+    autoParser(card, 'cast', True)
     card.markers[counters['minusoneminusone']] += 1
     return ", persisting"
   else:
@@ -547,7 +547,7 @@ def autopersist(card, stackcard, persist):
 def autoundying(card, stackcard, undying):
   if card.group.name == "Graveyard":
     card.moveToTable(0,0)
-    stackResolve(card, 'resolve')
+    autoParser(card, 'cast', True)
     card.markers[counters['plusoneplusone']] += 1
     return ", undying"
   else:
@@ -589,7 +589,7 @@ def automoveto(card, pile):
         text = "stack"
     elif re.search(r'table', pile):
       card.moveToTable(0,0)
-      stackResolve(card, 'resolve')
+      autoParser(card, 'cast', True)
       text = "table"
     return ", moving to {}".format(text)
 
