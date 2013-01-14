@@ -210,17 +210,17 @@ def autoParser(c, tagclass, res = False):
   markerdict = { }
   text = ""
   restag = ""
-  if res == True and not tagclass == "cast":
-    if c in cstack:
-      stackcard = c
-      card = cstack[c]
-      restag = "res"
-    else:
-      notify("ERROR: {}'s source cannot be identified! Can't be resolved.".format(c))
-      return "BREAK"
-  else:
-    stackcard = c
-    card = c
+  stackcard = c
+  card = c
+  if res == True:
+    restag = "res"
+    if not tagclass == "cast":
+      if c in cstack:
+        stackcard = c
+        card = cstack[c]
+      else:
+        notify("ERROR: {}'s source cannot be identified! Can't be resolved.".format(c))
+        return "BREAK"
 #####INITCHECKS######
   inittag = getTags(card, 'init{}{}'.format(restag, tagclass))
   if 'tapped' in inittag and card.orientation == Rot90:
@@ -314,6 +314,7 @@ def autoParser(c, tagclass, res = False):
     if 'moveto' in tags:
       for tag in tags['moveto']:
         text += automoveto(card, tag)
+  rnd(1,1)
   if res == True:
     if tagclass == 'cast':
       stackcard.markers[scriptMarkers['cast']] = 0
