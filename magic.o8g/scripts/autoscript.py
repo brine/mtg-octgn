@@ -43,7 +43,7 @@ def tokenCheck():
   mute()
   global tokencheck
   if tokencheck == None:
-    card = table.create('7e66fe70-e022-45c9-858d-9577202ce5f2', 0, 0, 1)
+    card = table.create('82d6958f-6103-497b-8691-7eb3bf71aa20', 0, 0, 1)
 
     if card == None:
 
