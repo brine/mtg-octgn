@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<game name="Magic: the Gathering" id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" octgnVersion="3.0.1.27" version="3.0.12.6" markersize="14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Game.xsd">
+<game name="Magic: the Gathering" id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" octgnVersion="3.0.1.28" version="3.0.12.7" markersize="14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Game.xsd">
   <scripts>
     <script src="r18" />
     <script src="r19" />
@@ -7,10 +7,12 @@
     <script src="r21" />
     <script src="r25" />
   </scripts>
+  <fonts>
+    <font src="r26" size="14" target="context"/>
+  </fonts>
   <globalvariables> 
     <globalvariable name="cattach" value="{ }"/>
     <globalvariable name="smartmarker" value=""/>
-    <globalvariable name="fontsize" value="14"/>
   </globalvariables>
   <card back="r01" front="r02" width="63" height="88" cornerRadius="2">
     <property name="Cost" type="String" ignoreText="true" />
