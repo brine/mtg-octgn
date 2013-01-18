@@ -327,7 +327,6 @@ def autoParser(c, tagclass, res = False):
     else:
       stackcard.moveTo(stackcard.owner.Graveyard)
       del cstack[stackcard]
-  stackcard.sendToFront()
   cardalign()
   return text
 
