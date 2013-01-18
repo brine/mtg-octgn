@@ -327,7 +327,6 @@ def autoParser(c, tagclass, res = False):
     else:
       stackcard.moveTo(stackcard.owner.Graveyard)
       del cstack[stackcard]
-  cardalign()
   return text
 
 ############################
@@ -343,11 +342,7 @@ def attach(card, x = 0, y = 0):
 def stackAttach(card):
   mute()
   align = True
-  while getGlobalVariable('cattach') == 'CHECKOUT':
-    whisper("Global card attachment dictionary is currently in use, please wait.")
-    return CRASH
   cattach = eval(getGlobalVariable('cattach'))
-  setGlobalVariable('cattach', 'CHECKOUT')
   target = [cards for cards in table if cards.targetedBy]
   if len(target) == 0 or (len(target) == 1 and card in target):
     card.target(False)
@@ -407,11 +402,7 @@ def cardalign():
     whisper("Cannot align: Two-sided table is required for card alignment.")
     sideflip = 0  ##disables alignment for the rest of the play session
     return "BREAK"
-  while getGlobalVariable('cattach') == 'CHECKOUT':  ##prevents simultaneous manipulation of the attachment dictionary
-    whisper("Global card attachment dictionary is currently in use, please wait.")
-    return "BREAK"
   cattach = eval(getGlobalVariable('cattach'))  ##converts attachment dict to a real dictionary
-  setGlobalVariable('cattach', 'CHECKOUT')  ##checks out the attachment dict to prevent others from simultaneously changing it
   group1 = [cardid for cardid in cattach if Card(cattach[cardid]) not in table]  ##selects attachment cards missing their original targets
   for cardid in group1:
     if Card(cardid).Subtype != None and re.search(r'Aura', Card(cardid).Subtype) and Card(cardid).controller == me:  ##if the attachment is an aura you control
@@ -421,7 +412,8 @@ def cardalign():
   group2 = [cardid for cardid in cattach if Card(cardid) not in table]  ##selects targeted cards whose attachment cards are now missing
   for cardid in group2:
     del cattach[cardid]  ##clean up attachment dict
-  setGlobalVariable('cattach', str(cattach))  ##returns the attachment dict to the global variable and checks it back in
+  if cattach != eval(getGlobalVariable('cattach')): ##checks to see if we changed the attached cards, because Kelly whined that we were updating global variables too often
+    setGlobalVariable('cattach', str(cattach))  ##updates the global attachment dictionary with our changes
   carddict = { }
   cardorder = [[],[],[],[],[],[],[]]
   attachlist = [ ]
