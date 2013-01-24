@@ -432,8 +432,8 @@ def cardalign():
   for shiftdict in yshift:
     yshift[yshift.index(shiftdict)] = max(shiftdict.itervalues())
   for card in table:
-    if card.controller == me and not counters['general'] in card.markers:
-      if (scriptMarkers['cast'] in card.markers
+    if not counters['general'] in card.markers:
+      if card.controller == me and (scriptMarkers['cast'] in card.markers
         or scriptMarkers['activate'] in card.markers
         or scriptMarkers['attack'] in card.markers
         or scriptMarkers['block'] in card.markers
@@ -446,7 +446,7 @@ def cardalign():
         or scriptMarkers['miracle'] in card.markers):
           card.moveToTable(0, 10 * stackcount)
           stackcount += 1
-      elif not card._id in cattach:
+      elif card.controller == me and not card._id in cattach:
         dictname = card.name
         for marker in card.markers:
           dictname += marker[0]
@@ -464,7 +464,7 @@ def cardalign():
           elif re.search(r"Enchantment", card.Type): cardorder[2].append(dictname)
           else: cardorder[6].append(dictname)
         carddict[dictname].append(card)
-      else:
+      elif card._id in cattach:
         attachlist.insert(0, card)
   xpos = 80
   ypos = 5 + 10*yshift[0]
