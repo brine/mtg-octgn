@@ -248,7 +248,7 @@ def resolve(card, x = 0, y = 0):
       notify("{}'s {} exile trigger resolves{}.".format(me, card, text))
     elif scriptMarkers ['activate'] in card.markers:
       num = card.markers[scriptMarkers['activate']]
-      text = autoParser(card, 'activate{}'.format(num), True)
+      text = autoParser(card, 'acti{}'.format(num), True)
       cardalign()
       notify("{}'s {} ability #{} trigger resolves{}.".format(me, card, num, text))
     elif scriptMarkers['miracle'] in card.markers:
@@ -378,7 +378,7 @@ def activate(card, x = 0, y = 0):
     (tags, list) = getTags(card, 'allactivate')
     num = multipleChoice("Choose an Ability to Activate", list, str(tags), card.name)
     if num == None: return
-    text = autoParser(card, 'activate{}'.format(num))
+    text = autoParser(card, 'acti{}'.format(num))
     cardalign()
     if text != "BREAK":
       notify("{} activates ability #{} on {}{}.".format(me, num, card, text))

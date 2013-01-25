@@ -148,7 +148,7 @@ def getTags(card, key):
     returntext = []
     for lines in card.Rules.splitlines():
       count += 1
-      if re.search('activate{}'.format(str(count)), tagstring):
+      if re.search('acti{}'.format(str(count)), tagstring):
         returntext.append((True, '{}\n'.format(lines)))
       else:
         returntext.append((False, '{}\n'.format(lines)))
@@ -272,7 +272,7 @@ def autoParser(c, tagclass, res = False):
         stackcard = table.create(card.model, 0, 0, 1)
         if card.isAlternateImage == True:
           stackcard.switchImage
-        if re.search(r'activate', tagclass):
+        if re.search(r'acti', tagclass):
           markerdict['activate'] = int(tagclass[-1])
         else:
           markerdict[tagclass] = 1
