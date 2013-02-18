@@ -24,7 +24,7 @@ def clearCache(group, x = 0, y = 0):
 def versionCheck():
     global versioncheck
     if versioncheck == None:
-      (url, code) = webRead('http://octgn.gamersjudgement.com/OCTGN/game.txt')
+      (url, code) = webRead('http://octgn.gamersjudgement.com/OCTGN/game.txt', 7000)
       if code != 200 or url == "":
         whisper("Newest game definition version is unavailable at the moment")
         versioncheck = False
@@ -287,6 +287,11 @@ def autoParser(c, tagclass, res = False):
     if 'undying' in tags:
       for tag in tags['undying']:
         text += autoundying(card, stackcard, tag)
+    if 'attach' in tags:
+      for tag in tags['attach']:
+        target = [cards for cards in table if cards.targetedBy]
+        if len(target) == 1:
+          text = ", " + autoAttach(card, target[0])
     if 'life' in tags:
       for tag in tags['life']:
         text += autolife(card, stackcard, tag)
@@ -334,40 +339,22 @@ def autoParser(c, tagclass, res = False):
 ############################
 
 def attach(card, x = 0, y = 0):
- if autoscripts == True:
-  stackAttach(card)
- else:
-  whisper("Autoscripts must be enabled to use this feature")
-
-def stackAttach(card):
   mute()
-  align = True
-  cattach = eval(getGlobalVariable('cattach'))
-  target = [cards for cards in table if cards.targetedBy]
-  if len(target) == 0 or (len(target) == 1 and card in target):
-    card.target(False)
-    if card._id in dict([(v, k) for k, v in cattach.iteritems()]):
-      card2 = [k for k, v in cattach.iteritems() if v == card._id]
-      for card3 in card2:
-        del cattach[card3]
-        notify("{} unattaches {} from {}.".format(me, Card(card3), card))
-    elif card._id in cattach:
-      card2 = cattach[card._id]
-      del cattach[card._id]
-      notify("{} unattaches {} from {}.".format(me, card, Card(card2)))
+  if autoscripts == True:
+    target = [cards for cards in table if cards.targetedBy]
+    if len(target) == 0 or (len(target) == 1 and card in target):
+      text = autoDetach(card)
+    elif len(target) == 1:
+      text = autoAttach(card, target[0])
     else:
-      align = False
-  elif len(target) == 1:
-    for targetcard in target:
-      cattach[card._id] = targetcard._id
-      targetcard.target(False)
-      notify("{} attaches {} to {}.".format(me, card, targetcard))
-  else:
-    whisper("Incorrect targets, select up to 1 target.")
-    align = False
-  setGlobalVariable('cattach', str(cattach))
-  if align == True:
+      whisper("Incorrect targets, select up to 1 target.")
+      return
+    if text == "":
+      return
+    notify("{} {}.".format(me, text))
     cardalign()
+  else:
+    whisper("Autoscripts must be enabled to use this feature")
 
 def align(group, x = 0, y = 0):
   mute()
@@ -527,6 +514,34 @@ def cardcount(card, stackcard, search):
 #Autoscript
 ############################
 
+def autoAttach(card, targetcard):
+  mute()
+  cattach = eval(getGlobalVariable('cattach'))
+  if targetcard._id in cattach and cattach[targetcard._id] == card._id:
+    del cattach[targetcard._id]
+  cattach[card._id] = targetcard._id
+  targetcard.target(False)
+  setGlobalVariable('cattach', str(cattach))
+  return "attaching {} to {}".format(card, targetcard)
+
+def autoDetach(card):
+  mute()
+  cattach = eval(getGlobalVariable('cattach'))
+  card.target(False)
+  if card._id in dict([(v, k) for k, v in cattach.iteritems()]):
+    card2 = [k for k, v in cattach.iteritems() if v == card._id]
+    for card3 in card2:
+      del cattach[card3]
+      text = "{} unattaches {} from {}.".format(me, Card(card3), card)
+  elif card._id in cattach:
+    card2 = cattach[card._id]
+    del cattach[card._id]
+    text = "unattaching {} from {}".format(card, Card(card2))
+  else:
+    return ""
+  setGlobalVariable('cattach', str(cattach))
+  return text
+
 def autopersist(card, stackcard, persist):
   if card.group.name == "Graveyard":
     card.moveToTable(0,0)
@@ -631,6 +646,8 @@ def autotoken(card, stackcard, tag):
           elif re.search(r'marker', modtag):
             (marker, type, quant) = modtag.split('_')
             token.markers[counters[type]] += cardcount(token, stackcard, qty)
+          elif modtag == 'attach':
+            autoAttach(card, token)
       tokentext = "{} {}/{} {} {}".format(quantity, token.Power, token.Toughness, token.Color, token.name)
       cardalign()
       return ", creating {} token{}".format(tokentext, quant)
