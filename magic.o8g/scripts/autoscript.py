@@ -247,7 +247,7 @@ def autoParser(c, tagclass, res = False):
       (rulesline, type) = choice.split(', ')
       modelist = getTags(card, 'allmodes', rulesline)
       num = multipleChoice("Choose a mode", modelist, '', card.name)
-      card.markers[scriptMarkers['choice'.format(num)]] = num
+      markerdict['choice'] = num
       text += ", choosing mode #{}".format(num)
   if 'cost' in inittag:
     for ctag in inittag['cost']:
