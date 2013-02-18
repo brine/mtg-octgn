@@ -78,7 +78,7 @@ def disable(card, x = 0, y = 0):
 
 savedtags = { }
 
-def getTags(card, key):
+def getTags(card, key, rulesline = None):
   mute()
   global savedtags, offlinedisable
   if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
@@ -153,6 +153,19 @@ def getTags(card, key):
       else:
         returntext.append((False, '{}\n'.format(lines)))
     return (savedtags[cardname], returntext)
+  if key == 'allmodes':
+    tagstring = ''
+    for st in savedtags[cardname]: tagstring += ";{}".format(st)
+    cardrules = card.Rules.splitlines()[int(rulesline) - 1]
+    count = 0
+    modelist = []
+    for mode in cardrules.split("; or "):
+      count += 1
+      if re.search(';{}'.format(str(count)), tagstring):
+        modelist.append((True, '{}\n'.format(mode)))
+      else:
+        modelist.append((False, '{}\n'.format(mode)))
+    return modelist
   if key in savedtags[cardname]:
     return savedtags[cardname][key]
   else:
@@ -229,6 +242,13 @@ def autoParser(c, tagclass, res = False):
   if 'untapped' in inittag and card.orientation == Rot0:
     if not confirm("{} is already untapped!\nContinue?".format(card.name)):
       return "BREAK"
+  if 'choice' in inittag:
+    for choice in inittag['choice']:
+      (rulesline, type) = choice.split(', ')
+      modelist = getTags(card, 'allmodes', rulesline)
+      num = multipleChoice("Choose a mode", modelist, '', card.name)
+      card.markers[scriptMarkers['choice'.format(num)]] = num
+      text += ", choosing mode #{}".format(num)
   if 'cost' in inittag:
     for ctag in inittag['cost']:
       (cost, type) = ctag.split(', ')
@@ -280,7 +300,10 @@ def autoParser(c, tagclass, res = False):
   for markers in markerdict:
     stackcard.markers[scriptMarkers[markers]] += markerdict[markers]
 ####autoscripts####
-  for tags in [inittag, getTags(card, "{}{}{}".format(costtag, restag, tagclass))]:
+  taglist = [inittag, getTags(card, "{}{}{}".format(costtag, restag, tagclass))]
+  if scriptMarkers['choice'] in card.markers:
+    taglist.append(getTags(card, "{}{}{}{}".format(card.markers[scriptMarkers['choice']], costtag, restag, tagclass)))
+  for tags in taglist:
     if 'persist' in tags:
       for tag in tags['persist']:
         text += autopersist(card, stackcard, tag)

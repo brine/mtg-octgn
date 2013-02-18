@@ -98,7 +98,8 @@ scriptMarkers = {
     'exile': ('Exile trigger: ' + me.name, '9f315796-c2b2-4159-bcf6-3e28ecddfbc9'),
     'cycle': ('Cycle trigger: ' + me.name, 'e9f688b5-5068-404c-9979-23098aa37dfa'),
     'suspend': ('Suspended', '9cc0fc15-9967-4e98-9afb-a2d5e1479920'),
-    'miracle': ('Miracle trigger: ' + me.name, 'aee4bba3-9375-4f14-9882-5d8d6fdd1660')
+    'miracle': ('Miracle trigger: ' + me.name, 'aee4bba3-9375-4f14-9882-5d8d6fdd1660'),
+    'choice': ('Mode Indicator: ' + me.name, '1c8f7028-ea97-4fa4-93ce-ba0bb55b31e7')
 }
 
 tokenTypes = {
@@ -311,7 +312,7 @@ tokenTypes = {
     'human11r': ('1/1 Red Human', 'f05acb33-16f2-41a4-acb5-dad4e6659b90'),
     'insect11g3': ('1/1 Green Insect', '2bce1692-5bba-4c10-8e72-2f8c7107bca0'),
     'drake22u': ('2/2 Blue Drake', '254765e9-be8a-4f98-93ce-15b6ee29fed5'),
-    'knight22w3': ('1/1 White Knight', '92f8cd16-807c-4301-8dfa-166bb37b0f52'),
+    'knight22w3': ('2/2 White Knight', '92f8cd16-807c-4301-8dfa-166bb37b0f52'),
     'assassin11b': ('1/1 Black Assassin', 'f960e50c-0eeb-444d-990c-be2cbec88385'),
     'dragon66r': ('6/6 Red Dragon', '58006984-ba3e-4d6f-9918-01126f580b80'),
     'rhino55g': ('5/5 Green Rhino', 'd1d7612f-a263-469b-ac68-b1b0f56c108c'),
