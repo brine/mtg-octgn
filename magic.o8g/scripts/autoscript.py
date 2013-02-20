@@ -276,7 +276,7 @@ def autoParser(c, tagclass, res = False):
       if count + cardcount(card, stackcard, qty) < 0:
         if not confirm("Not enough {} counters to remove!\nContinue?".format(markername)): return "BREAK"
 #####Move Card/Create Trigger#####
-  if 'cost' in markerdict or scriptMarkers['cost'] in card.markers:
+  if 'cost' in markerdict or scriptMarkers['cost'] in stackcard.markers:
     costtag = "cost"
   else:
     costtag = ""
@@ -518,10 +518,10 @@ def cardcount(card, stackcard, search):
     multiplier = multiplier * intval
   if search == "x":
     qty = stackcard.markers[scriptMarkers['x']]
-    card.markers[scriptMarkers['x']] -= qty 
+    stackcard.markers[scriptMarkers['x']] -= qty
   elif search == "cost":
     qty = stackcard.markers[scriptMarkers['cost']]
-    card.markers[scriptMarkers['cost']] -= qty 
+    stackcard.markers[scriptMarkers['cost']] -= qty
   elif re.search(r'marker', search):
     marker = search[search.find("marker")+7:]
     addmarker = counters[marker]
