@@ -81,13 +81,13 @@ savedtags = { }
 def getTags(card, key, rulesline = None):
   mute()
   global savedtags, offlinedisable
-  if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
+  cardname = card.name
+  if re.search(r"//", cardname) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
+    cardname = cardname.replace('\r\n', ' ')
     if card.isAlternateImage == True:
-      cardname = (card.name)[(card.name).find("/")+3:]
+      cardname = cardname[cardname.find("/")+3:]
     else:
-      cardname = (card.name)[:(card.name).find("/")-1]
-  else:
-    cardname = card.name
+      cardname = cardname[:cardname.find("/")-1]
   encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
   if not cardname in savedtags:
     rules = card.Rules
@@ -146,7 +146,14 @@ def getTags(card, key, rulesline = None):
     for st in savedtags[cardname]: tagstring += st
     count = 0
     returntext = []
-    for lines in card.Rules.splitlines():
+    cardrules = card.Rules
+    if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
+      if card.isAlternateImage == True:
+        cardrules = cardrules[cardrules.find("/")+3:]
+      else:
+        cardrules = cardrules[:cardrules.find("/")-1]
+    ruleslist = cardrules.splitlines()
+    for lines in cardrules.splitlines():
       count += 1
       if re.search('acti{}'.format(str(count)), tagstring):
         returntext.append((True, '{}\n'.format(lines)))
@@ -172,13 +179,13 @@ def getTags(card, key, rulesline = None):
     return ""
 
 def submitTags(card, x = 0, y = 0):
-  if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
+  cardname = card.name
+  if re.search(r"//", cardname) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
+    cardname = cardname.replace('\r\n', ' ')
     if card.isAlternateImage == True:
-      cardname = (card.name)[(card.name).find("/")+3:]
+      cardname = cardname[cardname.find("/")+3:]
     else:
-      cardname = (card.name)[:(card.name).find("/")-1]
-  else:
-    cardname = card.name
+      cardname = cardname[:cardname.find("/")-1]
   encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
   (url, code) = webRead('http://octgn.gamersjudgement.com/tags2.php?id={}'.format(encodedcardname))
   if code == 200 or code == 204:
