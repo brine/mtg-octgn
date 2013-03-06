@@ -422,9 +422,12 @@ def cardalign():
   cattach = eval(getGlobalVariable('cattach'))  ##converts attachment dict to a real dictionary
   group1 = [cardid for cardid in cattach if Card(cattach[cardid]) not in table]  ##selects attachment cards missing their original targets
   for cardid in group1:
-    if Card(cardid).Subtype != None and re.search(r'Aura', Card(cardid).Subtype) and Card(cardid).controller == me:  ##if the attachment is an aura you control
-      Card(cardid).moveTo(Card(cardid).owner.Graveyard)  ##destroy the aura
-      notify("{}'s {} was destroyed".format(me, Card(cardid)))
+    c = Card(cardid)
+    if c.Subtype != None and re.search(r'Aura', c.Subtype) and c.controller == me:  ##if the attachment is an aura you control
+      text = autoParser(c, 'destroy')
+      if text != "BREAK":
+        c.moveTo(c.owner.Graveyard)
+        notify("{}'s {} was destroyed{}.".format(me, c, text))
     del cattach[cardid]  ##cleans up the attachment dict when the targeted card is no longer on the battlefield
   group2 = [cardid for cardid in cattach if Card(cardid) not in table]  ##selects targeted cards whose attachment cards are now missing
   for cardid in group2:
