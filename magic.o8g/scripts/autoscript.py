@@ -293,7 +293,7 @@ def autoParser(c, tagclass, res = False):
       markerdict['x'] = card.markers[scriptMarkers['x']]
     if tagclass == 'cast':
       card.moveToTable(0,0)
-      stackcard.markers[scriptMarkers['cast']] = 1
+      markerdict['cast'] = 1
     else:
       if tagclass == 'cycle' or getTags(card, "{}res{}".format(costtag, tagclass)) != '':
         stackcard = table.create(card.model, 0, 0, 1)
@@ -311,6 +311,9 @@ def autoParser(c, tagclass, res = False):
   if scriptMarkers['choice'] in card.markers:
     taglist.append(getTags(card, "{}{}{}{}".format(card.markers[scriptMarkers['choice']], costtag, restag, tagclass)))
   for tags in taglist:
+    if 'copy' in tags:
+      for tag in tags['copy']:
+        text += autoCopy(card, stackcard, tag, markerdict)
     if 'persist' in tags:
       for tag in tags['persist']:
         text += autopersist(card, stackcard, tag)
@@ -546,6 +549,18 @@ def cardcount(card, stackcard, search):
 ############################
 #Autoscript
 ############################
+
+def autoCopy(card, stackcard, tag, markers):
+  mute()
+  qty = cardcount(card, stackcard, tag)
+  for x in range(0, qty):
+    copy = table.create(card.model, 0, 0, 1)
+    for m in markers:
+      copy.markers[scriptMarkers[m]] = markers[m]
+  if qty == 1:
+    return ", copied once"
+  else:
+    return ", copied {} times".format(qty)
 
 def autoAttach(card, targetcard):
   mute()
