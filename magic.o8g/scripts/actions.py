@@ -226,10 +226,10 @@ def resolve(card, x = 0, y = 0):
       text = autoParser(card, 'etb', True)
       cardalign()
       notify("{}'s {} enters-play trigger resolves{}.".format(me, card, text))
-    elif scriptMarkers['cycle'] in card.markers:
-      text = autoParser(card, 'cycle', True)
+    elif scriptMarkers['discard'] in card.markers:
+      text = autoParser(card, 'discard', True)
       cardalign()
-      notify("{}'s {} cycle trigger resolves{}.".format(me, card, text))
+      notify("{}'s {} discard trigger resolves{}.".format(me, card, text))
     elif scriptMarkers['attack'] in card.markers:
       text = autoParser(card, 'attack', True)
       cardalign()
@@ -293,6 +293,19 @@ def destroy(card, x = 0, y = 0):
       notify("{} destroys {}.".format(me, card, fromText))
     else:
       notify("{} discards {} from {}.".format(me, card, src.name))
+
+def discard(card, x = 0, y = 0):
+  mute()
+  src = card.group
+  if autoscripts == True:
+    text = autoParser(card, 'discard')
+    if text != "BREAK":
+      card.moveTo(card.owner.Graveyard)
+      notify("{} discards {}{}.".format(me, card, text))
+    cardalign()
+  else:
+    card.moveTo(card.owner.Graveyard)
+    notify("{} discards {}.".format(me, card))
 
 def exile(card, x = 0, y = 0):
   mute()
@@ -384,18 +397,6 @@ def activate(card, x = 0, y = 0):
       notify("{} activates ability #{} on {}{}.".format(me, num, card, text))
   else:
     notify("{} uses {}'s ability.".format(me, card))
-
-def cycle(card, x = 0, y = 0):
-  mute()
-  if autoscripts == True:
-    text = autoParser(card, 'cycle')
-    if text != "BREAK":
-      card.moveTo(card.owner.Graveyard)
-      notify("{} cycles {}{}.".format(me, card, text))
-    cardalign()
-  else:
-    card.moveTo(card.owner.Graveyard)
-    notify("{} cycles {}.".format(me, card))
 
 def rulings(card, x = 0, y = 0):
   mute()

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<game name="Magic: the Gathering" id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.0.13.16" octgnVersion="3.0.1.32" markersize="14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Game.xsd">
+<game name="Magic: the Gathering" id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.0.13.17" octgnVersion="3.0.1.32" markersize="14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Game.xsd">
   <scripts>
     <script src="r18" />
     <script src="r19" />
@@ -98,8 +98,7 @@
       <cardaction menu="Cast Spell" default="true" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
       <cardaction menu="Suspend Card" execute="suspend" />
-      <cardaction menu="Discard Card" shortcut="del" execute="destroy" />
-      <cardaction menu="Cycle Card" execute="cycle" />
+      <cardaction menu="Discard Card" shortcut="del" execute="discard" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Return to Library" shortcut="ctrl+Y" execute="tolibrary" />
       <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />

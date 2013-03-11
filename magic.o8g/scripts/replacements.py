@@ -96,7 +96,7 @@ scriptMarkers = {
     'block': ('Block trigger: ' + me.name, '759e7a00-e6f1-4cfb-9f74-d8ff58e44e30'),
     'activate': ('Activated ability trigger: ' + me.name, '2dd4da20-eec5-47e9-9adc-2b502ebc4f5d'),
     'exile': ('Exile trigger: ' + me.name, '9f315796-c2b2-4159-bcf6-3e28ecddfbc9'),
-    'cycle': ('Cycle trigger: ' + me.name, 'e9f688b5-5068-404c-9979-23098aa37dfa'),
+    'discard': ('Discard trigger: ' + me.name, 'e9f688b5-5068-404c-9979-23098aa37dfa'),
     'suspend': ('Suspended', '9cc0fc15-9967-4e98-9afb-a2d5e1479920'),
     'miracle': ('Miracle trigger: ' + me.name, 'aee4bba3-9375-4f14-9882-5d8d6fdd1660'),
     'choice': ('Mode Indicator: ' + me.name, '1c8f7028-ea97-4fa4-93ce-ba0bb55b31e7')

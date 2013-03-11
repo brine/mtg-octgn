@@ -287,6 +287,12 @@ def autoParser(c, tagclass, res = False):
     costtag = "cost"
   else:
     costtag = ""
+  if 'choice' in markerdict:
+    choicetag = markerdict['choice']
+  elif scriptMarkers['choice'] in stackcard.markers:
+    choicetag = stackcard.markers[scriptMarkers['choice']]
+  else:
+    choicetag = ""
   if res == False:
     if tagclass == 'etb':
       markerdict['cost'] = card.markers[scriptMarkers['cost']]
@@ -295,7 +301,7 @@ def autoParser(c, tagclass, res = False):
       card.moveToTable(0,0)
       markerdict['cast'] = 1
     else:
-      if tagclass == 'cycle' or getTags(card, "{}res{}".format(costtag, tagclass)) != '':
+      if tagclass == 'cycle' or getTags(card, "{}{}res{}".format(choicetag, costtag, tagclass)) != '':
         stackcard = table.create(card.model, 0, 0, 1)
         if card.isAlternateImage == True:
           stackcard.switchImage
@@ -307,9 +313,7 @@ def autoParser(c, tagclass, res = False):
   for markers in markerdict:
     stackcard.markers[scriptMarkers[markers]] += markerdict[markers]
 ####autoscripts####
-  taglist = [inittag, getTags(card, "{}{}{}".format(costtag, restag, tagclass))]
-  if scriptMarkers['choice'] in card.markers:
-    taglist.append(getTags(card, "{}{}{}{}".format(card.markers[scriptMarkers['choice']], costtag, restag, tagclass)))
+  taglist = [inittag, getTags(card, "{}{}{}{}".format(choicetag, costtag, restag, tagclass))]
   for tags in taglist:
     if 'copy' in tags:
       for tag in tags['copy']:
@@ -465,8 +469,9 @@ def cardalign():
         or scriptMarkers['etb'] in card.markers
         or scriptMarkers['cost'] in card.markers
         or scriptMarkers['x'] in card.markers
-        or scriptMarkers['cycle'] in card.markers
-        or scriptMarkers['miracle'] in card.markers):
+        or scriptMarkers['discard'] in card.markers
+        or scriptMarkers['miracle'] in card.markers
+        or scriptMarkers['choice'] in card.markers):
           card.moveToTable(0, 10 * stackcount)
           stackcount += 1
       elif card.controller == me and not card._id in cattach:
