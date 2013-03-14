@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.1.0.0" octgnVersion="3.0.1.32"
+	name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
+	setsurl="http://octgn.gamersjudgement.com/viewforum.php?f=8" gameurl="http://octgn.gamersjudgement.com/viewforum.php?f=8" authors="brine"
+	markersize="14" iconurl="https://github.com/brine/mtg-octgn/blob/master/magic.o8g/cards/back.jpg" >
+  <scripts>
+    <script src="scripts/actions.py" />
+    <script src="scripts/autoscript.py" />
+    <script src="scripts/replacements.py" />
+    <script src="scripts/forms.py" />
+    <script src="scripts/tags.py" />
+  </scripts>
+  <fonts>
+    <font src="fonts/mplantin.ttf" size="14" target="context"/>
+  </fonts>
+  <globalvariables> 
+    <globalvariable name="cattach" value="{ }"/>
+    <globalvariable name="smartmarker" value=""/>
+  </globalvariables>
+  <card back="cards/back.jpg" front="cards/front.jpg" width="63" height="88" cornerRadius="2">
+    <property name="Cost" type="String" ignoreText="True" />
+    <property name="Converted Mana Cost" type="String" textKind="Enum" />
+    <property name="Color" textKind="Tokens" type="String" />
+    <property name="Type" type="String" textKind="Tokens" />
+    <property name="Subtype" type="String" textKind="Tokens" />
+    <property name="Rarity" type="String" ignoreText="True" textKind="Enum" />
+    <property name="Rules" type="String" />
+    <property name="Flavor" type="String" ignoreText="True" />
+    <property name="Power" type="String" textKind="Enum" />
+    <property name="Toughness" type="String" textKind="Enum" />
+    <property name="PT Box" type="String" ignoreText="True" textKind="Enum" />
+    <property name="Artist" type="String" ignoreText="True" />
+    <property name="Number" type="String" ignoreText="True" />
+    <property name="MultiverseId" type="String" ignoreText="True" />
+    <property name="Faction" type="String" ignoreText="True" />
+  </card>
+  <table name="Table" visibility="undefined" ordered="False" width="640" height="480" board="background/board.png" boardPosition="-7,-27,76,190" background="background/background.jpg" backgroundStyle="uniformToFill">
+    <groupaction menu="Clean-up Targets and Combat" shortcut="esc" execute="clearAll" />
+    <groupaction menu="Roll Die" shortcut="ctrl+R" execute="rollDie" />
+    <groupaction menu="Change Die" shortcut="ctrl+shift+R" execute="setDie" />
+    <groupaction menu="Create a Token..." shortcut="ctrl+shift+T" execute="token" />
+    <groupaction menu="Pick a Random Card" execute="randomPick" />
+    <groupaction menu="Respond" shortcut="Enter" execute="respond" />
+    <groupaction menu="Pass Priority" shortcut="Tab" execute="passPriority" />
+    <groupaction menu="Scoop" shortcut="ctrl+shift+S" execute="scoop" />
+    <groupaction menu="Next Phase" shortcut="ctrl+x" execute="nextPhase" />
+    <groupactions menu="Phases / Steps...">
+      <groupaction menu="Jump to Untap/Upkeep Step" shortcut="F1" execute="goToUpkeep" />
+      <groupaction menu="Jump to First Main Phase" shortcut="F2" execute="goToFirstMain" />
+      <groupaction menu="Jump to Combat Phase" shortcut="F3" execute="goToCombat" />
+      <groupaction menu="Jump to Second Main Phase" shortcut="F4" execute="goToSecondMain" />
+      <groupaction menu="Jump to Ending Phase" shortcut="F5" execute="goToEnding" />
+    </groupactions>
+    <groupaction menu="Lose 1 Life" shortcut="ctrl+Q" execute="lose1Life" />
+    <groupaction menu="Gain 1 Life" shortcut="ctrl+W" execute="gain1Life" />
+    <groupaction menu="Re-align Cards" execute="align" />
+    <groupaction menu="Enable/Disable Autoscripts" execute="disable" />
+    <cardaction menu="Tap/Untap or Resolve" default="True" execute="resolve" />
+    <cardaction menu="Don't Untap during Untap Step" shortcut="ctrl+V" execute="doesNotUntap" />
+    <cardaction menu="Attack" shortcut="ctrl+A" execute="attack" />
+    <cardaction menu="Attack without tapping" shortcut="ctrl+shift+A" execute="attackWithoutTapping" />
+    <cardaction menu="Block" shortcut="ctrl+B" execute="block" />
+    <cardaction menu="Attach to Targeted Card" shortcut="ctrl+Q" execute="attach" />
+    <cardaction menu="Morph/Transform/Flip Card" shortcut="ctrl+F" execute="transform" />
+    <cardaction menu="Turn Face-Up/Down" shortcut="ctrl+shift+F" execute="flip" />
+    <cardaction menu="Clone Card" shortcut="ctrl+C" batchExecute="clone" />
+    <cardaction menu="Destroy Card" shortcut="del" execute="destroy" />
+    <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
+    <cardaction menu="Move to Top of Libary" shortcut="ctrl+Y" execute="tolibrary" />
+    <cardaction menu="Move to a Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
+    <cardaction menu="Move to Hand" shortcut="ctrl+H" execute="tohand" />
+    <cardaction menu="Clear Card" shortcut="esc" execute="clear" />
+    <cardaction menu="Use Activated Ability" shortcut="ctrl+Z" execute="activate" />
+    <cardactions menu="Add/Remove Counters...">
+      <cardaction menu="Auto-Add Counter" shortcut="ctrl+1" execute="autoAddMarker" />
+      <cardaction menu="Add +1/+1 Counter" shortcut="ctrl+2" execute="addPlusOneMarker" />
+      <cardaction menu="Add -1/-1 Counter" shortcut="ctrl+3" execute="addMinusOneMarker" />
+      <cardaction menu="Add Charge Counter" shortcut="ctrl+4" execute="addChargeMarker" />
+      <cardaction menu="Add Smart-Counter" shortcut="ctrl+shift+1" execute="smartMarker" />
+      <cardaction menu="Remove +1/+1 Counter" shortcut="ctrl+shift+2" execute="removePlusOneMarker" />
+      <cardaction menu="Remove -1/-1 Counter" shortcut="ctrl+shift+3" execute="removeMinusOneMarker" />
+      <cardaction menu="Remove Charge Counter" shortcut="ctrl+shift+4" execute="removeChargeMarker" />
+      <cardaction menu="Add Other Counter..." shortcut="ctrl+0" batchExecute="addMarker" />
+    </cardactions>
+    <cardaction menu="Auto-Create Token" shortcut="ctrl+shift+T" execute="autoCreateToken" />
+    <cardaction menu="Commander Toggle / Exclude from Alignment" execute="generaltoggle" />
+    <cardaction menu="Check Card Rulings (on Gatherer)" execute="rulings" />
+    <cardaction menu="Submit Tags" execute="submitTags" />
+  </table>
+  <player summary="L{#Life}|P{#Poison}|H{#Hand}|C{#General}">
+    <counter name="Life" icon="counters/life.png" default="20" />
+    <counter name="Poison" icon="counters/poison.png" />
+    <counter name="White" icon="counters/white.png" />
+    <counter name="Blue" icon="counters/blue.png" />
+    <counter name="Black" icon="counters/black.png" />
+    <counter name="Red" icon="counters/red.png" />
+    <counter name="Green" icon="counters/green.png" />
+    <counter name="Colorless" icon="counters/colorless.png" />
+    <counter name="General" icon="counters/general.png" />
+    <hand name="Hand" shortcut="ctrl+H" visibility="me" width="63" height="88" icon="groups/hand.png">
+      <cardaction menu="Cast Spell" default="True" shortcut="ctrl+c" execute="play" />
+      <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
+      <cardaction menu="Suspend Card" execute="suspend" />
+      <cardaction menu="Discard Card" shortcut="del" execute="discard" />
+      <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
+      <cardaction menu="Return to Library" shortcut="ctrl+Y" execute="tolibrary" />
+      <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
+      <cardaction menu="Submit Tags" execute="submitTags" />
+      <groupaction menu="Mulligan" shortcut="ctrl+M" execute="mulligan" />
+      <groupaction menu="Random Discard" execute="randomDiscard" />
+      <groupactions menu="Move All Cards To...">
+        <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
+        <groupaction menu="Owner's Library (Bottom)" execute="libraryBottomAll" />
+        <groupaction menu="Owner's Graveyard" execute="graveyardAll" />
+        <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
+      </groupactions>
+    </hand>
+    <group name="Library" shortcut="ctrl+I" visibility="none" width="63" height="88" icon="groups/library.png">
+      <groupaction menu="Draw" shortcut="ctrl+D" default ="True" execute="draw" />
+      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
+      <groupaction menu="Mill X Cards" execute="mill" />
+      <groupaction menu="Exile X Cards" execute="exileMany" />
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <groupactions menu="Move All Cards To...">
+        <groupaction menu="Owner's Graveyard" execute="graveyardAll" />
+        <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
+      </groupactions>
+      <cardaction menu="Cast Card" shortcut="ctrl+C" execute="play" />
+      <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
+      <cardaction menu="Discard Card" shortcut="del" execute="destroy" />
+      <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
+      <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
+      <groupaction menu="Reveal/Hide Card" shortcut="ctrl+R" execute="revealtoplibrary" />
+    </group>
+    <group name="Graveyard" shortcut="del" visibility="all" width="63" height="88" icon="groups/graveyard.png">
+      <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <groupactions menu="Move All Cards To...">
+        <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
+        <groupaction menu="Owner's Library (Bottom)" execute="libraryBottomAll" />
+        <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
+      </groupactions>
+      <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
+      <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
+      <cardaction menu="Cast Card" default="True" shortcut="ctrl+c" execute="play" />
+      <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
+      <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" />
+      <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
+      <cardaction menu="Submit Tags" execute="submitTags" />
+    </group>
+    <group name="Exiled Zone" shortcut="ctrl+E" visibility="all" width="63" height="88" icon="groups/removed.png" collapsed="True">
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />
+      <groupactions menu="Move All Cards To...">
+        <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
+        <groupaction menu="Owner's Library (Bottom)" execute="libraryBottomAll" />
+        <groupaction menu="Owner's Graveyard" execute="graveyardAll" />
+      </groupactions>
+      <cardaction menu="Cast Card" default="True" shortcut="ctrl+c" execute="play" />
+      <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
+      <cardaction menu="Discard Card" shortcut="del" execute="destroy" /> 
+      <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+f" execute="morph" />
+      <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" /> 
+      <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />      
+    </group>
+    <group name="Sideboard" visibility="me" width="63" height="88" icon="groups/sideboard.png" collapsed="True">
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+    </group>
+    <group name="Command Zone" visibility="all" width="63" height="88" icon="groups/commandzone.png" collapsed="True">
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <cardaction menu="Cast Card/Commander" default="True" execute="play" />
+    </group>
+    <group name="Planes/Schemes" visibility="none" width="63" height="88" icon="groups/removed.png" collapsed="True">
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <cardaction menu="Play Card" default="True" execute="play" />
+    </group>
+  </player>
+  <deck>
+    <section name="Main" group="Library" />
+    <section name="Sideboard" group="Sideboard" />
+    <section name="Command Zone" group="Command Zone" />
+    <section name="Planes/Schemes" group="Planes/Schemes" />
+  </deck>
+</game>
