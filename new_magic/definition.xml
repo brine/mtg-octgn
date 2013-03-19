@@ -14,6 +14,19 @@
   <fonts>
     <font src="fonts/mplantin.ttf" size="14" target="context"/>
   </fonts>
+  <proxygen definitionsrc="proxy/CardGenData.xml">
+	<templatemapping defaulttemplate="Colorless">
+		<templatemap field="Color" /> 
+	</templatemapping>
+	<mappings>
+		<mapping name="Name" mapto="title" />
+		<mapping name="Rules" mapto="text" />
+		<mapping name="PT Box" mapto="PTBox" />
+		<mapping name="Type" mapto="cardtype" />
+		<mapping name="Subtype" mapto="subtype" />
+		<mapping name="Cost" mapto="cost" />
+	</mappings>
+  </proxygen>
   <globalvariables> 
     <globalvariable name="cattach" value="{ }"/>
     <globalvariable name="smartmarker" value=""/>
