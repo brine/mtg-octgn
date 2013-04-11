@@ -6,10 +6,6 @@
     <block type="overlay" id="bhb" src="proxy/back/hb.png">      <location x="0" y="0" />    </block>
     <block type="overlay" id="bhr" src="proxy/back/hr.png">      <location x="0" y="0" />    </block>
     <block type="overlay" id="bhg" src="proxy/back/hg.png">      <location x="0" y="0" />    </block>
-    <block type="overlay" id="bhc" src="proxy/back/hc.png">      <location x="0" y="0" />    </block>
-    <block type="overlay" id="bhm" src="proxy/back/hm.png">      <location x="0" y="0" />    </block>
-    <block type="overlay" id="bha" src="proxy/back/ha.png">      <location x="0" y="0" />    </block>
-    <block type="overlay" id="bhl" src="proxy/back/hl.png">      <location x="0" y="0" />    </block>
 
     <block type="overlay" id="rw" src="proxy/rules/w.png">      <location x="0" y="0" />    </block>
     <block type="overlay" id="ru" src="proxy/rules/u.png">      <location x="0" y="0" />    </block>
@@ -25,9 +21,6 @@
     <block type="overlay" id="rhb" src="proxy/rules/hb.png">      <location x="0" y="0" />    </block>
     <block type="overlay" id="rhr" src="proxy/rules/hr.png">      <location x="0" y="0" />    </block>
     <block type="overlay" id="rhg" src="proxy/rules/hg.png">      <location x="0" y="0" />    </block>
-    <block type="overlay" id="rhc" src="proxy/rules/hc.png">      <location x="0" y="0" />    </block>
-    <block type="overlay" id="rhm" src="proxy/rules/hm.png">      <location x="0" y="0" />    </block>
-    <block type="overlay" id="rha" src="proxy/rules/ha.png">      <location x="0" y="0" />    </block>
 
     <block type="overlay" id="tw" src="proxy/type/w.png">      <location x="0" y="0" />    </block>
     <block type="overlay" id="tu" src="proxy/type/u.png">      <location x="0" y="0" />    </block>
@@ -622,6 +615,49 @@
     <overlayblocks> <link block="rm" /> <link block="tm" /> </overlayblocks>
     <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
 
+	<!-- HYBRID BI COLORS -->
+  <template src="proxy/back/w.png" >
+    <matches> <match name="Color" value="Multicolor White Blue" /> <match name="Flags" value="hybrid" /> </matches>
+    <overlayblocks> <link block="bhu" /> <link block="rw" /> <link block="tc" /> <link block="rhu" /> </overlayblocks>
+    <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
+  <template src="proxy/back/u.png" >
+    <matches> <match name="Color" value="Multicolor Blue Black" /> <match name="Flags" value="hybrid" /> </matches>
+    <overlayblocks> <link block="bhb" /> <link block="ru" /> <link block="tc" /> <link block="rhb" /> </overlayblocks>
+    <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
+  <template src="proxy/back/b.png" >
+    <matches> <match name="Color" value="Multicolor Black Red" /> <match name="Flags" value="hybrid" /> </matches>
+    <overlayblocks> <link block="bhr" /> <link block="rb" /> <link block="tc" /> <link block="rhr" /> </overlayblocks>
+    <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
+  <template src="proxy/back/r.png" >
+    <matches> <match name="Color" value="Multicolor Red Green" /> <match name="Flags" value="hybrid" /> </matches>
+    <overlayblocks> <link block="bhg" /> <link block="rr" /> <link block="tc" /> <link block="rhg" /> </overlayblocks>
+    <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
+  <template src="proxy/back/g.png" >
+    <matches> <match name="Color" value="Multicolor Green White" /> <match name="Flags" value="hybrid" /> </matches>
+    <overlayblocks> <link block="bhw" /> <link block="rg" /> <link block="tc" /> <link block="rhw" /> </overlayblocks>
+    <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
+  <template src="proxy/back/w.png" >
+    <matches> <match name="Color" value="Multicolor White Black" /> <match name="Flags" value="hybrid" /> </matches>
+    <overlayblocks> <link block="bhb" /> <link block="rw" /> <link block="tc" />  <link block="rhb" /> </overlayblocks>
+    <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
+  <template src="proxy/back/u.png" >
+    <matches> <match name="Color" value="Multicolor Blue Red" /> <match name="Flags" value="hybrid" /> </matches>
+    <overlayblocks> <link block="bhr" /> <link block="ru" /> <link block="tc" /> <link block="rhr" /> </overlayblocks>
+    <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
+  <template src="proxy/back/b.png" >
+    <matches> <match name="Color" value="Multicolor Black Green" /> <match name="Flags" value="hybrid" /> </matches>
+    <overlayblocks> <link block="bhg" /> <link block="rb" /> <link block="tc" /> <link block="rhg" /> </overlayblocks>
+    <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
+  <template src="proxy/back/r.png" >
+    <matches> <match name="Color" value="Multicolor Red White" /> <match name="Flags" value="hybrid" /> </matches>
+    <overlayblocks> <link block="bhw" /> <link block="rr" /> <link block="tc" /> <link block="rhw" /> </overlayblocks>
+    <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
+  <template src="proxy/back/g.png" >
+    <matches> <match name="Color" value="Multicolor Green Blue" /> <match name="Flags" value="hybrid" /> </matches>
+    <overlayblocks> <link block="bhu" /> <link block="rg" /> <link block="tc" /> <link block="rhu" /> </overlayblocks>
+    <textblocks>      <link block="title" separator="   "> <property name="Name" /> <property name="Cost" /> </link>      <link block="type" separator=" —  "> <property name="Type" /> <property name="Subtype" /> </link>      <link block="rules"> <property name="Rules" /> </link>      <link block="ptbox"> <property name="PT Box" /> </link>    </textblocks>  </template>
+
+	
 <!-- BI COLORS -->
   <template src="proxy/back/m.png" >
     <matches> <match name="Color" value="Multicolor White Blue" /> </matches>
