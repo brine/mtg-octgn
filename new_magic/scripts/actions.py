@@ -161,7 +161,7 @@ def dieFunct(num):
       notify("{} rolls {} on a {}-sided die.".format(me, n, num))
       
 def token(group, x = 0, y = 0):
-    card, quantity = askCard("[Rarity] = 'Token'")
+    card, quantity = askCard({"Rarity":"Token"}, "And")
     if quantity == 0: return
     table.create(card, x, y, quantity)
 
