@@ -9,7 +9,6 @@ sideflip = None
 cstack = { }
 
 versioncheck = None
-tokencheck = None
 offlinedisable = False
 
 def clearCache(group, x = 0, y = 0):
@@ -39,25 +38,8 @@ def versionCheck():
           openUrl('http://octgn.gamersjudgement.com/viewtopic.php?f=8&t=195')
       versioncheck = True
 
-def tokenCheck():
-  mute()
-  global tokencheck
-  if tokencheck == None:
-    card = table.create('7e66fe70-e022-45c9-858d-9577202ce5f2', 0, 0, 1)
-
-    if card == None:
-
-      notify("{}'s markers & tokens set definition is out-of-date!".format(me))
-      if confirm("Your Markers & Tokens set is not the most recent version! Please download and install the newest version.\nClicking yes will open your browser to the location of the most recent version."):
-        openUrl('http://octgn.gamersjudgement.com/viewtopic.php?f=8&t=195')
-      tokencheck = False
-    else:
-      card.moveTo(me.Graveyard)
-      tokencheck = True
-
 def shuffle(group, x = 0, y = 0):
     versionCheck()
-    tokenCheck()
     for card in group:
       if card.isFaceUp:
         card.isFaceUp = False
