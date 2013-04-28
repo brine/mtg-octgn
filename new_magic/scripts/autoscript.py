@@ -179,12 +179,19 @@ def submitTags(card, x = 0, y = 0):
 
 def transform(card, x = 0, y = 0):
     mute()
-    if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
-      if re.search(r'DFC', card.Rarity):
-        notify("{} transforms {}.".format(me, card))
+    alt = card.alternates
+    if 'transform' in alt:
+      notify("{} transforms {}.".format(me, card))
+      if card.alternate == '':
+        card.switchTo('transform')
       else:
-        notify("{} flips {}.".format(me, card))
-      card.switchImage
+        card.switchTo()
+    elif 'flip' in alt:
+      notify("{} flips {}.".format(me, card))
+      if card.alternate == '':
+        card.switchTo('flip')
+      else:
+        card.switchTo()
     else:
       if card.isFaceUp == True:
         notify("{} morphs {} face down.".format(me, card))
