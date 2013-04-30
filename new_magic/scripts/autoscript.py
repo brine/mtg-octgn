@@ -299,8 +299,8 @@ def autoParser(c, tagclass, res = False):
     else:
       if tagclass == 'cycle' or getTags(card, "{}{}res{}".format(choicetag, costtag, tagclass)) != '':
         stackcard = table.create(card.model, 0, 0, 1)
-        if card.isAlternateImage == True:
-          stackcard.switchImage
+        if card.alternate != "":
+          stackcard.switchTo()
         if re.search(r'acti', tagclass):
           markerdict['activate'] = int(tagclass[-1])
         else:
@@ -661,7 +661,13 @@ def autotransform(card, tag):
   if tag == "no": return ""
   if tag == "ask":
     if not confirm("Transform {}?".format(card.name)): return ""
-  card.switchImage
+  if 'transform' in card.alternates:
+    if card.alternate == '':
+      card.switchTo('transform')
+    else:
+      card.switchTo()
+  else:
+    whisper("Oops, transform cards aren't ready yet!")
   return ", transforming to {}".format(card)
 
 def autotoken(card, stackcard, tag):
