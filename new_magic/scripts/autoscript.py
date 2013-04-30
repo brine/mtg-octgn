@@ -28,15 +28,22 @@ def versionCheck():
         whisper("Newest game definition version is unavailable at the moment")
         versioncheck = False
         return
+      versioncheck = True
       currentVers = url.split('.')
       installedVers = gameVersion.split('.')
       if len(installedVers) < 3:
         whisper("Your game definition does not follow the correct version conventions.  It is most likely outdated or modified from its official release.")
-      elif int(currentVers[0]) > int(installedVers[0]) or int(currentVers[1]) > int(installedVers[1]) or int(currentVers[2]) > int(installedVers[2]):
-        notify("{}'s game definition ({}) is out-of!-date!".format(me, gameVersion))
-        if confirm("There is a new game definition available! Your version {}. Current version {}.\nClicking yes will open your browser to the location of the most recent version.".format(gameVersion, url)):
-          openUrl('http://octgn.gamersjudgement.com/viewtopic.php?f=8&t=195')
-      versioncheck = True
+        return
+      if int(currentVers[0]) < int(installedVers[0]):
+        return
+      if int(currentVers[1]) < int(installedVers[1]):
+        return
+      if int(currentVers[2]) <= int(installedVers[2]):
+        return
+      notify("{}'s game definition ({}) is out-of!-date!".format(me, gameVersion))
+      if confirm("There is a new game definition available! Your version {}. Current version {}.\nClicking yes will open your browser to the location of the most recent version.".format(gameVersion, url)):
+        openUrl('http://octgn.gamersjudgement.com/viewtopic.php?f=8&t=195')
+
 
 def shuffle(group, x = 0, y = 0):
     versionCheck()
