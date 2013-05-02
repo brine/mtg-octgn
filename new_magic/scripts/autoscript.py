@@ -73,7 +73,7 @@ def getTags(card, key, rulesline = None):
   cardname = card.name
   if re.search(r"//", cardname) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
     cardname = cardname.replace('\r\n', ' ')
-    if card.isAlternateImage == True:
+    if card.alternate != '':
       cardname = cardname[cardname.find("/")+3:]
     else:
       cardname = cardname[:cardname.find("/")-1]
