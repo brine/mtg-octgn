@@ -46,12 +46,13 @@ def versionCheck():
 
 
 def shuffle(group, x = 0, y = 0):
+    mute()
     versionCheck()
     for card in group:
       if card.isFaceUp:
         card.isFaceUp = False
     group.shuffle()
-    notify("{} shuffled their deck".format(me))
+    notify("{} shuffled their {}".format(me, group.name))
 
 autoscripts = True
 
@@ -137,7 +138,7 @@ def getTags(card, key, rulesline = None):
     returntext = []
     cardrules = card.Rules
     if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
-      if card.isAlternateImage == True:
+      if card.alternate != '':
         cardrules = cardrules[cardrules.find("/")+3:]
       else:
         cardrules = cardrules[:cardrules.find("/")-1]
@@ -171,7 +172,7 @@ def submitTags(card, x = 0, y = 0):
   cardname = card.name
   if re.search(r"//", cardname) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
     cardname = cardname.replace('\r\n', ' ')
-    if card.isAlternateImage == True:
+    if card.alternate != '':
       cardname = cardname[cardname.find("/")+3:]
     else:
       cardname = cardname[:cardname.find("/")-1]
