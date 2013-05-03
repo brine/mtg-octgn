@@ -454,8 +454,8 @@ def clear(card, x = 0, y = 0):
 def clone(cards, x = 0, y = 0):
     for card in cards:
       copy = table.create(card.model, x, y, 1)
-      if card.isAlternateImage == True:
-        copy.switchImage
+      if card.alternate != '':
+        copy.switchTo()
       x, y = table.offset(x, y)
 
 def addMarker(cards, x = 0, y = 0):
