@@ -315,7 +315,7 @@ tokenTypes = {
     'knight22w3': ('2/2 White Knight', '92f8cd16-807c-4301-8dfa-166bb37b0f52'),
     'assassin11b': ('1/1 Black Assassin', 'f960e50c-0eeb-444d-990c-be2cbec88385'),
     'dragon66r': ('6/6 Red Dragon', '58006984-ba3e-4d6f-9918-01126f580b80'),
-    'rhino55g': ('5/5 Green Rhino', 'd1d7612f-a263-469b-ac68-b1b0f56c108c'),
+    'rhino44g': ('4/4 Green Rhino', 'd1d7612f-a263-469b-ac68-b1b0f56c108c'),
     'elemental88m': ('8/8 Multicolor Green White Elemental', '82d6958f-6103-497b-8691-7eb3bf71aa20'),
     'wurm55g': ('5/5 Green Wurm', '4dbe0826-ad0c-48b9-a775-efb8105c5a20'),
 
