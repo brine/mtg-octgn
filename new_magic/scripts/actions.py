@@ -599,7 +599,7 @@ def draw(group, x = 0, y = 0):
     card = group[0]
     card.moveTo(card.owner.hand)
     rnd(10,100)
-    if re.search(r'Miracle {', card.Rules):
+    if re.search(r'Miracle ', card.Rules):
       if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.Name, card.Rules)):
         if autoscripts == True:
           miracletrig = table.create(card.model, 0, 0, 1)
