@@ -389,7 +389,7 @@ def activate(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
     (tags, list) = getTags(card, 'allactivate')
-    num = multipleChoice("Choose an Ability to Activate", list, str(tags), card.name)
+    num = multipleChoice("Choose an Ability to Activate", list, str(tags), card.Name)
     if num == None: return
     text = autoParser(card, 'acti{}'.format(num))
     cardalign()
@@ -573,7 +573,7 @@ def randomPick(group, x = 0, y = 0):
     card.select()
     card.target(True)
     if not card.isFaceUp:
-      if confirm("Reveal randomly-picked {}?".format(card.name)): card.isFaceUp = True
+      if confirm("Reveal randomly-picked {}?".format(card.Name)): card.isFaceUp = True
       rnd(10,100)
     if group == table:
       notify("{} randomly picks {}'s {} on the battlefield.".format(me, card.controller, card))
@@ -600,7 +600,7 @@ def draw(group, x = 0, y = 0):
     card.moveTo(card.owner.hand)
     rnd(10,100)
     if re.search(r'Miracle {', card.Rules):
-      if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.name, card.Rules)):
+      if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.Name, card.Rules)):
         if autoscripts == True:
           miracletrig = table.create(card.model, 0, 0, 1)
           miracletrig.markers[scriptMarkers['miracle']] += 1

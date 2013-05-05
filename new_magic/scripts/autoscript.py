@@ -71,7 +71,7 @@ savedtags = { }
 def getTags(card, key, rulesline = None):
   mute()
   global savedtags, offlinedisable
-  cardname = card.name
+  cardname = card.Name
   if re.search(r"//", cardname) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
     cardname = cardname.replace('\r\n', ' ')
     if card.alternate != '':
@@ -85,13 +85,13 @@ def getTags(card, key, rulesline = None):
       encodedcardname += '&token'
     if re.search(r'counter', rules):
       encodedcardname += "&counter"
-    if re.search(r'{} enters the battlefield'.format(card.name), rules):
+    if re.search(r'{} enters the battlefield'.format(card.Name), rules):
       encodedcardname += '&etb'
-    if re.search(r'{} dies'.format(card.name), rules):
+    if re.search(r'{} dies'.format(card.Name), rules):
       encodedcardname += '&destroy'
-    if re.search(r'{} attacks'.format(card.name), rules):
+    if re.search(r'{} attacks'.format(card.Name), rules):
       encodedcardname += '&attack'
-    if re.search(r'{} blocks'.format(card.name), rules):
+    if re.search(r'{} blocks'.format(card.Name), rules):
       encodedcardname += '&block'
     if offlinedisable == False:
       (fulltag, code) = webRead('http://octgn.gamersjudgement.com/tags2.php?id={}'.format(encodedcardname), 7000)
@@ -137,7 +137,7 @@ def getTags(card, key, rulesline = None):
     count = 0
     returntext = []
     cardrules = card.Rules
-    if re.search(r"//", card.name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
+    if re.search(r"//", card.Name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
       if card.alternate != '':
         cardrules = cardrules[cardrules.find("/")+3:]
       else:
@@ -169,7 +169,7 @@ def getTags(card, key, rulesline = None):
     return ""
 
 def submitTags(card, x = 0, y = 0):
-  cardname = card.name
+  cardname = card.Name
   if re.search(r"//", cardname) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
     cardname = cardname.replace('\r\n', ' ')
     if card.alternate != '':
@@ -210,7 +210,7 @@ def transform(card, x = 0, y = 0):
 
 def suspend(card, x = 0, y = 0):
   mute()
-  num = askInteger("Suspending {}, what is X?\n(To cancel, choose 0.)".format(card.name), 0)
+  num = askInteger("Suspending {}, what is X?\n(To cancel, choose 0.)".format(card.Name), 0)
   if num != 0 and num != None:
     card.moveToTable(0,0)
     card.markers[scriptMarkers['suspend']] = 1
@@ -241,16 +241,16 @@ def autoParser(c, tagclass, res = False):
 #####INITCHECKS######
   inittag = getTags(card, 'init{}{}'.format(restag, tagclass))
   if 'tapped' in inittag and card.orientation == Rot90:
-    if not confirm("{} is already tapped!\nContinue?".format(card.name)):
+    if not confirm("{} is already tapped!\nContinue?".format(card.Name)):
       return "BREAK"
   if 'untapped' in inittag and card.orientation == Rot0:
-    if not confirm("{} is already untapped!\nContinue?".format(card.name)):
+    if not confirm("{} is already untapped!\nContinue?".format(card.Name)):
       return "BREAK"
   if 'choice' in inittag:
     for choice in inittag['choice']:
       (rulesline, type) = choice.split(', ')
       modelist = getTags(card, 'allmodes', rulesline)
-      num = multipleChoice("Choose a mode", modelist, '', card.name)
+      num = multipleChoice("Choose a mode", modelist, '', card.Name)
       markerdict['choice'] = num
       text += ", choosing mode #{}".format(num)
   if 'cost' in inittag:
@@ -261,11 +261,11 @@ def autoParser(c, tagclass, res = False):
       else:
         marker = 'cost'
       if type == "ask":
-        if confirm("{}'s {}: Pay additional/alternate cost?".format(card.name, cost)):
+        if confirm("{}'s {}: Pay additional/alternate cost?".format(card.Name, cost)):
           markerdict[marker] = 1
           text += ", paying {} cost".format(cost.title())
       elif type == "num":
-        qty = askInteger("{}'s {}: Paying how many times?".format(card.name, cost), 0)
+        qty = askInteger("{}'s {}: Paying how many times?".format(card.Name, cost), 0)
         if qty == None: qty = 0
         if qty != 0: markerdict[marker] = qty
         if qty == 1: text += ", paying {} once".format(cost.title())
@@ -472,7 +472,7 @@ def cardalign():
           card.moveToTable(0, 10 * stackcount)
           stackcount += 1
       elif card.controller == me and not card._id in cattach:
-        dictname = card.name
+        dictname = card.Name
         for marker in card.markers:
           dictname += marker[0]
           dictname += str(card.markers[marker])
@@ -661,7 +661,7 @@ def autolife(card, stackcard, tag):
 def autotransform(card, tag):
   if tag == "no": return ""
   if tag == "ask":
-    if not confirm("Transform {}?".format(card.name)): return ""
+    if not confirm("Transform {}?".format(card.Name)): return ""
   if 'transform' in card.alternates:
     if card.alternate == '':
       card.switchTo('transform')
@@ -688,7 +688,7 @@ def autotoken(card, stackcard, tag):
     addtoken = tokenTypes[name]
     tokens = table.create(addtoken[1], 0, 0, quantity, persist = False)
     if (quantity == 1 and tokens == None) or (quantity > 1 and len(tokens) == 0):
-      confirm("Cannot create {}'s token -- your markers & tokens set definition is missing this token.".format(stackcard.name))
+      confirm("Cannot create {}'s token -- your markers & tokens set definition is missing this token.".format(stackcard.Name))
       return ""
     else:
       if quantity == 1:
@@ -787,7 +787,7 @@ def autoCreateToken(card, x = 0, y = 0):
         confirm("Cannot create {}'s token -- your markers & tokens set definition is missing this token.".format(card))
         return
       x, y = table.offset(x, y)
-      text += "{}/{} {} {}, ".format(tokencard.Power, tokencard.Toughness, tokencard.Color, tokencard.name)
+      text += "{}/{} {} {}, ".format(tokencard.Power, tokencard.Toughness, tokencard.Color, tokencard.Name)
     if autoscripts == True: cardalign()
     notify("{} creates {}.".format(me, text[0:-2]))
 
