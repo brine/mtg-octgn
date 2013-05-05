@@ -221,8 +221,11 @@ def suspend(card, x = 0, y = 0):
 ##################################
 #Card Functions -- Autoscripted  
 ##################################
+import time
 
 def autoParser(c, tagclass, res = False):
+  whisper("parser start")
+  timer = time.clock()
   mute()
   markerdict = { }
   text = ""
@@ -353,7 +356,6 @@ def autoParser(c, tagclass, res = False):
     if 'moveto' in tags:
       for tag in tags['moveto']:
         text += automoveto(card, tag)
-  rnd(1,1)
   if res == True:
     if tagclass == 'cast':
       stackcard.markers[scriptMarkers['cast']] = 0
@@ -366,6 +368,8 @@ def autoParser(c, tagclass, res = False):
     else:
       stackcard.moveTo(stackcard.owner.Graveyard)
       del cstack[stackcard]
+  timecheck = time.clock() - timer
+  whisper("{}".format(timecheck))
   return text
 
 ############################
