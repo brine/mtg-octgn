@@ -370,8 +370,8 @@ def autoParser(c, tagclass, res = False):
     else:
       stackcard.moveTo(stackcard.owner.Graveyard)
       del cstack[stackcard]
-  timecheck = time.clock() - timer
-  whisper("{}".format(timecheck))
+#  timecheck = time.clock() - timer
+#  whisper("{}".format(timecheck))
   return text
 
 ############################
