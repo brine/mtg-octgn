@@ -46,6 +46,12 @@ class ChoiceWindow(Form):
         (STRwidth, STRheight) = calcStringLabelSize(BoxTitle)
         self.Width = STRwidth + 50
 
+        self.timer_tries = 0
+        self.timer = Timer()
+        self.timer.Interval = 200
+        self.timer.Tick += self.onTick
+        self.timer.Start()
+
         labelPanel = Panel()
         labelPanel.Dock = DockStyle.Top
         labelPanel.AutoSize = True
@@ -120,6 +126,14 @@ class ChoiceWindow(Form):
 
     def getIndex(self):
         return self.confirmValue
+
+    def onTick(self, sender, event):
+        if self.timer_tries < 3:
+            self.TopMost = False
+            self.Focus()
+            self.Activate()
+            self.TopMost = True
+            self.timer_tries += 1
 
 def multipleChoice(title, options, tags, card):
    Application.EnableVisualStyles()
