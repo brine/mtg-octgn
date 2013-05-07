@@ -72,6 +72,8 @@ def getTags(card, key, rulesline = None):
   mute()
   global savedtags, offlinedisable
   cardname = card.Name
+  if not card.isFaceUp:
+    return ""
   if re.search(r"//", cardname) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
     cardname = cardname.replace('\r\n', ' ')
     if card.alternate != '':
