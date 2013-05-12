@@ -80,15 +80,14 @@
 		<overlayblocks>
 			<conditional>
 				<switch property="Type">
-					<case contains="Land" break="False"><link block="bl" /><link block="rc" /><link block="tc" /></case>
+					<case contains="Land" ><link block="bl" /><link block="rc" /><link block="tc" /></case>
 					<case contains="Artifact" break="True"><link block="ba" /><link block="ra" /><link block="ta" /></case>
 					<default><link block="bc" /><link block="rc" /><link block="tc" /></default>
 				</switch>
-				<link block="blank" />
 			</conditional>
 			<conditional>
 				<switch property="Color">
-					<case contains="Multicolor" break="False" ><link block="bm" /></case>
+					<case contains="Multicolor" ><link block="bm" /></case>
 					<case value="White"><link block="bw" /></case>
 					<case value="Blue"><link block="bu" /></case>
 					<case value="Black"><link block="bb" /></case>
@@ -105,11 +104,10 @@
 					<case value="Hybrid Green White"><link block="bg" /><link block="bhw" /></case>
 					<case value="Hybrid Green Blue"><link block="bg" /><link block="bhu" /></case>
 				</switch>
-				<link block="blank" />
 			</conditional>
 			<conditional>
 				<switch property="Flags">
-					<case value="W" break="False" ><link block="rw" /><link block="tw" /></case>
+					<case value="W" ><link block="rw" /><link block="tw" /></case>
 					<case value="U"><link block="ru" /><link block="tu" /></case>
 					<case value="B"><link block="rb" /><link block="tb" /></case>
 					<case value="R"><link block="rr" /><link block="tr" /></case>
@@ -126,12 +124,11 @@
 					<case value="RW"><link block="tm" /><link block="rr" /><link block="rhw" /></case>
 					<case value="GW"><link block="tm" /><link block="rg" /><link block="rhw" /></case>
 					<case value="GU"><link block="tm" /><link block="rg" /><link block="rhu" /></case>
-				</switch>
-				<link block="blank" />				
+				</switch>		
 			</conditional>
 			<conditional>
 				<switch property="Color">
-					<case value="White" break="False"><link block="rw" /><link block="tw" /></case>
+					<case value="White" ><link block="rw" /><link block="tw" /></case>
 					<case value="Blue"><link block="ru" /><link block="tu" /></case>
 					<case value="Black"><link block="rb" /><link block="tb" /></case>
 					<case value="Red"><link block="rr" /><link block="tr" /></case>
@@ -159,8 +156,8 @@
 					<case value="Multicolor Green White"><link block="rg" /><link block="rhw" /></case>
 					<case value="Multicolor Green Blue"><link block="rg" /><link block="rhu" /></case>
 				</switch>
-				<link block="blank" />
 			</conditional>
+		<link block="blank" />
 		</overlayblocks>
 		<textblocks>
 			<link block="title"><property name="Name" /></link>
