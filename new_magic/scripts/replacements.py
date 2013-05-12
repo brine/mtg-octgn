@@ -323,6 +323,7 @@ tokenTypes = {
     'cleric11m': ('1/1 Multicolor White Black Cleric', 'b6e9b1c2-b6c5-4697-88fa-6b59702ffc22'),
     'horror11m': ('1/1 Multicolor Blue Black Horror', '1e601ccc-eb1d-4a0f-a626-08c741c8b1a3'),
     'soldier11m': ('1/1 Multicolor Blue Black Horror', 'fe57dd41-0ad7-4570-b1cb-fe2a4218bcb4'),
+    'elemental**m': ('*/* Multicolor Green White Elemental', 'e516607b-95b3-4684-9f3f-766613f33da5'),
 
 
     'elspethemblem': ("Elspeth's Emblem", '10281a72-4654-4416-a24a-293ce0d732ea'),
