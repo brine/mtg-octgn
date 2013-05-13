@@ -486,7 +486,7 @@ def cardalign():
           elif re.search(r"Land", card.Type): cardorder[3].append(dictname)
           elif re.search(r"Planeswalker", card.Type): cardorder[4].append(dictname)
           elif re.search(r"Emblem", card.Type): cardorder[5].append(dictname)
-          elif re.search(r"Creature", card.Type): cardorder[0].append(dictname)
+          elif re.search(r"Creature", card.Type) or not card.isFaceUp: cardorder[0].append(dictname)
           elif re.search(r"Artifact", card.Type): cardorder[1].append(dictname)
           elif re.search(r"Enchantment", card.Type): cardorder[2].append(dictname)
           else: cardorder[6].append(dictname)
