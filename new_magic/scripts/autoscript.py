@@ -226,8 +226,6 @@ def suspend(card, x = 0, y = 0):
 import time
 
 def autoParser(c, tagclass, res = False):
-  whisper("parser start")
-  timer = time.clock()
   mute()
   markerdict = { }
   text = ""
@@ -370,8 +368,6 @@ def autoParser(c, tagclass, res = False):
     else:
       stackcard.moveTo(stackcard.owner.Graveyard)
       del cstack[stackcard]
-#  timecheck = time.clock() - timer
-#  whisper("{}".format(timecheck))
   return text
 
 ############################
