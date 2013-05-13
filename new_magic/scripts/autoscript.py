@@ -68,32 +68,22 @@ def disable(card, x = 0, y = 0):
 
 savedtags = { }
 
-def getTags(card, key, rulesline = None):
+def getTags(cardname, cardrules, key, rulesline = None):
   mute()
   global savedtags, offlinedisable
-  cardname = card.Name
-  if not card.isFaceUp:
-    return ""
-  if re.search(r"//", cardname) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
-    cardname = cardname.replace('\r\n', ' ')
-    if card.alternate != '':
-      cardname = cardname[cardname.find("/")+3:]
-    else:
-      cardname = cardname[:cardname.find("/")-1]
   encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
   if not cardname in savedtags:
-    rules = card.Rules
-    if re.search(r'creature token', rules):
+    if re.search(r'creature token', cardrules):
       encodedcardname += '&token'
-    if re.search(r'counter', rules):
+    if re.search(r'counter', cardrules):
       encodedcardname += "&counter"
-    if re.search(r'{} enters the battlefield'.format(card.Name), rules):
+    if re.search(r'{} enters the battlefield'.format(cardname), cardrules):
       encodedcardname += '&etb'
-    if re.search(r'{} dies'.format(card.Name), rules):
+    if re.search(r'{} dies'.format(cardname), cardrules):
       encodedcardname += '&destroy'
-    if re.search(r'{} attacks'.format(card.Name), rules):
+    if re.search(r'{} attacks'.format(cardname), cardrules):
       encodedcardname += '&attack'
-    if re.search(r'{} blocks'.format(card.Name), rules):
+    if re.search(r'{} blocks'.format(cardname), cardrules):
       encodedcardname += '&block'
     if offlinedisable == False:
       (fulltag, code) = webRead('http://octgn.gamersjudgement.com/tags2.php?id={}'.format(encodedcardname), 7000)
@@ -138,12 +128,6 @@ def getTags(card, key, rulesline = None):
     for st in savedtags[cardname]: tagstring += st
     count = 0
     returntext = []
-    cardrules = card.Rules
-    if re.search(r"//", card.Name) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
-      if card.alternate != '':
-        cardrules = cardrules[cardrules.find("/")+3:]
-      else:
-        cardrules = cardrules[:cardrules.find("/")-1]
     ruleslist = cardrules.splitlines()
     for lines in cardrules.splitlines():
       count += 1
@@ -155,10 +139,10 @@ def getTags(card, key, rulesline = None):
   if key == 'allmodes':
     tagstring = ''
     for st in savedtags[cardname]: tagstring += ";{}".format(st)
-    cardrules = card.Rules.splitlines()[int(rulesline) - 1]
+    splitrules = cardrules.splitlines()[int(rulesline) - 1]
     count = 0
     modelist = []
-    for mode in cardrules.split("; or "):
+    for mode in splitrules.split("; or "):
       count += 1
       if re.search(';{}'.format(str(count)), tagstring):
         modelist.append((True, '{}\n'.format(mode)))
@@ -172,12 +156,6 @@ def getTags(card, key, rulesline = None):
 
 def submitTags(card, x = 0, y = 0):
   cardname = card.Name
-  if re.search(r"//", cardname) and card.Type != None and not re.search(r"Instant", card.Type) and not re.search(r"Sorcery", card.Type):
-    cardname = cardname.replace('\r\n', ' ')
-    if card.alternate != '':
-      cardname = cardname[cardname.find("/")+3:]
-    else:
-      cardname = cardname[:cardname.find("/")-1]
   encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
   (url, code) = webRead('http://octgn.gamersjudgement.com/tags2.php?id={}'.format(encodedcardname))
   if code == 200 or code == 204:
@@ -242,7 +220,7 @@ def autoParser(c, tagclass, res = False):
         notify("ERROR: {}'s source cannot be identified! Can't be resolved.".format(c))
         return "BREAK"
 #####INITCHECKS######
-  inittag = getTags(card, 'init{}{}'.format(restag, tagclass))
+  inittag = getTags(card.Name, card.Rules, 'init{}{}'.format(restag, tagclass))
   if 'tapped' in inittag and card.orientation == Rot90:
     if not confirm("{} is already tapped!\nContinue?".format(card.Name)):
       return "BREAK"
@@ -252,7 +230,7 @@ def autoParser(c, tagclass, res = False):
   if 'choice' in inittag:
     for choice in inittag['choice']:
       (rulesline, type) = choice.split(', ')
-      modelist = getTags(card, 'allmodes', rulesline)
+      modelist = getTags(card.Name, card.Rules, 'allmodes', rulesline)
       num = multipleChoice("Choose a mode", modelist, '', card.Name)
       markerdict['choice'] = num
       text += ", choosing mode #{}".format(num)
@@ -301,7 +279,7 @@ def autoParser(c, tagclass, res = False):
       card.moveToTable(0,0)
       markerdict['cast'] = 1
     else:
-      if tagclass == 'cycle' or getTags(card, "{}{}res{}".format(choicetag, costtag, tagclass)) != '':
+      if tagclass == 'cycle' or getTags(card.Name, card.Rules, "{}{}res{}".format(choicetag, costtag, tagclass)) != '':
         stackcard = table.create(card.model, 0, 0, 1)
         if card.alternate != "":
           stackcard.switchTo()
@@ -313,7 +291,7 @@ def autoParser(c, tagclass, res = False):
   for markers in markerdict:
     stackcard.markers[scriptMarkers[markers]] += markerdict[markers]
 ####autoscripts####
-  taglist = [inittag, getTags(card, "{}{}{}{}".format(choicetag, costtag, restag, tagclass))]
+  taglist = [inittag, getTags(card.Name, card.Rules, "{}{}{}{}".format(choicetag, costtag, restag, tagclass))]
   for tags in taglist:
     if 'copy' in tags:
       for tag in tags['copy']:
@@ -359,7 +337,7 @@ def autoParser(c, tagclass, res = False):
   if res == True:
     if tagclass == 'cast':
       stackcard.markers[scriptMarkers['cast']] = 0
-      if getTags(stackcard, "{}resetb".format(costtag)):
+      if getTags(stackcard.Name, stackcard.Rules, "{}resetb".format(costtag)):
         autoParser(card, 'etb')
       stackcard.markers[scriptMarkers['cost']] = 0
       stackcard.markers[scriptMarkers['x']] = 0
@@ -780,7 +758,7 @@ def autosmartmarker(card, marker):
 def autoCreateToken(card, x = 0, y = 0):
   mute()
   text = ""
-  tokens = getTags(card, 'autotoken')
+  tokens = getTags(card.Name, card.Rules, 'autotoken')
   if tokens != "":
     for token in tokens:
       addtoken = tokenTypes[token]
@@ -796,7 +774,7 @@ def autoCreateToken(card, x = 0, y = 0):
 def autoAddMarker(card, x = 0, y = 0):
   mute()
   text = ""
-  markers = getTags(card, 'automarker')
+  markers = getTags(card.Name, card.Rules, 'automarker')
   if markers != "":
     for marker in markers:
       addmarker = counters[marker]
