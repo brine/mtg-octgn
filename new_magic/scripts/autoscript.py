@@ -47,7 +47,7 @@ def versionCheck():
 
 def shuffle(group, x = 0, y = 0):
     mute()
-    versionCheck()
+#    versionCheck()
     for card in group:
       if card.isFaceUp:
         card.isFaceUp = False
