@@ -219,19 +219,32 @@ def autoParser(c, tagclass, res = False):
       else:
         notify("ERROR: {}'s source cannot be identified! Can't be resolved.".format(c))
         return "BREAK"
+#####SPLIT CARD CHECK#####
+  if tagclass == 'cast' and res == False and card.Flags == 'split' and re.search('//', card.Name):
+    splitnames = card.Name.split('//')
+    if re.search('Fuse', card.Rules):
+      splitnames.append('Fuse both sides')
+    choice = askChoice('Cast which side?', splitnames)
+    if choice == None or choice == 2:
+      cardname = card.Name
+    else:
+      cardname = splitnames[choice]
+  else:
+    choice = None
+    cardname = card.Name
 #####INITCHECKS######
-  inittag = getTags(card.Name, card.Rules, 'init{}{}'.format(restag, tagclass))
+  inittag = getTags(cardname, card.Rules, 'init{}{}'.format(restag, tagclass))
   if 'tapped' in inittag and card.orientation == Rot90:
-    if not confirm("{} is already tapped!\nContinue?".format(card.Name)):
+    if not confirm("{} is already tapped!\nContinue?".format(cardname)):
       return "BREAK"
   if 'untapped' in inittag and card.orientation == Rot0:
-    if not confirm("{} is already untapped!\nContinue?".format(card.Name)):
+    if not confirm("{} is already untapped!\nContinue?".format(cardname)):
       return "BREAK"
   if 'choice' in inittag:
     for choice in inittag['choice']:
       (rulesline, type) = choice.split(', ')
-      modelist = getTags(card.Name, card.Rules, 'allmodes', rulesline)
-      num = multipleChoice("Choose a mode", modelist, '', card.Name)
+      modelist = getTags(cardname, card.Rules, 'allmodes', rulesline)
+      num = multipleChoice("Choose a mode", modelist, '', cardname)
       markerdict['choice'] = num
       text += ", choosing mode #{}".format(num)
   if 'cost' in inittag:
@@ -242,11 +255,11 @@ def autoParser(c, tagclass, res = False):
       else:
         marker = 'cost'
       if type == "ask":
-        if confirm("{}'s {}: Pay additional/alternate cost?".format(card.Name, cost)):
+        if confirm("{}'s {}: Pay additional/alternate cost?".format(cardname, cost)):
           markerdict[marker] = 1
           text += ", paying {} cost".format(cost.title())
       elif type == "num":
-        qty = askInteger("{}'s {}: Paying how many times?".format(card.Name, cost), 0)
+        qty = askInteger("{}'s {}: Paying how many times?".format(cardname, cost), 0)
         if qty == None: qty = 0
         if qty != 0: markerdict[marker] = qty
         if qty == 1: text += ", paying {} once".format(cost.title())
@@ -278,6 +291,10 @@ def autoParser(c, tagclass, res = False):
     if tagclass == 'cast':
       card.moveToTable(0,0)
       markerdict['cast'] = 1
+      if choice == 0:
+        card.switchTo('splitA')
+      elif choice == 1:
+        card.switchTo('splitB')
     else:
       if tagclass == 'cycle' or getTags(card.Name, card.Rules, "{}{}res{}".format(choicetag, costtag, tagclass)) != '':
         stackcard = table.create(card.model, 0, 0, 1)
