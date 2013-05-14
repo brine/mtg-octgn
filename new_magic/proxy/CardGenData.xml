@@ -78,13 +78,7 @@
 			<match name="Flags" value=""/>
 		</matches>
 		<overlayblocks>
-			<conditional>
-				<switch property="Type">
-					<case contains="Land" ><link block="bl" /><link block="rc" /><link block="tc" /></case>
-					<case contains="Artifact" break="True"><link block="ba" /><link block="ra" /><link block="ta" /></case>
-					<default><link block="bc" /><link block="rc" /><link block="tc" /></default>
-				</switch>
-			</conditional>
+			<link block="bc" />
 			<conditional>
 				<switch property="Color">
 					<case contains="Multicolor" ><link block="bm" /></case>
@@ -103,6 +97,12 @@
 					<case value="Hybrid Red White"><link block="br" /><link block="bhw" /></case>
 					<case value="Hybrid Green White"><link block="bg" /><link block="bhw" /></case>
 					<case value="Hybrid Green Blue"><link block="bg" /><link block="bhu" /></case>
+				</switch>
+			</conditional>
+			<conditional>
+				<switch property="Type">
+					<case contains="Land" ><link block="bl" /><link block="rc" /><link block="tc" /></case>
+					<case contains="Artifact" break="True"><link block="ba" /><link block="ra" /><link block="ta" /></case>
 				</switch>
 			</conditional>
 			<conditional>
@@ -133,8 +133,8 @@
 					<case value="Black"><link block="rb" /><link block="tb" /></case>
 					<case value="Red"><link block="rr" /><link block="tr" /></case>
 					<case value="Green"><link block="rg" /><link block="tg" /></case>
-					<case contains="Multicolor"><link block="tm" /></case>
-					<case contains="Hybrid"><link block="tc" /></case>
+					<case contains="Multicolor" break='False'><link block="tm" /></case>
+					<case contains="Hybrid" break='False'><link block="tc" /></case>
 					<case value="Hybrid White Blue"><link block="rw" /><link block="rhu" /></case>
 					<case value="Hybrid White Black"><link block="rw" /><link block="rhb" /></case>
 					<case value="Hybrid Blue Black"><link block="ru" /><link block="rhb" /></case>
