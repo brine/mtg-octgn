@@ -225,10 +225,10 @@ def autoParser(c, tagclass, res = False):
     if re.search('Fuse', card.Rules):
       splitnames.append('Fuse both sides')
     choice = askChoice('Cast which side?', splitnames)
-    if choice == None or choice == 2:
+    if choice == None or choice == 3:
       cardname = card.Name
     else:
-      cardname = splitnames[choice]
+      cardname = splitnames[choice - 1]
   else:
     choice = None
     cardname = card.Name
@@ -297,6 +297,8 @@ def autoParser(c, tagclass, res = False):
         card.switchTo('splitA')
       elif choice == 2:
         card.switchTo('splitB')
+      elif choice == 3:
+        card.switchTo('splitC')
     else:
       if tagclass == 'cycle' or getTags(card.Name, card.Rules, "{}{}res{}".format(choicetag, costtag, tagclass)) != '':
         stackcard = table.create(card.model, 0, 0, 1)
