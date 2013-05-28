@@ -242,9 +242,11 @@ def autoParser(c, tagclass, res = False):
       return "BREAK"
   if 'choice' in inittag:
     for choice in inittag['choice']:
-      (rulesline, type) = choice.split(', ')
-      modelist = getTags(cardname, card.Rules, 'allmodes', rulesline)
-      num = multipleChoice("Choose a mode", modelist, '', cardname)
+      (rulesline, type) = choice.split(', ') ##the tag contains data for the rules line number and modes type
+      rule = card.Rules.splitlines()[int(rulesline) - 1]  ##we want just the one rules line with the modes in it
+      modes = rule.split(u'\u2014 ')[1] ##parse out the 'choose one - ' part
+      modelist = modes.split("; or ")
+      num = askChoice("Choose a mode for {}".format(cardname), modelist)
       markerdict['choice'] = num
       text += ", choosing mode #{}".format(num)
   if 'cost' in inittag:
@@ -291,9 +293,9 @@ def autoParser(c, tagclass, res = False):
     if tagclass == 'cast':
       card.moveToTable(0,0)
       markerdict['cast'] = 1
-      if choice == 0:
+      if choice == 1:
         card.switchTo('splitA')
-      elif choice == 1:
+      elif choice == 2:
         card.switchTo('splitB')
     else:
       if tagclass == 'cycle' or getTags(card.Name, card.Rules, "{}{}res{}".format(choicetag, costtag, tagclass)) != '':
