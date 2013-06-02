@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.1.6.2" octgnVersion="3.1.0.32"
+	id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.1.6.3" octgnVersion="3.1.0.32"
 	name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
 	setsurl="http://octgn.gamersjudgement.com/viewforum.php?f=8" gameurl="http://octgn.gamersjudgement.com/viewforum.php?f=8" authors="brine"
 	markersize="14" iconurl="http://www.wizards.com/Magic/Assets/magic_logo.png" >
@@ -65,6 +65,7 @@
     <groupaction menu="Gain 1 Life" shortcut="ctrl+W" execute="gain1Life" />
     <groupaction menu="Re-align Cards" execute="align" />
     <groupaction menu="Enable/Disable Autoscripts" execute="disable" />
+	<cardaction menu="Blink Card" execute="blink" />
     <cardaction menu="Tap/Untap or Resolve" default="True" execute="resolve" />
     <cardaction menu="Don't Untap during Untap Step" shortcut="ctrl+V" execute="doesNotUntap" />
     <cardaction menu="Attack" shortcut="ctrl+A" execute="attack" />
@@ -76,6 +77,7 @@
     <cardaction menu="Clone Card" shortcut="ctrl+C" batchExecute="clone" />
     <cardaction menu="Destroy Card" shortcut="del" execute="destroy" />
     <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
+	<cardaction menu="Blink Card" shortcut="ctrl+shift+B" execute="blink" />
     <cardaction menu="Move to Top of Libary" shortcut="ctrl+Y" execute="tolibrary" />
     <cardaction menu="Move to a Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
     <cardaction menu="Move to Hand" shortcut="ctrl+H" execute="tohand" />

@@ -198,6 +198,19 @@ def suspend(card, x = 0, y = 0):
     cardalign()
     notify("{} suspends {} for {}.".format(me, card, num))
 
+def blink(card, x = 0, y = 0):
+    mute()
+    src = card.group
+    if autoscripts == True and src == table:
+        text = autoParser(card, 'exile')
+        if text == "BREAK": return
+        card.moveTo(card.owner.piles['Exiled Zone'])
+        cardalign()
+        card.moveToTable(0,0)
+        autoParser(card, 'cast', True)
+        cardalign()
+        notify("{} blinks {}.".format(me, card))
+
 ##################################
 #Card Functions -- Autoscripted  
 ##################################
