@@ -55,6 +55,12 @@
 			<border color="#000000" size="1" />
 			<wordwrap height="18" width="316" align="far" />
 		</block>
+		<block type="text" id="rarity">
+			<location x="31" y="160" />
+			<text color="#000000" size="17" font="fonts/mplantin_symbols.ttf" />
+			<border color="#FFFFFF" size="2" />
+			<wordwrap height="18" width="316" align="far" />
+		</block>
 		<block type="text" id="type">
 			<location x="31" y="205" />
 			<text color="#000000" size="17" font="fonts/mplantin_symbols.ttf" />
@@ -67,9 +73,10 @@
 			<wordwrap height="227" width="301" />
 		</block>
 		<block type="text" id="ptbox">
-			<location x="243" y="474" />
+			<location x="143" y="474" />
 			<text color="#000000" size="27" font="fonts/mplantin_symbols.ttf" />
-			<border color="#FFFFFF" size="2" />
+			<border color="#FFFFFF" size="3" />
+			<wordwrap height="18" width="200" align="far" />
 		</block>
 	</blocks>
 
@@ -155,6 +162,8 @@
 					<case value="Multicolor Red White"><link block="rr" /><link block="rhw" /></case>
 					<case value="Multicolor Green White"><link block="rg" /><link block="rhw" /></case>
 					<case value="Multicolor Green Blue"><link block="rg" /><link block="rhu" /></case>
+					<case contains="Multicolor"><link block="rm" /></case>
+					<case contains="Hybrid"><link block="rc" /></case>
 				</switch>
 			</conditional>
 		<link block="blank" />
@@ -162,6 +171,7 @@
 		<textblocks>
 			<link block="title"><property name="Name" /></link>
 			<link block="cost"><property name="Cost" /></link>
+			<link block="rarity"><property name="Rarity" /></link>
 			<link block="type" separator=" --  "><property name="Type" /><property name="Subtype" /></link>
 			<link block="rules"><property name="Rules" /></link>
 			<link block="ptbox"><property name="PT Box" /></link>
