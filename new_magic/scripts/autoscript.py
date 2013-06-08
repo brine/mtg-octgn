@@ -42,7 +42,7 @@ def versionCheck():
         return
       notify("{}'s game definition ({}) is out-of!-date!".format(me, gameVersion))
       if confirm("There is a new game definition available! Your version {}. Current version {}.\nClicking yes will open your browser to the location of the most recent version.".format(gameVersion, url)):
-        openUrl('http://octgn.gamersjudgement.com/viewtopic.php?f=8&t=195')
+        openUrl('http://octgn.gamersjudgement.com/forum/viewtopic.php?f=8&t=195')
 
 
 def shuffle(group, x = 0, y = 0):
@@ -86,7 +86,7 @@ def getTags(cardname, cardrules, key, rulesline = None):
     if re.search(r'{} blocks'.format(cardname), cardrules):
       encodedcardname += '&block'
     if offlinedisable == False:
-      (fulltag, code) = webRead('http://octgn.gamersjudgement.com/tags2.php?id={}'.format(encodedcardname), 7000)
+      (fulltag, code) = webRead('http://octgn.gamersjudgement.com/forum/tags2.php?id={}'.format(encodedcardname), 7000)
       if code == 204:
         fulltag = ""
       elif code != 200:
@@ -157,11 +157,11 @@ def getTags(cardname, cardrules, key, rulesline = None):
 def submitTags(card, x = 0, y = 0):
   cardname = card.Name
   encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
-  (url, code) = webRead('http://octgn.gamersjudgement.com/tags2.php?id={}'.format(encodedcardname))
+  (url, code) = webRead('http://octgn.gamersjudgement.com/forum/tags2.php?id={}'.format(encodedcardname))
   if code == 200 or code == 204:
     if code == 200:
       if not confirm("Submit an edit?\n{}".format(url)): return()
-    openUrl('http://octgn.gamersjudgement.com/submit2.php?id={}'.format(encodedcardname))
+    openUrl('http://octgn.gamersjudgement.com/forum/submit2.php?id={}'.format(encodedcardname))
   else:
       whisper("cannot connect to online database.")
 
