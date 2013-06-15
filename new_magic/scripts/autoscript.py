@@ -128,14 +128,16 @@ def getTags(cardname, cardrules, key, rulesline = None):
     for st in savedtags[cardname]: tagstring += st
     count = 0
     returntext = []
+    returncolor = []
     ruleslist = cardrules.splitlines()
     for lines in cardrules.splitlines():
       count += 1
       if re.search('acti{}'.format(str(count)), tagstring):
-        returntext.append((True, '{}\n'.format(lines)))
+        returncolor.append('#0000ff')
       else:
-        returntext.append((False, '{}\n'.format(lines)))
-    return (savedtags[cardname], returntext)
+        returncolor.append('#545454')
+      returntext.append('{}\n'.format(lines))
+    return (savedtags[cardname], returntext, returncolor)
   if key == 'allmodes':
     tagstring = ''
     for st in savedtags[cardname]: tagstring += ";{}".format(st)

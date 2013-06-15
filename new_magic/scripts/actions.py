@@ -388,8 +388,8 @@ def block(card, x = 0, y = 0):
 def activate(card, x = 0, y = 0):
   mute()
   if autoscripts == True:
-    (tags, list) = getTags(card.Name, card.Rules, 'allactivate')
-    num = multipleChoice("Choose an Ability to Activate", list, str(tags), card.Name)
+    (tags, list, colors) = getTags(card.Name, card.Rules, 'allactivate')
+    num = askChoice("{}: Activate Which Ability?\n\n{}".format(card.Name, tags), list, colors)
     if num == None: return
     text = autoParser(card, 'acti{}'.format(num))
     cardalign()
