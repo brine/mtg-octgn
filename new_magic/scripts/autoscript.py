@@ -138,19 +138,6 @@ def getTags(cardname, cardrules, key, rulesline = None):
         returncolor.append('#545454')
       returntext.append('{}\n'.format(lines))
     return (savedtags[cardname], returntext, returncolor)
-  if key == 'allmodes':
-    tagstring = ''
-    for st in savedtags[cardname]: tagstring += ";{}".format(st)
-    splitrules = cardrules.splitlines()[int(rulesline) - 1]
-    count = 0
-    modelist = []
-    for mode in splitrules.split("; or "):
-      count += 1
-      if re.search(';{}'.format(str(count)), tagstring):
-        modelist.append((True, '{}\n'.format(mode)))
-      else:
-        modelist.append((False, '{}\n'.format(mode)))
-    return modelist
   if key in savedtags[cardname]:
     return savedtags[cardname][key]
   else:
