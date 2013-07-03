@@ -820,4 +820,11 @@ def smartMarker(card, x = 0, y = 0):
     addmarker = counters[marker]
     card.markers[addmarker] += 1
     notify("{} adds one {} to {}.".format(me, addmarker[0], card))
-    
+
+def smartRemoveMarker(card, x = 0, y = 0):
+  mute()
+  marker = getGlobalVariable("smartmarker")
+  addmarker = counters[marker]
+  if card.markers[addmarker] >0:
+	card.markers[addmarker] -= 1
+	notify("{} removes one {} from {}.".format(me, addmarker[0], card))	
