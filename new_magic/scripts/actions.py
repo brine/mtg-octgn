@@ -466,6 +466,15 @@ def addMarker(cards, x = 0, y = 0):
         card.markers[marker] += quantity
         notify("{} adds {} {} counters to {}.".format(me, quantity, marker[0], card))
 
+def removeMarker(cards, x = 0, y = 0):
+	mute()
+	marker, quantity = askMarker()
+	if quantity == 0: return
+	for card in cards:
+		if card.markers[marker] >= quantity:
+			card.markers[marker] -= quantity
+			notify("{} removes {} {} counters from {}.".format(me, quantity, marker[0], card)) 		
+		
 def addMinusOneMarker(card, x = 0, y = 0):
     mute()
     notify("{} adds a -1/-1 counter to {}.".format(me, card))

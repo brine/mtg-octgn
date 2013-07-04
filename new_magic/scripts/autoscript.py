@@ -826,4 +826,19 @@ def smartMarker(card, x = 0, y = 0):
     addmarker = counters[marker]
     card.markers[addmarker] += 1
     notify("{} adds one {} to {}.".format(me, addmarker[0], card))
-    
+
+def autoRemoveMarker(card, x = 0, y = 0):
+	mute()
+	text = ""
+	markers = getTags(card.Name, card.Rules, 'automarker')
+	if markers != "":
+		for marker in markers:
+			addmarker = counters[marker]
+			if marker == "minusoneminusone" and counters["plusoneplusone"] in card.markers:
+				card.markers[counters["plusoneplusone"]] += 1
+			elif marker == "plusoneplusone" and counters["minusoneminusone"] in card.markers:
+				card.markers[counters["minusoneminusone"]] += 1
+			else:
+				card.markers[addmarker] -= 1
+			text += "one {}, ".format(addmarker[0])
+		notify("{} removes {} from {}.".format(me, text[0:-2], card))      

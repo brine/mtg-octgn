@@ -87,10 +87,12 @@
       <cardaction menu="Add -1/-1 Counter" shortcut="ctrl+3" execute="addMinusOneMarker" />
       <cardaction menu="Add Charge Counter" shortcut="ctrl+4" execute="addChargeMarker" />
       <cardaction menu="Add Smart-Counter" shortcut="ctrl+shift+1" execute="smartMarker" />
-      <cardaction menu="Remove +1/+1 Counter" shortcut="ctrl+shift+2" execute="removePlusOneMarker" />
+      <cardaction menu="Auto-Remove Counter" shortcut="ctrl+shift+5" execute="autoRemoveMarker" />
+	  <cardaction menu="Remove +1/+1 Counter" shortcut="ctrl+shift+2" execute="removePlusOneMarker" />
       <cardaction menu="Remove -1/-1 Counter" shortcut="ctrl+shift+3" execute="removeMinusOneMarker" />
       <cardaction menu="Remove Charge Counter" shortcut="ctrl+shift+4" execute="removeChargeMarker" />
       <cardaction menu="Add Other Counter..." shortcut="ctrl+0" batchExecute="addMarker" />
+	  <cardaction menu="Remove Other Counter..." shortcut="ctrl+shift+0" batchExecute="removeMarker" />
     </cardactions>
     <cardaction menu="Auto-Create Token" shortcut="ctrl+shift+T" execute="autoCreateToken" />
     <cardaction menu="Commander Toggle / Exclude from Alignment" execute="generaltoggle" />
