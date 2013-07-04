@@ -34,8 +34,9 @@ def disable(card, x = 0, y = 0):
 def getTags(cardname, cardrules, key, rulesline = None):
     mute()
     global savedtags, offlinedisable
-    encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
+    encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))  ##Card tags are accessed via their base-64 encoded names as security
     if not cardname in savedtags:
+        ## Searches card rules for specific characteristics to use as flags in the Tag database
         if re.search(r'creature token', cardrules):
             encodedcardname += '&token'
         if re.search(r'counter', cardrules):
@@ -50,12 +51,12 @@ def getTags(cardname, cardrules, key, rulesline = None):
             encodedcardname += '&block'
         if offlinedisable == False:
             (fulltag, code) = webRead('http://octgn.gamersjudgement.com/forum/tags2.php?id={}'.format(encodedcardname), 7000)
-            if code == 204:
+            if code == 204: ##  for blank pages
                 fulltag = ""
             elif code != 200:
                 whisper('tag database is currently unavailable, using offline tag cache')
                 offlinedisable = True
-        if offlinedisable == True:
+        if offlinedisable == True:  ## looks for tags in the offline cache
             if cardname in offlineTags:
                 fulltag = offlineTags[cardname]
             else:
