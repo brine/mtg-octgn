@@ -179,6 +179,7 @@ def play(card, x = 0, y = 0):
     if autoscripts == True:
         text = autoParser(card, 'cast')
         if text != "BREAK":
+            ## Checks to see if the cast card is an Aura, then check to see if a target was made to resolve-attach to
             if card.Subtype != None and re.search(r'Aura', card.Subtype):
                 target = (card for card in table if card.targetedBy)
                 targetcount = sum(1 for card in table if card.targetedBy)
@@ -189,9 +190,11 @@ def play(card, x = 0, y = 0):
                         targetcard.target(False)
                         setGlobalVariable('cattach', str(cattach))
                         text += ", targeting {}".format(targetcard)
+            ## If its a land, automatically resolve it
             if re.search('Land', card.Type):
-                text += autoParser(card, 'cast', True)
+                text += autoParser(card, 'resolve')
                 notify("{} plays {}{}.".format(me, card, text))
+                autoParser(card, 'etb')
             else:
                 notify("{} casts {}{}.".format(me, card, text))
             cardalign()
@@ -201,6 +204,39 @@ def play(card, x = 0, y = 0):
         notify("{} plays {} from their {}.".format(me, card, src.name))
 
 def resolve(card, x = 0, y = 0):
+    mute()
+    global stackDict
+    if autoscripts == True:
+        if card in stackDict:
+            tagClass = stackDict[card]['class']
+            tagSrc = stackDict[card]['src']
+            text = autoParser(card, 'resolve')
+            if tagClass == 'miracle':
+                if tagSrc in me.hand:
+                    play(tagSrc)
+                else:
+                    notify("{}'s {} Miracle trigger is countered.".format(me, card))
+            else:
+                notify("{} resolves {} ({}){}".format(me, card, tagClass, text))
+            if tagClass == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type):
+                autoParser(card, 'etb')
+            else:
+                card.moveTo(card.owner.Graveyard)
+            cardalign()
+        else:
+            card.orientation ^= Rot90
+            if card.orientation & Rot90 == Rot90:
+                notify('{} taps {}'.format(me, card))
+            else:
+                notify('{} untaps {}'.format(me, card))
+    else:
+        card.orientation ^= Rot90
+        if card.orientation & Rot90 == Rot90:
+            notify('{} taps {}'.format(me, card))
+        else:
+            notify('{} untaps {}'.format(me, card))
+
+def oldresolve(card, x = 0, y = 0):
     mute()
     if autoscripts == True:
         if scriptMarkers['suspend'] in card.markers:
@@ -271,13 +307,14 @@ def resolve(card, x = 0, y = 0):
 
 def destroy(card, x = 0, y = 0):
     mute()
+    global stackDict
     src = card.group
     if autoscripts == True and src == table:
-        for marker in scriptMarkers:
-            if scriptMarkers[marker] in card.markers:
-                card.moveTo(card.owner.Graveyard)
-                notify("{}'s {} was countered.".format(me, card))
-                return
+        if card in stackDict:
+            card.moveTo(card.owner.Graveyard)
+            del stackDict[card]
+            notify("{}'s {} was countered.".format(me, card))
+            return
         text = autoParser(card, 'destroy')
         if text != "BREAK":
             card.moveTo(card.owner.Graveyard)
@@ -388,14 +425,11 @@ def block(card, x = 0, y = 0):
 def activate(card, x = 0, y = 0):
     mute()
     if autoscripts == True:
-        (tags, list, colors) = getTags(card.Name, card.Rules, 'allactivate')
-        num = askChoice("{}: Activate Which Ability?\n\n{}".format(card.Name, tags), list, colors)
-        if num == None:
-            return
-        text = autoParser(card, 'acti{}'.format(num))
+        text = autoParser(card, 'acti')
         cardalign()
         if text != "BREAK":
-            notify("{} activates ability #{} on {}{}.".format(me, num, card, text))
+            (num, text) = text
+            notify("{} activates {}'s ability #{}{}.".format(me, card, num, text))
     else:
         notify("{} uses {}'s ability.".format(me, card))
 
@@ -672,15 +706,14 @@ def draw(group, x = 0, y = 0):
     if re.search(r'Miracle ', card.Rules):
         if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.Name, card.Rules)):
             if autoscripts == True:
-                miracletrig = table.create(card.model, 0, 0, 1)
-                miracletrig.markers[scriptMarkers['miracle']] += 1
-                cstack[miracletrig] = card
+                text = autoParser(card, 'miracle')
                 card.highlight = MiracleColor
                 cardalign()
             else:
                 miracletrig = card
                 miracletrig.moveToTable(0,0)
-            notify("{} draws {}, triggering the Miracle.".format(me, miracletrig))
+                text = ""
+            notify("{} draws a miracle {}{}.".format(me, card, text))
             return
     notify("{} draws a card.".format(me))
 

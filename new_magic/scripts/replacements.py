@@ -94,7 +94,7 @@ scriptMarkers = {
     'destroy': ('Sent to graveyard trigger: ' + me.name, '663a9532-98d2-4d30-b41b-70c582b6357f'),
     'attack': ('Attack trigger: ' + me.name, '9f8ff955-97b7-4881-a0a5-823a7413a6d6'),
     'block': ('Block trigger: ' + me.name, '759e7a00-e6f1-4cfb-9f74-d8ff58e44e30'),
-    'activate': ('Activated ability trigger: ' + me.name, '2dd4da20-eec5-47e9-9adc-2b502ebc4f5d'),
+    'acti': ('Activated ability trigger: ' + me.name, '2dd4da20-eec5-47e9-9adc-2b502ebc4f5d'),
     'exile': ('Exile trigger: ' + me.name, '9f315796-c2b2-4159-bcf6-3e28ecddfbc9'),
     'discard': ('Discard trigger: ' + me.name, 'e9f688b5-5068-404c-9979-23098aa37dfa'),
     'suspend': ('Suspended', '9cc0fc15-9967-4e98-9afb-a2d5e1479920'),
