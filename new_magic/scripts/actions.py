@@ -439,6 +439,14 @@ def activate(card, x = 0, y = 0):
 
 def morph(card, x = 0, y = 0):
     mute()
+    if autoscriptCheck():
+        card.isFaceUp = False
+        text = autoParser(card, 'cast', True)
+        cardalign()
+        if text == "BREAK":
+            card.isFaceUp = True
+        else:
+            notify("{} casts a card face-down.".format(me))
     src = card.group
     notify("{} casts a card face-down from their {}.".format(me, src.name))
     card.moveToTable(0,0,True)
@@ -466,8 +474,16 @@ def transform(card, x = 0, y = 0):
             notify("{} morphs {} face down.".format(me, card))
             card.isFaceUp = False
         else:
-            card.isFaceUp = True
-            notify("{} morphs {} face up.".format(me, card))
+            if autoscriptCheck():
+                card.peek()
+                rnd(1,10)
+                text = autoParser(card, 'morph') ## The card will flip up in the autoParser
+                cardalign()
+                if text != "BREAK":
+                    notify("{} morphs {} face up{}.".format(me, card, text))
+            else:
+                card.isFaceUp = True
+                notify("{} morphs {} face up.".format(me, card))
 
 def suspend(card, x = 0, y = 0):
     mute()

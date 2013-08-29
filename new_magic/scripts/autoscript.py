@@ -33,7 +33,7 @@ def autoscriptCheck():
 def getTags(card, key = None):
     mute()
     global savedtags, offlinedisable
-    cardname = card.name
+    cardname = card.Name
     encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
     if not cardname in savedtags:
         rules = card.Rules
@@ -216,7 +216,7 @@ def cardcount(card, stackcard, search):
 stackDict = {}
 costMemory = (0,0)
 
-def autoParser(card, tagclass):
+def autoParser(card, tagclass, morph = False):
     mute()
     text = ''
     global stackDict, costMemory
@@ -373,7 +373,7 @@ def autoParser(card, tagclass):
     else:
         ## If the card is being cast, move it to the table so the stack markers can be added ##
         if stackClass == 'cast':
-            srcCard.moveToTable(0,0)
+            srcCard.moveToTable(0,0,morph)
             stackCard = srcCard
             stackCard.switchTo(stackAlt)
             stackCard.markers[scriptMarkers[stackClass]] = 1
@@ -385,6 +385,8 @@ def autoParser(card, tagclass):
         ## All other stack triggers need to be checked if the stack trigger card should be created ##
         else:
             if stackClass == 'miracle' or (stackData['cost'] > 0 and stackData['costres'] != None) or (stackData['cost'] == 0 and stackData['res'] != None):
+                if stackClass == 'morph':
+                    srcCard.isFaceUp = True ## we need to flip the card now to see it's model/GUID
                 stackCard = table.create(srcCard.model, 0, 0, 1)
                 stackCard.switchTo(stackAlt)
                 stackCard.markers[scriptMarkers[stackClass]] = 1
@@ -423,7 +425,7 @@ def autoattach(card, targetcard):
     cattach[card._id] = targetcard._id
     targetcard.target(False)
     setGlobalVariable('cattach', str(cattach))
-    return "attaching {} to {}".format(card, targetcard)
+    return "attaches {} to {}".format(card, targetcard)
 
 def autodetach(card):
     mute()
@@ -437,7 +439,7 @@ def autodetach(card):
     elif card._id in cattach:
         card2 = cattach[card._id]
         del cattach[card._id]
-        text = "unattaching {} from {}".format(card, Card(card2))
+        text = "detaches {} from {}".format(card, Card(card2))
     else:
         return ""
     setGlobalVariable('cattach', str(cattach))
@@ -736,7 +738,8 @@ def cardalign():
                     or scriptMarkers['x'] in card.markers
                     or scriptMarkers['discard'] in card.markers
                     or scriptMarkers['miracle'] in card.markers
-                    or scriptMarkers['choice'] in card.markers):
+                    or scriptMarkers['choice'] in card.markers
+                    or scriptMarkers['morph'] in card.markers):
                 if card.controller == me:
                     card.moveToTable(0, 10 * stackcount)
                 stackcount += 1

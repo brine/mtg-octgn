@@ -99,7 +99,8 @@ scriptMarkers = {
     'discard': ('Discard trigger: ' + me.name, 'e9f688b5-5068-404c-9979-23098aa37dfa'),
     'suspend': ('Suspended', '9cc0fc15-9967-4e98-9afb-a2d5e1479920'),
     'miracle': ('Miracle trigger: ' + me.name, 'aee4bba3-9375-4f14-9882-5d8d6fdd1660'),
-    'choice': ('Mode Indicator: ' + me.name, '1c8f7028-ea97-4fa4-93ce-ba0bb55b31e7')
+    'choice': ('Mode Indicator: ' + me.name, '1c8f7028-ea97-4fa4-93ce-ba0bb55b31e7'),
+    'morph': ('Morph trigger: ' + me.name, '96268748-c55b-4513-82e4-0466d39137c0')
 }
 
 tokenTypes = {
