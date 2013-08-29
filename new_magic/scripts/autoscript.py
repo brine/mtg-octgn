@@ -249,6 +249,8 @@ def autoParser(card, tagclass):
         if tagTuple == "BREAK":
             return "BREAK"
         fullTags, actiTuple, modeTuple = tagTuple
+        if modeTuple[0] != 0:
+            text += ', choosing mode #{}'.format(modeTuple[0])
         stackData = {
             'src': card,
             'alt': splitAlt,
