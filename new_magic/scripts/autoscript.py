@@ -232,13 +232,26 @@ def autoParser(card, tagclass):
             return "BREAK"
     else: ## create instance
         stackType = 'trig'
-        tagTuple = tagConstructor(card, tagclass)
+        if card.flags == 'split' and re.search('//', card.name) and tagclass == 'cast':
+            splitRules = card.Rules.split('//')
+            splitFlags = ['A','B']
+            if 'splitC' in card.alternates and card in me.hand:
+                splitRules.append('Fuse both sides')
+                splitFlags.append('C')
+            choice = askChoice('cast which side of {}?'.format(card.name), splitRules)
+            if choice == None:
+                return "BREAK"
+            tagTuple = tagConstructor(card, tagclass, splitFlags[choice - 1])
+            splitAlt = 'split' + splitFlags[choice - 1]
+        else:
+            splitAlt = card.alternate
+            tagTuple = tagConstructor(card, tagclass)
         if tagTuple == "BREAK":
             return "BREAK"
         fullTags, actiTuple, modeTuple = tagTuple
         stackData = {
             'src': card,
-            'alt': card.alternate,
+            'alt': splitAlt,
             'class': tagclass,
             'inittrig': fullTags[0],
             'trig': fullTags[1],
@@ -360,6 +373,7 @@ def autoParser(card, tagclass):
         if stackClass == 'cast':
             srcCard.moveToTable(0,0)
             stackCard = srcCard
+            stackCard.switchTo(stackAlt)
             stackCard.markers[scriptMarkers[stackClass]] = 1
             stackCard.markers[scriptMarkers['acti']] = actiTuple[0]
             stackCard.markers[scriptMarkers['choice']] = modeTuple[0]
