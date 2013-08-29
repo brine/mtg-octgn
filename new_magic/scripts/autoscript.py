@@ -726,20 +726,20 @@ def cardalign():
         if not counters['general'] in card.markers: ## Cards with General markers ignore alignment
             ## Aligns cards on the stack
             if (scriptMarkers['cast'] in card.markers
-                or scriptMarkers['acti'] in card.markers
-                or scriptMarkers['attack'] in card.markers
-                or scriptMarkers['block'] in card.markers
-                or scriptMarkers['destroy'] in card.markers
-                or scriptMarkers['exile'] in card.markers
-                or scriptMarkers['etb'] in card.markers
-                or scriptMarkers['cost'] in card.markers
-                or scriptMarkers['x'] in card.markers
-                or scriptMarkers['discard'] in card.markers
-                or scriptMarkers['miracle'] in card.markers
-                or scriptMarkers['choice'] in card.markers):
-                    if card.controller == me:
-                        card.moveToTable(0, 10 * stackcount)
-                    stackcount += 1
+                    or scriptMarkers['acti'] in card.markers
+                    or scriptMarkers['attack'] in card.markers
+                    or scriptMarkers['block'] in card.markers
+                    or scriptMarkers['destroy'] in card.markers
+                    or scriptMarkers['exile'] in card.markers
+                    or scriptMarkers['etb'] in card.markers
+                    or scriptMarkers['cost'] in card.markers
+                    or scriptMarkers['x'] in card.markers
+                    or scriptMarkers['discard'] in card.markers
+                    or scriptMarkers['miracle'] in card.markers
+                    or scriptMarkers['choice'] in card.markers):
+                if card.controller == me:
+                    card.moveToTable(0, 10 * stackcount)
+                stackcount += 1
             ## For non-attached cards
             elif card.controller == me and not card._id in cattach:
                 dictname = card.Name
