@@ -196,7 +196,11 @@ def play(card, x = 0, y = 0):
                 notify("{} plays {}{}.".format(me, card, text))
                 autoParser(card, 'etb')
             else:
-                notify("{} casts {}{}.".format(me, card, text))
+                modeTuple = stackDict[card]['mode']
+                if modeTuple[0] == 0:
+                    notify("{} casts {}{}.".format(me, card, text))
+                else:
+                    notify("{} casts {} (mode #{}){}.".format(me, card, modeTuple[0], text))
             cardalign()
     else:
         src = card.group

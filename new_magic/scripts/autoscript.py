@@ -249,11 +249,11 @@ def autoParser(card, tagclass):
         if tagTuple == "BREAK":
             return "BREAK"
         fullTags, actiTuple, modeTuple = tagTuple
-        if modeTuple[0] != 0:
-            text += ', choosing mode #{}'.format(modeTuple[0])
         stackData = {
             'src': card,
             'alt': splitAlt,
+            'acti': actiTuple,
+            'mode': modeTuple,
             'class': tagclass,
             'inittrig': fullTags[0],
             'trig': fullTags[1],
@@ -396,7 +396,7 @@ def autoParser(card, tagclass):
     costMemory = (stackData['cost'], stackData['x']) ## stores the cost values for ETB triggers
     if moveTo:
         text += automoveto(srcCard, moveTo) #deal with automoveto triggers right at the very end.
-    if tagclass == 'acti':
+    if tagclass == 'acti': ##acti needs to return the number of the activated ability
         return (actiTuple[0], text)
     else:
         return text
