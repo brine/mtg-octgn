@@ -6,10 +6,7 @@ from System import Text
 
 playerside = None
 sideflip = None
-cstack = { }
-versioncheck = None
 offlinedisable = False
-autoscripts = True
 savedtags = { }
 
 def clearCache(group, x = 0, y = 0):
@@ -23,13 +20,15 @@ def clearCache(group, x = 0, y = 0):
 
 def disable(card, x = 0, y = 0):
     mute()
-    global autoscripts
-    if autoscripts == False:
-        autoscripts = True
-        notify("{} enables autoscripts".format(me))
-    else:
-        autoscripts = False
+    if autoscriptCheck():
+        setSetting("autoscripts", False)
         notify("{} disables autoscripts".format(me))
+    else:
+        setSetting("autoscripts", True)
+        notify("{} enables autoscripts".format(me))
+
+def autoscriptCheck():
+    return getSetting("autoscripts", True)
 
 def getTags(card, key = None):
     mute()
@@ -619,7 +618,7 @@ def autosmartmarker(card, marker):
 
 def attach(card, x = 0, y = 0):
     mute()
-    if autoscripts == True:
+    if autoscriptCheck():
         target = [cards for cards in table if cards.targetedBy]
         if len(target) == 0 or (len(target) == 1 and card in target):
             text = autodetach(card)
@@ -642,7 +641,7 @@ def listAttachments(card):
 
 def align(group, x = 0, y = 0):
     mute()
-    if autoscripts == True:
+    if autoscriptCheck():
         if cardalign() != "BREAK":
             notify("{} re-aligns his cards on the table".format(me))
 
@@ -803,7 +802,7 @@ def autoCreateToken(card, x = 0, y = 0):
                 return
             x, y = table.offset(x, y)
             text += "{}/{} {} {}, ".format(tokencard.Power, tokencard.Toughness, tokencard.Color, tokencard.Name)
-        if autoscripts == True:
+        if autoscriptCheck():
             cardalign()
         notify("{} creates {}.".format(me, text[0:-2]))
 

@@ -176,7 +176,7 @@ def token(group, x = 0, y = 0):
 
 def play(card, x = 0, y = 0):
     mute()
-    if autoscripts == True:
+    if autoscriptCheck():
         text = autoParser(card, 'cast')
         if text != "BREAK":
             ## Checks to see if the cast card is an Aura, then check to see if a target was made to resolve-attach to
@@ -206,7 +206,7 @@ def play(card, x = 0, y = 0):
 def resolve(card, x = 0, y = 0):
     mute()
     global stackDict
-    if autoscripts == True:
+    if autoscriptCheck():
         if card in stackDict:
             tagClass = stackDict[card]['class']
             tagSrc = stackDict[card]['src']
@@ -309,7 +309,7 @@ def destroy(card, x = 0, y = 0):
     mute()
     global stackDict
     src = card.group
-    if autoscripts == True and src == table:
+    if autoscriptCheck() and src == table:
         if card in stackDict:
             card.moveTo(card.owner.Graveyard)
             del stackDict[card]
@@ -330,7 +330,7 @@ def destroy(card, x = 0, y = 0):
 def discard(card, x = 0, y = 0):
     mute()
     src = card.group
-    if autoscripts == True:
+    if autoscriptCheck():
         text = autoParser(card, 'discard')
         if text != "BREAK":
             card.moveTo(card.owner.Graveyard)
@@ -343,7 +343,7 @@ def discard(card, x = 0, y = 0):
 def exile(card, x = 0, y = 0):
     mute()
     src = card.group
-    if autoscripts == True and src == table:
+    if autoscriptCheck() and src == table:
         text = autoParser(card, 'exile')
         if text != "BREAK":
             card.moveTo(card.owner.piles['Exiled Zone'])
@@ -356,7 +356,7 @@ def exile(card, x = 0, y = 0):
 
 def attack(card, x = 0, y = 0):
     mute()
-    if autoscripts == True:
+    if autoscriptCheck():
         if card.orientation == Rot90:
             if confirm("Cannot attack: already tapped. Continue?") != True:
                 return
@@ -382,7 +382,7 @@ def attack(card, x = 0, y = 0):
 
 def attackWithoutTapping(card, x = 0, y = 0):
     mute()
-    if autoscripts == True:
+    if autoscriptCheck():
         if card.orientation == Rot90:
             if confirm("Cannot attack: {} is tapped. Continue?".format(card)) != True:
                 return
@@ -406,7 +406,7 @@ def attackWithoutTapping(card, x = 0, y = 0):
 
 def block(card, x = 0, y = 0):
     mute()
-    if autoscripts == True:
+    if autoscriptCheck():
         if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
             card.highlight = BlockDoesntUntapColor
         else:
@@ -424,7 +424,7 @@ def block(card, x = 0, y = 0):
 
 def activate(card, x = 0, y = 0):
     mute()
-    if autoscripts == True:
+    if autoscriptCheck():
         text = autoParser(card, 'acti')
         cardalign()
         if text != "BREAK":
@@ -438,7 +438,7 @@ def morph(card, x = 0, y = 0):
     src = card.group
     notify("{} casts a card face-down from their {}.".format(me, src.name))
     card.moveToTable(0,0,True)
-    if autoscripts == True:
+    if autoscriptCheck():
         card.markers[scriptMarkers['cast']] = 1
         cardalign()
 
@@ -478,7 +478,7 @@ def suspend(card, x = 0, y = 0):
 def blink(card, x = 0, y = 0):
     mute()
     src = card.group
-    if autoscripts == True and src == table:
+    if autoscriptCheck() and src == table:
         text = autoParser(card, 'exile')
         if text == "BREAK":
             return
@@ -705,7 +705,7 @@ def draw(group, x = 0, y = 0):
     rnd(10,100)
     if re.search(r'Miracle ', card.Rules):
         if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.Name, card.Rules)):
-            if autoscripts == True:
+            if autoscriptCheck():
                 text = autoParser(card, 'miracle')
                 card.highlight = MiracleColor
                 cardalign()
