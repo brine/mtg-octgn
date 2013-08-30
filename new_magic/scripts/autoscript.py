@@ -552,41 +552,29 @@ def autotransform(card, tag):
     return ", transforming to {}".format(card)
 
 def autotoken(card, stackcard, tag):
-    tag2 = tag.split(', ')
-    name = tag2[0]
-    qty = tag2[1]
-    if len(tag2) > 2:
-        modifiers = tag2[2:]
+    splitList = tag.split(', ')
+    name = splitList[0]
+    qty = splitList[1]
+    if len(splitList) > 2: #since the modifiers are optional
+        modifiers = splitList[2:]
     else:
-        modifiers = ""
+        modifiers = []
     quantity = cardcount(card, stackcard, qty)
-    if quantity == 1:
-        quant = ""
-    else:
-        quant = "s"
-    if quantity != 0:
-        addtoken = tokenTypes[name]
-        tokens = table.create(addtoken[1], 0, 0, quantity, persist = False)
-        if (quantity == 1 and tokens == None) or (quantity > 1 and len(tokens) == 0):
-            confirm("Cannot create {}'s token -- your markers & tokens set definition is missing this token.".format(stackcard.Name))
-            return ""
-        else:
-            if quantity == 1:
-                tokens = [tokens]
-            for token in tokens:
-                for modtag in modifiers:
-                    if modtag == 'attack':
-                        token.highlight = AttackColor
-                    elif modtag == 'tap':
-                        token.orientation = Rot90
-                    elif re.search(r'marker', modtag):
-                        (marker, type, quant) = modtag.split('_')
-                        token.markers[counters[type]] += cardcount(token, stackcard, qty)
-                    elif modtag == 'attach':
-                        autoattach(card, token)
-            tokentext = "{} {}/{} {} {}".format(quantity, token.Power, token.Toughness, token.Color, token.name)
-            cardalign()
-            return ", creating {} token{}".format(tokentext, quant)
+    if quantity > 0:
+        for x in range(0, quantity):
+            token = tokenArtSelector(name)
+            for modtag in modifiers:
+                if modtag == 'attack':
+                    token.highlight = AttackColor
+                elif modtag == 'tap':
+                    token.orientation = Rot90
+                elif re.search(r'marker', modtag):
+                    (marker, type, qty) = modtag.split('_', 2)
+                    token.markers[counters[type]] += cardcount(token, stackcard, qty)
+                elif modtag == 'attach':
+                    autoattach(card, token)
+        cardalign()
+        return ", creating {} {}/{} {} {} token{}.".format(quantity, token.Power, token.Toughness, token.Color, token.name, "" if quantity == 1 else "s")
     else:
         return ""
 
@@ -594,10 +582,6 @@ def automarker(card, stackcard, tag):
     (markername, qty) = tag.split(', ')
     quantity = cardcount(card, stackcard, qty)
     originalquantity = quantity
-    if quantity == 1:
-        quant = ""
-    else:
-        quant = "s"
     addmarker = counters[markername]
     while markername == "plusoneplusone" and counters["minusoneminusone"] in card.markers and quantity > 0:
         card.markers[counters["minusoneminusone"]] -= 1
@@ -610,7 +594,7 @@ def automarker(card, stackcard, tag):
         sign = "+"
     else:
         sign = ""
-    return ", {}{} {}{}".format(sign, originalquantity, addmarker[0], quant)
+    return ", {}{} {}{}".format(sign, originalquantity, addmarker[0], "" if quantity == 1 else "s")
 
 def autohighlight(card, color):
     if color == "nountap":
@@ -835,16 +819,39 @@ def autoCreateToken(card, x = 0, y = 0):
     tokens = getTags(card, 'autotoken')
     if tokens != "":
         for token in tokens:
-            addtoken = tokenTypes[token]
-            tokencard = table.create(addtoken[1], x, y, 1, persist = False)
-            if tokencard == None:
-                confirm("Cannot create {}'s token -- your markers & tokens set definition is missing this token.".format(card))
-                return
+            tokencard = tokenArtSelector(token)
+            card.moveToTable(x,y)
             x, y = table.offset(x, y)
             text += "{}/{} {} {}, ".format(tokencard.Power, tokencard.Toughness, tokencard.Color, tokencard.Name)
         if autoscriptCheck():
             cardalign()
         notify("{} creates {}.".format(me, text[0:-2]))
+
+def tokenArtSelector(tokenName):
+    mute()
+    token = table.create(tokenTypes[tokenName][1], 0, 0, 1, persist = False)
+    artDict = getSetting('tokenArts', Dictionary[str,str]({}))
+    if token.model in artDict:
+        token.switchTo(artDict[token.model])
+    return token
+
+def nextTokenArt(card, x = 0, y = 0):
+    mute()
+    if card.Rarity != 'Token':
+        return
+    currentArt = card.alternate
+    artList = card.alternates
+    if currentArt == '':
+        artIndex = 0
+    else:
+        artIndex = int(currentArt)
+    artIndex = str(artIndex + 1)
+    if not artIndex in artList:
+        artIndex = ''
+    card.switchTo(artIndex)
+    artDict = getSetting('tokenArts', Dictionary[str,str]({}))
+    artDict[card.model] = artIndex
+    setSetting('tokenArts', Dictionary[str,str](artDict))
 
 def autoAddMarker(card, x = 0, y = 0):
     mute()
