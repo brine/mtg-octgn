@@ -34,8 +34,9 @@ def getTags(card, key = None):
     mute()
     global savedtags, offlinedisable
     cardname = card.Name
-    encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
+    encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname)) #encodes the card name so the website can parse it safely
     if not cardname in savedtags:
+#### Create a bunch of identifier tags for the card's rules, so I can sort the tag requests online
         rules = card.Rules
         if re.search(r'creature token', rules):
             encodedcardname += '&token'
@@ -49,18 +50,20 @@ def getTags(card, key = None):
             encodedcardname += '&attack'
         if re.search(r'{} blocks'.format(card.name), rules):
             encodedcardname += '&block'
+#### Fetch card tags from the online database
         if offlinedisable == False:
             (fulltag, code) = webRead('http://octgn.gamersjudgement.com/forum/tags2.php?id={}'.format(encodedcardname), 7000)
-            if code == 204:
+            if code == 204: ## if the card tag doesn't exist on the site.
                 fulltag = ""
-            elif code != 200:
+            elif code != 200: ## Handles cases where the site is unavailable
                 whisper('tag database is currently unavailable, using offline tag cache')
                 offlinedisable = True
-        if offlinedisable == True:
+        if offlinedisable == True: ## Access the tags cache in the game def if the website can't be accessed
                 if cardname in offlineTags:
                     fulltag = offlineTags[cardname]
                 else:
                     fulltag = ""
+#### Parse the raw tags into an autoscripts-readable format
         tagdict = { }
         classpieces = fulltag.split('; ')
         for classes in classpieces:
@@ -87,6 +90,7 @@ def getTags(card, key = None):
                     actiondict[actionname].append(actionparam)
                 tagdict[actionlist[0]] = actiondict
         savedtags[cardname] = tagdict
+#### Fetch and return the card tags to previous functions
     if key in savedtags[cardname]:
         returnTags = savedtags[cardname][key]
         if returnTags == None:
@@ -102,7 +106,7 @@ def tagConstructor(card, key, modeModifier = ''):
     returnTags = []
     returnActiChoice = (0, '')
     returnModeChoice = (0, '')
-#### deal with activated abilities as a specific case ####
+#### deal with activated abilities as a specific case
     if key == 'acti':
         count = 0
         rulesList = card.Rules.splitlines()
@@ -141,7 +145,7 @@ def tagConstructor(card, key, modeModifier = ''):
             return "BREAK"
         returnActiChoice = (actiChoice, rulesList[actiChoice - 1])
         returnTags = tagsList[actiChoice - 1]
-## deal with regular cards ##
+## deal with regular cards
     else:
         for tagPrefix in ['init', '', 'cost', 'initres', 'res', 'costres']:
             tags = getTags(card, modeModifier + tagPrefix + key)
@@ -153,7 +157,7 @@ def tagConstructor(card, key, modeModifier = ''):
                     else:
                         tags += attachTags
             returnTags.append(tags)
-### Handle the 'choose one' style abilities ###
+### Handle the 'choose one' style abilities
     if returnTags[0] != None and 'choice' in returnTags[0]:
         for choice in returnTags[0]['choice']:
             modeLine, modeType = choice.split(', ')
@@ -288,13 +292,15 @@ def autoParser(card, tagclass, morph = False):
                 else:
                     costMarker = 'cost'
                 if type == "ask":
-                    if confirm("{}'s {}: Pay additional/alternate cost?".format(srcCard.Name, cost)):
-                        stackData[costMarker] = 1
-                        text += ", paying {} cost".format(cost.title())
+                    confirmValue = confirm("{}'s {}: Pay additional/alternate cost?".format(srcCard.Name, cost))
+                    if confirmValue == None:
+                        return "BREAK"
+                    stackData[costMarker] = 1
+                    text += ", paying {} cost".format(cost.title())
                 elif type == "num":
                     qty = askInteger("{}'s {}: Paying how many times?".format(srcCard.Name, cost), 0)
                     if qty == None:
-                        qty = 0
+                        return "BREAK"
                     if qty != 0:
                         stackData[costMarker] = qty
                     if qty == 1:

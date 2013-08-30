@@ -211,6 +211,18 @@ def resolve(card, x = 0, y = 0):
     mute()
     global stackDict
     if autoscriptCheck():
+        if scriptMarkers['suspend'] in card.markers:
+            if counters['time'] in card.markers:
+                card.markers[counters['time']] -= 1
+            if counters['time'] in card.markers:
+                notify("{} removed a time counter from suspended {}.".format(me, card))
+            else:
+                text = autoParser(card, 'cast')
+                if text != "BREAK":
+                    card.markers[scriptMarkers['suspend']] = 0
+                    cardalign()
+                    notify("{} casts suspended {}{}.".format(me, card, text))
+            return
         if card in stackDict:
             tagClass = stackDict[card]['class']
             tagSrc = stackDict[card]['src']
@@ -222,9 +234,9 @@ def resolve(card, x = 0, y = 0):
                     notify("{}'s {} Miracle trigger is countered.".format(me, card))
             else:
                 notify("{} resolves {} ({}){}".format(me, card, tagClass, text))
-            if tagClass == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type):
+            if tagClass == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type): #handles permanents etb triggers
                 autoParser(card, 'etb')
-            else:
+            else: #non-permanents and ability triggers are sent to graveyard after resolution
                 card.moveTo(card.owner.Graveyard)
             cardalign()
         else:
@@ -487,7 +499,7 @@ def transform(card, x = 0, y = 0):
 
 def suspend(card, x = 0, y = 0):
     mute()
-    num = askInteger("Suspending {}, what is X?\n(To cancel, choose 0.)".format(card.Name), 0)
+    num = askInteger("Suspending {}, what is X?)".format(card.Name), 0)
     if num != 0 and num != None:
         card.moveToTable(0,0)
         card.markers[scriptMarkers['suspend']] = 1
