@@ -329,7 +329,10 @@ def autoParser(card, tagclass, morph = False):
         if tags != None:
             if 'copy' in tags:
                 for tag in tags['copy']:
-                    text += autocopy(srcCard, stackCard, tag)
+                    text += autocopy(srcCard, stackCard, tag, stackData)
+            if 'clone' in tags:
+                for tag in tags['clone']:
+                    text += autoclone(srcCard, stackCard, tag)
             if 'persist' in tags:
                 for tag in tags['persist']:
                     text += autopersist(srcCard, stackCard, tag)
@@ -413,15 +416,27 @@ def autoParser(card, tagclass, morph = False):
 #Autoscript functions
 ############################
 
-def autocopy(card, stackcard, tag):
+def autocopy(card, stackcard, tag, stackData):
+    mute()
+    qty = cardcount(card, stackcard, tag)
+    for x in range(0, qty):
+        copy = table.create(card.model, 0, 0, 1)
+        stackDict[copy] = stackData
+        copy.markers[scriptMarkers['cast']] = 1
+    if qty == 1:
+        return ", copied once"
+    else:
+        return ", copied {} times".format(qty)
+
+def autoclone(card, stackcard, tag):
     mute()
     qty = cardcount(card, stackcard, tag)
     for x in range(0, qty):
         copy = table.create(card.model, 0, 0, 1)
     if qty == 1:
-        return ", copied once"
+        return ", cloned once"
     else:
-        return ", copied {} times".format(qty)
+        return ", cloned {} times".format(qty)
 
 def autoattach(card, targetcard):
     mute()
