@@ -476,15 +476,12 @@ def autopersist(card, stackcard, persist):
         return ""
 
 def autoundying(card, stackcard, undying):
-    notify("undy start")
     if card.group.name == "Graveyard":
         card.moveToTable(0,0)
         autoParser(card, 'etb')
         card.markers[counters['plusoneplusone']] += 1
-        notify("test2")
         return ", undying"
     else:
-        notify("else")
         return ""
 
 def automoveto(card, pile):
