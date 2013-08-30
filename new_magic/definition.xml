@@ -131,7 +131,7 @@
       <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
       <groupaction menu="Mill X Cards" execute="mill" />
       <groupaction menu="Exile X Cards" execute="exileMany" />
-      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <groupaction menu="Shuffle" execute="shuffle" />
       <groupactions menu="Move All Cards To...">
         <groupaction menu="Owner's Graveyard" execute="graveyardAll" />
         <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
@@ -145,7 +145,7 @@
     </group>
     <group name="Graveyard" shortcut="del" visibility="all" width="63" height="88" icon="groups/graveyard.png">
       <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />
-      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <groupaction menu="Shuffle" execute="shuffle" />
       <groupactions menu="Move All Cards To...">
         <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
         <groupaction menu="Owner's Library (Bottom)" execute="libraryBottomAll" />
@@ -160,7 +160,7 @@
       <cardaction menu="Submit Tags" execute="submitTags" />
     </group>
     <group name="Exiled Zone" shortcut="ctrl+E" visibility="all" width="63" height="88" icon="groups/removed.png" collapsed="True">
-      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <groupaction menu="Shuffle" execute="shuffle" />
       <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />
       <groupactions menu="Move All Cards To...">
         <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
@@ -175,14 +175,14 @@
       <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />      
     </group>
     <group name="Sideboard" visibility="me" width="63" height="88" icon="groups/sideboard.png" collapsed="True">
-      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <groupaction menu="Shuffle" execute="shuffle" />
     </group>
     <group name="Command Zone" visibility="all" width="63" height="88" icon="groups/commandzone.png" collapsed="True">
-      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <groupaction menu="Shuffle" execute="shuffle" />
       <cardaction menu="Cast Card/Commander" default="True" execute="play" />
     </group>
     <group name="Planes/Schemes" visibility="none" width="63" height="88" icon="groups/removed.png" collapsed="True">
-      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+      <groupaction menu="Shuffle" execute="shuffle" />
       <cardaction menu="Play Card" default="True" execute="play" />
     </group>
   </player>
