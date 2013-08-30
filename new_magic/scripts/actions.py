@@ -168,7 +168,10 @@ def token(group, x = 0, y = 0):
     card, quantity = askCard({"Rarity":"Token"}, "And")
     if quantity == 0:
         return
-    table.create(card, x, y, quantity)
+    token = table.create(card, x, y, quantity)
+    artDict = getSetting('tokenArts', Dictionary[str,str]({}))
+    if token.model in artDict:
+        token.switchTo(artDict[token.model])
 
 #--------------------------------
 # Autoscript-Linked Card functions
