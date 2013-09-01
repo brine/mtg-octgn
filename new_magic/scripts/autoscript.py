@@ -266,7 +266,8 @@ def autoParser(card, tagclass, morph = False):
             'res': fullTags[4],
             'costres': fullTags[5],
             'cost': costMemory[0],
-            'x': costMemory[1]
+            'x': costMemory[1],
+            'moveto': None
             }
 #####Prepare the parser variables#####
     srcCard = stackData['src'] ## identifies the originating card
@@ -405,7 +406,7 @@ def autoParser(card, tagclass, morph = False):
                 stackCard.markers[scriptMarkers['x']] = stackData['x']
                 stackDict[stackCard] = stackData  ## Save the final status of the stack instance
     costMemory = (stackData['cost'], stackData['x']) ## stores the cost values for ETB triggers
-    if moveTo:
+    if moveTo and stackData['moveto'] != None: ##stuff like flashback's exiling takes precedence over normal moveto's
         text += automoveto(srcCard, moveTo) #deal with automoveto triggers right at the very end.
     if tagclass == 'acti': ##acti needs to return the number of the activated ability
         return (actiTuple[0], text)

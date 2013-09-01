@@ -210,6 +210,12 @@ def play(card, x = 0, y = 0):
         card.moveToTable(0, 0)
         notify("{} plays {} from their {}.".format(me, card, src.name))
 
+def flashback(card, x = 0, y = 0):
+    mute()
+    global stackDict
+    play(card)
+    stackDict[card]['moveto'] = 'exile'
+
 def resolve(card, x = 0, y = 0):
     mute()
     global stackDict
@@ -229,6 +235,7 @@ def resolve(card, x = 0, y = 0):
         if card in stackDict:
             tagClass = stackDict[card]['class']
             tagSrc = stackDict[card]['src']
+            moveTo = stackDict[card]['moveto']
             text = autoParser(card, 'resolve')
             if tagClass == 'miracle':
                 if tagSrc in me.hand:
@@ -237,7 +244,9 @@ def resolve(card, x = 0, y = 0):
                     notify("{}'s {} Miracle trigger is countered.".format(me, card))
             else:
                 notify("{} resolves {} ({}){}".format(me, card, tagClass, text))
-            if tagClass == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type): #handles permanents etb triggers
+            if moveTo == 'exile':
+                card.moveTo(card.owner.piles['Exiled Zone'])
+            elif tagClass == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type): #handles permanents etb triggers
                 autoParser(card, 'etb')
             else: #non-permanents and ability triggers are sent to graveyard after resolution
                 card.moveTo(card.owner.Graveyard)
