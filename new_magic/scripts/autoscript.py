@@ -406,7 +406,7 @@ def autoParser(card, tagclass, morph = False):
                 stackCard.markers[scriptMarkers['x']] = stackData['x']
                 stackDict[stackCard] = stackData  ## Save the final status of the stack instance
     costMemory = (stackData['cost'], stackData['x']) ## stores the cost values for ETB triggers
-    if moveTo and stackData['moveto'] != None: ##stuff like flashback's exiling takes precedence over normal moveto's
+    if moveTo and stackData['moveto'] == None: ##stuff like flashback's exiling takes precedence over normal moveto's
         text += automoveto(srcCard, moveTo) #deal with automoveto triggers right at the very end.
     if tagclass == 'acti': ##acti needs to return the number of the activated ability
         return (actiTuple[0], text)
@@ -469,7 +469,8 @@ def autodetach(card):
 
 def autopersist(card, stackcard, persist):
     if card.group.name == "Graveyard":
-        card.moveToTable(0,0)
+        autoParser(card, 'cast')
+        autoParser(card, 'resolve')
         autoParser(card, 'etb')
         card.markers[counters['minusoneminusone']] += 1
         return ", persisting"
@@ -478,7 +479,8 @@ def autopersist(card, stackcard, persist):
 
 def autoundying(card, stackcard, undying):
     if card.group.name == "Graveyard":
-        card.moveToTable(0,0)
+        autoParser(card, 'cast')
+        autoParser(card, 'resolve')
         autoParser(card, 'etb')
         card.markers[counters['plusoneplusone']] += 1
         return ", undying"
@@ -486,44 +488,45 @@ def autoundying(card, stackcard, undying):
         return ""
 
 def automoveto(card, pile):
-    rnd(100,1000)
-    cards = card
-    position = re.sub("[^0-9]", "", pile)
-    if position != "":
-        pos = int(position)
-        cards.moveTo(card.owner.Library, pos)
-        text = "{} from top of library".format(pos)
-    if re.search(r'top', pile):
-        cards.moveTo(card.owner.Library)
-        text = "top of library"
-    elif re.search(r'bottom', pile):
-        cards.moveToBottom(card.owner.Library)
-        text = "bottom of library"
-    elif re.search(r'shuffle', pile):
-        librarycount = len(card.owner.Library)
-        n = rnd(0, librarycount)
-        cards.moveTo(card.owner.Library, n)
-        card.owner.Library.shuffle()
-        text = "library and shuffled"
-    elif re.search(r'exile', pile):
-        if autoParser(cards, 'exile') != "BREAK":
-            cards.moveTo(card.owner.piles['Exiled Zone'])
-            text = "exile"
-    elif re.search(r'hand', pile):
-        if autoParser(cards, 'hand') != "BREAK":
-            cards.moveTo(card.owner.hand)
-            text = "hand"
-    elif re.search(r'graveyard', pile):
-        if autoParser(cards, 'destroy') != "BREAK":
-            cards.moveTo(card.owner.Graveyard)
-            text = "graveyard"
-    elif re.search(r'stack', pile):
-        if autoParser(cards, 'cast') != "BREAK":
-            text = "stack"
-    elif re.search(r'table', pile):
-        card.moveToTable(0,0)
-        autoParser(card, 'etb')
-        text = "table"
+    n = rnd(0, len(card.owner.Library)) #we need to delay scripts here, might as well find n for shuffle
+    try:
+        pos = int(pile)
+        card.moveTo(card.owner.Library, pos)
+        if pos == 0:
+            text = "top of Library"
+        else:
+            text = "{} from top of Library".format(pos)
+    except:
+        if re.search(r'bottom', pile):
+            card.moveToBottom(card.owner.Library)
+            text = "bottom of library"
+        elif re.search(r'shuffle', pile):
+            card.moveTo(card.owner.Library, n)
+            shuffle(card.owner.Library, silence = True)
+            text = "shuffled into Library"
+        elif re.search(r'exile', pile):
+            text = autoParser(card, 'exile')
+            if text == "BREAK":
+                return ''
+            card.moveTo(card.owner.piles['Exiled Zone'])
+            text = "exile" + text
+        elif re.search(r'hand', pile):
+            text = autoParser(card, 'hand')
+            if text == "BREAK":
+                return ''
+            card.moveTo(card.owner.hand)
+            text = "hand" + text
+        elif re.search(r'graveyard', pile):
+            text = autoParser(card, 'destroy')
+            if text == "BREAK":
+                return ''
+            card.moveTo(card.owner.Graveyard)
+            text = "graveyard" + text
+        elif re.search(r'stack', pile):
+            text = autoParser(card, 'cast')
+            if text == "BREAK":
+                return ''
+            text = "stack" + text
     return ", moving to {}".format(text)
 
 def autolife(card, stackcard, tag):

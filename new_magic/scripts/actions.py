@@ -269,7 +269,7 @@ def destroy(card, x = 0, y = 0):
     global stackDict
     src = card.group
     if autoscriptCheck() and src == table:
-        if card in stackDict:
+        if card in stackDict: #Destroying a card on a stack is considered countering that spell
             card.moveTo(card.owner.Graveyard)
             del stackDict[card]
             notify("{}'s {} was countered.".format(me, card))
@@ -667,7 +667,7 @@ def mulligan(group, x = 0, y = 0):
     for card in group:
         card.moveTo(card.owner.Library)
     uselessvar = rnd(10, 1000)
-    me.Library.shuffle()
+    shuffle(me.Library, silence = True)
     for card in me.Library.top(newCount):
         card.moveTo(card.owner.hand)
 
@@ -762,10 +762,11 @@ def libraryBottomAll(group, x = 0, y = 0):
 # Misc. Functions
 #-------------------------------------------------------------
 
-def shuffle(group, x = 0, y = 0):
+def shuffle(group, x = 0, y = 0, silence = False):
     mute()
     for card in group:
         if card.isFaceUp:
             card.isFaceUp = False
     group.shuffle()
-    notify("{} shuffled their {}".format(me, group.name))
+    if silence == False:
+        notify("{} shuffled their {}".format(me, group.name))
