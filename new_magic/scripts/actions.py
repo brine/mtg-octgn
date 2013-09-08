@@ -25,6 +25,25 @@ BlockDoesntUntapColor = "#007700"
 MiracleColor = "#1D7CF2"
 
 #---------------------------------------------------------------------------
+# Event Stuff
+#---------------------------------------------------------------------------
+
+def registerPlayer(player, groups = []): #this function triggers off loading a deck, and registers the player as active
+    mute()
+    if player == me: #only process the local player
+        playersDict = eval(getGlobalVariable('activePlayers')) #the activePlayers variable just keeps track of the active players in the game
+        playersDict[me._id] = autoscriptCheck() #keeps track of who's allergic to fun
+        setGlobalVariable('activePlayers', str(playersDict))
+
+def priorityResolve(name, oldValue, value):
+    if name == 'priority' and value == '[]':
+        stack = stackFetcher()
+        if len(stack) == 0:
+            return
+        if stack[-1].controller == me and autoscriptCheck():
+            resolve(stack[-1])
+
+#---------------------------------------------------------------------------
 # Global variables
 #---------------------------------------------------------------------------
 
@@ -37,8 +56,17 @@ diesides = 20
 def respond(group, x = 0, y = 0):
     notify('{} RESPONDS!'.format(me))
 
-def passPriority(group, x = 0, y = 0):
-    notify('{} passes priority to an opponent.'.format(me))
+def passPriority(group, x = 0, y = 0, autoscriptOverride = False):
+    if autoscriptCheck() or autoscriptOverride == True:
+        priorityList = eval(getGlobalVariable('priority'))
+        if me._id in priorityList:
+            priorityList.remove(me._id)
+            setGlobalVariable('priority', str(priorityList))
+            notify('{} passes priority'.format(me))
+        elif autoscriptOverride == False:
+            whisper('You already passed priority.')
+    else:
+        notify('{} passes priority to an opponent.'.format(me))
 
 def showCurrentPhase(group, x = 0, y = 0):
     notify(phases[phaseIdx].format(me))

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.0.2" octgnVersion="3.1.0.32"
+	id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.0.3" octgnVersion="3.1.0.32"
 	name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
 	setsurl="http://octgn.gamersjudgement.com/wordpress/mtg/download-links/" gameurl="http://octgn.gamersjudgement.com/wordpress/mtg/" authors="brine"
 	markersize="14" iconurl="http://www.wizards.com/Magic/Assets/magic_logo.png" >
@@ -10,6 +10,10 @@
     <script src="scripts/replacements.py" />
     <script src="scripts/tags.py" />
   </scripts>
+  <events>
+    <event name="OnLoadDeck" action="registerPlayer" />
+    <event name="OnGlobalVariableChanged" action="priorityResolve" />
+  </events>
   <fonts>
     <font src="fonts/mplantin_symbols.ttf" size="14" target="context"/>
     <font src="fonts/mplantin_symbols.ttf" size="12" target="chat"/>
@@ -24,6 +28,8 @@
   <globalvariables> 
     <globalvariable name="cattach" value="{ }"/>
     <globalvariable name="smartmarker" value=""/>
+    <globalvariable name="activePlayers" value="{}"/>
+    <globalvariable name="priority" value="[]"/>
   </globalvariables>
   <card back="cards/back.jpg" front="cards/front.jpg" width="63" height="88" cornerRadius="2">
     <property name="Cost" type="String" ignoreText="True" />

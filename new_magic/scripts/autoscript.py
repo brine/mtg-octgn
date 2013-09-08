@@ -18,14 +18,20 @@ def clearCache(group, x = 0, y = 0):
         setGlobalVariable('cattach', "{ }")
         notify("{} reset the global attachment dictionary.".format(me))
 
-def disable(card, x = 0, y = 0):
+def disable(group, x = 0, y = 0):
     mute()
     if autoscriptCheck():
         setSetting("autoscripts", False)
         notify("{} disables autoscripts".format(me))
+        passPriority(group,0,0,True) ## Remove the player from the priority list since they hate autoscripts so much
     else:
         setSetting("autoscripts", True)
         notify("{} enables autoscripts".format(me))
+    ## Now we have to update the active players to let others know you're a big quitter
+    playersDict = eval(getGlobalVariable('activePlayers'))
+    if me._id in playersDict:
+        playersDict[me._id] = autoscriptCheck()
+        setGlobalVariable('activePlayers', str(playersDict))
 
 def autoscriptCheck():
     return getSetting("autoscripts", True)
@@ -409,6 +415,13 @@ def autoParser(card, tagclass, morph = False):
     costMemory = (stackData['cost'], stackData['x']) ## stores the cost values for ETB triggers
     if moveTo and stackData['moveto'] == None: ##stuff like flashback's exiling takes precedence over normal moveto's
         text += automoveto(srcCard, moveTo) #deal with automoveto triggers right at the very end.
+    ## Reload the priority list
+    priorityList = []
+    activePlayers = eval(getGlobalVariable('activePlayers'))
+    for playerId in activePlayers:
+        if activePlayers[playerId] == True: ## Only select the players who have their autoscripts enabled.
+            priorityList.append(playerId)
+    setGlobalVariable('priority', str(priorityList))
     if tagclass == 'acti': ##acti needs to return the number of the activated ability
         return (actiTuple[0], text)
     else:
