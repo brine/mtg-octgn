@@ -296,8 +296,9 @@ def autoParser(card, tagclass, morph = False):
                     confirmValue = confirm("{}'s {}: Pay additional/alternate cost?".format(srcCard.Name, cost))
                     if confirmValue == None:
                         return "BREAK"
-                    stackData[costMarker] = 1
-                    text += ", paying {} cost".format(cost.title())
+                    if confirmValue:
+                        stackData[costMarker] = 1
+                        text += ", paying {} cost".format(cost.title())
                 elif type == "num":
                     qty = askInteger("{}'s {}: Paying how many times?".format(srcCard.Name, cost), 0)
                     if qty == None:
