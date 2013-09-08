@@ -669,6 +669,26 @@ def align(group, x = 0, y = 0):
         if cardalign() != "BREAK":
             notify("{} re-aligns his cards on the table".format(me))
 
+def stackFetcher():
+    mute()
+    stackList = []
+    for card in table:
+        if (scriptMarkers['cast'] in card.markers
+                or scriptMarkers['acti'] in card.markers
+                or scriptMarkers['attack'] in card.markers
+                or scriptMarkers['block'] in card.markers
+                or scriptMarkers['destroy'] in card.markers
+                or scriptMarkers['exile'] in card.markers
+                or scriptMarkers['etb'] in card.markers
+                or scriptMarkers['cost'] in card.markers
+                or scriptMarkers['x'] in card.markers
+                or scriptMarkers['discard'] in card.markers
+                or scriptMarkers['miracle'] in card.markers
+                or scriptMarkers['choice'] in card.markers
+                or scriptMarkers['morph'] in card.markers):
+            stackList.append(card)
+    return stackList
+
 def cardalign():
     mute()
     global playerside    ##Stores the Y-axis multiplier to determine which side of the table to align to
@@ -729,28 +749,20 @@ def cardalign():
             yshift[2][targetcard] = yshift[2].get(targetcard, 0) + 1
     for shiftdict in yshift:
         yshift[yshift.index(shiftdict)] = max(shiftdict.itervalues())
+    ##align the stack
+    stack = stackFetcher()
+    stackIndex = 0
+    for card in stack:
+        if card.controller == me:
+            card.moveToTable(0, 10 * stackcount)
+            card.setIndex(stackIndex)
+        stackIndex = card.getIndex + 1
+        stackcount += 1
     ##determine coordinates for cards
     for card in table:
-        if not counters['general'] in card.markers: ## Cards with General markers ignore alignment
-            ## Aligns cards on the stack
-            if (scriptMarkers['cast'] in card.markers
-                    or scriptMarkers['acti'] in card.markers
-                    or scriptMarkers['attack'] in card.markers
-                    or scriptMarkers['block'] in card.markers
-                    or scriptMarkers['destroy'] in card.markers
-                    or scriptMarkers['exile'] in card.markers
-                    or scriptMarkers['etb'] in card.markers
-                    or scriptMarkers['cost'] in card.markers
-                    or scriptMarkers['x'] in card.markers
-                    or scriptMarkers['discard'] in card.markers
-                    or scriptMarkers['miracle'] in card.markers
-                    or scriptMarkers['choice'] in card.markers
-                    or scriptMarkers['morph'] in card.markers):
-                if card.controller == me:
-                    card.moveToTable(0, 10 * stackcount)
-                stackcount += 1
+        if not counters['general'] in card.markers and not card in stack: ## Cards with General markers ignore alignment
             ## For non-attached cards
-            elif card.controller == me and not card._id in cattach:
+            if card.controller == me and not card._id in cattach:
                 dictname = card.Name
                 for marker in card.markers:
                     dictname += marker[0]
