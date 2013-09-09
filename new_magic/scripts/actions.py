@@ -43,6 +43,11 @@ def priorityResolve(name, oldValue, value):
         if stack[-1].controller == me and autoscriptCheck():
             resolve(stack[-1])
 
+def endTurn(player):
+    mute()
+    if player == me:
+        clearAll(table, x = 0, y = 0)
+
 #---------------------------------------------------------------------------
 # Global variables
 #---------------------------------------------------------------------------
@@ -156,7 +161,8 @@ def scoop(group, x = 0, y = 0):
 def clearAll(group, x = 0, y = 0):
     notify("{} clears all targets and highlights.".format(me))
     for card in group:
-        card.target(False)
+        if card.targetedBy and card.targetedBy == me:
+            card.target(False)
         if card.controller == me:
             card.highlight = None
 

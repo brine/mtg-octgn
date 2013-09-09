@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.0.3" octgnVersion="3.1.0.32"
-	name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
-	setsurl="http://octgn.gamersjudgement.com/wordpress/mtg/download-links/" gameurl="http://octgn.gamersjudgement.com/wordpress/mtg/" authors="brine"
-	markersize="14" iconurl="http://www.wizards.com/Magic/Assets/magic_logo.png" >
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.0.4" octgnVersion="3.1.0.32"
+    name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
+    setsurl="http://octgn.gamersjudgement.com/wordpress/mtg/download-links/" gameurl="http://octgn.gamersjudgement.com/wordpress/mtg/" authors="brine"
+    markersize="14" iconurl="http://www.wizards.com/Magic/Assets/magic_logo.png" >
   <scripts>
     <script src="scripts/actions.py" />
     <script src="scripts/autoscript.py" />
@@ -13,6 +13,7 @@
   <events>
     <event name="OnLoadDeck" action="registerPlayer" />
     <event name="OnGlobalVariableChanged" action="priorityResolve" />
+    <event name="OnEndTurn" action="endTurn" />
   </events>
   <fonts>
     <font src="fonts/mplantin_symbols.ttf" size="14" target="context"/>
@@ -25,7 +26,7 @@
       <document name="MTG Rulebook" icon="documents/rules.png" src="documents/rules.txt" />
       <document name="Gameplay Help" icon="documents/help.png" src="documents/help.txt" />
   </documents>
-  <globalvariables> 
+  <globalvariables>
     <globalvariable name="cattach" value="{ }"/>
     <globalvariable name="smartmarker" value=""/>
     <globalvariable name="activePlayers" value="{}"/>
@@ -81,7 +82,7 @@
     <cardaction menu="Clone Card" shortcut="ctrl+C" batchExecute="clone" />
     <cardaction menu="Destroy Card" shortcut="del" execute="destroy" />
     <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
-	<cardaction menu="Blink Card" shortcut="ctrl+shift+B" execute="blink" />
+    <cardaction menu="Blink Card" shortcut="ctrl+shift+B" execute="blink" />
     <cardaction menu="Move to Top of Libary" shortcut="ctrl+Y" execute="tolibrary" />
     <cardaction menu="Move to a Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
     <cardaction menu="Move to Hand" shortcut="ctrl+H" execute="tohand" />
