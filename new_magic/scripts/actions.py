@@ -646,6 +646,21 @@ def tolibraryposition(card, x = 0, y = 0):
         notify("{} moves {} from {} to Library ({} from top).".format(me, card, fromText, pos))
         card.moveTo(card.owner.Library, pos)
 
+def libraryBottomAllShuffle(cards, x = 0, y = 0):
+    mute()
+    count = 0
+    emergencyStop = len(cards) + 4 ## just in case something causes an infinite while loop
+    while len(cards) > 0:
+        emergencyStop -= 1
+        if emergencyStop == 0:
+            break
+        index = rnd(0, len(cards) - 1)
+        card = cards.pop(index)
+        if card.controller == me:
+            card.moveToBottom(card.owner.piles['Library'])
+            count += 1
+    notify("{} shuffles {} selected cards to the bottom of their Library.".format(me, count))
+
 def tohand(card, x = 0, y = 0):
     mute()
     src = card.group
