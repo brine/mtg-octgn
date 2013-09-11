@@ -381,15 +381,14 @@ def autoParser(card, tagclass, morph = False):
                     moveTo = tag ## multiple moveto's shouldn't happen, but we'll keep overwriting previous ones just in case.
 #####Move Card/Create Trigger#####
     ## This covers trigger resolving, for ALL trigger classes ##
-    if tagclass == 'resolve':
+    if tagclass == 'resolve': ## Handle all cases where the card is on the stack (resolving)
         stackCard.markers[scriptMarkers[stackClass]] = 0
         stackCard.markers[scriptMarkers['cost']] = 0
         stackCard.markers[scriptMarkers['x']] = 0
         del stackDict[stackCard]
     ## This will cover all trigger initiations and activations ##
-    else:
-        ## If the card is being cast, move it to the table so the stack markers can be added ##
-        if stackClass == 'cast':
+    else: ## Handle all cases where the card or ability might need to go on the stack
+        if stackClass == 'cast': ## If the card is being cast, move it to the table so the stack markers can be added
             srcCard.moveToTable(0,0,morph)
             stackCard = srcCard
             stackCard.switchTo(stackAlt)
@@ -399,11 +398,10 @@ def autoParser(card, tagclass, morph = False):
             stackCard.markers[scriptMarkers['cost']] = stackData['cost']
             stackCard.markers[scriptMarkers['x']] = stackData['x']
             stackDict[stackCard] = stackData  ## Save the final status of the stack instance
-        ## All other stack triggers need to be checked if the stack trigger card should be created ##
-        else:
+        else: ## All other stack triggers need to be checked if the stack trigger card should be created
+            if stackClass == 'morph':
+                srcCard.isFaceUp = True ## we need to flip the card now to see it's model/GUID
             if stackClass == 'miracle' or (stackData['cost'] > 0 and stackData['costres'] != None) or (stackData['cost'] == 0 and stackData['res'] != None):
-                if stackClass == 'morph':
-                    srcCard.isFaceUp = True ## we need to flip the card now to see it's model/GUID
                 stackCard = table.create(srcCard.model, 0, 0, 1)
                 stackCard.switchTo(stackAlt)
                 stackCard.markers[scriptMarkers[stackClass]] = 1
