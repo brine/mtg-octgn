@@ -884,7 +884,7 @@ def autoAddMarker(card, x = 0, y = 0):
     mute()
     text = ""
     markers = getTags(card, 'automarker')
-    if markers != "":
+    if markers != None:
         for marker in markers:
             addmarker = counters[marker]
             if marker == "minusoneminusone" and counters["plusoneplusone"] in card.markers:
@@ -895,6 +895,27 @@ def autoAddMarker(card, x = 0, y = 0):
                 card.markers[addmarker] += 1
             text += "one {}, ".format(addmarker[0])
         notify("{} adds {} to {}.".format(me, text[0:-2], card))
+
+def autoRemoveMarker(card, x = 0, y = 0, marker = None):
+    mute()
+    autoMarkerList = getTags(card, 'automarker') ## check for autoMarkers first
+    if autoMarkerList != None: ## getTags returns None if there's no autoMarkers
+        for autoMarker in autoMarkerList: ## Since a card may have multiple markers mentioned in its rules text, getTags returns all markers as a List, so we must loop them
+            if autoMarker in counters:
+                autoMarker = counters[autoMarker]
+                if autoMarker in card.markers:
+                    marker = autoMarker
+    smartMarker = getGlobalVariable("smartmarker") ## check for smartMarkers next (higher priority)
+    if smartMarker in counters:
+        smartMarker = counters[smartMarker]
+        if smartMarker in card.markers:
+            marker = smartMarker
+    if len(card.markers) == 1: #@ if there's only one marker on the card, it's obvious which one to remove
+        for m in card.markers:
+            marker = m
+    if marker != None: ## It'll be None if none of the previous attempts were able to identify a marker
+        card.markers[marker] -= 1
+        notify("{} removes 1 {} counter from {}.".format(me, marker[0], card))
 
 def smartMarker(card, x = 0, y = 0):
     mute()
