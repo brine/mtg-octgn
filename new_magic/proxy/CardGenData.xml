@@ -2,6 +2,7 @@
 <templates>
 	<blocks>
 		<block type="overlay" id="blank" src="proxy/blank.png">      <location x="0" y="0" />    </block>
+		<block type="overlay" id="enchant" src="proxy/enchant.png">      <location x="18" y="17" />    </block>
 
 		<block type="overlay" id="bw" src="proxy/back/w.jpg">      <location x="0" y="0" />    </block>
 		<block type="overlay" id="bu" src="proxy/back/u.jpg">      <location x="0" y="0" />    </block>
@@ -110,6 +111,12 @@
 				<switch property="Type">
 					<case contains="Land" ><link block="bl" /><link block="rc" /><link block="tc" /></case>
 					<case contains="Artifact" break="True"><link block="ba" /><link block="ra" /><link block="ta" /></case>
+				</switch>
+			</conditional>
+			<conditional>
+				<switch property="Type">
+					<case contains="Enchantment Creature" ><link block="enchant" /></case>
+					<case contains="Enchantment Artifact" ><link block="enchant" /></case>
 				</switch>
 			</conditional>
 			<conditional>
