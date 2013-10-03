@@ -18,15 +18,15 @@ def clearCache(group, x = 0, y = 0):
         setGlobalVariable('cattach', "{ }")
         notify("{} reset the global attachment dictionary.".format(me))
 
-def disable(group, x = 0, y = 0):
+def autoDisable(group, x = 0, y = 0):
     mute()
     if autoscriptCheck():
         setSetting("autoscripts", False)
-        notify("{} disables autoscripts".format(me))
+        notify("{} disables autoscripts.".format(me))
         passPriority(group,0,0,True) ## Remove the player from the priority list since they hate autoscripts so much
     else:
         setSetting("autoscripts", True)
-        notify("{} enables autoscripts".format(me))
+        notify("{} enables autoscripts.".format(me))
     ## Now we have to update the active players to let others know you're a big quitter
     playersDict = eval(getGlobalVariable('activePlayers'))
     if me._id in playersDict:
@@ -35,6 +35,30 @@ def disable(group, x = 0, y = 0):
 
 def autoscriptCheck():
     return getSetting("autoscripts", True)
+
+def alignDisable(group, x = 0, y = 0):
+    mute()
+    if alignCheck():
+        setSetting("alignment", False)
+        notify("{} disables alignment.".format(me))
+    else:
+        setSetting("alignment", True)
+        notify("{} enables alignment.".format(me))
+
+def alignCheck():
+    return getSetting("alignment", True)
+
+def attachDisable(group, x = 0, y = 0):
+    mute()
+    if attachCheck():
+        setSetting("attachments", False)
+        notify("{} disables attachments.".format(me))
+    else:
+        setSetting("attachments", True)
+        notify("{} enables attachments.".format(me))
+
+def attachCheck():
+    return getSetting("attachments", True)
 
 def getTags(card, key = None):
     mute()
@@ -223,7 +247,7 @@ def cardcount(card, stackcard, search):
 #Card Functions -- Autoscripted  
 ##################################
 
-stackDict = {}
+stackDict = {} ## Needs to move to a global variable for game reconnects
 costMemory = (0,0)
 
 def autoParser(card, tagclass, morph = False):
@@ -389,7 +413,7 @@ def autoParser(card, tagclass, morph = False):
     ## This will cover all trigger initiations and activations ##
     else: ## Handle all cases where the card or ability might need to go on the stack
         if stackClass == 'cast': ## If the card is being cast, move it to the table so the stack markers can be added
-            srcCard.moveToTable(0,0,morph)
+            srcCard.moveToTable(0,300,morph)
             stackCard = srcCard
             stackCard.switchTo(stackAlt)
             stackCard.markers[scriptMarkers[stackClass]] = 1
@@ -417,7 +441,11 @@ def autoParser(card, tagclass, morph = False):
     priorityList = []
     activePlayers = eval(getGlobalVariable('activePlayers'))
     for playerId in activePlayers:
-        if activePlayers[playerId] == True: ## Only select the players who have their autoscripts enabled.
+        p = Player(playerId)
+        if p not in players: #If the player has left the game, they need to be removed from the dictionary
+            del activePlayers[playerId]
+            setGlobalVariable('activePlayers', str(activePlayers))
+        elif activePlayers[playerId] == True: ## Only select the players who have their autoscripts enabled.
             priorityList.append(playerId)
     setGlobalVariable('priority', str(priorityList))
     if tagclass == 'acti': ##acti needs to return the number of the activated ability
@@ -728,6 +756,24 @@ def cardalign():
         whisper("Cannot align: Two-sided table is required for card alignment.")
         sideflip = 0    ##disables alignment for the rest of the play session
         return "BREAK"
+    alignQueue = {}
+    ##align the stack
+    stackcount = 0
+    stack = stackFetcher()
+    lastCard = None
+    for card in stack:
+        if card.controller == me:
+            card.moveToTable(0, 10 * stackcount)
+            card.setIndex(stackcount)
+        else:
+            position = (card._id, 0, 10 * stackcount, lastCard._id, True)
+            controller = card.controller
+            if controller not in alignQueue:
+                alignQueue[controller] = []
+            alignQueue[controller].append(position)
+        lastCard = card
+        stackcount += 1
+    ## Cleans up and updates the global attachment dict
     cattach = eval(getGlobalVariable('cattach'))    ##converts attachment dict to a real dictionary
     group1 = [cardid for cardid in cattach if Card(cattach[cardid]) not in table]    ##selects attachment cards missing their original targets
     for cardid in group1:
@@ -743,12 +789,8 @@ def cardalign():
         del cattach[cardid]    ##clean up attachment dict
     if cattach != eval(getGlobalVariable('cattach')): ##checks to see if we changed the attached cards, because Kelly whined that we were updating global variables too often
         setGlobalVariable('cattach', str(cattach))    ##updates the global attachment dictionary with our changes
-    carddict = { }
-    cardorder = [[],[],[],[],[],[],[]]
-    attachlist = [ ]
-    stackcount = 0
-    yshift = [{'Blank1': 0},{'Blank2': 0},{'Blank3': 0}]
     ## This part counts the total number of attachments on each card in each row, to optimize the vertical spacing between rows
+    yshift = [{'Blank1': 0},{'Blank2': 0},{'Blank3': 0}]
     for attachid in cattach:
         targetcard = Card(cattach[attachid])
         if scriptMarkers["suspend"] in targetcard.markers:
@@ -761,16 +803,10 @@ def cardalign():
             yshift[2][targetcard] = yshift[2].get(targetcard, 0) + 1
     for shiftdict in yshift:
         yshift[yshift.index(shiftdict)] = max(shiftdict.itervalues())
-    ##align the stack
-    stack = stackFetcher()
-    stackIndex = 0
-    for card in stack:
-        if card.controller == me:
-            card.moveToTable(0, 10 * stackcount)
-            card.setIndex(stackIndex)
-        stackIndex = card.getIndex + 1
-        stackcount += 1
     ##determine coordinates for cards
+    carddict = { }
+    cardorder = [[],[],[],[],[],[],[]]
+    attachlist = [ ]
     for card in table:
         if not counters['general'] in card.markers and not card in stack: ## Cards with General markers ignore alignment
             ## For non-attached cards
@@ -800,9 +836,6 @@ def cardalign():
                     else:
                         cardorder[6].append(dictname)
                 carddict[dictname].append(card)
-            ## For attachment cards
-            elif card._id in cattach:
-                attachlist.insert(0, card)
     xpos = 80
     ypos = 5 + 10*yshift[0]
     for cardtype in cardorder:
@@ -818,21 +851,51 @@ def cardalign():
                 xpos += 9
             xpos += 70
     cattachcount = { }
-    for card in attachlist:
-        origc = cattach[card._id]
-        (x, y) = Card(origc).position
-        if playerside*y < 0:
-            yyy = -1
+    for c in cattach:
+        card = Card(c)
+        if not counters['general'] in card.markers and not card in stack: ## Cards with General markers ignore alignment
+            origc = Card(cattach[card._id])
+            (x, y) = origc.position
+            if playerside*y < 0:
+                yyy = -1
+            else:
+                yyy = 1
+            if not origc in cattachcount:
+                cattachcount[origc] = [origc]
+            lastCard = cattachcount[origc][-1]
+            y = y - 9 * yyy * playerside * len(cattachcount[origc]) ## the equation to identify the y coordinate of the new card
+            controller = card.controller
+            if controller == me:
+                card.moveToTable(x, y)
+                card.setIndex(lastCard.getIndex)
+            else:
+                position = (card._id, x, y, lastCard._id, False)
+                if controller not in alignQueue:
+                    alignQueue[controller] = []
+                alignQueue[controller].append(position)
+            cattachcount[origc].append(card)
+    ## deal with the remote movements of other player's cards in the alignQueue
+    for p in alignQueue:
+        if p in players:
+            remoteCall(p, 'remoteAlign', str(alignQueue[p]))
+
+def remoteAlign(cards):
+    mute()
+    cards = eval(cards)
+    for alignData in cards:
+        card, x, y, lastCard, stack = alignData
+        card = Card(card)
+        lastCard = Card(lastCard)
+        notify("lastcard - {}".format(lastCard))
+        if lastCard == None:
+            z = 0
         else:
-            yyy = 1
-        if not Card(origc) in cattachcount:
-            cattachcount[Card(origc)] = 1
-            card.moveToTable(x, y - yyy*playerside*9)
-            card.sendToBack()
+            z = lastCard.getIndex
+        card.moveToTable(x, y)
+        if stack == True:
+            card.setIndex(z + 1)
         else:
-            cattachcount[Card(origc)] += 1
-            card.moveToTable(x, y - yyy*playerside*cattachcount[Card(origc)]*9)
-            card.sendToBack()
+            card.setIndex(z - 1)
 
 ############################
 #Smart Token/Markers
