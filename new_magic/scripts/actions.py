@@ -48,6 +48,17 @@ def endTurn(player):
     if player == me:
         clearAll(table, x = 0, y = 0)
 
+def moveEvent(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, y, isScriptMove):
+    mute()
+    if isScriptMove:  ## Ignore script-based movements
+        return
+    if player != me:
+        return
+    if fromGroup != table or toGroup != table:  ## Ignore non-table movements
+        return
+    if attachCheck():
+        alignAttachments(card)
+
 #---------------------------------------------------------------------------
 # Global variables
 #---------------------------------------------------------------------------
@@ -241,7 +252,7 @@ def play(card, x = 0, y = 0):
             cardalign()
     else:
         src = card.group
-        card.moveToTable(0, 300)
+        card.moveToTable(0, 160)
         notify("{} plays {} from their {}.".format(me, card, src.name))
 
 def flashback(card, x = 0, y = 0):
@@ -438,7 +449,7 @@ def morph(card, x = 0, y = 0):
             notify("{} casts a card face-down.".format(me))
     src = card.group
     notify("{} casts a card face-down from their {}.".format(me, src.name))
-    card.moveToTable(0,300,True)
+    card.moveToTable(0,160,True)
     if autoscriptCheck():
         card.markers[scriptMarkers['cast']] = 1
         cardalign()
@@ -478,7 +489,7 @@ def suspend(card, x = 0, y = 0):
     mute()
     num = askInteger("Suspending {}, what is X?)".format(card.Name), 0)
     if num != 0 and num != None:
-        card.moveToTable(0,300)
+        card.moveToTable(0,160)
         card.markers[scriptMarkers['suspend']] = 1
         card.markers[counters['time']] = num
         cardalign()
@@ -494,7 +505,7 @@ def blink(card, x = 0, y = 0):
                 return
             card.moveTo(card.owner.piles['Exiled Zone'])
             cardalign()
-            card.moveToTable(0,300)
+            card.moveToTable(0,160)
             autoParser(card, 'cast', True)
             cardalign()
             notify("{} blinks {}.".format(me, card))
@@ -739,7 +750,7 @@ def draw(group, x = 0, y = 0):
                 cardalign()
             else:
                 miracletrig = card
-                miracletrig.moveToTable(0,300)
+                miracletrig.moveToTable(0,160)
                 text = ""
             notify("{} draws a miracle {}{}.".format(me, card, text))
             return

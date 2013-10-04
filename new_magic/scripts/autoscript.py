@@ -132,7 +132,7 @@ def getTags(card, key = None):
 def tagConstructor(card, key, modeModifier = ''):
     mute()
     cattach = eval(getGlobalVariable('cattach'))
-    attachments = listAttachments(card)        
+    attachments = [key for (key,value) in cattach.iteritems() if value == card._id]
     returnTags = []
     returnActiChoice = (0, '')
     returnModeChoice = (0, '')
@@ -242,6 +242,10 @@ def cardcount(card, stackcard, search):
     else:
         qty = int(search)
     return qty * multiplier
+
+def passControl(card, player):  ## Remote call for taking control of cards you don't yet control
+    mute()
+    card.setController(player)
 
 ##################################
 #Card Functions -- Autoscripted  
@@ -413,7 +417,7 @@ def autoParser(card, tagclass, morph = False):
     ## This will cover all trigger initiations and activations ##
     else: ## Handle all cases where the card or ability might need to go on the stack
         if stackClass == 'cast': ## If the card is being cast, move it to the table so the stack markers can be added
-            srcCard.moveToTable(0,300,morph)
+            srcCard.moveToTable(0,160,morph)
             stackCard = srcCard
             stackCard.switchTo(stackAlt)
             stackCard.markers[scriptMarkers[stackClass]] = 1
@@ -453,6 +457,7 @@ def autoParser(card, tagclass, morph = False):
     else:
         return text
 
+
 ############################
 #Autoscript functions
 ############################
@@ -482,27 +487,41 @@ def autoclone(card, stackcard, tag):
 def autoattach(card, targetcard):
     mute()
     cattach = eval(getGlobalVariable('cattach'))
-    if targetcard._id in cattach and cattach[targetcard._id] == card._id:
+    if targetcard._id in cattach and cattach[targetcard._id] == card._id:  ## This may be unnecessary code
         del cattach[targetcard._id]
     cattach[card._id] = targetcard._id
     targetcard.target(False)
     setGlobalVariable('cattach', str(cattach))
+    if targetcard.controller != me:  ## Pass control of the attachment to the player who controls the target card.
+        card.setController(targetcard.controller)
+        remoteCall(targetcard.controller, 'alignAttachments', [targetcard])
     return "attaches {} to {}".format(card, targetcard)
 
 def autodetach(card):
     mute()
     cattach = eval(getGlobalVariable('cattach'))
     card.target(False)
-    if card._id in dict([(v, k) for k, v in cattach.iteritems()]):
-        card2 = [k for k, v in cattach.iteritems() if v == card._id]
-        for card3 in card2:
-            del cattach[card3]
-            text = "{} unattaches {} from {}.".format(me, Card(card3), card)
-    elif card._id in cattach:
-        card2 = cattach[card._id]
+    if card._id in dict([(v, k) for k, v in cattach.iteritems()]):  # if this card has stuff attached to it
+        attachments = [k for k, v in cattach.iteritems() if v == card._id]
+        for attachment in attachments:
+            del cattach[attachment]
+            text = "{} detaches {} from {}.".format(me, Card(attachment), card)
+            attachment = Card(attachment)
+            if attachment.owner != attachment.controller:  # return this card to it's controller.
+                if attachment.controller == me:
+                    attachment.setController(attachment.owner)
+                else:
+                    remoteCall(attachment.controller, 'passControl', [attachment, attachment.owner])
+    elif card._id in cattach:  ## if this card is attached to something
+        targetCard = cattach[card._id]
         del cattach[card._id]
-        text = "detaches {} from {}".format(card, Card(card2))
-    else:
+        text = "detaches {} from {}".format(card, Card(targetCard))
+        if card.owner != card.controller:  # return this card to it's controller.
+            if card.controller == me:
+                card.setController(card.owner)
+            else:
+                remoteCall(card.controller, 'passControl', [card, card.owner])
+    else: #skip detachment since the card is not involved in attachments
         return ""
     setGlobalVariable('cattach', str(cattach))
     return text
@@ -698,18 +717,12 @@ def attach(card, x = 0, y = 0):
     else:
         whisper("Autoscripts must be enabled to use this feature")
 
-def listAttachments(card):
+def align(group, x = 0, y = 0):  ## This is for the menu action for alignment.
     mute()
-    cattach = eval(getGlobalVariable('cattach'))
-    return [key for (key,value) in cattach.iteritems() if value == card._id]
+    if cardalign() != "BREAK":  ## Don't show the notify message if cardalign fails
+        notify("{} re-aligns his cards on the table".format(me))
 
-def align(group, x = 0, y = 0):
-    mute()
-    if autoscriptCheck():
-        if cardalign() != "BREAK":
-            notify("{} re-aligns his cards on the table".format(me))
-
-def stackFetcher():
+def stackFetcher():  ## Constructs a list of all cards on the stack
     mute()
     stackList = []
     for card in table:
@@ -729,31 +742,43 @@ def stackFetcher():
             stackList.append(card)
     return stackList
 
-def cardalign():
+def playerSide():  ## Initializes the player's top/bottom side of table variables
     mute()
-    global playerside    ##Stores the Y-axis multiplier to determine which side of the table to align to
-    global sideflip    ##Stores the X-axis multiplier to determine if cards align on the left or right half
-    if sideflip == 0:    ##the 'disabled' state for alignment so the alignment positioning doesn't have to process each time
-        return "BREAK"
-    if Table.isTwoSided():
-        if playerside == None:    ##script skips this if playerside has already been determined
+    global playerside
+    if playerside == None:  ## script skips this if playerside has already been determined
+        if Table.isTwoSided():
             if me.hasInvertedTable():
-                playerside = -1    #inverted (negative) side of the table
+                playerside = -1  # inverted (negative) side of the table
             else:
                 playerside = 1
-        if sideflip == None:    ##script skips this if sideflip has already beend determined
-            playersort = sorted(players, key=lambda player: player._id)    ##makes a sorted players list so its consistent between all players
-            playercount = [p for p in playersort if me.hasInvertedTable() == p.hasInvertedTable()]    ##counts the number of players on your side of the table
-            if len(playercount) > 2:    ##since alignment only works with a maximum of two players on each side
-                whisper("Cannot align: Too many players on your side of the table.")
-                sideflip = 0    ##disables alignment for the rest of the play session
-                return "BREAK"
-            if playercount[0] == me:    ##if you're the 'first' player on this side, you go on the positive (right) side
-                sideflip = 1
-            else:
-                sideflip = -1
-    else:    ##the case where two-sided table is disabled
+        else:  ## If two-sided table is disabled, assume the player is on the normal side.
+            playerside = 1
+    return playerside
+
+def sideFlip():  ## Initializes the player's left/right side of table variables
+    mute()
+    global sideflip
+    if sideflip == None:
+        playersort = sorted(players, key=lambda player: player._id)    ##makes a sorted players list so its consistent between all players
+        playercount = [p for p in playersort if me.hasInvertedTable() == p.hasInvertedTable()]    ##counts the number of players on your side of the table
+        if len(playercount) > 2:    ##since alignment only works with a maximum of two players on each side
+            whisper("Cannot set sideflip: Too many players on your side of the table.")
+            sideflip = 0    ##disables alignment for the rest of the play session
+        elif playercount[0] == me:    ##if you're the 'first' player on this side, you go on the positive (right) side
+            sideflip = 1
+        else:
+            sideflip = -1
+    return sideflip
+
+def cardalign():
+    mute()
+    side = playerSide()    ## Stores the Y-axis multiplier to determine which side of the table to align to
+    flip = sideFlip()    ## Stores the X-axis multiplier to determine if cards align on the left or right half
+    if flip == 0:    ## the 'disabled' state for alignment so the alignment positioning doesn't have to process each time
+        return "BREAK"
+    if not Table.isTwoSided():  ## the case where two-sided table is disabled
         whisper("Cannot align: Two-sided table is required for card alignment.")
+        global sideflip
         sideflip = 0    ##disables alignment for the rest of the play session
         return "BREAK"
     alignQueue = {}
@@ -766,13 +791,17 @@ def cardalign():
             card.moveToTable(0, 10 * stackcount)
             card.setIndex(stackcount)
         else:
-            position = (card._id, 0, 10 * stackcount, lastCard._id, True)
+            position = (card._id, 0, 10 * stackcount, lastCard._id)
             controller = card.controller
             if controller not in alignQueue:
                 alignQueue[controller] = []
             alignQueue[controller].append(position)
         lastCard = card
         stackcount += 1
+    ## deal with the remote movements of other player's cards in the alignQueue
+    for p in alignQueue:
+        if p in players:
+            remoteCall(p, 'remoteAlign', str(alignQueue[p]))
     ## Cleans up and updates the global attachment dict
     cattach = eval(getGlobalVariable('cattach'))    ##converts attachment dict to a real dictionary
     group1 = [cardid for cardid in cattach if Card(cattach[cardid]) not in table]    ##selects attachment cards missing their original targets
@@ -789,113 +818,106 @@ def cardalign():
         del cattach[cardid]    ##clean up attachment dict
     if cattach != eval(getGlobalVariable('cattach')): ##checks to see if we changed the attached cards, because Kelly whined that we were updating global variables too often
         setGlobalVariable('cattach', str(cattach))    ##updates the global attachment dictionary with our changes
-    ## This part counts the total number of attachments on each card in each row, to optimize the vertical spacing between rows
-    yshift = [{'Blank1': 0},{'Blank2': 0},{'Blank3': 0}]
-    for attachid in cattach:
-        targetcard = Card(cattach[attachid])
-        if scriptMarkers["suspend"] in targetcard.markers:
-            yshift[2][targetcard] = yshift[2].get(targetcard, 0) + 1
-        elif re.search(r"Land", targetcard.Type) or re.search(r"Planeswalker", targetcard.Type) or re.search(r"Emblem", targetcard.Type):
-            yshift[1][targetcard] = yshift[1].get(targetcard, 0) + 1
-        elif re.search(r"Creature", targetcard.Type) or re.search(r"Artifact", targetcard.Type) or re.search(r"Enchantment", targetcard.Type):
-            yshift[0][targetcard] = yshift[0].get(targetcard, 0) + 1
-        else:
-            yshift[2][targetcard] = yshift[2].get(targetcard, 0) + 1
-    for shiftdict in yshift:
-        yshift[yshift.index(shiftdict)] = max(shiftdict.itervalues())
+    ## invert the attachment dict so keys are the target cards
+    attachDict = {}
+    for attachment in cattach:
+        targetCard = cattach[attachment]
+        if targetCard not in attachDict: ## Add the key if it doesn't exist
+            attachDict[targetCard] = []
+        attachDict[targetCard].append(Card(attachment))
     ##determine coordinates for cards
-    carddict = { }
-    cardorder = [[],[],[],[],[],[],[]]
-    attachlist = [ ]
+    carddict = { } ## This groups cards based on similar properties
+    cardorder = [[],[],[],[],[],[],[],[]]
+    attachHeight = [0,0,0,0,0,0,0,0] ## This part counts the total number of attachments on each card in each row, to optimize the vertical spacing between rows
     for card in table:
-        if not counters['general'] in card.markers and not card in stack: ## Cards with General markers ignore alignment
-            ## For non-attached cards
-            if card.controller == me and not card._id in cattach:
-                dictname = card.Name
-                for marker in card.markers:
-                    dictname += marker[0]
-                    dictname += str(card.markers[marker])
-                if card._id in dict([(v, k) for k, v in cattach.iteritems()]):  ## for cards that have stuff attached to them
-                    dictname += str(card._id)
-                if not dictname in carddict:
-                    carddict[dictname] = []
-                    if scriptMarkers["suspend"] in card.markers:
-                        cardorder[6].append(dictname)
-                    elif re.search(r"Land", card.Type):
-                        cardorder[3].append(dictname)
-                    elif re.search(r"Planeswalker", card.Type):
-                        cardorder[4].append(dictname)
-                    elif re.search(r"Emblem", card.Type):
-                        cardorder[5].append(dictname)
-                    elif re.search(r"Creature", card.Type) or not card.isFaceUp:
-                        cardorder[0].append(dictname)
-                    elif re.search(r"Artifact", card.Type):
-                        cardorder[1].append(dictname)
-                    elif re.search(r"Enchantment", card.Type):
-                        cardorder[2].append(dictname)
-                    else:
-                        cardorder[6].append(dictname)
-                carddict[dictname].append(card)
+        if (not counters['general'] in card.markers  ## Cards with General markers ignore alignment
+                    and not card in stack  ## cards on the stack have already beel aligned
+                    and card.controller == me  ## don't align other player's cards
+                    and not card._id in cattach):  ## don't align attachments yet
+            dictname = card.Name
+            height = 0
+            for marker in card.markers:
+                dictname += marker[0]
+                dictname += str(card.markers[marker])
+            if card._id in attachDict:  ## for cards that have stuff attached to them
+                dictname += str(card._id)
+                height = len(attachDict[card._id])
+            if not dictname in carddict:
+                carddict[dictname] = []
+                if scriptMarkers["suspend"] in card.markers:
+                    index = 6
+                elif re.search(r"Land", card.Type):
+                    index = 3
+                elif re.search(r"Planeswalker", card.Type):
+                    index = 4
+                elif re.search(r"Emblem", card.Type):
+                    index = 5
+                elif re.search(r"Creature", card.Type) or not card.isFaceUp:
+                    index = 0
+                elif re.search(r"Artifact", card.Type):
+                    index = 1
+                elif re.search(r"Enchantment", card.Type):
+                    index = 2
+                else:
+                    index = 7
+                cardorder[index].append(dictname)
+            if height > attachHeight[index]:  ## Make sure the largest height
+                attachHeight[index] = height
+            carddict[dictname].append(card)
     xpos = 80
-    ypos = 5 + 10*yshift[0]
+    ypos = 5 + 10*max([attachHeight[0], attachHeight[1], attachHeight[2]])
+    allowAlign = alignCheck()
     for cardtype in cardorder:
         if cardorder.index(cardtype) == 3:
             xpos = 80
-            ypos += 93 + 10*yshift[1]
+            ypos += 93 + 10*max([attachHeight[3], attachHeight[4], attachHeight[5]])
         elif cardorder.index(cardtype) == 6:
             xpos = 80
-            ypos += 93 + 10*yshift[2]
+            ypos += 93 + 10*max([attachHeight[6], attachHeight[7]])
         for cardname in cardtype:
             for card in carddict[cardname]:
-                card.moveToTable(sideflip * xpos, playerside * ypos + (44*playerside - 44))
+                if allowAlign:
+                    card.moveToTable(flip * xpos, side * ypos + (44*side - 44))
                 xpos += 9
+                if card._id in attachDict:
+                    alignAttachments(card, attachDict[card._id])
             xpos += 70
-    cattachcount = { }
-    for c in cattach:
-        card = Card(c)
-        if not counters['general'] in card.markers and not card in stack: ## Cards with General markers ignore alignment
-            origc = Card(cattach[card._id])
-            (x, y) = origc.position
-            if playerside*y < 0:
-                yyy = -1
-            else:
-                yyy = 1
-            if not origc in cattachcount:
-                cattachcount[origc] = [origc]
-            lastCard = cattachcount[origc][-1]
-            y = y - 9 * yyy * playerside * len(cattachcount[origc]) ## the equation to identify the y coordinate of the new card
-            controller = card.controller
-            if controller == me:
-                card.moveToTable(x, y)
-                card.setIndex(lastCard.getIndex)
-            else:
-                position = (card._id, x, y, lastCard._id, False)
-                if controller not in alignQueue:
-                    alignQueue[controller] = []
-                alignQueue[controller].append(position)
-            cattachcount[origc].append(card)
-    ## deal with the remote movements of other player's cards in the alignQueue
-    for p in alignQueue:
-        if p in players:
-            remoteCall(p, 'remoteAlign', str(alignQueue[p]))
 
-def remoteAlign(cards):
+def alignAttachments(card, attachments = None):  ## Aligns all attachments on the card
+    mute()
+    side = playerSide()
+    if attachments == None:
+        cattach = eval(getGlobalVariable('cattach'))
+        attachments = [Card(key) for (key,value) in cattach.iteritems() if value == card._id]
+    if attachments == []:
+        return
+    lastCard = card
+    x, y = card.position
+    count = 1
+    if side*y < 0:
+        yyy = -1
+    else:
+        yyy = 1
+    for c in attachments:
+        attachY = y - 9 * yyy * side * count ## the equation to identify the y coordinate of the new card
+        c.moveToTable(x, attachY)
+        c.setIndex(lastCard.getIndex)
+        lastCard = c
+        count += 1
+
+def remoteAlign(cards):  ## Remote alignment function for the stack
     mute()
     cards = eval(cards)
     for alignData in cards:
-        card, x, y, lastCard, stack = alignData
+        card, x, y, lastCard = alignData
         card = Card(card)
         lastCard = Card(lastCard)
-        notify("lastcard - {}".format(lastCard))
         if lastCard == None:
             z = 0
         else:
             z = lastCard.getIndex
         card.moveToTable(x, y)
-        if stack == True:
-            card.setIndex(z + 1)
-        else:
-            card.setIndex(z - 1)
+        card.setIndex(z + 1)
 
 ############################
 #Smart Token/Markers

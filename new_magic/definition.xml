@@ -14,6 +14,7 @@
     <event name="OnLoadDeck" action="registerPlayer" />
     <event name="OnGlobalVariableChanged" action="priorityResolve" />
     <event name="OnEndTurn" action="endTurn" />
+	<event name="OnMoveCard" action="moveEvent" />
   </events>
   <fonts>
     <font src="fonts/mplantin_symbols.ttf" size="14" target="context"/>
@@ -73,7 +74,7 @@
 	<groupactions menu="Autoscript Settings">
       <groupaction menu="Enable/Disable Autoscripts" execute="autoDisable" />
       <groupaction menu="Enable/Disable Alignment" execute="alignDisable" />
-      <groupaction menu="Enable/Disable Attachments" execute="attachDisable" />
+      <groupaction menu="Enable/Disable Attachment Alignment" execute="attachDisable" />
 	</groupactions>
     <cardaction menu="Tap/Untap or Resolve" default="True" execute="resolve" />
     <cardaction menu="Don't Untap during Untap Step" shortcut="ctrl+V" execute="doesNotUntap" />
