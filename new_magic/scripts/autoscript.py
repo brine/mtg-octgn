@@ -791,12 +791,12 @@ def cardalign():
             card.moveToTable(0, 10 * stackcount)
             card.setIndex(stackcount)
         else:
-            position = (card._id, 0, 10 * stackcount, lastCard._id)
+            position = (card._id, 0, 10 * stackcount, lastCard)
             controller = card.controller
             if controller not in alignQueue:
                 alignQueue[controller] = []
             alignQueue[controller].append(position)
-        lastCard = card
+        lastCard = card._id
         stackcount += 1
     ## deal with the remote movements of other player's cards in the alignQueue
     for p in alignQueue:
@@ -911,13 +911,12 @@ def remoteAlign(cards):  ## Remote alignment function for the stack
     for alignData in cards:
         card, x, y, lastCard = alignData
         card = Card(card)
-        lastCard = Card(lastCard)
         if lastCard == None:
             z = 0
         else:
-            z = lastCard.getIndex
+            z = Card(lastCard).getIndex + 1
         card.moveToTable(x, y)
-        card.setIndex(z + 1)
+        card.setIndex(z)
 
 ############################
 #Smart Token/Markers
