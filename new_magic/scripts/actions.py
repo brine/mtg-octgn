@@ -172,10 +172,13 @@ def scoop(group, x = 0, y = 0):
 def clearAll(group, x = 0, y = 0):
     notify("{} clears all targets and highlights.".format(me))
     for card in group:
-        if card.targetedBy and card.targetedBy == me:
-            card.target(False)
+#        if card.targetedBy and card.targetedBy == me:    ### Commented out until target arrows are fixed
         if card.controller == me:
-            card.highlight = None
+            card.target(False)
+            if card.highlight in [AttackColor, BlockColor]:
+                card.highlight = None
+            elif card.highlight in [AttackDoesntUntapColor, BlockDoesntUntapColor]:
+                card.highlight = DoesntUntapColor
 
 def setDie(group, x = 0, y = 0):
     mute()
