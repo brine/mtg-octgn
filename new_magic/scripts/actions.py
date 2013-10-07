@@ -68,7 +68,7 @@ def loadUpdates():
     v4 = int(v4)
     currentVersion = v1 + v2 + v3 + v4  ## An integer interpretation of the version number, for comparisons later
     lastVersion = getSetting("lastVersion", currentVersion - 1)  ## -1 is for players experiencing the system for the first time
-    for log in changelog:
+    for log in sorted(changelog):  ## Sort the dictionary numerically
         if lastVersion < log:  ## Trigger a changelog for each update they haven't seen yet.
             stringVersion, date, text = changelog[log]
             updates = '\n-'.join(text)
