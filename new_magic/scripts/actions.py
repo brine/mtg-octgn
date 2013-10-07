@@ -59,6 +59,22 @@ def moveEvent(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, 
     if attachCheck():
         alignAttachments(card)
 
+def loadUpdates():
+    mute()
+    v1, v2, v3, v4 = gameVersion.split('.')  ## split apart the game's version number
+    v1 = int(v1) * 1000000
+    v2 = int(v2) * 10000
+    v3 = int(v3) * 100
+    v4 = int(v4)
+    currentVersion = v1 + v2 + v3 + v4  ## An integer interpretation of the version number, for comparisons later
+    lastVersion = getSetting("lastVersion", currentVersion - 1)  ## -1 is for players experiencing the system for the first time
+    for log in changelog:
+        if lastVersion < log:  ## Trigger a changelog for each update they haven't seen yet.
+            stringVersion, date, text = changelog[log]
+            updates = '\n-'.join(text)
+            confirm("What's new in {} ({}):\n-{}".format(stringVersion, date, updates))
+    setSetting("lastVersion", currentVersion)  ## Store's the current version to a setting
+
 #---------------------------------------------------------------------------
 # Global variables
 #---------------------------------------------------------------------------
