@@ -132,7 +132,7 @@ def getTags(card, key = None):
 def tagConstructor(card, key, modeModifier = ''):
     mute()
     cattach = eval(getGlobalVariable('cattach'))
-    attachments = [key for (key,value) in cattach.iteritems() if value == card._id]
+    attachments = [k for (k,v) in cattach.iteritems() if v == card._id]
     returnTags = []
     returnActiChoice = (0, '')
     returnModeChoice = (0, '')
@@ -197,7 +197,10 @@ def tagConstructor(card, key, modeModifier = ''):
             modeChoice = askChoice("Choose a mode for {}:".format(card.Name), modeList)
             if modeChoice == None:
                 return "BREAK"
-            newTags = tagConstructor(card, key, str(modeChoice))[0]
+            if returnActiChoice != (0, ''):  ## if the mode choice was from an activated ability
+                newTags = tagConstructor(card, key + str(returnActiChoice[0]), str(modeChoice))[0]
+            else:
+                newTags = tagConstructor(card, key, str(modeChoice))[0]
             returnTags[3] = newTags[3]
             returnTags[4] = newTags[4]
             returnTags[5] = newTags[5]
