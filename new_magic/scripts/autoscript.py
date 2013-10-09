@@ -725,25 +725,24 @@ def align(group, x = 0, y = 0):  ## This is for the menu action for alignment.
     if cardalign() != "BREAK":  ## Don't show the notify message if cardalign fails
         notify("{} re-aligns his cards on the table".format(me))
 
-def stackFetcher():  ## Constructs a list of all cards on the stack
+def isStack(card):  ## Checks to see if the card is on the stack
     mute()
-    stackList = []
-    for card in table:
-        if (scriptMarkers['cast'] in card.markers
-                or scriptMarkers['acti'] in card.markers
-                or scriptMarkers['attack'] in card.markers
-                or scriptMarkers['block'] in card.markers
-                or scriptMarkers['destroy'] in card.markers
-                or scriptMarkers['exile'] in card.markers
-                or scriptMarkers['etb'] in card.markers
-                or scriptMarkers['cost'] in card.markers
-                or scriptMarkers['x'] in card.markers
-                or scriptMarkers['discard'] in card.markers
-                or scriptMarkers['miracle'] in card.markers
-                or scriptMarkers['choice'] in card.markers
-                or scriptMarkers['morph'] in card.markers):
-            stackList.append(card)
-    return stackList
+    if (scriptMarkers['cast'] in card.markers
+            or scriptMarkers['acti'] in card.markers
+            or scriptMarkers['attack'] in card.markers
+            or scriptMarkers['block'] in card.markers
+            or scriptMarkers['destroy'] in card.markers
+            or scriptMarkers['exile'] in card.markers
+            or scriptMarkers['etb'] in card.markers
+            or scriptMarkers['cost'] in card.markers
+            or scriptMarkers['x'] in card.markers
+            or scriptMarkers['discard'] in card.markers
+            or scriptMarkers['miracle'] in card.markers
+            or scriptMarkers['choice'] in card.markers
+            or scriptMarkers['morph'] in card.markers):
+        return True
+    else:
+        return False
 
 def playerSide():  ## Initializes the player's top/bottom side of table variables
     mute()
@@ -782,25 +781,25 @@ def cardalign():
     if not Table.isTwoSided():  ## the case where two-sided table is disabled
         whisper("Cannot align: Two-sided table is required for card alignment.")
         global sideflip
-        sideflip = 0    ##disables alignment for the rest of the play session
+        sideflip = 0    ## disables alignment for the rest of the play session
         return "BREAK"
     alignQueue = {}
-    ##align the stack
+    ## align the stack
     stackcount = 0
-    stack = stackFetcher()
-    lastCard = None
-    for card in stack:
-        if card.controller == me:
-            card.moveToTable(0, 10 * stackcount)
-            card.setIndex(stackcount)
-        else:
-            position = (card._id, 0, 10 * stackcount, lastCard)
-            controller = card.controller
-            if controller not in alignQueue:
-                alignQueue[controller] = []
-            alignQueue[controller].append(position)
-        lastCard = card._id
-        stackcount += 1
+    lastCard = None  ## Contains the last card to be aligned, so remoteCall knows which card to tuck the aligned cards behind
+    for card in table:
+        if isStack(card):  ## check to see if the card is on the stack
+            if card.controller == me:  ## It's safe to move your own cards on the stack
+                card.moveToTable(0, 10 * stackcount)
+                card.setIndex(stackcount)
+            else:  ## you must send a remoteCall to the other players to align their stack cards
+                position = (card._id, 0, 10 * stackcount, lastCard)
+                controller = card.controller
+                if controller not in alignQueue:
+                    alignQueue[controller] = []
+                alignQueue[controller].append(position)
+            lastCard = card._id
+            stackcount += 1
     ## deal with the remote movements of other player's cards in the alignQueue
     for p in alignQueue:
         if p in players:
@@ -834,7 +833,7 @@ def cardalign():
     attachHeight = [0,0,0,0,0,0,0,0] ## This part counts the total number of attachments on each card in each row, to optimize the vertical spacing between rows
     for card in table:
         if (not counters['general'] in card.markers  ## Cards with General markers ignore alignment
-                    and not card in stack  ## cards on the stack have already beel aligned
+                    and not isStack(card)  ## cards on the stack have already been aligned so ignore them
                     and card.controller == me  ## don't align other player's cards
                     and not card._id in cattach):  ## don't align attachments yet
             dictname = card.Name
@@ -897,13 +896,12 @@ def alignAttachments(card, attachments = None):  ## Aligns all attachments on th
     lastCard = card
     x, y = card.position
     count = 1
-    if side*y < 0:
+    if side*y < 0:  ## A position modifier that has to take into account the vertical orientation of the card
         yyy = -1
     else:
         yyy = 1
-    stackList = stackFetcher()
     for c in attachments:
-        if not c in stackList:
+        if not isStack(c):  ## Ignore attachments that have yet to resolve off the stack
             attachY = y - 9 * yyy * side * count ## the equation to identify the y coordinate of the new card
             c.moveToTable(x, attachY)
             c.setIndex(lastCard.getIndex)

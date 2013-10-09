@@ -37,7 +37,8 @@ def registerPlayer(player, groups = []): #this function triggers off loading a d
 
 def priorityResolve(name, oldValue, value):
     if name == 'priority' and value == '[]':
-        stack = stackFetcher()
+        stack = [c for c in table
+                if isStack(c)]
         if len(stack) == 0:
             return
         if stack[-1].controller == me and autoscriptCheck():
