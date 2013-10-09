@@ -901,12 +901,14 @@ def alignAttachments(card, attachments = None):  ## Aligns all attachments on th
         yyy = -1
     else:
         yyy = 1
+    stackList = stackFetcher()
     for c in attachments:
-        attachY = y - 9 * yyy * side * count ## the equation to identify the y coordinate of the new card
-        c.moveToTable(x, attachY)
-        c.setIndex(lastCard.getIndex)
-        lastCard = c
-        count += 1
+        if not c in stackList:
+            attachY = y - 9 * yyy * side * count ## the equation to identify the y coordinate of the new card
+            c.moveToTable(x, attachY)
+            c.setIndex(lastCard.getIndex)
+            lastCard = c
+            count += 1
 
 def remoteAlign(cards):  ## Remote alignment function for the stack
     mute()
