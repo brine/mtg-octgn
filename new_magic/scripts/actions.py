@@ -248,7 +248,7 @@ def play(card, x = 0, y = 0):
         text = autoParser(card, 'cast')
         if text != "BREAK":
             ## Checks to see if the cast card is an Aura, then check to see if a target was made to resolve-attach to
-            if card.Subtype != None and re.search(r'Aura', card.Subtype):
+            if (card.Subtype != None and re.search(r'Aura', card.Subtype)) or re.search(r'Bestow ', card.Rules):  ## Automatically register the card as an attachment if it's an Aura or Bestow
                 target = (card for card in table if card.targetedBy)
                 targetcount = sum(1 for card in table if card.targetedBy)
                 if targetcount == 1:
