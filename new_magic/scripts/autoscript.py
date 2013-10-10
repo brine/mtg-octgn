@@ -489,7 +489,16 @@ def autoclone(card, stackcard, tag):
 
 def autoattach(card, targetcard):
     mute()
+    if isStack(targetcard):
+        whisper("WARNING: Cannot attach to cards on the stack.")
+        return ""
     cattach = eval(getGlobalVariable('cattach'))
+    if targetcard._id in cattach:  ## Catch cases where you try to attach to another attachment
+        whisper("WARNING: Cannot attach to other attachments.")
+        return ""
+    if card._id in dict([(v, k) for k, v in cattach.iteritems()]):  ## Catch cases where the attachment has its own attachments
+        whisper("WARNING: Cannot attach cards with attachments to other cards. Detach all cards from {} first.".format(card))
+        return ""
     if targetcard._id in cattach and cattach[targetcard._id] == card._id:  ## This may be unnecessary code
         del cattach[targetcard._id]
     cattach[card._id] = targetcard._id
@@ -508,7 +517,7 @@ def autodetach(card):
         attachments = [k for k, v in cattach.iteritems() if v == card._id]
         for attachment in attachments:
             del cattach[attachment]
-            text = "{} detaches {} from {}.".format(me, Card(attachment), card)
+            text = "{} detaches {} from {}".format(me, Card(attachment), card)
             attachment = Card(attachment)
             if attachment.owner != attachment.controller:  # return this card to it's controller.
                 if attachment.controller == me:
