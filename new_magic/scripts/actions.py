@@ -242,6 +242,52 @@ def token(group, x = 0, y = 0):
 # Autoscript-Linked Card functions
 #--------------------------------
 
+def scry(group = me.Library, x = 0, y = 0, count = None):
+    mute()
+    if count == None:
+        count = askInteger("Scry how many cards?", 1)
+    topCards = group.top(count)
+    buttons = []  ## This list stores all the card objects for manipulations.
+    for c in topCards:
+        c.peek()  ## Reveal the scryed cards to python
+        buttons.append(c)
+    topList = []  ## This will store the cards selected for the top of the pile
+    bottomList = []  ## For cards going to the bottom of the pile
+    rnd(1,2)  ## allow the peeked card's properties to load
+    loop = 'BOTTOM'  ## Start with choosing cards to put on bottom
+    while loop != None:
+        desc = "Select a card to place on {}:\n\n{}\n///////DECK///////\n{}".format(
+                loop,
+                '\n'.join([c.Name for c in topList]),
+                '\n'.join([c.Name for c in bottomList]))
+        if loop == 'TOP':
+            num = askChoice(desc, [c.Name for c in buttons], customButton = "Switch to BOTTOM")
+            if num == 0:
+                loop = 'BOTTOM'
+            elif num != None:
+                card = buttons.pop(num - 1)
+                topList.insert(0, card)
+        else:
+            num = askChoice(desc, [c.Name for c in buttons], customButton = "Switch to TOP")
+            if num == 0:
+                loop = 'TOP'
+            elif num != None:
+                card = buttons.pop(num - 1)
+                bottomList.append(card)
+        if len(buttons) == 0: ##  End the loop
+            loop = None
+        if num == None:  ## closing the dialog window will cancel the scry, not moving any cards, but peek status will stay on.
+            return
+    topList.reverse()  ## Gotta flip topList so the moveTo's go in the right order
+    for c in topList:
+        c.moveTo(group)
+    for c in bottomList:
+        c.moveToBottom(group)
+    for c in group:  ## This is currently the only way to un-peek at cards.
+        c.isFaceUp = True
+        c.isFaceUp = False
+    notify("{} scryed for {}, {} on top, {} on bottom.".format(me, count, len(topList), len(bottomList)))
+
 def play(card, x = 0, y = 0):
     mute()
     if autoscriptCheck():

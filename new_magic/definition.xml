@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.4.3" octgnVersion="3.1.0.32"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.4.4" octgnVersion="3.1.0.32"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://octgn.gamersjudgement.com/wordpress/mtg/download-links/" gameurl="http://octgn.gamersjudgement.com/wordpress/mtg/" authors="brine"
     markersize="14" iconurl="http://www.wizards.com/Magic/Assets/magic_logo.png" >
@@ -143,6 +143,7 @@
       </groupactions>
     </hand>
     <group name="Library" shortcut="ctrl+I" visibility="none" width="63" height="88" icon="groups/library.png">
+      <groupaction menu="Scry" shortcut="ctrl+shift+C" execute="scry" />
       <groupaction menu="Draw" shortcut="ctrl+D" default="True" execute="draw" />
       <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
       <groupaction menu="Mill X Cards" execute="mill" />
