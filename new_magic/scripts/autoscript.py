@@ -171,7 +171,7 @@ def tagConstructor(card, key, modeModifier = ''):
                     tagsList.append(activateList)
                     rulesList.append(attachLines)
         actiChoice = askChoice("{}\nActivate which ability?".format(card.Name), rulesList, colorList)
-        if actiChoice == None:
+        if actiChoice == 0:
             return "BREAK"
         returnActiChoice = (actiChoice, rulesList[actiChoice - 1])
         returnTags = tagsList[actiChoice - 1]
@@ -195,7 +195,7 @@ def tagConstructor(card, key, modeModifier = ''):
             modesText = modeRule.split(u'\u2014 ')[1] ## parse out the 'choose one - ' part
             modeList = modesText.split("; or ") ## convert the mode options to a proper list
             modeChoice = askChoice("Choose a mode for {}:".format(card.Name), modeList)
-            if modeChoice == None:
+            if modeChoice == 0:
                 return "BREAK"
             if returnActiChoice != (0, ''):  ## if the mode choice was from an activated ability
                 newTags = tagConstructor(card, key + str(returnActiChoice[0]), str(modeChoice))[0]
@@ -280,7 +280,7 @@ def autoParser(card, tagclass, morph = False):
                 splitRules.append('Fuse both sides')
                 splitFlags.append('C')
             choice = askChoice('cast which side of {}?'.format(card.name), splitRules)
-            if choice == None:
+            if choice == 0:
                 return "BREAK"
             tagTuple = tagConstructor(card, tagclass, splitFlags[choice - 1])
             splitAlt = 'split' + splitFlags[choice - 1]

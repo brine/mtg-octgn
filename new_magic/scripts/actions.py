@@ -261,17 +261,17 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
                 '\n'.join([c.Name for c in topList]),
                 '\n'.join([c.Name for c in bottomList]))
         if loop == 'TOP':
-            num = askChoice(desc, [c.Name for c in buttons], customButton = "Switch to BOTTOM")
-            if num == 0:
+            num = askChoice(desc, [c.Name for c in buttons], customButtons = ["Switch to BOTTOM"])
+            if num == -1:
                 loop = 'BOTTOM'
-            elif num != None:
+            elif num != 0:
                 card = buttons.pop(num - 1)
                 topList.insert(0, card)
         else:
-            num = askChoice(desc, [c.Name for c in buttons], customButton = "Switch to TOP")
-            if num == 0:
+            num = askChoice(desc, [c.Name for c in buttons], customButtons = ["Switch to TOP"])
+            if num == -1:
                 loop = 'TOP'
-            elif num != None:
+            elif num != 0:
                 card = buttons.pop(num - 1)
                 bottomList.append(card)
         if len(buttons) == 0: ##  End the loop
