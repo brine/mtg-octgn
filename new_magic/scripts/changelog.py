@@ -18,5 +18,11 @@ changelog = {
         "Added marker images for Monstrous, Morph and Choice autoscript indicators.",
         "Fixed activated model abilities asking to choose an ability twice.",
         "Fixed a bug where casting an aura with a target would align the aura behind the target, instead of on the stack."
+        ]),
+    3020500: ("3.2.5.0", "23 October 2013", [
+        "Added 'Scry' Library action (CTRL+SHIFT+C), which lets you scry a specified number of cards on top of your library.",
+        "Added a catch to prevent a few illegal attachment pairings.",
+        "Bestow creatures will now auto-attach like auras if you target something while casting them.",
+        "Behind the scenes changes to askChoice dialog windows, and the Stack alignment."
         ])
 }
