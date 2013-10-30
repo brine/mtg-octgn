@@ -25,4 +25,7 @@ changelog = {
         "Bestow creatures will now auto-attach like auras if you target something while casting them.",
         "Behind the scenes changes to askChoice dialog windows, and the Stack alignment."
         ])
+    3020600: ("3.2.6.0", "30 October 2013", [
+        "Added Commander 2013 cards and decks."
+        ])
 }
