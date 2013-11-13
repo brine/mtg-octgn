@@ -34,6 +34,20 @@ def registerPlayer(player, groups = []): #this function triggers off loading a d
         playersDict = eval(getGlobalVariable('activePlayers')) #the activePlayers variable just keeps track of the active players in the game
         playersDict[me._id] = autoscriptCheck() #keeps track of who's allergic to fun
         setGlobalVariable('activePlayers', str(playersDict))
+        for group in groups:
+            if group.name == "Library":  #Initiate auto-shuffling
+                pileList = []  #Construct a python list representation of the deck
+                for c in group:
+                    pileList.append(c)
+                pileList = pileShuffle(pileList, 4 + int(localRandom()*3))
+                for x in range(0, 3 + int(localRandom()*8)):
+                    pileList = riffleShuffle(pileList)
+                pileList = pileShuffle(pileList, 4 + int(localRandom()*3))
+                for c in pileList:
+                    c.moveToBottom(me.Library)
+                rnd(1,10)
+                me.Library.shuffle() # finish off with a legit OCTGN shuffle to prevent potential cheating.
+                notify("{} super-shuffled their Library.".format(me))
 
 def priorityResolve(name, oldValue, value):
     if name == 'priority' and value == '[]':
