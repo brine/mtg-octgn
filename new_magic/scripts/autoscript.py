@@ -769,9 +769,15 @@ def playerSide():  ## Initializes the player's top/bottom side of table variable
 def sideFlip():  ## Initializes the player's left/right side of table variables
     mute()
     global sideflip
-    if sideflip == None:
-        playersort = sorted(players, key=lambda player: player._id)    ##makes a sorted players list so its consistent between all players
-        playercount = [p for p in playersort if me.hasInvertedTable() == p.hasInvertedTable()]    ##counts the number of players on your side of the table
+    if sideflip == None:    ##Initialize sideflip
+        playercount = []    ##counts the number of players on your side of the table
+        for p in sorted(players, key=lambda player: player._id):    ##makes a sorted players list so its consistent between all players
+            try:    ##We have to use a try due to a bug with the players list
+                if me.hasInvertedTable() == p.hasInvertedTable():    ##Checks to see if you're on the same side as that player.
+                    playercount.append(p)
+            except: pass
+##        playersort = sorted(players, key=lambda player: player._id)
+##        playercount = [p for p in playersort if me.hasInvertedTable() == p.hasInvertedTable()]    ##counts the number of players on your side of the table
         if len(playercount) > 2:    ##since alignment only works with a maximum of two players on each side
             whisper("Cannot set sideflip: Too many players on your side of the table.")
             sideflip = 0    ##disables alignment for the rest of the play session
