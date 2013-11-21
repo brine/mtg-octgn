@@ -449,7 +449,7 @@ def autoParser(card, tagclass, morph = False):
     activePlayers = eval(getGlobalVariable('activePlayers'))
     for playerId in activePlayers:
         p = Player(playerId)
-        if p not in players: #If the player has left the game, they need to be removed from the dictionary
+        if p not in players(): #If the player has left the game, they need to be removed from the dictionary
             del activePlayers[playerId]
             setGlobalVariable('activePlayers', str(activePlayers))
         elif activePlayers[playerId] == True: ## Only select the players who have their autoscripts enabled.
@@ -770,14 +770,8 @@ def sideFlip():  ## Initializes the player's left/right side of table variables
     mute()
     global sideflip
     if sideflip == None:    ##Initialize sideflip
-        playercount = []    ##counts the number of players on your side of the table
-        for p in sorted(players, key=lambda player: player._id):    ##makes a sorted players list so its consistent between all players
-            try:    ##We have to use a try due to a bug with the players list
-                if me.hasInvertedTable() == p.hasInvertedTable():    ##Checks to see if you're on the same side as that player.
-                    playercount.append(p)
-            except: pass
-##        playersort = sorted(players, key=lambda player: player._id)
-##        playercount = [p for p in playersort if me.hasInvertedTable() == p.hasInvertedTable()]    ##counts the number of players on your side of the table
+        playersort = sorted(players(), key=lambda player: player._id)    ##makes a sorted players list so its consistent between all players
+        playercount = [p for p in playersort if me.hasInvertedTable() == p.hasInvertedTable()]    ##counts the number of players on your side of the table
         if len(playercount) > 2:    ##since alignment only works with a maximum of two players on each side
             whisper("Cannot set sideflip: Too many players on your side of the table.")
             sideflip = 0    ##disables alignment for the rest of the play session
@@ -817,7 +811,7 @@ def cardalign():
             stackcount += 1
     ## deal with the remote movements of other player's cards in the alignQueue
     for p in alignQueue:
-        if p in players:
+        if p in players():
             remoteCall(p, 'remoteAlign', str(alignQueue[p]))
     ## Cleans up and updates the global attachment dict
     cattach = eval(getGlobalVariable('cattach'))    ##converts attachment dict to a real dictionary
