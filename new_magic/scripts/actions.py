@@ -24,6 +24,8 @@ AttackDoesntUntapColor = "#660000"
 BlockDoesntUntapColor = "#007700"
 MiracleColor = "#1D7CF2"
 
+defaultX = 30
+defaultY = 25
 #---------------------------------------------------------------------------
 # Event Stuff
 #---------------------------------------------------------------------------
@@ -318,7 +320,7 @@ def play(card, x = 0, y = 0):
             cardalign()
     else:
         src = card.group
-        card.moveToTable(0, 160)
+        card.moveToTable(defaultX, defaultY)
         notify("{} plays {} from their {}.".format(me, card, src.name))
 
 def flashback(card, x = 0, y = 0):
@@ -515,7 +517,7 @@ def morph(card, x = 0, y = 0):
             notify("{} casts a card face-down.".format(me))
     src = card.group
     notify("{} casts a card face-down from their {}.".format(me, src.name))
-    card.moveToTable(0,160,True)
+    card.moveToTable(defaultX, defaultY, True)
     if autoscriptCheck():
         card.markers[scriptMarkers['cast']] = 1
         cardalign()
@@ -555,7 +557,7 @@ def suspend(card, x = 0, y = 0):
     mute()
     num = askInteger("Suspending {}, what is X?)".format(card.Name), 0)
     if num != 0 and num != None:
-        card.moveToTable(0,160)
+        card.moveToTable(defaultX, defaultY)
         card.markers[scriptMarkers['suspend']] = 1
         card.markers[counters['time']] = num
         cardalign()
@@ -571,7 +573,7 @@ def blink(card, x = 0, y = 0):
                 return
             card.moveTo(card.owner.piles['Exiled Zone'])
             cardalign()
-            card.moveToTable(0,160)
+            card.moveToTable(defaultX, defaultY)
             autoParser(card, 'cast', True)
             cardalign()
             notify("{} blinks {}.".format(me, card))
@@ -816,7 +818,7 @@ def draw(group, x = 0, y = 0):
                 cardalign()
             else:
                 miracletrig = card
-                miracletrig.moveToTable(0,160)
+                miracletrig.moveToTable(defaultX, defaultY)
                 text = ""
             notify("{} draws a miracle {}{}.".format(me, card, text))
             return

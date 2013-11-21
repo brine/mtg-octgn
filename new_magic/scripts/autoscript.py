@@ -420,7 +420,7 @@ def autoParser(card, tagclass, morph = False):
     ## This will cover all trigger initiations and activations ##
     else: ## Handle all cases where the card or ability might need to go on the stack
         if stackClass == 'cast': ## If the card is being cast, move it to the table so the stack markers can be added
-            srcCard.moveToTable(0,160,morph)
+            srcCard.moveToTable(defaultX, defaultY, morph)
             stackCard = srcCard
             stackCard.switchTo(stackAlt)
             stackCard.markers[scriptMarkers[stackClass]] = 1
