@@ -248,6 +248,8 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
     mute()
     if count == None:
         count = askInteger("Scry how many cards?", 1)
+    if count == None or count == 0:
+        return
     topCards = group.top(count)
     buttons = []  ## This list stores all the card objects for manipulations.
     for c in topCards:
