@@ -27,5 +27,11 @@ changelog = {
         ]),
     3020600: ("3.2.6.0", "30 October 2013", [
         "Added Commander 2013 cards and decks."
+        ]),
+    3020700: ("3.2.7.0", "11 December 2013", [
+        "Alignment no longer breaks when a player leaves the game.",
+        "Cards entering the battlefield won't zoom out the tale.",
+        "Fixed a python error when you cancel out of the scry window.",
+        "Fixed ampersands showing up in the mana costs of some cards."
         ])
 }
