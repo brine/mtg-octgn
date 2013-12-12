@@ -70,13 +70,14 @@ def loadUpdates():
     v3 = int(v3) * 100
     v4 = int(v4)
     currentVersion = v1 + v2 + v3 + v4  ## An integer interpretation of the version number, for comparisons later
-    lastVersion = getSetting("lastVersion", currentVersion - 1)  ## -1 is for players experiencing the system for the first time
+    lastVersion = getSetting("lastVersion", convertToString(currentVersion - 1))  ## -1 is for players experiencing the system for the first time
+    lastVersion = int(lastVersion)
     for log in sorted(changelog):  ## Sort the dictionary numerically
         if lastVersion < log:  ## Trigger a changelog for each update they haven't seen yet.
             stringVersion, date, text = changelog[log]
             updates = '\n-'.join(text)
             confirm("What's new in {} ({}):\n-{}".format(stringVersion, date, updates))
-    setSetting("lastVersion", currentVersion)  ## Store's the current version to a setting
+    setSetting("lastVersion", convertToString(currentVersion))  ## Store's the current version to a setting
 
 #---------------------------------------------------------------------------
 # Global variables
@@ -236,7 +237,8 @@ def token(group, x = 0, y = 0):
     if quantity == 0:
         return
     token = table.create(card, x, y, quantity)
-    artDict = getSetting('tokenArts', Dictionary[str,str]({}))
+    artDict = getSetting('tokenArts', convertToString({}))
+    artDict = eval(artDict)
     if token.model in artDict:
         token.switchTo(artDict[token.model])
 

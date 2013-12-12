@@ -20,12 +20,12 @@ def clearCache(group, x = 0, y = 0):
 
 def autoDisable(group, x = 0, y = 0):
     mute()
-    if autoscriptCheck():
-        setSetting("autoscripts", False)
+    if autoscriptCheck() == "True":
+        setSetting("autoscripts", "False")
         notify("{} disables autoscripts.".format(me))
         passPriority(group,0,0,True) ## Remove the player from the priority list since they hate autoscripts so much
     else:
-        setSetting("autoscripts", True)
+        setSetting("autoscripts", "True")
         notify("{} enables autoscripts.".format(me))
     ## Now we have to update the active players to let others know you're a big quitter
     playersDict = eval(getGlobalVariable('activePlayers'))
@@ -34,31 +34,31 @@ def autoDisable(group, x = 0, y = 0):
         setGlobalVariable('activePlayers', str(playersDict))
 
 def autoscriptCheck():
-    return getSetting("autoscripts", True)
+    return getSetting("autoscripts", "True")
 
 def alignDisable(group, x = 0, y = 0):
     mute()
-    if alignCheck():
-        setSetting("alignment", False)
+    if alignCheck() == "True":
+        setSetting("alignment", "False")
         notify("{} disables alignment.".format(me))
     else:
-        setSetting("alignment", True)
+        setSetting("alignment", "True")
         notify("{} enables alignment.".format(me))
 
 def alignCheck():
-    return getSetting("alignment", True)
+    return getSetting("alignment", "True")
 
 def attachDisable(group, x = 0, y = 0):
     mute()
-    if attachCheck():
-        setSetting("attachments", False)
+    if attachCheck() == "True":
+        setSetting("attachments", "False")
         notify("{} disables attachments.".format(me))
     else:
-        setSetting("attachments", True)
+        setSetting("attachments", "True")
         notify("{} enables attachments.".format(me))
 
 def attachCheck():
-    return getSetting("attachments", True)
+    return getSetting("attachments", "True")
 
 def getTags(card, key = None):
     mute()
@@ -951,7 +951,8 @@ def autoCreateToken(card, x = 0, y = 0):
 def tokenArtSelector(tokenName):
     mute()
     token = table.create(tokenTypes[tokenName][1], 0, 0, 1, persist = False)
-    artDict = getSetting('tokenArts', Dictionary[str,str]({}))
+    artDict = getSetting('tokenArts', convertToString({}))
+    artDict = eval(artDict)
     if token.model in artDict:
         token.switchTo(artDict[token.model])
     return token
@@ -970,9 +971,10 @@ def nextTokenArt(card, x = 0, y = 0):
     if not artIndex in artList:
         artIndex = ''
     card.switchTo(artIndex)
-    artDict = getSetting('tokenArts', Dictionary[str,str]({}))
+    artDict = getSetting('tokenArts', convertToString({}))
+    artDict = eval(artDict)
     artDict[card.model] = artIndex
-    setSetting('tokenArts', Dictionary[str,str](artDict))
+    setSetting('tokenArts', convertToString(artDict))
 
 def autoAddMarker(card, x = 0, y = 0):
     mute()
