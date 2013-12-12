@@ -325,7 +325,10 @@ def play(card, x = 0, y = 0):
             cardalign()
     else:
         src = card.group
-        card.moveToTable(defaultX, defaultY)
+        if re.search("Instant", card.Type) or re.search("Sorcery", card.Type):
+            card.moveTo(card.owner.Graveyard)
+        else:
+            card.moveToTable(defaultX, defaultY)
         notify("{} plays {} from their {}.".format(me, card, src.name))
         cardalign()
 
