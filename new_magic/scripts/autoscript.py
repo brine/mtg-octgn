@@ -452,7 +452,7 @@ def autoParser(card, tagclass, morph = False):
         if p not in getPlayers(): #If the player has left the game, they need to be removed from the dictionary
             del activePlayers[playerId]
             setGlobalVariable('activePlayers', str(activePlayers))
-        elif activePlayers[playerId] == True: ## Only select the players who have their autoscripts enabled.
+        elif activePlayers[playerId] == "True": ## Only select the players who have their autoscripts enabled.
             priorityList.append(playerId)
     setGlobalVariable('priority', str(priorityList))
     if tagclass == 'acti': ##acti needs to return the number of the activated ability
@@ -713,7 +713,7 @@ def autosmartmarker(card, marker):
 
 def attach(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck():
+    if autoscriptCheck() == "True":
         target = [cards for cards in table if cards.targetedBy]
         if len(target) == 0 or (len(target) == 1 and card in target):
             text = autodetach(card)
@@ -887,7 +887,7 @@ def cardalign():
             ypos += 93 + 10*max([attachHeight[6], attachHeight[7]])
         for cardname in cardtype:
             for card in carddict[cardname]:
-                if allowAlign:
+                if allowAlign == "True":
                     card.moveToTable(flip * xpos, side * ypos + (44*side - 44))
                 xpos += 9
                 if card._id in attachDict:
@@ -944,7 +944,7 @@ def autoCreateToken(card, x = 0, y = 0):
             card.moveToTable(x,y)
             x, y = table.offset(x, y)
             text += "{}/{} {} {}, ".format(tokencard.Power, tokencard.Toughness, tokencard.Color, tokencard.Name)
-        if autoscriptCheck():
+        if autoscriptCheck() == "True":
             cardalign()
         notify("{} creates {}.".format(me, text[0:-2]))
 

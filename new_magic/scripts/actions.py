@@ -43,7 +43,7 @@ def priorityResolve(name, oldValue, value):
                 if isStack(c)]
         if len(stack) == 0:
             return
-        if stack[-1].controller == me and autoscriptCheck():
+        if stack[-1].controller == me and autoscriptCheck() == "True":
             resolve(stack[-1])
             cardalign()
 
@@ -94,7 +94,7 @@ def respond(group, x = 0, y = 0):
     notify('{} RESPONDS!'.format(me))
 
 def passPriority(group, x = 0, y = 0, autoscriptOverride = False):
-    if autoscriptCheck() or autoscriptOverride == True:
+    if autoscriptCheck() == "True" or autoscriptOverride == True:
         priorityList = eval(getGlobalVariable('priority'))
         if me._id in priorityList:
             priorityList.remove(me._id)
@@ -297,7 +297,7 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
 
 def play(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck():
+    if autoscriptCheck() == "True":
         text = autoParser(card, 'cast')
         if text != "BREAK":
             ## Checks to see if the cast card is an Aura, then check to see if a target was made to resolve-attach to
@@ -327,6 +327,7 @@ def play(card, x = 0, y = 0):
         src = card.group
         card.moveToTable(defaultX, defaultY)
         notify("{} plays {} from their {}.".format(me, card, src.name))
+        cardalign()
 
 def flashback(card, x = 0, y = 0):
     mute()
@@ -343,7 +344,7 @@ def batchResolve(cards, x = 0, y = 0):
 def resolve(card, x = 0, y = 0):
     mute()
     global stackDict
-    if autoscriptCheck():
+    if autoscriptCheck() == "True":
         if scriptMarkers['suspend'] in card.markers:
             if counters['time'] in card.markers:
                 card.markers[counters['time']] -= 1
@@ -396,7 +397,7 @@ def destroy(card, x = 0, y = 0):
     mute()
     global stackDict
     src = card.group
-    if autoscriptCheck() and src == table:
+    if autoscriptCheck() == "True" and src == table:
         if card in stackDict: #Destroying a card on a stack is considered countering that spell
             card.moveTo(card.owner.Graveyard)
             del stackDict[card]
@@ -408,12 +409,12 @@ def destroy(card, x = 0, y = 0):
             notify("{} destroys {}{}.".format(me, card, text))
     else:
         card.moveTo(card.owner.Graveyard)
-        notify("{} destroys {}.".format(me, card, fromText))
+        notify("{} destroys {}.".format(me, card))
 
 def discard(card, x = 0, y = 0):
     mute()
     src = card.group
-    if autoscriptCheck():
+    if autoscriptCheck() == "True":
         if src == me.hand:  ## Only run discard scripts if the card is discarded from hand
             text = autoParser(card, 'discard')
         else:
@@ -434,7 +435,7 @@ def batchExile(cards, x = 0, y = 0):
 def exile(card, x = 0, y = 0):
     mute()
     src = card.group
-    if autoscriptCheck() and src == table:
+    if autoscriptCheck() == "True" and src == table:
         text = autoParser(card, 'exile')
         if text != "BREAK":
             card.moveTo(card.owner.piles['Exiled Zone'])
@@ -452,7 +453,7 @@ def batchAttack(cards, x = 0, y = 0):
 
 def attack(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck():
+    if autoscriptCheck() == "True":
         if card.orientation == Rot90:
             if confirm("Cannot attack: already tapped. Continue?") != True:
                 return
@@ -483,7 +484,7 @@ def batchAttackWithoutTapping(cards, x = 0, y = 0):
 
 def attackWithoutTapping(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck():
+    if autoscriptCheck() == "True":
         if card.orientation == Rot90:
             if confirm("Cannot attack: {} is tapped. Continue?".format(card)) != True:
                 return
@@ -512,7 +513,7 @@ def batchBlock(cards, x = 0, y = 0):
 
 def block(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck():
+    if autoscriptCheck() == "True":
         if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
             card.highlight = BlockDoesntUntapColor
         else:
@@ -535,7 +536,7 @@ def batchActivate(cards, x = 0, y = 0):
 
 def activate(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck():
+    if autoscriptCheck() == "True":
         text = autoParser(card, 'acti')
         if text != "BREAK":
             (num, text) = text
@@ -545,7 +546,7 @@ def activate(card, x = 0, y = 0):
 
 def morph(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck():
+    if autoscriptCheck() == "True":
         card.isFaceUp = False
         text = autoParser(card, 'cast', True)
         cardalign()
@@ -556,7 +557,7 @@ def morph(card, x = 0, y = 0):
     src = card.group
     notify("{} casts a card face-down from their {}.".format(me, src.name))
     card.moveToTable(defaultX, defaultY, True)
-    if autoscriptCheck():
+    if autoscriptCheck() == "True":
         card.markers[scriptMarkers['cast']] = 1
         cardalign()
 
@@ -580,7 +581,7 @@ def transform(card, x = 0, y = 0):
             notify("{} morphs {} face down.".format(me, card))
             card.isFaceUp = False
         else:
-            if autoscriptCheck():
+            if autoscriptCheck() == "True":
                 card.peek()
                 rnd(1,10)
                 text = autoParser(card, 'morph') ## The card will flip up in the autoParser
@@ -605,7 +606,7 @@ def blink(card, x = 0, y = 0):
     mute()
     src = card.group
     if src == table:
-        if autoscriptCheck():
+        if autoscriptCheck() == "True":
             text = autoParser(card, 'exile')
             if text == "BREAK":
                 return
@@ -850,7 +851,7 @@ def draw(group, x = 0, y = 0):
     rnd(10,100)
     if re.search(r'Miracle ', card.Rules):
         if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.Name, card.Rules)):
-            if autoscriptCheck():
+            if autoscriptCheck() == "True":
                 text = autoParser(card, 'miracle')
                 card.highlight = MiracleColor
                 cardalign()
