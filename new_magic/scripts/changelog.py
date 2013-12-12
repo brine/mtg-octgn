@@ -33,5 +33,11 @@ changelog = {
         "Cards entering the battlefield won't zoom out the tale.",
         "Fixed a python error when you cancel out of the scry window.",
         "Fixed ampersands showing up in the mana costs of some cards."
+        ]),
+    3020800: ("3.2.8.0", "12 December 2013", [
+        "Fixed a bug where this changelog window kept popping up.",
+        "Favorite Token artworks will now be saved properly.",
+        "Attack, block, exile, activate, tap/untap process faster when performed on a selection of cards.",
+        "Fixed some bugs with the alignment and autoscript toggles."
         ])
 }
