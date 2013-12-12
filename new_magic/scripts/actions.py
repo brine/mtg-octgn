@@ -45,6 +45,7 @@ def priorityResolve(name, oldValue, value):
             return
         if stack[-1].controller == me and autoscriptCheck():
             resolve(stack[-1])
+            cardalign()
 
 def endTurn(player):
     mute()
@@ -333,6 +334,12 @@ def flashback(card, x = 0, y = 0):
     play(card)
     stackDict[card]['moveto'] = 'exile'
 
+def batchResolve(cards, x = 0, y = 0):
+    mute()
+    for card in cards:
+        resolve(card)
+    cardalign()
+
 def resolve(card, x = 0, y = 0):
     mute()
     global stackDict
@@ -346,7 +353,6 @@ def resolve(card, x = 0, y = 0):
                 text = autoParser(card, 'cast')
                 if text != "BREAK":
                     card.markers[scriptMarkers['suspend']] = 0
-                    cardalign()
                     notify("{} casts suspended {}{}.".format(me, card, text))
             return
         if card in stackDict:
@@ -367,7 +373,6 @@ def resolve(card, x = 0, y = 0):
                 autoParser(card, 'etb')
             else: #non-permanents and ability triggers are sent to graveyard after resolution
                 card.moveTo(card.owner.Graveyard)
-            cardalign()
         else:
             card.orientation ^= Rot90
             if card.orientation & Rot90 == Rot90:
@@ -380,6 +385,12 @@ def resolve(card, x = 0, y = 0):
             notify('{} taps {}'.format(me, card))
         else:
             notify('{} untaps {}'.format(me, card))
+
+def batchDestroy(cards, x = 0, y = 0):
+    mute()
+    for card in cards:
+        destroy(card)
+    cardalign()
 
 def destroy(card, x = 0, y = 0):
     mute()
@@ -395,26 +406,30 @@ def destroy(card, x = 0, y = 0):
         if text != "BREAK":
             card.moveTo(card.owner.Graveyard)
             notify("{} destroys {}{}.".format(me, card, text))
-        cardalign()
     else:
         card.moveTo(card.owner.Graveyard)
-        if src == table:
-            notify("{} destroys {}.".format(me, card, fromText))
-        else:
-            notify("{} discards {} from {}.".format(me, card, src.name))
+        notify("{} destroys {}.".format(me, card, fromText))
 
 def discard(card, x = 0, y = 0):
     mute()
     src = card.group
     if autoscriptCheck():
-        text = autoParser(card, 'discard')
+        if src == me.hand:  ## Only run discard scripts if the card is discarded from hand
+            text = autoParser(card, 'discard')
+        else:
+            text = ""
         if text != "BREAK":
             card.moveTo(card.owner.Graveyard)
-            notify("{} discards {}{}.".format(me, card, text))
-        cardalign()
+            notify("{} discards {} from {}{}.".format(me, card, src, text))
     else:
         card.moveTo(card.owner.Graveyard)
-        notify("{} discards {}.".format(me, card))
+        notify("{} discards {} from {}.".format(me, card, src))
+
+def batchExile(cards, x = 0, y = 0):
+    mute()
+    for card in cards:
+        exile(card)
+    cardalign()
 
 def exile(card, x = 0, y = 0):
     mute()
@@ -424,11 +439,16 @@ def exile(card, x = 0, y = 0):
         if text != "BREAK":
             card.moveTo(card.owner.piles['Exiled Zone'])
             notify("{} exiles {}{}.".format(me, card, text))
-        cardalign()
     else:
         fromText = " from the battlefield" if src == table else " from their " + src.name
         card.moveTo(card.owner.piles['Exiled Zone'])
         notify("{} exiles {}{}.".format(me, card, fromText))
+
+def batchAttack(cards, x = 0, y = 0):
+    mute()
+    for card in cards:
+        attack(card)
+    cardalign()
 
 def attack(card, x = 0, y = 0):
     mute()
@@ -445,7 +465,6 @@ def attack(card, x = 0, y = 0):
         else:
             card.highlight = AttackColor
         text = autoParser(card, 'attack')
-        cardalign()
         if text != "BREAK":
             notify("{} attacks with {}{}.".format(me, card, text))
     else:
@@ -455,6 +474,12 @@ def attack(card, x = 0, y = 0):
         else:
             card.highlight = AttackColor
         notify('{} attacks with {}'.format(me, card))
+
+def batchAttackWithoutTapping(cards, x = 0, y = 0):
+    mute()
+    for card in cards:
+        attackWithoutTapping(card)
+    cardalign()
 
 def attackWithoutTapping(card, x = 0, y = 0):
     mute()
@@ -470,7 +495,6 @@ def attackWithoutTapping(card, x = 0, y = 0):
         else:
             card.highlight = AttackColor
         text = autoParser(card, 'attack')
-        cardalign()
         if text != "BREAK":
             notify("{} attacks without tapping with {}{}.".format(me, card, text))
     else:
@@ -480,6 +504,12 @@ def attackWithoutTapping(card, x = 0, y = 0):
             card.highlight = AttackColor
         notify('{} attacks without tapping with {}'.format(me, card))
 
+def batchBlock(cards, x = 0, y = 0):
+    mute()
+    for card in cards:
+        block(card)
+    cardalign()
+
 def block(card, x = 0, y = 0):
     mute()
     if autoscriptCheck():
@@ -488,7 +518,6 @@ def block(card, x = 0, y = 0):
         else:
             card.highlight = BlockColor
         text = autoParser(card, 'block')
-        cardalign()
         if text != "BREAK":
             notify("{} blocks with {}{}.".format(me, card, text))
     else:
@@ -498,11 +527,16 @@ def block(card, x = 0, y = 0):
             card.highlight = BlockColor
         notify('{} blocks with {}'.format(me, card))
 
+def batchActivate(cards, x = 0, y = 0):
+    mute()
+    for card in cards:
+        activate(card)
+    cardalign()
+
 def activate(card, x = 0, y = 0):
     mute()
     if autoscriptCheck():
         text = autoParser(card, 'acti')
-        cardalign()
         if text != "BREAK":
             (num, text) = text
             notify("{} activates {}'s ability #{}{}.".format(me, card, num, text))

@@ -78,17 +78,17 @@
       <groupaction menu="Enable/Disable Alignment" execute="alignDisable" />
       <groupaction menu="Enable/Disable Attachment Alignment" execute="attachDisable" />
 	</groupactions>
-    <cardaction menu="Tap/Untap or Resolve" default="True" execute="resolve" />
+    <cardaction menu="Tap/Untap or Resolve" default="True" batchExecute="batchResolve" />
     <cardaction menu="Don't Untap during Untap Step" shortcut="ctrl+V" execute="doesNotUntap" />
-    <cardaction menu="Attack" shortcut="ctrl+A" execute="attack" />
-    <cardaction menu="Attack without tapping" shortcut="ctrl+shift+A" execute="attackWithoutTapping" />
-    <cardaction menu="Block" shortcut="ctrl+B" execute="block" />
+    <cardaction menu="Attack" shortcut="ctrl+A" batchExecute="batchAttack" />
+    <cardaction menu="Attack without tapping" shortcut="ctrl+shift+A" batchExecute="batchAttackWithoutTapping" />
+    <cardaction menu="Block" shortcut="ctrl+B" batchExecute="batchBlock" />
     <cardaction menu="Attach to Targeted Card" shortcut="ctrl+Q" execute="attach" />
     <cardaction menu="Morph/Transform/Flip Card" shortcut="ctrl+F" execute="transform" />
     <cardaction menu="Turn Face-Up/Down" shortcut="ctrl+shift+F" execute="flip" />
     <cardaction menu="Clone Card" shortcut="ctrl+C" batchExecute="clone" />
-    <cardaction menu="Destroy Card" shortcut="del" execute="destroy" />
-    <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
+    <cardaction menu="Destroy Card" shortcut="del" batchExecute="batchDestroy" />
+    <cardaction menu="Exile Card" shortcut="ctrl+E" batchExecute="batchExile" />
     <cardaction menu="Blink Card" shortcut="ctrl+shift+B" execute="blink" />
     <cardaction menu="Move to Top of Libary" shortcut="ctrl+Y" execute="tolibrary" />
     <cardaction menu="Move to a Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
@@ -155,7 +155,7 @@
       </groupactions>
       <cardaction menu="Cast Card" shortcut="ctrl+C" execute="play" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
-      <cardaction menu="Discard Card" shortcut="del" execute="destroy" />
+      <cardaction menu="Discard Card" shortcut="del" execute="discard" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Move Card to Hand" default="True" shortcut="ctrl+H" execute="tohand" />
       <groupaction menu="Reveal/Hide Card" shortcut="ctrl+R" execute="revealtoplibrary" />
@@ -187,7 +187,7 @@
       </groupactions>
       <cardaction menu="Cast Card" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
-      <cardaction menu="Discard Card" shortcut="del" execute="destroy" /> 
+      <cardaction menu="Discard Card" shortcut="del" execute="discard" /> 
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+f" execute="morph" />
       <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" /> 
       <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />      
