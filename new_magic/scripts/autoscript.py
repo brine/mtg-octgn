@@ -8,6 +8,7 @@ playerside = None
 sideflip = None
 offlinedisable = False
 savedtags = { }
+timer = []
 
 def clearCache(group, x = 0, y = 0):
     if confirm("Reset the Autoscript Tag cache?"):
@@ -17,6 +18,18 @@ def clearCache(group, x = 0, y = 0):
     if confirm("Reset the Attachment Dictionary?\nNote: Cards will no longer be attached."):
         setGlobalVariable('cattach', "{ }")
         notify("{} reset the global attachment dictionary.".format(me))
+
+def debugCheck():
+    return getSetting("debugTimer", "False")
+
+def debugDisable(group, x = 0, y = 0):
+    mute()
+    if debugCheck() == "True":
+        setSetting("debugTimer", "False")
+        whisper("(you disabled the Debug Timer)")
+    else:
+        setSetting("debugTimer", "True")
+        whisper("(you enabled the Debug Timer)")
 
 def autoDisable(group, x = 0, y = 0):
     mute()
@@ -62,6 +75,7 @@ def attachCheck():
 
 def getTags(card, key = None):
     mute()
+    timer = time.clock()
     global savedtags, offlinedisable
     cardname = card.Name
     encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname)) #encodes the card name so the website can parse it safely
@@ -121,6 +135,8 @@ def getTags(card, key = None):
                 tagdict[actionlist[0]] = actiondict
         savedtags[cardname] = tagdict
 #### Fetch and return the card tags to previous functions
+    if debugCheck() == "True":
+        whisper("DEBUG(tags {} {}: {})".format(card, key, time.clock() - timer))
     if key in savedtags[cardname]:
         returnTags = savedtags[cardname][key]
         if returnTags == None:
@@ -131,6 +147,7 @@ def getTags(card, key = None):
 
 def tagConstructor(card, key, modeModifier = ''):
     mute()
+    timer = time.clock()
     cattach = eval(getGlobalVariable('cattach'))
     attachments = [k for (k,v) in cattach.iteritems() if v == card._id]
     returnTags = []
@@ -205,6 +222,8 @@ def tagConstructor(card, key, modeModifier = ''):
             returnTags[4] = newTags[4]
             returnTags[5] = newTags[5]
             returnModeChoice = (modeChoice, modeList[modeChoice - 1])
+    if debugCheck() == "True":
+        whisper("DEBUG(const {} {}: {})".format(card, key, time.clock() - timer))
     return (returnTags, returnActiChoice, returnModeChoice)
 
 def submitTags(card, x = 0, y = 0):
@@ -259,6 +278,7 @@ costMemory = (0,0)
 
 def autoParser(card, tagclass, morph = False):
     mute()
+    timer = time.clock()
     text = ''
     global stackDict, costMemory
     if not tagclass == 'etb': ## we don't care about costMemory if its not an ETB trigger.
@@ -455,6 +475,8 @@ def autoParser(card, tagclass, morph = False):
         elif activePlayers[playerId] == "True": ## Only select the players who have their autoscripts enabled.
             priorityList.append(playerId)
     setGlobalVariable('priority', str(priorityList))
+    if debugCheck() == "True":
+        whisper("DEBUG(parser {} {}: {})".format(card, tagclass, time.clock() - timer))
     if tagclass == 'acti': ##acti needs to return the number of the activated ability
         return (actiTuple[0], text)
     else:

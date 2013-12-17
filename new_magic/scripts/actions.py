@@ -297,6 +297,7 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
 
 def play(card, x = 0, y = 0):
     mute()
+    timer = time.clock()
     if autoscriptCheck() == "True":
         text = autoParser(card, 'cast')
         if text != "BREAK":
@@ -331,6 +332,8 @@ def play(card, x = 0, y = 0):
             card.moveToTable(defaultX, defaultY)
         notify("{} plays {} from their {}.".format(me, card, src.name))
         cardalign()
+    if debugCheck() == "True":
+        whisper("DEBUG(play {}: {})".format(card, time.clock() - timer))
 
 def flashback(card, x = 0, y = 0):
     mute()
