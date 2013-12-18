@@ -97,7 +97,11 @@ def getTags(card, key = None):
             encodedcardname += '&block'
 #### Fetch card tags from the online database
         if offlinedisable == False:
+            webTimer = time.clock()
             (fulltag, code) = webRead('http://octgn.gamersjudgement.com/forum/tags2.php?id={}'.format(encodedcardname), 7000)
+            webTimer = time.clock() - webTimer
+            if debugCheck() == "True":
+                whisper("DEBUG(webread {} {}: {})".format(card, key, webTimer))
             if code == 204: ## if the card tag doesn't exist on the site.
                 fulltag = ""
             elif code != 200: ## Handles cases where the site is unavailable
