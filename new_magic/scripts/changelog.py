@@ -39,5 +39,12 @@ changelog = {
         "Favorite Token artworks will now be saved properly.",
         "Attack, block, exile, activate, tap/untap process faster when performed on a selection of cards.",
         "Fixed some bugs with the alignment and autoscript toggles."
+        ]),
+    3020900: ("3.2.9.0", "17 December 2013", [
+        "Added Theros Prerelease Packs to the sealed deck editor.",
+        "Added a debug option in the 'Autoscript Settings' menu. It will be used to debug lag times in the game.",
+        "Manually moving a card on the table will anchor it to the table, blocking it from alignment.",
+        "Added 'Align Card' action for cards on the table.  Using this on an anchored card will remove the anchor and align the card.",
+        "Using the 'Re-Align Cards' table action now removes the anchors on all cards, forcing them to align."
         ])
 }
