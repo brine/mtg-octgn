@@ -9,6 +9,7 @@ sideflip = None
 offlinedisable = False
 savedtags = { }
 timer = []
+alignIgnore = []
 
 def clearCache(group, x = 0, y = 0):
     if confirm("Reset the Autoscript Tag cache?"):
@@ -751,10 +752,20 @@ def attach(card, x = 0, y = 0):
     else:
         whisper("Autoscripts must be enabled to use this feature")
 
-def align(group, x = 0, y = 0):  ## This is for the menu action for alignment.
+def align(group, x = 0, y = 0):  ## This is the menu groupaction for aligning ALL your cards.
     mute()
+    global alignIgnore
+    alignIgnore = []  ## forces all cards to realign, even ones previously anchored to the board
     if cardalign() != "BREAK":  ## Don't show the notify message if cardalign fails
         notify("{} re-aligns his cards on the table".format(me))
+
+def alignCard(cards, x = 0, y = 0):  ##This is the menu cardaction for reactivating alignment on a card
+    mute()
+    global alignIgnore
+    for card in cards:
+        if card in alignIgnore:
+            alignIgnore.remove(card)
+    cardalign()
 
 def isStack(card):  ## Checks to see if the card is on the stack
     mute()
@@ -864,6 +875,7 @@ def cardalign():
     attachHeight = [0,0,0,0,0,0,0,0] ## This part counts the total number of attachments on each card in each row, to optimize the vertical spacing between rows
     for card in table:
         if (not counters['general'] in card.markers  ## Cards with General markers ignore alignment
+                    and not card in alignIgnore
                     and not isStack(card)  ## cards on the stack have already been aligned so ignore them
                     and card.controller == me  ## don't align other player's cards
                     and not card._id in cattach):  ## don't align attachments yet

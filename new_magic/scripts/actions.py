@@ -60,6 +60,9 @@ def moveEvent(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, 
         return
     if fromGroup != table or toGroup != table:  ## Ignore non-table movements
         return
+    global alignIgnore
+    if not card in alignIgnore and alignCheck() == "True":  ## Moving a card will automatically disable it from alignment
+        alignIgnore.append(card)  ## anchors the card to the table
     if attachCheck():
         alignAttachments(card)
 
@@ -635,7 +638,7 @@ def rulings(card, x = 0, y = 0):
     if not card.MultiverseId == None:
         openUrl('http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid={}'.format(card.MultiverseId))
 
-def generaltoggle(card, x = 0, y = 0):
+def generaltoggle(card, x = 0, y = 0): ## This isn't used anymore
     mute()
     if counters['general'] in card.markers:
         card.markers[counters['general']] = 0

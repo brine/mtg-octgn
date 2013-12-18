@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.8.2" octgnVersion="3.1.0.32"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.8.3" octgnVersion="3.1.0.32"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://octgn.gamersjudgement.com/wordpress/mtg/download-links/" gameurl="http://octgn.gamersjudgement.com/wordpress/mtg/" authors="brine"
     markersize="14" iconurl="http://www.wizards.com/Magic/Assets/magic_logo.png" >
@@ -111,7 +111,7 @@
     </cardactions>
     <cardaction menu="Auto-Create Token" shortcut="ctrl+shift+T" execute="autoCreateToken" />
     <cardaction menu="Swap Token Art" execute="nextTokenArt" />
-    <cardaction menu="Commander Toggle / Exclude from Alignment" execute="generaltoggle" />
+    <cardaction menu="Align Card" batchExecute="alignCard" />
     <cardaction menu="Check Card Rulings (on Gatherer)" execute="rulings" />
     <cardaction menu="Submit Tags" execute="submitTags" />
   </table>
