@@ -318,6 +318,11 @@ def play(card, x = 0, y = 0):
     mute()
     timer = time.clock()
     if autoscriptCheck() == "True":
+        src = card.group
+        if src == me.hand:
+            srcText = ""
+        else:
+            srcText = " from {}".format(src.name)
         text = autoParser(card, 'cast')
         timer = debugWhisper("play1", card, timer)
         if text != "BREAK":
@@ -343,9 +348,9 @@ def play(card, x = 0, y = 0):
             else:
                 modeTuple = stackDict[card]['mode']
                 if modeTuple[0] == 0:
-                    notify("{} casts {}{}.".format(me, card, text))
+                    notify("{} casts {}{}{}.".format(me, card, srcText, text))
                 else:
-                    notify("{} casts {} (mode #{}){}.".format(me, card, modeTuple[0], text))
+                    notify("{} casts {} (mode #{}){}{}.".format(me, card, modeTuple[0], srcText, text))
                 timer = debugWhisper("play4", card, timer)
             cardalign()
             timer = debugWhisper("play5", card, timer)
@@ -430,7 +435,10 @@ def destroy(card, x = 0, y = 0):
     src = card.group
     if autoscriptCheck() == "True" and src == table:
         if card in stackDict: #Destroying a card on a stack is considered countering that spell
-            card.moveTo(card.owner.Graveyard)
+            if stackDict[card]['moveto'] == 'exile':
+                card.moveTo(card.owner.piles['Exiled Zone'])
+            else:
+                card.moveTo(card.owner.Graveyard)
             del stackDict[card]
             notify("{}'s {} was countered.".format(me, card))
             return
