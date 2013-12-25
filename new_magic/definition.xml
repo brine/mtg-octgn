@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.9.0" octgnVersion="3.1.0.32"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.9.1" octgnVersion="3.1.0.32"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://octgn.gamersjudgement.com/wordpress/mtg/download-links/" gameurl="http://octgn.gamersjudgement.com/wordpress/mtg/" authors="brine"
     markersize="14" iconurl="http://www.wizards.com/Magic/Assets/magic_logo.png" >
@@ -16,7 +16,7 @@
     <event name="OnGlobalVariableChanged" action="priorityResolve" />
     <event name="OnEndTurn" action="endTurn" />
 	<event name="OnMoveCard" action="moveEvent" />
-	<event name="OnTableLoad" action="loadUpdates" />
+	<event name="OnTableLoad" action="initializeGame" />
   </events>
   <fonts>
     <font src="fonts/mplantin_symbols.ttf" size="14" target="context"/>

@@ -66,8 +66,12 @@ def moveEvent(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, 
     if attachCheck():
         alignAttachments(card)
 
-def loadUpdates():
+def initializeGame():
     mute()
+    #### INITIALIZE VARIABLES
+    global debugMode
+    debugMode = getSetting("debugTimer", "False")
+    #### LOAD UPDATES
     v1, v2, v3, v4 = gameVersion.split('.')  ## split apart the game's version number
     v1 = int(v1) * 1000000
     v2 = int(v2) * 10000
@@ -303,7 +307,9 @@ def play(card, x = 0, y = 0):
     timer = time.clock()
     if autoscriptCheck() == "True":
         text = autoParser(card, 'cast')
+        timer = debugWhisper("play1", card, timer)
         if text != "BREAK":
+            timer = time.clock()
             ## Checks to see if the cast card is an Aura, then check to see if a target was made to resolve-attach to
             if (card.Subtype != None and re.search(r'Aura', card.Subtype)) or re.search(r'Bestow ', card.Rules):  ## Automatically register the card as an attachment if it's an Aura or Bestow
                 target = (card for card in table if card.targetedBy)
@@ -315,18 +321,22 @@ def play(card, x = 0, y = 0):
                         targetcard.target(False)
                         setGlobalVariable('cattach', str(cattach))
                         text += ", targeting {}".format(targetcard)
+            timer = debugWhisper("play2", card, timer)
             ## If its a land, automatically resolve it
             if re.search('Land', card.Type):
                 text += autoParser(card, 'resolve')
                 notify("{} plays {}{}.".format(me, card, text))
                 autoParser(card, 'etb')
+                timer = debugWhisper("play3", card, timer)
             else:
                 modeTuple = stackDict[card]['mode']
                 if modeTuple[0] == 0:
                     notify("{} casts {}{}.".format(me, card, text))
                 else:
                     notify("{} casts {} (mode #{}){}.".format(me, card, modeTuple[0], text))
+                timer = debugWhisper("play4", card, timer)
             cardalign()
+            timer = debugWhisper("play5", card, timer)
     else:
         src = card.group
         if re.search("Instant", card.Type) or re.search("Sorcery", card.Type):
@@ -334,9 +344,9 @@ def play(card, x = 0, y = 0):
         else:
             card.moveToTable(defaultX, defaultY)
         notify("{} plays {} from their {}.".format(me, card, src.name))
+        timer = debugWhisper("play6", card, timer)
         cardalign()
-    if debugCheck() == "True":
-        whisper("DEBUG(play {}: {})".format(card, time.clock() - timer))
+        timer = debugWhisper("play7", card, timer)
 
 def flashback(card, x = 0, y = 0):
     mute()

@@ -9,6 +9,7 @@ sideflip = None
 offlinedisable = False
 savedtags = { }
 timer = []
+debugMode = False
 alignIgnore = []
 
 def clearCache(group, x = 0, y = 0):
@@ -20,16 +21,23 @@ def clearCache(group, x = 0, y = 0):
         setGlobalVariable('cattach', "{ }")
         notify("{} reset the global attachment dictionary.".format(me))
 
-def debugCheck():
-    return getSetting("debugTimer", "False")
+def debugWhisper(text, card, timer):
+    if debugMode == "True":
+        timer = time.clock() - timer
+        if timer > 1:
+            whisper("DEBUG({} {}: {})".format(text, card, timer))
+    return time.clock()
 
 def debugDisable(group, x = 0, y = 0):
     mute()
-    if debugCheck() == "True":
+    global debugMode
+    if getSetting("debugTimer", "False") == "True":
         setSetting("debugTimer", "False")
+        debugMode = "False"
         whisper("(you disabled the Debug Timer)")
     else:
         setSetting("debugTimer", "True")
+        debugMode = "True"
         whisper("(you enabled the Debug Timer)")
 
 def autoDisable(group, x = 0, y = 0):
@@ -99,9 +107,7 @@ def getTags(card, key = None):
         if offlinedisable == False:
             webTimer = time.clock()
             (fulltag, code) = webRead('http://octgn.gamersjudgement.com/forum/tags2.php?id={}'.format(encodedcardname), 7000)
-            webTimer = time.clock() - webTimer
-            if debugCheck() == "True":
-                whisper("DEBUG(webread {} {}: {})".format(card, key, webTimer))
+            webTimer = debugWhisper("webread", card, webTimer)
             if code == 204: ## if the card tag doesn't exist on the site.
                 fulltag = ""
             elif code != 200: ## Handles cases where the site is unavailable
@@ -140,8 +146,7 @@ def getTags(card, key = None):
                 tagdict[actionlist[0]] = actiondict
         savedtags[cardname] = tagdict
 #### Fetch and return the card tags to previous functions
-    if debugCheck() == "True":
-        whisper("DEBUG(tags {} {}: {})".format(card, key, time.clock() - timer))
+    timer = debugWhisper("tags {}".format(key), card, timer)
     if key in savedtags[cardname]:
         returnTags = savedtags[cardname][key]
         if returnTags == None:
@@ -227,8 +232,7 @@ def tagConstructor(card, key, modeModifier = ''):
             returnTags[4] = newTags[4]
             returnTags[5] = newTags[5]
             returnModeChoice = (modeChoice, modeList[modeChoice - 1])
-    if debugCheck() == "True":
-        whisper("DEBUG(const {} {}: {})".format(card, key, time.clock() - timer))
+    timer = debugWhisper("const", card, timer)
     return (returnTags, returnActiChoice, returnModeChoice)
 
 def submitTags(card, x = 0, y = 0):
@@ -480,8 +484,7 @@ def autoParser(card, tagclass, morph = False):
         elif activePlayers[playerId] == "True": ## Only select the players who have their autoscripts enabled.
             priorityList.append(playerId)
     setGlobalVariable('priority', str(priorityList))
-    if debugCheck() == "True":
-        whisper("DEBUG(parser {} {}: {})".format(card, tagclass, time.clock() - timer))
+    timer = debugWhisper("parser", card, timer)
     if tagclass == 'acti': ##acti needs to return the number of the activated ability
         return (actiTuple[0], text)
     else:
