@@ -1,7 +1,12 @@
+import re
+import time
+import clr
+from System import Convert
+from System import Text
+
 #---------------------------------------------------------------------------
 # Constants
 #---------------------------------------------------------------------------
-import re
 
 phases = [
     "It is now the Pre-game Setup Phase",
@@ -26,6 +31,20 @@ MiracleColor = "#1D7CF2"
 
 defaultX = 30
 defaultY = 25
+
+phaseIdx = 0
+diesides = 20
+
+playerside = None
+sideflip = None
+offlinedisable = False
+savedtags = { }
+timer = []
+debugMode = False
+alignIgnore = []
+
+stackDict = {} ## Needs to move to a global variable for game reconnects
+costMemory = (0,0)
 #---------------------------------------------------------------------------
 # Event Stuff
 #---------------------------------------------------------------------------
@@ -86,13 +105,6 @@ def initializeGame():
             updates = '\n-'.join(text)
             confirm("What's new in {} ({}):\n-{}".format(stringVersion, date, updates))
     setSetting("lastVersion", convertToString(currentVersion))  ## Store's the current version to a setting
-
-#---------------------------------------------------------------------------
-# Global variables
-#---------------------------------------------------------------------------
-
-phaseIdx = 0
-diesides = 20
 
 #---------------------------------------------------------------------------
 # Table group actions

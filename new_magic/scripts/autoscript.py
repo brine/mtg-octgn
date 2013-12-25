@@ -1,16 +1,3 @@
-import re
-import time
-import clr
-from System import Convert
-from System import Text
-
-playerside = None
-sideflip = None
-offlinedisable = False
-savedtags = { }
-timer = []
-debugMode = False
-alignIgnore = []
 
 def clearCache(group, x = 0, y = 0):
     if confirm("Reset the Autoscript Tag cache?"):
@@ -281,9 +268,6 @@ def passControl(card, player):  ## Remote call for taking control of cards you d
 ##################################
 #Card Functions -- Autoscripted  
 ##################################
-
-stackDict = {} ## Needs to move to a global variable for game reconnects
-costMemory = (0,0)
 
 def autoParser(card, tagclass, morph = False):
     mute()
