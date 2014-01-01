@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.9.3" octgnVersion="3.1.0.32"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.9.4" octgnVersion="3.1.0.32"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://octgn.gamersjudgement.com/wordpress/mtg/download-links/" gameurl="http://octgn.gamersjudgement.com/wordpress/mtg/" authors="brine"
     markersize="14" iconurl="http://www.wizards.com/Magic/Assets/magic_logo.png" >
@@ -61,6 +61,7 @@
     <groupaction menu="Pick a Random Card" execute="randomPick" />
     <groupaction menu="Respond" shortcut="Enter" execute="respond" />
     <groupaction menu="Pass Priority" shortcut="Tab" execute="passPriority" />
+    <groupaction menu="Auto-Pass Priority (Toggle)" shortcut="F6" execute="autoPass" />
     <groupaction menu="Scoop" shortcut="ctrl+shift+S" execute="scoop" />
     <groupaction menu="Next Phase" shortcut="ctrl+x" execute="nextPhase" />
     <groupactions menu="Phases / Steps...">
@@ -125,6 +126,7 @@
     <counter name="Green" icon="counters/green.png" />
     <counter name="Colorless" icon="counters/colorless.png" />
     <counter name="General" icon="counters/general.png" />
+	<globalvariable name="f6" value="False" />
     <hand name="Hand" shortcut="ctrl+H" visibility="me" width="63" height="88" icon="groups/hand.png">
       <cardaction menu="Cast Spell" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />

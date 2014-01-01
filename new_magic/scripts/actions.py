@@ -118,11 +118,23 @@ def passPriority(group, x = 0, y = 0, autoscriptOverride = False):
         if me._id in priorityList:
             priorityList.remove(me._id)
             setGlobalVariable('priority', str(priorityList))
-            notify('{} passes priority'.format(me))
+            notify('{} passes priority.'.format(me))
         elif autoscriptOverride == False:
             whisper('You already passed priority.')
     else:
         notify('{} passes priority to an opponent.'.format(me))
+
+def autoPass(group, x = 0, y = 0):
+    mute()
+    if not autoscriptCheck():  ## autoscripts must be enabled to use this
+        return
+    if me.getGlobalVariable("f6") == "False":
+        me.setGlobalVariable("f6", "True")
+        whisper("You are now auto-passing priority.")
+        passPriority(group)
+    else:
+        me.setGlobalVariable("f6", "False")
+        whisper("You turned off auto-pass priority.")
 
 def showCurrentPhase(group, x = 0, y = 0):
     notify(phases[phaseIdx].format(me))

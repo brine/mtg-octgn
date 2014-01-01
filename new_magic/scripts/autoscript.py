@@ -466,7 +466,10 @@ def autoParser(card, tagclass, morph = False):
             del activePlayers[playerId]
             setGlobalVariable('activePlayers', str(activePlayers))
         elif activePlayers[playerId] == "True": ## Only select the players who have their autoscripts enabled.
-            priorityList.append(playerId)
+            if p.getGlobalVariable("f6") == "False":
+                priorityList.append(playerId)
+            else:
+                notify('{} passes priority.'.format(p.name))
     setGlobalVariable('priority', str(priorityList))
     timer = debugWhisper("parser", card, timer)
     if tagclass == 'acti': ##acti needs to return the number of the activated ability
