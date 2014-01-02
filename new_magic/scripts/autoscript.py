@@ -560,7 +560,7 @@ def autopersist(card, stackcard, persist):
         autoParser(card, 'cast')
         autoParser(card, 'resolve')
         autoParser(card, 'etb')
-        card.markers[counters['minusoneminusone']] += 1
+        card.markers[counters['m1m1']] += 1
         return ", persisting"
     else:
         return ""
@@ -570,7 +570,7 @@ def autoundying(card, stackcard, undying):
         autoParser(card, 'cast')
         autoParser(card, 'resolve')
         autoParser(card, 'etb')
-        card.markers[counters['plusoneplusone']] += 1
+        card.markers[counters['p1p1']] += 1
         return ", undying"
     else:
         return ""
@@ -672,11 +672,11 @@ def automarker(card, stackcard, tag):
     quantity = cardcount(card, stackcard, qty)
     originalquantity = quantity
     addmarker = counters[markername]
-    while markername == "plusoneplusone" and counters["minusoneminusone"] in card.markers and quantity > 0:
-        card.markers[counters["minusoneminusone"]] -= 1
+    while markername == "p1p1" and counters["m1m1"] in card.markers and quantity > 0:
+        card.markers[counters["m1m1"]] -= 1
         quantity -= 1
-    while markername == "minusoneminusone" and counters["plusoneplusone"] in card.markers and quantity > 0:
-        card.markers[counters["plusoneplusone"]] -= 1
+    while markername == "m1m1" and counters["p1p1"] in card.markers and quantity > 0:
+        card.markers[counters["p1p1"]] -= 1
         quantity -= 1
     card.markers[addmarker] += quantity
     if originalquantity > 0:
@@ -1011,10 +1011,10 @@ def autoAddMarker(card, x = 0, y = 0):
     if markers != None:
         for marker in markers:
             addmarker = counters[marker]
-            if marker == "minusoneminusone" and counters["plusoneplusone"] in card.markers:
-                card.markers[counters["plusoneplusone"]] -= 1
-            elif marker == "plusoneplusone" and counters["minusoneminusone"] in card.markers:
-                card.markers[counters["minusoneminusone"]] -= 1
+            if marker == "m1m1" and counters["p1p1"] in card.markers:
+                card.markers[counters["p1p1"]] -= 1
+            elif marker == "p1p1" and counters["m1m1"] in card.markers:
+                card.markers[counters["m1m1"]] -= 1
             else:
                 card.markers[addmarker] += 1
             text += "one {}, ".format(addmarker[0])
@@ -1047,11 +1047,11 @@ def smartMarker(card, x = 0, y = 0):
     if marker == "":
         whisper("No counters available")
         return
-    if marker == "minusoneminusone" and counters["plusoneplusone"] in card.markers:
-        card.markers[counters["plusoneplusone"]] -= 1
+    if marker == "m1m1" and counters["p1p1"] in card.markers:
+        card.markers[counters["p1p1"]] -= 1
         notify("{} adds one -1/-1 counter to {}.".format(me, card))
-    elif marker == "plusoneplusone" and counters["minusoneminusone"] in card.markers:
-        card.markers[counters["minusoneminusone"]] -= 1
+    elif marker == "p1p1" and counters["m1m1"] in card.markers:
+        card.markers[counters["m1m1"]] -= 1
         notify("{} adds one -1/-1 counter to {}.".format(me, card))
     else:
         addmarker = counters[marker]

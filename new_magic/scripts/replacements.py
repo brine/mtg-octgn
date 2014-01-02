@@ -1,7 +1,7 @@
 counters = {
     'general': ('Commander Not-In-Play: ' + me.name, 'bf97836f-3395-4add-b807-daa568c036d6'), ###
-    'plusoneplusone': ('+1/+1 counter', '6480e55b-0864-41bf-ad00-43cc2482a75c'), ###
-    'minusoneminusone': ('-1/-1 counter', '6f180a03-b3f5-4e6f-96b5-9ff1597d2226'), ###
+    'p1p1': ('+1/+1 counter', '6480e55b-0864-41bf-ad00-43cc2482a75c'), ###
+    'm1m1': ('-1/-1 counter', '6f180a03-b3f5-4e6f-96b5-9ff1597d2226'), ###
     'charge': ('Charge counter', 'fabd2965-929e-4ee9-b69c-e278e3cd4098'), ###
     'loyalty': ('Loyalty counter', 'c77596e1-d930-4726-896c-22f7354617fb'), ###
     'level': ('Level counter', 'feb56d02-b34f-48bb-8af2-a25604763953'), ###
@@ -27,33 +27,33 @@ counters = {
     'scream': ('Scream counter', 'ebd89178-8d75-4ed0-9836-8e887c28f3b6'),
     'age': ('Age counter', '39cc6b9f-1ee0-49d5-804e-ee9a70e80d94'),
     'fade': ('Fade counter', 'e438dab8-0b45-4328-b440-7828eaee069b'), ###
-    'plusoneplustwo': ('+1/+2 counter', '9840bac0-c9df-47ab-acb2-136a4ff4f3d5'),
+    'p1p2': ('+1/+2 counter', '9840bac0-c9df-47ab-acb2-136a4ff4f3d5'),
     'chip': ('Chip counter', '54fd2a16-5bf5-4040-8f11-2a11251035cc'),
     'blood': ('Blood counter', 'c9ce6273-1679-4ed7-94d1-ad08d6dda1df'), ###
     'devotion': ('Devotion counter', 'ab9e8f59-b1ae-48ed-ad9b-d0c7811ef1e3'),
     'death': ('Death counter', '79c9cbe1-b614-474d-90f9-74a21fba4042'), ###
     'bounty': ('Bounty counter', 'e8b523e1-78b5-4a7b-aeab-7c2eeba283ab'),
-    'plustwoplustwo': ('+2/+2 counter', '09e2a41e-dd0f-4afd-9c85-7a2aadd9d79b'), ###
+    'p2p2': ('+2/+2 counter', '09e2a41e-dd0f-4afd-9c85-7a2aadd9d79b'), ###
     'omen': ('Omen counter', '42634c6a-c568-421c-bafc-859bf80e2665'),
     'luck': ('Luck counter', '95f32a4c-2453-45e2-a09b-ac7892ea456c'),
     'shred': ('Shred counter', 'b9396e79-8cac-4a3e-93b9-88f373c6b96f'),
-    'plusonepluszero': ('+1/+0 counter', '8ca289b4-d35a-403c-96fa-cdd60251f6fd'), ###
-    'minustwominusone': ('-2/-1 counter', '3cb3e78d-7d33-484c-ae4f-767dd6b90b3a'), ###
+    'p1p0': ('+1/+0 counter', '8ca289b4-d35a-403c-96fa-cdd60251f6fd'), ###
+    'm2m1': ('-2/-1 counter', '3cb3e78d-7d33-484c-ae4f-767dd6b90b3a'), ###
     'polyp': ('Polyp counter', 'd0c20535-ae84-406d-97a0-0db7b02a4402'),
     'mire': ('Mire counter', '8ababa02-bc51-4635-afeb-14d04974bbad'),
     'verse': ('Verse counter', '11a71f47-9667-43a3-a120-8adc95a3aec0'),
     'intervention': ('Intervention counter', 'a2bebd0d-34fb-4860-9e66-8e138383565e'),
-    'pluszeroplusone': ('+0/+1 counter', '4e4bd562-53f7-4e53-bd4a-d8c004e28a05'), ###
-    'minustwominustwo': ('-2/-2 counter', '6ef50026-d84f-4c6d-9fdc-fcb22e5c0897'), ###
+    'p0p1': ('+0/+1 counter', '4e4bd562-53f7-4e53-bd4a-d8c004e28a05'), ###
+    'm2m2': ('-2/-2 counter', '6ef50026-d84f-4c6d-9fdc-fcb22e5c0897'), ###
     'delay': ('Delay counter', '44f60da1-6481-44c5-87d4-9c7517951c3a'),
     'elixir': ('Elixir counter', '22dc6537-1a81-41b6-b92f-1ff878779fef'),
-    'minuszerominusone': ('-0/-1 counter', 'f64a857f-c87c-403e-95fa-a4f33ce7298a'), ###
+    'm0m1': ('-0/-1 counter', 'f64a857f-c87c-403e-95fa-a4f33ce7298a'), ###
     'wind': ('Wind counter', 'ef89f800-e4fe-4dd0-9bf4-436d21038819'),
     'mining': ('Mining counter', '333be161-c53f-4283-894f-53a1c30bf14e'),
     'glyph': ('Glyph counter', 'af9f0540-c6d9-4f12-8e7f-a8078a014945'),
     'depletion': ('Depletion counter', 'd415ca2d-9c01-4432-8ebf-d4eeddd84454'),
     'ice': ('Ice counter', 'a20315c4-bc8e-4ac9-a44b-04a6eceb3582'),
-    'minusoneminuszero': ('-1/-0 counter', 'a8fcb056-e6a4-4f13-b43e-892c05947a58'), ###
+    'm1m0': ('-1/-0 counter', 'a8fcb056-e6a4-4f13-b43e-892c05947a58'), ###
     'treasure': ('Treasure counter', '03fde517-8a39-4b44-b6a2-03ace460ea4d'),
     'matrix': ('Matrix counter', '208c3b26-6b5e-4365-96d5-6a69f4d85b1f'),
     'petal': ('Petal counter', '094c12fc-e4f7-4ef7-9520-1b3668dda604'),
@@ -68,7 +68,7 @@ counters = {
     'shell': ('Shell counter', 'd46aa939-b583-4504-ae14-c68f6b555bc9'),
     'corpse': ('Corpse counter', '4ed63776-a6cf-47b9-967c-4df2ff268fa4'),
     'soot': ('Soot counter', '484fd00f-2a83-4c21-905b-00e194e11383'),
-    'minuszerominustwo': ('-0/-2 counter', '8a58b338-0b33-4121-9d18-51f6859e154e'), ###
+    'm0m2': ('-0/-2 counter', '8a58b338-0b33-4121-9d18-51f6859e154e'), ###
     'fungus': ('Fungus counter', 'c5f546e8-c949-468e-95b8-8c925af13ea7'),
     'funk': ('Funk counter', '2469d0dd-1711-4cb5-a5d9-2171125f3f4d'),
     'hourglass': ('Hourglass counter', 'e307dbd2-c6d5-4200-9e74-b2edbf9e19c0'),

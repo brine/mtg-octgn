@@ -747,18 +747,18 @@ def addMarker(cards, x = 0, y = 0):
 def addMinusOneMarker(card, x = 0, y = 0):
     mute()
     notify("{} adds a -1/-1 counter to {}.".format(me, card))
-    if counters['plusoneplusone'] in card.markers:
-        card.markers[counters['plusoneplusone']] -= 1
+    if counters['p1p1'] in card.markers:
+        card.markers[counters['p1p1']] -= 1
     else:
-        card.markers[counters['minusoneminusone']] += 1
+        card.markers[counters['m1m1']] += 1
 
 def addPlusOneMarker(card, x = 0, y = 0):
     mute()
     notify("{} adds a +1/+1 counter to {}.".format(me, card))
-    if counters['minusoneminusone'] in card.markers:
-        card.markers[counters['minusoneminusone']] -= 1
+    if counters['m1m1'] in card.markers:
+        card.markers[counters['m1m1']] -= 1
     else:
-        card.markers[counters['plusoneplusone']] += 1
+        card.markers[counters['p1p1']] += 1
 
 def addChargeMarker(card, x = 0, y = 0):
     mute()
@@ -767,7 +767,7 @@ def addChargeMarker(card, x = 0, y = 0):
 
 def removePlusOneMarker(card, x = 0, y = 0):
     mute()
-    addmarker = counters['plusoneplusone']
+    addmarker = counters['p1p1']
     if addmarker in card.markers:
         card.markers[addmarker] -= 1
         markername = addmarker[0]
@@ -775,7 +775,7 @@ def removePlusOneMarker(card, x = 0, y = 0):
 
 def removeMinusOneMarker(card, x = 0, y = 0):
     mute()
-    addmarker = counters['minusoneminusone']
+    addmarker = counters['m1m1']
     if addmarker in card.markers:
         card.markers[addmarker] -= 1
         markername = addmarker[0]
