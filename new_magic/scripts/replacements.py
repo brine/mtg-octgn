@@ -120,6 +120,7 @@ tokenTypes = {
     'beast33g': ('3 / 3 Green Beast', 'cf0873be-877f-405c-83ce-0bae89c7fff7'), #LRW DST EVE NPH DDL
     'beast44g': ('4 / 4 Green Beast', 'c3967497-e3a7-4fdd-8617-9d8113d660d2'), #ZEN ODY
     'beast55g': ('5 / 5 Green Beast', '5d336c14-2b0f-4de7-baa1-fd5f52875f5e'),
+    'beast55g2': ('5 / 5 Green Beast', '6aeacb82-523e-4e32-86d4-4faf6af5105d'), #TRAMPLE
     'beast88m': ('8 / 8 Multicolor Red Green White Beast', '1a3f35f0-c680-4478-a12a-49a61268f859'),
     'bird11w': ('1 / 1 White Bird', 'c57d9dfe-6733-44d9-8789-7e1c5792ce5b'), #ZEN
     'bird11u': ('1 / 1 Blue Bird', 'a36eccd9-be44-4145-b56c-f5e2ef7921f9'), #EVE MPRINV
@@ -128,6 +129,7 @@ tokenTypes = {
     'bird33w': ('3 / 3 White Bird', '7caad070-0517-4a14-b866-92917ae0af9d'),
     'birdsoldier11w': ('1 / 1 White Bird Soldier', 'bc146367-fbbb-4878-bc9b-d23ed2f5069b'),
     'boar22g': ('2 / 2 Green Boar', 'd5e5eccc-0758-41b4-8593-b441f3102646'),
+    'boar33g': ('3 / 3 Green Boar', 'c8e283c4-e96e-4399-8ec0-d7e1256f81f6'),
     'butterfly11g': ('1 / 1 Green Butterfly', '877b558a-8e94-43f1-8fad-d9ca2cf7f37b'),
     'camarid11u': ('1 / 1 Blue Camarid', 'a15e6b40-b170-4f1b-8c77-b3a5c34ae4ea'),
     'caribou01w': ('0 / 1 White Caribou', '8b08856a-f460-4aca-b58f-15b14d4d87da'),
@@ -277,6 +279,7 @@ tokenTypes = {
     'sheep01g': ('0 / 1 Green Sheep', 'b17a0924-b2ec-4eec-9bba-c4ff96b9b833'), #TSP UNG
     'skeleton11b': ('1 / 1 Black Skeleton', 'ac0b1792-0f7e-47c2-b0ba-eca01badb5cd'), #ALA HML
     'sliver11c': ('1 / 1 Colorless Sliver', '2ead35a2-d474-4866-9bb2-c099c3d40922'), #M14 #MPRLGN LEAGUEM14
+    'snake11b': ('1 / 1 Black Snake', '87d7b057-1a26-48d8-88b8-1909400af8b2'),
     'snake11g': ('1 / 1 Green Snake', '89024584-5409-431d-9cce-e51828b85d0b'), #ZEN CHK
     'snake11m': ('1 / 1 Multicolor Green Blue Snake', '0d09c8cd-2263-4bf5-b745-31c08f2fba5f'),
     'snake11c': ('1 / 1 Colorless Snake', '19165d01-8ed8-4a7b-8432-3317477f4667'),
