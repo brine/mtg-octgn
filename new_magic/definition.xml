@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.9.6" octgnVersion="3.1.0.32"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.9.7" octgnVersion="3.1.0.32"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://octgn.gamersjudgement.com/wordpress/mtg/download-links/" gameurl="http://octgn.gamersjudgement.com/wordpress/mtg/" authors="brine"
     markersize="14" iconurl="http://www.wizards.com/Magic/Assets/magic_logo.png" >
@@ -76,8 +76,9 @@
     <groupaction menu="Re-align Cards" execute="align" />
 	<groupactions menu="Autoscript Settings">
       <groupaction menu="Enable/Disable Autoscripts" execute="autoDisable" />
-      <groupaction menu="Enable/Disable Alignment" execute="alignDisable" />
+      <groupaction menu="Enable/Disable Auto-Alignment" execute="alignDisable" />
       <groupaction menu="Enable/Disable Attachment Alignment" execute="attachDisable" />
+      <groupaction menu="Enable/Disable Alignment Anchoring" execute="anchorDisable" />
       <groupaction menu="Enable/Disable Debug" execute="debugDisable" />
 	</groupactions>
     <cardaction menu="Tap/Untap or Resolve" default="True" batchExecute="batchResolve" />

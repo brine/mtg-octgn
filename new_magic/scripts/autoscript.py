@@ -61,13 +61,27 @@ def attachDisable(group, x = 0, y = 0):
     mute()
     if attachCheck() == "True":
         setSetting("attachments", "False")
-        notify("{} disables attachments.".format(me))
+        notify("{} disables attachment alignment.".format(me))
     else:
         setSetting("attachments", "True")
-        notify("{} enables attachments.".format(me))
+        notify("{} enables attachment alignment.".format(me))
 
 def attachCheck():
     return getSetting("attachments", "True")
+
+def anchorDisable(group, x = 0, y = 0):
+    mute()
+    if anchorCheck() == "True":
+        setSetting("anchor", "False")
+        notify("{} disables attachment anchoring.".format(me))
+        global alignIgnore
+        alignIgnore = []
+    else:
+        setSetting("anchor", "True")
+        notify("{} enables attachment anchoring.".format(me))
+
+def anchorCheck():
+    return getSetting("anchor", "True")
 
 def getTags(card, key = None):
     mute()
@@ -755,6 +769,9 @@ def align(group, x = 0, y = 0):  ## This is the menu groupaction for aligning AL
 
 def alignCard(cards, x = 0, y = 0):  ##This is the menu cardaction for reactivating alignment on a card
     mute()
+    if alignCheck == "False":
+        whisper("Cannot align card: You must enable auto-alignment.")
+        return
     global alignIgnore
     for card in cards:
         if card in alignIgnore:
@@ -867,7 +884,7 @@ def cardalign():
     carddict = { } ## This groups cards based on similar properties
     cardorder = [[],[],[],[],[],[],[],[]]
     attachHeight = [0,0,0,0,0,0,0,0] ## This part counts the total number of attachments on each card in each row, to optimize the vertical spacing between rows
-    for card in table:
+    for card in sorted([c for c in table], key=lambda c: flip * c.position[0]):
         if (not counters['general'] in card.markers  ## Cards with General markers ignore alignment
                     and not card in alignIgnore
                     and not isStack(card)  ## cards on the stack have already been aligned so ignore them

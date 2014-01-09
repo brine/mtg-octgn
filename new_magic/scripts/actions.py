@@ -79,10 +79,13 @@ def moveEvent(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, 
         return
     if fromGroup != table or toGroup != table:  ## Ignore non-table movements
         return
-    global alignIgnore
-    if not card in alignIgnore and alignCheck() == "True":  ## Moving a card will automatically disable it from alignment
-        alignIgnore.append(card)  ## anchors the card to the table
-    if attachCheck():
+    if anchorCheck() == "True":
+        global alignIgnore
+        if not card in alignIgnore and alignCheck() == "True":  ## Moving a card will automatically disable it from alignment
+            alignIgnore.append(card)  ## anchors the card to the table
+    if alignCheck() == "True" and anchorCheck() == "False":
+        cardalign()
+    elif attachCheck() == "True":
         alignAttachments(card)
 
 def initializeGame():
