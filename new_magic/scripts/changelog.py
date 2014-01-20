@@ -46,5 +46,14 @@ changelog = {
         "Manually moving a card on the table will anchor it to the table, blocking it from alignment.",
         "Added 'Align Card' action for cards on the table.  Using this on an anchored card will remove the anchor and align the card.",
         "Using the 'Re-Align Cards' table action now removes the anchors on all cards, forcing them to align."
+        ]),
+    3021000: ("3.2.10.0", "17 December 2013", [
+        "Added an Autoscript Setting to toggle Alignment Anchoring.",
+        "-> Enabled: Manually dragging a card will anchor it.  Card alignment will ignore it.",
+        "-> Disabled: Manually dragging a card will allow you to rearrange the order of your cards with alignment.",
+        "Added more data to the debug option.",
+        "Added 'Pass Priority' (F6) toggle function which will automatically pass your priority if you have Autoscripts enabled.",
+        "Added some missing tokens from the Commander sets.",
+        "Fixed Xenagos's Token and the corruped 10th Edition intro decks."
         ])
 }
