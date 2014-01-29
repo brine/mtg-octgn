@@ -71,7 +71,7 @@ def endTurn(player):
     if player == me:
         clearAll(table, x = 0, y = 0)
 
-def moveEvent(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, y, isScriptMove):
+def moveEvent(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, y, isScriptMove, highlight = [], markers = {}):
     mute()
     if isScriptMove:  ## Ignore script-based movements
         return
@@ -276,6 +276,22 @@ def token(group, x = 0, y = 0):
     artDict = eval(artDict)
     if token.model in artDict:
         token.switchTo(artDict[token.model])
+
+def changeLog(group, x = 0, y = 0):
+    mute()
+    allLog = sorted(changelog, reverse = True)  ##sorts the changelog so the most recent entries appear first.
+    count = 1
+    while count != 0:
+        stringVersion, date, text = changelog[allLog[count - 1]]
+        updates = '\n-'.join(text)
+        num = askChoice("What's new in {} ({}):\n-{}".format(stringVersion, date, updates), [], customButtons = ["<- older", "close", "newer ->"])
+        if num == 0 or num == -2: ## If the player closes the window
+            count = 0
+        elif num == -1: ## If the player chooses 'older'
+            if len(allLog) > count:
+                count += 1
+        elif num == -3 and count > 1: ## If the player chooses 'newer'
+            count -= 1
 
 #--------------------------------
 # Autoscript-Linked Card functions
