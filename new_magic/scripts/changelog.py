@@ -47,7 +47,7 @@ changelog = {
         "Added 'Align Card' action for cards on the table.  Using this on an anchored card will remove the anchor and align the card.",
         "Using the 'Re-Align Cards' table action now removes the anchors on all cards, forcing them to align."
         ]),
-    3021000: ("3.2.10.0", "17 December 2013", [
+    3021000: ("3.2.10.0", "20 January  2014", [
         "Added an Autoscript Setting to toggle Alignment Anchoring.",
         "-> Enabled: Manually dragging a card will anchor it.  Card alignment will ignore it.",
         "-> Disabled: Manually dragging a card will allow you to rearrange the order of your cards with alignment.",
@@ -55,5 +55,10 @@ changelog = {
         "Added 'Pass Priority' (F6) toggle function which will automatically pass your priority if you have Autoscripts enabled.",
         "Added some missing tokens from the Commander sets.",
         "Fixed Xenagos's Token and the corruped 10th Edition intro decks."
+        ]),
+    3021100: ("3.2.11.0", "28 January 2014", [
+        "Added Born of the Gods cards and tokens.",
+        "Updated the Help document for some newer functions.",
+        "Added 'View Update Log' action for the table, to view all previous changelog windows."
         ])
 }
