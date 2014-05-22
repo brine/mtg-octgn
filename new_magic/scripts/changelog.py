@@ -61,9 +61,12 @@ changelog = {
         "Updated the Help document for some newer functions.",
         "Added 'View Update Log' action for the table, to view all previous changelog windows."
         ]),
-    3021200: ("3.2.12.0", "05 March 2014", [
+    3021200: ("3.2.12.0", "05 May 2014", [
         "Added Duel Decks Jace vs Vraska cards & Preconstructed Decks.",
         "Added Journey into Nyx cards, Tokens, Preconstructed Decks.",
         "Added Born of the Gods and Journey Into Nyx Prerelease Seeded Booster Packs."
+        ]),
+    3021202: ("3.2.12.2", "22 May 2014", [
+        "Quick Matchmaking update, multiple formats are now available for matchmaking."
         ])
 }
