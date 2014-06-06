@@ -149,8 +149,9 @@ tokenTypes = {
     'cleric21w': ('2/1 White Cleric', '068c78c0-2432-428c-8316-13b7b353d9ad'),
     'cloudsprite11u': ('1 / 1 Blue Cloud Sprite', '7499185a-6b3e-4d96-a2c3-947dd0f11629'),
     'construct612c': ('6 / 12 Colorless Construct', '35e3799c-dd78-46e1-999b-f9f6abf2fdf9'),
+    'construct11c': ('1 / 1 Colorless Construct', '8941be34-f9d7-41f0-9749-400de2399c54'),
     'demon55b': ('5 / 5 Black Demon', '9b9aeb57-b37d-4a9e-9369-28997479f518'), #ISD AVR
-    'demon**b': ('* / * Black Demon', 'd7f65953-cbe0-46ea-ad32-3646d0381c88'),
+    'demon**b': ('* / * Black Demon', 'd7f65953-cbe0-46ea-ad32-3646d0381c88'), #DDC CNS
     'deserter01w': ('0 / 1 White Deserter', '85197940-766e-4046-aa48-6d50bad3b963'),
     'djinn55c': ('5 / 5 Colorless Djinn', '38bb8262-3ab3-4ad4-a0b1-4bb8f806ee3d'),
     'dragon11m': ('1 / 1 Multicolor Red Green Dragon', '5f6939ba-43bc-4c5b-b329-d6c58a5ddd28'),
@@ -182,7 +183,7 @@ tokenTypes = {
     'elemental88m': ('8/8 Multicolor Green White Elemental', '82d6958f-6103-497b-8691-7eb3bf71aa20'),
     'elementalcat11r': ('1 / 1 Red Elemental Cat', '2eb297c2-f371-4e76-b5f2-f8d2a4cea5db'),
     'elementalshaman31r': ('3 / 1 Red Elemental Shaman', '6bcbf354-58a3-46be-9d47-c8c532dbb982'),
-    'elephant33g': ('3 / 3 Green Elephant', '26df2446-e7c7-49ec-ad51-840c8bd34148'), #WWK INV DDD
+    'elephant33g': ('3 / 3 Green Elephant', '26df2446-e7c7-49ec-ad51-840c8bd34148'), #WWK INV DDD CNS
     'elephant**g': ('* / * Green Elephant', '315bb2f3-589c-4202-b281-e985ff9b0e95'),
     'elfwarrior11m': ('1 / 1 Multicolor Green White Elf Warrior', '21a00ccf-853e-4885-8802-3d119b46b03f'),
     'elfwarrior11g': ('1 / 1 Green Elf Warrior', '84eb1264-dce2-49bc-a4ab-d0553d6035c8'), #LRW SHA
@@ -259,6 +260,7 @@ tokenTypes = {
     'minotaur23r': ('2 / 3 Red Minotaur', '38a6d20a-ca14-459a-9484-f93d693714c0'),
     'myr11c': ('1 / 1 Colorless Myr', '16003e42-3ff7-478d-8f8c-2b5af4847da0'), #SOM NPH
     'ogre33r': ('3 / 3 Red Ogre', 'f23096c9-932d-4ae2-85a7-d328eb543dbe'),
+    'ogre44r': ('4 / 4 Red Ogre', '4e3f2a44-5197-4368-a5c5-359e02878c08'),
     'ooze11g': ('1 / 1 Green Ooze', '8b031e58-296c-4c48-b7eb-c90601750e46'),
     'ooze22g': ('2 / 2 Green Ooze', '6568cc58-f475-40fe-92b7-2185c1a40f2d'),
     'ooze**g': ('* / * Green Ooze', 'cae92cb4-5917-473a-932b-f6db91a6eebf'), #ALA ROE ISD RTR
@@ -304,14 +306,14 @@ tokenTypes = {
     'spider12g': ('1 / 2 Green Spider', 'e48bb912-1d32-42c1-9e5c-59a4f30c9c25'), #SHA ISD
     'spider13g': ('1 / 3 Green Spider', 'f99bdf70-8d00-46a2-9534-f720715f0138'),
     'spike11g': ('1 / 1 Green Spike', '4fcca1a1-08b0-4128-9618-b1780b260098'),
-    'spirit11w': ('1 / 1 White Spirit', 'aeabe1d8-67ac-4a87-a0d0-e642c2914843'), #SHA MPRPLS DDC ISD AVR
+    'spirit11w': ('1 / 1 White Spirit', 'aeabe1d8-67ac-4a87-a0d0-e642c2914843'), #SHA MPRPLS DDC ISD AVR CNS
     'spirit11u': ('1/1 Blue Spirit', '61f7504f-a29d-4f88-8a2d-58706bf08360'),
     'spirit11m': ('1 / 1 Multicolor White Black Spirit', '55353de2-1086-4174-8904-b57db68708fd'), #EVE GTC
     'spirit11c': ('1 / 1 Colorless Spirit', 'c30cf64a-475d-4fa4-bfeb-8d7d65afc42f'),
     'spirit33w': ('3 / 3 White Spirit', '716114fc-cac6-43cc-a94e-17dd9e272b71'),
     'spirit**b': ('* / * Black Spirit', '40c570e4-a2f8-4032-89bb-d5a49c170302'),
     'splinter11g': ('1 / 1 Green Splinter', 'fba778cc-f139-4f9b-8f30-d2abfdbcf3c5'),
-    'squirrel11g': ('1 / 1 Green Squirrel', '88633127-6386-4a2f-a948-4e8ee17c765a'), #MPRODY UNG
+    'squirrel11g': ('1 / 1 Green Squirrel', '88633127-6386-4a2f-a948-4e8ee17c765a'), #MPRODY UNG CNS
     'stanggtwin34m': ('3 / 4 Multicolor Red Green Stangg Twin', 'cacdf811-1270-4a14-ad46-9b06541b5b1d'),
     'starfish01u': ('0 / 1 Blue Starfish', '3dec9b57-5934-462e-8a16-84fc56464cf5'),
     'survivor11r': ('1 / 1 Red Survivor', '4ba76ae2-388e-4a9b-b712-c9d5cd2feff5'),
@@ -362,5 +364,6 @@ tokenTypes = {
     'domriemblem': ("Domri's Emblem", '7e66fe70-e022-45c9-858d-9577202ce5f2'),
     'garrukemblem': ("Garruk's Emblem", 'bee095dd-635c-4f7d-a708-e6e514913dbd'),
     'elspethemblem2': ("Elspeth's Emblem", '527f7aa8-0823-4522-b2d1-b8a90ca0b9ec'), #Sun's Champion
-    'kioraemblem': ("Kiora's Emblem", '61c58834-6efc-40fa-8ba0-aa7927e7c9bd')
+    'kioraemblem': ("Kiora's Emblem", '61c58834-6efc-40fa-8ba0-aa7927e7c9bd'),
+    'dackemblem': ("Dack's Emblem", 'dc2ec608-afb5-4eb3-a942-212f2bc84c89')
 }
