@@ -68,5 +68,8 @@ changelog = {
         ]),
     3021202: ("3.2.12.2", "22 May 2014", [
         "Quick Matchmaking update, multiple formats are now available for matchmaking."
+        ]),
+    3021300: ("3.2.13.0", "06 June 2014", [
+        "Added Conspiracy+tokens, and Modern Event Deck 2014."
         ])
 }
