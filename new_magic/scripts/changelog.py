@@ -71,5 +71,9 @@ changelog = {
         ]),
     3021300: ("3.2.13.0", "06 June 2014", [
         "Added Conspiracy+tokens, and Modern Event Deck 2014."
+        ]),
+    3021400: ("3.2.14.0", "08 July 2014", [
+        "Added M15+Tokens, and Vintage Masters.",
+        "Added M15 Clash Pack deck files, found in the Event Decks folder"
         ])
 }
