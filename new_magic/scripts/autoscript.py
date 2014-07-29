@@ -475,11 +475,11 @@ def autoParser(card, tagclass, morph = False):
     priorityList = []
     activePlayers = eval(getGlobalVariable('activePlayers'))
     for playerId in activePlayers:
-        p = Player(playerId)
-        if p not in getPlayers(): #If the player has left the game, they need to be removed from the dictionary
+        if playerId not in [x._id for x in getPlayers()]: #If the player has left the game, they need to be removed from the dictionary
             del activePlayers[playerId]
             setGlobalVariable('activePlayers', str(activePlayers))
         elif activePlayers[playerId] == "True": ## Only select the players who have their autoscripts enabled.
+            p = Player(playerId)
             if p.getGlobalVariable("f6") == "False":
                 priorityList.append(playerId)
             else:
