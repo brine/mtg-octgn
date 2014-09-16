@@ -298,8 +298,9 @@ def autoParser(card, tagclass, morph = False):
             return "BREAK"
     else: ## create instance
         stackType = 'trig'
-        if card.flags == 'split' and re.search('//', card.name) and tagclass == 'cast':
-            splitRules = card.Rules.split('//')
+        if 'splitA' in card.alternates and tagclass == 'cast': ##if the card is a split card
+            splitRules = [card.alternateProperty('splitA', 'Rules'),
+                          card.alternateProperty('splitB', 'Rules')]
             splitFlags = ['A','B']
             if 'splitC' in card.alternates and card in me.hand:
                 splitRules.append('Fuse both sides')
