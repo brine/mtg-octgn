@@ -219,9 +219,7 @@ def tagConstructor(card, key, modeModifier = ''):
     if returnTags[0] != None and 'choice' in returnTags[0]:
         for choice in returnTags[0]['choice']:
             modeLine, modeType = choice.split(', ')
-            modeRule = (card.Rules.splitlines())[int(modeLine) - 1] ## we want just the one rules line with the modes in it
-            modesText = modeRule.split(u'\u2014 ')[1] ## parse out the 'choose one - ' part
-            modeList = modesText.split("; or ") ## convert the mode options to a proper list
+            modeList = [x.split(u'\u2022 ')[1] for x in card.Rules.splitlines() if u"\u2022" in x] ## split the rules text into lines and keep the ones with the modal bullet point
             modeChoice = askChoice("Choose a mode for {}:".format(card.Name), modeList)
             if modeChoice == 0:
                 return "BREAK"
