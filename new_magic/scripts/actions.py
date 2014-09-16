@@ -437,7 +437,7 @@ def resolve(card, x = 0, y = 0):
                 notify("{} resolves {} ({}){}".format(me, card, tagClass, text))
             if moveTo == 'exile':
                 card.moveTo(card.owner.piles['Exiled Zone'])
-            elif tagClass == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type): #handles permanents etb triggers
+            elif card.isFaceUp == False or (tagClass == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type)): #handles permanents etb triggers
                 autoParser(card, 'etb')
             else: #non-permanents and ability triggers are sent to graveyard after resolution
                 card.moveTo(card.owner.Graveyard)
@@ -619,17 +619,16 @@ def morph(card, x = 0, y = 0):
     if autoscriptCheck() == "True":
         card.isFaceUp = False
         text = autoParser(card, 'cast', True)
+        card.peek()
         cardalign()
         if text == "BREAK":
             card.isFaceUp = True
         else:
             notify("{} casts a card face-down.".format(me))
-    src = card.group
-    notify("{} casts a card face-down from their {}.".format(me, src.name))
-    card.moveToTable(defaultX, defaultY, True)
-    if autoscriptCheck() == "True":
-        card.markers[scriptMarkers['cast']] = 1
-        cardalign()
+    else:
+        src = card.group
+        notify("{} casts a card face-down from their {}.".format(me, src.name))
+        card.moveToTable(defaultX, defaultY, True)
 
 def transform(card, x = 0, y = 0):
     mute()

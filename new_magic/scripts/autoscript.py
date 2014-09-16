@@ -164,6 +164,8 @@ def tagConstructor(card, key, modeModifier = ''):
     returnTags = []
     returnActiChoice = (0, '')
     returnModeChoice = (0, '')
+    if not card.isFaceUp: ## Skip fetching tags for facedown/morph cards
+        return ([None, None, None, None, None, None], returnActiChoice, returnModeChoice)
 #### deal with activated abilities as a specific case
     if key == 'acti':
         count = 0
@@ -902,7 +904,9 @@ def cardalign():
                 height = len(attachDict[card._id])
             if not dictname in carddict:
                 carddict[dictname] = []
-                if scriptMarkers["suspend"] in card.markers:
+                if not card.isFaceUp:
+                    index = 0
+                elif scriptMarkers["suspend"] in card.markers:
                     index = 6
                 elif re.search(r"Land", card.Type):
                     index = 3
@@ -910,7 +914,7 @@ def cardalign():
                     index = 4
                 elif re.search(r"Emblem", card.Type):
                     index = 5
-                elif re.search(r"Creature", card.Type) or not card.isFaceUp:
+                elif re.search(r"Creature", card.Type):
                     index = 0
                 elif re.search(r"Artifact", card.Type):
                     index = 1
