@@ -1,21 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Mirage" id="7aecd611-2aee-4393-ad3c-60e0df23c606" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="dbb7d7b0-7986-478e-a387-d03e16a4c7b9">
-    <options>
-      <option probability="0">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="1">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="3" key="Rarity" value="Uncommon" />
-    <pick qty="11" key="Rarity" value="Common" />
-    <pick qty="0" key="Rarity" value="Basic Land" />
-  </pack>
-  <pack name="Lands" id="39929d70-63d5-4109-9dfa-50b7de5a1ff3">
-    <pick qty="unlimited" key="Rarity" value="Basic Land" />
-  </pack></packaging>
+<set name="Mirage" id="7aecd611-2aee-4393-ad3c-60e0df23c606" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="dbb7d7b0-7986-478e-a387-d03e16a4c7b9">
+      <options>
+        <option probability="0">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="1">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="3" key="Rarity" value="Uncommon" />
+      <pick qty="11" key="Rarity" value="Common" />
+      <pick qty="0" key="Rarity" value="Basic Land" />
+    </pack>
+    <pack name="Lands" id="39929d70-63d5-4109-9dfa-50b7de5a1ff3">
+      <pick qty="unlimited" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Abyssal Hunter" id="e57f77c8-0590-5244-ba4a-455f14c3bf8d">
       <property name="Cost" value="3$" />
@@ -355,7 +357,7 @@
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Cast Blind Fury only before the combat damage step.&#xD;&#xA;All creatures lose trample until end of turn. If a creature would deal combat damage to a creature this turn, it deals double that damage to that creature instead." />
+      <property name="Rules" value="All creatures lose trample until end of turn. If a creature would deal combat damage to a creature this turn, it deals double that damage to that creature instead." />
       <property name="Artist" value="John Coulthart" />
       <property name="Flavor" value="&quot;Tell me . . . have you ever sung the Song of Blood?&quot;—Purraj of Urborg" />
       <property name="MultiverseId" value="3429" />
@@ -587,7 +589,7 @@
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Destroy target Wall; or Chaos Charm deals 1 damage to target creature; or target creature gains haste until end of turn." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Destroy target Wall.&#xD;&#xA;• Chaos Charm deals 1 damage to target creature.&#xD;&#xA;• Target creature gains haste until end of turn." />
       <property name="Artist" value="Steve Luke" />
       <property name="MultiverseId" value="3434" />
     </card>
@@ -618,7 +620,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="2, `: Until end of turn, target creature you control gains flying and its toughness becomes 1." />
+      <property name="Rules" value="2, `: Until end of turn, target creature you control gains flying and has base toughness 1." />
       <property name="Artist" value="Gerry Grace" />
       <property name="Flavor" value="&quot;Sun follows Moon until she tires, then carries her until she's strong / and runs ahead of him again.&quot;—&quot;Love Song of Night and Day&quot;" />
       <property name="MultiverseId" value="3245" />
@@ -806,7 +808,7 @@
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Return Cycle of Life to its owner's hand: Target creature you cast this turn becomes 0/1 until your next upkeep. At the beginning of your next upkeep, put a +1/+1 counter on that creature." />
+      <property name="Rules" value="Return Cycle of Life to its owner's hand: Target creature you cast this turn has base power and toughness 0/1 until your next upkeep. At the beginning of your next upkeep, put a +1/+1 counter on that creature." />
       <property name="Artist" value="Chippy" />
       <property name="Flavor" value="Thus does nature assert herself." />
       <property name="MultiverseId" value="3380" />
@@ -854,7 +856,7 @@
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Cast Dazzling Beauty only during the declare blockers step.&#xD;&#xA;Target unblocked attacking creature becomes blocked. (This spell works on unblockable creatures.)&#xD;&#xA;Draw a card at the beginning of the next turn's upkeep." />
+      <property name="Rules" value="Cast Dazzling Beauty only during the declare blockers step.&#xD;&#xA;Target unblocked attacking creature becomes blocked. (This spell works on creatures that can't be blocked.)&#xD;&#xA;Draw a card at the beginning of the next turn's upkeep." />
       <property name="Artist" value="Harold McNeill" />
       <property name="MultiverseId" value="3483" />
     </card>
@@ -1036,7 +1038,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dwarf Nomad" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`: Target creature with power 2 or less is unblockable this turn." />
+      <property name="Rules" value="`: Target creature with power 2 or less can't be blocked this turn." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1061,7 +1063,7 @@
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Target opponent loses 1 life and you gain 1 life; or exile up to three target cards from a single graveyard; or target creature gains fear until end of turn. (It can't be blocked except by artifact creatures and/or black creatures.)" />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Target opponent loses 1 life and you gain 1 life.&#xD;&#xA;• Exile up to three target cards from a single graveyard.&#xD;&#xA;• Target creature gains fear until end of turn. (It can't be blocked except by artifact creatures and/or black creatures.)" />
       <property name="Artist" value="Gerry Grace" />
       <property name="MultiverseId" value="3289" />
     </card>
@@ -1142,7 +1144,7 @@
       <property name="Color" value="Multicolor Red White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Choose one — Energy Bolt deals X damage to target player; or target player gains X life." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Energy Bolt deals X damage to target player.&#xD;&#xA;• Target player gains X life." />
       <property name="Artist" value="Scott Kirschner" />
       <property name="Flavor" value="Life and death are two faces of the same coin." />
       <property name="MultiverseId" value="3534" />
@@ -1805,7 +1807,7 @@
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Target player gains 3 life; or prevent the next 3 damage that would be dealt to target creature or player this turn." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Target player gains 3 life.&#xD;&#xA;• Prevent the next 3 damage that would be dealt to target creature or player this turn." />
       <property name="Artist" value="Hannibal King" />
       <property name="Flavor" value="&quot;The Femeref look only to the Sun for healing; they have never truly understood life's cycle.&quot;—Kifimbo, Shadow Guildmage" />
       <property name="MultiverseId" value="3495" />
@@ -1962,7 +1964,7 @@
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — All creatures get -2/-0 until end of turn; or tap target creature; or prevent the next 1 damage that would be dealt to target creature or player this turn." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• All creatures get -2/-0 until end of turn.&#xD;&#xA;• Tap target creature.&#xD;&#xA;• Prevent the next 1 damage that would be dealt to target creature or player this turn." />
       <property name="Artist" value="Gerry Grace" />
       <property name="MultiverseId" value="3498" />
     </card>
@@ -1984,7 +1986,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Centaur Archer" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Shroud (This permanent can't be the target of spells or abilities.)&#xD;&#xA;Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)" />
+      <property name="Rules" value="Shroud (This creature can't be the target of spells or abilities.)&#xD;&#xA;Flanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)" />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2436,7 +2438,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="John Avon" />
       <property name="MultiverseId" value="3578" />
       <property name="Flags" value="R" />
@@ -2447,7 +2449,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="John Avon" />
       <property name="MultiverseId" value="3580" />
       <property name="Flags" value="R" />
@@ -2458,7 +2460,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="John Avon" />
       <property name="MultiverseId" value="3579" />
       <property name="Flags" value="R" />
@@ -2469,7 +2471,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="John Avon" />
       <property name="MultiverseId" value="3577" />
       <property name="Flags" value="R" />
@@ -3042,7 +3044,7 @@
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Choose one — Destroy target Plains and target white creature; or destroy target Island and target blue creature." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Destroy target Plains and target white creature.&#xD;&#xA;• Destroy target Island and target blue creature." />
       <property name="Artist" value="Kathryn Rathke" />
       <property name="Flavor" value="&quot;The Burning Isles are the home to a dozen lords who claim dominion. Jamuraa will look to only one leader: me.&quot;—Kaervek" />
       <property name="MultiverseId" value="3461" />
@@ -3138,7 +3140,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Snake" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever Sabertooth Cobra deals damage to a player, he or she gets a poison counter. That player gets another poison counter at the beginning of his or her next upkeep unless he or she pays 2 before that turn. (A player with ten or more poison counters loses the game.)" />
+      <property name="Rules" value="Whenever Sabertooth Cobra deals damage to a player, he or she gets a poison counter. That player gets another poison counter at the beginning of his or her next upkeep unless he or she pays 2 before that step. (A player with ten or more poison counters loses the game.)" />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -3202,7 +3204,7 @@
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Target player draws a card at the beginning of the next turn's upkeep; or target creature gains flying until end of turn; or target creature an opponent controls phases out. (While it's phased out, it's treated as though it doesn't exist. It phases in before its controller untaps during his or her next untap step.)" />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Target player draws a card at the beginning of the next turn's upkeep.&#xD;&#xA;• Target creature gains flying until end of turn.&#xD;&#xA;• Target creature an opponent controls phases out. (While it's phased out, it's treated as though it doesn't exist. It phases in before its controller untaps during his or her next untap step.)" />
       <property name="Artist" value="Steve Luke" />
       <property name="MultiverseId" value="3360" />
     </card>
@@ -3277,7 +3279,7 @@
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Return target Aura attached to a creature to its owner's hand; or regenerate target green creature; or target creature gains trample until end of turn." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Return target Aura attached to a creature to its owner's hand.&#xD;&#xA;• Regenerate target green creature.&#xD;&#xA;• Target creature gains trample until end of turn." />
       <property name="Artist" value="Stuart Griffin" />
       <property name="MultiverseId" value="3409" />
     </card>
@@ -4404,7 +4406,6 @@
       <property name="Artist" value="Alan Rabinowitz" />
       <property name="Flavor" value="&quot;If the griffins tell of their gods, perhaps they speak of feathers bright as the Sun.&quot;—Afari, Tales" />
       <property name="MultiverseId" value="3526" />
-      <property name="Flags" value=" " />
     </card>
   </cards>
 </set>

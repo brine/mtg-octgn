@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Stronghold" id="d4d4da73-2ff2-4da1-9970-b2ab94138429" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="cc5ba77b-f862-4300-9baa-a31ee6bfb13e">
-    <options>
-      <option probability="0">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="1">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="3" key="Rarity" value="Uncommon" />
-    <pick qty="11" key="Rarity" value="Common" />
-    <pick qty="0" key="Rarity" value="Basic Land" />
-  </pack></packaging>
+<set name="Stronghold" id="d4d4da73-2ff2-4da1-9970-b2ab94138429" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="cc5ba77b-f862-4300-9baa-a31ee6bfb13e">
+      <options>
+        <option probability="0">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="1">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="3" key="Rarity" value="Uncommon" />
+      <pick qty="11" key="Rarity" value="Common" />
+      <pick qty="0" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Acidic Sliver" id="30eec01b-1ea9-6f6f-4943-0121d1bb0a5e">
       <property name="Cost" value="$%" />
@@ -198,7 +200,7 @@
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Whenever enchanted creature attacks, return it and Contempt to their owners' hands at end of combat." />
+      <property name="Rules" value="Enchant creature&#xD;&#xA;When enchanted creature attacks, return it and Contempt to their owners' hands at end of combat." />
       <property name="Artist" value="Val Mayerik" />
       <property name="Flavor" value="&quot;Predictable little man. In all these years you taught me so much yet learned so little.&quot;—Volrath, to Starke" />
       <property name="MultiverseId" value="5126" />
@@ -342,7 +344,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Illusion" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Dream Prowler is unblockable as long as it's attacking alone." />
+      <property name="Rules" value="Dream Prowler can't be blocked as long as it's attacking alone." />
       <property name="Power" value="1" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="1 / 5" />
@@ -1013,7 +1015,7 @@
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Untap target creature you don't control. That creature blocks this turn if able.&#xD;&#xA;&#xD;&#xA;Draw a card." />
+      <property name="Rules" value="Untap target creature you don't control. That creature blocks this turn if able.&#xD;&#xA;Draw a card." />
       <property name="Artist" value="Terese Nielsen" />
       <property name="Flavor" value="Mirri did not have time to think, only to react." />
       <property name="MultiverseId" value="5203" />
@@ -1701,7 +1703,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Legendary Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="`: Add 1 to your mana pool.&#xD;&#xA;&#xD;&#xA;1$, `: Put target creature card from your graveyard on top of your library." />
+      <property name="Rules" value="`: Add 1 to your mana pool.&#xD;&#xA;1$, `: Put target creature card from your graveyard on top of your library." />
       <property name="Artist" value="Kev Walker" />
       <property name="Flavor" value="The seed of a world's evil." />
       <property name="MultiverseId" value="5263" />
@@ -1713,7 +1715,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Illusion" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Walking Dream is unblockable.&#xD;&#xA;&#xD;&#xA;Walking Dream doesn't untap during your untap step if an opponent controls two or more creatures." />
+      <property name="Rules" value="Walking Dream can't be blocked.&#xD;&#xA;Walking Dream doesn't untap during your untap step if an opponent controls two or more creatures." />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1840,7 +1842,6 @@
       <property name="Artist" value="Rebecca Guay" />
       <property name="Flavor" value="&quot;Let no child be without a sword. We will all fight, for if we fail, we will certainly all die.&quot;—Oracle en-Vec" />
       <property name="MultiverseId" value="5274" />
-      <property name="Flags" value=" " />
     </card>
   </cards>
 </set>

@@ -1,21 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Portal: Second Age" id="84663d48-79d2-4d15-ad03-8c7906e2fef6" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="491c3470-a44a-42d0-9c86-0b04dc75cd07">
-    <options>
-      <option probability="0">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="1">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="3" key="Rarity" value="Uncommon" />
-    <pick qty="11" key="Rarity" value="Common" />
-    <pick qty="0" key="Rarity" value="Basic Land" />
-  </pack>
-  <pack name="Lands" id="ed204957-2668-4773-b0b4-412455a3e72c">
-    <pick qty="unlimited" key="Rarity" value="Basic Land" />
-  </pack></packaging>
+<set name="Portal: Second Age" id="84663d48-79d2-4d15-ad03-8c7906e2fef6" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="491c3470-a44a-42d0-9c86-0b04dc75cd07">
+      <options>
+        <option probability="0">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="1">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="3" key="Rarity" value="Uncommon" />
+      <pick qty="11" key="Rarity" value="Common" />
+      <pick qty="0" key="Rarity" value="Basic Land" />
+    </pack>
+    <pack name="Lands" id="ed204957-2668-4773-b0b4-412455a3e72c">
+      <pick qty="unlimited" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Abyssal Nightstalker" id="7710d7ed-9aab-b11e-e192-942c3d485c58">
       <property name="Cost" value="3$" />
@@ -163,7 +165,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Flying&#xD;&#xA;When Angel of Fury is put into your graveyard from the battlefield, you may shuffle it into your library." />
+      <property name="Rules" value="Flying&#xD;&#xA;When Angel of Fury dies, you may shuffle it into its owner's library." />
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
@@ -202,7 +204,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Defender, flying" />
+      <property name="Rules" value="Defender (This creature can't attack.)&#xD;&#xA;Flying" />
       <property name="Power" value="0" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="0 / 4" />
@@ -1074,7 +1076,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Rob Alexander" />
       <property name="MultiverseId" value="8407" />
       <property name="Flags" value="R" />
@@ -1085,7 +1087,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Rob Alexander" />
       <property name="MultiverseId" value="8406" />
       <property name="Flags" value="R" />
@@ -1096,7 +1098,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Rob Alexander" />
       <property name="MultiverseId" value="8395" />
       <property name="Flags" value="R" />
@@ -1570,7 +1572,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Bear" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Islandwalk (This creature is unblockable as long as defending player controls an Island.)" />
+      <property name="Rules" value="Islandwalk (This creature can't be blocked as long as defending player controls an Island.)" />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1835,7 +1837,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Pirate Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Talas Warrior is unblockable." />
+      <property name="Rules" value="Talas Warrior can't be blocked." />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2115,7 +2117,6 @@
       <property name="Artist" value="Matt Stawicki" />
       <property name="Flavor" value="It pays to be at home both on the sea and in the sky." />
       <property name="MultiverseId" value="6530" />
-      <property name="Flags" value=" " />
     </card>
   </cards>
 </set>

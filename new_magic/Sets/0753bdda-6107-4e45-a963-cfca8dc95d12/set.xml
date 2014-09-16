@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Weatherlight" id="0753bdda-6107-4e45-a963-cfca8dc95d12" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="ae4db63b-2b8f-44eb-b60f-ef524b7dcd63">
-    <options>
-      <option probability="0">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="1">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="3" key="Rarity" value="Uncommon" />
-    <pick qty="11" key="Rarity" value="Common" />
-    <pick qty="0" key="Rarity" value="Basic Land" />
-  </pack></packaging>
+<set name="Weatherlight" id="0753bdda-6107-4e45-a963-cfca8dc95d12" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="ae4db63b-2b8f-44eb-b60f-ef524b7dcd63">
+      <options>
+        <option probability="0">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="1">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="3" key="Rarity" value="Uncommon" />
+      <pick qty="11" key="Rarity" value="Common" />
+      <pick qty="0" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Abduction" id="623b2e6a-08f1-7ad2-2f4a-7555a3a5681d">
       <property name="Cost" value="2##" />
@@ -444,7 +446,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="2: Until end of turn, Chimeric Sphere becomes a 2/1 Construct artifact creature with flying.&#xD;&#xA;2: Until end of turn, Chimeric Sphere becomes a 3/2 Construct artifact creature without flying." />
+      <property name="Rules" value="2: Until end of turn, Chimeric Sphere becomes a 2/1 Construct artifact creature with flying.&#xD;&#xA;2: Until end of turn, Chimeric Sphere becomes a 3/2 Construct artifact creature and loses flying." />
       <property name="Artist" value="Colin MacNeil" />
       <property name="MultiverseId" value="4431" />
     </card>
@@ -454,7 +456,7 @@
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Cast Choking Vines only during the declare blockers step.&#xD;&#xA;X target attacking creatures become blocked. Choking Vines deals 1 damage to each of those creatures. (This spell works on unblockable creatures.)" />
+      <property name="Rules" value="Cast Choking Vines only during the declare blockers step.&#xD;&#xA;X target attacking creatures become blocked. Choking Vines deals 1 damage to each of those creatures. (This spell works on creatures that can't be blocked.)" />
       <property name="Artist" value="Ted Naifeh" />
       <property name="MultiverseId" value="4511" />
     </card>
@@ -480,7 +482,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Defender (This creature can't attack.)&#xD;&#xA;When Cinder Wall blocks, destroy it at end of combat." />
+      <property name="Rules" value="Defender&#xD;&#xA;When Cinder Wall blocks, destroy it at end of combat." />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1489,7 +1491,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Illusion Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Phantom Warrior is unblockable." />
+      <property name="Rules" value="Phantom Warrior can't be blocked." />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1887,7 +1889,7 @@
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Thunderbolt deals 3 damage to target player; or Thunderbolt deals 4 damage to target creature with flying." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Thunderbolt deals 3 damage to target player.&#xD;&#xA;• Thunderbolt deals 4 damage to target creature with flying." />
       <property name="Artist" value="Dylan Martens" />
       <property name="Flavor" value="&quot;Most wizards consider a thunderbolt to be a proper retort.&quot;—Ertai, wizard adept" />
       <property name="MultiverseId" value="4561" />
@@ -2140,7 +2142,6 @@
       <property name="Artist" value="Patrick Kochakji" />
       <property name="Flavor" value="&quot;Pick a shell upon my shore and put it to your ear. That sound isn't the sea, but the whispers of the fallen.&quot;—Crovax" />
       <property name="MultiverseId" value="4475" />
-      <property name="Flags" value=" " />
     </card>
   </cards>
 </set>

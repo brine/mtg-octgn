@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Antiquities" id="8b4e7836-dbd4-4cdf-b058-6724b95e9174" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="3e6666ff-7fb8-44b3-a3c8-0e04ca423db8">
-    <options>
-      <option probability="0">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="1">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="1" key="Rarity" value="Uncommon" />
-    <pick qty="6" key="Rarity" value="Common" />
-    <pick qty="0" key="Rarity" value="Basic Land" />
-  </pack></packaging>
+<set name="Antiquities" id="8b4e7836-dbd4-4cdf-b058-6724b95e9174" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="3e6666ff-7fb8-44b3-a3c8-0e04ca423db8">
+      <options>
+        <option probability="0">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="1">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="1" key="Rarity" value="Uncommon" />
+      <pick qty="6" key="Rarity" value="Common" />
+      <pick qty="0" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Amulet of Kroog" id="875f80a6-2d35-bda2-1ea2-392f4ad27e5e">
       <property name="Cost" value="2" />
@@ -125,7 +127,7 @@
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature can't be blocked by artifact creatures. &#xD;&#xA;Prevent all damage that would be dealt to enchanted creature by artifact sources.&#xD;&#xA;Enchanted creature can't be the target of abilities from artifact sources." />
+      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature can't be blocked by artifact creatures.&#xD;&#xA;Prevent all damage that would be dealt to enchanted creature by artifact sources.&#xD;&#xA;Enchanted creature can't be the target of abilities from artifact sources." />
       <property name="Artist" value="Douglas Shuler" />
       <property name="MultiverseId" value="1066" />
     </card>
@@ -440,7 +442,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="1, `: Each nontoken permanent from the Antiquities expansion is sacrificed by its controller." />
+      <property name="Rules" value="1, `: Each nontoken permanent originally printed in the Antiquities expansion is sacrificed by its controller." />
       <property name="Artist" value="Kerstin Kaman" />
       <property name="Flavor" value="From their earliest educations, the brothers had known that no human contrivance could stand against the true masters of Dominia." />
       <property name="MultiverseId" value="1007" />
@@ -647,7 +649,7 @@
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Thopter" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Flying" />
+      <property name="Rules" value="Flying (This creature can't be blocked except by creatures with flying or reach.)" />
       <property name="Power" value="0" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="0 / 2" />
@@ -885,7 +887,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="You may choose not to untap Tawnos's Coffin during your untap step.&#xD;&#xA;3, `: Exile target creature and all Auras attached to it. Note the number and kind of counters that were on that creature. When Tawnos's Coffin leaves the battlefield or becomes untapped, return the exiled card to the battlefield under its owner's control tapped with the noted number and kind of counters on it, and if you do, return the exiled Aura cards to the battlefield under their owner's control attached to that permanent." />
+      <property name="Rules" value="You may choose not to untap Tawnos's Coffin during your untap step.&#xD;&#xA;3, `: Exile target creature and all Auras attached to it. Note the number and kind of counters that were on that creature. When Tawnos's Coffin leaves the battlefield or becomes untapped, return that exiled card to the battlefield under its owner's control tapped with the noted number and kind of counters on it. If you do, return the other exiled cards to the battlefield under their owner's control attached to that permanent." />
       <property name="Artist" value="Christopher Rush" />
       <property name="MultiverseId" value="1024" />
     </card>
@@ -895,7 +897,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="2, `: Target creature with power 2 or less is unblockable this turn." />
+      <property name="Rules" value="2, `: Target creature with power 2 or less can't be blocked this turn." />
       <property name="Artist" value="Douglas Shuler" />
       <property name="MultiverseId" value="1025" />
     </card>
@@ -917,7 +919,7 @@
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Flying&#xD;&#xA;Tetravus enters the battlefield with three +1/+1 counters on it. &#xD;&#xA;At the beginning of your upkeep, you may remove any number of +1/+1 counters from Tetravus. If you do, put that many 1/1 colorless Tetravite artifact creature tokens onto the battlefield. They each have flying and &quot;This creature can't be enchanted.&quot;&#xD;&#xA;At the beginning of your upkeep, you may exile any number of tokens put onto the battlefield with Tetravus. If you do, put that many +1/+1 counters on Tetravus." />
+      <property name="Rules" value="Flying&#xD;&#xA;Tetravus enters the battlefield with three +1/+1 counters on it.&#xD;&#xA;At the beginning of your upkeep, you may remove any number of +1/+1 counters from Tetravus. If you do, put that many 1/1 colorless Tetravite artifact creature tokens onto the battlefield. They each have flying and &quot;This creature can't be enchanted.&quot;&#xD;&#xA;At the beginning of your upkeep, you may exile any number of tokens put onto the battlefield with Tetravus. If you do, put that many +1/+1 counters on Tetravus." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1206,7 +1208,6 @@
       <property name="Artist" value="Christopher Rush" />
       <property name="Flavor" value="After Kroog was destroyed while most of its defenders were at his side, Urza vowed that none of his allies would ever need to fear for their own defense again, even while laying siege to a city far from their homes." />
       <property name="MultiverseId" value="1035" />
-      <property name="Flags" value=" " />
     </card>
   </cards>
 </set>

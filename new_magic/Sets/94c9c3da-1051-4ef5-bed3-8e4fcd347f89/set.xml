@@ -1,21 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Portal" id="94c9c3da-1051-4ef5-bed3-8e4fcd347f89" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="d5fd486f-147e-4daf-9c00-db21382715f8">
-    <options>
-      <option probability="0">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="1">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="3" key="Rarity" value="Uncommon" />
-    <pick qty="11" key="Rarity" value="Common" />
-    <pick qty="0" key="Rarity" value="Basic Land" />
-  </pack>
-  <pack name="Lands" id="1c1d81b5-5f94-4399-9f7e-1ee5af5bc113">
-    <pick qty="unlimited" key="Rarity" value="Basic Land" />
-  </pack></packaging>
+<set name="Portal" id="94c9c3da-1051-4ef5-bed3-8e4fcd347f89" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="d5fd486f-147e-4daf-9c00-db21382715f8">
+      <options>
+        <option probability="0">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="1">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="3" key="Rarity" value="Uncommon" />
+      <pick qty="11" key="Rarity" value="Common" />
+      <pick qty="0" key="Rarity" value="Basic Land" />
+    </pack>
+    <pack name="Lands" id="1c1d81b5-5f94-4399-9f7e-1ee5af5bc113">
+      <pick qty="unlimited" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Alabaster Dragon" id="a6009d98-54fb-5e5e-5cf0-d94512019409">
       <property name="Cost" value="4@@" />
@@ -49,7 +51,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Snake" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Swampwalk (This creature is unblockable as long as defending player controls a Swamp.)" />
+      <property name="Rules" value="Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)" />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -64,7 +66,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Snake" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Swampwalk (This creature is unblockable as long as defending player controls a Swamp.)" />
+      <property name="Rules" value="Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)" />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -267,7 +269,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Swampwalk (This creature is unblockable as long as defending player controls a Swamp.)" />
+      <property name="Rules" value="Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)" />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -282,7 +284,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wraith" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Swampwalk (This creature is unblockable as long as defending player controls a Swamp.)" />
+      <property name="Rules" value="Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)" />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -657,7 +659,7 @@
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Until end of turn, black creatures you control can be blocked only by black creatures." />
+      <property name="Rules" value="Black creatures you control can't be blocked this turn except by black creatures." />
       <property name="Artist" value="Ted Naifeh" />
       <property name="Flavor" value="&quot;As equal were their souls, so equal was their fate.&quot;John Dryden, &quot;Ode to Mrs. Anne Killigrew&quot;" />
       <property name="MultiverseId" value="4216" />
@@ -833,7 +835,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Flying&#xD;&#xA;When Fire Dragon enters the battlefield, it deals damage equal to the number of Mountains you control to target creature." />
+      <property name="Rules" value="Flying&#xD;&#xA;When Fire Dragon enters the battlefield, it deals damage to target creature equal to the number of Mountains you control." />
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="6 / 6" />
@@ -1519,7 +1521,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Brian Durfee" />
       <property name="MultiverseId" value="4420" />
       <property name="Flags" value="R" />
@@ -1530,7 +1532,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Brian Durfee" />
       <property name="MultiverseId" value="4418" />
       <property name="Flags" value="R" />
@@ -1541,7 +1543,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Brian Durfee" />
       <property name="MultiverseId" value="4417" />
       <property name="Flags" value="R" />
@@ -1552,7 +1554,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Brian Durfee" />
       <property name="MultiverseId" value="4419" />
       <property name="Flags" value="R" />
@@ -1680,7 +1682,7 @@
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Look at the top three cards of your library, then put them back in any order. You may shuffle your library. &#xD;&#xA;Draw a card." />
+      <property name="Rules" value="Look at the top three cards of your library, then put them back in any order. You may shuffle your library.&#xD;&#xA;Draw a card." />
       <property name="Artist" value="Eric Peterson" />
       <property name="MultiverseId" value="4269" />
     </card>
@@ -1741,7 +1743,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Illusion Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Phantom Warrior is unblockable." />
+      <property name="Rules" value="Phantom Warrior can't be blocked." />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2657,7 +2659,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Defender, flying (This creature can't attack, and it can block creatures with flying.)" />
+      <property name="Rules" value="Defender (This creature can't attack.)&#xD;&#xA;Flying" />
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
@@ -2796,7 +2798,6 @@
       <property name="Artist" value="Mike Raabe" />
       <property name="Flavor" value="&quot;As flies to wanton boys, are we to the gods. They kill us for their sport.&quot;—William Shakespeare, King Lear" />
       <property name="MultiverseId" value="4408" />
-      <property name="Flags" value=" " />
     </card>
   </cards>
 </set>

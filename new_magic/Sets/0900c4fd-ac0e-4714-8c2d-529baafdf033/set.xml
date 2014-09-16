@@ -1,21 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Fifth Edition" id="0900c4fd-ac0e-4714-8c2d-529baafdf033" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="3413fdbb-a646-4df7-bf25-540ecc5d6921">
-    <options>
-      <option probability="0">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="1">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="3" key="Rarity" value="Uncommon" />
-    <pick qty="11" key="Rarity" value="Common" />
-    <pick qty="0" key="Rarity" value="Basic Land" />
-  </pack>
-  <pack name="Lands" id="00de178c-4749-46b7-9cb3-3a46a38b4219">
-    <pick qty="unlimited" key="Rarity" value="Basic Land" />
-  </pack></packaging>
+<set name="Fifth Edition" id="0900c4fd-ac0e-4714-8c2d-529baafdf033" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="3413fdbb-a646-4df7-bf25-540ecc5d6921">
+      <options>
+        <option probability="0">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="1">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="3" key="Rarity" value="Uncommon" />
+      <pick qty="11" key="Rarity" value="Common" />
+      <pick qty="0" key="Rarity" value="Basic Land" />
+    </pack>
+    <pack name="Lands" id="00de178c-4749-46b7-9cb3-3a46a38b4219">
+      <pick qty="unlimited" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Abbey Gargoyles" id="7de81d6e-8d81-386f-6ef9-16195defd3ec">
       <property name="Cost" value="2@@@" />
@@ -103,7 +105,7 @@
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Target player gains X life; or prevent the next X damage that would be dealt to target creature or player this turn." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Target player gains X life.&#xD;&#xA;• Prevent the next X damage that would be dealt to target creature or player this turn." />
       <property name="Artist" value="Harold McNeill" />
       <property name="Flavor" value="Healing is a matter of time, but it is sometimes also a matter of opportunity.—D'Avenant proverb" />
       <property name="MultiverseId" value="4100" />
@@ -215,7 +217,7 @@
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature can't be the target of spells and can't be enchanted. This effect doesn't remove Anti-Magic Aura." />
+      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature can't be the target of spells and can't be enchanted by other Auras." />
       <property name="Artist" value="Zak Plucinski" />
       <property name="MultiverseId" value="3893" />
     </card>
@@ -571,7 +573,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wraith" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Swampwalk (This creature is unblockable as long as defending player controls a Swamp.)" />
+      <property name="Rules" value="Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)" />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -596,7 +598,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="1, Sacrifice Bottle of Suleiman: Flip a coin. If you lose the flip, Bottle of Suleiman deals 5 damage to you. If you win the flip, put a 5/5 colorless Djinn artifact creature token with flying onto the battlefield." />
+      <property name="Rules" value="1, Sacrifice Bottle of Suleiman: Flip a coin. If you win the flip, put a 5/5 colorless Djinn artifact creature token with flying onto the battlefield. If you lose the flip, Bottle of Suleiman deals 5 damage to you." />
       <property name="Artist" value="DiTerlizzi" />
       <property name="MultiverseId" value="3766" />
     </card>
@@ -1438,7 +1440,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dwarf Warrior" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`: Target creature with power 2 or less is unblockable this turn." />
+      <property name="Rules" value="`: Target creature with power 2 or less can't be blocked this turn." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2116,7 +2118,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Other Goblin creatures get +1/+1 and have mountainwalk. (They're unblockable as long as defending player controls a Mountain.)" />
+      <property name="Rules" value="Other Goblin creatures get +1/+1 and have mountainwalk. (They can't be blocked as long as defending player controls a Mountain.)" />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2228,7 +2230,7 @@
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Target player gains 3 life; or prevent the next 3 damage that would be dealt to target creature or player this turn." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Target player gains 3 life.&#xD;&#xA;• Prevent the next 3 damage that would be dealt to target creature or player this turn." />
       <property name="Artist" value="Zina Saunders" />
       <property name="MultiverseId" value="4130" />
     </card>
@@ -2311,7 +2313,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Homarid Warrior" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="#: Homarid Warrior gains shroud until end of turn and doesn't untap during your next untap step. Tap Homarid Warrior. (A permanent with shroud can't be the target of spells or abilities.)" />
+      <property name="Rules" value="#: Homarid Warrior gains shroud until end of turn and doesn't untap during your next untap step. Tap Homarid Warrior. (A creature with shroud can't be the target of spells or abilities.)" />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2396,7 +2398,7 @@
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Choose one — Counter target spell if it's red; or destroy target permanent if it's red." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Counter target spell if it's red.&#xD;&#xA;• Destroy target permanent if it's red." />
       <property name="Artist" value="Kaja Foglio" />
       <property name="Flavor" value="&quot;Heed the lessons of our time: the forms of water may move the land itself and hold captive the fires within.&quot;—Gustha Ebbasdotter,Kjeldoran royal mage" />
       <property name="MultiverseId" value="3915" />
@@ -2952,7 +2954,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Leviathan" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Trample&#xD;&#xA;Leviathan enters the battlefield tapped and doesn't untap during your untap step.&#xD;&#xA;At the beginning of your upkeep, you may sacrifice two Islands. If you do, untap Leviathan.&#xD;&#xA;Leviathan can't attack unless you sacrifice two Islands." />
+      <property name="Rules" value="Trample&#xD;&#xA;Leviathan enters the battlefield tapped and doesn't untap during your untap step.&#xD;&#xA;At the beginning of your upkeep, you may sacrifice two Islands. If you do, untap Leviathan.&#xD;&#xA;Leviathan can't attack unless you sacrifice two Islands. (This cost is paid as attackers are declared.)" />
       <property name="Power" value="10" />
       <property name="Toughness" value="10" />
       <property name="PT Box" value="10 / 10" />
@@ -3351,7 +3353,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="John Avon" />
       <property name="MultiverseId" value="4197" />
       <property name="Flags" value="R" />
@@ -3362,7 +3364,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="John Avon" />
       <property name="MultiverseId" value="4198" />
       <property name="Flags" value="R" />
@@ -3373,7 +3375,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="John Avon" />
       <property name="MultiverseId" value="4195" />
       <property name="Flags" value="R" />
@@ -3384,7 +3386,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="John Avon" />
       <property name="MultiverseId" value="4196" />
       <property name="Flags" value="R" />
@@ -3640,7 +3642,7 @@
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Thopter" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Flying" />
+      <property name="Rules" value="Flying (This creature can't be blocked except by creatures with flying or reach.)" />
       <property name="Power" value="0" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="0 / 2" />
@@ -3990,7 +3992,7 @@
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Choose one — Counter target spell if it's blue; or destroy target permanent if it's blue." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Counter target spell if it's blue.&#xD;&#xA;• Destroy target permanent if it's blue." />
       <property name="Artist" value="Kaja Foglio" />
       <property name="Flavor" value="&quot;Just the thing for those pesky water mages.&quot;—Jaya Ballard, task mage" />
       <property name="MultiverseId" value="4083" />
@@ -4428,7 +4430,7 @@
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Dryad" />
+      <property name="Subtype" value="Nymph Dryad" />
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Forestwalk" />
       <property name="Power" value="1" />
@@ -4578,7 +4580,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="`: Target creature other than Sorceress Queen becomes 0/2 until end of turn." />
+      <property name="Rules" value="`: Target creature other than Sorceress Queen has base power and toughness 0/2 until end of turn." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -4613,7 +4615,7 @@
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Counter target spell with converted mana cost X." />
+      <property name="Rules" value="Counter target spell with converted mana cost X. (For example, if that spell's mana cost is 3##, X is 5.)" />
       <property name="Artist" value="Greg Simanson" />
       <property name="MultiverseId" value="3947" />
     </card>
@@ -5298,7 +5300,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Defender, flying (This creature can't attack, and it can block creatures with flying.)" />
+      <property name="Rules" value="Defender (This creature can't attack.)&#xD;&#xA;Flying" />
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
@@ -5557,7 +5559,6 @@
       <property name="Rules" value="Players play with their hands revealed.&#xD;&#xA;If a player would draw a card, he or she reveals it instead. Then any other player may pay 2 life. If a player does, put that card into its owner's graveyard. Otherwise, that player draws a card." />
       <property name="Artist" value="Liz Danforth" />
       <property name="MultiverseId" value="3959" />
-      <property name="Flags" value=" " />
     </card>
   </cards>
 </set>

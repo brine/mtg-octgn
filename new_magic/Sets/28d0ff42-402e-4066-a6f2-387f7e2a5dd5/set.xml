@@ -1,26 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Dragon's Maze" id="28d0ff42-402e-4066-a6f2-387f7e2a5dd5" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="919cf3d7-3490-4c94-92b2-a6ec4ecc82fe">
-    <options>
-      <option probability="0.125">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="0.875">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="3" key="Rarity" value="Uncommon" />
-    <pick qty="10" key="Rarity" value="Common" />
-    <options>
-      <option probability="0.125">
-        <pick qty="1" key="Rarity" value="Shockland" />
-      </option>
-      <option probability="0.875">
-        <pick qty="1" key="Rarity" value="Guildgate" />
-      </option>
-    </options>
-  </pack></packaging>
+<set name="Dragon's Maze" id="28d0ff42-402e-4066-a6f2-387f7e2a5dd5" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="919cf3d7-3490-4c94-92b2-a6ec4ecc82fe">
+      <options>
+        <option probability="0.125">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="0.875">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="3" key="Rarity" value="Uncommon" />
+      <pick qty="10" key="Rarity" value="Common" />
+      <options>
+        <option probability="0.125">
+          <pick qty="1" key="Rarity" value="Shockland" />
+        </option>
+        <option probability="0.875">
+          <pick qty="1" key="Rarity" value="Guildgate" />
+        </option>
+      </options>
+    </pack>
+  </packaging>
   <cards>
+    <card name="Temple Garden" id="23bcef7a-e887-4831-996a-82285bb23978">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Subtype" value="Forest Plains" />
+      <property name="Rarity" value="Shockland" />
+      <property name="Rules" value="(`: Add ^ or @ to your mana pool.)&#xD;&#xA;As Temple Garden enters the battlefield, you may pay 2 life. If you don't, Temple Garden enters the battlefield tapped." />
+      <property name="Artist" value="Volkan Baga" />
+      <property name="Number" value="248" />
+      <property name="Flavor" value="In the gardens of the Conclave, order and beauty are the roots of power." />
+      <property name="Faction" value="Selesnya" />
+      <property name="MultiverseId" value="253681" />
+      <property name="Flags" value="GW" />
+    </card>
     <card name="Advent of the Wurm" id="667e06ee-ec78-40c6-b24a-2720849ebef7">
       <property name="Cost" value="1^^@" />
       <property name="CMC" value="4" />
@@ -29,6 +45,7 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Put a 5/5 green Wurm creature token with trample onto the battlefield." />
       <property name="Artist" value="Lucas Graciano" />
+      <property name="Number" value="051" />
       <property name="Flavor" value="The consciousness of Mat'Selesnya does not always spread in peaceful ways." />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="369036" />
@@ -40,11 +57,12 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Shapeshifter" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="#: Exile Ætherling. Return it to the battlefield under its owner's control at the beginning of the next end step.&#xD;&#xA;#: Ætherling is unblockable this turn.&#xD;&#xA;1: Ætherling gets +1/-1 until end of turn.&#xD;&#xA;1: Ætherling gets -1/+1 until end of turn." />
+      <property name="Rules" value="#: Exile Ætherling. Return it to the battlefield under its owner's control at the beginning of the next end step.&#xD;&#xA;#: Ætherling can't be blocked this turn.&#xD;&#xA;1: Ætherling gets +1/-1 until end of turn.&#xD;&#xA;1: Ætherling gets -1/+1 until end of turn." />
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="4 / 5" />
       <property name="Artist" value="Tyler Jacobson" />
+      <property name="Number" value="011" />
       <property name="MultiverseId" value="368961" />
     </card>
     <card name="Alive // Well" id="4532fb5a-92c8-47cd-9f19-27efb0abef2e">
@@ -55,16 +73,17 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Put a 3/3 green Centaur creature token onto the battlefield.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;You gain 2 life for each creature you control.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Nils Hamm" />
+      <property name="Number" value="121" />
       <property name="MultiverseId" value="369041" />
-      <property name="Flags" value="split" />
       <alternate name="Alive" type="splitA">
         <property name="Cost" value="3^" />
         <property name="CMC" value="4" />
         <property name="Color" value="Green" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Put a 3/3 green Centaur creature token onto the battlefield." />
+        <property name="Rules" value="Put a 3/3 green Centaur creature token onto the battlefield.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Nils Hamm" />
+        <property name="Number" value="121" />
         <property name="MultiverseId" value="369041" />
       </alternate>
       <alternate name="Well" type="splitB">
@@ -73,18 +92,9 @@
         <property name="Color" value="White" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="You gain 2 life for each creature you control." />
+        <property name="Rules" value="You gain 2 life for each creature you control.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Nils Hamm" />
-        <property name="MultiverseId" value="369041" />
-      </alternate>
-	  <alternate name="Alive &amp; Well" type="splitC">
-        <property name="Cost" value="3^@" />
-        <property name="CMC" value="5" />
-        <property name="Color" value="Multicolor Green White" />
-        <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Put a 3/3 green Centaur creature token onto the battlefield.&#xD;&#xA;You gain 2 life for each creature you control." />
-        <property name="Artist" value="Nils Hamm" />
+        <property name="Number" value="121" />
         <property name="MultiverseId" value="369041" />
       </alternate>
     </card>
@@ -96,16 +106,17 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Target creature gets +1/+1 and gains double strike until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;All creatures able to block target creature this turn do so.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="David Palumbo" />
+      <property name="Number" value="122" />
       <property name="MultiverseId" value="368989" />
-      <property name="Flags" value="split" />
       <alternate name="Armed" type="splitA">
         <property name="Cost" value="1%" />
         <property name="CMC" value="2" />
         <property name="Color" value="Red" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target creature gets +1/+1 and gains double strike until end of turn." />
+        <property name="Rules" value="Target creature gets +1/+1 and gains double strike until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="David Palumbo" />
+        <property name="Number" value="122" />
         <property name="MultiverseId" value="368989" />
       </alternate>
       <alternate name="Dangerous" type="splitB">
@@ -114,18 +125,9 @@
         <property name="Color" value="Green" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="All creatures able to block target creature this turn do so." />
+        <property name="Rules" value="All creatures able to block target creature this turn do so.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="David Palumbo" />
-        <property name="MultiverseId" value="368989" />
-      </alternate>
-      <alternate name="Armed &amp; Dangerous" type="splitC">
-        <property name="Cost" value="4%^" />
-        <property name="CMC" value="6" />
-        <property name="Color" value="Multicolor Red Green" />
-        <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target creature gets +1/+1 and gains double strike until end of turn.&#xD;&#xA;All creatures able to block target creature this turn do so." />
-        <property name="Artist" value="David Palumbo" />
+        <property name="Number" value="122" />
         <property name="MultiverseId" value="368989" />
       </alternate>
     </card>
@@ -141,6 +143,7 @@
       <property name="Toughness" value="6" />
       <property name="PT Box" value="4 / 6" />
       <property name="Artist" value="Matt Stewart" />
+      <property name="Number" value="052" />
       <property name="Flavor" value="Wolf-riders of Selesnya apprentice from a young age. Each rider raises a wolf pup from birth to serve as a mount, hoping that one day the two will share the honor of guarding the Great Concourse." />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="369082" />
@@ -157,6 +160,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
       <property name="Artist" value="Ryan Yee" />
+      <property name="Number" value="053" />
       <property name="Flavor" value="A lawmage's runic script is an act of governance given form: legislation written directly onto the air itself." />
       <property name="Faction" value="Azorius" />
       <property name="MultiverseId" value="369016" />
@@ -169,16 +173,17 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Return target creature to its owner's hand.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Target player sacrifices a creature.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Greg Staples" />
+      <property name="Number" value="127" />
       <property name="MultiverseId" value="369042" />
-      <property name="Flags" value="split" />
       <alternate name="Far" type="splitA">
         <property name="Cost" value="1#" />
         <property name="CMC" value="2" />
         <property name="Color" value="Blue" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Return target creature to its owner's hand." />
+        <property name="Rules" value="Return target creature to its owner's hand.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Greg Staples" />
+        <property name="Number" value="127" />
         <property name="MultiverseId" value="369042" />
       </alternate>
       <alternate name="Away" type="splitB">
@@ -187,18 +192,9 @@
         <property name="Color" value="Black" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target player sacrifices a creature." />
+        <property name="Rules" value="Target player sacrifices a creature.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Greg Staples" />
-        <property name="MultiverseId" value="369042" />
-      </alternate>
-      <alternate name="Far &amp; Away" type="splitC">
-        <property name="Cost" value="3#$" />
-        <property name="CMC" value="5" />
-        <property name="Color" value="Multicolor Blue Black" />
-        <property name="Type" value="Instant" />
-        <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Return target creature to its owner's hand.&#xD;&#xA;Target player sacrifices a creature." />
-        <property name="Artist" value="Greg Staples" />
+        <property name="Number" value="127" />
         <property name="MultiverseId" value="369042" />
       </alternate>
     </card>
@@ -210,6 +206,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Monocolored creatures can't block this turn." />
       <property name="Artist" value="Mathias Kollros" />
+      <property name="Number" value="031" />
       <property name="Flavor" value="When the guilds cooperate, the guildless celebrate their peaceful society. When the guilds clash, the guildless just try to keep out of the way." />
       <property name="MultiverseId" value="369053" />
     </card>
@@ -221,6 +218,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="`: Add @ or # to your mana pool.&#xD;&#xA;@#, `, Sacrifice Azorius Cluestone: Draw a card." />
       <property name="Artist" value="Raoul Vitale" />
+      <property name="Number" value="136" />
       <property name="Flavor" value="Its three sides represent the Sova, judges and arbitrators; the Jelenn, scribes and elocutors; and the Lyev, lawmages and enforcers." />
       <property name="Faction" value="Azorius" />
       <property name="MultiverseId" value="369017" />
@@ -233,6 +231,7 @@
       <property name="Rarity" value="Guildgate" />
       <property name="Rules" value="Azorius Guildgate enters the battlefield tapped.&#xD;&#xA;`: Add @ or # to your mana pool." />
       <property name="Artist" value="Drew Baker" />
+      <property name="Number" value="146" />
       <property name="Flavor" value="The Azorius symbol stares down like a great eye, reminding visitors of the watchful presence of Isperia and her lawmages." />
       <property name="Faction" value="Azorius" />
       <property name="MultiverseId" value="368974" />
@@ -250,6 +249,7 @@
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
       <property name="Artist" value="Mike Bierek" />
+      <property name="Number" value="021" />
       <property name="Flavor" value="&quot;I'm in the field of procurement, and business is good. The guilds want all kinds of maps and relics these days, though what they want them for I'm not quite sure.&quot;" />
       <property name="MultiverseId" value="369044" />
     </card>
@@ -265,6 +265,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
       <property name="Artist" value="Jack Wang" />
+      <property name="Number" value="041" />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="368984" />
     </card>
@@ -276,16 +277,17 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Whenever a creature enters the battlefield this turn, you may draw a card.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Put four 1/1 white Bird creature tokens with flying onto the battlefield.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Adam Paquette" />
+      <property name="Number" value="123" />
       <property name="MultiverseId" value="369063" />
-      <property name="Flags" value="split" />
       <alternate name="Beck" type="splitA">
         <property name="Cost" value="^#" />
         <property name="CMC" value="2" />
         <property name="Color" value="Multicolor Green Blue" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Whenever a creature enters the battlefield this turn, you may draw a card." />
+        <property name="Rules" value="Whenever a creature enters the battlefield this turn, you may draw a card.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Adam Paquette" />
+        <property name="Number" value="123" />
         <property name="MultiverseId" value="369063" />
       </alternate>
       <alternate name="Call" type="splitB">
@@ -294,18 +296,9 @@
         <property name="Color" value="Multicolor White Blue" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Put four 1/1 white Bird creature tokens with flying onto the battlefield." />
+        <property name="Rules" value="Put four 1/1 white Bird creature tokens with flying onto the battlefield.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Adam Paquette" />
-        <property name="MultiverseId" value="369063" />
-      </alternate>
-      <alternate name="Beck &amp; Call" type="splitC">
-        <property name="Cost" value="4^@##" />
-        <property name="CMC" value="8" />
-        <property name="Color" value="Multicolor Green White Blue" />
-        <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Whenever a creature enters the battlefield this turn, you may draw a card.&#xD;&#xA;Put four 1/1 white Bird creature tokens with flying onto the battlefield." />
-        <property name="Artist" value="Adam Paquette" />
+        <property name="Number" value="123" />
         <property name="MultiverseId" value="369063" />
       </alternate>
     </card>
@@ -321,6 +314,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="Marco Nelor" />
+      <property name="Number" value="054" />
       <property name="Flavor" value="&quot;When the Simic say to take command of your life, we don't mean just your career.&quot;—Vorel of the Hull Clade" />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="369000" />
@@ -333,6 +327,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Choose target creature or player. Draw three cards, then discard a card. Blast of Genius deals damage equal to the discarded card's converted mana cost to that creature or player." />
       <property name="Artist" value="Terese Nielsen" />
+      <property name="Number" value="055" />
       <property name="Flavor" value="Ral Zarek's brainstorms bring actual thunder and lightning." />
       <property name="Faction" value="Izzet" />
       <property name="MultiverseId" value="368985" />
@@ -349,6 +344,7 @@
       <property name="Toughness" value="3" />
       <property name="PT Box" value="5 / 3" />
       <property name="Artist" value="James Ryman" />
+      <property name="Number" value="056" />
       <property name="Flavor" value="A true Boros commando only calls for reinforcements so they can clean up the mess." />
       <property name="Faction" value="Boros" />
       <property name="MultiverseId" value="369047" />
@@ -361,16 +357,17 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Exile target creature card from a graveyard. Put X +1/+1 counters on target creature, where X is the power of the card you exiled.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Target creature you control deals damage equal to its power to target creature or player.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Lucas Graciano" />
+      <property name="Number" value="128" />
       <property name="MultiverseId" value="368991" />
-      <property name="Flags" value="split" />
       <alternate name="Flesh" type="splitA">
         <property name="Cost" value="3$^" />
         <property name="CMC" value="5" />
         <property name="Color" value="Multicolor Black Green" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Exile target creature card from a graveyard. Put X +1/+1 counters on target creature, where X is the power of the card you exiled." />
+        <property name="Rules" value="Exile target creature card from a graveyard. Put X +1/+1 counters on target creature, where X is the power of the card you exiled.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Lucas Graciano" />
+        <property name="Number" value="128" />
         <property name="MultiverseId" value="368991" />
       </alternate>
       <alternate name="Blood" type="splitB">
@@ -379,18 +376,9 @@
         <property name="Color" value="Multicolor Red Green" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Target creature you control deals damage equal to its power to target creature or player." />
+        <property name="Rules" value="Target creature you control deals damage equal to its power to target creature or player.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Lucas Graciano" />
-        <property name="MultiverseId" value="368991" />
-      </alternate>
-      <alternate name="Flesh &amp; Blood" type="splitC">
-        <property name="Cost" value="3$%^^" />
-        <property name="CMC" value="7" />
-        <property name="Color" value="Multicolor Black Red Green" />
-        <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Exile target creature card from a graveyard. Put X +1/+1 counters on target creature, where X is the power of the card you exiled.&#xD;&#xA;Target creature you control deals damage equal to its power to target creature or player." />
-        <property name="Artist" value="Lucas Graciano" />
+        <property name="Number" value="128" />
         <property name="MultiverseId" value="368991" />
       </alternate>
     </card>
@@ -406,6 +394,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
       <property name="Artist" value="Anthony Palumbo" />
+      <property name="Number" value="057" />
       <property name="Faction" value="Orzhov" />
       <property name="MultiverseId" value="368954" />
     </card>
@@ -421,6 +410,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
       <property name="Artist" value="Peter Mohrbacher" />
+      <property name="Number" value="022" />
       <property name="Flavor" value="Make sure you bleed the fine print." />
       <property name="MultiverseId" value="369030" />
     </card>
@@ -436,6 +426,7 @@
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
       <property name="Artist" value="Zoltan Boros" />
+      <property name="Number" value="058" />
       <property name="Flavor" value="Leaders shape the minds of their allies. It takes a master to shape the minds of enemies." />
       <property name="Faction" value="Boros" />
       <property name="MultiverseId" value="369051" />
@@ -448,6 +439,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="`: Add % or @ to your mana pool.&#xD;&#xA;%@, `, Sacrifice Boros Cluestone: Draw a card." />
       <property name="Artist" value="Raoul Vitale" />
+      <property name="Number" value="137" />
       <property name="Flavor" value="&quot;In case of fire, treachery, citywide riot, political upheaval, or worldwide societal collapse, break glass.&quot;—Cluestone inscription" />
       <property name="Faction" value="Boros" />
       <property name="MultiverseId" value="368997" />
@@ -460,6 +452,7 @@
       <property name="Rarity" value="Guildgate" />
       <property name="Rules" value="Boros Guildgate enters the battlefield tapped.&#xD;&#xA;`: Add % or @ to your mana pool." />
       <property name="Artist" value="Noah Bradley" />
+      <property name="Number" value="147" />
       <property name="Flavor" value="It promises protection to those in need and proclaims a warning to any who would threaten Ravnican law." />
       <property name="Faction" value="Boros" />
       <property name="MultiverseId" value="369008" />
@@ -477,6 +470,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="001" />
       <property name="Faction" value="Boros" />
       <property name="MultiverseId" value="369028" />
     </card>
@@ -488,16 +482,17 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Target player puts the top eight cards of his or her library into his or her graveyard.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Put a creature card from a graveyard onto the battlefield under your control. It gains haste until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Mathias Kollros" />
+      <property name="Number" value="124" />
       <property name="MultiverseId" value="369009" />
-      <property name="Flags" value="split" />
       <alternate name="Breaking" type="splitA">
         <property name="Cost" value="#$" />
         <property name="CMC" value="2" />
         <property name="Color" value="Multicolor Blue Black" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Target player puts the top eight cards of his or her library into his or her graveyard." />
+        <property name="Rules" value="Target player puts the top eight cards of his or her library into his or her graveyard.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Mathias Kollros" />
+        <property name="Number" value="124" />
         <property name="MultiverseId" value="369009" />
       </alternate>
       <alternate name="Entering" type="splitB">
@@ -506,18 +501,9 @@
         <property name="Color" value="Multicolor Black Red" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Put a creature card from a graveyard onto the battlefield under your control. It gains haste until end of turn." />
+        <property name="Rules" value="Put a creature card from a graveyard onto the battlefield under your control. It gains haste until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Mathias Kollros" />
-        <property name="MultiverseId" value="369009" />
-      </alternate>
-      <alternate name="Breaking &amp; Entering" type="splitC">
-        <property name="Cost" value="4#$$%" />
-        <property name="CMC" value="8" />
-        <property name="Color" value="Multicolor Blue Black Red" />
-        <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Target player puts the top eight cards of his or her library into his or her graveyard.&#xD;&#xA;Put a creature card from a graveyard onto the battlefield under your control. It gains haste until end of turn." />
-        <property name="Artist" value="Mathias Kollros" />
+        <property name="Number" value="124" />
         <property name="MultiverseId" value="369009" />
       </alternate>
     </card>
@@ -529,6 +515,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Whenever a creature you control with a +1/+1 counter on it deals combat damage to a player, you may draw a card." />
       <property name="Artist" value="Karl Kopinski" />
+      <property name="Number" value="059" />
       <property name="Flavor" value="Some see the world as a place of infinite wonder and knowledge. Some see it as an infinite dinner plate." />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="368953" />
@@ -545,6 +532,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="James Ryman" />
+      <property name="Number" value="060" />
       <property name="Flavor" value="They fight for their home with more loyalty than any conscript." />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="368971" />
@@ -555,18 +543,19 @@
       <property name="Color" value="Blue&#xD;&#xA;//&#xD;&#xA;Red" />
       <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Target creature loses all abilities and becomes a 0/1 red Weird until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Burn deals 2 damage to target creature or player.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
+      <property name="Rules" value="Until end of turn, target creature loses all abilities and becomes a red Weird with base power and toughness 0/1.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Burn deals 2 damage to target creature or player.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Ryan Barger" />
+      <property name="Number" value="134" />
       <property name="MultiverseId" value="369080" />
-      <property name="Flags" value="split" />
       <alternate name="Turn" type="splitA">
         <property name="Cost" value="2#" />
         <property name="CMC" value="3" />
         <property name="Color" value="Blue" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target creature loses all abilities and becomes a 0/1 red Weird until end of turn." />
+        <property name="Rules" value="Until end of turn, target creature loses all abilities and becomes a red Weird with base power and toughness 0/1.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Ryan Barger" />
+        <property name="Number" value="134" />
         <property name="MultiverseId" value="369080" />
       </alternate>
       <alternate name="Burn" type="splitB">
@@ -575,18 +564,9 @@
         <property name="Color" value="Red" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Burn deals 2 damage to target creature or player." />
+        <property name="Rules" value="Burn deals 2 damage to target creature or player.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Ryan Barger" />
-        <property name="MultiverseId" value="369080" />
-      </alternate>
-      <alternate name="Turn &amp; Burn" type="splitC">
-        <property name="Cost" value="3#%" />
-        <property name="CMC" value="5" />
-        <property name="Color" value="Multicolor Blue Red" />
-        <property name="Type" value="Instant" />
-        <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target creature loses all abilities and becomes a 0/1 red Weird until end of turn.&#xD;&#xA;Burn deals 2 damage to target creature or player." />
-        <property name="Artist" value="Ryan Barger" />
+        <property name="Number" value="134" />
         <property name="MultiverseId" value="369080" />
       </alternate>
     </card>
@@ -602,6 +582,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="4 / 2" />
       <property name="Artist" value="Ryan Barger" />
+      <property name="Number" value="061" />
       <property name="Flavor" value="Not the foulest or bloodiest act at Rix Maadi by a stretch." />
       <property name="Faction" value="Rakdos" />
       <property name="MultiverseId" value="369057" />
@@ -614,16 +595,17 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Gain control of target permanent until end of turn. Untap it. It gains haste until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Each player sacrifices an artifact, a creature, an enchantment, a land, and a planeswalker.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="125" />
       <property name="MultiverseId" value="368982" />
-      <property name="Flags" value="split" />
       <alternate name="Catch" type="splitA">
         <property name="Cost" value="1#%" />
         <property name="CMC" value="3" />
         <property name="Color" value="Multicolor Blue Red" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Gain control of target permanent until end of turn. Untap it. It gains haste until end of turn." />
+        <property name="Rules" value="Gain control of target permanent until end of turn. Untap it. It gains haste until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Kev Walker" />
+        <property name="Number" value="125" />
         <property name="MultiverseId" value="368982" />
       </alternate>
       <alternate name="Release" type="splitB">
@@ -632,18 +614,9 @@
         <property name="Color" value="Multicolor Red White" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Each player sacrifices an artifact, a creature, an enchantment, a land, and a planeswalker." />
+        <property name="Rules" value="Each player sacrifices an artifact, a creature, an enchantment, a land, and a planeswalker.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Kev Walker" />
-        <property name="MultiverseId" value="368982" />
-      </alternate>
-      <alternate name="Catch &amp; Release" type="splitC">
-        <property name="Cost" value="4%%@#" />
-        <property name="CMC" value="9" />
-        <property name="Color" value="Multicolor Red White Blue" />
-        <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Gain control of target permanent until end of turn. Untap it. It gains haste until end of turn.&#xD;&#xA;Each player sacrifices an artifact, a creature, an enchantment, a land, and a planeswalker." />
-        <property name="Artist" value="Kev Walker" />
+        <property name="Number" value="125" />
         <property name="MultiverseId" value="368982" />
       </alternate>
     </card>
@@ -655,6 +628,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Destroy target creature with defender." />
       <property name="Artist" value="Karl Kopinski" />
+      <property name="Number" value="032" />
       <property name="Flavor" value="&quot;Why do guards always look surprised when we bash them?&quot; asked Ruric.&quot;I think they expect a bribe,&quot; said Thar." />
       <property name="MultiverseId" value="369029" />
     </card>
@@ -670,6 +644,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
       <property name="Artist" value="Zoltan Boros" />
+      <property name="Number" value="062" />
       <property name="Faction" value="Azorius" />
       <property name="MultiverseId" value="368999" />
     </card>
@@ -681,6 +656,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Exile all creature cards from target player's graveyard. You gain 3 life for each card exiled this way." />
       <property name="Artist" value="Svetlin Velinov" />
+      <property name="Number" value="023" />
       <property name="Flavor" value="The Golgari maze-runner Varolz hungers to prove his fortitude in battle, and his trail of victims feeds other hungers." />
       <property name="MultiverseId" value="369056" />
     </card>
@@ -692,6 +668,7 @@
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules" value="When Deadbridge Chant enters the battlefield, put the top ten cards of your library into your graveyard.&#xD;&#xA;At the beginning of your upkeep, choose a card at random in your graveyard. If it's a creature card, put it onto the battlefield. Otherwise, put it into your hand." />
       <property name="Artist" value="Zoltan Boros" />
+      <property name="Number" value="063" />
       <property name="Faction" value="Golgari" />
       <property name="MultiverseId" value="369003" />
     </card>
@@ -703,6 +680,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Each opponent loses two times X life. You gain life equal to the life lost this way." />
       <property name="Artist" value="Seb McKinnon" />
+      <property name="Number" value="064" />
       <property name="Flavor" value="Some of Orzhov's cruelest collectors remember their debtors by taste alone." />
       <property name="Faction" value="Orzhov" />
       <property name="MultiverseId" value="369039" />
@@ -719,6 +697,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="James Ryman" />
+      <property name="Number" value="065" />
       <property name="Flavor" value="&quot;Everyone deserves a day in court.&quot;" />
       <property name="Faction" value="Azorius" />
       <property name="MultiverseId" value="369084" />
@@ -731,6 +710,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="`: Add # or $ to your mana pool.&#xD;&#xA;#$, `, Sacrifice Dimir Cluestone: Draw a card." />
       <property name="Artist" value="Raoul Vitale" />
+      <property name="Number" value="138" />
       <property name="Flavor" value="It waits in the chill of the undercity, holding nameless secrets for those who dare to touch it." />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="369096" />
@@ -743,6 +723,7 @@
       <property name="Rarity" value="Guildgate" />
       <property name="Rules" value="Dimir Guildgate enters the battlefield tapped.&#xD;&#xA;`: Add # or $ to your mana pool." />
       <property name="Artist" value="Cliff Childs" />
+      <property name="Number" value="148" />
       <property name="Flavor" value="In the cold corridors of the undercity, misinformation unfurls from Duskmantle like a spreading stain." />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="369058" />
@@ -756,16 +737,17 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Target player discards two cards.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Return target card from your graveyard to your hand.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Svetlin Velinov" />
+      <property name="Number" value="126" />
       <property name="MultiverseId" value="369089" />
-      <property name="Flags" value="split" />
       <alternate name="Down" type="splitA">
         <property name="Cost" value="3$" />
         <property name="CMC" value="4" />
         <property name="Color" value="Black" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target player discards two cards." />
+        <property name="Rules" value="Target player discards two cards.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Svetlin Velinov" />
+        <property name="Number" value="126" />
         <property name="MultiverseId" value="369089" />
       </alternate>
       <alternate name="Dirty" type="splitB">
@@ -774,18 +756,9 @@
         <property name="Color" value="Green" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Return target card from your graveyard to your hand." />
+        <property name="Rules" value="Return target card from your graveyard to your hand.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Svetlin Velinov" />
-        <property name="MultiverseId" value="369089" />
-      </alternate>
-      <alternate name="Down &amp; Dirty" type="splitC">
-        <property name="Cost" value="5$^" />
-        <property name="CMC" value="7" />
-        <property name="Color" value="Multicolor Black Green" />
-        <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="&#xD;&#xA;Target player discards two cards.Return target card from your graveyard to your hand." />
-        <property name="Artist" value="Svetlin Velinov" />
+        <property name="Number" value="126" />
         <property name="MultiverseId" value="369089" />
       </alternate>
     </card>
@@ -795,8 +768,9 @@
       <property name="Color" value="Multicolor Blue Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Until end of turn, target creature you control becomes a 4/4 blue and red Dragon, loses all abilities, and gains flying.&#xD;&#xA;Overload 3##%% (You may cast this spell for its overload cost. If you do, change its text by replacing all instances of &quot;target&quot; with &quot;each.&quot;)" />
+      <property name="Rules" value="Until end of turn, target creature you control becomes a blue and red Dragon with base power and toughness 4/4, loses all abilities, and gains flying.&#xD;&#xA;Overload 3##%% (You may cast this spell for its overload cost. If you do, change its text by replacing all instances of &quot;target&quot; with &quot;each.&quot;)" />
       <property name="Artist" value="Svetlin Velinov" />
+      <property name="Number" value="066" />
       <property name="Faction" value="Izzet" />
       <property name="MultiverseId" value="369061" />
     </card>
@@ -808,6 +782,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Choose target creature. Put the top four cards of your library into your graveyard, then that creature gets -1/-1 until end of turn for each land card in your graveyard." />
       <property name="Artist" value="Seb McKinnon" />
+      <property name="Number" value="067" />
       <property name="Flavor" value="The rot farmer's first rite of passage is to craft a pair of work stilts." />
       <property name="Faction" value="Golgari" />
       <property name="MultiverseId" value="369086" />
@@ -824,6 +799,7 @@
       <property name="Toughness" value="7" />
       <property name="PT Box" value="5 / 7" />
       <property name="Artist" value="Mark Winters" />
+      <property name="Number" value="068" />
       <property name="Flavor" value="When Selesnya needed a champion, Emmara put the ranks of her guild before herself—making her the perfect choice." />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="368944" />
@@ -840,6 +816,7 @@
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
       <property name="Artist" value="Aleksi Briclot" />
+      <property name="Number" value="069" />
       <property name="Faction" value="Rakdos" />
       <property name="MultiverseId" value="369055" />
     </card>
@@ -851,6 +828,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Target creature gets -4/-2 until end of turn." />
       <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="024" />
       <property name="Flavor" value="Travelers in the undercity dread the horrors and assassins of the Dimir, but nearly as many die from more mundane hazards." />
       <property name="MultiverseId" value="368962" />
     </card>
@@ -866,6 +844,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
       <property name="Artist" value="Dave Kendall" />
+      <property name="Number" value="070" />
       <property name="Flavor" value="&quot;Channeling the rage of the beast is the easy part. Explaining why you woke up with no memory in a pile of mangled lawmages—that's trickier.&quot;" />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="368969" />
@@ -882,6 +861,7 @@
       <property name="Toughness" value="5" />
       <property name="PT Box" value="1 / 5" />
       <property name="Artist" value="Willian Murai" />
+      <property name="Number" value="071" />
       <property name="Flavor" value="One part mizzium, two parts elemental energy, eleven parts danger." />
       <property name="Faction" value="Izzet" />
       <property name="MultiverseId" value="368955" />
@@ -894,6 +874,7 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Destroy each nonland permanent with converted mana cost X or less." />
       <property name="Artist" value="Nils Hamm" />
+      <property name="Number" value="072" />
       <property name="Flavor" value="Golgari reclaimers resent the gorgons, begrudging the loss of so many fine nutrients locked away in stone." />
       <property name="Faction" value="Golgari" />
       <property name="MultiverseId" value="369095" />
@@ -906,16 +887,17 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Put three +1/+1 counters on target creature.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Remove all +1/+1 counters from target creature you control. Draw that many cards.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Steve Prescott" />
+      <property name="Number" value="129" />
       <property name="MultiverseId" value="369097" />
-      <property name="Flags" value="split" />
       <alternate name="Give" type="splitA">
         <property name="Cost" value="2^" />
         <property name="CMC" value="3" />
         <property name="Color" value="Green" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Put three +1/+1 counters on target creature." />
+        <property name="Rules" value="Put three +1/+1 counters on target creature.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Steve Prescott" />
+        <property name="Number" value="129" />
         <property name="MultiverseId" value="369097" />
       </alternate>
       <alternate name="Take" type="splitB">
@@ -924,18 +906,9 @@
         <property name="Color" value="Blue" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Remove all +1/+1 counters from target creature you control. Draw that many cards." />
+        <property name="Rules" value="Remove all +1/+1 counters from target creature you control. Draw that many cards.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Steve Prescott" />
-        <property name="MultiverseId" value="369097" />
-      </alternate>
-      <alternate name="Give &amp; Take" type="splitC">
-        <property name="Cost" value="4^#" />
-        <property name="CMC" value="6" />
-        <property name="Color" value="Multicolor Green Blue" />
-        <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Put three +1/+1 counters on target creature.&#xD;&#xA;Remove all +1/+1 counters from target creature you control. Draw that many cards." />
-        <property name="Artist" value="Steve Prescott" />
+        <property name="Number" value="129" />
         <property name="MultiverseId" value="369097" />
       </alternate>
     </card>
@@ -947,6 +920,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Whenever a creature you control attacks, put a +1/+1 counter on it." />
       <property name="Artist" value="Raymond Swanland" />
+      <property name="Number" value="073" />
       <property name="Flavor" value="Every soldier returns from battle changed: by hardship, by blood, by a glimpse of glory." />
       <property name="Faction" value="Boros" />
       <property name="MultiverseId" value="368987" />
@@ -963,6 +937,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="0 / 2" />
       <property name="Artist" value="Svetlin Velinov" />
+      <property name="Number" value="074" />
       <property name="Flavor" value="&quot;All pilots and prototypes destroyed. Extensive collateral damage inflicted. Conclusion: flawless design.&quot;—Manual of Melek" />
       <property name="Faction" value="Izzet" />
       <property name="MultiverseId" value="368964" />
@@ -975,6 +950,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="`: Add $ or ^ to your mana pool.&#xD;&#xA;$^, `, Sacrifice Golgari Cluestone: Draw a card." />
       <property name="Artist" value="Raoul Vitale" />
+      <property name="Number" value="139" />
       <property name="Flavor" value="Golgari mold collects whispers, intelligence that is later harvested by Jarad and his high chancellors." />
       <property name="Faction" value="Golgari" />
       <property name="MultiverseId" value="369023" />
@@ -987,6 +963,7 @@
       <property name="Rarity" value="Guildgate" />
       <property name="Rules" value="Golgari Guildgate enters the battlefield tapped.&#xD;&#xA;`: Add $ or ^ to your mana pool." />
       <property name="Artist" value="Eytan Zana" />
+      <property name="Number" value="149" />
       <property name="Flavor" value="Every part of the gate was reclaimed from forgotten ruins and imbued with new purpose by the Swarm." />
       <property name="Faction" value="Golgari" />
       <property name="MultiverseId" value="368960" />
@@ -1000,6 +977,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="`: Add % or ^ to your mana pool.&#xD;&#xA;%^, `, Sacrifice Gruul Cluestone: Draw a card." />
       <property name="Artist" value="Raoul Vitale" />
+      <property name="Number" value="140" />
       <property name="Flavor" value="Forgotten under rocks and vines, Gruul symbols mark the sites of primitive rituals where shamans once chanted to the wild." />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="369035" />
@@ -1012,6 +990,7 @@
       <property name="Rarity" value="Guildgate" />
       <property name="Rules" value="Gruul Guildgate enters the battlefield tapped.&#xD;&#xA;`: Add % or ^ to your mana pool." />
       <property name="Artist" value="Randy Gallegos" />
+      <property name="Number" value="150" />
       <property name="Flavor" value="The scarred rubble around the gate is testament to past meetings of the Clans, summits that inevitably devolved into brawls." />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="369040" />
@@ -1025,6 +1004,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Each attacking creature you control gets +1/+0 and can't be blocked except by two or more creatures." />
       <property name="Artist" value="Dave Kendall" />
+      <property name="Number" value="075" />
       <property name="Flavor" value="&quot;We are the heart of the wild, the fire in its eyes, and the howl in its throat. Come, join the battle to which you were born.&quot;—Kroshkar, Gruul shaman" />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="368956" />
@@ -1041,6 +1021,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="1 / 4" />
       <property name="Artist" value="David Palumbo" />
+      <property name="Number" value="002" />
       <property name="Flavor" value="They've been probation officers, army grunts, bounty hunters—anything to make their district safer." />
       <property name="MultiverseId" value="369077" />
     </card>
@@ -1056,6 +1037,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="3 / 4" />
       <property name="Artist" value="Igor Kieryluk" />
+      <property name="Number" value="076" />
       <property name="Flavor" value="The Dimir employ the spirits of Ravnica's ancient, nameless dead, guiding their malevolence toward selected victims." />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="369087" />
@@ -1068,6 +1050,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="You may tap or untap target permanent, then you may tap or untap another target permanent.&#xD;&#xA;Cipher (Then you may exile this spell card encoded on a creature you control. Whenever that creature deals combat damage to a player, its controller may cast a copy of the encoded card without paying its mana cost.)" />
       <property name="Artist" value="Daarken" />
+      <property name="Number" value="012" />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="369021" />
     </card>
@@ -1083,6 +1066,7 @@
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
       <property name="Artist" value="Winona Nelson" />
+      <property name="Number" value="025" />
       <property name="Flavor" value="&quot;Follow your passion, I always say. Might as well get paid to do what you love.&quot;" />
       <property name="MultiverseId" value="369048" />
     </card>
@@ -1094,6 +1078,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="`: Add # or % to your mana pool.&#xD;&#xA;#%, `, Sacrifice Izzet Cluestone: Draw a card." />
       <property name="Artist" value="Raoul Vitale" />
+      <property name="Number" value="141" />
       <property name="Flavor" value="It holds within it an unsolvable riddle. A creative answer yields an invitation to the guild." />
       <property name="Faction" value="Izzet" />
       <property name="MultiverseId" value="368948" />
@@ -1106,6 +1091,7 @@
       <property name="Rarity" value="Guildgate" />
       <property name="Rules" value="Izzet Guildgate enters the battlefield tapped.&#xD;&#xA;`: Add # or % to your mana pool." />
       <property name="Artist" value="Noah Bradley" />
+      <property name="Number" value="151" />
       <property name="Flavor" value="Beyond lies the culmination of all Izzet projects, a grand experiment led by the dragon Niv-Mizzet himself." />
       <property name="Faction" value="Izzet" />
       <property name="MultiverseId" value="368995" />
@@ -1123,6 +1109,7 @@
       <property name="Toughness" value="5" />
       <property name="PT Box" value="1 / 5" />
       <property name="Artist" value="Wesley Burt" />
+      <property name="Number" value="077" />
       <property name="Flavor" value="Few among the Azorius have ever spoken with the sphinxes, but all have felt their influence." />
       <property name="Faction" value="Azorius" />
       <property name="MultiverseId" value="368947" />
@@ -1139,6 +1126,7 @@
       <property name="Toughness" value="5" />
       <property name="PT Box" value="2 / 5" />
       <property name="Artist" value="Volkan Baga" />
+      <property name="Number" value="078" />
       <property name="Flavor" value="&quot;Welcome to my collection.&quot;" />
       <property name="Faction" value="Golgari" />
       <property name="MultiverseId" value="369064" />
@@ -1152,6 +1140,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature can't attack or block, and its activated abilities can't be activated.&#xD;&#xA;1^#, Return Krasis Incubation to its owner's hand: Put two +1/+1 counters on enchanted creature." />
       <property name="Artist" value="Marco Nelor" />
+      <property name="Number" value="079" />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="369052" />
     </card>
@@ -1167,6 +1156,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="David Rapoza" />
+      <property name="Number" value="042" />
       <property name="Flavor" value="The insectile kraul lurk in the tunnels below street level. Many are loyal to the Golgari Swarm, but others follow their own esoteric caste system." />
       <property name="MultiverseId" value="369059" />
     </card>
@@ -1182,6 +1172,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
       <property name="Artist" value="Willian Murai" />
+      <property name="Number" value="080" />
       <property name="Faction" value="Azorius" />
       <property name="MultiverseId" value="368983" />
     </card>
@@ -1193,6 +1184,7 @@
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules" value="Red creatures you control get +1/+0.&#xD;&#xA;White creatures you control get +0/+1.&#xD;&#xA;%@, Exile Legion's Initiative: Exile all creatures you control. At the beginning of the next combat, return those cards to the battlefield under their owner's control and those creatures gain haste until end of turn." />
       <property name="Artist" value="Jaime Jones" />
+      <property name="Number" value="081" />
       <property name="Faction" value="Boros" />
       <property name="MultiverseId" value="369066" />
     </card>
@@ -1204,16 +1196,17 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Creatures you control get +1/+1 until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Creatures your opponents control get -1/-1 until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="130" />
       <property name="MultiverseId" value="369071" />
-      <property name="Flags" value="split" />
       <alternate name="Profit" type="splitA">
         <property name="Cost" value="1@" />
         <property name="CMC" value="2" />
         <property name="Color" value="White" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Creatures you control get +1/+1 until end of turn." />
+        <property name="Rules" value="Creatures you control get +1/+1 until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Kev Walker" />
+        <property name="Number" value="130" />
         <property name="MultiverseId" value="369071" />
       </alternate>
       <alternate name="Loss" type="splitB">
@@ -1222,18 +1215,9 @@
         <property name="Color" value="Black" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Creatures your opponents control get -1/-1 until end of turn." />
+        <property name="Rules" value="Creatures your opponents control get -1/-1 until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Kev Walker" />
-        <property name="MultiverseId" value="369071" />
-      </alternate>
-      <alternate name="Profit &amp; Loss" type="splitC">
-        <property name="Cost" value="3@$" />
-        <property name="CMC" value="5" />
-        <property name="Color" value="Multicolor White Black" />
-        <property name="Type" value="Instant" />
-        <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Creatures you control get +1/+1 until end of turn.&#xD;&#xA;Creatures your opponents control get -1/-1 until end of turn." />
-        <property name="Artist" value="Kev Walker" />
+        <property name="Number" value="130" />
         <property name="MultiverseId" value="369071" />
       </alternate>
     </card>
@@ -1245,6 +1229,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Detain up to two target creatures your opponents control. (Until your next turn, those creatures can't attack or block and their activated abilities can't be activated.)" />
       <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="003" />
       <property name="Flavor" value="The Azorius have so many codes and statutes that you're always in violation of one of them." />
       <property name="Faction" value="Azorius" />
       <property name="MultiverseId" value="368965" />
@@ -1261,6 +1246,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="1 / 4" />
       <property name="Artist" value="Chase Stone" />
+      <property name="Number" value="082" />
       <property name="Faction" value="Rakdos" />
       <property name="MultiverseId" value="368981" />
     </card>
@@ -1276,6 +1262,7 @@
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
       <property name="Artist" value="Randy Gallegos" />
+      <property name="Number" value="083" />
       <property name="Flavor" value="The devout sacrifice themselves to it hoping for escape from their debts to the guild, but many end up owing in the afterlife." />
       <property name="Faction" value="Orzhov" />
       <property name="MultiverseId" value="368994" />
@@ -1292,6 +1279,7 @@
       <property name="Toughness" value="5" />
       <property name="PT Box" value="4 / 5" />
       <property name="Artist" value="Yeong-Hao Han" />
+      <property name="Number" value="026" />
       <property name="MultiverseId" value="369050" />
     </card>
     <card name="Maze Behemoth" id="1e99510a-e4ca-4620-87d8-d5704a4a0953">
@@ -1306,6 +1294,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="5 / 4" />
       <property name="Artist" value="Yeong-Hao Han" />
+      <property name="Number" value="043" />
       <property name="Flavor" value="It returned to the leylines as quickly as it had appeared, leaving only broken bodies to mark its passage." />
       <property name="MultiverseId" value="369091" />
     </card>
@@ -1321,6 +1310,7 @@
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
       <property name="Artist" value="Yeong-Hao Han" />
+      <property name="Number" value="013" />
       <property name="Flavor" value="The pattern of the Implicit Maze extends in more than two dimensions." />
       <property name="MultiverseId" value="369014" />
     </card>
@@ -1336,6 +1326,7 @@
       <property name="Toughness" value="3" />
       <property name="PT Box" value="6 / 3" />
       <property name="Artist" value="Yeong-Hao Han" />
+      <property name="Number" value="033" />
       <property name="Flavor" value="&quot;The maze seems to fight us at every turn, resisting our efforts to solve it.&quot;—Niv-Mizzet" />
       <property name="MultiverseId" value="369076" />
     </card>
@@ -1351,6 +1342,7 @@
       <property name="Toughness" value="6" />
       <property name="PT Box" value="3 / 6" />
       <property name="Artist" value="Yeong-Hao Han" />
+      <property name="Number" value="004" />
       <property name="Flavor" value="The route has been known for millennia, but only by those with no means to tell it." />
       <property name="MultiverseId" value="368976" />
     </card>
@@ -1361,6 +1353,7 @@
       <property name="Rarity" value="Shockland" />
       <property name="Rules" value="Maze's End enters the battlefield tapped.&#xD;&#xA;`: Add 1 to your mana pool.&#xD;&#xA;3, `, Return Maze's End to its owner's hand: Search your library for a Gate card, put it onto the battlefield, then shuffle your library. If you control ten or more Gates with different names, you win the game." />
       <property name="Artist" value="Cliff Childs" />
+      <property name="Number" value="152" />
       <property name="MultiverseId" value="369038" />
     </card>
     <card name="Melek, Izzet Paragon" id="2e73867a-408d-4d19-8a6f-516b93fd1b0b">
@@ -1375,6 +1368,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
       <property name="Artist" value="Jason Chan" />
+      <property name="Number" value="084" />
       <property name="Faction" value="Izzet" />
       <property name="MultiverseId" value="369062" />
     </card>
@@ -1386,6 +1380,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Regenerate target creature." />
       <property name="Artist" value="Karla Ortiz" />
+      <property name="Number" value="044" />
       <property name="Flavor" value="&quot;The gift of life must be freely given. Anything less would diminish us all.&quot;—Arin, Selesnya healer" />
       <property name="MultiverseId" value="368957" />
     </card>
@@ -1397,6 +1392,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Counter target spell unless its controller pays 6." />
       <property name="Artist" value="Johann Bodin" />
+      <property name="Number" value="014" />
       <property name="Flavor" value="&quot;It's always satisfying to stymie the best efforts of a rival, but the reactions of the Gruul are particularly amusing.&quot;—Bori Andon, Izzet blastseeker" />
       <property name="MultiverseId" value="368980" />
     </card>
@@ -1412,6 +1408,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
       <property name="Artist" value="Chase Stone" />
+      <property name="Number" value="085" />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="369026" />
     </card>
@@ -1423,6 +1420,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Return target creature card from your graveyard to your hand. Morgue Burst deals damage to target creature or player equal to the power of the card returned this way." />
       <property name="Artist" value="Raymond Swanland" />
+      <property name="Number" value="086" />
       <property name="Flavor" value="&quot;Let him in. He's on the list.&quot;—Olrich, Rakdos club owner" />
       <property name="Faction" value="Rakdos" />
       <property name="MultiverseId" value="369049" />
@@ -1439,6 +1437,7 @@
       <property name="Toughness" value="5" />
       <property name="PT Box" value="0 / 5" />
       <property name="Artist" value="Peter Mohrbacher" />
+      <property name="Number" value="015" />
       <property name="Flavor" value="&quot;The most insidious thing in the world is nonsense that sounds just plausible enough to listen to.&quot;—Lazav" />
       <property name="MultiverseId" value="369007" />
     </card>
@@ -1450,6 +1449,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Target creature you control with a +1/+1 counter on it fights target creature an opponent controls. (Each deals damage equal to its power to the other.)" />
       <property name="Artist" value="Ryan Barger" />
+      <property name="Number" value="045" />
       <property name="Flavor" value="Every street corner is a hunting ground, every citizen potential prey." />
       <property name="MultiverseId" value="368988" />
     </card>
@@ -1465,6 +1465,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="1 / 4" />
       <property name="Artist" value="Wayne Reynolds" />
+      <property name="Number" value="087" />
       <property name="Faction" value="Izzet" />
       <property name="MultiverseId" value="369093" />
     </card>
@@ -1480,6 +1481,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="3 / 1" />
       <property name="Artist" value="Clint Cearley" />
+      <property name="Number" value="088" />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="368973" />
     </card>
@@ -1491,6 +1493,7 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Return target permanent card from your graveyard to the battlefield." />
       <property name="Artist" value="Dan Scott" />
+      <property name="Number" value="089" />
       <property name="Flavor" value="&quot;The Obzedat have revived you with purpose. Don't squander their blessing.&quot;—Teysa Karlov, Grand Envoy of Orzhov" />
       <property name="Faction" value="Orzhov" />
       <property name="MultiverseId" value="369002" />
@@ -1507,6 +1510,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
       <property name="Artist" value="Seb McKinnon" />
+      <property name="Number" value="016" />
       <property name="Flavor" value="Sentries guard Ravnica's landmarks and outlying districts, unaware of these places' import to the maze." />
       <property name="MultiverseId" value="368996" />
     </card>
@@ -1518,6 +1522,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="`: Add @ or $ to your mana pool.&#xD;&#xA;@$, `, Sacrifice Orzhov Cluestone: Draw a card." />
       <property name="Artist" value="Raoul Vitale" />
+      <property name="Number" value="142" />
       <property name="Flavor" value="A symbol of power and wealth, the only commodities that matter to the Orzhov." />
       <property name="Faction" value="Orzhov" />
       <property name="MultiverseId" value="369078" />
@@ -1530,6 +1535,7 @@
       <property name="Rarity" value="Guildgate" />
       <property name="Rules" value="Orzhov Guildgate enters the battlefield tapped.&#xD;&#xA;`: Add @ or $ to your mana pool." />
       <property name="Artist" value="John Avon" />
+      <property name="Number" value="153" />
       <property name="Flavor" value="&quot;We do not believe in hiding our wealth in the shadows. This is Orzhov, and this is how we reward greatness.&quot;—Teysa Karlov, Grand Envoy of Orzhov" />
       <property name="Faction" value="Orzhov" />
       <property name="MultiverseId" value="369079" />
@@ -1543,6 +1549,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Target creature gets +5/+5 until end of turn." />
       <property name="Artist" value="Izzy" />
+      <property name="Number" value="046" />
       <property name="Flavor" value="Phytohydras are banned as houseplants in many residential spires. If left unfed, they find their own exit—usually at the cost of extensive property damage." />
       <property name="MultiverseId" value="369054" />
     </card>
@@ -1554,6 +1561,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Target player puts the top two cards of his or her library into his or her graveyard. Draw two cards." />
       <property name="Artist" value="Michael C. Hayes" />
+      <property name="Number" value="090" />
       <property name="Flavor" value="Mirko Vosk hunted anyone with knowledge of the maze, draining the chances of the other guilds." />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="369099" />
@@ -1566,6 +1574,7 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Counter target spell. At the beginning of your next precombat main phase, add X mana in any combination of colors to your mana pool, where X is that spell's converted mana cost." />
       <property name="Artist" value="Chase Stone" />
+      <property name="Number" value="091" />
       <property name="Flavor" value="&quot;Everything serves a purpose. Even you.&quot;—Vorel of the Hull Clade" />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="369069" />
@@ -1582,6 +1591,7 @@
       <property name="Toughness" value="7" />
       <property name="PT Box" value="2 / 7" />
       <property name="Artist" value="Seb McKinnon" />
+      <property name="Number" value="027" />
       <property name="Faction" value="Orzhov" />
       <property name="MultiverseId" value="369006" />
     </card>
@@ -1593,6 +1603,7 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Whenever a player casts a spell from his or her hand, that player exiles it, then exiles cards from the top of his or her library until he or she exiles a card that shares a card type with it. That player may cast that card without paying its mana cost. Then he or she puts all cards exiled with Possibility Storm on the bottom of his or her library in a random order." />
       <property name="Artist" value="Jason Felix" />
+      <property name="Number" value="034" />
       <property name="MultiverseId" value="369013" />
     </card>
     <card name="Progenitor Mimic" id="f7389c49-7b4b-4d74-b40e-dd22862d8f07">
@@ -1607,6 +1618,7 @@
       <property name="Toughness" value="0" />
       <property name="PT Box" value="0 / 0" />
       <property name="Artist" value="Daarken" />
+      <property name="Number" value="092" />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="369001" />
     </card>
@@ -1618,16 +1630,17 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Target creature gets +2/+4 until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Target creature gets -6/-0 until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Ryan Barger" />
+      <property name="Number" value="131" />
       <property name="MultiverseId" value="369024" />
-      <property name="Flags" value="split" />
       <alternate name="Protect" type="splitA">
         <property name="Cost" value="2@" />
         <property name="CMC" value="3" />
         <property name="Color" value="White" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target creature gets +2/+4 until end of turn." />
+        <property name="Rules" value="Target creature gets +2/+4 until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Ryan Barger" />
+        <property name="Number" value="131" />
         <property name="MultiverseId" value="369024" />
       </alternate>
       <alternate name="Serve" type="splitB">
@@ -1636,18 +1649,9 @@
         <property name="Color" value="Blue" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target creature gets -6/-0 until end of turn." />
+        <property name="Rules" value="Target creature gets -6/-0 until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Ryan Barger" />
-        <property name="MultiverseId" value="369024" />
-      </alternate>
-      <alternate name="Protect &amp; Serve" type="splitC">
-        <property name="Cost" value="3@#" />
-        <property name="CMC" value="5" />
-        <property name="Color" value="Multicolor White Blue" />
-        <property name="Type" value="Instant" />
-        <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target creature gets +2/+4 until end of turn.&#xD;&#xA;Target creature gets -6/-0 until end of turn." />
-        <property name="Artist" value="Ryan Barger" />
+        <property name="Number" value="131" />
         <property name="MultiverseId" value="369024" />
       </alternate>
     </card>
@@ -1659,6 +1663,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Punish the Enemy deals 3 damage to target player and 3 damage to target creature." />
       <property name="Artist" value="Slawomir Maniak" />
+      <property name="Number" value="035" />
       <property name="Flavor" value="&quot;When justice descends, the servant will burn with the master.&quot;—Aurelia" />
       <property name="MultiverseId" value="369090" />
     </card>
@@ -1670,6 +1675,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Destroy target artifact or creature. It can't be regenerated." />
       <property name="Artist" value="Igor Kieryluk" />
+      <property name="Number" value="093" />
       <property name="Flavor" value="&quot;We are all decaying, always in a state of near-death. One moment without breath and we begin to break down.&quot;—Cevraya, Golgari shaman" />
       <property name="Faction" value="Golgari" />
       <property name="MultiverseId" value="369073" />
@@ -1686,6 +1692,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="3 / 1" />
       <property name="Artist" value="Lucas Graciano" />
+      <property name="Number" value="036" />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="368946" />
     </card>
@@ -1697,6 +1704,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="`: Add $ or % to your mana pool.&#xD;&#xA;$%, `, Sacrifice Rakdos Cluestone: Draw a card." />
       <property name="Artist" value="Raoul Vitale" />
+      <property name="Number" value="143" />
       <property name="Flavor" value="&quot;Burn. Bleed. Enjoy.&quot;—Cluestone inscription" />
       <property name="Faction" value="Rakdos" />
       <property name="MultiverseId" value="368975" />
@@ -1713,6 +1721,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
       <property name="Artist" value="Karl Kopinski" />
+      <property name="Number" value="028" />
       <property name="Flavor" value="Rakdos rioters paint their faces to resemble the drakes' bloodied muzzles." />
       <property name="Faction" value="Rakdos" />
       <property name="MultiverseId" value="369085" />
@@ -1725,6 +1734,7 @@
       <property name="Rarity" value="Guildgate" />
       <property name="Rules" value="Rakdos Guildgate enters the battlefield tapped.&#xD;&#xA;`: Add $ or % to your mana pool." />
       <property name="Artist" value="Eytan Zana" />
+      <property name="Number" value="154" />
       <property name="Flavor" value="Maze-runners who pass through the Rakdos gate leave behind their scruples and a significant amount of skin." />
       <property name="Faction" value="Rakdos" />
       <property name="MultiverseId" value="368990" />
@@ -1737,9 +1747,10 @@
       <property name="Type" value="Planeswalker" />
       <property name="Subtype" value="Ral" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules" value="+1: Tap target permanent, then untap another target permanent.&#xD;&#xA;-2: Ral Zarek deals 3 damage to target creature or player.&#xD;&#xA;-7: Flip five coins. Take an extra turn after this one for each coin that comes up heads." />
+      <property name="Rules" value="+1: Tap target permanent, then untap another target permanent.&#xD;&#xA;−2: Ral Zarek deals 3 damage to target creature or player.&#xD;&#xA;−7: Flip five coins. Take an extra turn after this one for each coin that comes up heads." />
       <property name="PT Box" value="4" />
       <property name="Artist" value="Eric Deschamps" />
+      <property name="Number" value="094" />
       <property name="MultiverseId" value="369031" />
     </card>
     <card name="Ready // Willing" id="8de24212-94a9-4292-aec8-42599e8ecdd7">
@@ -1748,18 +1759,19 @@
       <property name="Color" value="Multicolor Green White&#xD;&#xA;//&#xD;&#xA;Multicolor White Black" />
       <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Creatures you control are indestructible this turn. Untap each creature you control.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Creatures you control gain deathtouch and lifelink until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
+      <property name="Rules" value="Creatures you control gain indestructible until end of turn. Untap each creature you control.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Creatures you control gain deathtouch and lifelink until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Zoltan Boros" />
+      <property name="Number" value="132" />
       <property name="MultiverseId" value="368967" />
-      <property name="Flags" value="split" />
       <alternate name="Ready" type="splitA">
         <property name="Cost" value="1^@" />
         <property name="CMC" value="3" />
         <property name="Color" value="Multicolor Green White" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Creatures you control are indestructible this turn. Untap each creature you control." />
+        <property name="Rules" value="Creatures you control gain indestructible until end of turn. Untap each creature you control.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Zoltan Boros" />
+        <property name="Number" value="132" />
         <property name="MultiverseId" value="368967" />
       </alternate>
       <alternate name="Willing" type="splitB">
@@ -1768,18 +1780,9 @@
         <property name="Color" value="Multicolor White Black" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Creatures you control gain deathtouch and lifelink until end of turn." />
+        <property name="Rules" value="Creatures you control gain deathtouch and lifelink until end of turn.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Zoltan Boros" />
-        <property name="MultiverseId" value="368967" />
-      </alternate>
-      <alternate name="Ready &amp; Willing" type="splitC">
-        <property name="Cost" value="2$^@@" />
-        <property name="CMC" value="6" />
-        <property name="Color" value="Multicolor Black Green White" />
-        <property name="Type" value="Instant" />
-        <property name="Rarity" value="Rare" />
-        <property name="Rules" value="Creatures you control are indestructible this turn. Untap each creature you control.&#xD;&#xA;Creatures you control gain deathtouch and lifelink until end of turn." />
-        <property name="Artist" value="Zoltan Boros" />
+        <property name="Number" value="132" />
         <property name="MultiverseId" value="368967" />
       </alternate>
     </card>
@@ -1791,6 +1794,7 @@
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules" value="Target opponent reveals his or her hand. You choose up to X nonland cards from it and exile them. For each card exiled this way, search that player's graveyard, hand, and library for any number of cards with the same name as that card and exile them. Then that player shuffles his or her library." />
       <property name="Artist" value="Steven Belledin" />
+      <property name="Number" value="095" />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="368958" />
     </card>
@@ -1802,6 +1806,7 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Counter target spell. Its controller can't cast spells this turn." />
       <property name="Artist" value="Matt Stewart" />
+      <property name="Number" value="096" />
       <property name="Flavor" value="&quot;We have confiscated your spells as evidence. Once we conclude our investigation, you may petition to have them returned.&quot;" />
       <property name="Faction" value="Azorius" />
       <property name="MultiverseId" value="369022" />
@@ -1818,6 +1823,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
       <property name="Artist" value="Howard Lyon" />
+      <property name="Number" value="047" />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="369033" />
     </card>
@@ -1829,6 +1835,7 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Each player sacrifices a multicolored permanent." />
       <property name="Artist" value="Daarken" />
+      <property name="Number" value="005" />
       <property name="Flavor" value="&quot;Scores will die in the name of peace. That is what you call compromise?&quot;—Gideon Jura, to Aurelia" />
       <property name="MultiverseId" value="368993" />
     </card>
@@ -1840,6 +1847,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Return each creature that dealt damage this turn to its owner's hand." />
       <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="097" />
       <property name="Flavor" value="&quot;You can always count on the Azorius to ruin a party.&quot;—Massacre Girl" />
       <property name="Faction" value="Azorius" />
       <property name="MultiverseId" value="368978" />
@@ -1852,6 +1860,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="You gain 1 life for each creature your opponents control. Prevent all damage that would be dealt to you this turn." />
       <property name="Artist" value="Slawomir Maniak" />
+      <property name="Number" value="006" />
       <property name="Flavor" value="&quot;Ravnicans need order. If they don't have it, we shall bring it to them.&quot;—Isperia" />
       <property name="MultiverseId" value="368979" />
     </card>
@@ -1867,6 +1876,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
       <property name="Artist" value="Christopher Moeller" />
+      <property name="Number" value="037" />
       <property name="Flavor" value="He doesn't care whether he's rioting about trade rights or just having a drunken brawl. He wakes up every morning eager to smash some heads." />
       <property name="MultiverseId" value="368998" />
     </card>
@@ -1882,6 +1892,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="4 / 1" />
       <property name="Artist" value="Maciej Kuciara" />
+      <property name="Number" value="098" />
       <property name="Faction" value="Golgari" />
       <property name="MultiverseId" value="368986" />
     </card>
@@ -1897,6 +1908,7 @@
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
       <property name="Artist" value="Eric Velhagen" />
+      <property name="Number" value="038" />
       <property name="Flavor" value="&quot;The maaka remain loyal to us in this time of strife. We don't even have to feed them—our enemies do.&quot;—Nedja, Gruul shaman" />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="369075" />
@@ -1910,6 +1922,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Enchant creature with power 3 or less&#xD;&#xA;When Runner's Bane enters the battlefield, tap enchanted creature.&#xD;&#xA;Enchanted creature doesn't untap during its controller's untap step." />
       <property name="Artist" value="Karl Kopinski" />
+      <property name="Number" value="017" />
       <property name="MultiverseId" value="368966" />
     </card>
     <card name="Ruric Thar, the Unbowed" id="bf927daa-6303-4b74-bba5-b81d6d938363">
@@ -1924,6 +1937,7 @@
       <property name="Toughness" value="6" />
       <property name="PT Box" value="6 / 6" />
       <property name="Artist" value="Tyler Jacobson" />
+      <property name="Number" value="099" />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="369025" />
     </card>
@@ -1939,6 +1953,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
       <property name="Artist" value="Chris Rahn" />
+      <property name="Number" value="048" />
       <property name="Flavor" value="In Ravnica's wilder districts, nature still stirs, and its protectors still mind their posts." />
       <property name="MultiverseId" value="369088" />
     </card>
@@ -1954,6 +1969,7 @@
       <property name="Toughness" value="0" />
       <property name="PT Box" value="0 / 0" />
       <property name="Artist" value="Raymond Swanland" />
+      <property name="Number" value="100" />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="368952" />
     </card>
@@ -1969,6 +1985,7 @@
       <property name="Toughness" value="5" />
       <property name="PT Box" value="4 / 5" />
       <property name="Artist" value="Zoltan Boros" />
+      <property name="Number" value="101" />
       <property name="Flavor" value="For the Gruul, bone-crushing rage is the first priority. Accuracy comes in a distant ninetieth." />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="369005" />
@@ -1985,6 +2002,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
       <property name="Artist" value="Willian Murai" />
+      <property name="Number" value="007" />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="369092" />
     </card>
@@ -1996,6 +2014,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="`: Add ^ or @ to your mana pool.&#xD;&#xA;^@, `, Sacrifice Selesnya Cluestone: Draw a card." />
       <property name="Artist" value="Raoul Vitale" />
+      <property name="Number" value="144" />
       <property name="Flavor" value="&quot;Break it if you must. The loss of one relic is nothing next to the value of enriching us all.&quot;—Suniel the Woodwise" />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="369060" />
@@ -2008,6 +2027,7 @@
       <property name="Rarity" value="Guildgate" />
       <property name="Rules" value="Selesnya Guildgate enters the battlefield tapped.&#xD;&#xA;`: Add ^ or @ to your mana pool." />
       <property name="Artist" value="Howard Lyon" />
+      <property name="Number" value="155" />
       <property name="Flavor" value="The Selesyna welcome all to help them heal the city's wounds. The price, however, is devotion to the guild and a selfless belief in Trostani." />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="369018" />
@@ -2021,6 +2041,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Until end of turn, creatures you control gain &quot;When this creature dies, it deals 2 damage to target creature an opponent controls.&quot;" />
       <property name="Artist" value="Steve Prescott" />
+      <property name="Number" value="102" />
       <property name="Flavor" value="The audience quickly realized a few things: it wasn't a magic trick, there wasn't candy in there, and they'd need new clothes." />
       <property name="Faction" value="Rakdos" />
       <property name="MultiverseId" value="368945" />
@@ -2033,6 +2054,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="`: Add ^ or # to your mana pool.&#xD;&#xA;^#, `, Sacrifice Simic Cluestone: Draw a card." />
       <property name="Artist" value="Raoul Vitale" />
+      <property name="Number" value="145" />
       <property name="Flavor" value="Simic symbols are among the most intricate and fragile, yet few vandalize them for fear of the strange lifeforms that might be released." />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="368963" />
@@ -2045,6 +2067,7 @@
       <property name="Rarity" value="Guildgate" />
       <property name="Rules" value="Simic Guildgate enters the battlefield tapped.&#xD;&#xA;`: Add ^ or # to your mana pool." />
       <property name="Artist" value="Svetlin Velinov" />
+      <property name="Number" value="156" />
       <property name="Flavor" value="Simic biomancers don't concern themselves with guarding a gate. Their ever-present creations are enough to ward off trespassers." />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="368959" />
@@ -2062,6 +2085,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
       <property name="Artist" value="Mike Bierek" />
+      <property name="Number" value="103" />
       <property name="Flavor" value="&quot;That must weigh heavily on your soul. Let me purge it for you.&quot;" />
       <property name="Faction" value="Orzhov" />
       <property name="MultiverseId" value="368968" />
@@ -2075,6 +2099,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Enchant creature&#xD;&#xA;Whenever enchanted creature attacks or blocks, its controller loses 2 life." />
       <property name="Artist" value="Anthony Palumbo" />
+      <property name="Number" value="029" />
       <property name="Flavor" value="&quot;You caught something on a cold night's stroll? No, I'd say something caught you.&quot;—Mezim Magrah, civic healer" />
       <property name="MultiverseId" value="369043" />
     </card>
@@ -2090,6 +2115,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="6 / 4" />
       <property name="Artist" value="Peter Mohrbacher" />
+      <property name="Number" value="104" />
       <property name="Flavor" value="Its victims become mindless lunatics. Conveniently, that's the first step in joining the Cult of Rakdos." />
       <property name="Faction" value="Rakdos" />
       <property name="MultiverseId" value="369068" />
@@ -2106,6 +2132,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="Dan Scott" />
+      <property name="Number" value="049" />
       <property name="Flavor" value="&quot;It preys on those who would spy on our lands, so we never prey on it.&quot;—Kroshkar, Gruul shaman" />
       <property name="MultiverseId" value="369083" />
     </card>
@@ -2121,6 +2148,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
       <property name="Artist" value="Daarken" />
+      <property name="Number" value="039" />
       <property name="MultiverseId" value="369067" />
     </card>
     <card name="Species Gorger" id="f9194856-9cf4-48e0-a8a0-f5d0579177df">
@@ -2135,6 +2163,7 @@
       <property name="Toughness" value="6" />
       <property name="PT Box" value="6 / 6" />
       <property name="Artist" value="Min Yum" />
+      <property name="Number" value="105" />
       <property name="Flavor" value="&quot;We raised eelhawks to control the squidflies, then waspcrabs to prey on the eelhawks. Now what do we do with all these waspcrabs?&quot;—Gulistan, Simic biomancer" />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="369015" />
@@ -2151,6 +2180,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="3 / 1" />
       <property name="Artist" value="Ryan Barger" />
+      <property name="Number" value="106" />
       <property name="Flavor" value="For the Rakdos, &quot;suicidal charge&quot; and &quot;good showmanship&quot; are one and the same." />
       <property name="Faction" value="Rakdos" />
       <property name="MultiverseId" value="368972" />
@@ -2167,6 +2197,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="3 / 1" />
       <property name="Artist" value="David Palumbo" />
+      <property name="Number" value="008" />
       <property name="Flavor" value="&quot;Sometimes it forgets to loosen its grip before taking flight. I lost my roof that way.&quot;—Ecaban, Boros scout" />
       <property name="MultiverseId" value="368992" />
     </card>
@@ -2182,6 +2213,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
       <property name="Artist" value="Chippy" />
+      <property name="Number" value="009" />
       <property name="Flavor" value="&quot;You will pass with respect, or you will not pass at all.&quot;" />
       <property name="MultiverseId" value="368949" />
     </card>
@@ -2192,11 +2224,12 @@
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Tajic, Blade of the Legion is indestructible.&#xD;&#xA;Battalion — Whenever Tajic and at least two other creatures attack, Tajic gets +5/+5 until end of turn." />
+      <property name="Rules" value="Indestructible&#xD;&#xA;Battalion — Whenever Tajic, Blade of the Legion and at least two other creatures attack, Tajic gets +5/+5 until end of turn." />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="James Ryman" />
+      <property name="Number" value="107" />
       <property name="Flavor" value="&quot;I run the maze alone, but I fight with the full might of the Legion.&quot;" />
       <property name="Faction" value="Boros" />
       <property name="MultiverseId" value="369098" />
@@ -2209,16 +2242,17 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Destroy target artifact.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Destroy target enchantment.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Ryan Pancoast" />
+      <property name="Number" value="135" />
       <property name="MultiverseId" value="368950" />
-      <property name="Flags" value="split" />
       <alternate name="Wear" type="splitA">
         <property name="Cost" value="1%" />
         <property name="CMC" value="2" />
         <property name="Color" value="Red" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Destroy target artifact." />
+        <property name="Rules" value="Destroy target artifact.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Ryan Pancoast" />
+        <property name="Number" value="135" />
         <property name="MultiverseId" value="368950" />
       </alternate>
       <alternate name="Tear" type="splitB">
@@ -2227,18 +2261,9 @@
         <property name="Color" value="White" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Destroy target enchantment." />
+        <property name="Rules" value="Destroy target enchantment.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Ryan Pancoast" />
-        <property name="MultiverseId" value="368950" />
-      </alternate>
-      <alternate name="Wear &amp; Tear" type="splitC">
-        <property name="Cost" value="1%@" />
-        <property name="CMC" value="3" />
-        <property name="Color" value="Multicolor Red White" />
-        <property name="Type" value="Instant" />
-        <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Destroy target artifact.&#xD;&#xA;Destroy target enchantment." />
-        <property name="Artist" value="Ryan Pancoast" />
+        <property name="Number" value="135" />
         <property name="MultiverseId" value="368950" />
       </alternate>
     </card>
@@ -2254,6 +2279,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
       <property name="Artist" value="Karla Ortiz" />
+      <property name="Number" value="108" />
       <property name="Faction" value="Orzhov" />
       <property name="MultiverseId" value="369011" />
     </card>
@@ -2269,6 +2295,7 @@
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
       <property name="Artist" value="Ryan Barger" />
+      <property name="Number" value="050" />
       <property name="Faction" value="Golgari" />
       <property name="MultiverseId" value="369020" />
     </card>
@@ -2284,6 +2311,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
       <property name="Artist" value="Slawomir Maniak" />
+      <property name="Number" value="109" />
       <property name="Faction" value="Orzhov" />
       <property name="MultiverseId" value="368970" />
     </card>
@@ -2295,16 +2323,17 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Target player draws two cards and loses 2 life.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)&#xD;&#xA;//&#xD;&#xA;Trouble deals damage to target player equal to the number of cards in that player's hand.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
       <property name="Artist" value="Nils Hamm" />
+      <property name="Number" value="133" />
       <property name="MultiverseId" value="369032" />
-      <property name="Flags" value="split" />
       <alternate name="Toil" type="splitA">
         <property name="Cost" value="2$" />
         <property name="CMC" value="3" />
         <property name="Color" value="Black" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target player draws two cards and loses 2 life." />
+        <property name="Rules" value="Target player draws two cards and loses 2 life.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Nils Hamm" />
+        <property name="Number" value="133" />
         <property name="MultiverseId" value="369032" />
       </alternate>
       <alternate name="Trouble" type="splitB">
@@ -2313,18 +2342,9 @@
         <property name="Color" value="Red" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Trouble deals damage to target player equal to the number of cards in that player's hand." />
+        <property name="Rules" value="Trouble deals damage to target player equal to the number of cards in that player's hand.&#xD;&#xA;Fuse (You may cast one or both halves of this card from your hand.)" />
         <property name="Artist" value="Nils Hamm" />
-        <property name="MultiverseId" value="369032" />
-      </alternate>
-      <alternate name="Toil &amp; Trouble" type="splitC">
-        <property name="Cost" value="4$%" />
-        <property name="CMC" value="6" />
-        <property name="Color" value="Multicolor Black Red" />
-        <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Uncommon" />
-        <property name="Rules" value="Target player draws two cards and loses 2 life.&#xD;&#xA;Trouble deals damage to target player equal to the number of cards in that player's hand." />
-        <property name="Artist" value="Nils Hamm" />
+        <property name="Number" value="133" />
         <property name="MultiverseId" value="369032" />
       </alternate>
     </card>
@@ -2336,6 +2356,7 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules" value="Change the text of target permanent by replacing all instances of one color word with another or one basic land type with another until end of turn.&#xD;&#xA;Cipher (Then you may exile this spell card encoded on a creature you control. Whenever that creature deals combat damage to a player, its controller may cast a copy of the encoded card without paying its mana cost.)" />
       <property name="Artist" value="Clint Cearley" />
+      <property name="Number" value="018" />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="369034" />
     </card>
@@ -2351,6 +2372,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
       <property name="Artist" value="Howard Lyon" />
+      <property name="Number" value="110" />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="369072" />
     </card>
@@ -2366,6 +2388,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
       <property name="Artist" value="Volkan Baga" />
+      <property name="Number" value="030" />
       <property name="Flavor" value="There are many gates into the undercity, but few ways out." />
       <property name="MultiverseId" value="369046" />
     </card>
@@ -2377,6 +2400,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Look at the top four cards of your library. You may reveal up to two instant and/or sorcery cards from among them and put the revealed cards into your hand. Put the rest on the bottom of your library in any order." />
       <property name="Artist" value="Jaime Jones" />
+      <property name="Number" value="019" />
       <property name="Flavor" value="The Implicit Maze winds through Ravnica, connecting arcane landmarks of all ten guilds." />
       <property name="MultiverseId" value="369010" />
     </card>
@@ -2389,6 +2413,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature gets +2/+2 and has trample and lifelink." />
       <property name="Artist" value="Mike Bierek" />
+      <property name="Number" value="111" />
       <property name="Flavor" value="As Trostani's influence grew, vitality spread through the Conclave—much to the other guilds' dismay." />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="369074" />
@@ -2405,6 +2430,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="Adam Paquette" />
+      <property name="Number" value="112" />
       <property name="Faction" value="Golgari" />
       <property name="MultiverseId" value="368977" />
     </card>
@@ -2420,6 +2446,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="Matt Stewart" />
+      <property name="Number" value="113" />
       <property name="Flavor" value="&quot;All that steel doesn't make them slower. It makes them bolder.&quot;—Tajic, Blade of the Legion" />
       <property name="Faction" value="Boros" />
       <property name="MultiverseId" value="369070" />
@@ -2436,6 +2463,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="Winona Nelson" />
+      <property name="Number" value="114" />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="368951" />
     </card>
@@ -2451,6 +2479,7 @@
       <property name="Toughness" value="4" />
       <property name="PT Box" value="1 / 4" />
       <property name="Artist" value="Mike Bierek" />
+      <property name="Number" value="115" />
       <property name="Flavor" value="&quot;I used to hurl rocks and eat scraps of meat burned over a fire. Look at what I've become and tell me Simic does not hold infinite possibility.&quot;" />
       <property name="Faction" value="Simic" />
       <property name="MultiverseId" value="369045" />
@@ -2463,6 +2492,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Populate. (Put a token onto the battlefield that's a copy of a creature token you control.)" />
       <property name="Artist" value="Cynthia Sheppard" />
+      <property name="Number" value="010" />
       <property name="Flavor" value="&quot;You see a bird, an oak, a packbeast. I see the potential for an army.&quot;—Lalia, Selesnya dryad" />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="369012" />
@@ -2475,6 +2505,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Warleader's Helix deals 4 damage to target creature or player and you gain 4 life." />
       <property name="Artist" value="Greg Staples" />
+      <property name="Number" value="116" />
       <property name="Flavor" value="&quot;There is no time to remedy our enemies' ignorance. Blast it out of them.&quot;—Aurelia" />
       <property name="Faction" value="Boros" />
       <property name="MultiverseId" value="369081" />
@@ -2487,6 +2518,7 @@
       <property name="Rarity" value="Uncommon" />
       <property name="Rules" value="Target creature gets +X/-X until end of turn, where X is the number of cards in your hand." />
       <property name="Artist" value="Karl Kopinski" />
+      <property name="Number" value="117" />
       <property name="Flavor" value="The Gruul seek unbounded strength. The Dimir deliver cruel irony." />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="369094" />
@@ -2499,6 +2531,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Target creature you control gets +1/+0 and gains first strike until end of turn.&#xD;&#xA;Overload 1% (You may cast this spell for its overload cost. If you do, change its text by replacing all instances of &quot;target&quot; with &quot;each.&quot;)" />
       <property name="Artist" value="Jason Felix" />
+      <property name="Number" value="040" />
       <property name="Faction" value="Izzet" />
       <property name="MultiverseId" value="369004" />
     </card>
@@ -2514,6 +2547,7 @@
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="John Severin Brassell" />
+      <property name="Number" value="020" />
       <property name="Flavor" value="Air currents whip through the city corridors, creating wind tunnels that accelerate urban drakes toward their prey." />
       <property name="MultiverseId" value="369037" />
     </card>
@@ -2529,6 +2563,7 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
       <property name="Artist" value="Greg Staples" />
+      <property name="Number" value="118" />
       <property name="Flavor" value="&quot;We learned something from the Simic. Unfortunately for them.&quot;—Nefara, Dimir agent" />
       <property name="Faction" value="Dimir" />
       <property name="MultiverseId" value="369027" />
@@ -2545,6 +2580,7 @@
       <property name="Toughness" value="5" />
       <property name="PT Box" value="7 / 5" />
       <property name="Artist" value="Adam Paquette" />
+      <property name="Number" value="119" />
       <property name="Flavor" value="Many Ravnicans think of nature as orderly groves and elf-tended rot farms. They haven't seen the Gruul wilds." />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="369019" />
@@ -2561,131 +2597,136 @@
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
       <property name="Artist" value="Mark Winters" />
+      <property name="Number" value="120" />
       <property name="Flavor" value="&quot;Only the decadent think magic should be pristine and without cost.&quot;" />
       <property name="Faction" value="Gruul" />
       <property name="MultiverseId" value="369065" />
-      <property name="Flags" value=" " />
-	</card>
-	  
-	 <card name="Godless Shrine" id="969af6c7-db47-43b3-9fa4-c94e6bd5c0f3">
-		<property name="CMC" value="0" />
-		<property name="Color" value="Colorless" />
-		<property name="Type" value="Land" />
-		<property name="Subtype" value="Plains Swamp" />
-		<property name="Rarity" value="Shockland" />
-		<property name="Rules" value="({T}: Add {W} or {B} to your mana pool.)&#xD;&#xA;As Godless Shrine enters the battlefield, you may pay 2 life. If you don&apos;t, Godless Shrine enters the battlefield tapped." />
-		<property name="Artist" value="Cliff Childs" />
-		<property name="Flavor" value="Judgment without hope." />
-		<property name="MultiverseId" value="366302" />
-		<property name="Flags" value="WB" />
-	</card>
-	<card name="Sacred Foundry" id="aa5bb7df-9b3f-4bd2-b213-2fe1ad677d06">
-		<property name="CMC" value="0" />
-		<property name="Color" value="Colorless" />
-		<property name="Type" value="Land" />
-		<property name="Subtype" value="Mountain Plains" />
-		<property name="Rarity" value="Shockland" />
-		<property name="Rules" value="({T}: Add {R} or {W} to your mana pool.)&#xD;&#xA;As Sacred Foundry enters the battlefield, you may pay 2 life. If you don&apos;t, Sacred Foundry enters the battlefield tapped." />
-		<property name="Artist" value="Sam Burley" />
-		<property name="Flavor" value="Burning fervor and fearsome skill create a lethal beauty terrible to behold." />
-		<property name="MultiverseId" value="366439" />
-		<property name="Flags" value="RW" />
-	</card>
-	<card name="Stomping Ground" id="f9d87955-a951-406a-a601-ae088fde60b5">
-		<property name="CMC" value="0" />
-		<property name="Color" value="Colorless" />
-		<property name="Type" value="Land" />
-		<property name="Subtype" value="Mountain Forest" />
-		<property name="Rarity" value="Shockland" />
-		<property name="Rules" value="({T}: Add {R} or {G} to your mana pool.)&#xD;&#xA;As Stomping Ground enters the battlefield, you may pay 2 life. If you don&apos;t, Stomping Ground enters the battlefield tapped." />
-		<property name="Artist" value="David Palumbo" />
-		<property name="Flavor" value="&quot;Roots, ruins, and room to fight. All the comforts of home.&quot;&#xd;&#xa;—Domri Rade" />
-		<property name="MultiverseId" value="366232" />
-		<property name="Flags" value="RG" />
-	</card>
-	<card name="Watery Grave" id="49261ef7-7713-4ad2-9a8d-8de4482f5ef3">
-		<property name="CMC" value="0" />
-		<property name="Color" value="Colorless" />
-		<property name="Type" value="Land" />
-		<property name="Subtype" value="Island Swamp" />
-		<property name="Rarity" value="Shockland" />
-		<property name="Rules" value="({T}: Add {U} or {B} to your mana pool.)&#xD;&#xA;As Watery Grave enters the battlefield, you may pay 2 life. If you don&apos;t, Watery Grave enters the battlefield tapped." />
-		<property name="Artist" value="Raymond Swanland" />
-		<property name="Flavor" value="&quot;I fear that as we scurry after phantoms, the Dimir pull nine puppet strings.&quot;&#xd;&#xa;—Ral Zarek" />
-		<property name="MultiverseId" value="366335" />
-		<property name="Flags" value="UB" />
-	</card>
-	<card name="Breeding Pool" id="d0e533ea-798b-4fbc-98fc-fab18f5309a9">
-		<property name="CMC" value="0" />
-		<property name="Color" value="Colorless" />
-		<property name="Type" value="Land" />
-		<property name="Subtype" value="Forest Island" />
-		<property name="Rarity" value="Shockland" />
-		<property name="Rules" value="({T}: Add {G} or {U} to your mana pool.)&#xD;&#xA;As Breeding Pool enters the battlefield, you may pay 2 life. If you don&apos;t, Breeding Pool enters the battlefield tapped." />
-		<property name="Artist" value="Mike Bierek" />
-		<property name="Flavor" value="Uncharted depths. Unbounded hopes. Unfathomable mysteries." />
-		<property name="MultiverseId" value="366291" />
-		<property name="Flags" value="GU" />
-	</card>
-	<card name="Blood Crypt" id="e1c19fd5-4241-4fa3-8cd3-9b79d70b86c0">
-		<property name="CMC" value="0" />
-		<property name="Color" value="Colorless" />
-		<property name="Type" value="Land" />
-		<property name="Subtype" value="Swamp Mountain" />
-		<property name="Rarity" value="Shockland" />
-		<property name="Rules" value="({T}: Add {B} or {R} to your mana pool.)&#xD;&#xA;As Blood Crypt enters the battlefield, you may pay 2 life. If you don&apos;t, Blood Crypt enters the battlefield tapped." />
-		<property name="Artist" value="Vincent Proce" />
-		<property name="Flavor" value="Where the dead serve as diversion, decor, and dessert." />
-		<property name="MultiverseId" value="253683" />
-		<property name="Flags" value="BR" />
-	</card>
-	<card name="Hallowed Fountain" id="4acfef33-c9e9-452a-bb8b-06b5a06e65d9">
-		<property name="CMC" value="0" />
-		<property name="Color" value="Colorless" />
-		<property name="Type" value="Land" />
-		<property name="Subtype" value="Plains Island" />
-		<property name="Rarity" value="Shockland" />
-		<property name="Rules" value="({T}: Add {W} or {U} to your mana pool.)&#xD;&#xA;As Hallowed Fountain enters the battlefield, you may pay 2 life. If you don&apos;t, Hallowed Fountain enters the battlefield tapped." />
-		<property name="Artist" value="Jung Park" />
-		<property name="Flavor" value="A place to relax, if you have the proper permit." />
-		<property name="MultiverseId" value="253684" />
-		<property name="Flags" value="WU" />
-	</card>
-	<card name="Overgrown Tomb" id="ae3e3290-7cd6-4167-a7ea-f658ecb066b4">
-		<property name="CMC" value="0" />
-		<property name="Color" value="Colorless" />
-		<property name="Type" value="Land" />
-		<property name="Subtype" value="Swamp Forest" />
-		<property name="Rarity" value="Shockland" />
-		<property name="Rules" value="({T}: Add {B} or {G} to your mana pool.)&#xD;&#xA;As Overgrown Tomb enters the battlefield, you may pay 2 life. If you don&apos;t, Overgrown Tomb enters the battlefield tapped." />
-		<property name="Artist" value="Steven Belledin" />
-		<property name="Flavor" value="The best funeral shroud is the fabric of new life." />
-		<property name="MultiverseId" value="253680" />
-		<property name="Flags" value="BG" />
-	</card>
-	<card name="Steam Vents" id="ebfdf681-bfc1-4d60-b38f-492c7893d74f">
-		<property name="CMC" value="0" />
-		<property name="Color" value="Colorless" />
-		<property name="Type" value="Land" />
-		<property name="Subtype" value="Island Mountain" />
-		<property name="Rarity" value="Shockland" />
-		<property name="Rules" value="({T}: Add {U} or {R} to your mana pool.)&#xD;&#xA;As Steam Vents enters the battlefield, you may pay 2 life. If you don&apos;t, Steam Vents enters the battlefield tapped." />
-		<property name="Artist" value="Yeong-Hao Han" />
-		<property name="Flavor" value="Crafted with genius, energized with madness." />
-		<property name="MultiverseId" value="253682" />
-		<property name="Flags" value="UB" />
-	</card>
-	<card name="Temple Garden" id="23bcef7a-e887-4831-996a-82285bb23978">
-		<property name="CMC" value="0" />
-		<property name="Color" value="Colorless" />
-		<property name="Type" value="Land" />
-		<property name="Subtype" value="Forest Plains" />
-		<property name="Rarity" value="Shockland" />
-		<property name="Rules" value="({T}: Add {G} or {W} to your mana pool.)&#xD;&#xA;As Temple Garden enters the battlefield, you may pay 2 life. If you don&apos;t, Temple Garden enters the battlefield tapped." />
-		<property name="Artist" value="Volkan Baga" />
-		<property name="Flavor" value="In the gardens of the Conclave, order and beauty are the roots of power." />
-		<property name="MultiverseId" value="253681" />
-		<property name="Flags" value="GW" />
-	</card>
+    </card>
+    <card name="Steam Vents" id="ebfdf681-bfc1-4d60-b38f-492c7893d74f">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Subtype" value="Island Mountain" />
+      <property name="Rarity" value="Shockland" />
+      <property name="Rules" value="(`: Add # or % to your mana pool.)&#xD;&#xA;As Steam Vents enters the battlefield, you may pay 2 life. If you don't, Steam Vents enters the battlefield tapped." />
+      <property name="Artist" value="Yeong-Hao Han" />
+      <property name="Number" value="247" />
+      <property name="Flavor" value="Crafted with genius, energized with madness." />
+      <property name="Faction" value="Izzet" />
+      <property name="MultiverseId" value="253682" />
+      <property name="Flags" value="UR" />
+    </card>
+    <card name="Overgrown Tomb" id="ae3e3290-7cd6-4167-a7ea-f658ecb066b4">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Subtype" value="Swamp Forest" />
+      <property name="Rarity" value="Shockland" />
+      <property name="Rules" value="(`: Add $ or ^ to your mana pool.)&#xD;&#xA;As Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, Overgrown Tomb enters the battlefield tapped." />
+      <property name="Artist" value="Steven Belledin" />
+      <property name="Number" value="243" />
+      <property name="Flavor" value="The best funeral shroud is the fabric of new life." />
+      <property name="Faction" value="Golgari" />
+      <property name="MultiverseId" value="253680" />
+      <property name="Flags" value="BG" />
+    </card>
+    <card name="Hallowed Fountain" id="4acfef33-c9e9-452a-bb8b-06b5a06e65d9">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Subtype" value="Plains Island" />
+      <property name="Rarity" value="Shockland" />
+      <property name="Rules" value="(`: Add @ or # to your mana pool.)&#xD;&#xA;As Hallowed Fountain enters the battlefield, you may pay 2 life. If you don't, Hallowed Fountain enters the battlefield tapped." />
+      <property name="Artist" value="Jung Park" />
+      <property name="Number" value="241" />
+      <property name="Flavor" value="A place to relax, if you have the proper permit." />
+      <property name="Faction" value="Azorius" />
+      <property name="MultiverseId" value="253684" />
+      <property name="Flags" value="WU" />
+    </card>
+    <card name="Blood Crypt" id="e1c19fd5-4241-4fa3-8cd3-9b79d70b86c0">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Subtype" value="Swamp Mountain" />
+      <property name="Rarity" value="Shockland" />
+      <property name="Rules" value="(`: Add $ or % to your mana pool.)&#xD;&#xA;As Blood Crypt enters the battlefield, you may pay 2 life. If you don't, Blood Crypt enters the battlefield tapped." />
+      <property name="Artist" value="Vincent Proce" />
+      <property name="Number" value="238" />
+      <property name="Flavor" value="Where the dead serve as diversion, decor, and dessert." />
+      <property name="Faction" value="Rakdos" />
+      <property name="MultiverseId" value="253683" />
+      <property name="Flags" value="BR" />
+    </card>
+    <card name="Breeding Pool" id="d0e533ea-798b-4fbc-98fc-fab18f5309a9">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Subtype" value="Forest Island" />
+      <property name="Rarity" value="Shockland" />
+      <property name="Rules" value="(`: Add ^ or # to your mana pool.)&#xD;&#xA;As Breeding Pool enters the battlefield, you may pay 2 life. If you don't, Breeding Pool enters the battlefield tapped." />
+      <property name="Artist" value="Mike Bierek" />
+      <property name="Number" value="240" />
+      <property name="Flavor" value="Uncharted depths. Unbounded hopes. Unfathomable mysteries." />
+      <property name="Faction" value="Simic" />
+      <property name="MultiverseId" value="366291" />
+      <property name="Flags" value="GU" />
+    </card>
+    <card name="Watery Grave" id="49261ef7-7713-4ad2-9a8d-8de4482f5ef3">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Subtype" value="Island Swamp" />
+      <property name="Rarity" value="Shockland" />
+      <property name="Rules" value="(`: Add # or $ to your mana pool.)&#xD;&#xA;As Watery Grave enters the battlefield, you may pay 2 life. If you don't, Watery Grave enters the battlefield tapped." />
+      <property name="Artist" value="Raymond Swanland" />
+      <property name="Number" value="249" />
+      <property name="Flavor" value="&quot;I fear that as we scurry after phantoms, the Dimir pull nine puppet strings.&quot;&#xD;—Ral Zarek" />
+      <property name="Faction" value="Dimir" />
+      <property name="MultiverseId" value="366335" />
+      <property name="Flags" value="UB" />
+    </card>
+    <card name="Stomping Ground" id="f9d87955-a951-406a-a601-ae088fde60b5">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Subtype" value="Mountain Forest" />
+      <property name="Rarity" value="Shockland" />
+      <property name="Rules" value="(`: Add % or ^ to your mana pool.)&#xD;&#xA;As Stomping Ground enters the battlefield, you may pay 2 life. If you don't, Stomping Ground enters the battlefield tapped." />
+      <property name="Artist" value="David Palumbo" />
+      <property name="Number" value="247" />
+      <property name="Flavor" value="&quot;Roots, ruins, and room to fight. All the comforts of home.&quot;&#xD;—Domri Rade" />
+      <property name="Faction" value="Gruul" />
+      <property name="MultiverseId" value="366232" />
+      <property name="Flags" value="RG" />
+    </card>
+    <card name="Sacred Foundry" id="aa5bb7df-9b3f-4bd2-b213-2fe1ad677d06">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Subtype" value="Mountain Plains" />
+      <property name="Rarity" value="Shockland" />
+      <property name="Rules" value="(`: Add % or @ to your mana pool.)&#xD;&#xA;As Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, Sacred Foundry enters the battlefield tapped." />
+      <property name="Artist" value="Sam Burley" />
+      <property name="Number" value="245" />
+      <property name="Flavor" value="Burning fervor and fearsome skill create a lethal beauty terrible to behold." />
+      <property name="Faction" value="Boros" />
+      <property name="MultiverseId" value="366439" />
+      <property name="Flags" value="RW" />
+    </card>
+    <card name="Godless Shrine" id="969af6c7-db47-43b3-9fa4-c94e6bd5c0f3">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Subtype" value="Plains Swamp" />
+      <property name="Rarity" value="Shockland" />
+      <property name="Rules" value="(`: Add @ or $ to your mana pool.)&#xD;&#xA;As Godless Shrine enters the battlefield, you may pay 2 life. If you don't, Godless Shrine enters the battlefield tapped." />
+      <property name="Artist" value="Cliff Childs" />
+      <property name="Number" value="242" />
+      <property name="Flavor" value="Judgment without hope." />
+      <property name="Faction" value="Orzhov" />
+      <property name="MultiverseId" value="366302" />
+      <property name="Flags" value="WB" />
+    </card>
   </cards>
 </set>

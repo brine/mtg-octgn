@@ -1,21 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Ice Age" id="b15fb530-ef8e-4f46-bba0-635b005c1f3c" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="2cb31fa5-5d8c-4c62-9962-12bcce4c45fe">
-    <options>
-      <option probability="0">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="1">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="3" key="Rarity" value="Uncommon" />
-    <pick qty="11" key="Rarity" value="Common" />
-    <pick qty="0" key="Rarity" value="Basic Land" />
-  </pack>
-  <pack name="Lands" id="8180b08b-85e5-45d9-b622-8aad583e3bf8">
-    <pick qty="unlimited" key="Rarity" value="Basic Land" />
-  </pack></packaging>
+<set name="Ice Age" id="b15fb530-ef8e-4f46-bba0-635b005c1f3c" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="2cb31fa5-5d8c-4c62-9962-12bcce4c45fe">
+      <options>
+        <option probability="0">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="1">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="3" key="Rarity" value="Uncommon" />
+      <pick qty="11" key="Rarity" value="Common" />
+      <pick qty="0" key="Rarity" value="Basic Land" />
+    </pack>
+    <pack name="Lands" id="8180b08b-85e5-45d9-b622-8aad583e3bf8">
+      <pick qty="unlimited" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Abyssal Specter" id="9f91e8de-d97a-5070-8e7e-fa8b67d85b0a">
       <property name="Cost" value="2$$" />
@@ -111,7 +113,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Remove Amulet of Quoz from your deck before playing if you're not playing for ante.&#xD;&#xA;`, Sacrifice Amulet of Quoz: Target opponent may add the top card of his or her library to the ante. If he or she doesn't, you flip a coin. If you win the flip, that player loses the game. If you lose the flip, you lose the game. Activate this ability only during your upkeep." />
+      <property name="Rules" value="Remove Amulet of Quoz from your deck before playing if you're not playing for ante.&#xD;&#xA;`, Sacrifice Amulet of Quoz: Target opponent may ante the top card of his or her library. If he or she doesn't, you flip a coin. If you win the flip, that player loses the game. If you lose the flip, you lose the game. Activate this ability only during your upkeep." />
       <property name="Artist" value="Dan Frazier" />
       <property name="MultiverseId" value="2394" />
     </card>
@@ -133,7 +135,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Fox" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Creatures with power 2 or greater can't block Arctic Foxes as long as defending player controls a snow land." />
+      <property name="Rules" value="Arctic Foxes can't be blocked by creatures with power 2 or greater as long as defending player controls a snow land." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -789,7 +791,7 @@
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Enchant creature card in a graveyard&#xD;&#xA;When Dance of the Dead enters the battlefield, if it's on the battlefield, it loses &quot;enchant creature card in a graveyard&quot; and gains &quot;enchant creature put onto the battlefield with Dance of the Dead.&quot; Return enchanted creature card to the battlefield tapped under your control and attach Dance of the Dead to it. When Dance of the Dead leaves the battlefield, that creature's controller sacrifices it.&#xD;&#xA;Enchanted creature gets +1/+1 and doesn't untap during its controller's untap step. &#xD;&#xA;At the beginning of the upkeep of enchanted creature's controller, that player may pay 1$. If he or she does, untap that creature." />
+      <property name="Rules" value="Enchant creature card in a graveyard&#xD;&#xA;When Dance of the Dead enters the battlefield, if it's on the battlefield, it loses &quot;enchant creature card in a graveyard&quot; and gains &quot;enchant creature put onto the battlefield with Dance of the Dead.&quot; Put enchanted creature card onto the battlefield tapped under your control and attach Dance of the Dead to it. When Dance of the Dead leaves the battlefield, that creature's controller sacrifices it.&#xD;&#xA;Enchanted creature gets +1/+1 and doesn't untap during its controller's untap step.&#xD;&#xA;At the beginning of the upkeep of enchanted creature's controller, that player may pay 1$. If he or she does, untap that creature." />
       <property name="Artist" value="Randy Gallegos" />
       <property name="MultiverseId" value="2442" />
     </card>
@@ -1194,7 +1196,7 @@
       <property name="Color" value="Multicolor Blue Black" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Green creatures can't attack unless their controller sacrifices a land for each green creature he or she controls that's attacking." />
+      <property name="Rules" value="Green creatures can't attack unless their controller sacrifices a land for each green creature he or she controls that's attacking. (This cost is paid as attackers are declared.)" />
       <property name="Artist" value="Kaja Foglio" />
       <property name="Flavor" value="Freyalise's tears bring life and renewal, though they also bring trouble." />
       <property name="MultiverseId" value="2726" />
@@ -1363,7 +1365,7 @@
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Whenever a permanent becomes tapped, put a wind counter on it. &#xD;&#xA;If a permanent with a wind counter on it would untap during its controller's untap step, remove all wind counters from it instead." />
+      <property name="Rules" value="Whenever a permanent becomes tapped, put a wind counter on it.&#xD;&#xA;If a permanent with a wind counter on it would untap during its controller's untap step, remove all wind counters from it instead." />
       <property name="Artist" value="Mark Tedin" />
       <property name="MultiverseId" value="2565" />
     </card>
@@ -1620,7 +1622,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="%%, `: Target creature you control is unblockable this turn. Destroy it and Goblin Sappers at end of combat.&#xD;&#xA;%%%%, `: Target creature you control is unblockable this turn. Destroy it at end of combat." />
+      <property name="Rules" value="%%, `: Target creature you control can't be blocked this turn. Destroy it and Goblin Sappers at end of combat.&#xD;&#xA;%%%%, `: Target creature you control can't be blocked this turn. Destroy it at end of combat." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1845,7 +1847,7 @@
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Counter target spell if it's red; or destroy target permanent if it's red." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Counter target spell if it's red.&#xD;&#xA;• Destroy target permanent if it's red." />
       <property name="Artist" value="Kaja Foglio" />
       <property name="Flavor" value="&quot;Heed the lessons of our time: the forms of water may move the land itself and hold captive the fires within.&quot;—Gustha Ebbasdotter,Kjeldoran Royal Mage" />
       <property name="MultiverseId" value="2508" />
@@ -2848,7 +2850,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Tom Wänerstrand" />
       <property name="MultiverseId" value="2763" />
       <property name="Flags" value="R" />
@@ -2859,7 +2861,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Tom Wänerstrand" />
       <property name="MultiverseId" value="2764" />
       <property name="Flags" value="R" />
@@ -2870,7 +2872,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Tom Wänerstrand" />
       <property name="MultiverseId" value="2765" />
       <property name="Flags" value="R" />
@@ -3358,7 +3360,7 @@
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Counter target spell if it's blue; or destroy target permanent if it's blue." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Counter target spell if it's blue.&#xD;&#xA;• Destroy target permanent if it's blue." />
       <property name="Artist" value="Kaja Foglio" />
       <property name="Flavor" value="&quot;Just the thing for those pesky water mages.&quot;—Jaya Ballard, Task Mage" />
       <property name="MultiverseId" value="2649" />
@@ -3423,7 +3425,7 @@
       <property name="Color" value="Multicolor Green White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Black creatures can't attack unless their controller sacrifices a land for each black creature he or she controls that's attacking." />
+      <property name="Rules" value="Black creatures can't attack unless their controller sacrifices a land for each black creature he or she controls that's attacking. (This cost is paid as attackers are declared.)" />
       <property name="Artist" value="Dameon Willich" />
       <property name="Flavor" value="&quot;We shall oppose Lim-Dûl and his forces by any means necessary, even if the very earth be torn asunder.&quot;—Arna Kennerüd, Skyknight" />
       <property name="MultiverseId" value="2736" />
@@ -3493,7 +3495,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Runed Arch enters the battlefield tapped.&#xD;&#xA;X, `, Sacrifice Runed Arch: X target creatures with power 2 or less are unblockable this turn." />
+      <property name="Rules" value="Runed Arch enters the battlefield tapped.&#xD;&#xA;X, `, Sacrifice Runed Arch: X target creatures with power 2 or less can't be blocked this turn." />
       <property name="Artist" value="Phil Foglio" />
       <property name="MultiverseId" value="2420" />
     </card>
@@ -4275,7 +4277,7 @@
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Target creature is unblockable this turn." />
+      <property name="Rules" value="Target creature can't be blocked this turn." />
       <property name="Artist" value="Julie Baroh" />
       <property name="Flavor" value="&quot;Our Elvish Hunter Taaveti led us swiftly along hidden paths through the dense forest. We caught the Orcs from behind, and completely by surprise.&quot;—Lucilde Fiksdotter, Leader of the Order of the White Shield" />
       <property name="MultiverseId" value="2596" />
@@ -4678,7 +4680,6 @@
       <property name="Artist" value="Edward Beard, Jr." />
       <property name="Flavor" value="&quot;A mage must be precise as well as potent; cautious, as well as clever.&quot;—Zur the Enchanter" />
       <property name="MultiverseId" value="2548" />
-      <property name="Flags" value=" " />
     </card>
   </cards>
 </set>

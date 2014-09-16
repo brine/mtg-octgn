@@ -1,21 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Limited Edition Alpha" id="c72b2bb7-e6da-49bb-9bd5-a538db0761ee" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="2d0275a8-d6f0-4d5b-a742-127046995a3b">
-    <options>
-      <option probability="0">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="1">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="3" key="Rarity" value="Uncommon" />
-    <pick qty="11" key="Rarity" value="Common" />
-    <pick qty="0" key="Rarity" value="Basic Land" />
-  </pack>
-  <pack name="Lands" id="3454a706-1b05-4589-a120-3cae3c9a53b7">
-    <pick qty="unlimited" key="Rarity" value="Basic Land" />
-  </pack></packaging>
+<set name="Limited Edition Alpha" id="c72b2bb7-e6da-49bb-9bd5-a538db0761ee" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="2d0275a8-d6f0-4d5b-a742-127046995a3b">
+      <options>
+        <option probability="0">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="1">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="3" key="Rarity" value="Uncommon" />
+      <pick qty="11" key="Rarity" value="Common" />
+      <pick qty="0" key="Rarity" value="Basic Land" />
+    </pack>
+    <pack name="Lands" id="3454a706-1b05-4589-a120-3cae3c9a53b7">
+      <pick qty="unlimited" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Air Elemental" id="69936666-03e8-75f3-ee0d-34de4f677b94">
       <property name="Cost" value="3##" />
@@ -122,7 +124,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Swamp Mountain" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="(`: Add $ or % to your mana pool.)" />
       <property name="Artist" value="Rob Alexander" />
       <property name="MultiverseId" value="279" />
       <property name="Flags" value="BR" />
@@ -153,7 +155,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Swamp Forest" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="(`: Add $ or ^ to your mana pool.)" />
       <property name="Artist" value="Jesper Myrfors" />
       <property name="MultiverseId" value="280" />
       <property name="Flags" value="BG" />
@@ -270,7 +272,7 @@
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Counter target red spell; or destroy target red permanent." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Counter target red spell.&#xD;&#xA;• Destroy target red permanent." />
       <property name="Artist" value="Richard Thomas" />
       <property name="MultiverseId" value="97" />
     </card>
@@ -292,7 +294,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wraith" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Swampwalk (This creature is unblockable as long as defending player controls a Swamp.)" />
+      <property name="Rules" value="Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)" />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -367,7 +369,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="1, `: If Chaos Orb is on the battlefield, flip Chaos Orb onto the battlefield from a height of at least one foot. If Chaos Orb turns over completely at least once during the flip, destroy all permanents it touches. Then destroy Chaos Orb." />
+      <property name="Rules" value="1, `: If Chaos Orb is on the battlefield, flip Chaos Orb onto the battlefield from a height of at least one foot. If Chaos Orb turns over completely at least once during the flip, destroy all nontoken permanents it touches. Then destroy Chaos Orb." />
       <property name="Artist" value="Mark Tedin" />
       <property name="MultiverseId" value="6" />
     </card>
@@ -470,7 +472,7 @@
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Enchant land&#xD;&#xA;Enchanted land is indestructible and can't be enchanted by other Auras." />
+      <property name="Rules" value="Enchant land&#xD;&#xA;Enchanted land has indestructible and can't be enchanted by other Auras." />
       <property name="Artist" value="Jeff A. Menges" />
       <property name="MultiverseId" value="245" />
     </card>
@@ -490,7 +492,7 @@
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Remove Contract from Below from your deck before playing if you're not playing for ante.&#xD;&#xA;Discard your hand, add the top card of your library to the ante, then draw seven cards." />
+      <property name="Rules" value="Remove Contract from Below from your deck before playing if you're not playing for ante.&#xD;&#xA;Discard your hand, ante the top card of your library, then draw seven cards." />
       <property name="Artist" value="Douglas Schuler" />
       <property name="MultiverseId" value="52" />
     </card>
@@ -809,7 +811,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dwarf Warrior" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`: Target creature with power 2 or less is unblockable this turn." />
+      <property name="Rules" value="`: Target creature with power 2 or less can't be blocked this turn." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -884,7 +886,7 @@
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Cast False Orders only during the declare blockers step. &#xD;&#xA;Remove target creature defending player controls from combat. Creatures it was blocking that had become blocked by only that creature this combat become unblocked. You may have it block an attacking creature of your choice." />
+      <property name="Rules" value="Cast False Orders only during the declare blockers step.&#xD;&#xA;Remove target creature defending player controls from combat. Creatures it was blocking that had become blocked by only that creature this combat become unblocked. You may have it block an attacking creature of your choice." />
       <property name="Artist" value="Anson Maddocks" />
       <property name="MultiverseId" value="195" />
     </card>
@@ -905,7 +907,7 @@
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="You may play any number of additional lands on each of your turns.&#xD;&#xA;Whenever you play a land, if it wasn't the first land you played this turn, Fastbond deals 1 damage to you." />
+      <property name="Rules" value="You may play any number of lands on each of your turns.&#xD;&#xA;Whenever you play a land, if it wasn't the first land you played this turn, Fastbond deals 1 damage to you." />
       <property name="Artist" value="Mark Poole" />
       <property name="MultiverseId" value="148" />
     </card>
@@ -1176,7 +1178,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Other Goblin creatures get +1/+1 and have mountainwalk. (They're unblockable as long as defending player controls a Mountain.)" />
+      <property name="Rules" value="Other Goblin creatures get +1/+1 and have mountainwalk. (They can't be blocked as long as defending player controls a Mountain.)" />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1256,7 +1258,7 @@
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Target player gains 3 life; or prevent the next 3 damage that would be dealt to target creature or player this turn." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Target player gains 3 life.&#xD;&#xA;• Prevent the next 3 damage that would be dealt to target creature or player this turn." />
       <property name="Artist" value="Dan Frazier" />
       <property name="MultiverseId" value="253" />
     </card>
@@ -1918,7 +1920,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Douglas Schuler" />
       <property name="MultiverseId" value="291" />
       <property name="Flags" value="R" />
@@ -1929,7 +1931,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="R" />
       <property name="Artist" value="Douglas Schuler" />
       <property name="MultiverseId" value="290" />
       <property name="Flags" value="R" />
@@ -2250,7 +2252,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Mountain Plains" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="(`: Add % or @ to your mana pool.)" />
       <property name="Artist" value="Drew Tucker" />
       <property name="MultiverseId" value="281" />
       <property name="Flags" value="RW" />
@@ -2358,7 +2360,7 @@
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose one — Counter target blue spell; or destroy target blue permanent." />
+      <property name="Rules" value="Choose one —&#xD;&#xA;• Counter target blue spell.&#xD;&#xA;• Destroy target blue permanent." />
       <property name="Artist" value="Richard Thomas" />
       <property name="MultiverseId" value="217" />
     </card>
@@ -2509,7 +2511,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Forest Plains" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="(`: Add ^ or @ to your mana pool.)" />
       <property name="Artist" value="Rob Alexander" />
       <property name="MultiverseId" value="282" />
       <property name="Flags" value="GW" />
@@ -2564,7 +2566,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Plains Swamp" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="(`: Add @ or $ to your mana pool.)" />
       <property name="Artist" value="Jesper Myrfors" />
       <property name="MultiverseId" value="283" />
       <property name="Flags" value="WB" />
@@ -2648,7 +2650,7 @@
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Dryad" />
+      <property name="Subtype" value="Nymph Dryad" />
       <property name="Rarity" value="Common" />
       <property name="Rules" value="Forestwalk" />
       <property name="Power" value="1" />
@@ -2759,7 +2761,7 @@
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Counter target spell with converted mana cost X." />
+      <property name="Rules" value="Counter target spell with converted mana cost X. (For example, if that spell's mana cost is 3##, X is 5.)" />
       <property name="Artist" value="Brian Snoddy" />
       <property name="MultiverseId" value="127" />
     </card>
@@ -2867,7 +2869,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Mountain Forest" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="(`: Add % or ^ to your mana pool.)" />
       <property name="Artist" value="Rob Alexander" />
       <property name="MultiverseId" value="284" />
       <property name="Flags" value="RG" />
@@ -2988,7 +2990,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Forest Island" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="(`: Add ^ or # to your mana pool.)" />
       <property name="Artist" value="Mark Poole" />
       <property name="MultiverseId" value="285" />
       <property name="Flags" value="GU" />
@@ -3009,7 +3011,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Plains Island" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="(`: Add @ or # to your mana pool.)" />
       <property name="Artist" value="Jesper Myrfors" />
       <property name="MultiverseId" value="286" />
       <property name="Flags" value="WU" />
@@ -3055,7 +3057,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Island Swamp" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="" />
+      <property name="Rules" value="(`: Add # or $ to your mana pool.)" />
       <property name="Artist" value="Rob Alexander" />
       <property name="MultiverseId" value="287" />
       <property name="Flags" value="UB" />
@@ -3247,7 +3249,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Defender, flying (This creature can't attack, and it can block creatures with flying.)" />
+      <property name="Rules" value="Defender (This creature can't attack.)&#xD;&#xA;Flying" />
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
@@ -3365,7 +3367,7 @@
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Each player discards his or her hand and draws seven cards." />
+      <property name="Rules" value="Each player discards his or her hand, then draws seven cards." />
       <property name="Artist" value="Daniel Gelon" />
       <property name="MultiverseId" value="231" />
     </card>
@@ -3475,7 +3477,6 @@
       <property name="Artist" value="Jeff A. Menges" />
       <property name="Flavor" value="They say the Zombie Master controlled these foul creatures even before his own death, but now that he is one of them, nothing can make them betray him." />
       <property name="MultiverseId" value="93" />
-      <property name="Flags" value=" " />
     </card>
   </cards>
 </set>

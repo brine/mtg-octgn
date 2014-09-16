@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="The Dark" id="f2d39fae-97e5-4348-94e3-178e88dc4633" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.1.0" version="1.0">
-  <packaging><pack name="Booster" id="0c56654e-66fb-43d8-b261-73f7f07bd01e">
-    <options>
-      <option probability="0">
-        <pick qty="1" key="Rarity" value="Mythic Rare" />
-      </option>
-      <option probability="1">
-        <pick qty="1" key="Rarity" value="Rare" />
-      </option>
-    </options>
-    <pick qty="1" key="Rarity" value="Uncommon" />
-    <pick qty="6" key="Rarity" value="Common" />
-    <pick qty="0" key="Rarity" value="Basic Land" />
-  </pack></packaging>
+<set name="The Dark" id="f2d39fae-97e5-4348-94e3-178e88dc4633" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+  <packaging>
+    <pack name="Booster" id="0c56654e-66fb-43d8-b261-73f7f07bd01e">
+      <options>
+        <option probability="0">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="1">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="1" key="Rarity" value="Uncommon" />
+      <pick qty="6" key="Rarity" value="Common" />
+      <pick qty="0" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Amnesia" id="d03cc24c-fefa-0529-fc46-7e2cd52ad834">
       <property name="Cost" value="3###" />
@@ -551,7 +553,7 @@
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="You may play an additional land during your turn if that land is a basic Forest.&#xD;&#xA;Sacrifice Gaea's Touch: Add ^^ to your mana pool." />
+      <property name="Rules" value="0: You may put a basic Forest card from your hand onto the battlefield. Activate this ability only any time you could cast a sorcery and only once each turn.&#xD;&#xA;Sacrifice Gaea's Touch: Add ^^ to your mana pool." />
       <property name="Artist" value="Mark Poole" />
       <property name="MultiverseId" value="1767" />
     </card>
@@ -776,7 +778,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Leviathan" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Trample&#xD;&#xA;Leviathan enters the battlefield tapped and doesn't untap during your untap step.&#xD;&#xA;At the beginning of your upkeep, you may sacrifice two Islands. If you do, untap Leviathan.&#xD;&#xA;Leviathan can't attack unless you sacrifice two Islands." />
+      <property name="Rules" value="Trample&#xD;&#xA;Leviathan enters the battlefield tapped and doesn't untap during your untap step.&#xD;&#xA;At the beginning of your upkeep, you may sacrifice two Islands. If you do, untap Leviathan.&#xD;&#xA;Leviathan can't attack unless you sacrifice two Islands. (This cost is paid as attackers are declared.)" />
       <property name="Power" value="10" />
       <property name="Toughness" value="10" />
       <property name="PT Box" value="10 / 10" />
@@ -1049,7 +1051,7 @@
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Cleric" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="You may choose not to untap Preacher during your untap step.&#xD;&#xA;`: Gain control of target creature of an opponent's choice that he or she controls for as long as Preacher remains tapped." />
+      <property name="Rules" value="You may choose not to untap Preacher during your untap step.&#xD;&#xA;`: For as long as Preacher remains tapped, gain control of target creature of an opponent's choice he or she controls." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1249,7 +1251,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="`: Choose two target blocking creatures an opponent controls. If each of those creatures could block all creatures that the other is blocking, remove both of them from combat. Each one then blocks all creatures the other was blocking. &#xD;&#xA;Whenever Sorrow's Path becomes tapped, it deals 2 damage to you and each creature you control." />
+      <property name="Rules" value="`: Choose two target blocking creatures an opponent controls. If each of those creatures could block all creatures that the other is blocking, remove both of them from combat. Each one then blocks all creatures the other was blocking.&#xD;&#xA;Whenever Sorrow's Path becomes tapped, it deals 2 damage to you and each creature you control." />
       <property name="Artist" value="Randy Asplund-Faith" />
       <property name="MultiverseId" value="1826" />
     </card>
@@ -1509,7 +1511,6 @@
       <property name="PT Box" value="4 / 4" />
       <property name="Artist" value="Jesper Myrfors" />
       <property name="MultiverseId" value="1782" />
-      <property name="Flags" value=" " />
     </card>
   </cards>
 </set>
