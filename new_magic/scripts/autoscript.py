@@ -890,7 +890,10 @@ def cardalign():
                     and not isStack(card)  ## cards on the stack have already been aligned so ignore them
                     and card.controller == me  ## don't align other player's cards
                     and not card._id in cattach):  ## don't align attachments yet
-            dictname = card.Name
+            if card.isFaceUp:
+                dictname = card.Name
+            else:
+                dictname = 'Card'
             height = 0
             for marker in card.markers:
                 dictname += marker[0]
