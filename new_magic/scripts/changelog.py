@@ -75,5 +75,14 @@ changelog = {
     3021400: ("3.2.14.0", "08 July 2014", [
         "Added M15+Tokens, and Vintage Masters.",
         "Added M15 Clash Pack deck files, found in the Event Decks folder"
+        ]),
+    3021501: ("3.2.15.1", "16 September 2014", [
+        "Added Khans of Tarkir+Tokens.",
+        "Updated the card database for the most recent Oracle text.",
+        "Added the Challenge Decks and Hero supplemental cards from Theros Block.",
+        "Updated the pre-con decks (Khans decks not yet available).",
+        "Fixed a bug where peeked Morph cards (facedown) will align with their face-up equivalents, revealing the card identity to other players.",
+        "Updated script recognition of the new Modal card template.",
+        "Casting a card face-down (Morphing it) will auto-peek it for you."
         ])
 }
