@@ -928,12 +928,13 @@ def cardalign():
             carddict[dictname].append(card)
     xpos = 80
     ypos = 5 + 10*max([attachHeight[0], attachHeight[1], attachHeight[2]])
+    index = 0
     allowAlign = alignCheck()
     for cardtype in cardorder:
-        if cardorder.index(cardtype) == 3:
+        if index == 3:
             xpos = 80
             ypos += 93 + 10*max([attachHeight[3], attachHeight[4], attachHeight[5]])
-        elif cardorder.index(cardtype) == 6:
+        elif index == 6:
             xpos = 80
             ypos += 93 + 10*max([attachHeight[6], attachHeight[7]])
         for cardname in cardtype:
@@ -944,6 +945,7 @@ def cardalign():
                 if card._id in attachDict:
                     alignAttachments(card, attachDict[card._id])
             xpos += 70
+        index += 1
 
 def alignAttachments(card, attachments = None):  ## Aligns all attachments on the card
     mute()
