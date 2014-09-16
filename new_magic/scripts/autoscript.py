@@ -164,7 +164,7 @@ def tagConstructor(card, key, modeModifier = ''):
     returnTags = []
     returnActiChoice = (0, '')
     returnModeChoice = (0, '')
-    if not card.isFaceUp: ## Skip fetching tags for facedown/morph cards
+    if key != 'morph' and not card.isFaceUp: ## Skip fetching tags for facedown/morph cards
         return ([None, None, None, None, None, None], returnActiChoice, returnModeChoice)
 #### deal with activated abilities as a specific case
     if key == 'acti':
