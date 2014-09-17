@@ -43,6 +43,23 @@
 		<block type="overlay" id="tc" src="proxy/type/c.png">      <location x="0" y="0" />    </block>
 		<block type="overlay" id="tm" src="proxy/type/m.png">      <location x="0" y="0" />    </block>
 		<block type="overlay" id="ta" src="proxy/type/a.png">      <location x="0" y="0" />    </block>
+		
+		<block type="overlay" id="f-azorius" src="proxy/factions/azorius.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-orzhov" src="proxy/factions/orzhov.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-dimir" src="proxy/factions/dimir.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-izzet" src="proxy/factions/izzet.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-rakdos" src="proxy/factions/rakdos.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-golgari" src="proxy/factions/golgari.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-gruul" src="proxy/factions/gruul.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-boros" src="proxy/factions/boros.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-selesnya" src="proxy/factions/selesnya.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-simic" src="proxy/factions/simic.png"><location x="0" y="0"/></block>
+		
+		<block type="overlay" id="f-abzan" src="proxy/factions/abzan.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-jeskai" src="proxy/factions/jeskai.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-sultai" src="proxy/factions/sultai.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-mardu" src="proxy/factions/mardu.png"><location x="0" y="0"/></block>
+		<block type="overlay" id="f-temur" src="proxy/factions/temur.png"><location x="0" y="0"/></block>
 
 		<block type="text" id="title">
 			<location x="30" y="32" />
@@ -171,6 +188,26 @@
 					<case value="Multicolor Green Blue"><link block="rg" /><link block="rhu" /></case>
 					<case contains="Multicolor"><link block="rm" /></case>
 					<case contains="Hybrid"><link block="rc" /></case>
+				</switch>
+			</conditional>
+			<conditional>
+				<switch property="Faction">
+					<case value="Azorius"><link block="f-azorius"/></case>
+					<case value="Orzhov"><link block="f-orzhov"/></case>
+					<case value="Dimir"><link block="f-dimir"/></case>
+					<case value="Izzet"><link block="f-izzet"/></case>
+					<case value="Rakdos"><link block="f-rakdos"/></case>
+					<case value="Golgari"><link block="f-golgari"/></case>
+					<case value="Gruul"><link block="f-gruul"/></case>
+					<case value="Boros"><link block="f-boros"/></case>
+					<case value="Selesnya"><link block="f-selesnya"/></case>
+					<case value="Simic"><link block="f-simic"/></case>
+					
+					<case value="Abzan"><link block="f-abzan"/></case>
+					<case value="Jeskai"><link block="f-jeskai"/></case>
+					<case value="Sultai"><link block="f-sultai"/></case>
+					<case value="Mardu"><link block="f-mardu"/></case>
+					<case value="Temur"><link block="f-temur"/></case>
 				</switch>
 			</conditional>
 		<link block="blank" />
