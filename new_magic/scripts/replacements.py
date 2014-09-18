@@ -83,7 +83,8 @@ counters = {
     'infection': ('Petrification counter', 'f495743e-9ce0-48ee-92c4-952aa5012860'),
     'filibuster': ('Filibuster counter', '7ea9761d-4ed0-4b24-b921-67106a5d7782'),
     'muster': ('Muster counter', '5ee900f7-fa38-451f-9791-12c9144c59af'),
-    'monstrous': ('Monstrous counter', 'a60101d3-e9a9-400b-aa46-69a990beb25c') ###
+    'monstrous': ('Monstrous counter', 'a60101d3-e9a9-400b-aa46-69a990beb25c') ###,
+    'gem': ('Gem counter', '7215352b-e285-4794-b791-5580c865c6ed')
 
 }
 
