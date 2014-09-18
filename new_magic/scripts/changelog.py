@@ -84,5 +84,11 @@ changelog = {
         "Fixed a bug where peeked Morph cards (facedown) will align with their face-up equivalents, revealing the card identity to other players.",
         "Updated script recognition of the new Modal card template.",
         "Casting a card face-down (Morphing it) will auto-peek it for you."
+        ]),
+    3021600: ("3.2.16.0", "18 September 2014", [
+        "Updated Khans of Tarkir to the Gatherer text.",
+        "Khans and Ravnica watermarks now show on proxy images.",
+        "Added Speed vs Cunning and FTV Annihilation.",
+        "Fixed a bug stopping morph triggers from triggering."
         ])
 }
