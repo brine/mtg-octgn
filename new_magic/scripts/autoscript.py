@@ -380,7 +380,12 @@ def autoParser(card, tagclass, morph = False):
                         stackData[costMarker] = qty
         if 'marker' in stackData[initTags]:
             for markerTag in stackData[initTags]['marker']:
-                (markerName, qty) = markerTag.split(', ')
+                splitList = markerTag.split(', ')
+                markerName = markerTag[0]
+                if len(markerTag) > 1:
+                    qty = markerTag[1]
+                else:
+                    qty = 1
                 markerCount = srcCard.markers[counters[markerName]]
                 if markerCount + cardcount(srcCard, stackCard, qty) < 0:
                     if not confirm("Not enough {} counters to remove!\nContinue?".format(markerName)):
@@ -658,7 +663,10 @@ def autotransform(card, tag):
 def autotoken(card, stackcard, tag):
     splitList = tag.split(', ')
     name = splitList[0]
-    qty = splitList[1]
+    if len(splitList) > 1:
+        qty = splitList[1]
+    else:
+        qty = 1
     if len(splitList) > 2: #since the modifiers are optional
         modifiers = splitList[2:]
     else:
@@ -683,6 +691,12 @@ def autotoken(card, stackcard, tag):
         return ""
 
 def automarker(card, stackcard, tag):
+    splitList = tag.split(', ')
+    markername = splitList[0]
+    if len(splitList) > 1:
+        qty = splitList[1]
+    else:
+        qty = 1
     (markername, qty) = tag.split(', ')
     quantity = cardcount(card, stackcard, qty)
     originalquantity = quantity
