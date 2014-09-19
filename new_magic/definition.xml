@@ -44,7 +44,7 @@
     <globalvariable name="priority" value="[]"/>
   </globalvariables>
   <card back="cards/back.jpg" front="cards/front.jpg" width="63" height="88" cornerRadius="2">
-    <property name="Cost" type="String" ignoreText="True" />
+    <property name="Cost" type="String" />
     <property name="CMC" type="String" textKind="Enum" />
     <property name="Color" textKind="Tokens" type="String" />
     <property name="Type" type="String" textKind="Tokens" />
@@ -58,7 +58,7 @@
     <property name="Artist" type="String" ignoreText="True" />
     <property name="Number" type="String" ignoreText="True" />
     <property name="MultiverseId" type="String" ignoreText="True" />
-    <property name="Faction" type="String" ignoreText="True" />
+    <property name="Faction" type="String" textKind="Tokens" />
     <property name="Flags" type="String" ignoreText="True" />
   </card>
   <table name="Table" visibility="undefined" ordered="False" width="640" height="480" board="background/board.png" boardPosition="-7,-27,76,190" background="background/background.jpg" backgroundStyle="uniformToFill">
