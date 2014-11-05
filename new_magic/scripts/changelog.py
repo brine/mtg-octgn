@@ -90,5 +90,8 @@ changelog = {
         "Khans and Ravnica watermarks now show on proxy images.",
         "Added Speed vs Cunning and FTV Annihilation.",
         "Fixed a bug stopping morph triggers from triggering."
+        ]),
+    3021602: ("3.2.16.2", "05 November 2014", [
+        "Added Commander 2014 set and tokens."
         ])
 }
