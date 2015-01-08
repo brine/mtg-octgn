@@ -381,9 +381,9 @@ def autoParser(card, tagclass, morph = False):
         if 'marker' in stackData[initTags]:
             for markerTag in stackData[initTags]['marker']:
                 splitList = markerTag.split(', ')
-                markerName = markerTag[0]
-                if len(markerTag) > 1:
-                    qty = markerTag[1]
+                markerName = splitList[0]
+                if len(splitList) > 1:
+                    qty = splitList[1]
                 else:
                     qty = 1
                 markerCount = srcCard.markers[counters[markerName]]
