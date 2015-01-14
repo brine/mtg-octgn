@@ -93,5 +93,10 @@ changelog = {
         ]),
     3021602: ("3.2.16.2", "05 November 2014", [
         "Added Commander 2014 set and tokens."
+        ]),
+    3021700: ("3.2.17.0", "13 January 2015", [
+        "Added Fate Reforged cards and tokens.",
+        "Added Khans of Tarkir Seeded Boosters (You'll need to add both the Booster and the Promo pack to generate a complete Seeded booster pack.)",
+        "Fixed a bug preventing Planeswalkers and other cards activated abilities from working."
         ])
 }
