@@ -267,6 +267,7 @@ tokenTypes = {
     'minion**b': ('* / * Black Minion', 'cc3ecaa2-33cc-40f3-a392-cc5d1098a70c'), #DDE USG
     'minordemon11m': ('1 / 1 Multicolor Black Red Minor Demon', '35aa79d9-0267-421e-a079-f3d43518e648'),
     'minotaur23r': ('2 / 3 Red Minotaur', '38a6d20a-ca14-459a-9484-f93d693714c0'),
+    'monk11w': ('1 / 1 White Monk', '5b6e6944-f114-42bc-bbea-cfff3e4f5fab'),
     'myr11c': ('1 / 1 Colorless Myr', '16003e42-3ff7-478d-8f8c-2b5af4847da0'), #SOM NPH
     'ogre33r': ('3 / 3 Red Ogre', 'f23096c9-932d-4ae2-85a7-d328eb543dbe'),
     'ogre44r': ('4 / 4 Red Ogre', '4e3f2a44-5197-4368-a5c5-359e02878c08'),
@@ -315,7 +316,7 @@ tokenTypes = {
     'spider12g': ('1 / 2 Green Spider', 'e48bb912-1d32-42c1-9e5c-59a4f30c9c25'), #SHA ISD
     'spider13g': ('1 / 3 Green Spider', 'f99bdf70-8d00-46a2-9534-f720715f0138'),
     'spike11g': ('1 / 1 Green Spike', '4fcca1a1-08b0-4128-9618-b1780b260098'),
-    'spirit11w': ('1 / 1 White Spirit', 'aeabe1d8-67ac-4a87-a0d0-e642c2914843'), #SHA MPRPLS DDC ISD AVR CNS M15 KTK
+    'spirit11w': ('1 / 1 White Spirit', 'aeabe1d8-67ac-4a87-a0d0-e642c2914843'), #SHA MPRPLS DDC ISD AVR CNS M15 KTK FRF
     'spirit11u': ('1/1 Blue Spirit', '61f7504f-a29d-4f88-8a2d-58706bf08360'),
     'spirit11m': ('1 / 1 Multicolor White Black Spirit', '55353de2-1086-4174-8904-b57db68708fd'), #EVE GTC
     'spirit11c': ('1 / 1 Colorless Spirit', 'c30cf64a-475d-4fa4-bfeb-8d7d65afc42f'),
@@ -351,6 +352,7 @@ tokenTypes = {
     'wall55u': ('5 / 5 Blue Wall', '4d8efc05-4746-4e69-8d09-e64416bdbe08'),
     'warrior11w': ('1 / 1 White Warrior', '49fb23bd-dfdb-4a72-99fd-a7cc6d16d15c'), #KTK KTK
     'warrior11r': ('1 / 1 Red Warrior', '260555f7-890f-42af-b54b-bded98e9abc9'),
+    'warrior21b': ('2 / 1 Black Warrior', 'ad244ef7-5dc0-4f56-9277-922e09136888'),
     'wasp11c': ('1 / 1 Colorless Wasp', 'e92fb94a-4060-4afb-944a-69367af00b19'),
     'weird33u': ('3 / 3 Blue Weird', 'b584d099-2ee4-41e0-8c8a-ad0b75e73fbb'),
     'whale66u': ('6 / 6 Blue Whale', '38517b29-f443-46da-b70b-2b5e1c0d1da6'),
