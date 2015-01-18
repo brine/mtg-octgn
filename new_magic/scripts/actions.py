@@ -861,7 +861,6 @@ def tohand(card, x = 0, y = 0):
         if card.isFaceUp == False:
             if confirm("Reveal to all players?"):
                 card.isFaceUp = True
-                rnd(10,100)
                 cardname = card
             else:
                 cardname = "a card"
@@ -875,10 +874,8 @@ def randomDiscard(group, x = 0, y = 0):
     card = group.random()
     if card == None:
         return
-    card.isFaceUp = True
-    rnd(10,100)
-    notify("{} randomly discards {}.".format(me, card))
     card.moveTo(card.owner.Graveyard)
+    notify("{} randomly discards {}.".format(me, card))
 
 def randomPick(group, x = 0, y = 0):
     mute()
