@@ -184,7 +184,7 @@ def goToSecondMain(group, x = 0, y = 0):
     global phaseIdx
     phaseIdx = 9
     showCurrentPhase(group)
-
+g
 def goToEnding(group, x = 0, y = 0):
     global phaseIdx
     phaseIdx = 10
@@ -222,6 +222,7 @@ def scoop(group, x = 0, y = 0):
     exile = me.piles['Exiled Zone']
     for card in exile:
         card.moveTo(card.owner.Library)
+    setGlobalVariable("cattach", "{ }")
     notify("{} scoops.".format(me))
 
 def clearAll(group, x = 0, y = 0):
@@ -903,7 +904,6 @@ def mulligan(group, x = 0, y = 0):
     notify("{} mulligans down to {}".format(me, newCount))
     for card in group:
         card.moveTo(card.owner.Library)
-    uselessvar = rnd(10, 1000)
     shuffle(me.Library, silence = True)
     for card in me.Library.top(newCount):
         card.moveTo(card.owner.hand)

@@ -877,7 +877,7 @@ def cardalign():
     group1 = [cardid for cardid in cattach if Card(cattach[cardid]) not in table]    ##selects attachment cards missing their original targets
     for cardid in group1:
         c = Card(cardid)
-        if c.Subtype != None and re.search(r'Aura', c.Subtype):    ##if the attachment is an aura, run the destroy scripts since aura's need targets
+        if c.Subtype != None and re.search(r'Aura', c.Subtype) and c in table:    ##if the attachment is an aura, run the destroy scripts since aura's need targets
             if c.controller == me:
                 destroy(c)
             else:
