@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.17.2" octgnVersion="3.1.0.32" scriptVersion="3.1.0.1"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.2.17.3" octgnVersion="3.1.0.32" scriptVersion="3.1.0.1"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://octgn.gamersjudgement.com/wordpress/mtg/download-links/" gameurl="http://octgn.gamersjudgement.com/wordpress/mtg/" authors="brine"
     markersize="14" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -60,6 +60,8 @@
     <property name="MultiverseId" type="String" ignoreText="True" />
     <property name="Faction" type="String" textKind="Tokens" />
     <property name="Flags" type="String" ignoreText="True" />
+	<size name="Plane" back="cards/planeback.jpg" front="cards/front.jpg" width="126" height="88" cornerRadius="6" />
+	<size name="Scheme" back="cards/schemeback.jpg" front="cards/front.jpg" width="88" height="126" cornerRadius="6" />
   </card>
   <table name="Table" visibility="undefined" ordered="False" width="640" height="480" board="background/board.png" boardPosition="-7,-27,76,190" background="background/background.jpg" backgroundStyle="uniformToFill">
     <groupaction menu="Clean-up Targets and Combat" shortcut="esc" execute="clearAll" />

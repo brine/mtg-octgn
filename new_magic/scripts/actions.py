@@ -184,7 +184,7 @@ def goToSecondMain(group, x = 0, y = 0):
     global phaseIdx
     phaseIdx = 9
     showCurrentPhase(group)
-g
+
 def goToEnding(group, x = 0, y = 0):
     global phaseIdx
     phaseIdx = 10
