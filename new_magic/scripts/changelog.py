@@ -98,5 +98,12 @@ changelog = {
         "Added Fate Reforged cards and tokens.",
         "Added Khans of Tarkir Seeded Boosters (You'll need to add both the Booster and the Promo pack to generate a complete Seeded booster pack.)",
         "Fixed a bug preventing Planeswalkers and other cards activated abilities from working."
+        ]),
+    3021800: ("3.2.18.0", "30 January 2015", [
+        "Random discard function now properly notifies the card name.",
+        "Fixed a bug where auras randomly move to the graveyard from your hand or deck after you scoop the game.",
+        "Planes and Scheme cards are now larger in size.",
+        "Added the previously unavailable promo Planes and Schemes.",
+        "NOTE: A new image pack is available for the larger card images, which is required for them to appear normally in the game"
         ])
 }
