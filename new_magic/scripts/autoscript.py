@@ -220,19 +220,45 @@ def tagConstructor(card, key, modeModifier = ''):
 ### Handle the 'choose one' style abilities
     if returnTags[0] != None and 'choice' in returnTags[0]:
         for choice in returnTags[0]['choice']:
-            modeLine, modeType = choice.split(', ')
+            min, max = [int(x) for x in choice.split(', ')]
             modeList = [x.split(u'\u2022 ')[1] for x in card.Rules.splitlines() if u"\u2022" in x] ## split the rules text into lines and keep the ones with the modal bullet point
-            modeChoice = askChoice("Choose a mode for {}:".format(card.Name), modeList)
-            if modeChoice == 0:
-                return "BREAK"
-            if returnActiChoice != (0, ''):  ## if the mode choice was from an activated ability
-                newTags = tagConstructor(card, key + str(returnActiChoice[0]), str(modeChoice))[0]
-            else:
-                newTags = tagConstructor(card, key, str(modeChoice))[0]
-            returnTags[3] = newTags[3]
-            returnTags[4] = newTags[4]
-            returnTags[5] = newTags[5]
-            returnModeChoice = (modeChoice, modeList[modeChoice - 1])
+            if max > len(modeList):
+                max = modeList
+            if min > max:
+                min = max
+            choiceList = []
+            while len(choiceList) < int(max):
+                if len(choiceList) >= min:
+                    choicesRemaining = max - len(choiceList)
+                else:
+                    choicesRemaining = min - len(choiceList)
+                text = "Choose{} {}{} mode{} for {}:".format(
+                              " up to" if len(choiceList) >= min else "",
+                                  choicesRemaining,
+                                   "" if len(choiceList) == 0 else " more",
+                                             "s" if choicesRemaining > 1 else "",
+                                                    card.Name)
+                modeChoice = askChoice(text, modeList, ['#ff0000' if modeList.index(x) + 1 in choiceList else '#999999' for x in modeList], customButtons = [] if len(choiceList) == 0 else ["OK"] )
+                if modeChoice <= 0:
+                    if len(choiceList) >= min:
+                        break
+                    else:
+                        continue
+                if modeChoice in choiceList:
+                    continue
+                choiceList.append(modeChoice)
+            choiceList.sort()
+            for mode in choiceList:
+                if returnActiChoice != (0, ''):  ## if the mode choice was from an activated ability
+                    newTags = tagConstructor(card, key + str(returnActiChoice[0]), str(modeChoice))[0]
+                else:
+                    newTags = tagConstructor(card, key, str(modeChoice))[0]
+                for tagIndex in [3,4,5]:
+                    if returnTags[tagIndex] == None:
+                        returnTags[tagIndex] = newTags[tagIndex]
+                    else:
+                        returnTags[tagIndex] += newTags[tagIndex]
+            returnModeChoice = (int("".join([str(x) for x in choiceList])), ", ".join([modeList[x - 1] for x in choiceList]))
     timer = debugWhisper("const", card, timer)
     return (returnTags, returnActiChoice, returnModeChoice)
 
