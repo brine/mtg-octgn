@@ -353,6 +353,14 @@ def autoParser(card, tagclass, morph = False):
         if 'cost' in stackData[initTags]:
             for ctag in stackData[initTags]['cost']:
                 (cost, type) = ctag.split(', ')
+                if cost == 'tribute' and len(getPlayers()) > 1:
+                    otherPlayers = getPlayers()[1:]
+                    if len(otherPlayers) > 1:
+                        tributeChoice = askChoice("Choose a player to pay tribute:\n(Check chat log for opponent's decision)", [p.name for p in otherPlayers])
+                        tributePlayer = otherPlayers[tributeChoice - 1]
+                    else:
+                        tributePlayer = otherPlayers[0]
+                    remoteCall(tributePlayer, 'autotribute', [srcCard])
                 if cost == 'x':
                     costMarker = 'x'
                 else:
@@ -501,6 +509,13 @@ def autoParser(card, tagclass, morph = False):
 ############################
 #Autoscript functions
 ############################
+
+def autotribute(card):
+    mute()
+    if confirm("Would you like to pay {}'s Tribute?\n\n{}".format(card.name, card.rules)):
+        notify("{} pays {}'s tribute.".format(me, card))
+    else:
+        notify("{} does not pay {}'s tribute.".format(me, card))
 
 def autocopy(card, stackcard, tag, stackData):
     mute()
