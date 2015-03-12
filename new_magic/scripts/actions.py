@@ -630,6 +630,24 @@ def morph(card, x = 0, y = 0):
         src = card.group
         notify("{} casts a card face-down from their {}.".format(me, src.name))
         card.moveToTable(defaultX, defaultY, True)
+        card.peek()
+        cardalign()
+
+def manifest(card, x = 0, y = 0):
+    mute()
+    src = card.group
+    if src == table:
+        notify("{} manifests {} from the battlefield.".format(me, card))
+        card.isFaceUp = False
+    else:
+        if card.getIndex == 0:
+            notify("{} manifests the top card of their {}.".format(me, src.name))
+        else:
+            notify("{} manifests the card {} from the top of their {}.".format(me, card.getIndex, src.name))
+    card.moveToTable(defaultX, defaultY, True)
+    card.markers[counters['manifest']] = 1
+    card.peek()
+    cardalign()
 
 def transform(card, x = 0, y = 0):
     mute()
@@ -655,11 +673,14 @@ def transform(card, x = 0, y = 0):
                 card.peek()
                 rnd(1,10)
                 text = autoParser(card, 'morph') ## The card will flip up in the autoParser
+                card.markers[counters['manifest']] = 0
                 cardalign()
                 if text != "BREAK":
                     notify("{} morphs {} face up{}.".format(me, card, text))
             else:
                 card.isFaceUp = True
+                card.markers[counters['manifest']] = 0
+                cardalign()
                 notify("{} morphs {} face up.".format(me, card))
 
 def suspend(card, x = 0, y = 0):
@@ -736,6 +757,7 @@ def flip(card, x = 0, y = 0):
         card.isFaceUp = False
     else:
         card.isFaceUp = True
+        card.markers[counters['manifest']] = 0
         notify("{} flips {} face up.".format(me, card))
 
 def clear(card, x = 0, y = 0):

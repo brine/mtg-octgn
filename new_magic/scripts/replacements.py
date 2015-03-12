@@ -86,7 +86,8 @@ counters = {
     'monstrous': ('Monstrous counter', 'a60101d3-e9a9-400b-aa46-69a990beb25c'), ###
     'khans': ('Khans counter', '4a6986b1-cd8b-4692-94cc-7b4af9ea24eb'), ###
     'dragons': ('Dragons counter', '0137b1eb-9465-4e40-af6d-c6b1d77ae2e8'), ###
-    'gem': ('Gem counter', '7215352b-e285-4794-b791-5580c865c6ed')
+    'gem': ('Gem counter', '7215352b-e285-4794-b791-5580c865c6ed'),
+    'manifest': ('Manifest Indicator: ' + me.name, 'd1f367bd-69eb-47b4-8cfa-13ef11419173') ###
 
 }
 
@@ -104,7 +105,6 @@ scriptMarkers = {
     'suspend': ('Suspended', '9cc0fc15-9967-4e98-9afb-a2d5e1479920'), ###
     'miracle': ('Miracle trigger: ' + me.name, 'aee4bba3-9375-4f14-9882-5d8d6fdd1660'), ###
     'choice': ('Mode Indicator: ' + me.name, '1c8f7028-ea97-4fa4-93ce-ba0bb55b31e7'), ###
-    'manifest': ('Manifest Indicator: ' + me.name, 'd1f367bd-69eb-47b4-8cfa-13ef11419173'), ###
     'morph': ('Morph Indicator: ' + me.name, '96268748-c55b-4513-82e4-0466d39137c0') ###
 }
 

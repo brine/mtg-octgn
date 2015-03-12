@@ -42,6 +42,7 @@
     <globalvariable name="smartmarker" value=""/>
     <globalvariable name="activePlayers" value="{}"/>
     <globalvariable name="priority" value="[]"/>
+    <globalvariable name="morphCount" value="0"/>
   </globalvariables>
   <card back="cards/back.jpg" front="cards/front.jpg" width="63" height="88" cornerRadius="2">
     <property name="Cost" type="String" />
@@ -100,12 +101,13 @@
     <cardaction menu="Attach to Targeted Card" shortcut="ctrl+Q" execute="attach" />
     <cardaction menu="Morph/Transform/Flip Card" shortcut="ctrl+F" execute="transform" />
     <cardaction menu="Turn Face-Up/Down" shortcut="ctrl+shift+F" execute="flip" />
+    <cardaction menu="Manifest Card" execute="manifest" />
     <cardaction menu="Clone Card" shortcut="ctrl+C" batchExecute="clone" />
     <cardaction menu="Destroy Card" shortcut="del" batchExecute="batchDestroy" />
     <cardaction menu="Exile Card" shortcut="ctrl+E" batchExecute="batchExile" />
     <cardaction menu="Blink Card" shortcut="ctrl+shift+B" execute="blink" />
     <cardaction menu="Move to Top of Libary" shortcut="ctrl+Y" execute="tolibrary" />
-    <cardaction menu="Move to a Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
+    <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
     <cardaction menu="Shuffle Cards to Bottom of Library"  batchExecute="libraryBottomAllShuffle" />
     <cardaction menu="Move to Hand" shortcut="ctrl+H" execute="tohand" />
     <cardaction menu="Clear Card" shortcut="esc" execute="clear" />
@@ -146,7 +148,7 @@
       <cardaction menu="Discard Card" shortcut="del" execute="discard" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Return to Library" shortcut="ctrl+Y" execute="tolibrary" />
-      <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
+      <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
       <cardaction menu="Submit Tags" execute="submitTags" />
       <groupaction menu="Mulligan" shortcut="ctrl+M" execute="mulligan" />
       <groupaction menu="Random Discard" execute="randomDiscard" />
@@ -170,6 +172,7 @@
       </groupactions>
       <cardaction menu="Cast Card" shortcut="ctrl+C" execute="play" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
+      <cardaction menu="Manifest Card" execute="manifest" />
       <cardaction menu="Discard Card" shortcut="del" execute="discard" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Move Card to Hand" default="True" shortcut="ctrl+H" execute="tohand" />
@@ -188,8 +191,9 @@
       <cardaction menu="Cast Card" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Cast Card (Flashback)" shortcut="ctrl+F" execute="flashback" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+shift+F" execute="morph" />
+      <cardaction menu="Manifest Card" execute="manifest" />
       <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" />
-      <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
+      <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
       <cardaction menu="Submit Tags" execute="submitTags" />
     </group>
     <group name="Exiled Zone" shortcut="ctrl+E" visibility="all" width="63" height="88" icon="groups/removed.png" collapsed="True">
@@ -204,8 +208,9 @@
       <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
       <cardaction menu="Discard Card" shortcut="del" execute="discard" /> 
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+f" execute="morph" />
+      <cardaction menu="Manifest Card" execute="manifest" />
       <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" /> 
-      <cardaction menu="Move to position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />      
+      <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />      
     </group>
     <group name="Sideboard" visibility="me" width="63" height="88" icon="groups/sideboard.png" collapsed="True">
       <groupaction menu="Shuffle" execute="shuffle" />
