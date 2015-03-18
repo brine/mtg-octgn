@@ -1048,9 +1048,10 @@ def autoCreateToken(card, x = 0, y = 0):
     tokens = getTags(card, 'autotoken')
     if tokens != "":
         for token in tokens:
+            x += 10*(-1 if y < 0 else 1)
+            y += 10*(-1 if y < 0 else 1)
             tokencard = tokenArtSelector(token)
-            card.moveToTable(x,y)
-            x, y = table.offset(x, y)
+            tokencard.moveToTable(x ,y)
             text += "{}/{} {} {}, ".format(tokencard.Power, tokencard.Toughness, tokencard.Color, tokencard.Name)
         if autoscriptCheck() == "True":
             cardalign()
