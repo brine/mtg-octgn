@@ -105,5 +105,14 @@ changelog = {
         "Planes and Scheme cards are now larger in size.",
         "Added the previously unavailable promo Planes and Schemes.",
         "NOTE: A new image pack is available for the larger card images, which is required for them to appear normally in the game"
+        ]),
+    3021900: ("3.2.19.0", "17 March 2015", [
+        "Added Dragons of Tarkir + Tokens.",
+        "Added Duel Decks Elspeth vs Kiora + precon decks.",
+        "Added support for modal cards that allow more than one choice (commands, entwine, etc).",
+        "Added Manifest mechanic, you can manifest cards from piles or the table via right-click menu.",
+        "Resolving Tribute cards (fanatic of xenagos) will prompt your opponent to pay tribute, their choice appears in chat window.",
+        "The Outpost cycle (from fate reforged) will allow you to place dragon or khans markers on them.",
+        "Fixed an error with Auto-Create Token."
         ])
 }
