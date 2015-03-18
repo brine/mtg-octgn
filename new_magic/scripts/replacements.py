@@ -161,9 +161,10 @@ tokenTypes = {
     'demon**b': ('* / * Black Demon', 'd7f65953-cbe0-46ea-ad32-3646d0381c88'), #DDC CNS
     'deserter01w': ('0 / 1 White Deserter', '85197940-766e-4046-aa48-6d50bad3b963'),
     'djinn55c': ('5 / 5 Colorless Djinn', '38bb8262-3ab3-4ad4-a0b1-4bb8f806ee3d'),
+    'djinnmonk22u': ('2 / 2 Blue Djinn Monk', '4d1431d7-2eb3-49e3-9919-b3a64c05f52e'),
     'dragon11m': ('1 / 1 Multicolor Red Green Dragon', '5f6939ba-43bc-4c5b-b329-d6c58a5ddd28'),
     'dragon22r': ('2 / 2 Red Dragon', 'a6693042-8f74-4a29-816b-61974cca5041'), #M14 M15
-    'dragon44r': ('4 / 4 Red Dragon', 'abdc289a-4783-41db-95bc-42955fef0b16'),
+    'dragon44r': ('4 / 4 Red Dragon', 'abdc289a-4783-41db-95bc-42955fef0b16'), #WWK DTK
     'dragon55r': ('5 / 5 Red Dragon', '9ae59296-d44e-4d12-b26b-9326d6489239'), #10E MPRONS WWK
     'dragon66r': ('6/6 Red Dragon', '58006984-ba3e-4d6f-9918-01126f580b80'),
     'dragonspirit55u': ('5 / 5 Blue Dragon Spirit', 'dd16c561-04aa-4cc2-8b7d-1f5a209e854e'),
@@ -212,7 +213,7 @@ tokenTypes = {
     'giantwarrior55w': ('5 / 5 White Giant Warrior', '73683460-63eb-444b-b418-e87ec50c1e95'),
     'gnome11c': ('1 / 1 Colorless Gnome', 'd1fa9cdb-7efa-4408-a086-009d6cc0e537'),
     'goat01w': ('0 / 1 White Goat', '1631dd68-5afb-4ae2-8f4b-db67b0398c7a'), #EVE M13
-    'goblin11r': ('1 / 1 Red Goblin', 'b1dc79df-5a3b-40dd-a927-11857bb95afb'), #10E UNG MPRLGN ALA SOM NPH M13 LEAGUEM13 RTR M15 KTK
+    'goblin11r': ('1 / 1 Red Goblin', 'b1dc79df-5a3b-40dd-a927-11857bb95afb'), #10E UNG MPRLGN ALA SOM NPH M13 LEAGUEM13 RTR M15 KTK DTK
     'goblin21r': ('2 / 1 Red Goblin', '672b3979-79ea-4d52-a3aa-b1d69a9b6fa3'),
     'goblinrogue11b': ('1 / 1 Black Goblin Rogue', '1bf717f7-d7c4-4a28-8e98-ca98280f6f43'), #LRW MMA
     'goblinscout11r': ('1 / 1 Red Goblin Scout', '7e9fae19-abbd-48b1-9f11-357236782b99'),
@@ -353,7 +354,7 @@ tokenTypes = {
     'voja22m': ('2 / 2 Multicolor Green White Voja', '776e6adf-b4a0-47a6-9fcf-85fb60b566c1'),
     'wall02c': ('0 / 2 Colorless Wall', '4a094bd3-6330-4e63-bdde-9ee04beb07df'),
     'wall55u': ('5 / 5 Blue Wall', '4d8efc05-4746-4e69-8d09-e64416bdbe08'),
-    'warrior11w': ('1 / 1 White Warrior', '49fb23bd-dfdb-4a72-99fd-a7cc6d16d15c'), #KTK KTK
+    'warrior11w': ('1 / 1 White Warrior', '49fb23bd-dfdb-4a72-99fd-a7cc6d16d15c'), #KTK KTK DTK
     'warrior11r': ('1 / 1 Red Warrior', '260555f7-890f-42af-b54b-bded98e9abc9'),
     'warrior21b': ('2 / 1 Black Warrior', 'ad244ef7-5dc0-4f56-9277-922e09136888'),
     'wasp11c': ('1 / 1 Colorless Wasp', 'e92fb94a-4060-4afb-944a-69367af00b19'),
@@ -371,10 +372,11 @@ tokenTypes = {
     'wurm66g': ('6 / 6 Green Wurm', '4e259c1c-f66a-444a-9c08-6e6bdc42db23'), #M12 MPRODY
     'wurm66b': ('6 / 6 Black Wurm', '5e914c05-f6a8-46f3-bd58-e32c83c386a7'),
     'wurm**g': ('* / * Green Wurm', '6c6cf231-531b-4273-a6e5-383c476ec1c7'),
-    'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK
+    'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK DTK
     'zombie22b2': ('2 / 2 Black Zombie', 'ebc67e29-00a2-4a72-806b-915fa5f9d75e'), #enchantment
     'zombie**u': ('* / * Blue Zombie', 'bcb88192-ce2f-4288-8799-c9264b38c78f'),
     'zombie**b': ('* / * Black Zombie', '5de01d24-b85f-4ca2-8868-d0a2adec7904'),
+    'zombiehorror**b': ('* / * Black Zombie Horrpr', '5f80aca2-6de2-44ad-8e56-669ccd52276b'),
     'zombiegiant55b': ('5 / 5 Black Zombie Giant', '84f5b8a0-050e-4078-88e2-0f9dd6182ea0'),
     'zombiewizard11m': ('1 / 1 Multicolor Blue Black Zombie Wizard', '7c543985-82bc-4173-8d6c-3a901f65c4bf'),
 
@@ -395,5 +397,6 @@ tokenTypes = {
     'sarkhanemblem': ("Sarkhan's Emblem", '307fb3a2-010c-4e8e-883e-768dd3804db4'),
     'darettiemblem': ("Daretti's Emblem", 'a765af77-dc90-4aa8-ae02-b54840627c44'),
     'teferiemblem': ("Teferi's Emblem", '4863a0dc-9d01-49c1-a906-34730019eaef'),
-    'obnixilisemblem': ("Ob Nixilis's Emblem", '1622a22a-a22a-4a47-8969-eef8632bde23')
+    'obnixilisemblem': ("Ob Nixilis's Emblem", '1622a22a-a22a-4a47-8969-eef8632bde23'),
+    'narsetemblem': ("Narset's Emblem", '5ed2ac04-ea4f-4746-bbe0-25ccb6e953cf')
 }
