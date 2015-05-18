@@ -71,22 +71,23 @@ def endTurn(player):
     if player == me:
         clearAll(table, x = 0, y = 0)
 
-def moveEvent(player, card, fromGroup, toGroup, oldIndex, index, oldX, oldY, x, y, isScriptMove, highlight = [], markers = {}):
+def moveEvent(player, cards, fromGroups, toGroups, oldIndexs, indexs, oldXs, oldYs, xs, ys, faceups, highlight, markers):
     mute()
-    if isScriptMove:  ## Ignore script-based movements
-        return
     if player != me:
         return
-    if fromGroup != table or toGroup != table:  ## Ignore non-table movements
-        return
-    if anchorCheck() == "True":
-        global alignIgnore
-        if not card in alignIgnore and alignCheck() == "True":  ## Moving a card will automatically disable it from alignment
-            alignIgnore.append(card)  ## anchors the card to the table
-    if alignCheck() == "True" and anchorCheck() == "False":
+    count = -1
+    for card in cards:
+        count += 1
+        if fromGroups[count] != table or toGroups[count] != table:  ## Ignore non-table movements
+            continue
+        if anchorCheck() == "True":
+            global alignIgnore
+            if not card in alignIgnore and alignCheck() == "True":  ## Moving a card will automatically disable it from alignment
+                alignIgnore.append(card)  ## anchors the card to the table
+        if alignCheck() == "False" and attachCheck() == "True":  ## If the user disabled alignment and enabled attachment aligning
+            alignAttachments(card)
+    if alignCheck() == "True":
         cardalign()
-    elif attachCheck() == "True":
-        alignAttachments(card)
 
 def initializeGame():
     mute()

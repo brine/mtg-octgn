@@ -14,8 +14,8 @@
   <events>
     <event name="OnLoadDeck" action="registerPlayer" />
     <event name="OnGlobalVariableChanged" action="priorityResolve" />
-    <event name="OnEndTurn" action="endTurn" />
-	<event name="OnMoveCard" action="moveEvent" />
+    <event name="OnTurn" action="endTurn" />
+	<event name="OnMoveCards" action="moveEvent" />
 	<event name="OnTableLoad" action="initializeGame" />
   </events>
   <fonts>
