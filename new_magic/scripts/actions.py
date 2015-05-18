@@ -305,47 +305,44 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
         count = askInteger("Scry how many cards?", 1)
     if count == None or count == 0:
         return
-    topCards = group.top(count)
+    topCards = []
+    for c in group.top(count):
+        topCards.append(c)
+        c.peek()
     buttons = []  ## This list stores all the card objects for manipulations.
-    for c in topCards:
-        c.peek()  ## Reveal the scryed cards to python
-        buttons.append(c)
     topList = []  ## This will store the cards selected for the top of the pile
     bottomList = []  ## For cards going to the bottom of the pile
-    rnd(1,2)  ## allow the peeked card's properties to load
     loop = 'BOTTOM'  ## Start with choosing cards to put on bottom
     while loop != None:
-        desc = "Select a card to place on {}:\n\n{}\n///////DECK///////\n{}".format(
+        desc = "Select a card to place on {}:\n(Close window to {})\n\n{}\n///////DECK///////\n{}".format(
                 loop,
+                'switch to TOP' if loop == 'BOTTOM' else 'cancel scrying',
                 '\n'.join([c.Name for c in topList]),
                 '\n'.join([c.Name for c in bottomList]))
         if loop == 'TOP':
-            num = askChoice(desc, [c.Name for c in buttons], customButtons = ["Switch to BOTTOM"])
-            if num == -1:
-                loop = 'BOTTOM'
-            elif num != 0:
-                card = buttons.pop(num - 1)
+            card = askCard(topCards, desc, "Scry")
+            if card == None:
+                notify("{} has cancelled a scry for {}.".format(me, count))
+                return ## closing the dialog window will cancel the scry, not moving any cards, but peek status will stay on.
+            else:
+                topCards.remove(card)
                 topList.insert(0, card)
         else:
-            num = askChoice(desc, [c.Name for c in buttons], customButtons = ["Switch to TOP"])
-            if num == -1:
+            card = askCard(topCards, desc, "Scry")
+            if card == None:
                 loop = 'TOP'
-            elif num != 0:
-                card = buttons.pop(num - 1)
+            else:
+                topCards.remove(card)
                 bottomList.append(card)
-        if len(buttons) == 0: ##  End the loop
+        if len(topCards) == 0: ##  End the loop
             loop = None
-        if num == None:  ## closing the dialog window will cancel the scry, not moving any cards, but peek status will stay on.
-            return
     topList.reverse()  ## Gotta flip topList so the moveTo's go in the right order
     for c in topList:
         c.moveTo(group)
     for c in bottomList:
         c.moveToBottom(group)
-    for c in group:  ## This is currently the only way to un-peek at cards.
-        c.isFaceUp = True
-        c.isFaceUp = False
     notify("{} scryed for {}, {} on top, {} on bottom.".format(me, count, len(topList), len(bottomList)))
+    group.setVisibility("none")
 
 def play(card, x = 0, y = 0):
     mute()
