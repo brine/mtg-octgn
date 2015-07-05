@@ -1,5 +1,5 @@
 counters = {
-    'general': ('Commander Not-In-Play: ' + me.name, 'bf97836f-3395-4add-b807-daa568c036d6'), ###
+    'general': ('Commander Not-In-Play', 'bf97836f-3395-4add-b807-daa568c036d6'), ###
     'p1p1': ('+1/+1 counter', '6480e55b-0864-41bf-ad00-43cc2482a75c'), ###
     'm1m1': ('-1/-1 counter', '6f180a03-b3f5-4e6f-96b5-9ff1597d2226'), ###
     'charge': ('Charge counter', 'fabd2965-929e-4ee9-b69c-e278e3cd4098'), ###
@@ -87,25 +87,25 @@ counters = {
     'khans': ('Khans counter', '4a6986b1-cd8b-4692-94cc-7b4af9ea24eb'), ###
     'dragons': ('Dragons counter', '0137b1eb-9465-4e40-af6d-c6b1d77ae2e8'), ###
     'gem': ('Gem counter', '7215352b-e285-4794-b791-5580c865c6ed'),
-    'manifest': ('Manifest Indicator: ' + me.name, 'd1f367bd-69eb-47b4-8cfa-13ef11419173') ###
+    'suspend': ('Suspended Indicator', '9cc0fc15-9967-4e98-9afb-a2d5e1479920'), ###
+    'x': ('X Variable', 'fd936437-1d94-48a1-9367-4be0bc389fb4'), ###
+    'cost': ('Alternate/Additional cost', '699f849b-c55d-409f-8223-7b4d297eb723'), ###
+    'choice': ('Mode Indicator', '1c8f7028-ea97-4fa4-93ce-ba0bb55b31e7'), ###
+    'manifest': ('Manifest Indicator', 'd1f367bd-69eb-47b4-8cfa-13ef11419173') ###
 
 }
 
 scriptMarkers = {
-    'cast': ('Cast Spell trigger: ' + me.name, '84aa67dc-9507-45cf-adcf-7865e7223648'), ###
-    'x': ('X Variable: ' + me.name, 'fd936437-1d94-48a1-9367-4be0bc389fb4'), ###
-    'cost': ('Alternate/Additional cost: ' + me.name, '699f849b-c55d-409f-8223-7b4d297eb723'), ###
-    'etb': ('Enters the battlefield trigger: ' + me.name, '3a946aa5-4fd9-4f2f-a8bc-bfe8614e8c44'), ###
-    'destroy': ('Sent to graveyard trigger: ' + me.name, '663a9532-98d2-4d30-b41b-70c582b6357f'), ###
-    'attack': ('Attack trigger: ' + me.name, '9f8ff955-97b7-4881-a0a5-823a7413a6d6'), ###
-    'block': ('Block trigger: ' + me.name, '759e7a00-e6f1-4cfb-9f74-d8ff58e44e30'), ###
-    'acti': ('Activated ability trigger: ' + me.name, '2dd4da20-eec5-47e9-9adc-2b502ebc4f5d'), ###
-    'exile': ('Exile trigger: ' + me.name, '9f315796-c2b2-4159-bcf6-3e28ecddfbc9'), ###
-    'discard': ('Discard trigger: ' + me.name, 'e9f688b5-5068-404c-9979-23098aa37dfa'), ###
-    'suspend': ('Suspended', '9cc0fc15-9967-4e98-9afb-a2d5e1479920'), ###
-    'miracle': ('Miracle trigger: ' + me.name, 'aee4bba3-9375-4f14-9882-5d8d6fdd1660'), ###
-    'choice': ('Mode Indicator: ' + me.name, '1c8f7028-ea97-4fa4-93ce-ba0bb55b31e7'), ###
-    'morph': ('Morph Indicator: ' + me.name, '96268748-c55b-4513-82e4-0466d39137c0') ###
+    'cast': ('Cast Spell trigger', '84aa67dc-9507-45cf-adcf-7865e7223648'), ###
+    'etb': ('Enters the battlefield trigger', '3a946aa5-4fd9-4f2f-a8bc-bfe8614e8c44'), ###
+    'destroy': ('Sent to graveyard trigger', '663a9532-98d2-4d30-b41b-70c582b6357f'), ###
+    'attack': ('Attack trigger', '9f8ff955-97b7-4881-a0a5-823a7413a6d6'), ###
+    'block': ('Block trigger', '759e7a00-e6f1-4cfb-9f74-d8ff58e44e30'), ###
+    'acti': ('Activated ability trigger', '2dd4da20-eec5-47e9-9adc-2b502ebc4f5d'), ###
+    'exile': ('Exile trigger', '9f315796-c2b2-4159-bcf6-3e28ecddfbc9'), ###
+    'discard': ('Discard trigger', 'e9f688b5-5068-404c-9979-23098aa37dfa'), ###
+    'morph': ('Morph trigger', '96268748-c55b-4513-82e4-0466d39137c0'), ###
+    'miracle': ('Miracle trigger', 'aee4bba3-9375-4f14-9882-5d8d6fdd1660') ###
 }
 
 tokenTypes = {

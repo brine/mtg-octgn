@@ -411,7 +411,7 @@ def resolve(card, x = 0, y = 0):
     mute()
     global stackDict
     if autoscriptCheck() == "True":
-        if scriptMarkers['suspend'] in card.markers:
+        if counters['suspend'] in card.markers:
             if counters['time'] in card.markers:
                 card.markers[counters['time']] -= 1
             if counters['time'] in card.markers:
@@ -419,7 +419,7 @@ def resolve(card, x = 0, y = 0):
             else:
                 text = autoParser(card, 'cast')
                 if text != "BREAK":
-                    card.markers[scriptMarkers['suspend']] = 0
+                    card.markers[counters['suspend']] = 0
                     notify("{} casts suspended {}{}.".format(me, card, text))
             return
         if card in stackDict:
@@ -686,7 +686,7 @@ def suspend(card, x = 0, y = 0):
     num = askInteger("Suspending {}, what is X?)".format(card.Name), 0)
     if num != 0 and num != None:
         card.moveToTable(defaultX, defaultY)
-        card.markers[scriptMarkers['suspend']] = 1
+        card.markers[counters['suspend']] = 1
         card.markers[counters['time']] = num
         cardalign()
         notify("{} suspends {} for {}.".format(me, card, num))

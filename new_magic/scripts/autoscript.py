@@ -284,11 +284,11 @@ def cardcount(card, stackcard, search):
         search = search[search.find("*")+1:]
         multiplier = multiplier * intval
     if search == "x":
-        qty = stackcard.markers[scriptMarkers['x']]
-        stackcard.markers[scriptMarkers['x']] -= qty
+        qty = stackcard.markers[counters['x']]
+        stackcard.markers[counters['x']] -= qty
     elif search == "cost":
-        qty = stackcard.markers[scriptMarkers['cost']]
-        stackcard.markers[scriptMarkers['cost']] -= qty
+        qty = stackcard.markers[counters['cost']]
+        stackcard.markers[counters['cost']] -= qty
     elif re.search(r'marker', search):
         marker = search[search.find("marker")+7:]
         addmarker = counters[marker]
@@ -481,8 +481,8 @@ def autoParser(card, tagclass, morph = False):
     ## This covers trigger resolving, for ALL trigger classes ##
     if tagclass == 'resolve': ## Handle all cases where the card is on the stack (resolving)
         stackCard.markers[scriptMarkers[stackClass]] = 0
-        stackCard.markers[scriptMarkers['cost']] = 0
-        stackCard.markers[scriptMarkers['x']] = 0
+        stackCard.markers[counters['cost']] = 0
+        stackCard.markers[counters['x']] = 0
         del stackDict[stackCard]
     ## This will cover all trigger initiations and activations ##
     else: ## Handle all cases where the card or ability might need to go on the stack
@@ -492,9 +492,9 @@ def autoParser(card, tagclass, morph = False):
             stackCard.switchTo(stackAlt)
             stackCard.markers[scriptMarkers[stackClass]] = 1
             stackCard.markers[scriptMarkers['acti']] = actiTuple[0]
-            stackCard.markers[scriptMarkers['choice']] = modeTuple[0]
-            stackCard.markers[scriptMarkers['cost']] = stackData['cost']
-            stackCard.markers[scriptMarkers['x']] = stackData['x']
+            stackCard.markers[counters['choice']] = modeTuple[0]
+            stackCard.markers[counters['cost']] = stackData['cost']
+            stackCard.markers[counters['x']] = stackData['x']
             stackDict[stackCard] = stackData  ## Save the final status of the stack instance
         else: ## All other stack triggers need to be checked if the stack trigger card should be created
             if stackClass == 'morph':
@@ -504,9 +504,9 @@ def autoParser(card, tagclass, morph = False):
                 stackCard.switchTo(stackAlt)
                 stackCard.markers[scriptMarkers[stackClass]] = 1
                 stackCard.markers[scriptMarkers['acti']] = actiTuple[0]
-                stackCard.markers[scriptMarkers['choice']] = modeTuple[0]
-                stackCard.markers[scriptMarkers['cost']] = stackData['cost']
-                stackCard.markers[scriptMarkers['x']] = stackData['x']
+                stackCard.markers[counters['choice']] = modeTuple[0]
+                stackCard.markers[counters['cost']] = stackData['cost']
+                stackCard.markers[counters['x']] = stackData['x']
                 stackDict[stackCard] = stackData  ## Save the final status of the stack instance
     costMemory = (stackData['cost'], stackData['x']) ## stores the cost values for ETB triggers
     if moveTo and stackData['moveto'] == None: ##stuff like flashback's exiling takes precedence over normal moveto's
@@ -836,22 +836,10 @@ def alignCard(cards, x = 0, y = 0):  ##This is the menu cardaction for reactivat
 
 def isStack(card):  ## Checks to see if the card is on the stack
     mute()
-    if (scriptMarkers['cast'] in card.markers
-            or scriptMarkers['acti'] in card.markers
-            or scriptMarkers['attack'] in card.markers
-            or scriptMarkers['block'] in card.markers
-            or scriptMarkers['destroy'] in card.markers
-            or scriptMarkers['exile'] in card.markers
-            or scriptMarkers['etb'] in card.markers
-            or scriptMarkers['cost'] in card.markers
-            or scriptMarkers['x'] in card.markers
-            or scriptMarkers['discard'] in card.markers
-            or scriptMarkers['miracle'] in card.markers
-            or scriptMarkers['choice'] in card.markers
-            or scriptMarkers['morph'] in card.markers):
-        return True
-    else:
-        return False
+    for marker in scriptMarkers.values():
+        if marker in card.markers:
+            return True
+    return False
 
 def playerSide():  ## Initializes the player's top/bottom side of table variables
     mute()
@@ -961,7 +949,7 @@ def cardalign():
                 carddict[dictname] = []
                 if not card.isFaceUp:
                     index = 0
-                elif scriptMarkers["suspend"] in card.markers:
+                elif counters["suspend"] in card.markers:
                     index = 6
                 elif re.search(r"Land", card.Type):
                     index = 3
