@@ -114,6 +114,7 @@ tokenTypes = {
     'ape11g': ('1 / 1 Green Ape', '48c2b391-2b78-45b4-ba66-775d97dcd748'),
     'ape22g': ('2 / 2 Green Ape', '934dbdba-1bd1-40dc-8d68-227ae79dc369'),
     'ape33g': ('3 / 3 Green Ape', '1667d12a-4beb-4754-bf77-6fd1d23e12ff'),
+    'ashayatheawokenworld44g': ('4/4 Green Ashaya, the Awoken World', '2f7b9897-8819-42c8-885e-aab0e94faeae'),
     'assassin11b': ('1/1 Black Assassin', 'f960e50c-0eeb-444d-990c-be2cbec88385'),
     'assemblyworker22c': ('2 / 2 Colorless Assembly Worker', '6c4d590f-a3c8-4d94-b113-a586c471c2a2'),
     'avatar**w': ('* / * White Avatar', 'ebfa36c6-2c4e-4a5f-9730-010e7b50bd19'),
@@ -182,6 +183,7 @@ tokenTypes = {
     'elemental33r': ('3 / 3 Red Elemental', '52227858-4a25-47c5-9654-127ae8ec1463'),
     'elemental71r': ('7 / 1 Red Elemental', '012da310-cd39-443f-915d-758f4bf9584a'),
     'elemental**r': ('* / * Red Elemental', '2492104c-bea7-4c69-a244-b9fc9885c6aa'),
+    'elemental22g': ('2 / 2 Green Elemental', 'ca1dbff6-ef8e-40f1-b2e0-3a5a4d907de4'),
     'elemental44g': ('4 / 4 Green Elemental', '3c1f93e6-dbd6-4ab8-9a7a-17ffe15a21a1'),
     'elemental53g': ('5 / 3 Green Elemental', 'cb75cd77-2074-4ee7-a4d5-5f71976472b7'),
     'elemental77g': ('7 / 7 Green Elemental', 'f3149eb3-d8e2-4142-9306-504cf938719f'),
@@ -335,8 +337,8 @@ tokenTypes = {
     'stoneforgedblade': ('Stoneforged Blade Equipment', '2ba08e68-73c8-4828-b55c-c456c29aa6da'),
     'survivor11r': ('1 / 1 Red Survivor', '4ba76ae2-388e-4a9b-b712-c9d5cd2feff5'),
     'tetravite11c': ('1 / 1 Colorless Tetravite', '64b62223-0bbc-4f2d-9597-2f6e9ddf0c1f'),
-    'thopter11c': ('1 / 1 Colorless Thopter', 'dc573bed-33c1-46b5-b56b-2bcb52402534'),
-    'thopter11u': ('1 / 1 Blue Thopter', '4f4cfe84-fd30-4b27-a7c7-e3c7f4d62257'), #MBS EXO
+    'thopter11u': ('1 / 1 Blue Thopter', '4f4cfe84-fd30-4b27-a7c7-e3c7f4d62257'),
+    'thopter11c': ('1 / 1 Colorless Thopter', 'dc573bed-33c1-46b5-b56b-2bcb52402534'), #MBS EXO ORI ORI
     'thrull01b': ('0 / 1 Black Thrull', '20e4653d-f948-46e4-9851-9a1a547d2889'), #DDC FEM
     'thrull11b': ('1 / 1 Black Thrull', '588e17d2-4edc-44e0-af9c-e2fc31b621c4'),
     'tombspawn22b': ('2 / 2 Black Tombspawn', '5da0e2e6-b8b5-49b6-994f-c4835e8ef0f9'),
@@ -398,5 +400,8 @@ tokenTypes = {
     'darettiemblem': ("Daretti's Emblem", 'a765af77-dc90-4aa8-ae02-b54840627c44'),
     'teferiemblem': ("Teferi's Emblem", '4863a0dc-9d01-49c1-a906-34730019eaef'),
     'obnixilisemblem': ("Ob Nixilis's Emblem", '1622a22a-a22a-4a47-8969-eef8632bde23'),
-    'narsetemblem': ("Narset's Emblem", '5ed2ac04-ea4f-4746-bbe0-25ccb6e953cf')
+    'narsetemblem': ("Narset's Emblem", '5ed2ac04-ea4f-4746-bbe0-25ccb6e953cf'),
+    'jaceemblem': ("Jace's Emblem", 'e164ba8c-dd76-4bf1-bfa9-a3fa36a2a64b'),
+    'lilianaemblem2': ("Liliana's Emblem", '2066641c-49f9-40a0-b93d-a0f02164efb0'),
+    'chandraemblem': ("Chandra's Emblem", 'b90bb505-550f-4c39-8ec0-fb1209df1b98')
 }
