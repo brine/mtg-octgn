@@ -114,5 +114,11 @@ changelog = {
         "Resolving Tribute cards (fanatic of xenagos) will prompt your opponent to pay tribute, their choice appears in chat window.",
         "The Outpost cycle (from fate reforged) will allow you to place dragon or khans markers on them.",
         "Fixed an error with Auto-Create Token."
+        ]),
+    3022000: ("3.2.20.0", "07 July 2015", [
+        "Added Magic Origins, Modern Masters 2015, Masters Edition IV",
+        "Fixed an issue with the stack not aligning properly",
+        "Improved the scry mechanic to display card images",
+        "Proxy texts are easier to read"
         ])
 }

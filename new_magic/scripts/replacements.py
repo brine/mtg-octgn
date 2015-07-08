@@ -201,8 +201,8 @@ tokenTypes = {
     'elfwarrior11m': ('1 / 1 Multicolor Green White Elf Warrior', '21a00ccf-853e-4885-8802-3d119b46b03f'),
     'expansionsymbol11c': ('1 / 1 Colorless Expansion-Symbol', 'dac9805d-cc2e-48c9-899b-e26ef81e6530'),
     'faerie11u': ('1 / 1 Blue Faerie', '4f9a8c12-3e41-4764-924f-10ed33d3954a'),
+    'faerierogue11b': ('1 / 1 Black Faerie Rogue', 'bf9857cc-505b-4cc1-abdc-606f784918fe'), #MOR MM2
     'faerierogue11m': ('1 / 1 Multicolor Blue Black Faerie Rogue', '612372d6-83cd-41bd-b4dd-c6dc17b81030'),
-    'faerierogue11b': ('1 / 1 Black Faerie Rogue', 'bf9857cc-505b-4cc1-abdc-606f784918fe'),
     'festeringgoblin11b': ('1 / 1 Black Festering Goblin', 'a6f85e01-85ac-4413-aef2-619f99da6850'),
     'fish22u': ('2/2 Blue Fish', '7bff0b5a-ba88-42ed-a583-f30e484da989'),
     'froglizard33g': ('3/3 Green Frog Lizard', 'a890864d-6d00-4c5e-a173-bd01f0737739'),
