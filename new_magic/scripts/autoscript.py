@@ -741,7 +741,10 @@ def automarker(card, stackcard, tag):
     (markername, qty) = tag.split(', ')
     quantity = cardcount(card, stackcard, qty)
     originalquantity = quantity
-    addmarker = counters[markername]
+    if markername not in counters: ## make sure the marker exists in the dict
+        addmarker = (markername, "d9eb829e-55ad-4376-b109-884b0dad3d4b")
+    else:
+        addmarker = counters[markername]
     while markername == "p1p1" and counters["m1m1"] in card.markers and quantity > 0:
         card.markers[counters["m1m1"]] -= 1
         quantity -= 1

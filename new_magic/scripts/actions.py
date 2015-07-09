@@ -66,7 +66,7 @@ def priorityResolve(name, oldValue, value):
             resolve(stack[-1])
             cardalign()
 
-def endTurn(player):
+def endTurn(player, turnNumber):
     mute()
     if player == me:
         clearAll(table, x = 0, y = 0)
@@ -765,10 +765,14 @@ def clear(card, x = 0, y = 0):
 
 def clone(cards, x = 0, y = 0):
     for card in cards:
+        isInverted = y < card.height() / 2
         copy = table.create(card.model, x, y, 1)
         if card.alternate != '':
             copy.switchTo()
-        x, y = table.offset(x, y)
+        offset = min(card.width(), card.height()) / 5
+        delta = offset if not isInverted else -offset
+        x = x + delta
+        y = y + delta
 
 #---------------------------------------------------------------------------
 # Marker Manipulations

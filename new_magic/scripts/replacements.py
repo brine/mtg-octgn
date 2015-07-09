@@ -87,6 +87,7 @@ counters = {
     'khans': ('Khans counter', '4a6986b1-cd8b-4692-94cc-7b4af9ea24eb'), ###
     'dragons': ('Dragons counter', '0137b1eb-9465-4e40-af6d-c6b1d77ae2e8'), ###
     'gem': ('Gem counter', '7215352b-e285-4794-b791-5580c865c6ed'),
+    'javelin': ('Javelin counter', '5545a9a0-bdd9-4c37-b063-a9b83fef8988'),
     'suspend': ('Suspended Indicator', '9cc0fc15-9967-4e98-9afb-a2d5e1479920'), ###
     'x': ('X Variable', 'fd936437-1d94-48a1-9367-4be0bc389fb4'), ###
     'cost': ('Alternate/Additional cost', '699f849b-c55d-409f-8223-7b4d297eb723'), ###
