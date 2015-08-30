@@ -120,5 +120,11 @@ changelog = {
         "Fixed an issue with the stack not aligning properly",
         "Improved the scry mechanic to display card images",
         "Proxy texts are easier to read"
+        ]),
+    3022100: ("3.2.21.0", "30 August 2015", [
+        "Added Tempest Remastered, FTV Angels, Zendikar vs Eldrazi",
+        "Added a bunch of missing precon decks.",
+        "Fixed some bugs where the autoscripts tried to add a marker that wasnt defined.",
+        "Fixed a minor error message with the end-turn function."
         ])
 }
