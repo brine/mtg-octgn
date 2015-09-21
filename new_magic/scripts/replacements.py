@@ -173,6 +173,8 @@ tokenTypes = {
     'dragonspirit55u': ('5 / 5 Blue Dragon Spirit', 'dd16c561-04aa-4cc2-8b7d-1f5a209e854e'),
     'drake22u': ('2/2 Blue Drake', '254765e9-be8a-4f98-93ce-15b6ee29fed5'),
     'drake22m': ('2 / 2 Multicolor Green Blue Drake', 'fc271093-f18e-418a-bce3-527bdab948f9'),
+    'eldrazi1010c': ('10 / 10 Colorless Eldrazi', '7154d235-16b1-4c88-934e-5e91cb75340d'),
+    'scion11c': ('1 / 1 Colorless Eldrazi Scion', '7154d235-16b1-4c88-934e-5e91cb75340d'),
     'spawn01c': ('0 / 1 Colorless Eldrazi Spawn', 'cd04254c-b9ba-47d4-a21e-47845832bd09'),
     'elemental44w': ('4 / 4 White Elemental', '401c9416-4b6b-477c-9bef-6fce5a9d4e84'),
     'elemental10u': ('1/ 0 Blue Elemental', 'e9969757-cb36-4ff2-b8da-048c5d4934b9'),
@@ -182,6 +184,7 @@ tokenTypes = {
     'elemental31r': ('3 / 1 Red Elemental', '283f82f8-e3ee-4191-852a-60e2312d8e32'), #CFX DIS
     'elemental31r2': ('3 / 1 Red Elemental', '5086e801-b0f5-4ac0-9442-6f2e8312c647'), #haste
     'elemental31r3': ('3 / 1 Red Elemental', '0340630b-f7bd-4f77-a983-8ac93b61e30e'), #enchantment
+    'elemental31r4': ('3 / 1 Red Elemental', '7d7758be-84b9-477e-b7c8-93655ec7e04b'), #enchantment
     'elemental33r': ('3 / 3 Red Elemental', '52227858-4a25-47c5-9654-127ae8ec1463'),
     'elemental71r': ('7 / 1 Red Elemental', '012da310-cd39-443f-915d-758f4bf9584a'),
     'elemental**r': ('* / * Red Elemental', '2492104c-bea7-4c69-a244-b9fc9885c6aa'),
@@ -190,10 +193,11 @@ tokenTypes = {
     'elemental53g': ('5 / 3 Green Elemental', 'cb75cd77-2074-4ee7-a4d5-5f71976472b7'),
     'elemental77g': ('7 / 7 Green Elemental', 'f3149eb3-d8e2-4142-9306-504cf938719f'),
     'elemental**g': ('* / * Green Elemental', '46cf4187-fa7b-407d-bdf1-e8a63d45d1be'),
-    'elemental55m2': ('5 / 5 Multicolor Blue Red Elemental', '3b8d25a0-4cb0-4f24-86b8-925e89d263f6'),
     'elemental55m': ('5 / 5 Multicolor Black Red Elemental', 'dd6b1a3e-4055-4d94-96a1-3f9628058fad'),
-    'elemental**m': ('*/* Multicolor Green White Elemental', 'e516607b-95b3-4684-9f3f-766613f33da5'),
-    'elemental88m': ('8/8 Multicolor Green White Elemental', '82d6958f-6103-497b-8691-7eb3bf71aa20'),
+    'elemental55m2': ('5 / 5 Multicolor Blue Red Elemental', '3b8d25a0-4cb0-4f24-86b8-925e89d263f6'),
+    'elemental55m3': ('5 / 5 Multicolor Red Green Elemental', '557faf98-cdc8-4e8e-b029-ae91257bb633'),
+    'elemental**m': ('* / * Multicolor Green White Elemental', 'e516607b-95b3-4684-9f3f-766613f33da5'),
+    'elemental88m': ('8 / 8 Multicolor Green White Elemental', '82d6958f-6103-497b-8691-7eb3bf71aa20'),
     'elementalcat11r': ('1 / 1 Red Elemental Cat', '2eb297c2-f371-4e76-b5f2-f8d2a4cea5db'),
     'elementalshaman31r': ('3 / 1 Red Elemental Shaman', '6bcbf354-58a3-46be-9d47-c8c532dbb982'),
     'elephant33g': ('3 / 3 Green Elephant', '26df2446-e7c7-49ec-ad51-840c8bd34148'), #WWK INV DDD CNS
@@ -260,7 +264,9 @@ tokenTypes = {
     'knight22w2': ('2 / 2 White Knight', 'e8941a96-238c-467e-abf5-a6cced61ce30'), #first strike
     'knight22w3': ('2/2 White Knight', '92f8cd16-807c-4301-8dfa-166bb37b0f52'), #RTR LEAGUERTR -- Vigilance
     'knight22b': ('2 / 2 Black Knight', 'e8aa7dd3-0cde-4253-b467-a65c3f94dabb'),
+    'knightally22w': ('2 / 2 White Knight Ally', 'aca5ad2e-f7c0-4ca7-a75b-41353aa21f70'),
     'koboldsofkherkeep01r': ('0 / 1 Red Kobolds of Kher Keep', 'a098e8ae-5170-4c8c-83dd-d56af7b5691e'),
+    'korally11w': ('1 / 1 White Kor Ally', 'cb7b7e55-2c2c-4c49-92b5-112284a277f8'),
     'korsoldier11w': ('1 / 1 White Kor Soldier', 'ef52a618-c81a-4959-be5c-4b33058c901e'),
     'kraken99u': ('9 / 9 Blue Kraken', '5eebdfb9-1820-48fe-bae2-c0fa0e58e80e'),
     'landmine': ('Land Mine Artifact', 'ebde06ee-f3e8-4a5c-810f-9e88e79e85b7'),
@@ -277,6 +283,7 @@ tokenTypes = {
     'minotaur23r': ('2 / 3 Red Minotaur', '38a6d20a-ca14-459a-9484-f93d693714c0'),
     'monk11w': ('1 / 1 White Monk', '5b6e6944-f114-42bc-bbea-cfff3e4f5fab'),
     'myr11c': ('1 / 1 Colorless Myr', '16003e42-3ff7-478d-8f8c-2b5af4847da0'), #SOM NPH
+    'octopus88u': ('8 / 8 Blue Octopus', 'a71d612b-e76f-42ee-8c9d-82254daae0f9'),
     'ogre33r': ('3 / 3 Red Ogre', 'f23096c9-932d-4ae2-85a7-d328eb543dbe'),
     'ogre44r': ('4 / 4 Red Ogre', '4e3f2a44-5197-4368-a5c5-359e02878c08'),
     'ooze11g': ('1 / 1 Green Ooze', '8b031e58-296c-4c48-b7eb-c90601750e46'),
@@ -288,6 +295,7 @@ tokenTypes = {
     'pest01c': ('0 / 1 Colorless Pest', 'b211942a-dac7-4202-8039-4caa1ea567e6'),
     'pincher22c': ('2 / 2 Colorless Pincher', '8c3f12b5-b145-4b8b-98bc-ed2cbeeb54a6'),
     'plant01g': ('0 / 1 Green Plant', 'de2367b7-77b3-4d7c-89f7-98532b46b9e8'),
+    'plant11g': ('1 / 1 Green Plant', 'c0c17814-c90f-4e8c-8e25-2667ac7069d9'),
     'plantwall01g': ('0 / 1 Green Plant Wall', 'abd17205-ffda-4661-b3c3-33ba67ae76a7'),
     'poisonsnake11c': ('1 / 1 Colorless Poison Snake', '9bc647b5-8bc8-42f9-ab88-31b0c24fd01b'),
     'prism01c': ('0 / 1 Colorless Prism', '0525220c-be68-4bdb-92bb-e253a4257969'),
@@ -405,5 +413,7 @@ tokenTypes = {
     'narsetemblem': ("Narset's Emblem", '5ed2ac04-ea4f-4746-bbe0-25ccb6e953cf'),
     'jaceemblem': ("Jace's Emblem", 'e164ba8c-dd76-4bf1-bfa9-a3fa36a2a64b'),
     'lilianaemblem2': ("Liliana's Emblem", '2066641c-49f9-40a0-b93d-a0f02164efb0'),
-    'chandraemblem': ("Chandra's Emblem", 'b90bb505-550f-4c39-8ec0-fb1209df1b98')
+    'gideonemblem': ("Gideon's Emblem", 'ce0879df-31e8-4466-bd7d-19f0e0c3e868'),
+    'obnixilisemblem2': ("Ob Nixilis's Emblem", '86423661-6c13-4c19-a169-6a248cc4b9d9'),
+    'kioraemblem2': ("Kiora's Emblem", '735782d2-3d4a-49e6-8529-126b2a3197f0')
 }

@@ -126,5 +126,8 @@ changelog = {
         "Added a bunch of missing precon decks.",
         "Fixed some bugs where the autoscripts tried to add a marker that wasnt defined.",
         "Fixed a minor error message with the end-turn function."
+        ]),
+    3022101: ("3.2.21.1", "September 21 2015", [
+        "Added Pre-release version of Battle for Zendikar"
         ])
 }
