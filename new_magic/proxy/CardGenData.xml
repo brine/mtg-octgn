@@ -137,33 +137,13 @@
 				</switch>
 			</conditional>
 			<conditional>
-				<switch property="Flags">
-					<case value="W" ><link block="rw" /><link block="tw" /></case>
-					<case value="U"><link block="ru" /><link block="tu" /></case>
-					<case value="B"><link block="rb" /><link block="tb" /></case>
-					<case value="R"><link block="rr" /><link block="tr" /></case>
-					<case value="G"><link block="rg" /><link block="tg" /></case>
-					<case value="M"><link block="rm" /><link block="tm" /></case>
-					<case value="C"><link block="rc" /><link block="tc" /></case>
-					<case value="WU"><link block="tm" /><link block="rw" /><link block="rhu" /></case>
-					<case value="WB"><link block="tm" /><link block="rw" /><link block="rhb" /></case>
-					<case value="UB"><link block="tm" /><link block="ru" /><link block="rhb" /></case>
-					<case value="UR"><link block="tm" /><link block="ru" /><link block="rhr" /></case>
-					<case value="BR"><link block="tm" /><link block="rb" /><link block="rhr" /></case>
-					<case value="BG"><link block="tm" /><link block="rb" /><link block="rhg" /></case>
-					<case value="RG"><link block="tm" /><link block="rr" /><link block="rhg" /></case>
-					<case value="RW"><link block="tm" /><link block="rr" /><link block="rhw" /></case>
-					<case value="GW"><link block="tm" /><link block="rg" /><link block="rhw" /></case>
-					<case value="GU"><link block="tm" /><link block="rg" /><link block="rhu" /></case>
-				</switch>		
-			</conditional>
-			<conditional>
 				<switch property="Color">
 					<case value="White" ><link block="rw" /><link block="tw" /></case>
 					<case value="Blue"><link block="ru" /><link block="tu" /></case>
 					<case value="Black"><link block="rb" /><link block="tb" /></case>
 					<case value="Red"><link block="rr" /><link block="tr" /></case>
 					<case value="Green"><link block="rg" /><link block="tg" /></case>
+					<case value="Colorless"><link block="rc" /><link block="tc" /></case>
 					<case contains="Multicolor" break='False'><link block="tm" /></case>
 					<case contains="Hybrid" break='False'><link block="tc" /></case>
 					<case value="Hybrid White Blue"><link block="rw" /><link block="rhu" /></case>
@@ -189,6 +169,26 @@
 					<case contains="Multicolor"><link block="rm" /></case>
 					<case contains="Hybrid"><link block="rc" /></case>
 				</switch>
+			</conditional>
+			<conditional>
+				<switch property="Flags">
+					<case value="W" ><link block="rw" /><link block="tw" /></case>
+					<case value="U"><link block="ru" /><link block="tu" /></case>
+					<case value="B"><link block="rb" /><link block="tb" /></case>
+					<case value="R"><link block="rr" /><link block="tr" /></case>
+					<case value="G"><link block="rg" /><link block="tg" /></case>
+					<case value="M"><link block="rm" /><link block="tm" /></case>
+					<case value="WU"><link block="tm" /><link block="rw" /><link block="rhu" /></case>
+					<case value="WB"><link block="tm" /><link block="rw" /><link block="rhb" /></case>
+					<case value="UB"><link block="tm" /><link block="ru" /><link block="rhb" /></case>
+					<case value="UR"><link block="tm" /><link block="ru" /><link block="rhr" /></case>
+					<case value="BR"><link block="tm" /><link block="rb" /><link block="rhr" /></case>
+					<case value="BG"><link block="tm" /><link block="rb" /><link block="rhg" /></case>
+					<case value="RG"><link block="tm" /><link block="rr" /><link block="rhg" /></case>
+					<case value="RW"><link block="tm" /><link block="rr" /><link block="rhw" /></case>
+					<case value="GW"><link block="tm" /><link block="rg" /><link block="rhw" /></case>
+					<case value="GU"><link block="tm" /><link block="rg" /><link block="rhu" /></case>
+				</switch>		
 			</conditional>
 			<conditional>
 				<switch property="Faction">
