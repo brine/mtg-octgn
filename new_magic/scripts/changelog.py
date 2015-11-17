@@ -129,5 +129,8 @@ changelog = {
         ]),
     3022101: ("3.2.21.1", "September 21 2015", [
         "Added Pre-release version of Battle for Zendikar"
+        ]),
+    3022103: ("3.2.21.3", "November 17 2015", [
+        "Added Commander 2015"
         ])
 }
