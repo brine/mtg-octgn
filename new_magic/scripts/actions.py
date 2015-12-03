@@ -270,14 +270,15 @@ def dieFunct(num):
         notify("{} rolls {} on a {}-sided die.".format(me, n, num))
       
 def token(group, x = 0, y = 0):
-    card, quantity = askCard({"Rarity":"Token"}, "And")
+    guid, quantity = askCard({"Rarity":"Token"}, "And")
     if quantity == 0:
         return
-    token = table.create(card, x, y, quantity)
-    artDict = getSetting('tokenArts', convertToString({}))
-    artDict = eval(artDict)
-    if token.model in artDict:
-        token.switchTo(artDict[token.model])
+    token = table.create(guid, x, y, quantity)
+    if quantity == 1:
+        token = [token]
+    artDict = eval(getSetting('tokenArts', convertToString({})))
+    for x in token:
+        x.switchTo(artDict.get(guid, ''))
 
 def changeLog(group, x = 0, y = 0):
     mute()
@@ -768,7 +769,7 @@ def clone(cards, x = 0, y = 0):
         isInverted = y < card.height() / 2
         copy = table.create(card.model, x, y, 1)
         if card.alternate != '':
-            copy.switchTo()
+            copy.switchTo(card.alternate)
         offset = min(card.width(), card.height()) / 5
         delta = offset if not isInverted else -offset
         x = x + delta
