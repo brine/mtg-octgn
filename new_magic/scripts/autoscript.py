@@ -90,9 +90,9 @@ def getTags(card, key = None):
     cardname = card.Name
     encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname)) #encodes the card name so the website can parse it safely
     if not cardname in savedtags:
-#### Create a bunch of identifier tags for the card's rules, so I can sort the tag requests online
+    #### Create a bunch of identifier tags for the card's rules, so I can sort the tag requests online
         rules = card.Rules
-        if re.search(r'creature token', rules):
+        if re.search(r'token', rules):
             encodedcardname += '&token'
         if re.search(r'counter', rules):
             encodedcardname += "&counter"
@@ -104,10 +104,10 @@ def getTags(card, key = None):
             encodedcardname += '&attack'
         if re.search(r'{} blocks'.format(card.name), rules):
             encodedcardname += '&block'
-#### Fetch card tags from the online database
+        #### Fetch card tags from the online database
         if offlinedisable == False:
             webTimer = time.clock()
-            (fulltag, code) = webRead('http://octgn.gamersjudgement.com/forum/tags2.php?id={}'.format(encodedcardname), 7000)
+            (fulltag, code) = webRead('http://www.octgngames.com/forum/tags.php?id={}'.format(encodedcardname), 7000)
             webTimer = debugWhisper("webread", card, webTimer)
             if code == 204: ## if the card tag doesn't exist on the site.
                 fulltag = ""
@@ -115,11 +115,8 @@ def getTags(card, key = None):
                 whisper('tag database is currently unavailable, using offline tag cache')
                 offlinedisable = True
         if offlinedisable == True: ## Access the tags cache in the game def if the website can't be accessed
-                if cardname in offlineTags:
-                    fulltag = offlineTags[cardname]
-                else:
-                    fulltag = ""
-#### Parse the raw tags into an autoscripts-readable format
+                fulltag = offlineTags.get(cardname, "")
+        #### Parse the raw tags into an autoscripts-readable format
         tagdict = { }
         classpieces = fulltag.split('; ')
         for classes in classpieces:
@@ -129,16 +126,19 @@ def getTags(card, key = None):
                 for actionpieces in actionlist[1:]:
                     actionname = actionpieces[:actionpieces.find("[")]
                     actionparam = actionpieces[actionpieces.find("[")+1:actionpieces.find("]")]
+                    actionparam = [x.strip() for x in actionparam.split(',')]
+                    ## add autotoken tags
                     if actionname == 'token':
+                        tokenname = actionparam[0]
                         if not 'autotoken' in tagdict:
                             tagdict['autotoken'] = [ ]
-                        tokenname = actionparam[:actionparam.find(",")]
                         if not tokenname in tagdict['autotoken']:
                             tagdict['autotoken'].append(tokenname)
+                    ## add automarker tags
                     if actionname == 'marker':
+                        markername = actionparam[0]
                         if not 'automarker' in tagdict:
                             tagdict['automarker'] = [ ]
-                        markername = actionparam[:actionparam.find(",")]
                         if not markername in tagdict['automarker']:
                             tagdict['automarker'].append(markername)
                     if not actionname in actiondict:
@@ -146,7 +146,7 @@ def getTags(card, key = None):
                     actiondict[actionname].append(actionparam)
                 tagdict[actionlist[0]] = actiondict
         savedtags[cardname] = tagdict
-#### Fetch and return the card tags to previous functions
+    #### Fetch and return the card tags to previous functions
     timer = debugWhisper("tags {}".format(key), card, timer)
     if key in savedtags[cardname]:
         returnTags = savedtags[cardname][key]
@@ -157,35 +157,38 @@ def getTags(card, key = None):
     return None
 
 def tagConstructor(card, key, modeModifier = ''):
+    #### this function modifies a card's base tags depending on its particular game-state or modal choices
     mute()
     timer = time.clock()
-    cattach = eval(getGlobalVariable('cattach'))
-    attachments = [k for (k,v) in cattach.iteritems() if v == card._id]
     returnTags = []
     returnActiChoice = (0, '')
     returnModeChoice = (0, '')
     if key != 'morph' and not card.isFaceUp: ## Skip fetching tags for facedown/morph cards
         return ([None, None, None, None, None, None], returnActiChoice, returnModeChoice)
-#### deal with activated abilities as a specific case
+    #### look to see if an attachment is adding effects to the card tag
+    cattach = eval(getGlobalVariable('cattach'))
+    attachments = [Card(k) for (k,v) in cattach.iteritems() if v == card._id]
+    #### activated abilities require a specific case because of cards having more than one potential ability to choose from
+    #### this will split apart the card's rules text to predict potential abilities and ask the player to choose one
     if key == 'acti':
         count = 0
-        rulesList = card.Rules.splitlines()
+        rulesList = card.Rules.splitlines() ## splits up the rules text
         tagsList = []
         colorList = []
         for lines in rulesList:
             count += 1
-            color = '#545454'
+            color = '#545454'  ## grey, default color for no ability
             activateList = []
             for tagPrefix in ['init', '', 'cost', 'initres', 'res', 'costres']:
-                tags = getTags(card, modeModifier + tagPrefix + key + str(count))
-                if tags != None:
+                tags = getTags(card, modeModifier + tagPrefix + key + str(count)) ## ('1' + 'init' + 'acti' + '3')
+                if tags != None: ## change the color to blue if the card has a autoscript tag for this ability
                     color = '#0000ff'
                 activateList.append(tags)
             colorList.append(color)
             tagsList.append(activateList)
+        ## check to see if any attachments will grant additional abilities to the card
         for attachment in attachments:
-            attachCard = Card(attachment)
-            attachRulesList = attachCard.Rules.splitlines()
+            attachRulesList = attachment.Rules.splitlines()
             attachCount = 0
             for attachLines in attachRulesList:
                 attachCount += 1
@@ -196,32 +199,34 @@ def tagConstructor(card, key, modeModifier = ''):
                     if tags != None:
                         color = '#0000ff'
                     activateList.append(tags)
-                if color == '#0000ff':
+                if color == '#0000ff':  ## we need to filter out rules text lines that weren't involved in the granted ability
                     colorList.append(color)
                     tagsList.append(activateList)
                     rulesList.append(attachLines)
         actiChoice = askChoice("{}\nActivate which ability?".format(card.Name), rulesList, colorList)
-        if actiChoice == 0:
-            return "BREAK"
+        if actiChoice == 0: ## exiting the window
+            return "BREAK" ## cancels the autoscript resolution if the player closes the window without selecting a mode
         returnActiChoice = (actiChoice, rulesList[actiChoice - 1])
         returnTags = tagsList[actiChoice - 1]
-## deal with regular cards
     else:
         for tagPrefix in ['init', '', 'cost', 'initres', 'res', 'costres']:
             tags = getTags(card, modeModifier + tagPrefix + key)
             for attachment in attachments:
-                attachTags = getTags(Card(attachment), 'attach' + tagPrefix + key)
+                attachTags = getTags(attachment, 'attach' + tagPrefix + key)
                 if attachTags != None:
                     if tags == None:
                         tags = attachTags
                     else:
                         tags += attachTags
             returnTags.append(tags)
-### Handle the 'choose one' style abilities
-    if returnTags[0] != None and 'choice' in returnTags[0]:
-        for choice in returnTags[0]['choice']:
-            min, max = [int(x) for x in choice.split(', ')]
+### Handle the 'choose one' style abilities, these will add the modal tags to the main ones.
+    
+    if returnTags[0] != None:
+        for choice in returnTags[0].get('choice', []):
+            min = int(choice[0])
+            max = int(choice[1])
             modeList = [x.split(u'\u2022 ')[1] for x in card.Rules.splitlines() if u"\u2022" in x] ## split the rules text into lines and keep the ones with the modal bullet point
+            ## fix out of range issues
             if max > len(modeList):
                 max = modeList
             if min > max:
@@ -263,14 +268,14 @@ def tagConstructor(card, key, modeModifier = ''):
     return (returnTags, returnActiChoice, returnModeChoice)
 
 def submitTags(card, x = 0, y = 0):
-    cardname = card.Name
-    encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname))
-    (url, code) = webRead('http://octgn.gamersjudgement.com/forum/tags2.php?id={}'.format(encodedcardname))
+    mute()
+    encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(card.Name))
+    (url, code) = webRead('http://www.octgngames.com/forum/tags.php?id={}'.format(encodedcardname))
     if code == 200 or code == 204:
         if code == 200:
             if not confirm("Submit an edit?\n{}".format(url)):
               return
-        openUrl('http://octgn.gamersjudgement.com/forum/submit2.php?id={}'.format(encodedcardname))
+        openUrl('http://http://www.octgngames.com/forum/submit.php?id={}'.format(encodedcardname))
     else:
         whisper("cannot connect to online database.")
 
@@ -303,7 +308,7 @@ def cardcount(card, stackcard, search):
 
 def passControl(card, player):  ## Remote call for taking control of cards you don't yet control
     mute()
-    card.setController(player)
+    card.controller = player
 
 ##################################
 #Card Functions -- Autoscripted  
@@ -316,25 +321,27 @@ def autoParser(card, tagclass, morph = False):
     global stackDict, costMemory
     if not tagclass == 'etb': ## we don't care about costMemory if its not an ETB trigger.
         costMemory = (0,0)
-#####create/fetch the stack instance#####
-    if tagclass == 'resolve': ## fetch instance
+    ####  create/fetch the stack instance
+    if tagclass == 'resolve': ## resolving the card already on the stack, so fetch its data
         stackType = 'res'
         if card in stackDict:
             stackData = stackDict[card]
         else:
             whisper("ERROR: this card was not properly registered in the stackDict")
             return "BREAK"
-    else: ## create instance
+    else: ## we need to create an instance of this card on the stack and store its properties
         stackType = 'trig'
-        if 'splitA' in card.alternates and tagclass == 'cast': ##if the card is a split card
+        ## Casting a Split card
+        if 'splitA' in card.alternates and tagclass == 'cast':
             splitRules = [card.alternateProperty('splitA', 'Rules'),
                           card.alternateProperty('splitB', 'Rules')]
             splitFlags = ['A','B']
+            ## splitC is the fused split card
             if 'splitC' in card.alternates and card in me.hand:
                 splitRules.append('Fuse both sides')
                 splitFlags.append('C')
-            choice = askChoice('cast which side of {}?'.format(card.name), splitRules)
-            if choice == 0:
+            choice = askChoice('Cast which side of {}?'.format(card.name), splitRules)
+            if choice == 0: ## closing the window will cancel the Cast
                 return "BREAK"
             tagTuple = tagConstructor(card, tagclass, splitFlags[choice - 1])
             splitAlt = 'split' + splitFlags[choice - 1]
@@ -343,174 +350,144 @@ def autoParser(card, tagclass, morph = False):
             tagTuple = tagConstructor(card, tagclass)
         if tagTuple == "BREAK":
             return "BREAK"
-        fullTags, actiTuple, modeTuple = tagTuple
-        stackData = {
+        stackData = { ## stores all the relevant data for the card on the stack
             'src': card,
             'alt': splitAlt,
-            'acti': actiTuple,
-            'mode': modeTuple,
+            'acti': tagTuple[1],
+            'mode': tagTuple[2],
             'class': tagclass,
-            'inittrig': fullTags[0],
-            'trig': fullTags[1],
-            'costtrig': fullTags[2],
-            'initres': fullTags[3],
-            'res': fullTags[4],
-            'costres': fullTags[5],
+            'inittrig': tagTuple[0][0],
+            'trig': tagTuple[0][1],
+            'costtrig': tagTuple[0][2],
+            'initres': tagTuple[0][3],
+            'res': tagTuple[0][4],
+            'costres': tagTuple[0][5],
             'cost': costMemory[0],
             'x': costMemory[1],
             'moveto': None
             }
-#####Prepare the parser variables#####
-    srcCard = stackData['src'] ## identifies the originating card
-    stackCard = card
-    stackAlt = stackData['alt']
-    stackClass = stackData['class']
-    initTags = 'init' + stackType
-    normTags = stackType
-    costTags = 'cost' + stackType
-#####Init Checks#####
-    if stackData[initTags] != None:
-        if 'tapped' in stackData[initTags] and srcCard.orientation == Rot90:
-            if not confirm("{} is already tapped!\nContinue?".format(srcCard.Name)):
+    #### verify that all init elements are payable as costs
+    if stackData.get('init' + stackType):
+        if stackData['init' + stackType].get('tapped') and stackData['src'].orientation == Rot90:
+            if not confirm("{} is already tapped!\nContinue?".format(stackData['src'].Name)):
                 return "BREAK"
-        if 'untapped' in stackData[initTags] and srcCard.orientation == Rot0:
-            if not confirm("{} is already untapped!\nContinue?".format(srcCard.Name)):
+        if stackData['init' + stackType].get('untapped') and stackData['src'].orientation == Rot0:
+            if not confirm("{} is already untapped!\nContinue?".format(stackData['src'].Name)):
                 return "BREAK"
-        if 'cost' in stackData[initTags]:
-            for ctag in stackData[initTags]['cost']:
-                (cost, type) = ctag.split(', ')
-                if cost == 'tribute' and len(getPlayers()) > 1:
-                    otherPlayers = getPlayers()[1:]
-                    if len(otherPlayers) > 1:
-                        tributeChoice = askChoice("Choose a player to pay tribute:\n(Check chat log for opponent's decision)", [p.name for p in otherPlayers])
-                        tributePlayer = otherPlayers[tributeChoice - 1]
-                    else:
-                        tributePlayer = otherPlayers[0]
-                    remoteCall(tributePlayer, 'autotribute', [srcCard])
-                if cost == 'x':
-                    costMarker = 'x'
+        for (cost, type) in stackData['init' + stackType].get('cost', []):
+            if cost == 'tribute' and len(getPlayers()) > 1:
+                otherPlayers = getPlayers()[1:]
+                if len(otherPlayers) > 1:
+                    tributeChoice = askChoice("Choose a player to pay tribute:\n(Check chat log for opponent's decision)", [p.name for p in otherPlayers])
+                    tributePlayer = otherPlayers[tributeChoice - 1]
                 else:
-                    costMarker = 'cost'
-                if type == "ask":
-                    confirmValue = confirm("{}'s {}: Pay additional/alternate cost?".format(srcCard.Name, cost))
-                    if confirmValue == None:
-                        return "BREAK"
-                    if confirmValue:
-                        stackData[costMarker] = 1
-                        text += ", paying {} cost".format(cost.title())
-                elif type == "num":
-                    qty = askInteger("{}'s {}: Paying how many times?".format(srcCard.Name, cost), 0)
-                    if qty == None:
-                        return "BREAK"
-                    if qty != 0:
-                        stackData[costMarker] = qty
-                    if qty == 1:
-                        text += ", paying {} once".format(cost.title())
-                    else:
-                        text += ", paying {} {} times".format(cost.title(), qty)
+                    tributePlayer = otherPlayers[0]
+                remoteCall(tributePlayer, 'autotribute', [stackData['src']])
+            costMarker = 'x' if cost == 'x' else 'cost'
+            if type == "ask":
+                confirmValue = confirm("{}'s {}: Pay additional/alternate cost?".format(stackData['src'].Name, cost))
+                if confirmValue == None:
+                    return "BREAK"
+                elif confirmValue == True:
+                    stackData[costMarker] = 1
+                    text += ", paying {} cost".format(cost.title())
+            elif type == "num":
+                qty = askInteger("{}'s {}: Paying how many times?".format(stackData['src'].Name, cost), 0)
+                if qty == None:
+                    return "BREAK"
+                elif qty != 0:
+                    stackData[costMarker] = qty
+                if qty == 1:
+                    text += ", paying {} once".format(cost.title())
                 else:
-                    qty = cardcount(srcCard, stackCard, type)
-                    if qty != 0:
-                        stackData[costMarker] = qty
-        if 'marker' in stackData[initTags]:
-            for markerTag in stackData[initTags]['marker']:
-                splitList = markerTag.split(', ')
-                markerName = splitList[0]
-                if len(splitList) > 1:
-                    qty = splitList[1]
-                else:
-                    qty = 1
-                markerCount = srcCard.markers[counters[markerName]]
-                if markerCount + cardcount(srcCard, stackCard, qty) < 0:
-                    if not confirm("Not enough {} counters to remove!\nContinue?".format(markerName)):
-                        return "BREAK"
-#### toggle between normal tags and cost tags ####
+                    text += ", paying {} {} times".format(cost.title(), qty)
+            else:
+                qty = cardcount(stackData['src'], card, type)
+                if qty != 0:
+                    stackData[costMarker] = qty
+        for splitList in stackData['init' + stackType].get('marker', []):
+            markerName = splitList[0]
+            if len(splitList) > 1:
+                qty = splitList[1]
+            else:
+                qty = 1
+            markerCount = stackData['src'].markers[counters[markerName]]
+            if markerCount + cardcount(stackData['src'], card, qty) < 0:
+                if not confirm("Not enough {} counters to remove!\nContinue?".format(markerName)):
+                    return "BREAK"
+    #### toggle between normal tags and cost tags ####
     if stackData['cost'] > 0:
-        tagList = [stackData[initTags], stackData[costTags]]
+        tagList = [stackData['init' + stackType], stackData['cost' + stackType]]
     else:
-        tagList = [stackData[initTags], stackData[normTags]]
-#### autoscript functions ####
+        tagList = [stackData['init' + stackType], stackData[stackType]]
+    #### autoscript functions ####
     moveTo = None  ## We need to delay the autoMoveTo autoscript until the very end
     for tags in tagList:
         if tags != None:
-            if 'copy' in tags:
-                for tag in tags['copy']:
-                    text += autocopy(srcCard, stackCard, tag, stackData)
-            if 'clone' in tags:
-                for tag in tags['clone']:
-                    text += autoclone(srcCard, stackCard, tag)
-            if 'persist' in tags:
-                for tag in tags['persist']:
-                    text += autopersist(srcCard, stackCard, tag)
-            if 'undying' in tags:
-                for tag in tags['undying']:
-                    text += autoundying(srcCard, stackCard, tag)
-            if 'attach' in tags:
-                for tag in tags['attach']:
-                    target = [cards for cards in table if cards.targetedBy]
-                    if len(target) == 1:
-                        text = ", " + autoattach(srcCard, target[0])
-            if 'life' in tags:
-                for tag in tags['life']:
-                    text += autolife(srcCard, stackCard, tag)
-            if 'token' in tags:
-                for tag in tags['token']:
-                    text += autotoken(srcCard, stackCard, tag)
-            if 'marker' in tags:
-                for tag in tags['marker']:
-                    text += automarker(srcCard, stackCard, tag)
-            if 'smartmarker' in tags:
-                for tag in tags['smartmarker']:
-                    text += autosmartmarker(srcCard, tag)
-            if 'highlight' in tags:
-                for tag in tags['highlight']:
-                    text += autohighlight(srcCard, tag)
-            if 'tapped' in tags:
-                for tag in tags['tapped']:
-                    text += autotapped(srcCard, tag)
-            if 'untapped' in tags:
-                for tag in tags['untapped']:
-                    text += autountapped(srcCard, tag)
-            if 'transform' in tags:
-                for tag in tags['transform']:
-                    text += autotransform(srcCard, tag)
-            if 'moveto' in tags:
-                for tag in tags['moveto']:
-                    moveTo = tag ## multiple moveto's shouldn't happen, but we'll keep overwriting previous ones just in case.
-#####Move Card/Create Trigger#####
+            for tag in tags.get('copy', []):
+                text += autocopy(stackData['src'], card, tag[0], stackData)
+            for tag in tags.get('clone', []):
+                text += autoclone(stackData['src'], card, tag[0])
+            for tag in tags.get('persist', []):
+                text += autopersist(stackData['src'], card)
+            for tag in tags.get('undying', []):
+                text += autoundying(stackData['src'], card)
+            for tag in tags.get('attach', []):
+                target = [cards for cards in table if cards.targetedBy]
+                if len(target) == 1:
+                    text = ", " + autoattach(stackData['src'], target[0])
+            for tag in tags.get('life', []):
+                text += autolife(stackData['src'], card, tag[0])
+            for tag in tags.get('token', []):
+                text += autotoken(stackData['src'], card, tag)
+            for tag in tags.get('marker', []):
+                text += automarker(stackData['src'], card, tag)
+            for tag in tags.get('smartmarker', []):
+                text += autosmartmarker(stackData['src'], tag[0])
+            for tag in tags.get('highlight', []):
+                text += autohighlight(stackData['src'], tag[0])
+            for tag in tags.get('tapped', []):
+                text += autotapped(stackData['src'])
+            for tag in tags.get('untapped', []):
+                text += autountapped(stackData['src'])
+            for tag in tags.get('transform', []):
+                text += autotransform(stackData['src'], tag[0])
+            for tag in tags.get('moveto', []):
+                moveTo = tag[0] ## multiple moveto's shouldn't happen, but we'll keep overwriting previous ones just in case.
+    #### Move Card/Create Trigger ####
     ## This covers trigger resolving, for ALL trigger classes ##
-    if tagclass == 'resolve': ## Handle all cases where the card is on the stack (resolving)
-        stackCard.markers[scriptMarkers[stackClass]] = 0
-        stackCard.markers[counters['cost']] = 0
-        stackCard.markers[counters['x']] = 0
-        del stackDict[stackCard]
+    if tagclass == 'resolve':
+        ## remove the stack markers from the card since we're removing it from the stack
+        card.markers[scriptMarkers[stackData['class']]] = 0
+        card.markers[counters['cost']] = 0
+        card.markers[counters['x']] = 0
+        del stackDict[card] ## removes card from the stack dictionary
     ## This will cover all trigger initiations and activations ##
     else: ## Handle all cases where the card or ability might need to go on the stack
-        if stackClass == 'cast': ## If the card is being cast, move it to the table so the stack markers can be added
-            srcCard.moveToTable(defaultX, defaultY, morph)
-            stackCard = srcCard
-            stackCard.switchTo(stackAlt)
-            stackCard.markers[scriptMarkers[stackClass]] = 1
-            stackCard.markers[scriptMarkers['acti']] = actiTuple[0]
-            stackCard.markers[counters['choice']] = modeTuple[0]
-            stackCard.markers[counters['cost']] = stackData['cost']
-            stackCard.markers[counters['x']] = stackData['x']
-            stackDict[stackCard] = stackData  ## Save the final status of the stack instance
+        if stackData['class'] == 'cast': ## If the card is being cast, move the actual card to the table so the stack markers can be added
+            stackData['src'].moveToTable(defaultX, defaultY, morph)
+            stackData['src'].alternate = stackData['alt']
+            stackData['src'].markers[scriptMarkers[stackData['class']]] = 1
+            stackData['src'].markers[scriptMarkers['acti']] = stackData['acti'][0]
+            stackData['src'].markers[counters['choice']] = stackData['mode'][0]
+            stackData['src'].markers[counters['cost']] = stackData['cost']
+            stackData['src'].markers[counters['x']] = stackData['x']
+            stackDict[stackData['src']] = stackData  ## Save the final status of the stack instance
         else: ## All other stack triggers need to be checked if the stack trigger card should be created
-            if stackClass == 'morph':
-                srcCard.isFaceUp = True ## we need to flip the card now to see it's model/GUID
-            if stackClass == 'miracle' or (stackData['cost'] > 0 and stackData['costres'] != None) or (stackData['cost'] == 0 and stackData['res'] != None):
-                stackCard = table.create(srcCard.model, 0, 0, 1)
-                stackCard.switchTo(stackAlt)
-                stackCard.markers[scriptMarkers[stackClass]] = 1
-                stackCard.markers[scriptMarkers['acti']] = actiTuple[0]
-                stackCard.markers[counters['choice']] = modeTuple[0]
+            if stackData['class'] == 'morph':
+                stackData['src'].isFaceUp = True ## we need to flip the card now to see it's model/GUID
+            if stackData['class'] == 'miracle' or (stackData['cost'] > 0 and stackData['costres'] != None) or (stackData['cost'] == 0 and stackData['res'] != None):
+                stackCard = table.create(stackData['src'].model, 0, 0, 1)
+                stackCard.alternate = stackData['alt']
+                stackCard.markers[scriptMarkers[stackData['class']]] = 1
+                stackCard.markers[scriptMarkers['acti']] = stackData['acti'][0]
+                stackCard.markers[counters['choice']] = stackData['mode'][0]
                 stackCard.markers[counters['cost']] = stackData['cost']
                 stackCard.markers[counters['x']] = stackData['x']
                 stackDict[stackCard] = stackData  ## Save the final status of the stack instance
     costMemory = (stackData['cost'], stackData['x']) ## stores the cost values for ETB triggers
     if moveTo and stackData['moveto'] == None: ##stuff like flashback's exiling takes precedence over normal moveto's
-        text += automoveto(srcCard, moveTo) #deal with automoveto triggers right at the very end.
+        text += automoveto(stackData['src'], moveTo) #deal with automoveto triggers right at the very end.
     ## Reload the priority list
     priorityList = []
     activePlayers = eval(getGlobalVariable('activePlayers'))
@@ -527,7 +504,7 @@ def autoParser(card, tagclass, morph = False):
     setGlobalVariable('priority', str(priorityList))
     timer = debugWhisper("parser", card, timer)
     if tagclass == 'acti': ##acti needs to return the number of the activated ability
-        return (actiTuple[0], text)
+        return (stackData['acti'][0], text)
     else:
         return text
 
@@ -583,7 +560,7 @@ def autoattach(card, targetcard):
     targetcard.target(False)
     setGlobalVariable('cattach', str(cattach))
     if targetcard.controller != me:  ## Pass control of the attachment to the player who controls the target card.
-        card.setController(targetcard.controller)
+        card.controller = targetcard.controller
         remoteCall(targetcard.controller, 'alignAttachments', [targetcard])
     return "attaches {} to {}".format(card, targetcard)
 
@@ -599,7 +576,7 @@ def autodetach(card):
             attachment = Card(attachment)
             if attachment.owner != attachment.controller:  # return this card to it's controller.
                 if attachment.controller == me:
-                    attachment.setController(attachment.owner)
+                    attachment.controller = attachment.owner
                 else:
                     remoteCall(attachment.controller, 'passControl', [attachment, attachment.owner])
     elif card._id in cattach:  ## if this card is attached to something
@@ -608,7 +585,7 @@ def autodetach(card):
         text = "detaches {} from {}".format(card, Card(targetCard))
         if card.owner != card.controller:  # return this card to it's controller.
             if card.controller == me:
-                card.setController(card.owner)
+                card.controller = card.owner
             else:
                 remoteCall(card.controller, 'passControl', [card, card.owner])
     else: #skip detachment since the card is not involved in attachments
@@ -616,7 +593,7 @@ def autodetach(card):
     setGlobalVariable('cattach', str(cattach))
     return text
 
-def autopersist(card, stackcard, persist):
+def autopersist(card, stackcard):
     if card.group.name == "Graveyard":
         autoParser(card, 'cast')
         autoParser(card, 'resolve')
@@ -626,7 +603,7 @@ def autopersist(card, stackcard, persist):
     else:
         return ""
 
-def autoundying(card, stackcard, undying):
+def autoundying(card, stackcard):
     if card.group.name == "Graveyard":
         autoParser(card, 'cast')
         autoParser(card, 'resolve')
@@ -694,22 +671,21 @@ def autotransform(card, tag):
             return ""
     if 'transform' in card.alternates:
         if card.alternate == '':
-            card.switchTo('transform')
+            card.alternate = 'transform'
         else:
-            card.switchTo()
+            card.alternate = ''
     else:
         whisper("Oops, transform cards aren't ready yet!")
     return ", transforming to {}".format(card)
 
 def autotoken(card, stackcard, tag):
-    splitList = tag.split(', ')
-    name = splitList[0]
-    if len(splitList) > 1:
-        qty = splitList[1]
+    name = tag[0]
+    if len(tag) > 1:
+        qty = tag[1]
     else:
         qty = 1
-    if len(splitList) > 2: #since the modifiers are optional
-        modifiers = splitList[2:]
+    if len(tag) > 2: #since the modifiers are optional
+        modifiers = tag[2:]
     else:
         modifiers = []
     quantity = cardcount(card, stackcard, qty)
@@ -732,15 +708,13 @@ def autotoken(card, stackcard, tag):
         return ""
 
 def automarker(card, stackcard, tag):
-    splitList = tag.split(', ')
-    markername = splitList[0]
-    if len(splitList) > 1:
-        qty = splitList[1]
+    markername = tag[0]
+    if len(tag) > 1:
+        qty = tag[1]
     else:
         qty = 1
-    (markername, qty) = tag.split(', ')
     quantity = cardcount(card, stackcard, qty)
-    originalquantity = quantity
+    originalquantity = int(str(quantity))
     if markername not in counters: ## make sure the marker exists in the dict
         addmarker = (markername, "d9eb829e-55ad-4376-b109-884b0dad3d4b")
     else:
@@ -783,11 +757,11 @@ def autohighlight(card, color):
         text = ""
     return ", {}".format(text)
 
-def autotapped(card, tapped):
+def autotapped(card):
     card.orientation = Rot90
     return ", tapped"
 
-def autountapped(card, untapped):
+def autountapped(card):
     card.orientation = Rot0
     return ", untapped"
 
@@ -849,7 +823,7 @@ def playerSide():  ## Initializes the player's top/bottom side of table variable
     global playerside
     if playerside == None:  ## script skips this if playerside has already been determined
         if Table.isTwoSided():
-            if me.hasInvertedTable():
+            if me.isInverted:
                 playerside = -1  # inverted (negative) side of the table
             else:
                 playerside = 1
@@ -862,7 +836,7 @@ def sideFlip():  ## Initializes the player's left/right side of table variables
     global sideflip
     if sideflip == None:    ##Initialize sideflip
         playersort = sorted(getPlayers(), key=lambda player: player._id)    ##makes a sorted players list so its consistent between all players
-        playercount = [p for p in playersort if me.hasInvertedTable() == p.hasInvertedTable()]    ##counts the number of players on your side of the table
+        playercount = [p for p in playersort if me.isInverted == p.isInverted]    ##counts the number of players on your side of the table
         if len(playercount) > 2:    ##since alignment only works with a maximum of two players on each side
             whisper("Cannot set sideflip: Too many players on your side of the table.")
             sideflip = 0    ##disables alignment for the rest of the play session
@@ -891,7 +865,7 @@ def cardalign():
         if isStack(card):  ## check to see if the card is on the stack
             if card.controller == me:  ## It's safe to move your own cards on the stack
                 card.moveToTable(0, 10 * stackcount)
-                card.setIndex(stackcount)
+                card.index = stackcount
             else:  ## you must send a remoteCall to the other players to align their stack cards
                 position = (card._id, 0, 10 * stackcount, lastCard)
                 controller = card.controller
@@ -1012,7 +986,7 @@ def alignAttachments(card, attachments = None):  ## Aligns all attachments on th
         if not isStack(c):  ## Ignore attachments that have yet to resolve off the stack
             attachY = y - 9 * yyy * side * count ## the equation to identify the y coordinate of the new card
             c.moveToTable(x, attachY)
-            c.setIndex(lastCard.getIndex)
+            c.index = lastCard.index
             lastCard = c
             count += 1
 
@@ -1025,9 +999,9 @@ def remoteAlign(cards):  ## Remote alignment function for the stack
         if lastCard == None:
             z = 0
         else:
-            z = Card(lastCard).getIndex + 1
+            z = Card(lastCard).index + 1
         card.moveToTable(x, y)
-        card.setIndex(z)
+        card.index = z
 
 ############################
 #Smart Token/Markers
@@ -1054,7 +1028,7 @@ def tokenArtSelector(tokenName):
     artDict = getSetting('tokenArts', convertToString({}))
     artDict = eval(artDict)
     if token.model in artDict:
-        token.switchTo(artDict[token.model])
+        token.alternate = artDict[token.model]
     return token
 
 def nextTokenArt(card, x = 0, y = 0):
@@ -1070,7 +1044,7 @@ def nextTokenArt(card, x = 0, y = 0):
     artIndex = str(artIndex + 1)
     if not artIndex in artList:
         artIndex = ''
-    card.switchTo(artIndex)
+    card.alternate = artIndex
     artDict = getSetting('tokenArts', convertToString({}))
     artDict = eval(artDict)
     artDict[card.model] = artIndex

@@ -301,7 +301,7 @@ tokenTypes = {
     'poisonsnake11c': ('1 / 1 Colorless Poison Snake', '9bc647b5-8bc8-42f9-ab88-31b0c24fd01b'),
     'prism01c': ('0 / 1 Colorless Prism', '0525220c-be68-4bdb-92bb-e253a4257969'),
     'rabidsheep22g': ('2 / 2 Green Rabid Sheep', '5220e649-b0d3-4914-9933-dab2bf6cf31c'),
-    'rat11b': ('1 / 1 Black Rat', 'e872f468-8b4e-4439-adf0-f3f5dcc9852b'), #SHA CHK RTR
+    'rat11b': ('1 / 1 Black Rat', 'a8dad087-5e23-4368-8654-d77415d4cd9d'), #SHA CHK RTR
     'reflection22w': ('2 / 2 White Reflection', '979d471b-2d90-462a-8fe9-5154167cd8dc'),
     'reflection**w': ('* / * White Reflection', '3f65527f-f8b9-4160-8f29-f4511d390596'),
     'rhino44g': ('4/4 Green Rhino', 'd1d7612f-a263-469b-ac68-b1b0f56c108c'),

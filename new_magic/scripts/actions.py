@@ -49,14 +49,18 @@ costMemory = (0,0)
 # Event Stuff
 #---------------------------------------------------------------------------
 
-def registerPlayer(player, groups = []): #this function triggers off loading a deck, and registers the player as active
+def registerPlayer(args): #this function triggers off loading a deck, and registers the player as active
     mute()
+    player = args.player
     if player == me: #only process the local player
         playersDict = eval(getGlobalVariable('activePlayers')) #the activePlayers variable just keeps track of the active players in the game
         playersDict[me._id] = autoscriptCheck() #keeps track of who's allergic to fun
         setGlobalVariable('activePlayers', str(playersDict))
 
-def priorityResolve(name, oldValue, value):
+def priorityResolve(args):
+    mute()
+    name = args.name
+    value = args.value
     if name == 'priority' and value == '[]':
         stack = [c for c in table
                 if isStack(c)]
@@ -66,13 +70,18 @@ def priorityResolve(name, oldValue, value):
             resolve(stack[-1])
             cardalign()
 
-def endTurn(player, turnNumber):
+def endTurn(args):
     mute()
+    player = args.player
     if player == me:
         clearAll(table, x = 0, y = 0)
 
-def moveEvent(player, cards, fromGroups, toGroups, oldIndexs, indexs, oldXs, oldYs, xs, ys, faceups, highlight, markers):
+def moveEvent(args):
     mute()
+    player = args.player
+    cards = args.cards
+    fromGroups = args.fromGroups
+    toGroups = args.toGroups
     if player != me:
         return
     count = -1
@@ -91,6 +100,9 @@ def moveEvent(player, cards, fromGroups, toGroups, oldIndexs, indexs, oldXs, old
 
 def initializeGame():
     mute()
+    for c in ['soldier11w','goblin11r','zombie22b','elfwarrior11g']:
+        me.Library.create(tokenTypes[c][1], 2)
+    scry(count = 6)
     #### INITIALIZE VARIABLES
     global debugMode
     debugMode = getSetting("debugTimer", "False")
@@ -278,7 +290,7 @@ def token(group, x = 0, y = 0):
         token = [token]
     artDict = eval(getSetting('tokenArts', convertToString({})))
     for x in token:
-        x.switchTo(artDict.get(guid, ''))
+        x.alternate = artDict.get(guid, '')
 
 def changeLog(group, x = 0, y = 0):
     mute()
@@ -310,31 +322,55 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
     for c in group.top(count):
         topCards.append(c)
         c.peek()
-    buttons = []  ## This list stores all the card objects for manipulations.
+    dlg = cardDlg(topCards, [])
+    dlg.max = count
+    dlg.title = "Scry"
+    dlg.label = "Top of Library"
+    dlg.bottomLabel = "Bottom of Library"
+    dlg.text = "Reorder scryed cards to the top or bottom.\n\n(Close window to cancel scry.)"
+    if dlg.show() == None: return
+    for c in reversed(dlg.list):
+        c.moveTo(group)
+    for c in dlg.bottomList:
+        c.moveToBottom(group)
+    notify("{} scryed for {}, {} on top, {} on bottom.".format(me, count, len(dlg.list), len(dlg.bottomList)))
+    group.visibility = "none"
+
+def scryold(group = me.Library, x = 0, y = 0, count = None):
+    mute()
+    if count == None:
+        count = askInteger("Scry how many cards?", 1)
+    if count == None or count == 0:
+        return
+    topCards = []
+    for c in group.top(count):
+        topCards.append(c)
+        c.peek()
     topList = []  ## This will store the cards selected for the top of the pile
     bottomList = []  ## For cards going to the bottom of the pile
     loop = 'BOTTOM'  ## Start with choosing cards to put on bottom
     while loop != None:
-        desc = "Select a card to place on {}:\n(Close window to {})\n\n{}\n///////DECK///////\n{}".format(
-                loop,
-                'switch to TOP' if loop == 'BOTTOM' else 'cancel scrying',
-                '\n'.join([c.Name for c in topList]),
-                '\n'.join([c.Name for c in bottomList]))
+        dlg = cardDlg(topCards)
+        dlg.title = "Scry"
+        dlg.text = "Select a card to place on {}:\n(Close window to {})\n\n{}\n///////DECK///////\n{}".format(
+                    loop,
+                    'switch to TOP' if loop == 'BOTTOM' else 'cancel scrying',
+                    '\n'.join([c.Name for c in topList]),
+                    '\n'.join([c.Name for c in bottomList]))
+        cards = dlg.show()
         if loop == 'TOP':
-            card = askCard(topCards, desc, "Scry")
-            if card == None:
+            if cards == None:
                 notify("{} has cancelled a scry for {}.".format(me, count))
                 return ## closing the dialog window will cancel the scry, not moving any cards, but peek status will stay on.
             else:
-                topCards.remove(card)
-                topList.insert(0, card)
+                topCards.remove(cards[0])
+                topList.insert(0, cards[0])
         else:
-            card = askCard(topCards, desc, "Scry")
-            if card == None:
+            if cards == None:
                 loop = 'TOP'
             else:
-                topCards.remove(card)
-                bottomList.append(card)
+                topCards.remove(cards[0])
+                bottomList.append(cards[0])
         if len(topCards) == 0: ##  End the loop
             loop = None
     topList.reverse()  ## Gotta flip topList so the moveTo's go in the right order
@@ -343,17 +379,16 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
     for c in bottomList:
         c.moveToBottom(group)
     notify("{} scryed for {}, {} on top, {} on bottom.".format(me, count, len(topList), len(bottomList)))
-    group.setVisibility("none")
+    group.visibility = "none"
 
 def play(card, x = 0, y = 0):
     mute()
     timer = time.clock()
     if autoscriptCheck() == "True":
-        src = card.group
-        if src == me.hand:
+        if card.group == me.hand:
             srcText = ""
         else:
-            srcText = " from {}".format(src.name)
+            srcText = " from {}".format(card.group.name)
         text = autoParser(card, 'cast')
         timer = debugWhisper("play1", card, timer)
         if text != "BREAK":
@@ -386,12 +421,11 @@ def play(card, x = 0, y = 0):
             cardalign()
             timer = debugWhisper("play5", card, timer)
     else:
-        src = card.group
         if re.search("Instant", card.Type) or re.search("Sorcery", card.Type):
             card.moveTo(card.owner.Graveyard)
         else:
             card.moveToTable(defaultX, defaultY)
-        notify("{} plays {} from their {}.".format(me, card, src.name))
+        notify("{} plays {} from their {}.".format(me, card, card.group.name))
         timer = debugWhisper("play6", card, timer)
         cardalign()
         timer = debugWhisper("play7", card, timer)
@@ -412,6 +446,7 @@ def resolve(card, x = 0, y = 0):
     mute()
     global stackDict
     if autoscriptCheck() == "True":
+        ## double-clicking a suspended card
         if counters['suspend'] in card.markers:
             if counters['time'] in card.markers:
                 card.markers[counters['time']] -= 1
@@ -423,25 +458,25 @@ def resolve(card, x = 0, y = 0):
                     card.markers[counters['suspend']] = 0
                     notify("{} casts suspended {}{}.".format(me, card, text))
             return
+        ## double-clicking cards on the stack will resolve them
         if card in stackDict:
-            tagClass = stackDict[card]['class']
-            tagSrc = stackDict[card]['src']
-            moveTo = stackDict[card]['moveto']
+            stackData = stackDict[card]
             text = autoParser(card, 'resolve')
-            if tagClass == 'miracle':
-                if tagSrc in me.hand:
-                    play(tagSrc)
+            if stackData['class'] == 'miracle':
+                if stackData['src'] in me.hand:
+                    play(stackData['src'])
                 else:
-                    notify("{}'s {} Miracle trigger is countered.".format(me, card))
+                    notify("{}'s {} Miracle trigger is countered (no longer in hand.)".format(me, card))
             else:
-                notify("{} resolves {} ({}){}".format(me, card, tagClass, text))
-            if moveTo == 'exile':
+                notify("{} resolves {} ({}){}".format(me, card, stackData['class'], text))
+            if stackData['moveto'] == 'exile':
                 card.moveTo(card.owner.piles['Exiled Zone'])
-            elif card.isFaceUp == False or (tagClass == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type)): #handles permanents etb triggers
+            elif card.isFaceUp == False or (stackData['class'] == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type)): #handles permanents etb triggers
                 autoParser(card, 'etb')
             else: #non-permanents and ability triggers are sent to graveyard after resolution
                 card.moveTo(card.owner.Graveyard)
         else:
+            ## double-clicking a card in play just taps it
             card.orientation ^= Rot90
             if card.orientation & Rot90 == Rot90:
                 notify('{} taps {}'.format(me, card))
@@ -525,7 +560,7 @@ def attack(card, x = 0, y = 0):
     mute()
     if autoscriptCheck() == "True":
         if card.orientation == Rot90:
-            if confirm("Cannot attack: already tapped. Continue?") != True:
+            if not confirm("Cannot attack: already tapped. Continue?") != True:
                 return
         elif card.highlight == AttackColor or card.highlight == AttackDoesntUntapColor:
             if confirm("Cannot attack: already attacking. Continue?") != True:
@@ -626,23 +661,21 @@ def morph(card, x = 0, y = 0):
         else:
             notify("{} casts a card face-down.".format(me))
     else:
-        src = card.group
-        notify("{} casts a card face-down from their {}.".format(me, src.name))
+        notify("{} casts a card face-down from their {}.".format(me, card.group.name))
         card.moveToTable(defaultX, defaultY, True)
         card.peek()
         cardalign()
 
 def manifest(card, x = 0, y = 0):
     mute()
-    src = card.group
-    if src == table:
+    if card.group == table:
         notify("{} manifests {} from the battlefield.".format(me, card))
         card.isFaceUp = False
     else:
-        if card.getIndex == 0:
-            notify("{} manifests the top card of their {}.".format(me, src.name))
+        if card.index == 0:
+            notify("{} manifests the top card of their {}.".format(me, card.group.name))
         else:
-            notify("{} manifests the card {} from the top of their {}.".format(me, card.getIndex, src.name))
+            notify("{} manifests the card {} from the top of their {}.".format(me, card.index, card.group.name))
     card.moveToTable(defaultX, defaultY, True)
     card.markers[counters['manifest']] = 1
     card.peek()
@@ -650,19 +683,18 @@ def manifest(card, x = 0, y = 0):
 
 def transform(card, x = 0, y = 0):
     mute()
-    alt = card.alternates
-    if 'transform' in alt:
+    if 'transform' in card.alternates:
         notify("{} transforms {}.".format(me, card))
         if card.alternate == '':
-            card.switchTo('transform')
+            card.alternate = 'transform'
         else:
-            card.switchTo()
-    elif 'flip' in alt:
+            card.alternate = ''
+    elif 'flip' in card.alternates:
         notify("{} flips {}.".format(me, card))
         if card.alternate == '':
-            card.switchTo('flip')
+            card.alternate = 'flip'
         else:
-            card.switchTo()
+            card.alternate = ''
     else:
         if card.isFaceUp == True:
             notify("{} morphs {} face down.".format(me, card))
@@ -766,11 +798,11 @@ def clear(card, x = 0, y = 0):
 
 def clone(cards, x = 0, y = 0):
     for card in cards:
-        isInverted = y < card.height() / 2
+        isInverted = y < card.height / 2
         copy = table.create(card.model, x, y, 1)
         if card.alternate != '':
-            copy.switchTo(card.alternate)
-        offset = min(card.width(), card.height()) / 5
+            copy.alternate = card.alternate
+        offset = min(card.width, card.height) / 5
         delta = offset if not isInverted else -offset
         x = x + delta
         y = y + delta
