@@ -100,9 +100,6 @@ def moveEvent(args):
 
 def initializeGame():
     mute()
-    for c in ['soldier11w','goblin11r','zombie22b','elfwarrior11g']:
-        me.Library.create(tokenTypes[c][1], 2)
-    scry(count = 6)
     #### INITIALIZE VARIABLES
     global debugMode
     debugMode = getSetting("debugTimer", "False")
