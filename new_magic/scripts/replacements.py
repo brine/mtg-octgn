@@ -1,4 +1,4 @@
-counters = {
+xcounters = {
     'general': ('Commander Not-In-Play', 'bf97836f-3395-4add-b807-daa568c036d6'), ###
     'p1p1': ('+1/+1 counter', '6480e55b-0864-41bf-ad00-43cc2482a75c'), ###
     'm1m1': ('-1/-1 counter', '6f180a03-b3f5-4e6f-96b5-9ff1597d2226'), ###
@@ -89,6 +89,7 @@ counters = {
     'dragons': ('Dragons counter', '0137b1eb-9465-4e40-af6d-c6b1d77ae2e8'), ###
     'gem': ('Gem counter', '7215352b-e285-4794-b791-5580c865c6ed'),
     'javelin': ('Javelin counter', '5545a9a0-bdd9-4c37-b063-a9b83fef8988'),
+    'crystal': ('Crystal counter', '556b6d1d-28fe-40e0-ad8b-642f0c7d9f2f'),
     'suspend': ('Suspended Indicator', '9cc0fc15-9967-4e98-9afb-a2d5e1479920'), ###
     'x': ('X Variable', 'fd936437-1d94-48a1-9367-4be0bc389fb4'), ###
     'cost': ('Alternate/Additional cost', '699f849b-c55d-409f-8223-7b4d297eb723'), ###
@@ -111,6 +112,7 @@ scriptMarkers = {
 }
 
 tokenTypes = {
+    'angel33W': ('3 / 3 White Angel', 'e2d290bb-a6f6-4385-8b65-8e272b66c0fa'),
     'angel33b': ('3 / 3 Black Angel', 'e2d290bb-a6f6-4385-8b65-8e272b66c0fa'), #APC1 APC2
     'angel44w': ('4 / 4 White Angel', '581e92be-a8b6-47b0-8051-f7d31fd77cc1'), #MPRSCG CFX ZEN ISD AVR1 AVR2 RTR
     'ape11g': ('1 / 1 Green Ape', '48c2b391-2b78-45b4-ba66-775d97dcd748'),
@@ -181,7 +183,7 @@ tokenTypes = {
     'elemental22u': ('2 / 2 Blue Elemental', 'f31761bf-3bad-4b26-83e3-53a7435c2c02'),
     'elemental11r': ('1/ 1 Red Elemental', '4a280f46-c63d-4522-99cd-49e4c2093b95'), #M14 M14
     'elemental11r2': ('1/ 1 Red Elemental', '9cf39bf6-7508-4243-b05a-7fcbc9adc800'), #haste
-    'elemental31r': ('3 / 1 Red Elemental', '283f82f8-e3ee-4191-852a-60e2312d8e32'), #CFX DIS
+    'elemental31r': ('3 / 1 Red Elemental', '283f82f8-e3ee-4191-852a-60e2312d8e32'), #CFX DIS OGW
     'elemental31r2': ('3 / 1 Red Elemental', '5086e801-b0f5-4ac0-9442-6f2e8312c647'), #haste
     'elemental31r3': ('3 / 1 Red Elemental', '0340630b-f7bd-4f77-a983-8ac93b61e30e'), #enchantment
     'elemental31r4': ('3 / 1 Red Elemental', '7d7758be-84b9-477e-b7c8-93655ec7e04b'), #enchantment
@@ -386,7 +388,7 @@ tokenTypes = {
     'wurm66g': ('6 / 6 Green Wurm', '4e259c1c-f66a-444a-9c08-6e6bdc42db23'), #M12 MPRODY
     'wurm66b': ('6 / 6 Black Wurm', '5e914c05-f6a8-46f3-bd58-e32c83c386a7'),
     'wurm**g': ('* / * Green Wurm', '6c6cf231-531b-4273-a6e5-383c476ec1c7'),
-    'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK DTK
+    'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK DTK OGW
     'zombie22b2': ('2 / 2 Black Zombie', 'ebc67e29-00a2-4a72-806b-915fa5f9d75e'), #enchantment
     'zombie**u': ('* / * Blue Zombie', 'bcb88192-ce2f-4288-8799-c9264b38c78f'),
     'zombie**b': ('* / * Black Zombie', '5de01d24-b85f-4ca2-8868-d0a2adec7904'),
