@@ -132,5 +132,16 @@ changelog = {
         ]),
     3022103: ("3.2.21.3", "November 17 2015", [
         "Added Commander 2015"
+        ]),
+    3030000: ("3.3.0.0", "January 13 2016", [
+        "Welcome to version 3.3.0!!",
+        "Added Oath of the Gatewatch + Tokens",
+        "Mana symbols are now searchable by their {X} notation",
+        "Added colorless mana symbol {C}",
+        "Updated text on all sets",
+        "Enhanced scry window to new split-dialog window",
+        "Upgraded all python scripts to 3.1.0.2 API version",
+        "Fixed bug with creating multiple tokens",
+        "Cloning a token will copy the artwork"
         ])
 }
