@@ -1,4 +1,4 @@
-xcounters = {
+counters = {
     'general': ('Commander Not-In-Play', 'bf97836f-3395-4add-b807-daa568c036d6'), ###
     'p1p1': ('+1/+1 counter', '6480e55b-0864-41bf-ad00-43cc2482a75c'), ###
     'm1m1': ('-1/-1 counter', '6f180a03-b3f5-4e6f-96b5-9ff1597d2226'), ###
