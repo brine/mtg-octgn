@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Antiquities" id="8b4e7836-dbd4-4cdf-b058-6724b95e9174" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.1.8.5" version="1.0">
+<set name="Antiquities" id="8b4e7836-dbd4-4cdf-b058-6724b95e9174" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.3.0.0" version="1.0">
   <packaging>
     <pack name="Booster" id="3e6666ff-7fb8-44b3-a3c8-0e04ca423db8">
       <options>
@@ -17,24 +17,24 @@
   </packaging>
   <cards>
     <card name="Amulet of Kroog" id="875f80a6-2d35-bda2-1ea2-392f4ad27e5e">
-      <property name="Cost" value="2" />
+      <property name="Cost" value="{2}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="2, `: Prevent the next 1 damage that would be dealt to target creature or player this turn." />
+      <property name="Rules" value="{2}, {T}: Prevent the next 1 damage that would be dealt to target creature or player this turn." />
       <property name="Artist" value="Margaret Organ-Kean" />
       <property name="Flavor" value="Among the first allies Urza gained were the people of Kroog. As a sign of friendship, Urza gave the healers of the city potent amulets; afterwards, thousands journeyed to Kroog in hope of healing, greatly adding to the city's glory." />
       <property name="MultiverseId" value="992" />
     </card>
     <card name="Argivian Archaeologist" id="6aa10ee9-e0e7-af4e-e7b4-c718d227a06b">
-      <property name="Cost" value="1@@" />
+      <property name="Cost" value="{1}{W}{W}" />
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Artificer" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="@@, `: Return target artifact card from your graveyard to your hand." />
+      <property name="Rules" value="{W}{W}, {T}: Return target artifact card from your graveyard to your hand." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -43,13 +43,13 @@
       <property name="MultiverseId" value="1064" />
     </card>
     <card name="Argivian Blacksmith" id="c361fe03-d176-a77b-eee1-760138ed53c9">
-      <property name="Cost" value="1@@" />
+      <property name="Cost" value="{1}{W}{W}" />
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Artificer" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`: Prevent the next 2 damage that would be dealt to target artifact creature this turn." />
+      <property name="Rules" value="{T}: Prevent the next 2 damage that would be dealt to target artifact creature this turn." />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -58,7 +58,7 @@
       <property name="MultiverseId" value="1065" />
     </card>
     <card name="Argothian Pixies" id="d568ddf2-c1d6-3b7f-1506-dd90ea46825a">
-      <property name="Cost" value="1^" />
+      <property name="Cost" value="{1}{G}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
@@ -73,7 +73,7 @@
       <property name="MultiverseId" value="1050" />
     </card>
     <card name="Argothian Treefolk" id="6f755b58-f9fc-e9f1-d73d-b37cd02c165d">
-      <property name="Cost" value="3^^" />
+      <property name="Cost" value="{3}{G}{G}" />
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
@@ -88,17 +88,17 @@
       <property name="MultiverseId" value="1051" />
     </card>
     <card name="Armageddon Clock" id="33b4d7d5-faaa-43b8-27c7-db10cf805769">
-      <property name="Cost" value="6" />
+      <property name="Cost" value="{6}" />
       <property name="CMC" value="6" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="At the beginning of your upkeep, put a doom counter on Armageddon Clock.&#xD;&#xA;At the beginning of your draw step, Armageddon Clock deals damage equal to the number of doom counters on it to each player.&#xD;&#xA;4: Remove a doom counter from Armageddon Clock. Any player may activate this ability but only during any upkeep step." />
+      <property name="Rules" value="At the beginning of your upkeep, put a doom counter on Armageddon Clock.&#xD;&#xA;At the beginning of your draw step, Armageddon Clock deals damage equal to the number of doom counters on it to each player.&#xD;&#xA;{4}: Remove a doom counter from Armageddon Clock. Any player may activate this ability but only during any upkeep step." />
       <property name="Artist" value="Amy Weber" />
       <property name="MultiverseId" value="993" />
     </card>
     <card name="Artifact Blast" id="26cb1e3f-8a10-e078-2d82-6dde12cd2942">
-      <property name="Cost" value="%" />
+      <property name="Cost" value="{R}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
@@ -109,19 +109,19 @@
       <property name="MultiverseId" value="1057" />
     </card>
     <card name="Artifact Possession" id="84fb1ec8-9223-a06e-5daf-8713b7f120ae">
-      <property name="Cost" value="2$" />
+      <property name="Cost" value="{2}{B}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Enchant artifact&#xD;&#xA;Whenever enchanted artifact becomes tapped or a player activates an ability of enchanted artifact without ` in its activation cost, Artifact Possession deals 2 damage to that artifact's controller." />
+      <property name="Rules" value="Enchant artifact&#xD;&#xA;Whenever enchanted artifact becomes tapped or a player activates an ability of enchanted artifact without {T} in its activation cost, Artifact Possession deals 2 damage to that artifact's controller." />
       <property name="Artist" value="Christopher Rush" />
       <property name="Flavor" value="Any black mage could coax a Thraxodemon to inhabit a magical device." />
       <property name="MultiverseId" value="1036" />
     </card>
     <card name="Artifact Ward" id="1471de05-411b-f9bf-62fc-d6d782ca6000">
-      <property name="Cost" value="@" />
+      <property name="Cost" value="{W}" />
       <property name="CMC" value="1" />
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
@@ -132,39 +132,39 @@
       <property name="MultiverseId" value="1066" />
     </card>
     <card name="Ashnod's Altar" id="54e1776a-34a5-25a0-6508-34eba922be0b">
-      <property name="Cost" value="3" />
+      <property name="Cost" value="{3}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Sacrifice a creature: Add 2 to your mana pool." />
+      <property name="Rules" value="Sacrifice a creature: Add {C}{C} to your mana pool." />
       <property name="Artist" value="Anson Maddocks" />
       <property name="MultiverseId" value="994" />
     </card>
     <card name="Ashnod's Battle Gear" id="82ec8f2e-0ddf-35b6-3569-ef0f9dadc9e3">
-      <property name="Cost" value="2" />
+      <property name="Cost" value="{2}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="You may choose not to untap Ashnod's Battle Gear during your untap step.&#xD;&#xA;2, `: Target creature you control gets +2/-2 for as long as Ashnod's Battle Gear remains tapped." />
+      <property name="Rules" value="You may choose not to untap Ashnod's Battle Gear during your untap step.&#xD;&#xA;{2}, {T}: Target creature you control gets +2/-2 for as long as Ashnod's Battle Gear remains tapped." />
       <property name="Artist" value="Mark Poole" />
       <property name="Flavor" value="This horrid invention clearly illustrates why Mishra's lieutenant was feared as much by her troops as by her foes." />
       <property name="MultiverseId" value="995" />
     </card>
     <card name="Ashnod's Transmogrant" id="5325e25c-20cd-d22b-bf76-4e1cde9bafc7">
-      <property name="Cost" value="1" />
+      <property name="Cost" value="{1}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`, Sacrifice Ashnod's Transmogrant: Put a +1/+1 counter on target nonartifact creature. That creature becomes an artifact in addition to its other types." />
+      <property name="Rules" value="{T}, Sacrifice Ashnod's Transmogrant: Put a +1/+1 counter on target nonartifact creature. That creature becomes an artifact in addition to its other types." />
       <property name="Artist" value="Mark Tedin" />
       <property name="Flavor" value="Ashnod found few willing to trade their humanity for the power she offered them." />
       <property name="MultiverseId" value="996" />
     </card>
     <card name="Atog" id="e606a9cc-7a1a-c23a-9017-ed3a429fcac7">
-      <property name="Cost" value="1%" />
+      <property name="Cost" value="{1}{R}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
@@ -178,7 +178,7 @@
       <property name="MultiverseId" value="1058" />
     </card>
     <card name="Battering Ram" id="9957c94b-8a76-8d36-ef90-ed2e579a33e6">
-      <property name="Cost" value="2" />
+      <property name="Cost" value="{2}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
@@ -193,38 +193,38 @@
       <property name="MultiverseId" value="997" />
     </card>
     <card name="Bronze Tablet" id="8ab8bbe9-5125-10f0-ed7f-19f23be108e9">
-      <property name="Cost" value="6" />
+      <property name="Cost" value="{6}" />
       <property name="CMC" value="6" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Remove Bronze Tablet from your deck before playing if you're not playing for ante.&#xD;&#xA;Bronze Tablet enters the battlefield tapped.&#xD;&#xA;4, `: Exile Bronze Tablet and target nontoken permanent an opponent owns. That player may pay 10 life. If he or she does, put Bronze Tablet into its owner's graveyard. Otherwise, that player owns Bronze Tablet and you own the other exiled card." />
+      <property name="Rules" value="Remove Bronze Tablet from your deck before playing if you're not playing for ante.&#xD;&#xA;Bronze Tablet enters the battlefield tapped.&#xD;&#xA;{4}, {T}: Exile Bronze Tablet and target nontoken permanent an opponent owns. That player may pay 10 life. If he or she does, put Bronze Tablet into its owner's graveyard. Otherwise, that player owns Bronze Tablet and you own the other exiled card." />
       <property name="Artist" value="Tom Wänerstrand" />
       <property name="MultiverseId" value="998" />
     </card>
     <card name="Candelabra of Tawnos" id="a6fac21b-2886-c3c6-3385-e8f66d07e8c8">
-      <property name="Cost" value="1" />
+      <property name="Cost" value="{1}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="X, `: Untap X target lands." />
+      <property name="Rules" value="{X}, {T}: Untap X target lands." />
       <property name="Artist" value="Douglas Shuler" />
       <property name="Flavor" value="Tawnos learned quickly from Urza that utter simplicity often led to wondrous, yet subtle utility." />
       <property name="MultiverseId" value="999" />
     </card>
     <card name="Circle of Protection: Artifacts" id="75ebec67-25db-53a0-dcc9-a1dec6034b89">
-      <property name="Cost" value="1@" />
+      <property name="Cost" value="{1}{W}" />
       <property name="CMC" value="2" />
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="2: The next time an artifact source of your choice would deal damage to you this turn, prevent that damage." />
+      <property name="Rules" value="{2}: The next time an artifact source of your choice would deal damage to you this turn, prevent that damage." />
       <property name="Artist" value="Pete Venters" />
       <property name="MultiverseId" value="1067" />
     </card>
     <card name="Citanul Druid" id="8b872d2a-23f1-454e-1e8b-7ebe7641e148">
-      <property name="Cost" value="1^" />
+      <property name="Cost" value="{1}{G}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
@@ -239,13 +239,13 @@
       <property name="MultiverseId" value="1052" />
     </card>
     <card name="Clay Statue" id="801e432e-142e-1f1d-272f-7836d846791a">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="2: Regenerate Clay Statue." />
+      <property name="Rules" value="{2}: Regenerate Clay Statue." />
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="3 / 1" />
@@ -254,13 +254,13 @@
       <property name="MultiverseId" value="1000" />
     </card>
     <card name="Clockwork Avian" id="2b7ea6e8-77aa-e0a7-4950-e65da2ad8bf0">
-      <property name="Cost" value="5" />
+      <property name="Cost" value="{5}" />
       <property name="CMC" value="5" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Bird" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Flying&#xD;&#xA;Clockwork Avian enters the battlefield with four +1/+0 counters on it.&#xD;&#xA;At end of combat, if Clockwork Avian attacked or blocked this combat, remove a +1/+0 counter from it.&#xD;&#xA;X, `: Put up to X +1/+0 counters on Clockwork Avian. This ability can't cause the total number of +1/+0 counters on Clockwork Avian to be greater than four. Activate this ability only during your upkeep." />
+      <property name="Rules" value="Flying&#xD;&#xA;Clockwork Avian enters the battlefield with four +1/+0 counters on it.&#xD;&#xA;At end of combat, if Clockwork Avian attacked or blocked this combat, remove a +1/+0 counter from it.&#xD;&#xA;{X}, {T}: Put up to X +1/+0 counters on Clockwork Avian. This ability can't cause the total number of +1/+0 counters on Clockwork Avian to be greater than four. Activate this ability only during your upkeep." />
       <property name="Power" value="0" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="0 / 4" />
@@ -268,13 +268,13 @@
       <property name="MultiverseId" value="1001" />
     </card>
     <card name="Colossus of Sardia" id="3d257783-2b7f-6969-2fcf-1d7cd5573734">
-      <property name="Cost" value="9" />
+      <property name="Cost" value="{9}" />
       <property name="CMC" value="9" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Trample (If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)&#xD;&#xA;Colossus of Sardia doesn't untap during your untap step.&#xD;&#xA;9: Untap Colossus of Sardia. Activate this ability only during your upkeep." />
+      <property name="Rules" value="Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)&#xD;&#xA;Colossus of Sardia doesn't untap during your untap step.&#xD;&#xA;{9}: Untap Colossus of Sardia. Activate this ability only during your upkeep." />
       <property name="Power" value="9" />
       <property name="Toughness" value="9" />
       <property name="PT Box" value="9 / 9" />
@@ -283,17 +283,17 @@
       <property name="MultiverseId" value="1002" />
     </card>
     <card name="Coral Helm" id="0bda4060-2e28-e44c-9101-a272f6a8fd20">
-      <property name="Cost" value="3" />
+      <property name="Cost" value="{3}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="3, Discard a card at random: Target creature gets +2/+2 until end of turn." />
+      <property name="Rules" value="{3}, Discard a card at random: Target creature gets +2/+2 until end of turn." />
       <property name="Artist" value="Amy Weber" />
       <property name="MultiverseId" value="1003" />
     </card>
     <card name="Crumble" id="a301a9cf-c71f-fbe1-30cb-547de0ae5903">
-      <property name="Cost" value="^" />
+      <property name="Cost" value="{G}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
@@ -304,7 +304,7 @@
       <property name="MultiverseId" value="1053" />
     </card>
     <card name="Cursed Rack" id="c24cb19c-f3df-bbe1-978c-1f568e55ab6a">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
@@ -315,7 +315,7 @@
       <property name="MultiverseId" value="1004" />
     </card>
     <card name="Damping Field" id="54cd8e16-8b92-0552-b1ce-4fe07488f9d0">
-      <property name="Cost" value="2@" />
+      <property name="Cost" value="{2}{W}" />
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
@@ -326,7 +326,7 @@
       <property name="MultiverseId" value="1068" />
     </card>
     <card name="Detonate" id="2988dc42-9260-ec21-643c-69c9715d8ad4">
-      <property name="Cost" value="X%" />
+      <property name="Cost" value="{X}{R}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
@@ -336,7 +336,7 @@
       <property name="MultiverseId" value="1059" />
     </card>
     <card name="Drafna's Restoration" id="d9472e1e-af78-469b-54c6-c8252af49f1c">
-      <property name="Cost" value="#" />
+      <property name="Cost" value="{U}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
@@ -347,13 +347,13 @@
       <property name="MultiverseId" value="1037" />
     </card>
     <card name="Dragon Engine" id="eec6470f-84f4-b8cf-e208-3087e2ad2085">
-      <property name="Cost" value="3" />
+      <property name="Cost" value="{3}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="2: Dragon Engine gets +1/+0 until end of turn." />
+      <property name="Rules" value="{2}: Dragon Engine gets +1/+0 until end of turn." />
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -362,13 +362,13 @@
       <property name="MultiverseId" value="1005" />
     </card>
     <card name="Dwarven Weaponsmith" id="59205eb4-8be4-a80d-2fde-b37b481059d5">
-      <property name="Cost" value="1%" />
+      <property name="Cost" value="{1}{R}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dwarf Artificer" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`, Sacrifice an artifact: Put a +1/+1 counter on target creature. Activate this ability only during your upkeep." />
+      <property name="Rules" value="{T}, Sacrifice an artifact: Put a +1/+1 counter on target creature. Activate this ability only during your upkeep." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -376,28 +376,28 @@
       <property name="MultiverseId" value="1060" />
     </card>
     <card name="Energy Flux" id="2f27aa43-337e-fb9b-995f-bc10c539c7b5">
-      <property name="Cost" value="2#" />
+      <property name="Cost" value="{2}{U}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All artifacts have &quot;At the beginning of your upkeep, sacrifice this artifact unless you pay 2.&quot;" />
+      <property name="Rules" value="All artifacts have &quot;At the beginning of your upkeep, sacrifice this artifact unless you pay {2}.&quot;" />
       <property name="Artist" value="Kaja Foglio" />
       <property name="MultiverseId" value="1038" />
     </card>
     <card name="Feldon's Cane" id="2c88fc7a-3bc9-1c9c-c17e-70768d81043c">
-      <property name="Cost" value="1" />
+      <property name="Cost" value="{1}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`, Exile Feldon's Cane: Shuffle your graveyard into your library." />
+      <property name="Rules" value="{T}, Exile Feldon's Cane: Shuffle your graveyard into your library." />
       <property name="Artist" value="Mark Tedin" />
       <property name="Flavor" value="Feldon found the first of these canes frozen in the Ronom Glacier" />
       <property name="MultiverseId" value="1006" />
     </card>
     <card name="Gaea's Avenger" id="790e4c06-5474-7d8b-0243-1e1eb136f5ea">
-      <property name="Cost" value="1^^" />
+      <property name="Cost" value="{1}{G}{G}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
@@ -412,7 +412,7 @@
       <property name="MultiverseId" value="1054" />
     </card>
     <card name="Gate to Phyrexia" id="b1b7d4c7-8fdd-23a5-0456-6095a982c0dc">
-      <property name="Cost" value="$$" />
+      <property name="Cost" value="{B}{B}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Enchantment" />
@@ -423,13 +423,13 @@
       <property name="MultiverseId" value="1039" />
     </card>
     <card name="Goblin Artisans" id="2d8289dc-fd9d-b7cf-c75d-36694540bf83">
-      <property name="Cost" value="%" />
+      <property name="Cost" value="{R}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin Artificer" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Flip a coin. If you win the flip, draw a card. If you lose the flip, counter target artifact spell you control that isn't the target of an ability from another creature named Goblin Artisans." />
+      <property name="Rules" value="{T}: Flip a coin. If you win the flip, draw a card. If you lose the flip, counter target artifact spell you control that isn't the target of an ability from another creature named Goblin Artisans." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -437,24 +437,24 @@
       <property name="MultiverseId" value="1061" />
     </card>
     <card name="Golgothian Sylex" id="e8cd1984-29fb-5fae-6cff-42978e92fe20">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="1, `: Each nontoken permanent originally printed in the Antiquities expansion is sacrificed by its controller." />
+      <property name="Rules" value="{1}, {T}: Each nontoken permanent originally printed in the Antiquities expansion is sacrificed by its controller." />
       <property name="Artist" value="Kerstin Kaman" />
       <property name="Flavor" value="From their earliest educations, the brothers had known that no human contrivance could stand against the true masters of Dominia." />
       <property name="MultiverseId" value="1007" />
     </card>
     <card name="Grapeshot Catapult" id="b317adb5-0e35-0096-71cb-2a5ca3ac6659">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`: Grapeshot Catapult deals 1 damage to target creature with flying." />
+      <property name="Rules" value="{T}: Grapeshot Catapult deals 1 damage to target creature with flying." />
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -463,18 +463,18 @@
       <property name="MultiverseId" value="1008" />
     </card>
     <card name="Haunting Wind" id="75b599bf-a378-7996-a149-026126773c02">
-      <property name="Cost" value="3$" />
+      <property name="Cost" value="{3}{B}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Black" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Whenever an artifact becomes tapped or a player activates an artifact's ability without ` in its activation cost, Haunting Wind deals 1 damage to that artifact's controller." />
+      <property name="Rules" value="Whenever an artifact becomes tapped or a player activates an artifact's ability without {T} in its activation cost, Haunting Wind deals 1 damage to that artifact's controller." />
       <property name="Artist" value="Jeff A. Menges" />
       <property name="Flavor" value="These devices lured so many spirits that sometimes entire battlefields would become haunted at once." />
       <property name="MultiverseId" value="1040" />
     </card>
     <card name="Hurkyl's Recall" id="cd897ef1-2451-197f-1365-dae7c85ecd28">
-      <property name="Cost" value="1#" />
+      <property name="Cost" value="{1}{U}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
@@ -485,7 +485,7 @@
       <property name="MultiverseId" value="1041" />
     </card>
     <card name="Ivory Tower" id="0fff5b6e-743a-5a6f-0f22-c69e45b848ef">
-      <property name="Cost" value="1" />
+      <property name="Cost" value="{1}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
@@ -496,18 +496,18 @@
       <property name="MultiverseId" value="1009" />
     </card>
     <card name="Jalum Tome" id="7b22ec0e-f3f0-d0b0-dcd9-928cf9b5eb30">
-      <property name="Cost" value="3" />
+      <property name="Cost" value="{3}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="2, `: Draw a card, then discard a card." />
+      <property name="Rules" value="{2}, {T}: Draw a card, then discard a card." />
       <property name="Artist" value="Tom Wänerstrand" />
       <property name="Flavor" value="This timeworn relic was responsible for many of Urza's victories, though he never fully comprehended its mystical runes." />
       <property name="MultiverseId" value="1010" />
     </card>
     <card name="Martyrs of Korlis" id="99cee01e-6e94-1a45-2a8d-502492d1b23b">
-      <property name="Cost" value="3@@" />
+      <property name="Cost" value="{3}{W}{W}" />
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
@@ -521,7 +521,7 @@
       <property name="MultiverseId" value="1069" />
     </card>
     <card name="Mightstone" id="66a8c954-c8e4-185c-6c70-d544fca19731">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
@@ -532,12 +532,12 @@
       <property name="MultiverseId" value="1011" />
     </card>
     <card name="Millstone" id="30831796-140e-5a0a-c1a4-a13f67955a31">
-      <property name="Cost" value="2" />
+      <property name="Cost" value="{2}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="2, `: Target player puts the top two cards of his or her library into his or her graveyard." />
+      <property name="Rules" value="{2}, {T}: Target player puts the top two cards of his or her library into his or her graveyard." />
       <property name="Artist" value="Kaja Foglio" />
       <property name="Flavor" value="More than one mage was driven insane by the sound of the Millstone relentlessly grinding away." />
       <property name="MultiverseId" value="1012" />
@@ -547,7 +547,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="`: Add 1 to your mana pool.&#xD;&#xA;1: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.&#xD;&#xA;`: Target Assembly-Worker creature gets +1/+1 until end of turn." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.&#xD;&#xA;{T}: Target Assembly-Worker creature gets +1/+1 until end of turn." />
       <property name="Artist" value="Kaja &amp; Phil Foglio" />
       <property name="MultiverseId" value="1072" />
     </card>
@@ -556,7 +556,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="`: Add 1 to your mana pool.&#xD;&#xA;1: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.&#xD;&#xA;`: Target Assembly-Worker creature gets +1/+1 until end of turn." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.&#xD;&#xA;{T}: Target Assembly-Worker creature gets +1/+1 until end of turn." />
       <property name="Artist" value="Kaja &amp; Phil Foglio" />
       <property name="MultiverseId" value="1071" />
     </card>
@@ -565,7 +565,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Add 1 to your mana pool.&#xD;&#xA;1: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.&#xD;&#xA;`: Target Assembly-Worker creature gets +1/+1 until end of turn." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.&#xD;&#xA;{T}: Target Assembly-Worker creature gets +1/+1 until end of turn." />
       <property name="Artist" value="Kaja &amp; Phil Foglio" />
       <property name="MultiverseId" value="1074" />
     </card>
@@ -574,12 +574,12 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="`: Add 1 to your mana pool.&#xD;&#xA;1: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.&#xD;&#xA;`: Target Assembly-Worker creature gets +1/+1 until end of turn." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{1}: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.&#xD;&#xA;{T}: Target Assembly-Worker creature gets +1/+1 until end of turn." />
       <property name="Artist" value="Kaja &amp; Phil Foglio" />
       <property name="MultiverseId" value="1073" />
     </card>
     <card name="Mishra's War Machine" id="2cfba6d9-0980-9e6c-00de-6436020a35c7">
-      <property name="Cost" value="7" />
+      <property name="Cost" value="{7}" />
       <property name="CMC" value="7" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
@@ -597,24 +597,24 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="`: Add 3 to your mana pool. Spend this mana only to cast artifact spells." />
+      <property name="Rules" value="{T}: Add {C}{C}{C} to your mana pool. Spend this mana only to cast artifact spells." />
       <property name="Artist" value="Kaja Foglio" />
       <property name="Flavor" value="Though he eventually came to despise Tocasia, Mishra listened well to her lessons on clarity of purpose. Unlike his brother, he focused his mind on a single goal." />
       <property name="MultiverseId" value="1075" />
     </card>
     <card name="Obelisk of Undoing" id="56c96057-9e1f-505f-7f44-a3af2d465aeb">
-      <property name="Cost" value="1" />
+      <property name="Cost" value="{1}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="6, `: Return target permanent you both own and control to your hand." />
+      <property name="Rules" value="{6}, {T}: Return target permanent you both own and control to your hand." />
       <property name="Artist" value="Tom Wänerstrand" />
       <property name="Flavor" value="The Battle of Tomakul taught Urza not to rely on fickle reinforcements." />
       <property name="MultiverseId" value="1014" />
     </card>
     <card name="Onulet" id="4582d2d4-ae2b-e698-34ae-15c9a8ff6cf1">
-      <property name="Cost" value="3" />
+      <property name="Cost" value="{3}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
@@ -629,13 +629,13 @@
       <property name="MultiverseId" value="1015" />
     </card>
     <card name="Orcish Mechanics" id="66f478b5-b92d-f76b-508c-e560db58a405">
-      <property name="Cost" value="2%" />
+      <property name="Cost" value="{2}{R}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Orc" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`, Sacrifice an artifact: Orcish Mechanics deals 2 damage to target creature or player." />
+      <property name="Rules" value="{T}, Sacrifice an artifact: Orcish Mechanics deals 2 damage to target creature or player." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -643,7 +643,7 @@
       <property name="MultiverseId" value="1062" />
     </card>
     <card name="Ornithopter" id="48cac7de-bbde-dd21-0fc8-95a5bba3ded3">
-      <property name="Cost" value="0" />
+      <property name="Cost" value="{0}" />
       <property name="CMC" value="0" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
@@ -658,13 +658,13 @@
       <property name="MultiverseId" value="1016" />
     </card>
     <card name="Phyrexian Gremlins" id="c647548d-d1c4-06fd-67c6-51b1cfe9edb5">
-      <property name="Cost" value="2$" />
+      <property name="Cost" value="{2}{B}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Gremlin" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="You may choose not to untap Phyrexian Gremlins during your untap step.&#xD;&#xA;`: Tap target artifact. It doesn't untap during its controller's untap step for as long as Phyrexian Gremlins remains tapped." />
+      <property name="Rules" value="You may choose not to untap Phyrexian Gremlins during your untap step.&#xD;&#xA;{T}: Tap target artifact. It doesn't untap during its controller's untap step for as long as Phyrexian Gremlins remains tapped." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -672,35 +672,35 @@
       <property name="MultiverseId" value="1042" />
     </card>
     <card name="Power Artifact" id="91f02ee6-36c5-5b95-02c1-45dfb662d1d7">
-      <property name="Cost" value="##" />
+      <property name="Cost" value="{U}{U}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Enchant artifact&#xD;&#xA;Enchanted artifact's activated abilities cost 2 less to activate. This effect can't reduce the amount of mana an ability costs to activate to less than one mana." />
+      <property name="Rules" value="Enchant artifact&#xD;&#xA;Enchanted artifact's activated abilities cost {2} less to activate. This effect can't reduce the amount of mana an ability costs to activate to less than one mana." />
       <property name="Artist" value="Douglas Shuler" />
       <property name="MultiverseId" value="1043" />
     </card>
     <card name="Powerleech" id="ce0a66b4-42af-e39a-ffdd-c16c619d22a2">
-      <property name="Cost" value="^^" />
+      <property name="Cost" value="{G}{G}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Whenever an artifact an opponent controls becomes tapped or an opponent activates an artifact's ability without ` in its activation cost, you gain 1 life." />
+      <property name="Rules" value="Whenever an artifact an opponent controls becomes tapped or an opponent activates an artifact's ability without {T} in its activation cost, you gain 1 life." />
       <property name="Artist" value="Christopher Rush" />
       <property name="Flavor" value="The Forest of Argoth has developed a resistance to mechanical intrusion." />
       <property name="MultiverseId" value="1055" />
     </card>
     <card name="Priest of Yawgmoth" id="3a86d9fc-23f0-6ea5-bc51-6eca27caa335">
-      <property name="Cost" value="1$" />
+      <property name="Cost" value="{1}{B}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Cleric" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`, Sacrifice an artifact: Add to your mana pool an amount of $ equal to the sacrificed artifact's converted mana cost." />
+      <property name="Rules" value="{T}, Sacrifice an artifact: Add to your mana pool an amount of {B} equal to the sacrificed artifact's converted mana cost." />
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -708,7 +708,7 @@
       <property name="MultiverseId" value="1044" />
     </card>
     <card name="Primal Clay" id="00609199-408e-89a0-0858-655f70ec039e">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
@@ -722,18 +722,18 @@
       <property name="MultiverseId" value="1017" />
     </card>
     <card name="Rakalite" id="c1b9e62b-66a2-aaf3-6853-0beb0fa0c6de">
-      <property name="Cost" value="6" />
+      <property name="Cost" value="{6}" />
       <property name="CMC" value="6" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="2: Prevent the next 1 damage that would be dealt to target creature or player this turn. Return Rakalite to its owner's hand at the beginning of the next end step." />
+      <property name="Rules" value="{2}: Prevent the next 1 damage that would be dealt to target creature or player this turn. Return Rakalite to its owner's hand at the beginning of the next end step." />
       <property name="Artist" value="Christopher Rush" />
       <property name="Flavor" value="Urza was the first to understand that the war would not be lost for lack of power, but for lack of troops." />
       <property name="MultiverseId" value="1018" />
     </card>
     <card name="Reconstruction" id="6ec4d46b-0764-586f-f412-2d15069828e5">
-      <property name="Cost" value="#" />
+      <property name="Cost" value="{U}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
@@ -744,7 +744,7 @@
       <property name="MultiverseId" value="1045" />
     </card>
     <card name="Reverse Polarity" id="ac6d451e-8946-029c-d1fe-bf116ff5420a">
-      <property name="Cost" value="@@" />
+      <property name="Cost" value="{W}{W}" />
       <property name="CMC" value="2" />
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
@@ -754,24 +754,24 @@
       <property name="MultiverseId" value="1070" />
     </card>
     <card name="Rocket Launcher" id="74e63da4-1e9d-c11f-c147-99fabf7f2ccf">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="2: Rocket Launcher deals 1 damage to target creature or player. Destroy Rocket Launcher at the beginning of the next end step. Activate this ability only if you've controlled Rocket Launcher continuously since the beginning of your most recent turn." />
+      <property name="Rules" value="{2}: Rocket Launcher deals 1 damage to target creature or player. Destroy Rocket Launcher at the beginning of the next end step. Activate this ability only if you've controlled Rocket Launcher continuously since the beginning of your most recent turn." />
       <property name="Artist" value="Pete Venters" />
       <property name="Flavor" value="What these devices lacked in subtlety, they made up in strength." />
       <property name="MultiverseId" value="1019" />
     </card>
     <card name="Sage of Lat-Nam" id="35421e01-b0d1-f4c1-a151-ca2cc8708d33">
-      <property name="Cost" value="1#" />
+      <property name="Cost" value="{1}{U}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Artificer" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`, Sacrifice an artifact: Draw a card." />
+      <property name="Rules" value="{T}, Sacrifice an artifact: Draw a card." />
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -779,7 +779,7 @@
       <property name="MultiverseId" value="1046" />
     </card>
     <card name="Shapeshifter" id="966f041e-5c06-8518-9561-cfa84f13f83b">
-      <property name="Cost" value="6" />
+      <property name="Cost" value="{6}" />
       <property name="CMC" value="6" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
@@ -794,7 +794,7 @@
       <property name="MultiverseId" value="1020" />
     </card>
     <card name="Shatterstorm" id="c35a91fe-3017-669d-aa93-d3276e2a1ac1">
-      <property name="Cost" value="2%%" />
+      <property name="Cost" value="{2}{R}{R}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
@@ -805,12 +805,12 @@
       <property name="MultiverseId" value="1063" />
     </card>
     <card name="Staff of Zegon" id="cb9a4354-27b6-4630-90af-aec290d38f63">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="3, `: Target creature gets -2/-0 until end of turn." />
+      <property name="Rules" value="{3}, {T}: Target creature gets -2/-0 until end of turn." />
       <property name="Artist" value="Mark Poole" />
       <property name="Flavor" value="Though Mishra was impressed by the staves Ashnod had created for Zegon's defense, he understood they only hinted at her full potential." />
       <property name="MultiverseId" value="1021" />
@@ -820,7 +820,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="`: Add 1 to your mana pool.&#xD;&#xA;&#xD;&#xA;`, Sacrifice Strip Mine: Destroy target land." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{T}, Sacrifice Strip Mine: Destroy target land." />
       <property name="Artist" value="Daniel Gelon" />
       <property name="Flavor" value="Unlike previous conflicts, the war between Urza and Mishra made Dominia itself a casualty of war." />
       <property name="MultiverseId" value="1077" />
@@ -830,7 +830,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="`: Add 1 to your mana pool.&#xD;&#xA;&#xD;&#xA;`, Sacrifice Strip Mine: Destroy target land." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{T}, Sacrifice Strip Mine: Destroy target land." />
       <property name="Artist" value="Daniel Gelon" />
       <property name="Flavor" value="Unlike previous conflicts, the war between Urza and Mishra made Dominia itself a casualty of war." />
       <property name="MultiverseId" value="1076" />
@@ -840,7 +840,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="`: Add 1 to your mana pool.&#xD;&#xA;&#xD;&#xA;`, Sacrifice Strip Mine: Destroy target land." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{T}, Sacrifice Strip Mine: Destroy target land." />
       <property name="Artist" value="Daniel Gelon" />
       <property name="Flavor" value="Unlike previous conflicts, the war between Urza and Mishra made Dominia itself a casualty of war." />
       <property name="MultiverseId" value="1078" />
@@ -850,19 +850,19 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Add 1 to your mana pool.&#xD;&#xA;&#xD;&#xA;`, Sacrifice Strip Mine: Destroy target land." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{T}, Sacrifice Strip Mine: Destroy target land." />
       <property name="Artist" value="Daniel Gelon" />
       <property name="Flavor" value="Unlike previous conflicts, the war between Urza and Mishra made Dominia itself a casualty of war." />
       <property name="MultiverseId" value="1079" />
     </card>
     <card name="Su-Chi" id="28a443f9-172d-a883-5800-dfe09da4a540">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Su-Chi dies, add 4 to your mana pool." />
+      <property name="Rules" value="When Su-Chi dies, add {C}{C}{C}{C} to your mana pool." />
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -871,49 +871,49 @@
       <property name="MultiverseId" value="1022" />
     </card>
     <card name="Tablet of Epityr" id="32cc8077-0bde-c156-0064-f932671ef058">
-      <property name="Cost" value="1" />
+      <property name="Cost" value="{1}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever an artifact you control is put into a graveyard from the battlefield, you may pay 1. If you do, you gain 1 life." />
+      <property name="Rules" value="Whenever an artifact you control is put into a graveyard from the battlefield, you may pay {1}. If you do, you gain 1 life." />
       <property name="Artist" value="Christopher Rush" />
       <property name="Flavor" value="Originally considered the work of Urza, this tablet was created by forgers seeking to imitate Urza's masterpieces." />
       <property name="MultiverseId" value="1023" />
     </card>
     <card name="Tawnos's Coffin" id="df6a15ee-0876-4f42-d6ad-56fa772f0ff7">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="You may choose not to untap Tawnos's Coffin during your untap step.&#xD;&#xA;3, `: Exile target creature and all Auras attached to it. Note the number and kind of counters that were on that creature. When Tawnos's Coffin leaves the battlefield or becomes untapped, return that exiled card to the battlefield under its owner's control tapped with the noted number and kind of counters on it. If you do, return the other exiled cards to the battlefield under their owner's control attached to that permanent." />
+      <property name="Rules" value="You may choose not to untap Tawnos's Coffin during your untap step.&#xD;&#xA;{3}, {T}: Exile target creature and all Auras attached to it. Note the number and kind of counters that were on that creature. When Tawnos's Coffin leaves the battlefield or becomes untapped, return that exiled card to the battlefield under its owner's control tapped with the noted number and kind of counters on it. If you do, return the other exiled cards to the battlefield under their owner's control attached to that permanent." />
       <property name="Artist" value="Christopher Rush" />
       <property name="MultiverseId" value="1024" />
     </card>
     <card name="Tawnos's Wand" id="7220b3da-13ba-c93d-5f61-e482e129fced">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="2, `: Target creature with power 2 or less can't be blocked this turn." />
+      <property name="Rules" value="{2}, {T}: Target creature with power 2 or less can't be blocked this turn." />
       <property name="Artist" value="Douglas Shuler" />
       <property name="MultiverseId" value="1025" />
     </card>
     <card name="Tawnos's Weaponry" id="cc529414-1297-0ab1-7c4a-b4e6a0cedeaa">
-      <property name="Cost" value="2" />
+      <property name="Cost" value="{2}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="You may choose not to untap Tawnos's Weaponry during your untap step.&#xD;&#xA;2, `: Target creature gets +1/+1 for as long as Tawnos's Weaponry remains tapped." />
+      <property name="Rules" value="You may choose not to untap Tawnos's Weaponry during your untap step.&#xD;&#xA;{2}, {T}: Target creature gets +1/+1 for as long as Tawnos's Weaponry remains tapped." />
       <property name="Artist" value="Dan Frazier" />
       <property name="Flavor" value="When Urza's war machines became too costly, Tawnos's weaponry replaced them." />
       <property name="MultiverseId" value="1026" />
     </card>
     <card name="Tetravus" id="79ce939a-a07f-0c53-3638-6697a45cbba4">
-      <property name="Cost" value="6" />
+      <property name="Cost" value="{6}" />
       <property name="CMC" value="6" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
@@ -927,7 +927,7 @@
       <property name="MultiverseId" value="1027" />
     </card>
     <card name="The Rack" id="47b74444-4c49-76da-086a-cf6ea40961cb">
-      <property name="Cost" value="1" />
+      <property name="Cost" value="{1}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
@@ -938,7 +938,7 @@
       <property name="MultiverseId" value="1028" />
     </card>
     <card name="Titania's Song" id="38b05592-9908-e10c-88eb-73b0b62e281a">
-      <property name="Cost" value="3^" />
+      <property name="Cost" value="{3}{G}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
@@ -948,17 +948,17 @@
       <property name="MultiverseId" value="1056" />
     </card>
     <card name="Transmute Artifact" id="7da0303e-daf9-31a8-9101-00729f742098">
-      <property name="Cost" value="##" />
+      <property name="Cost" value="{U}{U}" />
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Sacrifice an artifact. If you do, search your library for an artifact card. If that card's converted mana cost is less than or equal to the sacrificed artifact's converted mana cost, put it onto the battlefield. If it's greater, you may pay X, where X is the difference. If you do, put it onto the battlefield. If you don't, put it into its owner's graveyard. Then shuffle your library." />
+      <property name="Rules" value="Sacrifice an artifact. If you do, search your library for an artifact card. If that card's converted mana cost is less than or equal to the sacrificed artifact's converted mana cost, put it onto the battlefield. If it's greater, you may pay {X}, where X is the difference. If you do, put it onto the battlefield. If you don't, put it into its owner's graveyard. Then shuffle your library." />
       <property name="Artist" value="Anson Maddocks" />
       <property name="MultiverseId" value="1047" />
     </card>
     <card name="Triskelion" id="ff9ceb22-3877-80cc-8b58-82d3226a837e">
-      <property name="Cost" value="6" />
+      <property name="Cost" value="{6}" />
       <property name="CMC" value="6" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
@@ -973,13 +973,13 @@
       <property name="MultiverseId" value="1029" />
     </card>
     <card name="Urza's Avenger" id="848ba7f5-57f7-e1fc-dbe5-6bf48aee36c0">
-      <property name="Cost" value="6" />
+      <property name="Cost" value="{6}" />
       <property name="CMC" value="6" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Shapeshifter" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="0: Urza's Avenger gets -1/-1 and gains your choice of banding, flying, first strike, or trample until end of turn. (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)" />
+      <property name="Rules" value="{0}: Urza's Avenger gets -1/-1 and gains your choice of banding, flying, first strike, or trample until end of turn. (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)" />
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -988,12 +988,12 @@
       <property name="MultiverseId" value="1030" />
     </card>
     <card name="Urza's Chalice" id="1c7a2094-896b-e3a3-8b5f-7dea96161287">
-      <property name="Cost" value="1" />
+      <property name="Cost" value="{1}" />
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever a player casts an artifact spell, you may pay 1. If you do, you gain 1 life." />
+      <property name="Rules" value="Whenever a player casts an artifact spell, you may pay {1}. If you do, you gain 1 life." />
       <property name="Artist" value="Jeff A. Menges" />
       <property name="Flavor" value="When sorely wounded or tired, Urza would often retreat to the workshops of his apprentices. They were greatly amazed at how much better he looked each time he took a sip of water." />
       <property name="MultiverseId" value="1031" />
@@ -1004,7 +1004,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Mine" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add 2 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead." />
       <property name="Artist" value="Anson Maddocks" />
       <property name="Flavor" value="Mines became common as cities during the days of the artificers." />
       <property name="MultiverseId" value="1083" />
@@ -1015,7 +1015,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Mine" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add 2 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead." />
       <property name="Artist" value="Anson Maddocks" />
       <property name="Flavor" value="Mines became common as cities during the days of the artificers." />
       <property name="MultiverseId" value="1080" />
@@ -1026,7 +1026,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Mine" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add 2 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead." />
       <property name="Artist" value="Anson Maddocks" />
       <property name="Flavor" value="Mines became common as cities during the days of the artificers." />
       <property name="MultiverseId" value="1082" />
@@ -1037,18 +1037,18 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Mine" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add 2 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} to your mana pool instead." />
       <property name="Artist" value="Anson Maddocks" />
       <property name="Flavor" value="Mines became common as cities during the days of the artificers." />
       <property name="MultiverseId" value="1081" />
     </card>
     <card name="Urza's Miter" id="d1e65deb-b364-08ff-d19e-633a906fa544">
-      <property name="Cost" value="3" />
+      <property name="Cost" value="{3}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Whenever an artifact you control is put into a graveyard from the battlefield, if it wasn't sacrificed, you may pay 3. If you do, draw a card." />
+      <property name="Rules" value="Whenever an artifact you control is put into a graveyard from the battlefield, if it wasn't sacrificed, you may pay {3}. If you do, draw a card." />
       <property name="Artist" value="Randy Asplund-Faith" />
       <property name="MultiverseId" value="1032" />
     </card>
@@ -1058,7 +1058,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Power-Plant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Mine and an Urza's Tower, add 2 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead." />
       <property name="Artist" value="Mark Tedin" />
       <property name="Flavor" value="Artifact construction requires immense resources." />
       <property name="MultiverseId" value="1085" />
@@ -1069,7 +1069,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Power-Plant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Mine and an Urza's Tower, add 2 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead." />
       <property name="Artist" value="Mark Tedin" />
       <property name="Flavor" value="Artifact construction requires immense resources." />
       <property name="MultiverseId" value="1084" />
@@ -1080,7 +1080,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Power-Plant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Mine and an Urza's Tower, add 2 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead." />
       <property name="Artist" value="Mark Tedin" />
       <property name="Flavor" value="Artifact construction requires immense resources." />
       <property name="MultiverseId" value="1086" />
@@ -1091,7 +1091,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Power-Plant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Mine and an Urza's Tower, add 2 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Tower, add {C}{C} to your mana pool instead." />
       <property name="Artist" value="Mark Tedin" />
       <property name="Flavor" value="Artifact construction requires immense resources." />
       <property name="MultiverseId" value="1087" />
@@ -1102,7 +1102,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Tower" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add 3 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead." />
       <property name="Artist" value="Mark Poole" />
       <property name="Flavor" value="Urza always put Tocasia's lessons on resource-gathering to effective use." />
       <property name="MultiverseId" value="1088" />
@@ -1113,7 +1113,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Tower" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add 3 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead." />
       <property name="Artist" value="Mark Poole" />
       <property name="Flavor" value="Urza always put Tocasia's lessons on resource-gathering to effective use." />
       <property name="MultiverseId" value="1091" />
@@ -1124,7 +1124,7 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Tower" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add 3 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead." />
       <property name="Artist" value="Mark Poole" />
       <property name="Flavor" value="Urza always put Tocasia's lessons on resource-gathering to effective use." />
       <property name="MultiverseId" value="1090" />
@@ -1135,13 +1135,13 @@
       <property name="Type" value="Land" />
       <property name="Subtype" value="Urza’s Tower" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Add 1 to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add 3 to your mana pool instead." />
+      <property name="Rules" value="{T}: Add {C} to your mana pool. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} to your mana pool instead." />
       <property name="Artist" value="Mark Poole" />
       <property name="Flavor" value="Urza always put Tocasia's lessons on resource-gathering to effective use." />
       <property name="MultiverseId" value="1089" />
     </card>
     <card name="Wall of Spears" id="3caf9595-00b3-41c3-48ec-3fca86396632">
-      <property name="Cost" value="3" />
+      <property name="Cost" value="{3}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
@@ -1156,7 +1156,7 @@
       <property name="MultiverseId" value="1033" />
     </card>
     <card name="Weakstone" id="a8cc5723-ff03-364e-f94b-3777e2f76d82">
-      <property name="Cost" value="4" />
+      <property name="Cost" value="{4}" />
       <property name="CMC" value="4" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
@@ -1167,13 +1167,13 @@
       <property name="MultiverseId" value="1034" />
     </card>
     <card name="Xenic Poltergeist" id="930997ce-94ca-d688-8361-adbd9e28e33a">
-      <property name="Cost" value="1$$" />
+      <property name="Cost" value="{1}{B}{B}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spirit" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="`: Until your next upkeep, target noncreature artifact becomes an artifact creature with power and toughness each equal to its converted mana cost." />
+      <property name="Rules" value="{T}: Until your next upkeep, target noncreature artifact becomes an artifact creature with power and toughness each equal to its converted mana cost." />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1181,7 +1181,7 @@
       <property name="MultiverseId" value="1048" />
     </card>
     <card name="Yawgmoth Demon" id="9b09f24f-a503-93e7-77e5-32021a6b62e6">
-      <property name="Cost" value="4$$" />
+      <property name="Cost" value="{4}{B}{B}" />
       <property name="CMC" value="6" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
@@ -1195,7 +1195,7 @@
       <property name="MultiverseId" value="1049" />
     </card>
     <card name="Yotian Soldier" id="d62b9604-651c-e98c-0109-7ee0c63dd79f">
-      <property name="Cost" value="3" />
+      <property name="Cost" value="{3}" />
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
