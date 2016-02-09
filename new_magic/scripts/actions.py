@@ -325,7 +325,9 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
     dlg.label = "Top of Library"
     dlg.bottomLabel = "Bottom of Library"
     dlg.text = "Reorder scryed cards to the top or bottom.\n\n(Close window to cancel scry.)"
-    if dlg.show() == None: return
+    if dlg.show() == None:
+        notify("{} has cancelled a scry for {}.".format(me, count))
+        return ## closing the dialog window will cancel the scry, not moving any cards, but peek status will stay on to prevent cheating.
     for c in reversed(dlg.list):
         c.moveTo(group)
     for c in dlg.bottomList:

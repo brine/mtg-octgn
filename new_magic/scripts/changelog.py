@@ -143,5 +143,8 @@ changelog = {
         "Upgraded all python scripts to 3.1.0.2 API version",
         "Fixed bug with creating multiple tokens",
         "Cloning a token will copy the artwork"
+        ]),
+    3030001: ("3.3.0.1", "February 9 2016", [
+        "Fixed a bug with scry window not reporting when cancelled."
         ])
 }
