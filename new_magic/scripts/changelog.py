@@ -146,5 +146,8 @@ changelog = {
         ]),
     3030001: ("3.3.0.1", "February 9 2016", [
         "Fixed a bug with scry window not reporting when cancelled."
+        ]),
+    3030100: ("3.3.1.0", "March 29 2016", [
+        "Added Shadows over Innistrad and Blessed vs Cursed."
         ])
 }
