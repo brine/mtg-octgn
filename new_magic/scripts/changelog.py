@@ -150,7 +150,7 @@ changelog = {
     3030100: ("3.3.1.0", "March 29 2016", [
         "Added Shadows over Innistrad and Blessed vs Cursed."
         ]),
-    3030102: ("3.3.1.2", "June 8 2016", [
+    3030103: ("3.3.1.3", "June 8 2016", [
         "Added Eternal Masters."
         ])
 }
