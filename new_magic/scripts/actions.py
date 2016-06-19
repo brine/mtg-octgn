@@ -44,7 +44,7 @@ debugMode = False
 alignIgnore = []
 
 stackDict = {} ## Needs to move to a global variable for game reconnects
-costMemory = (0,0)
+
 #---------------------------------------------------------------------------
 # Event Stuff
 #---------------------------------------------------------------------------
@@ -100,9 +100,6 @@ def moveEvent(args):
 
 def initializeGame():
     mute()
-    #### INITIALIZE VARIABLES
-    global debugMode
-    debugMode = getSetting("debugTimer", "False")
     #### LOAD UPDATES
     v1, v2, v3, v4 = gameVersion.split('.')  ## split apart the game's version number
     v1 = int(v1) * 1000000
@@ -335,63 +332,32 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
     notify("{} scryed for {}, {} on top, {} on bottom.".format(me, count, len(dlg.list), len(dlg.bottomList)))
     group.visibility = "none"
 
-def scryold(group = me.Library, x = 0, y = 0, count = None):
-    mute()
-    if count == None:
-        count = askInteger("Scry how many cards?", 1)
-    if count == None or count == 0:
-        return
-    topCards = []
-    for c in group.top(count):
-        topCards.append(c)
-        c.peek()
-    topList = []  ## This will store the cards selected for the top of the pile
-    bottomList = []  ## For cards going to the bottom of the pile
-    loop = 'BOTTOM'  ## Start with choosing cards to put on bottom
-    while loop != None:
-        dlg = cardDlg(topCards)
-        dlg.title = "Scry"
-        dlg.text = "Select a card to place on {}:\n(Close window to {})\n\n{}\n///////DECK///////\n{}".format(
-                    loop,
-                    'switch to TOP' if loop == 'BOTTOM' else 'cancel scrying',
-                    '\n'.join([c.Name for c in topList]),
-                    '\n'.join([c.Name for c in bottomList]))
-        cards = dlg.show()
-        if loop == 'TOP':
-            if cards == None:
-                notify("{} has cancelled a scry for {}.".format(me, count))
-                return ## closing the dialog window will cancel the scry, not moving any cards, but peek status will stay on.
-            else:
-                topCards.remove(cards[0])
-                topList.insert(0, cards[0])
-        else:
-            if cards == None:
-                loop = 'TOP'
-            else:
-                topCards.remove(cards[0])
-                bottomList.append(cards[0])
-        if len(topCards) == 0: ##  End the loop
-            loop = None
-    topList.reverse()  ## Gotta flip topList so the moveTo's go in the right order
-    for c in topList:
-        c.moveTo(group)
-    for c in bottomList:
-        c.moveToBottom(group)
-    notify("{} scryed for {}, {} on top, {} on bottom.".format(me, count, len(topList), len(bottomList)))
-    group.visibility = "none"
-
 def play(card, x = 0, y = 0):
     mute()
-    timer = time.clock()
+    text = ''
     if autoscriptCheck() == "True":
-        if card.group == me.hand:
+        src = card.group
+        if src == me.hand:
             srcText = ""
         else:
             srcText = " from {}".format(card.group.name)
-        text = autoParser(card, 'cast')
-        timer = debugWhisper("play1", card, timer)
-        if text != "BREAK":
-            timer = time.clock()
+        ## Deal with Split cards
+        if 'splitA' in card.alternates:
+            splitRules = [card.alternateProperty('splitA', 'Rules'),
+                          card.alternateProperty('splitB', 'Rules')]
+            splitFlags = ['A','B']
+            ## splitC is the fused split card
+            if 'splitC' in card.alternates and src == me.hand:
+                splitRules.append('Fuse both sides')
+                splitFlags.append('C')
+            choice = askChoice('Cast which side of {}?'.format(card.name), splitRules)
+            if choice == 0: ## closing the window will cancel the Cast
+                return
+            stackData = autoCast(card, split = splitFlags[choice - 1])
+        else:
+            stackData = autoCast(card)
+        if stackData != "BREAK":
+            text += stackData['text']
             ## Checks to see if the cast card is an Aura, then check to see if a target was made to resolve-attach to
             if (card.Subtype != None and re.search(r'Aura', card.Subtype)) or re.search(r'Bestow ', card.Rules):  ## Automatically register the card as an attachment if it's an Aura or Bestow
                 target = (card for card in table if card.targetedBy)
@@ -403,31 +369,28 @@ def play(card, x = 0, y = 0):
                         targetcard.target(False)
                         setGlobalVariable('cattach', str(cattach))
                         text += ", targeting {}".format(targetcard)
-            timer = debugWhisper("play2", card, timer)
             ## If its a land, automatically resolve it
             if re.search('Land', card.Type):
-                text += autoParser(card, 'resolve')
+                resData = autoResolve(card)
+                if resData != "BREAK":
+                    text += resData['text']
                 notify("{} plays {}{}.".format(me, card, text))
-                autoParser(card, 'etb')
-                timer = debugWhisper("play3", card, timer)
+                cardalign()
+                etbData = autoTrigger(card, 'etb', cost = resData['cost'], x = resData['x'])
             else:
                 modeTuple = stackDict[card]['mode']
                 if modeTuple[0] == 0:
                     notify("{} casts {}{}{}.".format(me, card, srcText, text))
                 else:
                     notify("{} casts {} (mode #{}){}{}.".format(me, card, modeTuple[0], srcText, text))
-                timer = debugWhisper("play4", card, timer)
-            cardalign()
-            timer = debugWhisper("play5", card, timer)
     else:
+        src = card.group.name
         if re.search("Instant", card.Type) or re.search("Sorcery", card.Type):
             card.moveTo(card.owner.Graveyard)
         else:
             card.moveToTable(defaultX, defaultY)
-        notify("{} plays {} from their {}.".format(me, card, card.group.name))
-        timer = debugWhisper("play6", card, timer)
+        notify("{} plays {} from their {}.".format(me, card, src))
         cardalign()
-        timer = debugWhisper("play7", card, timer)
 
 def flashback(card, x = 0, y = 0):
     mute()
@@ -439,7 +402,6 @@ def batchResolve(cards, x = 0, y = 0):
     mute()
     for card in cards:
         resolve(card)
-    cardalign()
 
 def resolve(card, x = 0, y = 0):
     mute()
@@ -447,35 +409,37 @@ def resolve(card, x = 0, y = 0):
     if autoscriptCheck() == "True":
         ## double-clicking a suspended card
         if counters['suspend'] in card.markers:
+            ## Remove a time counter
             if counters['time'] in card.markers:
                 card.markers[counters['time']] -= 1
+            ## Check if there's still any time counters left on the card
             if counters['time'] in card.markers:
                 notify("{} removed a time counter from suspended {}.".format(me, card))
             else:
-                text = autoParser(card, 'cast')
-                if text != "BREAK":
+                ## Cast the suspended card
+                stackData = autoCast(card)
+                if stackData != "BREAK":
                     card.markers[counters['suspend']] = 0
-                    notify("{} casts suspended {}{}.".format(me, card, text))
-            return
+                    notify("{} casts suspended {}{}.".format(me, card, stackData['text']))
         ## double-clicking cards on the stack will resolve them
-        if card in stackDict:
-            stackData = stackDict[card]
-            text = autoParser(card, 'resolve')
+        elif card in stackDict:
+            stackData = autoResolve(card)
             if stackData['class'] == 'miracle':
                 if stackData['src'] in me.hand:
                     play(stackData['src'])
                 else:
                     notify("{}'s {} Miracle trigger is countered (no longer in hand.)".format(me, card))
             else:
-                notify("{} resolves {} ({}){}".format(me, card, stackData['class'], text))
+                notify("{} resolves {} ({}){}.".format(me, card, stackData['class'], stackData['text']))
             if stackData['moveto'] == 'exile':
                 card.moveTo(card.owner.piles['Exiled Zone'])
             elif card.isFaceUp == False or (stackData['class'] == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type)): #handles permanents etb triggers
-                autoParser(card, 'etb')
+                etbData = autoTrigger(stackData['src'], 'etb', cost = stackData['cost'], x = stackData['x'])
             else: #non-permanents and ability triggers are sent to graveyard after resolution
                 card.moveTo(card.owner.Graveyard)
+            cardalign()
+        ## double-clicking a card in play just taps it
         else:
-            ## double-clicking a card in play just taps it
             card.orientation ^= Rot90
             if card.orientation & Rot90 == Rot90:
                 notify('{} taps {}'.format(me, card))
@@ -492,13 +456,12 @@ def batchDestroy(cards, x = 0, y = 0):
     mute()
     for card in cards:
         destroy(card)
-    cardalign()
 
 def destroy(card, x = 0, y = 0):
     mute()
-    global stackDict
     src = card.group
     if autoscriptCheck() == "True" and src == table:
+        global stackDict
         if card in stackDict: #Destroying a card on a stack is considered countering that spell
             if stackDict[card]['moveto'] == 'exile':
                 card.moveTo(card.owner.piles['Exiled Zone'])
@@ -506,26 +469,31 @@ def destroy(card, x = 0, y = 0):
                 card.moveTo(card.owner.Graveyard)
             del stackDict[card]
             notify("{}'s {} was countered.".format(me, card))
-            return
-        text = autoParser(card, 'destroy')
-        if text != "BREAK":
-            card.moveTo(card.owner.Graveyard)
-            notify("{} destroys {}{}.".format(me, card, text))
+        else:
+            stackData = autoTrigger(card, 'destroy')
+            if stackData != "BREAK":
+                card.moveTo(card.owner.Graveyard)
+                notify("{} destroys {}{}.".format(me, card, stackData['text']))
     else:
         card.moveTo(card.owner.Graveyard)
         notify("{} destroys {}.".format(me, card))
+        cardalign()
 
 def discard(card, x = 0, y = 0):
     mute()
     src = card.group
     if autoscriptCheck() == "True":
         if src == me.hand:  ## Only run discard scripts if the card is discarded from hand
-            text = autoParser(card, 'discard')
+            stackData = autoTrigger(card, 'discard')
+            if stackData != "BREAK":
+      ##          for x in stackData:
+      ##              notify("{}~{}".format(x, stackData[x]))
+                if stackData['moveto'] == None:
+                    card.moveTo(card.owner.Graveyard)
+                notify("{} discards {} from hand{}.".format(me, card, stackData['text']))
         else:
-            text = ""
-        if text != "BREAK":
             card.moveTo(card.owner.Graveyard)
-            notify("{} discards {} from {}{}.".format(me, card, src, text))
+            notify("{} discards {} from {}.".format(me, card, src))
     else:
         card.moveTo(card.owner.Graveyard)
         notify("{} discards {} from {}.".format(me, card, src))
@@ -534,26 +502,25 @@ def batchExile(cards, x = 0, y = 0):
     mute()
     for card in cards:
         exile(card)
-    cardalign()
 
 def exile(card, x = 0, y = 0):
     mute()
     src = card.group
     if autoscriptCheck() == "True" and src == table:
-        text = autoParser(card, 'exile')
-        if text != "BREAK":
+        stackData = autoTrigger(card, 'exile')
+        if stackData != "BREAK":
             card.moveTo(card.owner.piles['Exiled Zone'])
-            notify("{} exiles {}{}.".format(me, card, text))
+            notify("{} exiles {}{}.".format(me, card, stackData['text']))
     else:
         fromText = " from the battlefield" if src == table else " from their " + src.name
         card.moveTo(card.owner.piles['Exiled Zone'])
         notify("{} exiles {}{}.".format(me, card, fromText))
+        cardalign()
 
 def batchAttack(cards, x = 0, y = 0):
     mute()
     for card in cards:
         attack(card)
-    cardalign()
 
 def attack(card, x = 0, y = 0):
     mute()
@@ -569,9 +536,9 @@ def attack(card, x = 0, y = 0):
             card.highlight = AttackDoesntUntapColor
         else:
             card.highlight = AttackColor
-        text = autoParser(card, 'attack')
-        if text != "BREAK":
-            notify("{} attacks with {}{}.".format(me, card, text))
+        stackData = autoTrigger(card, 'attack')
+        if stackData != "BREAK":
+            notify("{} attacks with {}{}.".format(me, card, stackData['text']))
     else:
         card.orientation |= Rot90
         if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
@@ -579,12 +546,12 @@ def attack(card, x = 0, y = 0):
         else:
             card.highlight = AttackColor
         notify('{} attacks with {}'.format(me, card))
+        cardalign()
 
 def batchAttackWithoutTapping(cards, x = 0, y = 0):
     mute()
     for card in cards:
         attackWithoutTapping(card)
-    cardalign()
 
 def attackWithoutTapping(card, x = 0, y = 0):
     mute()
@@ -599,21 +566,21 @@ def attackWithoutTapping(card, x = 0, y = 0):
             card.highlight = AttackDoesntUntapColor
         else:
             card.highlight = AttackColor
-        text = autoParser(card, 'attack')
-        if text != "BREAK":
-            notify("{} attacks without tapping with {}{}.".format(me, card, text))
+        stackData = autoTrigger(card, 'attack')
+        if stackData != "BREAK":
+            notify("{} attacks without tapping with {}{}.".format(me, card, stackData['text']))
     else:
         if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
             card.highlight = AttackDoesntUntapColor
         else:
             card.highlight = AttackColor
         notify('{} attacks without tapping with {}'.format(me, card))
+        cardalign()
 
 def batchBlock(cards, x = 0, y = 0):
     mute()
     for card in cards:
         block(card)
-    cardalign()
 
 def block(card, x = 0, y = 0):
     mute()
@@ -622,43 +589,40 @@ def block(card, x = 0, y = 0):
             card.highlight = BlockDoesntUntapColor
         else:
             card.highlight = BlockColor
-        text = autoParser(card, 'block')
-        if text != "BREAK":
-            notify("{} blocks with {}{}.".format(me, card, text))
+        stackData = autoTrigger(card, 'block')
+        if stackData != "BREAK":
+            notify("{} blocks with {}{}.".format(me, card, stackData['text']))
     else:
         if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
             card.highlight = BlockDoesntUntapColor
         else:
             card.highlight = BlockColor
         notify('{} blocks with {}'.format(me, card))
+        cardalign()
 
 def batchActivate(cards, x = 0, y = 0):
     mute()
     for card in cards:
         activate(card)
-    cardalign()
 
 def activate(card, x = 0, y = 0):
     mute()
     if autoscriptCheck() == "True":
-        text = autoParser(card, 'acti')
-        if text != "BREAK":
-            (num, text) = text
-            notify("{} activates {}'s ability #{}{}.".format(me, card, num, text))
+        stackData = autoTrigger(card, 'acti')
+        if stackData != "BREAK":
+            notify("{} activates {}'s ability #{}{}.".format(me, card, stackData['acti'][0], stackData['text']))
     else:
         notify("{} uses {}'s ability.".format(me, card))
+        cardalign()
 
 def morph(card, x = 0, y = 0):
     mute()
     if autoscriptCheck() == "True":
         card.isFaceUp = False
-        text = autoParser(card, 'cast', True)
+        stackData = autoCast(card, morph = True)
+        notify("{} casts a card face-down.".format(me))
         card.peek()
         cardalign()
-        if text == "BREAK":
-            card.isFaceUp = True
-        else:
-            notify("{} casts a card face-down.".format(me))
     else:
         notify("{} casts a card face-down from their {}.".format(me, card.group.name))
         card.moveToTable(defaultX, defaultY, True)
@@ -702,11 +666,12 @@ def transform(card, x = 0, y = 0):
             if autoscriptCheck() == "True":
                 card.peek()
                 rnd(1,10)
-                text = autoParser(card, 'morph') ## The card will flip up in the autoParser
+                card.isFaceUp = True
+                stackData = autoTrigger(card, 'morph') ## The card will flip up in the autoParser
                 card.markers[counters['manifest']] = 0
                 cardalign()
-                if text != "BREAK":
-                    notify("{} morphs {} face up{}.".format(me, card, text))
+                if stackData != "BREAK":
+                    notify("{} morphs {} face up{}.".format(me, card, stackData['text']))
             else:
                 card.isFaceUp = True
                 card.markers[counters['manifest']] = 0
@@ -728,14 +693,12 @@ def blink(card, x = 0, y = 0):
     src = card.group
     if src == table:
         if autoscriptCheck() == "True":
-            text = autoParser(card, 'exile')
+            exileData = autoTrigger(card, 'exile')
             if text == "BREAK":
                 return
             card.moveTo(card.owner.piles['Exiled Zone'])
             cardalign()
             card.moveToTable(defaultX, defaultY)
-            autoParser(card, 'cast', True)
-            cardalign()
             notify("{} blinks {}.".format(me, card))
         else:
             clear(card)
@@ -974,14 +937,14 @@ def draw(group, x = 0, y = 0):
     if re.search(r'Miracle ', card.Rules):
         if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.Name, card.Rules)):
             if autoscriptCheck() == "True":
-                text = autoParser(card, 'miracle')
+                stackData = autoTrigger(card, 'miracle', forceCreate = True)
                 card.highlight = MiracleColor
                 cardalign()
+                notify("{} draws a miracle {}{}.".format(me, card, stackData['text']))
             else:
                 miracletrig = card
                 miracletrig.moveToTable(defaultX, defaultY)
-                text = ""
-            notify("{} draws a miracle {}{}.".format(me, card, text))
+                notify("{} draws a miracle {}.".format(me, card))
             return
     notify("{} draws a card.".format(me))
 
