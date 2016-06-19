@@ -484,13 +484,12 @@ def discard(card, x = 0, y = 0):
     src = card.group
     if autoscriptCheck() == "True":
         if src == me.hand:  ## Only run discard scripts if the card is discarded from hand
+            card.moveTo(card.owner.Graveyard)
             stackData = autoTrigger(card, 'discard')
+            text = ""
             if stackData != "BREAK":
-      ##          for x in stackData:
-      ##              notify("{}~{}".format(x, stackData[x]))
-                if stackData['moveto'] == None:
-                    card.moveTo(card.owner.Graveyard)
-                notify("{} discards {} from hand{}.".format(me, card, stackData['text']))
+                text = stackData['text']
+            notify("{} discards {} from hand{}.".format(me, card, text))
         else:
             card.moveTo(card.owner.Graveyard)
             notify("{} discards {} from {}.".format(me, card, src))

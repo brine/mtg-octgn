@@ -327,6 +327,7 @@ def autoTrigger(card, tagClass, forceCreate = False, cost = 0, x = 0):
     if forceCreate == True or (stackData['cost'] > 0 and stackData['costres'] != None) or (stackData['cost'] == 0 and stackData['res'] != None):
         global stackDict
         stackCard = table.create(stackData['src'].model, 0, 0)
+        stackCard.alternate = stackData['src'].alternate
         stackDict[stackCard] = stackData
         addStackMarkers(stackCard)
         resetPriority()
@@ -335,7 +336,9 @@ def autoTrigger(card, tagClass, forceCreate = False, cost = 0, x = 0):
 
 def autoResolve(card):
     mute()
-    stackData = checkCosts(card, stackDict[card])
+    stackData = stackDict[card]
+    stackData['text'] = ''
+    stackData = checkCosts(card, stackData)
     if stackData == "BREAK":
         return "BREAK"
     parseScripts(card, stackData)
@@ -646,10 +649,23 @@ def automoveto(card, pile):
             card.moveTo(card.owner.Graveyard)
             text = "graveyard" + stackData['text']
         elif re.search(r'stack', pile):
-            stackData = autoCast(card, 'cast')
+            stackData = autoCast(card)
             if stackData == "BREAK":
                 return ''
             text = "stack" + stackData['text']
+        elif re.search(r'table', pile):
+            text = 'battlefield'
+            alternate = card.alternate
+            stackData = autoCast(card)
+            if stackData == "BREAK":
+                return ''
+            text += stackData['text']
+            card.alternate = alternate
+            resolveData = autoResolve(card)
+            if resolveData == "BREAK":
+                return ''
+            text += resolveData['text']
+            etbData = autoTrigger(card, 'etb', cost = resolveData['cost'], x = resolveData['x'])
     return ", moving to {}".format(text)
 
 def autolife(card, stackData, tag):
