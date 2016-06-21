@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.3.1.5" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.3.2.0" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://www.octgngames.com/mtg/download-links/" gameurl="http://www.octgngames.com/mtg/" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -98,6 +98,7 @@
     <cardaction menu="Attack" shortcut="ctrl+A" batchExecute="batchAttack" />
     <cardaction menu="Attack without tapping" shortcut="ctrl+shift+A" batchExecute="batchAttackWithoutTapping" />
     <cardaction menu="Block" shortcut="ctrl+B" batchExecute="batchBlock" />
+    <cardaction menu="Use Activated Ability" shortcut="ctrl+Z" execute="activate" />
     <cardaction menu="Attach to Targeted Card" shortcut="ctrl+Q" execute="attach" />
     <cardaction menu="Morph/Transform/Flip Card" shortcut="ctrl+F" execute="transform" />
     <cardaction menu="Turn Face-Up/Down" shortcut="ctrl+shift+F" execute="flip" />
@@ -111,7 +112,6 @@
     <cardaction menu="Shuffle Cards to Bottom of Library"  batchExecute="libraryBottomAllShuffle" />
     <cardaction menu="Move to Hand" shortcut="ctrl+H" execute="tohand" />
     <cardaction menu="Clear Card" shortcut="esc" execute="clear" />
-    <cardaction menu="Use Activated Ability" shortcut="ctrl+Z" execute="activate" />
     <cardactions menu="Add/Remove Counters...">
       <cardaction menu="Auto-Add Counter" shortcut="ctrl+1" execute="autoAddMarker" />
       <cardaction menu="Add +1/+1 Counter" shortcut="ctrl+2" execute="addPlusOneMarker" />

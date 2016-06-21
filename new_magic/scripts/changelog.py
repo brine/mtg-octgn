@@ -152,5 +152,11 @@ changelog = {
         ]),
     3030103: ("3.3.1.3", "June 8 2016", [
         "Added Eternal Masters."
+        ]),
+    3030200: ("3.3.2.0", "June 21 2016", [
+        "Madness now works properly.",
+        "",
+        "Substantial rewrite of autoscript engine. Hopefully everything still works, there shouldn't be any noticeable changes for players.",
+        "Please report any errors or unusual gameplay behaviour to OCTGN chat (ping brine) or the issue tracker at http://www.github.com/brine/mtg-octgn/issues"
         ])
 }
