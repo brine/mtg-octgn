@@ -158,5 +158,8 @@ changelog = {
         "",
         "Substantial rewrite of autoscript engine. Hopefully everything still works, there shouldn't be any noticeable changes for players.",
         "Please report any errors or unusual gameplay behaviour to OCTGN chat (ping brine) or the issue tracker at http://www.github.com/brine/mtg-octgn/issues"
+        ]),
+    3030300: ("3.3.3.0", "July 13 2016", [
+        "Eldritch Moon is now available."
         ])
 }

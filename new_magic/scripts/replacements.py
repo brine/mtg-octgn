@@ -180,6 +180,7 @@ tokenTypes = {
     'eldrazi1010c': ('10 / 10 Colorless Eldrazi', '7154d235-16b1-4c88-934e-5e91cb75340d'),
     'scion11c': ('1 / 1 Colorless Eldrazi Scion', '7154d235-16b1-4c88-934e-5e91cb75340d'),
     'spawn01c': ('0 / 1 Colorless Eldrazi Spawn', 'cd04254c-b9ba-47d4-a21e-47845832bd09'),
+    'eldrazihorror32c': ('3 / 2 Colorless Eldrazi Horror', '80a30ec1-8fec-4f15-9ce7-1dfe90bf48c8'),
     'elemental44w': ('4 / 4 White Elemental', '401c9416-4b6b-477c-9bef-6fce5a9d4e84'),
     'elemental10u': ('1/ 0 Blue Elemental', 'e9969757-cb36-4ff2-b8da-048c5d4934b9'),
     'elemental22u': ('2 / 2 Blue Elemental', 'f31761bf-3bad-4b26-83e3-53a7435c2c02'),
@@ -250,9 +251,10 @@ tokenTypes = {
     'horror**c': ('* / * Colorless Horror', 'ae7470fa-052f-4daa-b44a-ec3949a67845'),
     'hound11g': ('1 / 1 Green Hound', 'f8a41ed4-4a9e-4f7f-a7f1-2016d4c92771'),
     'human11w': ('1 / 1 White Human', 'b5ac6482-c72f-42c6-a5b6-983f4ecf5016'), #DKA AVR FNM
-    'humansoldier11w': ('1/1 White Human Soldier', '691f0ab6-8e91-4133-bf30-89bb751ab403'),
-    'humancleric11m': ('1/1 White Black Human Cleric', '143a2f52-9de1-429b-abec-71cca5bbec90'),
     'human11r': ('1/1 Red Human', 'f05acb33-16f2-41a4-acb5-dad4e6659b90'),
+    'humancleric11m': ('1/1 White Black Human Cleric', '143a2f52-9de1-429b-abec-71cca5bbec90'),
+    'humansoldier11w': ('1/1 White Human Soldier', '691f0ab6-8e91-4133-bf30-89bb751ab403'),
+    'humanwizard11u': ('1/1 Blue Human Wizard', 'f0cc8106-5d4c-4308-adb8-070d8e8e23d0'),
     'hydra**g': ('*/* Green Hydra', 'fa61b41d-b3ab-452f-a3a8-4c68b6c6ed73'),
     'illusion11u': ('1 / 1 Blue Illusion', 'a7411656-5fe2-466b-98dd-5b943bb97164'), #MMA CHK
     'illusion22u': ('2 / 2 Blue Illusion', 'fdd96bcf-75cc-477d-981a-b65e336623f5'),
@@ -337,7 +339,7 @@ tokenTypes = {
     'spawn22c': ('2 / 2 Colorless Spawn', '1f910c89-a64f-434c-9e92-4f4a2351d32b'),
     'sphinx44u': ('4 / 4 Blue Sphinx', '60745397-0984-4c07-b469-42bb455680d1'),
     'spider24b': ('2 / 4 Black Spider', 'bb591290-2112-44a6-8967-a8c3aff0b549'),
-    'spider12g': ('1 / 2 Green Spider', 'e48bb912-1d32-42c1-9e5c-59a4f30c9c25'), #SHA ISD
+    'spider12g': ('1 / 2 Green Spider', 'e48bb912-1d32-42c1-9e5c-59a4f30c9c25'), #SHA ISD EMN
     'spider13g': ('1 / 3 Green Spider', 'f99bdf70-8d00-46a2-9534-f720715f0138'),
     'spike11g': ('1 / 1 Green Spike', '4fcca1a1-08b0-4128-9618-b1780b260098'),
     'spirit11w': ('1 / 1 White Spirit', 'aeabe1d8-67ac-4a87-a0d0-e642c2914843'), #SHA MPRPLS DDC ISD AVR CNS M15 KTK FRF SOI
@@ -394,7 +396,7 @@ tokenTypes = {
     'wurm66g': ('6 / 6 Green Wurm', '4e259c1c-f66a-444a-9c08-6e6bdc42db23'), #M12 MPRODY
     'wurm66b': ('6 / 6 Black Wurm', '5e914c05-f6a8-46f3-bd58-e32c83c386a7'),
     'wurm**g': ('* / * Green Wurm', '6c6cf231-531b-4273-a6e5-383c476ec1c7'),
-    'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK DTK OGW SOI
+    'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK DTK OGW SOI EMN EMN EMN EMN
     'zombie22b2': ('2 / 2 Black Zombie', 'ebc67e29-00a2-4a72-806b-915fa5f9d75e'), #enchantment
     'zombie**u': ('* / * Blue Zombie', 'bcb88192-ce2f-4288-8799-c9264b38c78f'),
     'zombie**b': ('* / * Black Zombie', '5de01d24-b85f-4ca2-8868-d0a2adec7904'),
@@ -419,6 +421,7 @@ tokenTypes = {
     'kothemblem': ("Koth's Emblem", '38365196-9a15-4f78-a525-d01a80f94ace'),
     'lilianaemblem': ("Liliana's Emblem", '87d3cdb3-a9bd-4fc0-9f47-36d0a17344ff'),
     'lilianaemblem2': ("Liliana's Emblem", '2066641c-49f9-40a0-b93d-a0f02164efb0'),
+    'lilianaemblem3': ("Liliana's Emblem", '7e989d06-4bf4-4182-b65d-df391de89763'), #Last Hope
     'narsetemblem': ("Narset's Emblem", '5ed2ac04-ea4f-4746-bbe0-25ccb6e953cf'),
     'obnixilisemblem': ("Ob Nixilis's Emblem", '1622a22a-a22a-4a47-8969-eef8632bde23'),
     'obnixilisemblem2': ("Ob Nixilis's Emblem", '86423661-6c13-4c19-a169-6a248cc4b9d9'),
@@ -426,6 +429,7 @@ tokenTypes = {
     'sorinemblem': ("Sorin's Emblem", 'b916e959-5a1d-4903-850a-95544f6ae566'),
     'sorinemblem2': ("Sorin's Emblem", '9473211d-25a2-406d-bc0f-df0cf92ed2cc'),
     'tamiyoemblem': ("Tamiyo's Emblem", '638f93d1-0c9d-45b5-a0c3-487d4590a7a3'),
+    'tamiyoemblem2': ("Tamiyo's Emblem", '3c7ea890-96c6-47d2-b221-21c8278f2af4'), #Field Researcher
     'teferiemblem': ("Teferi's Emblem", '4863a0dc-9d01-49c1-a906-34730019eaef'),
     'venseremblem': ("Venser's Emblem", '3ec344de-90cb-480e-94be-96ff4ff774af')
 }
