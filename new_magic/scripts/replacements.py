@@ -120,6 +120,7 @@ tokenTypes = {
     'ape33g': ('3 / 3 Green Ape', '1667d12a-4beb-4754-bf77-6fd1d23e12ff'),
     'ashayatheawokenworld44g': ('4/4 Green Ashaya, the Awoken World', '2f7b9897-8819-42c8-885e-aab0e94faeae'),
     'assassin11b': ('1/1 Black Assassin', 'f960e50c-0eeb-444d-990c-be2cbec88385'),
+    'assassin11b2': ('1/1 Black Assassin', '8e7308ed-727b-465d-9d8b-7ada62ed827e'), #CN2
     'assemblyworker22c': ('2 / 2 Colorless Assembly Worker', '6c4d590f-a3c8-4d94-b113-a586c471c2a2'),
     'avatar**w': ('* / * White Avatar', 'ebfa36c6-2c4e-4a5f-9730-010e7b50bd19'),
     'bat11b': ('1 / 1 Black Bat', '24b07ba5-680d-4646-af54-a9c50410eef0'),
@@ -162,7 +163,7 @@ tokenTypes = {
     'cloudsprite11u': ('1 / 1 Blue Cloud Sprite', '7499185a-6b3e-4d96-a2c3-947dd0f11629'),
     'clue': ('Clue Artifact', '205743d2-91e7-4e35-899a-d5e1fb2d6ccc'), #SOI SOI SOI SOI SOI SOI
     'construct612c': ('6 / 12 Colorless Construct', '35e3799c-dd78-46e1-999b-f9f6abf2fdf9'),
-    'construct11c': ('1 / 1 Colorless Construct', '8941be34-f9d7-41f0-9749-400de2399c54'),
+    'construct11c': ('1 / 1 Colorless Construct', '8941be34-f9d7-41f0-9749-400de2399c54'), #CNS CN2
     'demon55b': ('5 / 5 Black Demon', '9b9aeb57-b37d-4a9e-9369-28997479f518'), #ISD AVR
     'demon**b': ('* / * Black Demon', 'd7f65953-cbe0-46ea-ad32-3646d0381c88'), #DDC CNS
     'deserter01w': ('0 / 1 White Deserter', '85197940-766e-4046-aa48-6d50bad3b963'),
@@ -227,6 +228,7 @@ tokenTypes = {
     'gnome11c': ('1 / 1 Colorless Gnome', 'd1fa9cdb-7efa-4408-a086-009d6cc0e537'),
     'goat01w': ('0 / 1 White Goat', '1631dd68-5afb-4ae2-8f4b-db67b0398c7a'), #EVE M13
     'goblin11r': ('1 / 1 Red Goblin', 'b1dc79df-5a3b-40dd-a927-11857bb95afb'), #10E UNG MPRLGN ALA SOM NPH M13 LEAGUEM13 RTR M15 KTK DTK
+    'goblin11r2': ('1 / 1 Red Goblin', '4605c074-94a4-4997-a313-3bff975b488b'), #CN2
     'goblin21r': ('2 / 1 Red Goblin', '672b3979-79ea-4d52-a3aa-b1d69a9b6fa3'),
     'goblinrogue11b': ('1 / 1 Black Goblin Rogue', '1bf717f7-d7c4-4a28-8e98-ca98280f6f43'), #LRW MMA
     'goblinscout11r': ('1 / 1 Red Goblin Scout', '7e9fae19-abbd-48b1-9f11-357236782b99'),
@@ -259,7 +261,7 @@ tokenTypes = {
     'illusion11u': ('1 / 1 Blue Illusion', 'a7411656-5fe2-466b-98dd-5b943bb97164'), #MMA CHK
     'illusion22u': ('2 / 2 Blue Illusion', 'fdd96bcf-75cc-477d-981a-b65e336623f5'),
     'insect01b': ('0 / 1 Black Insect', '3fab8819-3c34-4652-8797-25debdd7c322'),
-    'insect11g': ('1 / 1 Green Insect', '6cd95e82-f30e-4a06-8d9b-ed11d1c08ad0'), #M10 MPRONS SOI
+    'insect11g': ('1 / 1 Green Insect', '6cd95e82-f30e-4a06-8d9b-ed11d1c08ad0'), #M10 MPRONS SOI CN2
     'insect11g2': ('1 / 1 Green Insect', '3d2cc7f1-889e-44e6-adb5-9aaa1cf99e76'), #infect
     'insect11g3': ('1/1 Green Insect', '2bce1692-5bba-4c10-8e72-2f8c7107bca0'), #(flying deathtouch) C13, M15
     'insect61g': ('6 / 1 Green Insect', '7e482343-9720-4a11-a3e2-baa89713e26c'),
@@ -279,6 +281,7 @@ tokenTypes = {
     'kraken99u': ('9 / 9 Blue Kraken', '5eebdfb9-1820-48fe-bae2-c0fa0e58e80e'),
     'landmine': ('Land Mine Artifact', 'ebde06ee-f3e8-4a5c-810f-9e88e79e85b7'),
     'lightningrager51r': ('5 / 1 Red Lightning Rager', '57a91893-a058-40e3-8f1d-a2b4f34631b3'),
+    'lizard88r': ('8 / 8 Red Lizard', '476845da-e8f5-4262-aef7-d9b42bacb5d6'),
     'lizard22g': ('2 / 2 Green Lizard', 'ca1abb43-8494-4a15-b7b4-7946e8f4a299'),
     'llanowarelves11g': ('1 / 1 Green Llanowar Elves', 'fbc94498-01a9-47eb-b6b7-e96a6dc66e24'),
     'maggot01b': ('0 / 1 Black Maggot', 'a0ec1195-c5e8-411e-a01e-a3aa1b8ad259'),
@@ -290,6 +293,7 @@ tokenTypes = {
     'minion**b': ('* / * Black Minion', 'cc3ecaa2-33cc-40f3-a392-cc5d1098a70c'), #DDE USG
     'minordemon11m': ('1 / 1 Multicolor Black Red Minor Demon', '35aa79d9-0267-421e-a079-f3d43518e648'),
     'minotaur23r': ('2 / 3 Red Minotaur', '38a6d20a-ca14-459a-9484-f93d693714c0'),
+    'monarch': ('The Monarch', '2b8d6bc4-b81b-40a0-93fb-5081fcb1990d'),
     'monk11w': ('1 / 1 White Monk', '5b6e6944-f114-42bc-bbea-cfff3e4f5fab'),
     'myr11c': ('1 / 1 Colorless Myr', '16003e42-3ff7-478d-8f8c-2b5af4847da0'), #SOM NPH
     'octopus88u': ('8 / 8 Blue Octopus', 'a71d612b-e76f-42ee-8c9d-82254daae0f9'),
@@ -332,6 +336,7 @@ tokenTypes = {
     'snake11c': ('1 / 1 Colorless Snake', '19165d01-8ed8-4a7b-8432-3317477f4667'),
     'soldier11w': ('1 / 1 White Soldier', '696a4f4c-8794-4290-98f8-522b1ef7b93a'), #ALA UNG MPRONS SOM M12 M13 RTR THS THS M15
     'soldier11w2': ('1 / 1 White Soldier', 'd4d816a4-c805-4ae4-b633-7fd5515f5db4'), #enchantment
+    'soldier12': ('1 / 2 White Soldier', '0a11130f-7b21-4d9a-b94e-03e005e91def'),
     'soldier11r': ('1 / 1 Red Soldier', 'aafd95ac-25b2-4abd-869e-ca89c31f10f9'),
     'soldier11m': ('1/1 Multicolor Red White Soldier', 'fe57dd41-0ad7-4570-b1cb-fe2a4218bcb4'), #GTC LEAGUEGTC
     'soldierally11w': ('1 / 1 White Soldier Ally', '9624bca2-94bd-4f9b-96f4-5a1ce682974f'),
@@ -372,7 +377,6 @@ tokenTypes = {
     'urami55b': ('5 / 5 Black Urami', '141d6b6a-5d39-437e-9e20-30df7cab1b9a'),
     'vampire11b': ('1 / 1 Black Vampire', '9fba15b2-c215-4ed7-9659-d24e981b8d15'), #DKA
     'vampire22b': ('2 / 2 Black Vampire', '866e540a-db70-40f3-892a-2f7070f60742'),
-    'vampire22b2': ('2 / 2 Black Vampire', '866e540a-db70-40f3-892a-2f7070f60742'), #flying
     'vampire**b': ('* / * Black Vampire', 'baa92925-d00e-46fa-85b3-a80313f4eab5'),
     'vampireknight11b': ('1 / 1 Black Vampire Knight', '6c337ac0-00de-4f6b-b48e-ee0d5a8d157f'),
     'voja22m': ('2 / 2 Multicolor Green White Voja', '776e6adf-b4a0-47a6-9fcf-85fb60b566c1'),
@@ -396,7 +400,7 @@ tokenTypes = {
     'wurm66g': ('6 / 6 Green Wurm', '4e259c1c-f66a-444a-9c08-6e6bdc42db23'), #M12 MPRODY
     'wurm66b': ('6 / 6 Black Wurm', '5e914c05-f6a8-46f3-bd58-e32c83c386a7'),
     'wurm**g': ('* / * Green Wurm', '6c6cf231-531b-4273-a6e5-383c476ec1c7'),
-    'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK DTK OGW SOI EMN EMN EMN EMN
+    'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK DTK OGW SOI EMN EMN EMN EMN CN2
     'zombie22b2': ('2 / 2 Black Zombie', 'ebc67e29-00a2-4a72-806b-915fa5f9d75e'), #enchantment
     'zombie**u': ('* / * Blue Zombie', 'bcb88192-ce2f-4288-8799-c9264b38c78f'),
     'zombie**b': ('* / * Black Zombie', '5de01d24-b85f-4ca2-8868-d0a2adec7904'),
