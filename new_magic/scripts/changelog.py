@@ -161,5 +161,8 @@ changelog = {
         ]),
     3030300: ("3.3.3.0", "July 13 2016", [
         "Eldritch Moon is now available."
+        ]),
+    3030400: ("3.3.4.0", "August 25 2016", [
+        "Conspiracy 2 and FTV Lore added."
         ])
 }
