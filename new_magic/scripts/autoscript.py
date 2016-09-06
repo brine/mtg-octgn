@@ -346,6 +346,10 @@ def autoResolve(card):
     card.markers[counters['cost']] = 0
     card.markers[counters['x']] = 0
     del stackDict[card]
+    if stackData['class'] != 'cast':
+        card.moveTo(me.Graveyard) ## removes copied stack items (non-cast triggers)
+    elif card.isFaceUp and card in table and (re.search('Instant', card.Type) or re.search('Sorcery', card.Type)):
+        card.moveTo(card.owner.Graveyard)   #instants/sorceries go to graveyard once resolved, unless already in another zone
     resetPriority()
     return stackData
 
@@ -488,7 +492,9 @@ def parseScripts(card, stackData):
                 stackData['text'] += autotransform(stackData['src'], tag[0])
             for tag in tags.get('moveto', []):
                 moveTo = tag[0] ## multiple moveto's shouldn't happen, but we'll keep overwriting previous ones just in case.
-    if moveTo and stackData['moveto'] == None: ##stuff like flashback's exiling takes precedence over normal moveto's
+    if stackData['moveto'] != None:
+        moveTo = stackData['moveto'] ##stuff like flashback's exiling takes precedence over normal moveto's
+    if moveTo:
         stackData['text'] += automoveto(stackData['src'], moveTo) #deal with automoveto triggers right at the very end.
                 
 def resetPriority():

@@ -431,12 +431,8 @@ def resolve(card, x = 0, y = 0):
                     notify("{}'s {} Miracle trigger is countered (no longer in hand.)".format(me, card))
             else:
                 notify("{} resolves {} ({}){}.".format(me, card, stackData['class'], stackData['text']))
-            if stackData['moveto'] == 'exile':
-                card.moveTo(card.owner.piles['Exiled Zone'])
-            elif card.isFaceUp == False or (stackData['class'] == 'cast' and not re.search('Instant', card.Type) and not re.search('Sorcery', card.Type)): #handles permanents etb triggers
+            if stackData['class'] == 'cast':
                 etbData = autoTrigger(stackData['src'], 'etb', cost = stackData['cost'], x = stackData['x'])
-            else: #non-permanents and ability triggers are sent to graveyard after resolution
-                card.moveTo(card.owner.Graveyard)
             cardalign()
         ## double-clicking a card in play just taps it
         else:

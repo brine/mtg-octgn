@@ -164,5 +164,8 @@ changelog = {
         ]),
     3030400: ("3.3.4.0", "August 25 2016", [
         "Conspiracy 2 and FTV Lore added."
+        ]),
+    3030402: ("3.3.4.2", "September 6 2016", [
+        "Fixed a bug with buyback cards."
         ])
 }
