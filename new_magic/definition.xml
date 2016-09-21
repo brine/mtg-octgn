@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.3.5.0" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.3.5.1" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://www.octgngames.com/mtg/download-links/" gameurl="http://www.octgngames.com/mtg/" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -133,6 +133,7 @@
   <player summary="L{#Life}|P{#Poison}|H{#Hand}|C{#General}">
     <counter name="Life" icon="counters/life.png" default="20" />
     <counter name="Poison" icon="counters/poison.png" />
+    <counter name="Energy" icon="counters/energy.png" />
     <counter name="White" icon="counters/white.png" />
     <counter name="Blue" icon="counters/blue.png" />
     <counter name="Black" icon="counters/black.png" />
@@ -140,6 +141,7 @@
     <counter name="Green" icon="counters/green.png" />
     <counter name="Colorless" icon="counters/colorless.png" />
     <counter name="General" icon="counters/general.png" />
+    <counter name="Experience" icon="counters/exp.png" />
 	<globalvariable name="f6" value="False" />
     <hand name="Hand" shortcut="ctrl+H" visibility="me" width="63" height="88" icon="groups/hand.png">
       <cardaction menu="Cast Spell" default="True" shortcut="ctrl+c" execute="play" />

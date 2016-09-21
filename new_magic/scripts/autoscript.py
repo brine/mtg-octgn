@@ -283,10 +283,8 @@ def cardcount(card, stackData, search):
         multiplier = multiplier * intval
     if search == "x":
         qty = stackData['x']
-##        stackData['x'] = 0
     elif search == "cost":
         qty = stackData['cost']
-##        stackData['cost'] = 0
     elif re.search(r'marker', search):
         marker = search[search.find("marker")+7:]
         addmarker = counters[marker]
@@ -448,6 +446,15 @@ def checkCosts(card, stackData):
             if markerCount + cardcount(stackData['src'], stackData, qty) < 0:
                 if not confirm("Not enough {} counters to remove!\nContinue?".format(markerName)):
                     return "BREAK"
+        for splitList in stackData[stackType].get('counter', []):
+            counterName = splitList[0]
+            if len(splitList) > 1:
+                qty = splitList[1]
+            else:
+                qty = 1
+            if me.counters[counterName].value + cardcount(stackData['src'], stackData, qty) < 0:
+                if not confirm("Not enough {} to reduce!\nContinue?".format(counterName)):
+                    return "BREAK"
     return stackData
 
 def parseScripts(card, stackData):
@@ -475,7 +482,9 @@ def parseScripts(card, stackData):
                 if len(target) == 1:
                     stackData['text'] = ", " + autoattach(stackData['src'], target[0])
             for tag in tags.get('life', []):
-                stackData['text'] += autolife(stackData['src'], stackData, tag[0])
+                stackData['text'] += autocounter(stackData['src'], stackData, ['life', tag[0]])
+            for tag in tags.get('counter', []):
+                stackData['text'] += autocounter(stackData['src'], stackData, tag)
             for tag in tags.get('token', []):
                 stackData['text'] += autotoken(stackData['src'], stackData, tag)
             for tag in tags.get('marker', []):
@@ -674,13 +683,17 @@ def automoveto(card, pile):
             etbData = autoTrigger(card, 'etb', cost = resolveData['cost'], x = resolveData['x'])
     return ", moving to {}".format(text)
 
-def autolife(card, stackData, tag):
-    qty = cardcount(card, stackData, tag)
-    me.Life += qty
-    if qty >= 0:
-        return ", {} life".format(qty)
+def autocounter(card, stackData, tag):
+    name = tag[0]
+    if name not in me.counters:
+        return
+    if len(tag) > 1:
+        qty = tag[1]
     else:
-        return ", {} life".format(qty)
+        qty = 1
+    quantity = cardcount(card, stackData, qty)
+    me.counters[name].value += quantity
+    return ", {} {}".format(quantity, name)
 
 def autotransform(card, tag):
     if tag == "no":
