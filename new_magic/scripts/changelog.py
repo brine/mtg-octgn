@@ -167,5 +167,8 @@ changelog = {
         ]),
     3030402: ("3.3.4.2", "September 6 2016", [
         "Fixed a bug with buyback cards."
+        ]),
+    3030500: ("3.3.5.0", "September 21 2016", [
+        "Kaladesh added."
         ])
 }

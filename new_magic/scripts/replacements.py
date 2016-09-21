@@ -134,6 +134,7 @@ tokenTypes = {
     'beast55g': ('5 / 5 Green Beast', '5d336c14-2b0f-4de7-baa1-fd5f52875f5e'),
     'beast55g2': ('5 / 5 Green Beast', '6aeacb82-523e-4e32-86d4-4faf6af5105d'), #TRAMPLE
     'beast88m': ('8 / 8 Multicolor Red Green White Beast', '1a3f35f0-c680-4478-a12a-49a61268f859'),
+    'beast66c': ('6 / 6 Colorless Beast', '964d7d12-9627-4785-96f2-2ed371d7f51c'),
     'bird11w': ('1 / 1 White Bird', 'c57d9dfe-6733-44d9-8789-7e1c5792ce5b'), #ZEN JUD CSP RTR DGM BNG
     'bird11u': ('1 / 1 Blue Bird', 'a36eccd9-be44-4145-b56c-f5e2ef7921f9'), #EVE MPRINV
     'bird11m': ('1 / 1 Multicolor White Blue Bird', '79655e70-589f-4523-99e8-37b9ca6a19c3'),
@@ -164,6 +165,7 @@ tokenTypes = {
     'clue': ('Clue Artifact', '205743d2-91e7-4e35-899a-d5e1fb2d6ccc'), #SOI SOI SOI SOI SOI SOI
     'construct612c': ('6 / 12 Colorless Construct', '35e3799c-dd78-46e1-999b-f9f6abf2fdf9'),
     'construct11c': ('1 / 1 Colorless Construct', '8941be34-f9d7-41f0-9749-400de2399c54'), #CNS CN2
+    'construct**c': ('* / * Colorless Construct', 'c93bea45-2e84-441f-ada8-b6970ad23ffb'), #KLD KLD
     'demon55b': ('5 / 5 Black Demon', '9b9aeb57-b37d-4a9e-9369-28997479f518'), #ISD AVR
     'demon**b': ('* / * Black Demon', 'd7f65953-cbe0-46ea-ad32-3646d0381c88'), #DDC CNS
     'deserter01w': ('0 / 1 White Deserter', '85197940-766e-4046-aa48-6d50bad3b963'),
@@ -325,6 +327,7 @@ tokenTypes = {
     'saproling**g': ('* / * Green Saproling', 'f10998f6-b463-40a0-92f0-3a5cb09143ae'),
     'satyr22m': ('2 / 2 Multicolor Red Green Satyr', '5f26295b-d0d3-4c0b-8019-d122ad7af534'),
     'serf01b': ('0 / 1 Black Serf', 'c98eb86f-c022-4c28-9167-f1cd3166c9a0'), #TSP EMA
+    'servo11c': ('1 / 1 Colorless Servo', 'eb2381b8-b695-499f-8dc0-bc54447848f6'), #KLD KLD KLD
     'shapeshifter11c': ('1 / 1 Colorless Shapeshifter', '714f4756-f2f2-4d0f-8325-938f20653c97'),
     'sheep01g': ('0 / 1 Green Sheep', 'b17a0924-b2ec-4eec-9bba-c4ff96b9b833'), #TSP UNG
     'skeleton11b': ('1 / 1 Black Skeleton', 'ac0b1792-0f7e-47c2-b0ba-eca01badb5cd'), #ALA HML
@@ -364,7 +367,7 @@ tokenTypes = {
     'survivor11r': ('1 / 1 Red Survivor', '4ba76ae2-388e-4a9b-b712-c9d5cd2feff5'),
     'tetravite11c': ('1 / 1 Colorless Tetravite', '64b62223-0bbc-4f2d-9597-2f6e9ddf0c1f'),
     'thopter11u': ('1 / 1 Blue Thopter', '4f4cfe84-fd30-4b27-a7c7-e3c7f4d62257'),
-    'thopter11c': ('1 / 1 Colorless Thopter', 'dc573bed-33c1-46b5-b56b-2bcb52402534'), #MBS EXO ORI ORI
+    'thopter11c': ('1 / 1 Colorless Thopter', 'dc573bed-33c1-46b5-b56b-2bcb52402534'), #MBS EXO ORI ORI KLD
     'thrull01b': ('0 / 1 Black Thrull', '20e4653d-f948-46e4-9851-9a1a547d2889'), #DDC FEM
     'thrull11b': ('1 / 1 Black Thrull', '588e17d2-4edc-44e0-af9c-e2fc31b621c4'),
     'tombspawn22b': ('2 / 2 Black Tombspawn', '5da0e2e6-b8b5-49b6-994f-c4835e8ef0f9'),
@@ -410,9 +413,11 @@ tokenTypes = {
 
     'ajaniemblem': ("Ajani's Emblem", '78832bbe-cba2-4008-a3ad-c729d22ae44b'),
     'arlinnemblem': ("Arlinn's Emblem", '97e17684-2b18-404a-94e7-1de39b25318c'),
+    'chandraemblem': ("Chandra's Emblem", '823e47a0-bf03-4d45-a4b2-5f02ba949e40'),
     'dackemblem': ("Dack's Emblem", 'dc2ec608-afb5-4eb3-a942-212f2bc84c89'),
     'darettiemblem': ("Daretti's Emblem", 'a765af77-dc90-4aa8-ae02-b54840627c44'),
     'domriemblem': ("Domri's Emblem", '7e66fe70-e022-45c9-858d-9577202ce5f2'),
+    'dovinemblem': ("Dovin's Emblem", 'ceffb182-7d68-44d6-8e21-88c99cf84b29'),
     'elspethemblem': ("Elspeth's Emblem", '10281a72-4654-4416-a24a-293ce0d732ea'), #Knight-Errant
     'elspethemblem2': ("Elspeth's Emblem", '527f7aa8-0823-4522-b2d1-b8a90ca0b9ec'), #Sun's Champion
     'garrukemblem': ("Garruk's Emblem", 'bee095dd-635c-4f7d-a708-e6e514913dbd'),
@@ -427,6 +432,7 @@ tokenTypes = {
     'lilianaemblem2': ("Liliana's Emblem", '2066641c-49f9-40a0-b93d-a0f02164efb0'),
     'lilianaemblem3': ("Liliana's Emblem", '7e989d06-4bf4-4182-b65d-df391de89763'), #Last Hope
     'narsetemblem': ("Narset's Emblem", '5ed2ac04-ea4f-4746-bbe0-25ccb6e953cf'),
+    'nissaemblem': ("Nissa's Emblem", 'da7f9909-c93f-4907-b3e7-d39998ac549e'),
     'obnixilisemblem': ("Ob Nixilis's Emblem", '1622a22a-a22a-4a47-8969-eef8632bde23'),
     'obnixilisemblem2': ("Ob Nixilis's Emblem", '86423661-6c13-4c19-a169-6a248cc4b9d9'),
     'sarkhanemblem': ("Sarkhan's Emblem", '307fb3a2-010c-4e8e-883e-768dd3804db4'),
