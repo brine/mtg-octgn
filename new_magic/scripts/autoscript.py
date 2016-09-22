@@ -222,7 +222,7 @@ def tagConstructor(card, key, modeModifier = ''):
             modeList = [x.split(u'\u2022 ')[1] for x in card.Rules.splitlines() if u"\u2022" in x] ## split the rules text into lines and keep the ones with the modal bullet point
             ## fix out of range issues
             if max > len(modeList):
-                max = modeList
+                max = len(modeList)
             if min > max:
                 min = max
             choiceList = []
@@ -237,13 +237,14 @@ def tagConstructor(card, key, modeModifier = ''):
                                    "" if len(choiceList) == 0 else " more",
                                              "s" if choicesRemaining > 1 else "",
                                                     card.Name)
-                modeChoice = askChoice(text, modeList, ['#ff0000' if modeList.index(x) + 1 in choiceList else '#999999' for x in modeList], customButtons = [] if len(choiceList) == 0 else ["OK"] )
+                modeChoice = askChoice(text, modeList, ['#ffaa00' if modeList.index(x) + 1 in choiceList else '#999999' for x in modeList], customButtons = [] if len(choiceList) == 0 else ["OK"] )
                 if modeChoice <= 0:
                     if len(choiceList) >= min:
                         break
                     else:
                         continue
                 if modeChoice in choiceList:
+                    choiceList.remove(modeChoice)
                     continue
                 choiceList.append(modeChoice)
             choiceList.sort()
@@ -252,7 +253,7 @@ def tagConstructor(card, key, modeModifier = ''):
                     newTags = tagConstructor(card, key + str(returnActiChoice[0]), str(modeChoice))[0]
                 else:
                     newTags = tagConstructor(card, key, str(modeChoice))[0]
-                for tagIndex in [3,4,5]:
+                for tagIndex in [1,2,3,4,5]:
                     if returnTags[tagIndex] == None:
                         returnTags[tagIndex] = newTags[tagIndex]
                     else:
@@ -322,7 +323,7 @@ def autoTrigger(card, tagClass, forceCreate = False, cost = 0, x = 0):
     stackData = initializeStackItem(card, tagClass, cost = cost, x = x)
     if stackData == "BREAK":
         return "BREAK"
-    if forceCreate == True or (stackData['cost'] > 0 and stackData['costres'] != None) or (stackData['cost'] == 0 and stackData['res'] != None):
+    if forceCreate == True or stackData['initres'] != None or (stackData['cost'] > 0 and stackData['costres'] != None) or (stackData['cost'] == 0 and stackData['res'] != None):
         global stackDict
         stackCard = table.create(stackData['src'].model, 0, 0)
         stackCard.alternate = stackData['src'].alternate
@@ -422,6 +423,8 @@ def checkCosts(card, stackData):
                 elif confirmValue == True:
                     stackData[costMarker] = 1
                     stackData['text'] += ", paying {} cost".format(cost.title())
+                else:
+                    stackData[costMarker] = 0
             elif type == "num":
                 qty = askInteger("{}'s {}: Paying how many times?".format(stackData['src'].Name, cost), 0)
                 if qty == None:
@@ -449,10 +452,10 @@ def checkCosts(card, stackData):
         for splitList in stackData[stackType].get('counter', []):
             counterName = splitList[0]
             if len(splitList) > 1:
-                qty = splitList[1]
+                qty = cardcount(stackData['src'], stackData, splitList[1])
             else:
                 qty = 1
-            if me.counters[counterName].value + cardcount(stackData['src'], stackData, qty) < 0:
+            if qty != 0 and me.counters[counterName].value + qty < 0:
                 if not confirm("Not enough {} to reduce!\nContinue?".format(counterName)):
                     return "BREAK"
     return stackData
@@ -481,8 +484,6 @@ def parseScripts(card, stackData):
                 target = [cards for cards in table if cards.targetedBy]
                 if len(target) == 1:
                     stackData['text'] = ", " + autoattach(stackData['src'], target[0])
-            for tag in tags.get('life', []):
-                stackData['text'] += autocounter(stackData['src'], stackData, ['life', tag[0]])
             for tag in tags.get('counter', []):
                 stackData['text'] += autocounter(stackData['src'], stackData, tag)
             for tag in tags.get('token', []):
@@ -692,6 +693,7 @@ def autocounter(card, stackData, tag):
     else:
         qty = 1
     quantity = cardcount(card, stackData, qty)
+    if quantity == 0: return ""
     me.counters[name].value += quantity
     return ", {} {}".format(quantity, name)
 

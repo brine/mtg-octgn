@@ -216,6 +216,8 @@ def scoop(group, x = 0, y = 0):
     me.green = 0
     me.colorless = 0
     me.general = 0
+    me.experience = 0
+    me.energy = 0
     for card in me.Library:
         card.moveTo(card.owner.Library)
     myCards = (card for card in table
@@ -424,6 +426,7 @@ def resolve(card, x = 0, y = 0):
         ## double-clicking cards on the stack will resolve them
         elif card in stackDict:
             stackData = autoResolve(card)
+            if stackData == "BREAK": return
             if stackData['class'] == 'miracle':
                 if stackData['src'] in me.hand:
                     play(stackData['src'])
