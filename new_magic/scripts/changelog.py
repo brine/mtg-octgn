@@ -170,5 +170,11 @@ changelog = {
         ]),
     3030500: ("3.3.5.0", "September 21 2016", [
         "Kaladesh added."
+        ]),
+    3030502: ("3.3.5.2", "September 22 2016", [
+        "Changed all instances of the AE symbol to Ae.",
+        "Updated player counters to include new colorless symbol, energy, and experience.",
+        "Some back-end autoscript updates and minor bug fixes.",
+        "Autoscripts can adjust player counters other than life now."
         ])
 }
