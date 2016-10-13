@@ -176,5 +176,9 @@ changelog = {
         "Updated player counters to include new colorless symbol, energy, and experience.",
         "Some back-end autoscript updates and minor bug fixes.",
         "Autoscripts can adjust player counters other than life now."
+        ]),
+    3030503: ("3.3.5.3", "October 13 2016", [
+        "Added the Phase bar to the game interface.",
+        "Fixed a bug with exile scripts breaking."
         ])
 }

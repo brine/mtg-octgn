@@ -692,7 +692,7 @@ def blink(card, x = 0, y = 0):
     if src == table:
         if autoscriptCheck() == "True":
             exileData = autoTrigger(card, 'exile')
-            if text == "BREAK":
+            if exileData == "BREAK":
                 return
             card.moveTo(card.owner.piles['Exiled Zone'])
             cardalign()
