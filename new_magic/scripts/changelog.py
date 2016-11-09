@@ -180,5 +180,8 @@ changelog = {
     3030503: ("3.3.5.3", "October 13 2016", [
         "Added the Phase bar to the game interface.",
         "Fixed a bug with exile scripts breaking."
+        ]),
+    3030503: ("3.3.6.0", "November 9 2016", [
+        "Added Commander 2016."
         ])
 }
