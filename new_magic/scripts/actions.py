@@ -8,19 +8,6 @@ from System import Text
 # Constants
 #---------------------------------------------------------------------------
 
-phases = [
-    "It is now the Pre-game Setup Phase",
-    "It is now {}'s UNTAP Step",
-    "It is now {}'s UPKEEP Step",
-    "It is now {}'s DRAW Step",
-    "It is now {}'s FIRST MAIN Phase",
-    "It is now {}'s BEGINNING OF COMBAT Step",
-    "It is now {}'s DECLARE ATTACKERS Step",
-    "It is now {}'s DECLARE BLOCKERS Step",
-    "It is now {}'s COMBAT DAMAGE Step",
-    "It is now {}'s SECOND MAIN Phase",
-    "It is now {}'s ENDING Phase"]
-
 AttackColor = "#ff0000"
 BlockColor = "#00ff00"
 DoesntUntapColor = "#000000"
@@ -32,7 +19,6 @@ MiracleColor = "#1D7CF2"
 defaultX = 30
 defaultY = 25
 
-phaseIdx = 0
 diesides = 20
 
 playerside = None
@@ -119,6 +105,7 @@ def initializeGame():
 #---------------------------------------------------------------------------
 # Table group actions
 #---------------------------------------------------------------------------
+
 def respond(group, x = 0, y = 0):
     notify('{} RESPONDS!'.format(me))
 
@@ -146,18 +133,19 @@ def autoPass(group, x = 0, y = 0):
         me.setGlobalVariable("f6", "False")
         whisper("You turned off auto-pass priority.")
 
-def showCurrentPhase(group, x = 0, y = 0):
-    notify(phases[phaseIdx].format(me))
-
 def nextPhase(group, x = 0, y = 0):
-    global phaseIdx
-    if phaseIdx == 10:
-        phaseIdx = 1
+    mute()
+    phaseIdx = currentPhase()[1]
+    if phaseIdx == 11:
+        setPhase(0)
     else:
-        phaseIdx += 1
+        setPhase(phaseIdx + 1)
+
+def changePhase(args):
+    mute()
+    phaseIdx = currentPhase()[1]
     if phaseIdx == 1:
-        untapStep(group)
-    showCurrentPhase(group)
+        untapStep(table)
 
 def untapStep(group, x = 0, y = 0):
     mute()
@@ -172,30 +160,20 @@ def untapStep(group, x = 0, y = 0):
             card.highlight = None
 
 def goToUpkeep(group, x = 0, y = 0):
-    global phaseIdx
-    phaseIdx = 2
     untapStep(group)
-    showCurrentPhase(group)
+    setPhase(2)
 
 def goToFirstMain(group, x = 0, y = 0):
-    global phaseIdx
-    phaseIdx = 4
-    showCurrentPhase(group)
+    setPhase(4)
 
 def goToCombat(group, x = 0, y = 0):
-    global phaseIdx
-    phaseIdx = 5
-    showCurrentPhase(group)
+    setPhase(5)
 
 def goToSecondMain(group, x = 0, y = 0):
-    global phaseIdx
-    phaseIdx = 9
-    showCurrentPhase(group)
+    setPhase(10)
 
 def goToEnding(group, x = 0, y = 0):
-    global phaseIdx
-    phaseIdx = 10
-    showCurrentPhase(group)
+    setPhase(11)
 
 def lose1Life(group, x = 0, y = 0):
     me.life -= 1
