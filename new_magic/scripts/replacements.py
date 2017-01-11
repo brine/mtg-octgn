@@ -213,6 +213,7 @@ tokenTypes = {
     'elfdruid11g': ('1 / 1 Green Elf Druid', 'b0efd2ee-2797-4af7-926d-06aac2146186'),
     'elfwarrior11g': ('1 / 1 Green Elf Warrior', '84eb1264-dce2-49bc-a4ab-d0553d6035c8'), #LRW SHA
     'elfwarrior11m': ('1 / 1 Multicolor Green White Elf Warrior', '21a00ccf-853e-4885-8802-3d119b46b03f'),
+    'etheriumcell': ('Etherium Cell', 'f5a47d46-8c87-4fa7-b09a-e6576d983ac7'),
     'expansionsymbol11c': ('1 / 1 Colorless Expansion-Symbol', 'dac9805d-cc2e-48c9-899b-e26ef81e6530'),
     'faerie11u': ('1 / 1 Blue Faerie', '4f9a8c12-3e41-4764-924f-10ed33d3954a'),
     'faerierogue11b': ('1 / 1 Black Faerie Rogue', 'bf9857cc-505b-4cc1-abdc-606f784918fe'), #MOR MM2
@@ -243,6 +244,7 @@ tokenTypes = {
     'golem33c2': ('3 / 3 Colorless Golem', 'b18e2591-c594-425c-9111-771224086f19'), #enchantment artifact
     'golem99c': ('9 / 9 Colorless Golem', 'b61b969e-73a6-4646-be13-8b0d98b10743'),
     'graveborn31m': ('3 / 1 Multicolor Black Red Graveborn', '9c2731ac-5832-45cd-87ef-e5be6c8f4b3b'),
+    'gremlin22r': ('2 / 2 Red Gremlin', 'd71b2470-a814-49d1-a1d1-36fa7527032f'),
     'griffin22w': ('2 / 2 White Griffin', '791ac098-08a7-44cd-a068-a73464456069'), #DDH DDL
     'harpy11b': ('1 / 1 Black Harpy', 'f5d8986e-5234-4c0a-b326-c9c26e0836c1'),
     'hellion44r': ('4 / 4 Red Hellion', 'be62bcdd-12a5-44dc-b658-d32c8cef6bba'),
@@ -317,6 +319,7 @@ tokenTypes = {
     'poisonsnake11c': ('1 / 1 Colorless Poison Snake', '9bc647b5-8bc8-42f9-ab88-31b0c24fd01b'),
     'prism01c': ('0 / 1 Colorless Prism', '0525220c-be68-4bdb-92bb-e253a4257969'),
     'rabidsheep22g': ('2 / 2 Green Rabid Sheep', '5220e649-b0d3-4914-9933-dab2bf6cf31c'),
+    'ragavan21r': ('2 / 1 Red Ragavan', 'ce93ec40-7f40-4aef-b8e0-63839f17c58a'),
     'rat11b': ('1 / 1 Black Rat', 'a8dad087-5e23-4368-8654-d77415d4cd9d'), #SHA CHK RTR
     'reflection22w': ('2 / 2 White Reflection', '979d471b-2d90-462a-8fe9-5154167cd8dc'),
     'reflection**w': ('* / * White Reflection', '3f65527f-f8b9-4160-8f29-f4511d390596'),
@@ -442,5 +445,6 @@ tokenTypes = {
     'tamiyoemblem': ("Tamiyo's Emblem", '638f93d1-0c9d-45b5-a0c3-487d4590a7a3'),
     'tamiyoemblem2': ("Tamiyo's Emblem", '3c7ea890-96c6-47d2-b221-21c8278f2af4'), #Field Researcher
     'teferiemblem': ("Teferi's Emblem", '4863a0dc-9d01-49c1-a906-34730019eaef'),
+    'tezzeretemblem': ("Tezzeret's Emblem", '6a406eb1-7467-4e42-8ac0-c5e5cddfeb9a'),
     'venseremblem': ("Venser's Emblem", '3ec344de-90cb-480e-94be-96ff4ff774af')
 }

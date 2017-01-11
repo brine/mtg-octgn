@@ -181,7 +181,10 @@ changelog = {
         "Added the Phase bar to the game interface.",
         "Fixed a bug with exile scripts breaking."
         ]),
-    3030503: ("3.3.6.0", "November 9 2016", [
+    3030600: ("3.3.6.0", "November 9 2016", [
         "Added Commander 2016."
+        ]),
+    3030700: ("3.3.7.0", "January 10 2017", [
+        "Added Aether Revolt."
         ])
 }
