@@ -186,5 +186,8 @@ changelog = {
         ]),
     3030700: ("3.3.7.0", "January 10 2017", [
         "Added Aether Revolt."
+        ]),
+    3030702: ("3.3.7.2", "March 7 2017", [
+        "Added Modern Masters 2017."
         ])
 }
