@@ -400,6 +400,12 @@ def checkCosts(card, stackData):
     mute()
     stackType = 'init' + stackData['type']
     if stackData.get(stackType):
+        if stackData['class'] == 'acti': ## checks src of activate tag
+            for src in stackData[stackType].get('src', ['table']):
+                notify("{}".format(src))
+                if card.group.name.lower() not in src:
+                    notify("break")
+                    return "BREAK"
         if stackData[stackType].get('tapped') and stackData['src'].orientation == Rot90:
             if not confirm("{} is already tapped!\nContinue?".format(stackData['src'].Name)):
                 return "BREAK"

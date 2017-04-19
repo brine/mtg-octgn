@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.3.7.3" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.3.8.0" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://www.octgngames.com/mtg/download-links/" gameurl="http://www.octgngames.com/mtg/" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -80,6 +80,7 @@
   </card>
   <table name="Table" visibility="undefined" ordered="False" width="640" height="480" board="background/board.png" boardPosition="-7,-27,76,190" background="background/background.jpg" backgroundStyle="uniformToFill">
     <groupaction menu="Clean-up Targets and Combat" shortcut="esc" execute="clearAll" />
+    <groupaction menu="Untap All Permanents" shortcut="ctrl+U" execute="untapStep" />
     <groupaction menu="Roll Die" shortcut="ctrl+R" execute="rollDie" />
     <groupaction menu="Change Die" shortcut="ctrl+shift+R" execute="setDie" />
     <groupaction menu="Create a Token..." shortcut="ctrl+shift+T" execute="token" />
@@ -108,9 +109,10 @@
 	</groupactions>
     <groupaction menu="View Update Log" execute="changeLog" />
     <cardaction menu="Tap/Untap or Resolve" default="True" batchExecute="batchResolve" />
-    <cardaction menu="Don't Untap during Untap Step" shortcut="ctrl+V" execute="doesNotUntap" />
+    <cardaction menu="Exert (Don't Untap Next Untap Step)" shortcut="ctrl+V" execute="exert" />
+    <cardaction menu="Keep Tapped During All Untap Steps" shortcut="ctrl+Shift+V" execute="doesNotUntap" />
     <cardaction menu="Attack" shortcut="ctrl+A" batchExecute="batchAttack" />
-    <cardaction menu="Attack without tapping" shortcut="ctrl+shift+A" batchExecute="batchAttackWithoutTapping" />
+    <cardaction menu="Attack (with Vigilance)" shortcut="ctrl+shift+A" batchExecute="batchAttackWithoutTapping" />
     <cardaction menu="Block" shortcut="ctrl+B" batchExecute="batchBlock" />
     <cardaction menu="Use Activated Ability" shortcut="ctrl+Z" execute="activate" />
     <cardaction menu="Attach to Targeted Card" shortcut="ctrl+Q" execute="attach" />
@@ -207,6 +209,7 @@
       <cardaction menu="Cast Card" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Cast Card (Flashback)" shortcut="ctrl+F" execute="flashback" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+shift+F" execute="morph" />
+      <cardaction menu="Use Activated Ability" shortcut="ctrl+Z" execute="activate" />
       <cardaction menu="Manifest Card" execute="manifest" />
       <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" />
       <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />

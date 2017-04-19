@@ -144,20 +144,24 @@ def nextPhase(group, x = 0, y = 0):
 def changePhase(args):
     mute()
     phaseIdx = currentPhase()[1]
-    if phaseIdx == 1:
+    if phaseIdx == 1 and me.isActive:
         untapStep(table)
 
 def untapStep(group, x = 0, y = 0):
     mute()
-    myCards = (card for card in table
-        if card.controller == me
-        and card.highlight != DoesntUntapColor)
+    myCards = (card for card in table if card.controller == me)
     for card in myCards:
-        if card.highlight == AttackDoesntUntapColor or card.highlight == BlockDoesntUntapColor:
+        if card.highlight == DoesntUntapColor:
+            card.markers[counters['exert']] = 0
+        elif card.highlight == AttackDoesntUntapColor or card.highlight == BlockDoesntUntapColor:
             card.highlight = DoesntUntapColor
+            card.markers[counters['exert']] = 0
+        elif card.markers[counters['exert']] > 0:
+            card.markers[counters['exert']] = 0
         else:
             card.orientation &= ~Rot90
             card.highlight = None
+    notify("{} untaps their permanents.".format(me))
 
 def goToUpkeep(group, x = 0, y = 0):
     untapStep(group)
@@ -502,7 +506,7 @@ def attack(card, x = 0, y = 0):
     mute()
     if autoscriptCheck() == "True":
         if card.orientation == Rot90:
-            if not confirm("Cannot attack: already tapped. Continue?") != True:
+            if confirm("Cannot attack: already tapped. Continue?") != True:
                 return
         elif card.highlight == AttackColor or card.highlight == AttackDoesntUntapColor:
             if confirm("Cannot attack: already attacking. Continue?") != True:
@@ -697,6 +701,12 @@ def generaltoggle(card, x = 0, y = 0): ## This isn't used anymore
     else:
         card.markers[counters['general']] = 1
         notify("{}'s commander {} leaves the battlefield.".format(me, card))
+
+def exert(card, x = 0, y = 0):
+    mute()
+    if card.markers[counters['exert']] == 0:
+        card.markers[counters['exert']] = 1
+        notify("{} exerts {} (will not untap on next upkeep).".format(me, card))
 
 def doesNotUntap(card, x = 0, y = 0):
     mute()

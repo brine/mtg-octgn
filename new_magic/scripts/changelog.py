@@ -189,5 +189,16 @@ changelog = {
         ]),
     3030702: ("3.3.7.2", "March 7 2017", [
         "Added Modern Masters 2017."
+        ]),
+    3030800: ("3.3.8.0", "April 19 2017", [
+        "Added Amonkhet, Nissa vs Ob Nixilis, Mind vs Might.",
+        "Added support for 'does not untap on next untap step', AKA the Exert keyword.  Older card scripts will eventually be updated to support this.",
+        "CTRL+V shortcut is now for Exert (originally the permanent does-not-untap toggle).",
+        "CTRL+SHIFT+V shortcut is now Keep Tapped During All Untap Steps (the old CTRL+V functionality, renamed).",
+        "New Table group action (CTRL+U) to untap all your permanents, doesn't change the active phase.",
+        "Added scripting support for activated abilities in graveyards (including Embalm).",
+        "BUG FIX: clicking the untap phase would untap your opponents cards.",
+        "BUG FIX: Attacking while tapped wouldn't trigger attack scripting (bypass dialog didn't work).",
+        "KNOWN BUG: Split cards (including aftermath) aren't working properly, will fix in the next update."
         ])
 }
