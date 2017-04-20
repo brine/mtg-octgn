@@ -200,5 +200,8 @@ changelog = {
         "BUG FIX: clicking the untap phase would untap your opponents cards.",
         "BUG FIX: Attacking while tapped wouldn't trigger attack scripting (bypass dialog didn't work).",
         "KNOWN BUG: Split cards (including aftermath) aren't working properly, will fix in the next update."
+        ]),
+    3030801: ("3.3.8.1", "April 19 2017", [
+        "Split cards are working again."
         ])
 }
