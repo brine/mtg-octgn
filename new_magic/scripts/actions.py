@@ -331,7 +331,7 @@ def play(card, x = 0, y = 0):
                           card.alternateProperty('splitB', 'Rules')]
             splitFlags = ['A','B']
             ## splitC is the fused split card
-            if 'splitC' in card.alternates and src == me.hand:
+            if re.search("Fuse", card.Rules) and src == me.hand:
                 splitRules.append('Fuse both sides')
                 splitFlags.append('C')
             choice = askChoice('Cast which side of {}?'.format(card.name), splitRules)

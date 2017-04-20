@@ -311,6 +311,7 @@ def autoCast(card, morph = False, split = ''):
     stackData = initializeStackItem(card, 'cast', split)
     if stackData != "BREAK":
         card.moveToTable(0,0, morph)
+        card.alternate = stackData['alt']
         global stackDict
         stackDict[card] = stackData
         addStackMarkers(card)
@@ -402,9 +403,7 @@ def checkCosts(card, stackData):
     if stackData.get(stackType):
         if stackData['class'] == 'acti': ## checks src of activate tag
             for src in stackData[stackType].get('src', ['table']):
-                notify("{}".format(src))
                 if card.group.name.lower() not in src:
-                    notify("break")
                     return "BREAK"
         if stackData[stackType].get('tapped') and stackData['src'].orientation == Rot90:
             if not confirm("{} is already tapped!\nContinue?".format(stackData['src'].Name)):
@@ -742,7 +741,7 @@ def autotoken(card, stackData, tag):
                     token.markers[counters[type]] += cardcount(token, stackData, qty)
                 elif modtag == 'attach':
                     autoattach(card, token)
-        return ", creating {} {}/{} {} {} token{}.".format(quantity, token.Power, token.Toughness, token.Color, token.name, "" if quantity == 1 else "s")
+        return ", creating {} {}/{} {} {} token{}".format(quantity, token.Power, token.Toughness, token.Color, token.name, "" if quantity == 1 else "s")
     else:
         return ""
 
