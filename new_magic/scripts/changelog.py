@@ -203,5 +203,8 @@ changelog = {
         ]),
     3030801: ("3.3.8.1", "April 19 2017", [
         "Split cards are working again."
+        ]),
+    3030900: ("3.3.9.0", "July 5 2017", [
+        "Added Hour of Devastation."
         ])
 }

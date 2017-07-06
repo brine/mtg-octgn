@@ -261,6 +261,7 @@ tokenTypes = {
     'horror11m': ('1/1 Multicolor Blue Black Horror', '1e601ccc-eb1d-4a0f-a626-08c741c8b1a3'),
     'horror**b': ('* / * Colorless Horror', '1c035033-b343-4050-a0f5-c15ed57760e8'),
     'horror**c': ('* / * Colorless Horror', 'ae7470fa-052f-4daa-b44a-ec3949a67845'),
+    'horse11w': ('1 / 1 White Horse', 'ca3bd733-9569-44c0-9d59-888d98ef7bf9'),
     'hound11g': ('1 / 1 Green Hound', 'f8a41ed4-4a9e-4f7f-a7f1-2016d4c92771'),
     'human11w': ('1 / 1 White Human', 'b5ac6482-c72f-42c6-a5b6-983f4ecf5016'), #DKA AVR FNM
     'human11r': ('1/1 Red Human', 'f05acb33-16f2-41a4-acb5-dad4e6659b90'),
@@ -276,6 +277,7 @@ tokenTypes = {
     'insect11g2': ('1 / 1 Green Insect', '3d2cc7f1-889e-44e6-adb5-9aaa1cf99e76'), #infect
     'insect11g3': ('1/1 Green Insect', '2bce1692-5bba-4c10-8e72-2f8c7107bca0'), #(flying deathtouch) C13, M15
     'insect61g': ('6 / 1 Green Insect', '7e482343-9720-4a11-a3e2-baa89713e26c'),
+    'insect11m': ('1 / 1 Multicolor Blue Red Insect', '5674320b-b499-459c-a8ca-4c9e3b398940'),
     'kaldra44c': ('4 / 4 Colorless Kaldra', '24c9642f-666e-43b3-aaae-d676b94b20ec'),
     'kavu33b': ('3 / 3 Black Kavu', '7f4f8367-da77-43e5-bf24-ea9326e6aa2a'),
     'kelp01u': ('0 / 1 Blue Kelp', 'd04cffca-c29f-4381-9854-eb6c362cd56e'),
@@ -345,6 +347,7 @@ tokenTypes = {
     'snake11b': ('1 / 1 Black Snake', '87d7b057-1a26-48d8-88b8-1909400af8b2'),
     'snake11g': ('1 / 1 Green Snake', '89024584-5409-431d-9cce-e51828b85d0b'), #ZEN CHK KTK
     'snake11g2': ('1 / 1 Green Snake', 'bb73ea55-a724-4626-a634-712add736572'),
+    'snake54g': ('5 / 4 Green Snake', '2fd60da6-b9a3-43a1-87ce-b3780c3eb060'),
     'snake11m': ('1 / 1 Multicolor Green Blue Snake', '0d09c8cd-2263-4bf5-b745-31c08f2fba5f'),
     'snake11m2': ('1 / 1 Multicolor Black Green Snake', '81cff5d8-7e80-4a0b-b029-4384b998f260'), #JOU
     'snake11c': ('1 / 1 Colorless Snake', '19165d01-8ed8-4a7b-8432-3317477f4667'),
@@ -439,6 +442,15 @@ tokenTypes = {
     'trueheartduelist': ("Trueheart Duelist", '3bee4ec4-9475-4d2e-98a0-12c898220c7e'),
     'unwaveringinitiate': ("Unwavering Initiate", '9ba45c42-7318-4721-80b2-35397a999380'),
     'vizierofmanyfaces': ("Vizier of Many Faces", 'eee91e1d-6418-4c02-a976-50ec78d88fff'),
+    'adornedpouncer': ("Adorned Pouncer", '380c8172-7546-455f-89d2-786d20e03d28'),
+    'championofwits': ("Champion of Wits", 'fc4741e3-7bc9-45fc-829f-01688361d43a'),
+    'dreamstealer': ("Dreamstealer", '2964c9f6-48db-44b7-8d81-802ae294a534'),
+    'earthshakerkhenra': ("Earthshaker Khenra", '9ab5b824-87eb-4b60-bee1-87c4bbce5b0a'),
+    'provencombatant': ("Proven Combatant", 'a342acb5-ceb7-4b26-8d3f-5864282e9bee'),
+    'risilientkhenra': ("Resilient Khenra", '85dc8318-8025-4dd9-a8b2-46dd6ca3714b'),
+    'sinuousstriker': ("Sinuous Striker", 'c3d9c340-f00e-4eb2-870e-da508b29626d'),
+    'steadfastsentinel': ("Steadfast Sentinel", 'c6b9325b-eef3-48b8-9492-b4770987f31d'),
+    'sunscourgechampion': ("Sunscourge Champion", 'cf6cfea9-13a0-421c-b1de-4c26ffd798c2'),
     
     'ajaniemblem': ("Ajani's Emblem", '78832bbe-cba2-4008-a3ad-c729d22ae44b'),
     'arlinnemblem': ("Arlinn's Emblem", '97e17684-2b18-404a-94e7-1de39b25318c'),
