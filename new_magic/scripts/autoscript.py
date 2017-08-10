@@ -250,9 +250,9 @@ def tagConstructor(card, key, modeModifier = ''):
             choiceList.sort()
             for mode in choiceList:
                 if returnActiChoice != (0, ''):  ## if the mode choice was from an activated ability
-                    newTags = tagConstructor(card, key + str(returnActiChoice[0]), str(modeChoice))[0]
+                    newTags = tagConstructor(card, key + str(returnActiChoice[0]), str(mode))[0]
                 else:
-                    newTags = tagConstructor(card, key, str(modeChoice))[0]
+                    newTags = tagConstructor(card, key, str(mode))[0]
                 for tagIndex in [1,2,3,4,5]:
                     if returnTags[tagIndex] == None:
                         returnTags[tagIndex] = newTags[tagIndex]
