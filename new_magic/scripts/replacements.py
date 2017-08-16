@@ -156,9 +156,10 @@ tokenTypes = {
     'cat11g': ('1 / 1 Green Cat', 'a6ae9b2c-b938-4cf4-8e3d-f55417a6a125'),
     'cat21b': ('2 / 1 Black Cat', 'f78c5859-a94a-4463-8a5c-7a21232eed5c'),
     'cat22w': ('2 / 2 White Cat', '685e225d-53c4-41eb-808a-95b8fcac28a7'), #SOM M13
+    'catdragon33m': ('3 / 3 Multicolor Black Red Green Cat Dragon', '2cece589-5f13-4603-8c3c-0b737638071a'),
     'catsoldier11w': ('1 / 1 White Cat Soldier', 'aa5d018c-51a6-4859-bdf8-a3f15fcdfe36'),
     'catbeast44g': ('4 / 4 Green Cat Beast', 'd68f77a6-8c32-47c3-a874-33a964f7a781'),
-    'catwarrior22g': ('2 / 2 Green Cat Warrior', '55a512f5-358f-496e-afa8-cf5deb8feeef'),
+    'catwarrior22g': ('2 / 2 Green Cat Warrior', '55a512f5-358f-496e-afa8-cf5deb8feeef'), #PLC C17
     'centaur33g': ('3 / 3 Green Centaur', '94d83f81-fd3c-4efc-bec1-4fc127219991'), #RTR ONS JUDGERTR
     'centaur33g2': ('3 / 3 Green Centaur', '6b134506-3040-4b1e-8249-44c5d2419918'), #protection from black
     'centaur33g3': ('3 / 3 Green Centaur', 'd27f81eb-5631-4d95-ab8c-21eda7921129'), #enchantment
@@ -329,6 +330,7 @@ tokenTypes = {
     'rabidsheep22g': ('2 / 2 Green Rabid Sheep', '5220e649-b0d3-4914-9933-dab2bf6cf31c'),
     'ragavan21r': ('2 / 1 Red Ragavan', 'ce93ec40-7f40-4aef-b8e0-63839f17c58a'),
     'rat11b': ('1 / 1 Black Rat', 'a8dad087-5e23-4368-8654-d77415d4cd9d'), #SHA CHK RTR
+    'rat11b2': ('1 / 1 Black Rat', '57da841d-2fe8-4765-bdd7-ce80087efedc'), #DEATHTOUCH
     'reflection22w': ('2 / 2 White Reflection', '979d471b-2d90-462a-8fe9-5154167cd8dc'),
     'reflection**w': ('* / * White Reflection', '3f65527f-f8b9-4160-8f29-f4511d390596'),
     'rhino44g': ('4/4 Green Rhino', 'd1d7612f-a263-469b-ac68-b1b0f56c108c'),
@@ -392,6 +394,7 @@ tokenTypes = {
     'tuktukthereturned55c': ('5 / 5 Colorless Tuktuk The Returned', '06625711-0b80-4754-9105-6b9d8a5d7733'),
     'twin34c': ('3 / 4 Colorless Twin', 'd04b89a0-704f-464e-92ca-4a9b37d1bc48'),
     'urami55b': ('5 / 5 Black Urami', '141d6b6a-5d39-437e-9e20-30df7cab1b9a'),
+    'vampire11b': ('1 / 1 Black Vampire', 'e502f2f1-ebdd-42ab-8682-ef243a2aa44d'), #C17
     'vampire11b': ('1 / 1 Black Vampire', '9fba15b2-c215-4ed7-9659-d24e981b8d15'), #DKA
     'vampire22b': ('2 / 2 Black Vampire', '866e540a-db70-40f3-892a-2f7070f60742'),
     'vampire**b': ('* / * Black Vampire', 'baa92925-d00e-46fa-85b3-a80313f4eab5'),

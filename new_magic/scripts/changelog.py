@@ -206,5 +206,8 @@ changelog = {
         ]),
     3030900: ("3.3.9.0", "July 5 2017", [
         "Added Hour of Devastation."
+        ]),
+    3031000: ("3.3.10.0", "August 16 2017", [
+        "Added Commander 2017, Archenemy Nicol Bolas, Masters Edition IV."
         ])
 }
