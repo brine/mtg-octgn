@@ -198,11 +198,14 @@ def tagConstructor(card, key, modeModifier = ''):
                     colorList.append(color)
                     tagsList.append(activateList)
                     rulesList.append(attachLines)
-        actiChoice = askChoice("{}\nActivate which ability?".format(card.Name), rulesList, colorList)
-        if actiChoice == 0: ## exiting the window
-            return "BREAK" ## cancels the autoscript resolution if the player closes the window without selecting a mode
-        returnActiChoice = (actiChoice, rulesList[actiChoice - 1])
-        returnTags = tagsList[actiChoice - 1]
+        if len(rulesList) == 0:
+            return ([None, None, None, None, None, None], (1, ''), returnModeChoice)
+        else:
+            actiChoice = askChoice("{}\nActivate which ability?".format(card.Name), rulesList, colorList)
+            if actiChoice == 0: ## exiting the window
+                return "BREAK" ## cancels the autoscript resolution if the player closes the window without selecting a mode
+            returnActiChoice = (actiChoice, rulesList[actiChoice - 1])
+            returnTags = tagsList[actiChoice - 1]
     else:
         for tagPrefix in ['init', '', 'cost', 'initres', 'res', 'costres']:
             tags = getTags(card, modeModifier + tagPrefix + key)
@@ -324,7 +327,15 @@ def autoTrigger(card, tagClass, forceCreate = False, cost = 0, x = 0):
     stackData = initializeStackItem(card, tagClass, cost = cost, x = x)
     if stackData == "BREAK":
         return "BREAK"
-    if forceCreate == True or stackData['initres'] != None or (stackData['cost'] > 0 and stackData['costres'] != None) or (stackData['cost'] == 0 and stackData['res'] != None):
+    if (forceCreate == True or stackData['initres'] != None
+                           or (stackData['cost'] > 0 and stackData['costres'] != None)
+                           or (stackData['cost'] == 0 and stackData['res'] != None)
+                           or (tagClass == "acti" and stackData['inittrig'] == None 
+                                                  and stackData['trig'] == None
+                                                  and stackData['costtrig'] == None
+                                                  and stackData['initres'] == None
+                                                  and stackData['res'] == None
+                                                  and stackData['costres'] == None)):
         global stackDict
         stackCard = table.create(stackData['src'].model, 0, 0)
         stackCard.alternate = stackData['src'].alternate
