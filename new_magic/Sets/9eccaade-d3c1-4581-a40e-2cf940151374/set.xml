@@ -2,37 +2,46 @@
 <set name="Planechase 2012" id="9eccaade-d3c1-4581-a40e-2cf940151374" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.3.0.0" version="1.0">
   <cards>
     <card name="Arc Trail" id="8971d07d-2c0f-4a88-84fe-469007afb890">
-      <property name="Cost" value="{1}{R}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Arc Trail deals 2 damage to target creature or player and 1 damage to another target creature or player." />
+      <property name="Rules">Arc Trail deals 2 damage to target creature or player and 1 damage to another target creature or player.</property>
       <property name="Artist" value="Marc Simonetti" />
       <property name="Number" value="039" />
       <property name="Flavor" value="&quot;Don't try to hit your enemies. Concentrate on the space between them, and fill the air with doom.&quot;—Spear-Tribe teaching" />
       <property name="MultiverseId" value="275254" />
     </card>
     <card name="Armillary Sphere" id="cde5c73c-b3df-47b7-a239-a964a8ce0977">
-      <property name="Cost" value="{2}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="{2}, {T}, Sacrifice Armillary Sphere: Search your library for up to two basic land cards, reveal them, and put them into your hand. Then shuffle your library." />
+      <property name="Rules">
+        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Armillary Sphere: Search your library for up to two basic land cards, reveal them, and put them into your hand. Then shuffle your library.</property>
       <property name="Artist" value="Franz Vohwinkel" />
       <property name="Number" value="108" />
       <property name="Flavor" value="The mysterious purpose of two of the rings had eluded Esper mages—until now." />
       <property name="MultiverseId" value="271137" />
     </card>
     <card name="Armored Griffin" id="d5e79f9d-91e6-481c-a6fb-bc35e7c55fbf">
-      <property name="Cost" value="{3}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Griffin" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Flying, vigilance" />
+      <property name="Rules">Flying, vigilance</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -42,25 +51,32 @@
       <property name="MultiverseId" value="271234" />
     </card>
     <card name="Assassinate" id="d72791da-4037-4330-823f-f6d218379a6e">
-      <property name="Cost" value="{2}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Destroy target tapped creature." />
+      <property name="Rules">Destroy target tapped creature.</property>
       <property name="Artist" value="Kev Walker" />
       <property name="Number" value="030" />
       <property name="Flavor" value="&quot;This is how wars are won—not with armies of soldiers but with a single knife blade, artfully placed.&quot;—Yurin, royal assassin" />
       <property name="MultiverseId" value="271218" />
     </card>
     <card name="Augury Owl" id="590c22c4-0f79-4236-b0ab-da17e48b42db">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Bird" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Flying&#xD;&#xA;When Augury Owl enters the battlefield, scry 3. (Look at the top three cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)" />
+      <property name="Rules">Flying
+When Augury Owl enters the battlefield, scry 3. (Look at the top three cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -69,13 +85,17 @@
       <property name="MultiverseId" value="271192" />
     </card>
     <card name="Aura Gnarlid" id="21ff83c3-ddf5-4086-9ead-a14c89c4fa8c">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Creatures with power less than Aura Gnarlid's power can't block it.&#xD;&#xA;Aura Gnarlid gets +1/+1 for each Aura on the battlefield." />
+      <property name="Rules">Creatures with power less than Aura Gnarlid's power can't block it.
+Aura Gnarlid gets +1/+1 for each Aura on the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -85,13 +105,16 @@
       <property name="MultiverseId" value="271147" />
     </card>
     <card name="Auramancer" id="0dac3632-b432-4ff8-aab3-d9960e3799c8">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When Auramancer enters the battlefield, you may return target enchantment card from your graveyard to your hand." />
+      <property name="Rules">When Auramancer enters the battlefield, you may return target enchantment card from your graveyard to your hand.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -101,13 +124,16 @@
       <property name="MultiverseId" value="271171" />
     </card>
     <card name="Auratouched Mage" id="ab466369-1389-44d8-82b7-de2be8fe9b3f">
-      <property name="Cost" value="{5}{W}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Auratouched Mage enters the battlefield, search your library for an Aura card that could enchant it. If Auratouched Mage is still on the battlefield, put that Aura card onto the battlefield attached to it. Otherwise, reveal the Aura card and put it into your hand. Then shuffle your library." />
+      <property name="Rules">When Auratouched Mage enters the battlefield, search your library for an Aura card that could enchant it. If Auratouched Mage is still on the battlefield, put that Aura card onto the battlefield attached to it. Otherwise, reveal the Aura card and put it into your hand. Then shuffle your library.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -116,25 +142,32 @@
       <property name="MultiverseId" value="271207" />
     </card>
     <card name="Awakening Zone" id="28ad1248-c817-41ec-9938-a94091227250">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="At the beginning of your upkeep, you may put a 0/1 colorless Eldrazi Spawn creature token onto the battlefield. It has &quot;Sacrifice this creature: Add {C} to your mana pool.&quot;" />
+      <property name="Rules">At the beginning of your upkeep, you may create a 0/1 colorless Eldrazi Spawn creature token. It has "Sacrifice this creature: Add <s value="C">{C}</s> to your mana pool."</property>
       <property name="Artist" value="Johann Bodin" />
       <property name="Number" value="056" />
       <property name="Flavor" value="The ground erupted in time with the hedron's thrum, a dirge of the last days." />
       <property name="MultiverseId" value="271156" />
     </card>
     <card name="Baleful Strix" id="76051242-77cd-4cd3-a7bf-1f4676527b43">
-      <property name="Cost" value="{U}{B}" />
+      <property name="Cost">
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor Blue Black" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Bird" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Flying, deathtouch&#xD;&#xA;When Baleful Strix enters the battlefield, draw a card." />
+      <property name="Rules">Flying, deathtouch
+When Baleful Strix enters the battlefield, draw a card.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -144,25 +177,32 @@
       <property name="MultiverseId" value="265156" />
     </card>
     <card name="Beast Within" id="5379bc2c-40ed-42b3-a92e-6382547bf096">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Destroy target permanent. Its controller puts a 3/3 green Beast creature token onto the battlefield." />
+      <property name="Rules">Destroy target permanent. Its controller creates a 3/3 green Beast creature token.</property>
       <property name="Artist" value="Dave Allsop" />
       <property name="Number" value="057" />
       <property name="Flavor" value="&quot;Kill the weak so they can't drag the strong down to their level. This is true compassion.&quot;—Benzir, archdruid of Temple Might" />
       <property name="MultiverseId" value="275255" />
     </card>
     <card name="Beetleback Chief" id="897b643a-0baf-41cb-b58d-99270c5a5bc5">
-      <property name="Cost" value="{2}{R}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Beetleback Chief enters the battlefield, put two 1/1 red Goblin creature tokens onto the battlefield." />
+      <property name="Rules">When Beetleback Chief enters the battlefield, create two 1/1 red Goblin creature tokens.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -172,24 +212,34 @@
       <property name="MultiverseId" value="265145" />
     </card>
     <card name="Bituminous Blast" id="b0471ab5-aeb5-46e1-9414-ac1c4352e1b5">
-      <property name="Cost" value="{3}{B}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor Black Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)&#xD;&#xA;Bituminous Blast deals 4 damage to target creature." />
+      <property name="Rules">Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)
+Bituminous Blast deals 4 damage to target creature.</property>
       <property name="Artist" value="Raymond Swanland" />
       <property name="Number" value="083" />
       <property name="MultiverseId" value="271166" />
     </card>
     <card name="Bloodbraid Elf" id="ee36addd-3e85-43d7-b852-18c27639b72d">
-      <property name="Cost" value="{2}{R}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Red Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Berserker" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Haste&#xD;&#xA;Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)" />
+      <property name="Rules">Haste
+Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -198,26 +248,35 @@
       <property name="MultiverseId" value="271167" />
     </card>
     <card name="Boar Umbra" id="449fdb25-0980-48f7-8ff6-bcc530b2a677">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature gets +3/+3.&#xD;&#xA;Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)" />
+      <property name="Rules">Enchant creature
+Enchanted creature gets +3/+3.
+Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="058" />
       <property name="Flavor" value="&quot;From in here, everything looks like dinner.&quot;" />
       <property name="MultiverseId" value="271148" />
     </card>
     <card name="Bramble Elemental" id="5c8d8a6f-1d78-4924-94d8-3b8bcc752905">
-      <property name="Cost" value="{3}{G}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever an Aura becomes attached to Bramble Elemental, put two 1/1 green Saproling creature tokens onto the battlefield." />
+      <property name="Rules">Whenever an Aura becomes attached to Bramble Elemental, create two 1/1 green Saproling creature tokens.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -227,13 +286,16 @@
       <property name="MultiverseId" value="271208" />
     </card>
     <card name="Brindle Shoat" id="68c322cf-4378-4cb9-8ad4-03d7396fa315">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Boar" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Brindle Shoat dies, put a 3/3 green Boar creature token onto the battlefield." />
+      <property name="Rules">When Brindle Shoat dies, create a 3/3 green Boar creature token.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -243,13 +305,18 @@
       <property name="MultiverseId" value="265141" />
     </card>
     <card name="Brutalizer Exarch" id="2c9c9339-6123-4ec2-962d-73a0ff7eaa82">
-      <property name="Cost" value="{5}{G}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cleric" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Brutalizer Exarch enters the battlefield, choose one —&#xD;&#xA;• Search your library for a creature card, reveal it, then shuffle your library and put that card on top of it.&#xD;&#xA;• Put target noncreature permanent on the bottom of its owner's library." />
+      <property name="Rules">When Brutalizer Exarch enters the battlefield, choose one —
+• Search your library for a creature card, reveal it, then shuffle your library and put that card on top of it.
+• Put target noncreature permanent on the bottom of its owner's library.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -258,13 +325,18 @@
       <property name="MultiverseId" value="275256" />
     </card>
     <card name="Cadaver Imp" id="eb237742-58fb-449c-af26-d2d8f8ba28dd">
-      <property name="Cost" value="{1}{B}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Imp" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Flying&#xD;&#xA;When Cadaver Imp enters the battlefield, you may return target creature card from your graveyard to your hand." />
+      <property name="Rules">Flying
+When Cadaver Imp enters the battlefield, you may return target creature card from your graveyard to your hand.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -274,37 +346,51 @@
       <property name="MultiverseId" value="271157" />
     </card>
     <card name="Cage of Hands" id="a56bb91c-5167-475e-9ba7-d1fecd3f4212">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature can't attack or block.&#xD;&#xA;{1}{W}: Return Cage of Hands to its owner's hand." />
+      <property name="Rules">Enchant creature
+Enchanted creature can't attack or block.
+<s value="1">{1}</s><s value="W">{W}</s>: Return Cage of Hands to its owner's hand.</property>
       <property name="Artist" value="Mark Tedin" />
       <property name="Number" value="004" />
       <property name="MultiverseId" value="271205" />
     </card>
     <card name="Cancel" id="42f6776e-4dc9-4097-99b1-69a8efb2fc72">
-      <property name="Cost" value="{1}{U}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Counter target spell." />
+      <property name="Rules">Counter target spell.</property>
       <property name="Artist" value="David Palumbo" />
       <property name="Number" value="015" />
       <property name="Flavor" value="&quot;What you are attempting is not against the law. It is, however, extremely foolish.&quot;" />
       <property name="MultiverseId" value="271172" />
     </card>
     <card name="Celestial Ancient" id="6dc90df1-6bd7-4235-bf99-c3aebb5c5de3">
-      <property name="Cost" value="{3}{W}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Flying&#xD;&#xA;Whenever you cast an enchantment spell, put a +1/+1 counter on each creature you control." />
+      <property name="Rules">Flying
+Whenever you cast an enchantment spell, put a +1/+1 counter on each creature you control.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -314,37 +400,49 @@
       <property name="MultiverseId" value="271236" />
     </card>
     <card name="Concentrate" id="2001e7e3-6f43-43ab-852b-03da7a6863b7">
-      <property name="Cost" value="{2}{U}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Draw three cards." />
+      <property name="Rules">Draw three cards.</property>
       <property name="Artist" value="rk post" />
       <property name="Number" value="016" />
       <property name="Flavor" value="&quot;The treasure in my mind is greater than any worldly glory.&quot;" />
       <property name="MultiverseId" value="271220" />
     </card>
     <card name="Cultivate" id="3bebcee3-cdd3-47c7-8b52-585adf8d06c3">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Search your library for up to two basic land cards, reveal those cards, and put one onto the battlefield tapped and the other into your hand. Then shuffle your library." />
+      <property name="Rules">Search your library for up to two basic land cards, reveal those cards, and put one onto the battlefield tapped and the other into your hand. Then shuffle your library.</property>
       <property name="Artist" value="Anthony Palumbo" />
       <property name="Number" value="062" />
       <property name="Flavor" value="All seeds share a common bond, calling to each other across infinity." />
       <property name="MultiverseId" value="271193" />
     </card>
     <card name="Dark Hatchling" id="be049e87-e156-4d66-b131-16c349759a52">
-      <property name="Cost" value="{4}{B}{B}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Horror" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Flying&#xD;&#xA;When Dark Hatchling enters the battlefield, destroy target nonblack creature. It can't be regenerated." />
+      <property name="Rules">Flying
+When Dark Hatchling enters the battlefield, destroy target nonblack creature. It can't be regenerated.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -353,12 +451,17 @@
       <property name="MultiverseId" value="271217" />
     </card>
     <card name="Deny Reality" id="865c17a0-3a16-4afc-86ab-941dfda7526c">
-      <property name="Cost" value="{3}{U}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor Blue Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)&#xD;&#xA;Return target permanent to its owner's hand." />
+      <property name="Rules">Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)
+Return target permanent to its owner's hand.</property>
       <property name="Artist" value="Jean-Sébastien Rossbach" />
       <property name="Number" value="085" />
       <property name="MultiverseId" value="271168" />
@@ -368,20 +471,26 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Dimir Aqueduct enters the battlefield tapped.&#xD;&#xA;When Dimir Aqueduct enters the battlefield, return a land you control to its owner's hand.&#xD;&#xA;{T}: Add {U}{B} to your mana pool." />
+      <property name="Rules">Dimir Aqueduct enters the battlefield tapped.
+When Dimir Aqueduct enters the battlefield, return a land you control to its owner's hand.
+<s value="T">{T}</s>: Add <s value="U">{U}</s><s value="B">{B}</s> to your mana pool.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="116" />
       <property name="MultiverseId" value="271209" />
       <property name="Flags" value="UB" />
     </card>
     <card name="Dimir Infiltrator" id="35b9fd4a-700c-4728-a852-627bb0a16a28">
-      <property name="Cost" value="{U}{B}" />
+      <property name="Cost">
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor Blue Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spirit" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Dimir Infiltrator can't be blocked.&#xD;&#xA;Transmute {1}{U}{B} ({1}{U}{B}, Discard this card: Search your library for a card with the same converted mana cost as this card, reveal it, and put it into your hand. Then shuffle your library. Transmute only as a sorcery.)" />
+      <property name="Rules">Dimir Infiltrator can't be blocked.
+Transmute <s value="1">{1}</s><s value="U">{U}</s><s value="B">{B}</s> (<s value="1">{1}</s><s value="U">{U}</s><s value="B">{B}</s>, Discard this card: Search your library for a card with the same converted mana cost as this card, reveal it, and put it into your hand. Then shuffle your library. Transmute only as a sorcery.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -390,13 +499,18 @@
       <property name="MultiverseId" value="271214" />
     </card>
     <card name="Dowsing Shaman" id="289bdd68-8007-43e1-bf5b-bd4385689f17">
-      <property name="Cost" value="{4}{G}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Centaur Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="{2}{G}, {T}: Return target enchantment card from your graveyard to your hand." />
+      <property name="Rules">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>, <s value="T">{T}</s>: Return target enchantment card from your graveyard to your hand.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="3 / 4" />
@@ -406,13 +520,20 @@
       <property name="MultiverseId" value="271210" />
     </card>
     <card name="Dragonlair Spider" id="0b9af901-eb2d-463c-b83f-27e42d86aa02">
-      <property name="Cost" value="{2}{R}{R}{G}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Red Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spider" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Reach&#xD;&#xA;Whenever an opponent casts a spell, put a 1/1 green Insect creature token onto the battlefield." />
+      <property name="Rules">Reach
+Whenever an opponent casts a spell, create a 1/1 green Insect creature token.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="5 / 6" />
@@ -422,13 +543,16 @@
       <property name="MultiverseId" value="270726" />
     </card>
     <card name="Dreampod Druid" id="8654aa8c-f628-44ea-8852-e509ea652d5d">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Druid" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="At the beginning of each upkeep, if Dreampod Druid is enchanted, put a 1/1 green Saproling creature token onto the battlefield." />
+      <property name="Rules">At the beginning of each upkeep, if Dreampod Druid is enchanted, create a 1/1 green Saproling creature token.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -438,13 +562,19 @@
       <property name="MultiverseId" value="270742" />
     </card>
     <card name="Elderwood Scion" id="b531ce01-212b-4ea1-a0a4-a12187b57191">
-      <property name="Cost" value="{3}{G}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor Green White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Trample, lifelink&#xD;&#xA;Spells you cast that target Elderwood Scion cost {2} less to cast.&#xD;&#xA;Spells your opponents cast that target Elderwood Scion cost {2} more to cast." />
+      <property name="Rules">Trample, lifelink
+Spells you cast that target Elderwood Scion cost <s value="2">{2}</s> less to cast.
+Spells your opponents cast that target Elderwood Scion cost <s value="2">{2}</s> more to cast.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -454,13 +584,20 @@
       <property name="MultiverseId" value="270725" />
     </card>
     <card name="Enigma Sphinx" id="8e7e5959-90e7-403f-a438-55a2860b5ef2">
-      <property name="Cost" value="{4}{W}{U}{B}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="W">{W}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="7" />
       <property name="Color" value="Multicolor White Blue Black" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Sphinx" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Flying&#xD;&#xA;When Enigma Sphinx is put into your graveyard from the battlefield, put it into your library third from the top.&#xD;&#xA;Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)" />
+      <property name="Rules">Flying
+When Enigma Sphinx is put into your graveyard from the battlefield, put it into your library third from the top.
+Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="5 / 4" />
@@ -469,13 +606,17 @@
       <property name="MultiverseId" value="271169" />
     </card>
     <card name="Enlisted Wurm" id="ad455417-2963-4e72-a68f-a9fa6e0e1972">
-      <property name="Cost" value="{4}{G}{W}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Green White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wurm" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)" />
+      <property name="Rules">Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
@@ -485,24 +626,35 @@
       <property name="MultiverseId" value="271170" />
     </card>
     <card name="Erratic Explosion" id="6d8e26fa-984c-46df-b9e2-5c0d8dc17f86">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose target creature or player. Reveal cards from the top of your library until you reveal a nonland card. Erratic Explosion deals damage equal to that card's converted mana cost to that creature or player. Put the revealed cards on the bottom of your library in any order." />
+      <property name="Rules">Choose target creature or player. Reveal cards from the top of your library until you reveal a nonland card. Erratic Explosion deals damage equal to that card's converted mana cost to that creature or player. Put the revealed cards on the bottom of your library in any order.</property>
       <property name="Artist" value="Gary Ruddell" />
       <property name="Number" value="041" />
       <property name="MultiverseId" value="271191" />
     </card>
     <card name="Etherium-Horn Sorcerer" id="800c0b70-a121-4e39-b6c6-2cc040ef3d3b">
-      <property name="Cost" value="{4}{U}{R}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Blue Red" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Minotaur Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{1}{U}{R}: Return Etherium-Horn Sorcerer to its owner's hand.&#xD;&#xA;Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)" />
+      <property name="Rules">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="R">{R}</s>: Return Etherium-Horn Sorcerer to its owner's hand.
+Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="3 / 6" />
@@ -515,7 +667,8 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Add to your mana pool one mana of any color that a land an opponent controls could produce." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add to your mana pool one mana of any color that a land an opponent controls could produce.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="117" />
       <property name="Flavor" value="&quot;It was a strange morning. When we awoke, we found our trees transformed. We didn't know whether to water them or polish them.&quot;—Pulan, Bant orchardist" />
@@ -523,83 +676,112 @@
       <property name="Flags" value="M" />
     </card>
     <card name="Farsight Mask" id="ffade2e9-956e-4e17-b385-cae7755f941c">
-      <property name="Cost" value="{5}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Whenever a source an opponent controls deals damage to you, if Farsight Mask is untapped, you may draw a card." />
+      <property name="Rules">Whenever a source an opponent controls deals damage to you, if Farsight Mask is untapped, you may draw a card.</property>
       <property name="Artist" value="Ben Thompson" />
       <property name="Number" value="109" />
       <property name="Flavor" value="It turns the adversity of the moment into the knowledge of a lifetime." />
       <property name="MultiverseId" value="275263" />
     </card>
     <card name="Felidar Umbra" id="a814475a-2e39-4bc1-b08e-5323a92bd52b">
-      <property name="Cost" value="{1}{W}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature has lifelink.&#xD;&#xA;{1}{W}: Attach Felidar Umbra to target creature you control.&#xD;&#xA;Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)" />
+      <property name="Rules">Enchant creature
+Enchanted creature has lifelink.
+<s value="1">{1}</s><s value="W">{W}</s>: Attach Felidar Umbra to target creature you control.
+Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="006" />
       <property name="MultiverseId" value="270736" />
     </card>
     <card name="Fiery Conclusion" id="1fa1a875-bc58-4ba3-b198-22c89db3b52d">
-      <property name="Cost" value="{1}{R}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="As an additional cost to cast Fiery Conclusion, sacrifice a creature.&#xD;&#xA;Fiery Conclusion deals 5 damage to target creature." />
+      <property name="Rules">As an additional cost to cast Fiery Conclusion, sacrifice a creature.
+Fiery Conclusion deals 5 damage to target creature.</property>
       <property name="Artist" value="Parente" />
       <property name="Number" value="042" />
       <property name="Flavor" value="The Boros legionnaire saw a noble sacrifice, the Rakdos thug a blazing suicide, and the Izzet alchemist an experiment gone awry." />
       <property name="MultiverseId" value="275259" />
     </card>
     <card name="Fiery Fall" id="f5913a15-3b76-42c1-b8df-ebf2ce71452b">
-      <property name="Cost" value="{5}{R}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Fiery Fall deals 5 damage to target creature.&#xD;&#xA;Basic landcycling {1}{R} ({1}{R}, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)" />
+      <property name="Rules">Fiery Fall deals 5 damage to target creature.
+Basic landcycling <s value="1">{1}</s><s value="R">{R}</s> (<s value="1">{1}</s><s value="R">{R}</s>, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand. Then shuffle your library.)</property>
       <property name="Artist" value="Daarken" />
       <property name="Number" value="043" />
       <property name="Flavor" value="Jund feasts on the unprepared." />
       <property name="MultiverseId" value="271138" />
     </card>
     <card name="Fires of Yavimaya" id="7c8786b0-ad55-4831-9940-420843f94833">
-      <property name="Cost" value="{1}{R}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Multicolor Red Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Creatures you control have haste.&#xD;&#xA;Sacrifice Fires of Yavimaya: Target creature gets +2/+2 until end of turn." />
+      <property name="Rules">Creatures you control have haste.
+Sacrifice Fires of Yavimaya: Target creature gets +2/+2 until end of turn.</property>
       <property name="Artist" value="Val Mayerik" />
       <property name="Number" value="092" />
       <property name="MultiverseId" value="276068" />
     </card>
     <card name="Flayer Husk" id="d64b0da2-9a77-40c7-9207-ec29146cd442">
-      <property name="Cost" value="{1}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Living weapon (When this Equipment enters the battlefield, put a 0/0 black Germ creature token onto the battlefield, then attach this to it.)&#xD;&#xA;Equipped creature gets +1/+1.&#xD;&#xA;Equip {2}" />
+      <property name="Rules">Living weapon (When this Equipment enters the battlefield, create a 0/0 black Germ creature token, then attach this to it.)
+Equipped creature gets +1/+1.
+Equip <s value="2">{2}</s></property>
       <property name="Artist" value="Igor Kieryluk" />
       <property name="Number" value="110" />
       <property name="MultiverseId" value="271145" />
     </card>
     <card name="Fling" id="3da3e0e3-7035-4fc6-a77d-ac38e6f7d494">
-      <property name="Cost" value="{1}{R}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="As an additional cost to cast Fling, sacrifice a creature.&#xD;&#xA;Fling deals damage equal to the sacrificed creature's power to target creature or player." />
+      <property name="Rules">As an additional cost to cast Fling, sacrifice a creature.
+Fling deals damage equal to the sacrificed creature's power to target creature or player.</property>
       <property name="Artist" value="Parente" />
       <property name="Number" value="044" />
       <property name="Flavor" value="About halfway to the target, Snukk vowed that he had been tricked for the last time." />
@@ -611,32 +793,42 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="G" />
+      <property name="Rules">G</property>
       <property name="Artist" value="Vincent Proce" />
       <property name="Number" value="155" />
       <property name="MultiverseId" value="276456" />
       <property name="Flags" value="G" />
     </card>
     <card name="Fractured Powerstone" id="8b2c3cee-59e6-4933-bf0f-1f4865971154">
-      <property name="Cost" value="{2}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{T}: Roll the planar die. Activate this ability only any time you could cast a sorcery." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+<s value="T">{T}</s>: Roll the planar die. Activate this ability only any time you could cast a sorcery.</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="111" />
       <property name="Flavor" value="The Thran learned to capture mana, but power inevitably escapes its bonds." />
       <property name="MultiverseId" value="265151" />
     </card>
     <card name="Fusion Elemental" id="a364bedf-da80-43c6-9ba4-7cbd8387509d">
-      <property name="Cost" value="{W}{U}{B}{R}{G}" />
+      <property name="Cost">
+        <s value="W">{W}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor White Blue Black Red Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="8" />
       <property name="Toughness" value="8" />
       <property name="PT Box" value="8 / 8" />
@@ -646,25 +838,35 @@
       <property name="MultiverseId" value="271139" />
     </card>
     <card name="Ghostly Prison" id="66d31367-f3d6-4f33-94a3-7fda8d387be1">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Creatures can't attack you unless their controller pays {2} for each creature he or she controls that's attacking you." />
+      <property name="Rules">Creatures can't attack you unless their controller pays <s value="2">{2}</s> for each creature he or she controls that's attacking you.</property>
       <property name="Artist" value="Wayne England" />
       <property name="Number" value="007" />
       <property name="Flavor" value="&quot;May the memory of our fallen heroes ensnare the violent hearts of lesser men.&quot;—Great Threshold of Monserkat inscription" />
       <property name="MultiverseId" value="275264" />
     </card>
     <card name="Glen Elendra Liege" id="77f5cfaa-c419-40c7-80b5-db8cec9a6bda">
-      <property name="Cost" value="{1}{U/B}{U/B}{U/B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="UB">{U/B}</s>
+        <s value="UB">{U/B}</s>
+        <s value="UB">{U/B}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Hybrid Blue Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Faerie Knight" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Flying&#xD;&#xA;Other blue creatures you control get +1/+1.&#xD;&#xA;Other black creatures you control get +1/+1." />
+      <property name="Rules">Flying
+Other blue creatures you control get +1/+1.
+Other black creatures you control get +1/+1.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -674,13 +876,17 @@
       <property name="MultiverseId" value="271215" />
     </card>
     <card name="Gluttonous Slime" id="9a695646-69b5-4b30-bb7c-6bca136ee6a5">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Ooze" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Flash&#xD;&#xA;Devour 1 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with that many +1/+1 counters on it.)" />
+      <property name="Rules">Flash
+Devour 1 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with that many +1/+1 counters on it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -694,7 +900,9 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Graypelt Refuge enters the battlefield tapped.&#xD;&#xA;When Graypelt Refuge enters the battlefield, you gain 1 life.&#xD;&#xA;{T}: Add {G} or {W} to your mana pool." />
+      <property name="Rules">Graypelt Refuge enters the battlefield tapped.
+When Graypelt Refuge enters the battlefield, you gain 1 life.
+<s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s> to your mana pool.</property>
       <property name="Artist" value="Philip Straub" />
       <property name="Number" value="118" />
       <property name="MultiverseId" value="271131" />
@@ -705,20 +913,26 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Gruul Turf enters the battlefield tapped.&#xD;&#xA;When Gruul Turf enters the battlefield, return a land you control to its owner's hand.&#xD;&#xA;{T}: Add {R}{G} to your mana pool." />
+      <property name="Rules">Gruul Turf enters the battlefield tapped.
+When Gruul Turf enters the battlefield, return a land you control to its owner's hand.
+<s value="T">{T}</s>: Add <s value="R">{R}</s><s value="G">{G}</s> to your mana pool.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="119" />
       <property name="MultiverseId" value="271228" />
       <property name="Flags" value="RG" />
     </card>
     <card name="Guard Gomazoa" id="decff2ed-51ca-4360-b799-65409a9e56b8">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Jellyfish" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Defender, flying&#xD;&#xA;Prevent all combat damage that would be dealt to Guard Gomazoa." />
+      <property name="Rules">Defender, flying
+Prevent all combat damage that would be dealt to Guard Gomazoa.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -728,25 +942,33 @@
       <property name="MultiverseId" value="279846" />
     </card>
     <card name="Hellion Eruption" id="bc2b0b65-1ecb-4fe4-b1b2-ec45cd7e4284">
-      <property name="Cost" value="{5}{R}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Sacrifice all creatures you control, then put that many 4/4 red Hellion creature tokens onto the battlefield." />
+      <property name="Rules">Sacrifice all creatures you control, then create that many 4/4 red Hellion creature tokens.</property>
       <property name="Artist" value="Anthony Francisco" />
       <property name="Number" value="045" />
       <property name="Flavor" value="Just when you thought you'd be safe, in the middle of an open field with no Eldrazi around for miles." />
       <property name="MultiverseId" value="271158" />
     </card>
     <card name="Hellkite Hatchling" id="a70ae9bd-750d-4f2f-a1ab-ebf89e16d200">
-      <property name="Cost" value="{2}{R}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Red Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Devour 1 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with that many +1/+1 counters on it.)&#xD;&#xA;Hellkite Hatchling has flying and trample if it devoured a creature." />
+      <property name="Rules">Devour 1 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with that many +1/+1 counters on it.)
+Hellkite Hatchling has flying and trample if it devoured a creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -756,13 +978,19 @@
       <property name="MultiverseId" value="271141" />
     </card>
     <card name="Higure, the Still Wind" id="ba1b76c4-f3ce-418c-a3f5-11eb3c79aa07">
-      <property name="Cost" value="{3}{U}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Ninja" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Ninjutsu {2}{U}{U} ({2}{U}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)&#xD;&#xA;Whenever Higure, the Still Wind deals combat damage to a player, you may search your library for a Ninja card, reveal it, and put it into your hand. If you do, shuffle your library.&#xD;&#xA;{2}: Target Ninja creature can't be blocked this turn." />
+      <property name="Rules">Ninjutsu <s value="2">{2}</s><s value="U">{U}</s><s value="U">{U}</s> (<s value="2">{2}</s><s value="U">{U}</s><s value="U">{U}</s>, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+Whenever Higure, the Still Wind deals combat damage to a player, you may search your library for a Ninja card, reveal it, and put it into your hand. If you do, shuffle your library.
+<s value="2">{2}</s>: Target Ninja creature can't be blocked this turn.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="3 / 4" />
@@ -771,13 +999,16 @@
       <property name="MultiverseId" value="271181" />
     </card>
     <card name="Hissing Iguanar" id="47ae7ed0-ae89-499e-9f1a-06a6f1eccca4">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Lizard" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever another creature dies, you may have Hissing Iguanar deal 1 damage to target player." />
+      <property name="Rules">Whenever another creature dies, you may have Hissing Iguanar deal 1 damage to target player.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="3 / 1" />
@@ -787,25 +1018,33 @@
       <property name="MultiverseId" value="271160" />
     </card>
     <card name="Hyena Umbra" id="cf89db4f-fa02-4fcc-82dd-87b3493724fc">
-      <property name="Cost" value="{W}" />
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature gets +1/+1 and has first strike.&#xD;&#xA;Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)" />
+      <property name="Rules">Enchant creature
+Enchanted creature gets +1/+1 and has first strike.
+Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="008" />
       <property name="MultiverseId" value="271150" />
     </card>
     <card name="Illusory Angel" id="de3c3600-7aea-4fe8-aa73-58cc9afea0a1">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel Illusion" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Flying&#xD;&#xA;Cast Illusory Angel only if you've cast another spell this turn." />
+      <property name="Rules">Flying
+Cast Illusory Angel only if you've cast another spell this turn.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -815,25 +1054,37 @@
       <property name="MultiverseId" value="265143" />
     </card>
     <card name="Indrik Umbra" id="9cddcc8a-06ce-4282-93a8-f58df4b5e048">
-      <property name="Cost" value="{4}{G}{W}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Green White" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature gets +4/+4 and has first strike, and all creatures able to block it do so.&#xD;&#xA;Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)" />
+      <property name="Rules">Enchant creature
+Enchanted creature gets +4/+4 and has first strike, and all creatures able to block it do so.
+Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="096" />
       <property name="MultiverseId" value="270724" />
     </card>
     <card name="Ink-Eyes, Servant of Oni" id="7ab2dc27-4c41-41e8-ad7a-b6af94d3bd59">
-      <property name="Cost" value="{4}{B}{B}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Rat Ninja" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Ninjutsu {3}{B}{B} ({3}{B}{B}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)&#xD;&#xA;Whenever Ink-Eyes, Servant of Oni deals combat damage to a player, you may put target creature card from that player's graveyard onto the battlefield under your control.&#xD;&#xA;{1}{B}: Regenerate Ink-Eyes." />
+      <property name="Rules">Ninjutsu <s value="3">{3}</s><s value="B">{B}</s><s value="B">{B}</s> (<s value="3">{3}</s><s value="B">{B}</s><s value="B">{B}</s>, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+Whenever Ink-Eyes, Servant of Oni deals combat damage to a player, you may put target creature card from that player's graveyard onto the battlefield under your control.
+<s value="1">{1}</s><s value="B">{B}</s>: Regenerate Ink-Eyes.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="5 / 4" />
@@ -842,13 +1093,17 @@
       <property name="MultiverseId" value="271182" />
     </card>
     <card name="Inkfathom Witch" id="05f6b541-96c6-40cd-b275-0a3a15b10aa4">
-      <property name="Cost" value="{1}{U/B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="UB">{U/B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Hybrid Blue Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Merfolk Wizard" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)&#xD;&#xA;{2}{U}{B}: Each unblocked creature has base power and toughness 4/1 until end of turn." />
+      <property name="Rules">Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)
+<s value="2">{2}</s><s value="U">{U}</s><s value="B">{B}</s>: Each unblocked creature has base power and toughness 4/1 until end of turn.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -863,7 +1118,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="U" />
+      <property name="Rules">U</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="140" />
       <property name="MultiverseId" value="276471" />
@@ -874,20 +1129,28 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Jwar Isle Refuge enters the battlefield tapped.&#xD;&#xA;When Jwar Isle Refuge enters the battlefield, you gain 1 life.&#xD;&#xA;{T}: Add {U} or {B} to your mana pool." />
+      <property name="Rules">Jwar Isle Refuge enters the battlefield tapped.
+When Jwar Isle Refuge enters the battlefield, you gain 1 life.
+<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s> to your mana pool.</property>
       <property name="Artist" value="Cyril Van Der Haegen" />
       <property name="Number" value="120" />
       <property name="MultiverseId" value="271132" />
       <property name="Flags" value="UB" />
     </card>
     <card name="Kathari Remnant" id="72a36808-bba0-4884-97aa-daf2d123ed44">
-      <property name="Cost" value="{2}{U}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Blue Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Bird Skeleton" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Flying&#xD;&#xA;{B}: Regenerate Kathari Remnant.&#xD;&#xA;Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)" />
+      <property name="Rules">Flying
+<s value="B">{B}</s>: Regenerate Kathari Remnant.
+Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="0 / 1" />
@@ -900,7 +1163,9 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Kazandu Refuge enters the battlefield tapped.&#xD;&#xA;When Kazandu Refuge enters the battlefield, you gain 1 life.&#xD;&#xA;{T}: Add {R} or {G} to your mana pool." />
+      <property name="Rules">Kazandu Refuge enters the battlefield tapped.
+When Kazandu Refuge enters the battlefield, you gain 1 life.
+<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s> to your mana pool.</property>
       <property name="Artist" value="Franz Vohwinkel" />
       <property name="Number" value="121" />
       <property name="MultiverseId" value="271133" />
@@ -911,20 +1176,26 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Khalni Garden enters the battlefield tapped.&#xD;&#xA;When Khalni Garden enters the battlefield, put a 0/1 green Plant creature token onto the battlefield.&#xD;&#xA;{T}: Add {G} to your mana pool." />
+      <property name="Rules">Khalni Garden enters the battlefield tapped.
+When Khalni Garden enters the battlefield, create a 0/1 green Plant creature token.
+<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.</property>
       <property name="Artist" value="Ryan Pancoast" />
       <property name="Number" value="122" />
       <property name="MultiverseId" value="271227" />
       <property name="Flags" value="G" />
     </card>
     <card name="Kor Spiritdancer" id="33dc8f96-5db1-45d9-8938-053209dd9818">
-      <property name="Cost" value="{1}{W}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Kor Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Kor Spiritdancer gets +2/+2 for each Aura attached to it.&#xD;&#xA;Whenever you cast an Aura spell, you may draw a card." />
+      <property name="Rules">Kor Spiritdancer gets +2/+2 for each Aura attached to it.
+Whenever you cast an Aura spell, you may draw a card.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="0 / 2" />
@@ -934,13 +1205,21 @@
       <property name="MultiverseId" value="271151" />
     </card>
     <card name="Krond the Dawn-Clad" id="ae1b6556-79fb-4537-8a9c-d658121e5e9b">
-      <property name="Cost" value="{G}{G}{G}{W}{W}{W}" />
+      <property name="Cost">
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Green White" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Archon" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules" value="Flying, vigilance&#xD;&#xA;Whenever Krond the Dawn-Clad attacks, if it's enchanted, exile target permanent." />
+      <property name="Rules">Flying, vigilance
+Whenever Krond the Dawn-Clad attacks, if it's enchanted, exile target permanent.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="6 / 6" />
@@ -954,31 +1233,44 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Krosan Verge enters the battlefield tapped.&#xD;&#xA;{T}: Add {C} to your mana pool.&#xD;&#xA;{2}, {T}, Sacrifice Krosan Verge: Search your library for a Forest card and a Plains card and put them onto the battlefield tapped. Then shuffle your library." />
+      <property name="Rules">Krosan Verge enters the battlefield tapped.
+<s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Krosan Verge: Search your library for a Forest card and a Plains card and put them onto the battlefield tapped. Then shuffle your library.</property>
       <property name="Artist" value="Tony Szczudlo" />
       <property name="Number" value="123" />
       <property name="MultiverseId" value="271177" />
       <property name="Flags" value="GW" />
     </card>
     <card name="Last Stand" id="1a2b3dc3-5e2a-421f-833a-015e2b49479f">
-      <property name="Cost" value="{W}{U}{B}{R}{G}" />
+      <property name="Cost">
+        <s value="W">{W}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor White Blue Black Red Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Target opponent loses 2 life for each Swamp you control. Last Stand deals damage equal to the number of Mountains you control to target creature. Put a 1/1 green Saproling creature token onto the battlefield for each Forest you control. You gain 2 life for each Plains you control. Draw a card for each Island you control, then discard that many cards." />
+      <property name="Rules">Target opponent loses 2 life for each Swamp you control. Last Stand deals damage to target creature equal to the number of Mountains you control. Create a 1/1 green Saproling creature token for each Forest you control. You gain 2 life for each Plains you control. Draw a card for each Island you control, then discard that many cards.</property>
       <property name="Artist" value="Ron Spencer" />
       <property name="Number" value="100" />
       <property name="MultiverseId" value="271164" />
     </card>
     <card name="Liliana's Specter" id="b87be041-4e1d-4408-8e14-4f87f8689657">
-      <property name="Cost" value="{1}{B}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Specter" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Flying&#xD;&#xA;When Liliana's Specter enters the battlefield, each opponent discards a card." />
+      <property name="Rules">Flying
+When Liliana's Specter enters the battlefield, each opponent discards a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -988,13 +1280,18 @@
       <property name="MultiverseId" value="271194" />
     </card>
     <card name="Lumberknot" id="2b02f4ea-80e4-4d2e-ba82-259844f87516">
-      <property name="Cost" value="{2}{G}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Treefolk" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Hexproof (This creature can't be the target of spells or abilities your opponents control.)&#xD;&#xA;Whenever a creature dies, put a +1/+1 counter on Lumberknot." />
+      <property name="Rules">Hexproof (This creature can't be the target of spells or abilities your opponents control.)
+Whenever a creature dies, put a +1/+1 counter on Lumberknot.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1004,13 +1301,19 @@
       <property name="MultiverseId" value="271235" />
     </card>
     <card name="Maelstrom Wanderer" id="9bacad74-3a41-4edf-83ec-4fb9d5ef8667">
-      <property name="Cost" value="{5}{U}{R}{G}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="U">{U}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="8" />
       <property name="Color" value="Multicolor Blue Red Green" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules" value="Creatures you control have haste.&#xD;&#xA;Cascade, cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order. Then do it again.)" />
+      <property name="Rules">Creatures you control have haste.
+Cascade, cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order. Then do it again.)</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="7 / 5" />
@@ -1019,49 +1322,65 @@
       <property name="MultiverseId" value="265154" />
     </card>
     <card name="Mammoth Umbra" id="a5500573-4076-47ff-a4ad-39689a1c6025">
-      <property name="Cost" value="{4}{W}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature gets +3/+3 and has vigilance.&#xD;&#xA;Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)" />
+      <property name="Rules">Enchant creature
+Enchanted creature gets +3/+3 and has vigilance.
+Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="010" />
       <property name="MultiverseId" value="271152" />
     </card>
     <card name="Mark of Mutiny" id="aeeb1502-ff1d-4d61-9572-9f958544e5ff">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Gain control of target creature until end of turn. Put a +1/+1 counter on it and untap it. That creature gains haste until end of turn. (It can attack and {T} this turn.)" />
+      <property name="Rules">Gain control of target creature until end of turn. Put a +1/+1 counter on it and untap it. That creature gains haste until end of turn. (It can attack and <s value="T">{T}</s> this turn.)</property>
       <property name="Artist" value="Mike Bierek" />
       <property name="Number" value="047" />
       <property name="Flavor" value="The flame of anger is hard to douse once lit." />
       <property name="MultiverseId" value="271135" />
     </card>
     <card name="Mass Mutiny" id="e42b4138-e31d-472f-a4b1-f2f129b91177">
-      <property name="Cost" value="{3}{R}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="For each opponent, gain control of up to one target creature that player controls until end of turn. Untap those creatures. They gain haste until end of turn." />
+      <property name="Rules">For each opponent, gain control of up to one target creature that player controls until end of turn. Untap those creatures. They gain haste until end of turn.</property>
       <property name="Artist" value="Carl Critchlow" />
       <property name="Number" value="048" />
       <property name="Flavor" value="&quot;What say you, my most trusted advisors? . . . Advisors?&quot;—Edra, merfolk sovereign" />
       <property name="MultiverseId" value="270743" />
     </card>
     <card name="Mistblade Shinobi" id="9d1f5956-a52c-46e3-8fc5-24ac357cdb3f">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Ninja" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Ninjutsu {U} ({U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)&#xD;&#xA;Whenever Mistblade Shinobi deals combat damage to a player, you may return target creature that player controls to its owner's hand." />
+      <property name="Rules">Ninjutsu <s value="U">{U}</s> (<s value="U">{U}</s>, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+Whenever Mistblade Shinobi deals combat damage to a player, you may return target creature that player controls to its owner's hand.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1070,13 +1389,16 @@
       <property name="MultiverseId" value="271183" />
     </card>
     <card name="Mitotic Slime" id="c00918d2-2e65-4a3e-8995-fa2ad8bba5ed">
-      <property name="Cost" value="{4}{G}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Ooze" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="When Mitotic Slime dies, put two 2/2 green Ooze creature tokens onto the battlefield. They have &quot;When this creature dies, put two 1/1 green Ooze creature tokens onto the battlefield.&quot;" />
+      <property name="Rules">When Mitotic Slime dies, create two 2/2 green Ooze creature tokens. They have "When this creature dies, create two 1/1 green Ooze creature tokens."</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -1090,20 +1412,23 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="R" />
+      <property name="Rules">R</property>
       <property name="Artist" value="D. Alexander Gregory" />
       <property name="Number" value="149" />
       <property name="MultiverseId" value="276465" />
       <property name="Flags" value="R" />
     </card>
     <card name="Mudbutton Torchrunner" id="03a825d9-fbfc-4785-b2b7-00e9a50fb29d">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin Warrior" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When Mudbutton Torchrunner dies, it deals 3 damage to target creature or player." />
+      <property name="Rules">When Mudbutton Torchrunner dies, it deals 3 damage to target creature or player.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1113,13 +1438,18 @@
       <property name="MultiverseId" value="271222" />
     </card>
     <card name="Mycoloth" id="5069b46f-69c6-4ec6-b7ce-ef355e70be50">
-      <property name="Cost" value="{3}{G}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Fungus" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Devour 2 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with twice that many +1/+1 counters on it.)&#xD;&#xA;At the beginning of your upkeep, put a 1/1 green Saproling creature token onto the battlefield for each +1/+1 counter on Mycoloth." />
+      <property name="Rules">Devour 2 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with twice that many +1/+1 counters on it.)
+At the beginning of your upkeep, create a 1/1 green Saproling creature token for each +1/+1 counter on Mycoloth.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -1128,13 +1458,16 @@
       <property name="MultiverseId" value="271161" />
     </card>
     <card name="Nest Invader" id="aa578e38-2176-4c10-b4ee-c8c00dcce94f">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Eldrazi Drone" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When Nest Invader enters the battlefield, put a 0/1 colorless Eldrazi Spawn creature token onto the battlefield. It has &quot;Sacrifice this creature: Add {C} to your mana pool.&quot;" />
+      <property name="Rules">When Nest Invader enters the battlefield, create a 0/1 colorless Eldrazi Spawn creature token. It has "Sacrifice this creature: Add <s value="C">{C}</s> to your mana pool."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1144,13 +1477,17 @@
       <property name="MultiverseId" value="275261" />
     </card>
     <card name="Ninja of the Deep Hours" id="b760a2cd-53c6-48b8-b5e0-a330d22a65b2">
-      <property name="Cost" value="{3}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Ninja" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Ninjutsu {1}{U} ({1}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)&#xD;&#xA;Whenever Ninja of the Deep Hours deals combat damage to a player, you may draw a card." />
+      <property name="Rules">Ninjutsu <s value="1">{1}</s><s value="U">{U}</s> (<s value="1">{1}</s><s value="U">{U}</s>, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+Whenever Ninja of the Deep Hours deals combat damage to a player, you may draw a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1159,13 +1496,16 @@
       <property name="MultiverseId" value="271184" />
     </card>
     <card name="Noggle Ransacker" id="b49aba4e-80b8-468e-8a07-f0224cd4738e">
-      <property name="Cost" value="{2}{U/R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="UR">{U/R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Hybrid Blue Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Noggle Rogue" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Noggle Ransacker enters the battlefield, each player draws two cards, then discards a card at random." />
+      <property name="Rules">When Noggle Ransacker enters the battlefield, each player draws two cards, then discards a card at random.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -1175,13 +1515,17 @@
       <property name="MultiverseId" value="271144" />
     </card>
     <card name="Nullmage Advocate" id="c72612ca-ce97-4f5d-a56f-d5ef26e0af66">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Insect Druid" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="{T}: Return two target cards from an opponent's graveyard to his or her hand. Destroy target artifact or enchantment." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Return two target cards from an opponent's graveyard to his or her hand. Destroy target artifact or enchantment.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -1191,13 +1535,18 @@
       <property name="MultiverseId" value="271178" />
     </card>
     <card name="Okiba-Gang Shinobi" id="c41913c0-172e-4c06-aa5a-aeb83b37d5a5">
-      <property name="Cost" value="{3}{B}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Rat Ninja" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Ninjutsu {3}{B} ({3}{B}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)&#xD;&#xA;Whenever Okiba-Gang Shinobi deals combat damage to a player, that player discards two cards." />
+      <property name="Rules">Ninjutsu <s value="3">{3}</s><s value="B">{B}</s> (<s value="3">{3}</s><s value="B">{B}</s>, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+Whenever Okiba-Gang Shinobi deals combat damage to a player, that player discards two cards.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -1206,13 +1555,16 @@
       <property name="MultiverseId" value="271185" />
     </card>
     <card name="Ondu Giant" id="07c96c6b-e756-43a5-acf5-dffa81a1211e">
-      <property name="Cost" value="{3}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Giant Druid" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When Ondu Giant enters the battlefield, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library." />
+      <property name="Rules">When Ondu Giant enters the battlefield, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
@@ -1222,25 +1574,35 @@
       <property name="MultiverseId" value="271153" />
     </card>
     <card name="Overrun" id="d5aeaf89-c22b-41a4-822e-864a1197be74">
-      <property name="Cost" value="{2}{G}{G}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Creatures you control get +3/+3 and gain trample until end of turn." />
+      <property name="Rules">Creatures you control get +3/+3 and gain trample until end of turn.</property>
       <property name="Artist" value="Carl Critchlow" />
       <property name="Number" value="072" />
       <property name="Flavor" value="Nature doesn't walk." />
       <property name="MultiverseId" value="271201" />
     </card>
     <card name="Penumbra Spider" id="3a451b13-023d-42b3-8624-3dd902e61a7d">
-      <property name="Cost" value="{2}{G}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spider" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Reach&#xD;&#xA;When Penumbra Spider dies, put a 2/4 black Spider creature token with reach onto the battlefield." />
+      <property name="Rules">Reach
+When Penumbra Spider dies, create a 2/4 black Spider creature token with reach.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
@@ -1250,13 +1612,17 @@
       <property name="MultiverseId" value="271223" />
     </card>
     <card name="Peregrine Drake" id="9bd26c2c-64cc-4bee-8812-0d7c31a38361">
-      <property name="Cost" value="{4}{U}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Drake" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Flying&#xD;&#xA;When Peregrine Drake enters the battlefield, untap up to five lands." />
+      <property name="Rules">Flying
+When Peregrine Drake enters the battlefield, untap up to five lands.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -1271,44 +1637,60 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="W" />
+      <property name="Rules">W</property>
       <property name="Artist" value="Jung Park" />
       <property name="Number" value="135" />
       <property name="MultiverseId" value="276459" />
       <property name="Flags" value="W" />
     </card>
     <card name="Pollenbright Wings" id="bdea2309-f5ea-425c-b423-7113ec3bce5d">
-      <property name="Cost" value="{4}{G}{W}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Green White" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature has flying.&#xD;&#xA;Whenever enchanted creature deals combat damage to a player, put that many 1/1 green Saproling creature tokens onto the battlefield." />
+      <property name="Rules">Enchant creature
+Enchanted creature has flying.
+Whenever enchanted creature deals combat damage to a player, create that many 1/1 green Saproling creature tokens.</property>
       <property name="Artist" value="Terese Nielsen" />
       <property name="Number" value="103" />
       <property name="MultiverseId" value="271211" />
     </card>
     <card name="Predatory Urge" id="9a65b8cb-8640-4f97-9d50-fd18275c1493">
-      <property name="Cost" value="{3}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature has &quot;{T}: This creature deals damage equal to its power to target creature. That creature deals damage equal to its power to this creature.&quot;" />
+      <property name="Rules">Enchant creature
+Enchanted creature has "<s value="T">{T}</s>: This creature deals damage equal to its power to target creature. That creature deals damage equal to its power to this creature."</property>
       <property name="Artist" value="Scott Chou" />
       <property name="Number" value="074" />
       <property name="MultiverseId" value="271136" />
     </card>
     <card name="Preyseizer Dragon" id="16fdaca1-8089-4bc2-811c-c30f688e20c3">
-      <property name="Cost" value="{4}{R}{R}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Flying&#xD;&#xA;Devour 2 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with twice that many +1/+1 counters on it.)&#xD;&#xA;Whenever Preyseizer Dragon attacks, it deals damage to target creature or player equal to the number of +1/+1 counters on Preyseizer Dragon." />
+      <property name="Rules">Flying
+Devour 2 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with twice that many +1/+1 counters on it.)
+Whenever Preyseizer Dragon attacks, it deals damage to target creature or player equal to the number of +1/+1 counters on Preyseizer Dragon.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -1317,13 +1699,16 @@
       <property name="MultiverseId" value="265150" />
     </card>
     <card name="Primal Plasma" id="b60b8766-4766-4e3e-829c-232ea4e54cc6">
-      <property name="Cost" value="{3}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental Shapeshifter" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="As Primal Plasma enters the battlefield, it becomes your choice of a 3/3 creature, a 2/2 creature with flying, or a 1/6 creature with defender." />
+      <property name="Rules">As Primal Plasma enters the battlefield, it becomes your choice of a 3/3 creature, a 2/2 creature with flying, or a 1/6 creature with defender.</property>
       <property name="Power" value="*" />
       <property name="Toughness" value="*" />
       <property name="PT Box" value="* / *" />
@@ -1333,49 +1718,66 @@
       <property name="MultiverseId" value="271175" />
     </card>
     <card name="Quiet Disrepair" id="3fc4e998-45b3-4e6b-86f2-0e7da0f74d7f">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Enchant artifact or enchantment&#xD;&#xA;At the beginning of your upkeep, choose one —&#xD;&#xA;• Destroy enchanted permanent.&#xD;&#xA;• You gain 2 life." />
+      <property name="Rules">Enchant artifact or enchantment
+At the beginning of your upkeep, choose one —
+• Destroy enchanted permanent.
+• You gain 2 life.</property>
       <property name="Artist" value="Glen Angus" />
       <property name="Number" value="075" />
       <property name="Flavor" value="&quot;Artifice has always stood upon nature's shoulders. Let us watch nature take a turn.&quot;—Freyalise" />
       <property name="MultiverseId" value="271238" />
     </card>
     <card name="Quietus Spike" id="23e4b08c-6d02-40de-a1b6-f4b2fb80449d">
-      <property name="Cost" value="{3}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Equipped creature has deathtouch.&#xD;&#xA;Whenever equipped creature deals combat damage to a player, that player loses half his or her life, rounded up.&#xD;&#xA;Equip {3}" />
+      <property name="Rules">Equipped creature has deathtouch.
+Whenever equipped creature deals combat damage to a player, that player loses half his or her life, rounded up.
+Equip <s value="3">{3}</s></property>
       <property name="Artist" value="Mark Brill" />
       <property name="Number" value="112" />
       <property name="MultiverseId" value="271219" />
     </card>
     <card name="Rancor" id="aaaf8e25-6943-4ebb-85e5-7186020678ad">
-      <property name="Cost" value="{G}" />
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature gets +2/+0 and has trample.&#xD;&#xA;When Rancor is put into a graveyard from the battlefield, return Rancor to its owner's hand." />
+      <property name="Rules">Enchant creature
+Enchanted creature gets +2/+0 and has trample.
+When Rancor is put into a graveyard from the battlefield, return Rancor to its owner's hand.</property>
       <property name="Artist" value="Kev Walker" />
       <property name="Number" value="076" />
       <property name="MultiverseId" value="275266" />
     </card>
     <card name="Rivals' Duel" id="6bf8706a-cf84-4872-8586-0b6572726754">
-      <property name="Cost" value="{3}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Choose two target creatures that share no creature types. Those creatures fight each other. (Each deals damage equal to its power to the other.)" />
+      <property name="Rules">Choose two target creatures that share no creature types. Those creatures fight each other. (Each deals damage equal to its power to the other.)</property>
       <property name="Artist" value="Zoltan Boros &amp; Gabor Szikszai" />
       <property name="Number" value="051" />
       <property name="Flavor" value="They could agree on one thing only: one of them must die." />
@@ -1386,33 +1788,44 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Rupture Spire enters the battlefield tapped.&#xD;&#xA;When Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.&#xD;&#xA;{T}: Add one mana of any color to your mana pool." />
+      <property name="Rules">Rupture Spire enters the battlefield tapped.
+When Rupture Spire enters the battlefield, sacrifice it unless you pay <s value="1">{1}</s>.
+<s value="T">{T}</s>: Add one mana of any color to your mana pool.</property>
       <property name="Artist" value="Jaime Jones" />
       <property name="Number" value="124" />
       <property name="MultiverseId" value="271142" />
       <property name="Flags" value="M" />
     </card>
     <card name="Sai of the Shinobi" id="d51ee04b-1f6c-412d-bf3d-40896da7ccc5">
-      <property name="Cost" value="{1}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Equipped creature gets +1/+1.&#xD;&#xA;Whenever a creature enters the battlefield under your control, you may attach Sai of the Shinobi to it.&#xD;&#xA;Equip {2}" />
+      <property name="Rules">Equipped creature gets +1/+1.
+Whenever a creature enters the battlefield under your control, you may attach Sai of the Shinobi to it.
+Equip <s value="2">{2}</s></property>
       <property name="Artist" value="Brian Snoddy" />
       <property name="Number" value="113" />
       <property name="Flavor" value="The passing of the sai presages the end of the old clan and the ascent of the new." />
       <property name="MultiverseId" value="270731" />
     </card>
     <card name="Sakashima's Student" id="cb15bd19-b540-4292-8fd8-22c141744123">
-      <property name="Cost" value="{2}{U}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Ninja" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Ninjutsu {1}{U} ({1}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)&#xD;&#xA;You may have Sakashima's Student enter the battlefield as a copy of any creature on the battlefield, except it's still a Ninja in addition to its other creature types." />
+      <property name="Rules">Ninjutsu <s value="1">{1}</s><s value="U">{U}</s> (<s value="1">{1}</s><s value="U">{U}</s>, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+You may have Sakashima's Student enter the battlefield as a copy of any creature on the battlefield, except it's a Ninja in addition to its other creature types.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="0" />
       <property name="PT Box" value="0 / 0" />
@@ -1421,12 +1834,15 @@
       <property name="MultiverseId" value="265159" />
     </card>
     <card name="See Beyond" id="e59c97dc-b1fc-41d4-a460-5ebe2eef45a4">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Draw two cards, then shuffle a card from your hand into your library." />
+      <property name="Rules">Draw two cards, then shuffle a card from your hand into your library.</property>
       <property name="Artist" value="Andrew Robinson" />
       <property name="Number" value="025" />
       <property name="Flavor" value="Ancient lore locked in a mind driven mad is just as safe as when it was locked deep underground." />
@@ -1437,20 +1853,26 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Selesnya Sanctuary enters the battlefield tapped.&#xD;&#xA;When Selesnya Sanctuary enters the battlefield, return a land you control to its owner's hand.&#xD;&#xA;{T}: Add {G}{W} to your mana pool." />
+      <property name="Rules">Selesnya Sanctuary enters the battlefield tapped.
+When Selesnya Sanctuary enters the battlefield, return a land you control to its owner's hand.
+<s value="T">{T}</s>: Add <s value="G">{G}</s><s value="W">{W}</s> to your mana pool.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="125" />
       <property name="MultiverseId" value="271212" />
       <property name="Flags" value="GW" />
     </card>
     <card name="Shardless Agent" id="d7d003c4-44c8-4aaf-b26c-27da45eef6e5">
-      <property name="Cost" value="{1}{G}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Multicolor Green Blue" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Human Rogue" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)" />
+      <property name="Rules">Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1463,7 +1885,9 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{1}, {T}: Add one mana of any color to your mana pool." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+<s value="1">{1}</s>, <s value="T">{T}</s>: Add one mana of any color to your mana pool.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="126" />
       <property name="Flavor" value="&quot;This is the price of being last in the food chain. We must keep our places of beauty hidden away instead of displayed for all to see.&quot;—Hildin, priest of Avacyn" />
@@ -1471,25 +1895,36 @@
       <property name="Flags" value="M" />
     </card>
     <card name="Sigil of the Empty Throne" id="0ebb24c8-2a3e-4862-8850-596e54c6c294">
-      <property name="Cost" value="{3}{W}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Whenever you cast an enchantment spell, put a 4/4 white Angel creature token with flying onto the battlefield." />
+      <property name="Rules">Whenever you cast an enchantment spell, create a 4/4 white Angel creature token with flying.</property>
       <property name="Artist" value="Cyril Van Der Haegen" />
       <property name="Number" value="011" />
       <property name="Flavor" value="When Asha left Bant, she ensured that the world would have protection and order in her absence." />
       <property name="MultiverseId" value="275258" />
     </card>
     <card name="Silent-Blade Oni" id="7125e9a3-8d37-40d5-b234-cf0720b0568f">
-      <property name="Cost" value="{3}{U}{U}{B}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="7" />
       <property name="Color" value="Multicolor Blue Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Demon Ninja" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Ninjutsu {4}{U}{B} ({4}{U}{B}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)&#xD;&#xA;Whenever Silent-Blade Oni deals combat damage to a player, look at that player's hand. You may cast a nonland card in it without paying that card's mana cost." />
+      <property name="Rules">Ninjutsu <s value="4">{4}</s><s value="U">{U}</s><s value="B">{B}</s> (<s value="4">{4}</s><s value="U">{U}</s><s value="B">{B}</s>, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+Whenever Silent-Blade Oni deals combat damage to a player, look at that player's hand. You may cast a nonland card in it without paying that card's mana cost.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="6 / 5" />
@@ -1498,13 +1933,17 @@
       <property name="MultiverseId" value="270727" />
     </card>
     <card name="Silhana Ledgewalker" id="934e2c5c-172e-4e4e-a9c1-2f6f2b9f4def">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Rogue" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Hexproof (This creature can't be the target of spells or abilities your opponents control.)&#xD;&#xA;Silhana Ledgewalker can't be blocked except by creatures with flying." />
+      <property name="Rules">Hexproof (This creature can't be the target of spells or abilities your opponents control.)
+Silhana Ledgewalker can't be blocked except by creatures with flying.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1518,20 +1957,26 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{R}{G}, {T}: Target creature gets +1/+1 and gains trample until end of turn." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+<s value="R">{R}</s><s value="G">{G}</s>, <s value="T">{T}</s>: Target creature gets +1/+1 and gains trample until end of turn.</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="127" />
       <property name="Flavor" value="&quot;This palace will be our fire-spit, and roasted prince our victory meal. Send in the torch-pigs!&quot;—Ghut Rak, Gruul guildmage" />
       <property name="MultiverseId" value="271231" />
     </card>
     <card name="Skullsnatcher" id="6af9c6b1-ef67-46d8-96dc-4de083dba263">
-      <property name="Cost" value="{1}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Rat Ninja" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Ninjutsu {B} ({B}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)&#xD;&#xA;Whenever Skullsnatcher deals combat damage to a player, exile up to two target cards from that player's graveyard." />
+      <property name="Rules">Ninjutsu <s value="B">{B}</s> (<s value="B">{B}</s>, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+Whenever Skullsnatcher deals combat damage to a player, exile up to two target cards from that player's graveyard.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -1540,37 +1985,50 @@
       <property name="MultiverseId" value="271186" />
     </card>
     <card name="Snake Umbra" id="f8b2aaa9-3c7f-4883-87fb-30e4149cf93e">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature gets +1/+1 and has &quot;Whenever this creature deals damage to an opponent, you may draw a card.&quot;&#xD;&#xA;Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)" />
+      <property name="Rules">Enchant creature
+Enchanted creature gets +1/+1 and has "Whenever this creature deals damage to an opponent, you may draw a card."
+Totem armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="078" />
       <property name="MultiverseId" value="271155" />
     </card>
     <card name="Spirit Mantle" id="675521a6-7ece-4ee9-ae32-50fa3347325c">
-      <property name="Cost" value="{1}{W}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Enchant creature&#xD;&#xA;Enchanted creature gets +1/+1 and has protection from creatures." />
+      <property name="Rules">Enchant creature
+Enchanted creature gets +1/+1 and has protection from creatures.</property>
       <property name="Artist" value="Izzy" />
       <property name="Number" value="012" />
       <property name="Flavor" value="The shield of unimpeachable purity is as strong as any wrought on the anvil." />
       <property name="MultiverseId" value="275265" />
     </card>
     <card name="Sunken Hope" id="350e0db8-3cd0-4707-a486-feafcd42604c">
-      <property name="Cost" value="{3}{U}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="At the beginning of each player's upkeep, that player returns a creature he or she controls to its owner's hand." />
+      <property name="Rules">At the beginning of each player's upkeep, that player returns a creature he or she controls to its owner's hand.</property>
       <property name="Artist" value="Volkan Baga" />
       <property name="Number" value="026" />
       <property name="Flavor" value="&quot;I don't concern myself with my enemy's hopes. Hopes follow the tides. They will retreat soon enough.&quot;—Ambassador Laquatus" />
@@ -1582,7 +2040,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="B" />
+      <property name="Rules">B</property>
       <property name="Artist" value="Jim Nelson" />
       <property name="Number" value="145" />
       <property name="MultiverseId" value="276455" />
@@ -1593,7 +2051,9 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{T}: Add {U} or {B} to your mana pool. Activate this ability only if you control a Swamp." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s> to your mana pool. Activate this ability only if you control a Swamp.</property>
       <property name="Artist" value="Alan Pollack" />
       <property name="Number" value="128" />
       <property name="MultiverseId" value="271239" />
@@ -1604,19 +2064,24 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="{T}, Sacrifice Terramorphic Expanse: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library." />
+      <property name="Rules">
+        <s value="T">{T}</s>, Sacrifice Terramorphic Expanse: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="129" />
       <property name="MultiverseId" value="271196" />
     </card>
     <card name="Thorn-Thrash Viashino" id="91f97634-c7db-459e-8f94-84676737b83b">
-      <property name="Cost" value="{3}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Viashino Warrior" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Devour 2 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with twice that many +1/+1 counters on it.)&#xD;&#xA;{G}: Thorn-Thrash Viashino gains trample until end of turn." />
+      <property name="Rules">Devour 2 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with twice that many +1/+1 counters on it.)
+<s value="G">{G}</s>: Thorn-Thrash Viashino gains trample until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1625,13 +2090,15 @@
       <property name="MultiverseId" value="271162" />
     </card>
     <card name="Thran Golem" id="4ee0f499-eca2-400f-907c-f433a0d520fc">
-      <property name="Cost" value="{5}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="As long as Thran Golem is enchanted, it gets +2/+2 and has flying, first strike, and trample." />
+      <property name="Rules">As long as Thran Golem is enchanted, it gets +2/+2 and has flying, first strike, and trample.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1641,25 +2108,32 @@
       <property name="MultiverseId" value="271173" />
     </card>
     <card name="Three Dreams" id="e15fd2a6-5877-4eaf-a8b2-dc49454cbf67">
-      <property name="Cost" value="{4}{W}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Search your library for up to three Aura cards with different names, reveal them, and put them into your hand. Then shuffle your library." />
+      <property name="Rules">Search your library for up to three Aura cards with different names, reveal them, and put them into your hand. Then shuffle your library.</property>
       <property name="Artist" value="Shishizaru" />
       <property name="Number" value="013" />
       <property name="Flavor" value="&quot;Choose one to heal, one to harm, and one to grant you the prudence to use them.&quot;—Miotri, auratouched mage" />
       <property name="MultiverseId" value="275260" />
     </card>
     <card name="Throat Slitter" id="a8872bf9-d23a-4e7f-8502-53b070b3ba01">
-      <property name="Cost" value="{4}{B}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Rat Ninja" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Ninjutsu {2}{B} ({2}{B}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)&#xD;&#xA;Whenever Throat Slitter deals combat damage to a player, destroy target nonblack creature that player controls." />
+      <property name="Rules">Ninjutsu <s value="2">{2}</s><s value="B">{B}</s> (<s value="2">{2}</s><s value="B">{B}</s>, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+Whenever Throat Slitter deals combat damage to a player, destroy target nonblack creature that player controls.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1668,13 +2142,17 @@
       <property name="MultiverseId" value="271187" />
     </card>
     <card name="Thromok the Insatiable" id="3f0805ca-eb79-4d10-8c97-8f15316fc41c">
-      <property name="Cost" value="{3}{R}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor Red Green" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Hellion" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules" value="Devour X, where X is the number of creatures devoured this way (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with X +1/+1 counters on it for each of those creatures.)" />
+      <property name="Rules">Devour X, where X is the number of creatures devoured this way (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with X +1/+1 counters on it for each of those creatures.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="0" />
       <property name="PT Box" value="0 / 0" />
@@ -1683,13 +2161,16 @@
       <property name="MultiverseId" value="265155" />
     </card>
     <card name="Thunder-Thrash Elder" id="13bb2e02-010e-4e1f-a278-6328f59c56cc">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Viashino Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Devour 3 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with three times that many +1/+1 counters on it.)" />
+      <property name="Rules">Devour 3 (As this enters the battlefield, you may sacrifice any number of creatures. This creature enters the battlefield with three times that many +1/+1 counters on it.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1699,13 +2180,15 @@
       <property name="MultiverseId" value="271163" />
     </card>
     <card name="Tormented Soul" id="c72948df-9d56-4a55-94ea-d675fba5ac25">
-      <property name="Cost" value="{B}" />
+      <property name="Cost">
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spirit" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Tormented Soul can't block and can't be blocked." />
+      <property name="Rules">Tormented Soul can't block and can't be blocked.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1715,13 +2198,15 @@
       <property name="MultiverseId" value="271174" />
     </card>
     <card name="Tukatongue Thallid" id="39d15dca-2212-4512-96fd-542adbe6193f">
-      <property name="Cost" value="{G}" />
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Fungus" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When Tukatongue Thallid dies, put a 1/1 green Saproling creature token onto the battlefield." />
+      <property name="Rules">When Tukatongue Thallid dies, create a 1/1 green Saproling creature token.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1731,13 +2216,19 @@
       <property name="MultiverseId" value="271143" />
     </card>
     <card name="Vela the Night-Clad" id="59ad2941-e472-4d96-a7a9-b475e4992424">
-      <property name="Cost" value="{4}{U}{B}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Blue Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules" value="Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)&#xD;&#xA;Other creatures you control have intimidate.&#xD;&#xA;Whenever Vela the Night-Clad or another creature you control leaves the battlefield, each opponent loses 1 life." />
+      <property name="Rules">Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)
+Other creatures you control have intimidate.
+Whenever Vela the Night-Clad or another creature you control leaves the battlefield, each opponent loses 1 life.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -1747,13 +2238,16 @@
       <property name="MultiverseId" value="270729" />
     </card>
     <card name="Viridian Emissary" id="8b8bfbbb-613f-4e85-85a7-e88641caf67a">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Scout" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When Viridian Emissary dies, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library." />
+      <property name="Rules">When Viridian Emissary dies, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -1766,7 +2260,9 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="{T}: Add {C} to your mana pool.&#xD;&#xA;{2}{G}{W}, {T}: Put a 1/1 green Saproling creature token onto the battlefield." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+<s value="2">{2}</s><s value="G">{G}</s><s value="W">{W}</s>, <s value="T">{T}</s>: Create a 1/1 green Saproling creature token.</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="130" />
       <property name="Flavor" value="In the autumn, she casts her seeds across the streets below, and come spring, her children rise in service to the Conclave." />
@@ -1777,20 +2273,27 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Vivid Creek enters the battlefield tapped with two charge counters on it.&#xD;&#xA;{T}: Add {U} to your mana pool.&#xD;&#xA;{T}, Remove a charge counter from Vivid Creek: Add one mana of any color to your mana pool." />
+      <property name="Rules">Vivid Creek enters the battlefield tapped with two charge counters on it.
+<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.
+<s value="T">{T}</s>, Remove a charge counter from Vivid Creek: Add one mana of any color to your mana pool.</property>
       <property name="Artist" value="Fred Fields" />
       <property name="Number" value="131" />
       <property name="MultiverseId" value="271204" />
       <property name="Flags" value="U" />
     </card>
     <card name="Walker of Secret Ways" id="03614748-09f9-45fd-ae31-0d20a8809640">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Ninja" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Ninjutsu {1}{U} ({1}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)&#xD;&#xA;Whenever Walker of Secret Ways deals combat damage to a player, look at that player's hand.&#xD;&#xA;{1}{U}: Return target Ninja you control to its owner's hand. Activate this ability only during your turn." />
+      <property name="Rules">Ninjutsu <s value="1">{1}</s><s value="U">{U}</s> (<s value="1">{1}</s><s value="U">{U}</s>, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+Whenever Walker of Secret Ways deals combat damage to a player, look at that player's hand.
+<s value="1">{1}</s><s value="U">{U}</s>: Return target Ninja you control to its owner's hand. Activate this ability only during your turn.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -1799,13 +2302,17 @@
       <property name="MultiverseId" value="271188" />
     </card>
     <card name="Wall of Blossoms" id="d654c2e2-e135-4ac3-a935-7cfa9dbed133">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Plant Wall" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Defender&#xD;&#xA;When Wall of Blossoms enters the battlefield, draw a card." />
+      <property name="Rules">Defender
+When Wall of Blossoms enters the battlefield, draw a card.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="0 / 4" />
@@ -1815,13 +2322,18 @@
       <property name="MultiverseId" value="275262" />
     </card>
     <card name="Wall of Frost" id="e0287867-9d95-4799-ac08-d06aa316d4a3">
-      <property name="Cost" value="{1}{U}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Defender (This creature can't attack.)&#xD;&#xA;Whenever Wall of Frost blocks a creature, that creature doesn't untap during its controller's next untap step." />
+      <property name="Rules">Defender
+Whenever Wall of Frost blocks a creature, that creature doesn't untap during its controller's next untap step.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="7" />
       <property name="PT Box" value="0 / 7" />
@@ -1831,25 +2343,32 @@
       <property name="MultiverseId" value="271197" />
     </card>
     <card name="Warstorm Surge" id="06b429af-8b4d-40d9-ae3a-15632be70cf3">
-      <property name="Cost" value="{5}{R}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Red" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Whenever a creature enters the battlefield under your control, it deals damage equal to its power to target creature or player." />
+      <property name="Rules">Whenever a creature enters the battlefield under your control, it deals damage equal to its power to target creature or player.</property>
       <property name="Artist" value="Raymond Swanland" />
       <property name="Number" value="054" />
       <property name="Flavor" value="&quot;Listen to the roar! Feel the thunder! The Immersturm shouts its approval with every bolt of lightning!&quot;" />
       <property name="MultiverseId" value="271226" />
     </card>
     <card name="Whirlpool Warrior" id="13b0ed70-60d3-4c6a-9b6f-8afbfa420c5d">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Merfolk Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="When Whirlpool Warrior enters the battlefield, shuffle the cards from your hand into your library, then draw that many cards.&#xD;&#xA;{R}, Sacrifice Whirlpool Warrior: Each player shuffles the cards from his or her hand into his or her library, then draws that many cards." />
+      <property name="Rules">When Whirlpool Warrior enters the battlefield, shuffle the cards from your hand into your library, then draw that many cards.
+<s value="R">{R}</s>, Sacrifice Whirlpool Warrior: Each player shuffles the cards from his or her hand into his or her library, then draws that many cards.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1858,13 +2377,16 @@
       <property name="MultiverseId" value="271165" />
     </card>
     <card name="Whispersilk Cloak" id="6297c31f-f470-46be-89ef-9d1051de156d">
-      <property name="Cost" value="{3}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Equipped creature can't be blocked and has shroud. (It can't be the target of spells or abilities.)&#xD;&#xA;Equip {2}" />
+      <property name="Rules">Equipped creature can't be blocked and has shroud. (It can't be the target of spells or abilities.)
+Equip <s value="2">{2}</s></property>
       <property name="Artist" value="Daren Bader" />
       <property name="Number" value="115" />
       <property name="Flavor" value="Such cloaks are in high demand both by assassins and by those who fear them." />
@@ -1876,7 +2398,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="G" />
+      <property name="Rules">G</property>
       <property name="Artist" value="Véronique Meignaud" />
       <property name="Number" value="154" />
       <property name="MultiverseId" value="276464" />
@@ -1888,7 +2410,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="G" />
+      <property name="Rules">G</property>
       <property name="Artist" value="Stephen Tappin" />
       <property name="Number" value="156" />
       <property name="MultiverseId" value="276454" />
@@ -1900,7 +2422,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="G" />
+      <property name="Rules">G</property>
       <property name="Artist" value="Aleksi Briclot" />
       <property name="Number" value="153" />
       <property name="MultiverseId" value="276460" />
@@ -1912,7 +2434,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="G" />
+      <property name="Rules">G</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="152" />
       <property name="MultiverseId" value="276468" />
@@ -1924,7 +2446,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="G" />
+      <property name="Rules">G</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="151" />
       <property name="MultiverseId" value="276467" />
@@ -1936,7 +2458,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="U" />
+      <property name="Rules">U</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="141" />
       <property name="MultiverseId" value="276462" />
@@ -1948,7 +2470,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="U" />
+      <property name="Rules">U</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="139" />
       <property name="MultiverseId" value="276453" />
@@ -1960,7 +2482,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="U" />
+      <property name="Rules">U</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="137" />
       <property name="MultiverseId" value="276466" />
@@ -1972,7 +2494,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="U" />
+      <property name="Rules">U</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="138" />
       <property name="MultiverseId" value="276452" />
@@ -1984,7 +2506,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="R" />
+      <property name="Rules">R</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="147" />
       <property name="MultiverseId" value="276447" />
@@ -1996,7 +2518,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="R" />
+      <property name="Rules">R</property>
       <property name="Artist" value="Aleksi Briclot" />
       <property name="Number" value="148" />
       <property name="MultiverseId" value="276449" />
@@ -2008,7 +2530,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="R" />
+      <property name="Rules">R</property>
       <property name="Artist" value="Véronique Meignaud" />
       <property name="Number" value="150" />
       <property name="MultiverseId" value="276470" />
@@ -2020,7 +2542,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="W" />
+      <property name="Rules">W</property>
       <property name="Artist" value="Vincent Proce" />
       <property name="Number" value="136" />
       <property name="MultiverseId" value="276461" />
@@ -2032,7 +2554,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="W" />
+      <property name="Rules">W</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="133" />
       <property name="MultiverseId" value="276469" />
@@ -2044,7 +2566,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="W" />
+      <property name="Rules">W</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="132" />
       <property name="MultiverseId" value="276473" />
@@ -2056,7 +2578,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="W" />
+      <property name="Rules">W</property>
       <property name="Artist" value="Véronique Meignaud" />
       <property name="Number" value="134" />
       <property name="MultiverseId" value="276458" />
@@ -2068,7 +2590,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="B" />
+      <property name="Rules">B</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="142" />
       <property name="MultiverseId" value="276472" />
@@ -2080,7 +2602,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="B" />
+      <property name="Rules">B</property>
       <property name="Artist" value="Jim Nelson" />
       <property name="Number" value="146" />
       <property name="MultiverseId" value="276457" />
@@ -2092,7 +2614,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="B" />
+      <property name="Rules">B</property>
       <property name="Artist" value="Jim Nelson" />
       <property name="Number" value="144" />
       <property name="MultiverseId" value="276448" />
@@ -2104,7 +2626,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="B" />
+      <property name="Rules">B</property>
       <property name="Artist" value="Jim Nelson" />
       <property name="Number" value="143" />
       <property name="MultiverseId" value="276463" />
@@ -2116,7 +2638,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Zendikar" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Players may cast enchantment cards as though they had flash.&#xD;&#xA;Whenever you roll CHAOS, destroy target creature that isn't enchanted." />
+      <property name="Rules">Players may cast enchantment spells as though they had flash.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, destroy target creature that isn't enchanted.</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="009" />
       <property name="MultiverseId" value="226512" />
@@ -2127,7 +2650,9 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Kephalai" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you planeswalk to Aretopolis or at the beginning of your upkeep, put a scroll counter on Aretopolis, then you gain life equal to the number of scroll counters on it.&#xD;&#xA;When Aretopolis has ten or more scroll counters on it, planeswalk.&#xD;&#xA;Whenever you roll CHAOS, put a scroll counter on Aretopolis, then draw cards equal to the number of scroll counters on it." />
+      <property name="Rules">When you planeswalk to Aretopolis or at the beginning of your upkeep, put a scroll counter on Aretopolis, then you gain life equal to the number of scroll counters on it.
+When Aretopolis has ten or more scroll counters on it, planeswalk.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, put a scroll counter on Aretopolis, then draw cards equal to the number of scroll counters on it.</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="010" />
       <property name="MultiverseId" value="226517" />
@@ -2138,7 +2663,9 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Kolbahan" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="No more than one creature can attack each combat.&#xD;&#xA;No more than one creature can block each combat.&#xD;&#xA;Whenever you roll CHAOS, Astral Arena deals 2 damage to each creature." />
+      <property name="Rules">No more than one creature can attack each combat.
+No more than one creature can block each combat.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, Astral Arena deals 2 damage to each creature.</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="011" />
       <property name="MultiverseId" value="226526" />
@@ -2149,7 +2676,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Equilor" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever a creature enters the battlefield, it gains double strike and haste until end of turn.&#xD;&#xA;Whenever you roll CHAOS, exile target nontoken creature you control, then return it to the battlefield under your control." />
+      <property name="Rules">Whenever a creature enters the battlefield, it gains double strike and haste until end of turn.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, exile target nontoken creature you control, then return it to the battlefield under your control.</property>
       <property name="Artist" value="Mark Hyzer" />
       <property name="Number" value="012" />
       <property name="MultiverseId" value="226539" />
@@ -2159,7 +2687,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Phenomenon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you encounter Chaotic Aether, each blank roll of the planar die is a CHAOS roll until a player planeswalks away from a plane. (Then planeswalk away from this phenomenon.)" />
+      <property name="Rules">When you encounter Chaotic Aether, each blank roll of the planar die is a CHAOS roll until a player planeswalks away from a plane. (Then planeswalk away from this phenomenon.)</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="001" />
       <property name="MultiverseId" value="226509" />
@@ -2170,7 +2698,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Belenon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="If a creature you control would untap during your untap step, put two +1/+1 counters on it instead.&#xD;&#xA;Whenever you roll CHAOS, untap each creature you control." />
+      <property name="Rules">If a creature you control would untap during your untap step, put two +1/+1 counters on it instead.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, untap each creature you control.</property>
       <property name="Artist" value="Goran Josic" />
       <property name="Number" value="013" />
       <property name="MultiverseId" value="226527" />
@@ -2181,7 +2710,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="New Phyrexia" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you planeswalk to Furnace Layer or at the beginning of your upkeep, select target player at random. That player discards a card. If that player discards a land card this way, he or she loses 3 life.&#xD;&#xA;Whenever you roll CHAOS, you may destroy target nonland permanent." />
+      <property name="Rules">When you planeswalk to Furnace Layer or at the beginning of your upkeep, select target player at random. That player discards a card. If that player discards a land card this way, he or she loses 3 life.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, you may destroy target nonland permanent.</property>
       <property name="Artist" value="Kekai Kotaki" />
       <property name="Number" value="014" />
       <property name="MultiverseId" value="226536" />
@@ -2192,7 +2722,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Innistrad" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="All creatures have vigilance.&#xD;&#xA;Whenever you roll CHAOS, creatures you control gain indestructible until end of turn." />
+      <property name="Rules">All creatures have vigilance.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, creatures you control gain indestructible until end of turn.</property>
       <property name="Artist" value="Dave Kendall" />
       <property name="Number" value="015" />
       <property name="MultiverseId" value="226542" />
@@ -2203,7 +2734,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Lorwyn" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="At end of combat, you may exchange control of target creature you control that dealt combat damage to a player this combat and target creature that player controls.&#xD;&#xA;Whenever you roll CHAOS, gain control of target creature you own." />
+      <property name="Rules">At end of combat, you may exchange control of target creature you control that dealt combat damage to a player this combat and target creature that player controls.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, gain control of target creature you own.</property>
       <property name="Artist" value="Omar Rayyan" />
       <property name="Number" value="016" />
       <property name="MultiverseId" value="226535" />
@@ -2214,7 +2746,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Ravnica" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever a creature dies, its controller distributes a number of +1/+1 counters equal to its power among any number of target creatures he or she controls.&#xD;&#xA;Whenever you roll CHAOS, each player exiles all creatures he or she controls and puts X 1/1 green Saproling creature tokens onto the battlefield, where X is the total power of the creatures he or she exiled this way. Then planeswalk." />
+      <property name="Rules">Whenever a creature dies, its controller distributes a number of +1/+1 counters equal to its power among any number of target creatures he or she controls.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, each player exiles all creatures he or she controls and creates X 1/1 green Saproling creature tokens, where X is the total power of the creatures he or she exiled this way. Then planeswalk.</property>
       <property name="Artist" value="Kekai Kotaki" />
       <property name="Number" value="017" />
       <property name="MultiverseId" value="226554" />
@@ -2225,7 +2758,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Fabacin" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you planeswalk to Grove of the Dreampods or at the beginning of your upkeep, reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield and the rest on the bottom of your library in a random order.&#xD;&#xA;Whenever you roll CHAOS, return target creature card from your graveyard to the battlefield." />
+      <property name="Rules">When you planeswalk to Grove of the Dreampods or at the beginning of your upkeep, reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield and the rest on the bottom of your library in a random order.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, return target creature card from your graveyard to the battlefield.</property>
       <property name="Artist" value="Erica Yang" />
       <property name="Number" value="018" />
       <property name="MultiverseId" value="226541" />
@@ -2236,7 +2770,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Zendikar" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Creatures with power 7 or greater can't attack or block.&#xD;&#xA;Whenever you roll CHAOS, put a 7/7 colorless Eldrazi creature token with annihilator 1 onto the battlefield. (Whenever it attacks, defending player sacrifices a permanent.)" />
+      <property name="Rules">Creatures with power 7 or greater can't attack or block.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, create a 7/7 colorless Eldrazi creature token with annihilator 1. (Whenever it attacks, defending player sacrifices a permanent.)</property>
       <property name="Artist" value="Vincent Proce" />
       <property name="Number" value="019" />
       <property name="MultiverseId" value="226544" />
@@ -2246,7 +2781,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Phenomenon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you encounter Interplanar Tunnel, reveal cards from the top of your planar deck until you reveal five plane cards. Put a plane card from among them on top of your planar deck, then put the rest of the revealed cards on the bottom in a random order. (Then planeswalk away from this phenomenon.)" />
+      <property name="Rules">When you encounter Interplanar Tunnel, reveal cards from the top of your planar deck until you reveal five plane cards. Put a plane card from among them on top of your planar deck, then put the rest of the revealed cards on the bottom in a random order. (Then planeswalk away from this phenomenon.)</property>
       <property name="Artist" value="Chuck Lukacs" />
       <property name="Number" value="002" />
       <property name="MultiverseId" value="226549" />
@@ -2257,7 +2792,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Alara" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever a player casts a black, red, or green creature spell, it gains devour 5. (As the creature enters the battlefield, its controller may sacrifice any number of creatures. The creature enters the battlefield with five times that many +1/+1 counters on it.)&#xD;&#xA;Whenever you roll CHAOS, put two 1/1 red Goblin creature tokens onto the battlefield." />
+      <property name="Rules">Whenever a player casts a black, red, or green creature spell, it gains devour 5. (As the creature enters the battlefield, its controller may sacrifice any number of creatures. The creature enters the battlefield with five times that many +1/+1 counters on it.)
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, create two 1/1 red Goblin creature tokens.</property>
       <property name="Artist" value="Aleksi Briclot" />
       <property name="Number" value="020" />
       <property name="MultiverseId" value="226551" />
@@ -2268,7 +2804,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Innistrad" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Prevent all combat damage that would be dealt by non-Werewolf creatures.&#xD;&#xA;Whenever you roll CHAOS, each creature you control gets +2/+2, gains trample, and becomes a Werewolf in addition to its other types until end of turn." />
+      <property name="Rules">Prevent all combat damage that would be dealt by non-Werewolf creatures.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, each creature you control gets +2/+2, gains trample, and becomes a Werewolf in addition to its other types until end of turn.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="021" />
       <property name="MultiverseId" value="226537" />
@@ -2279,7 +2816,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Mongseng" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever a creature you control attacks a player, for each other opponent, you may put a token that's a copy of that creature onto the battlefield tapped and attacking that opponent. Exile those tokens at the beginning of the next end step.&#xD;&#xA;Whenever you roll CHAOS, you may sacrifice any number of creatures. If you do, Kharasha Foothills deals that much damage to target creature." />
+      <property name="Rules">Whenever a creature you control attacks a player, for each other opponent, you may create a token that's a copy of that creature, tapped and attacking that opponent. Exile those tokens at the beginning of the next end step.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, you may sacrifice any number of creatures. If you do, Kharasha Foothills deals that much damage to target creature.</property>
       <property name="Artist" value="Trevor Claxton" />
       <property name="Number" value="022" />
       <property name="MultiverseId" value="226534" />
@@ -2290,7 +2828,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Ravnica" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you planeswalk to Kilnspire District or at the beginning of your precombat main phase, put a charge counter on Kilnspire District, then add {R} to your mana pool for each charge counter on it.&#xD;&#xA;Whenever you roll CHAOS, you may pay {X}. If you do, Kilnspire District deals X damage to target creature or player." />
+      <property name="Rules">When you planeswalk to Kilnspire District or at the beginning of your precombat main phase, put a charge counter on Kilnspire District, then add <s value="R">{R}</s> to your mana pool for each charge counter on it.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, you may pay <s value="X">{X}</s>. If you do, Kilnspire District deals X damage to target creature or player.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="023" />
       <property name="MultiverseId" value="226523" />
@@ -2301,7 +2840,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Azgol" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="At the beginning of your upkeep, sacrifice a creature. If you can't, planeswalk.&#xD;&#xA;Whenever you roll CHAOS, any number of target players each put a 2/2 black Zombie creature token onto the battlefield." />
+      <property name="Rules">At the beginning of your upkeep, sacrifice a creature. If you can't, planeswalk.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, any number of target players each create a 2/2 black Zombie creature token.</property>
       <property name="Artist" value="Philip Straub" />
       <property name="Number" value="024" />
       <property name="MultiverseId" value="226532" />
@@ -2311,7 +2851,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Phenomenon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you encounter Morphic Tide, each player shuffles all permanents he or she owns into his or her library, then reveals that many cards from the top of his or her library. Each player puts all artifact, creature, land, and planeswalker cards revealed this way onto the battlefield, then does the same for enchantment cards, then puts all cards revealed this way that weren't put onto the battlefield on the bottom of his or her library in any order. (Then planeswalk away from this phenomenon.)" />
+      <property name="Rules">When you encounter Morphic Tide, each player shuffles all permanents he or she owns into his or her library, then reveals that many cards from the top of his or her library. Each player puts all artifact, creature, land, and planeswalker cards revealed this way onto the battlefield, then does the same for enchantment cards, then puts all cards revealed this way that weren't put onto the battlefield on the bottom of his or her library in any order. (Then planeswalk away from this phenomenon.)</property>
       <property name="Artist" value="Brandon Kitkouski" />
       <property name="Number" value="003" />
       <property name="MultiverseId" value="226514" />
@@ -2322,7 +2862,9 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Regatha" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="At the beginning of your end step, put a pressure counter on Mount Keralia.&#xD;&#xA;When you planeswalk away from Mount Keralia, it deals damage equal to the number of pressure counters on it to each creature and each planeswalker.&#xD;&#xA;Whenever you roll CHAOS, prevent all damage that planes named Mount Keralia would deal this game to permanents you control." />
+      <property name="Rules">At the beginning of your end step, put a pressure counter on Mount Keralia.
+When you planeswalk away from Mount Keralia, it deals damage equal to the number of pressure counters on it to each creature and each planeswalker.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, prevent all damage that planes named Mount Keralia would deal this game to permanents you control.</property>
       <property name="Artist" value="Franz Vohwinkel" />
       <property name="Number" value="025" />
       <property name="MultiverseId" value="226515" />
@@ -2332,7 +2874,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Phenomenon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you encounter Mutual Epiphany, each player draws four cards. (Then planeswalk away from this phenomenon.)" />
+      <property name="Rules">When you encounter Mutual Epiphany, each player draws four cards. (Then planeswalk away from this phenomenon.)</property>
       <property name="Artist" value="Jason Felix" />
       <property name="Number" value="004" />
       <property name="MultiverseId" value="226520" />
@@ -2343,7 +2885,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Innistrad" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="At the beginning of your end step, put the top seven cards of your library into your graveyard. Then return a card at random from your graveyard to your hand.&#xD;&#xA;Whenever you roll CHAOS, return target card from your graveyard to your hand." />
+      <property name="Rules">At the beginning of your end step, put the top seven cards of your library into your graveyard. Then return a card at random from your graveyard to your hand.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, return target card from your graveyard to your hand.</property>
       <property name="Artist" value="Daniel Ljunggren" />
       <property name="Number" value="026" />
       <property name="MultiverseId" value="226543" />
@@ -2354,7 +2897,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="New Phyrexia" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you planeswalk away from Norn's Dominion, destroy each nonland permanent without a fate counter on it, then remove all fate counters from all permanents.&#xD;&#xA;Whenever you roll CHAOS, you may put a fate counter on target permanent." />
+      <property name="Rules">When you planeswalk away from Norn's Dominion, destroy each nonland permanent without a fate counter on it, then remove all fate counters from all permanents.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, you may put a fate counter on target permanent.</property>
       <property name="Artist" value="Igor Kieryluk" />
       <property name="Number" value="027" />
       <property name="MultiverseId" value="226540" />
@@ -2365,7 +2909,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Shandalar" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="All creatures are black and have deathtouch.&#xD;&#xA;Whenever you roll CHAOS, creatures you control get +1/+0 and gain first strike until end of turn." />
+      <property name="Rules">All creatures are black and have deathtouch.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, creatures you control get +1/+0 and gain first strike until end of turn.</property>
       <property name="Artist" value="Nic Klein" />
       <property name="Number" value="028" />
       <property name="MultiverseId" value="226513" />
@@ -2376,7 +2921,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Kamigawa" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever a creature you control deals combat damage to a player, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.&#xD;&#xA;Whenever you roll CHAOS, target creature can't be blocked this turn." />
+      <property name="Rules">Whenever a creature you control deals combat damage to a player, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, target creature can't be blocked this turn.</property>
       <property name="Artist" value="Charles Urbach" />
       <property name="Number" value="029" />
       <property name="MultiverseId" value="226524" />
@@ -2387,7 +2933,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Ravnica" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you planeswalk away from Orzhova, each player returns all creature cards from his or her graveyard to the battlefield.&#xD;&#xA;Whenever you roll CHAOS, for each opponent, exile up to one target creature card from that player's graveyard." />
+      <property name="Rules">When you planeswalk away from Orzhova, each player returns all creature cards from his or her graveyard to the battlefield.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, for each opponent, exile up to one target creature card from that player's graveyard.</property>
       <property name="Artist" value="Charles Urbach" />
       <property name="Number" value="030" />
       <property name="MultiverseId" value="226507" />
@@ -2397,7 +2944,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Phenomenon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you encounter Planewide Disaster, destroy all creatures. (Then planeswalk away from this phenomenon.)" />
+      <property name="Rules">When you encounter Planewide Disaster, destroy all creatures. (Then planeswalk away from this phenomenon.)</property>
       <property name="Artist" value="Dave Kendall" />
       <property name="Number" value="005" />
       <property name="MultiverseId" value="226545" />
@@ -2408,7 +2955,9 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Ravnica" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="If you cast a spell this turn, you can't attack with creatures.&#xD;&#xA;If you attacked with creatures this turn, you can't cast spells.&#xD;&#xA;Whenever you roll CHAOS, you gain life equal to the number of cards in your hand." />
+      <property name="Rules">If you cast a spell this turn, you can't attack with creatures.
+If you attacked with creatures this turn, you can't cast spells.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, you gain life equal to the number of cards in your hand.</property>
       <property name="Artist" value="Drew Baker" />
       <property name="Number" value="031" />
       <property name="MultiverseId" value="226552" />
@@ -2419,7 +2968,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Mirrodin" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you planeswalk to Quicksilver Sea or at the beginning of your upkeep, scry 4. (Look at the top four cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)&#xD;&#xA;Whenever you roll CHAOS, reveal the top card of your library. You may play it without paying its mana cost." />
+      <property name="Rules">When you planeswalk to Quicksilver Sea or at the beginning of your upkeep, scry 4. (Look at the top four cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, reveal the top card of your library. You may play it without paying its mana cost.</property>
       <property name="Artist" value="Charles Urbach" />
       <property name="Number" value="032" />
       <property name="MultiverseId" value="226518" />
@@ -2429,7 +2979,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Phenomenon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you encounter Reality Shaping, starting with you, each player may put a permanent card from his or her hand onto the battlefield. (Then planeswalk away from this phenomenon.)" />
+      <property name="Rules">When you encounter Reality Shaping, starting with you, each player may put a permanent card from his or her hand onto the battlefield. (Then planeswalk away from this phenomenon.)</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="006" />
       <property name="MultiverseId" value="226508" />
@@ -2440,7 +2990,9 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Ravnica" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="If an effect would put one or more tokens onto the battlefield, it puts twice that many of those tokens onto the battlefield instead.&#xD;&#xA;If an effect would place one or more counters on a permanent, it places twice that many of those counters on that permanent instead.&#xD;&#xA;Whenever you roll CHAOS, until end of turn, whenever you tap a land for mana, add one mana to your mana pool of any type that land produced." />
+      <property name="Rules">If an effect would create one or more tokens, it creates twice that many of those tokens instead.
+If an effect would put one or more counters on a permanent, it puts twice that many of those counters on that permanent instead.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, until end of turn, whenever you tap a land for mana, add one mana to your mana pool of any type that land produced.</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="033" />
       <property name="MultiverseId" value="226538" />
@@ -2450,7 +3002,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Phenomenon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you encounter Spatial Merging, reveal cards from the top of your planar deck until you reveal two plane cards. Simultaneously planeswalk to both of them. Put all other cards revealed this way on the bottom of your planar deck in any order." />
+      <property name="Rules">When you encounter Spatial Merging, reveal cards from the top of your planar deck until you reveal two plane cards. Simultaneously planeswalk to both of them. Put all other cards revealed this way on the bottom of your planar deck in any order.</property>
       <property name="Artist" value="Gabor Szikszai" />
       <property name="Number" value="007" />
       <property name="MultiverseId" value="226546" />
@@ -2461,7 +3013,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Innistrad" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever a creature deals damage to one or more players for the first time in a turn, put a +1/+1 counter on it.&#xD;&#xA;Whenever you roll CHAOS, each creature you control gains &quot;{T}: This creature deals 1 damage to target player&quot; until end of turn." />
+      <property name="Rules">Whenever a creature deals damage to one or more players for the first time each turn, put a +1/+1 counter on it.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, each creature you control gains "<s value="T">{T}</s>: This creature deals 1 damage to target player" until end of turn.</property>
       <property name="Artist" value="Vincent Proce" />
       <property name="Number" value="034" />
       <property name="MultiverseId" value="226555" />
@@ -2472,7 +3025,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Kamigawa" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever a creature leaves the battlefield, its controller draws a card.&#xD;&#xA;Whenever you roll CHAOS, return target creature you control to its owner's hand." />
+      <property name="Rules">Whenever a creature leaves the battlefield, its controller draws a card.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, return target creature you control to its owner's hand.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="035" />
       <property name="MultiverseId" value="226533" />
@@ -2483,7 +3037,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Dominaria" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Any time you could cast a sorcery, you may exile a nonland card from your hand with X time counters on it, where X is its converted mana cost. If the exiled card doesn't have suspend, it gains suspend. (At the beginning of its owner's upkeep, he or she removes a time counter. When the last is removed, the player casts it without paying its mana cost. If it's a creature, it has haste.)&#xD;&#xA;Whenever you roll CHAOS, remove two time counters from each suspended card you own." />
+      <property name="Rules">Any time you could cast a sorcery, you may exile a nonland card from your hand with X time counters on it, where X is its converted mana cost. If the exiled card doesn't have suspend, it gains suspend. (At the beginning of its owner's upkeep, he or she removes a time counter. When the last is removed, the player casts it without paying its mana cost. If it's a creature, it has haste.)
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, remove two time counters from each suspended card you own.</property>
       <property name="Artist" value="Chippy" />
       <property name="Number" value="036" />
       <property name="MultiverseId" value="226525" />
@@ -2494,7 +3049,9 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Kyneth" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Creatures with flying get +2/+0.&#xD;&#xA;Creatures without flying get -2/-0.&#xD;&#xA;Whenever you roll CHAOS, target creature gains flying until end of turn." />
+      <property name="Rules">Creatures with flying get +2/+0.
+Creatures without flying get -2/-0.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, target creature gains flying until end of turn.</property>
       <property name="Artist" value="rk post" />
       <property name="Number" value="040" />
       <property name="MultiverseId" value="226528" />
@@ -2504,7 +3061,7 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Phenomenon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When you encounter Time Distortion, reverse the game's turn order. (For example, if play had proceeded clockwise around the table, it now goes counterclockwise. Then planeswalk away from this phenomenon.)" />
+      <property name="Rules">When you encounter Time Distortion, reverse the game's turn order. (For example, if play had proceeded clockwise around the table, it now goes counterclockwise. Then planeswalk away from this phenomenon.)</property>
       <property name="Artist" value="rk post" />
       <property name="Number" value="008" />
       <property name="MultiverseId" value="226556" />
@@ -2515,7 +3072,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Vryn" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Instant and sorcery spells have rebound. (The spell's controller exiles the spell as it resolves if he or she cast it from his or her hand. At the beginning of that player's next upkeep, he or she may cast that card from exile without paying its mana cost.)&#xD;&#xA;Whenever you roll CHAOS, you may search your library for an instant or sorcery card, reveal it, put it into your hand, then shuffle your library." />
+      <property name="Rules">Instant and sorcery spells have rebound. (The spell's controller exiles the spell as it resolves if he or she cast it from his or her hand. At the beginning of that player's next upkeep, he or she may cast that card from exile without paying its mana cost.)
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, you may search your library for an instant or sorcery card, reveal it, put it into your hand, then shuffle your library.</property>
       <property name="Artist" value="Vincent Proce" />
       <property name="Number" value="037" />
       <property name="MultiverseId" value="226529" />
@@ -2526,7 +3084,8 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Ergamon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="All lands have &quot;{T}: Add one mana of any color to your mana pool.&quot;&#xD;&#xA;Whenever you roll CHAOS, reveal the top three cards of your library. Put all land cards revealed this way into your hand and the rest on the bottom of your library in any order." />
+      <property name="Rules">All lands have "<s value="T">{T}</s>: Add one mana of any color to your mana pool."
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, reveal the top three cards of your library. Put all land cards revealed this way into your hand and the rest on the bottom of your library in any order.</property>
       <property name="Artist" value="Jim Nelson" />
       <property name="Number" value="038" />
       <property name="MultiverseId" value="226553" />
@@ -2537,7 +3096,9 @@
       <property name="Type" value="Plane" />
       <property name="Subtype" value="Belenon" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Players play with the top card of their libraries revealed.&#xD;&#xA;You may play the top card of any player's library.&#xD;&#xA;Whenever you roll CHAOS, each player puts the top card of his or her library into his or her graveyard." />
+      <property name="Rules">Players play with the top card of their libraries revealed.
+You may play the top card of any player's library.
+Whenever you roll <s value="CHAOS">{CHAOS}</s>, each player puts the top card of his or her library into his or her graveyard.</property>
       <property name="Artist" value="Kekai Kotaki" />
       <property name="Number" value="039" />
       <property name="MultiverseId" value="226510" />

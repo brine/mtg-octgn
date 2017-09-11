@@ -20,13 +20,16 @@
   </packaging>
   <cards>
     <card name="Alert Shu Infantry" id="5ec90b5c-0afa-d0bf-f814-a476d09a29d6">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Vigilance" />
+      <property name="Rules">Vigilance</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -36,36 +39,46 @@
       <property name="MultiverseId" value="10487" />
     </card>
     <card name="Ambition's Cost" id="81a97dfc-9adb-56dd-46f4-3f139cea7458">
-      <property name="Cost" value="{3}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="You draw three cards and you lose 3 life." />
+      <property name="Rules">You draw three cards and you lose 3 life.</property>
       <property name="Artist" value="Junko Taguchi" />
       <property name="Number" value="067" />
       <property name="Flavor" value="&quot;When you give offense to heaven, to whom can you pray?&quot;—Cao Cao, quoting Confucius" />
       <property name="MultiverseId" value="10493" />
     </card>
     <card name="Balance of Power" id="6fffe00e-857e-676b-2d88-31f430615f1d">
-      <property name="Cost" value="{3}{U}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="If target opponent has more cards in hand than you, draw cards equal to the difference." />
+      <property name="Rules">If target opponent has more cards in hand than you, draw cards equal to the difference.</property>
       <property name="Artist" value="Quan Xuejun" />
       <property name="Number" value="034" />
       <property name="MultiverseId" value="10580" />
     </card>
     <card name="Barbarian General" id="9b3d2f91-0073-7744-adcd-2f4219f4854c">
-      <property name="Cost" value="{4}{R}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Barbarian Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -75,13 +88,16 @@
       <property name="MultiverseId" value="10574" />
     </card>
     <card name="Barbarian Horde" id="eb7d88bc-271b-8a0a-7923-587523203075">
-      <property name="Cost" value="{3}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Barbarian Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -91,95 +107,122 @@
       <property name="MultiverseId" value="10578" />
     </card>
     <card name="Blaze" id="15977972-38aa-5743-74ab-f7324947ae4a">
-      <property name="Cost" value="{X}{R}" />
+      <property name="Cost">
+        <s value="X">{X}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Blaze deals X damage to target creature or player." />
+      <property name="Rules">Blaze deals X damage to target creature or player.</property>
       <property name="Artist" value="Qu Xin" />
       <property name="Number" value="102" />
       <property name="Flavor" value="&quot;Spreading flames illumined cloud and sea:Cao Cao went down; 'twas Zhou Yu's victory.&quot;" />
       <property name="MultiverseId" value="10507" />
     </card>
     <card name="Borrowing 100,000 Arrows" id="ebe0e90e-fef4-2ece-6616-5931539ce842">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Draw a card for each tapped creature target opponent controls." />
+      <property name="Rules">Draw a card for each tapped creature target opponent controls.</property>
       <property name="Artist" value="Song Shikai" />
       <property name="Number" value="035" />
       <property name="Flavor" value="Kongming and Lu Su tricked Wei troops into shooting over 100,000 arrows at them to later use against the Wei at Red Cliffs." />
       <property name="MultiverseId" value="10620" />
     </card>
     <card name="Borrowing the East Wind" id="0bd1313e-a99f-373d-ff36-3cf3ac88a49c">
-      <property name="Cost" value="{X}{G}{G}" />
+      <property name="Cost">
+        <s value="X">{X}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Borrowing the East Wind deals X damage to each creature with horsemanship and each player." />
+      <property name="Rules">Borrowing the East Wind deals X damage to each creature with horsemanship and each player.</property>
       <property name="Artist" value="Gao Yan" />
       <property name="Number" value="133" />
       <property name="MultiverseId" value="10549" />
     </card>
     <card name="Brilliant Plan" id="f49f0cf2-e9c5-e416-c310-463d102c7562">
-      <property name="Cost" value="{4}{U}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Draw three cards." />
+      <property name="Rules">Draw three cards.</property>
       <property name="Artist" value="Song Shikai" />
       <property name="Number" value="036" />
       <property name="Flavor" value="At Red Cliffs, Kongming and Zhou Yu each wrote his plan for defeating Wei on the palm of his hand. They laughed as they both revealed the same word, &quot;Fire.&quot;" />
       <property name="MultiverseId" value="10623" />
     </card>
     <card name="Broken Dam" id="2f562bab-321c-7994-7499-b8158a266c2a">
-      <property name="Cost" value="{U}" />
+      <property name="Cost">
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Tap one or two target creatures without horsemanship." />
+      <property name="Rules">Tap one or two target creatures without horsemanship.</property>
       <property name="Artist" value="Jiang Zhuqing" />
       <property name="Number" value="037" />
       <property name="Flavor" value="Using nature to their advantage, wise Three Kingdoms generals often let dammed rivers loose to destroy their enemies." />
       <property name="MultiverseId" value="10621" />
     </card>
     <card name="Burning Fields" id="64346e8a-3467-d91d-5229-404993a82304">
-      <property name="Cost" value="{4}{R}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Burning Fields deals 5 damage to target opponent." />
+      <property name="Rules">Burning Fields deals 5 damage to target opponent.</property>
       <property name="Artist" value="Yang Hong" />
       <property name="Number" value="103" />
       <property name="Flavor" value="&quot;In raiding and plundering, be like fire, in immovability like a mountain.&quot;—Sun Tzu, Art of War (trans. Giles)" />
       <property name="MultiverseId" value="10555" />
     </card>
     <card name="Burning of Xinye" id="b0ee48e2-3923-a3cc-15d6-faa08451443f">
-      <property name="Cost" value="{4}{R}{R}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="You destroy four lands you control, then target opponent destroys four lands he or she controls. Then Burning of Xinye deals 4 damage to each creature." />
+      <property name="Rules">You destroy four lands you control, then target opponent destroys four lands he or she controls. Then Burning of Xinye deals 4 damage to each creature.</property>
       <property name="Artist" value="Yang Hong" />
       <property name="Number" value="104" />
       <property name="MultiverseId" value="10637" />
     </card>
     <card name="Cao Cao, Lord of Wei" id="414df85d-a899-02fb-cdea-6072f66e651c">
-      <property name="Cost" value="{3}{B}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Target opponent discards two cards. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Target opponent discards two cards. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -188,13 +231,18 @@
       <property name="MultiverseId" value="10548" />
     </card>
     <card name="Cao Ren, Wei Commander" id="385e5a40-52ff-abed-386b-579bdeeea56b">
-      <property name="Cost" value="{2}{B}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;When Cao Ren, Wei Commander enters the battlefield, you lose 3 life." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+When Cao Ren, Wei Commander enters the battlefield, you lose 3 life.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -204,60 +252,76 @@
       <property name="MultiverseId" value="10712" />
     </card>
     <card name="Capture of Jingzhou" id="c7ea6b02-b5a4-b87e-c5a7-3219c9dc960a">
-      <property name="Cost" value="{3}{U}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Take an extra turn after this one." />
+      <property name="Rules">Take an extra turn after this one.</property>
       <property name="Artist" value="Jack Wei" />
       <property name="Number" value="038" />
       <property name="Flavor" value="The province of Jingzhou was the fulcrum of the three kingdoms. At separate times it was coveted and controlled by the Wu, the Shu, and the Wei." />
       <property name="MultiverseId" value="10619" />
     </card>
     <card name="Champion's Victory" id="25590654-bb88-0052-b0f7-43f2b9e78bb6">
-      <property name="Cost" value="{U}" />
+      <property name="Cost">
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Cast Champion's Victory only during the declare attackers step and only if you've been attacked this step.&#xD;&#xA;Return target attacking creature to its owner's hand." />
+      <property name="Rules">Cast Champion's Victory only during the declare attackers step and only if you've been attacked this step.
+Return target attacking creature to its owner's hand.</property>
       <property name="Artist" value="Hong Yan" />
       <property name="Number" value="039" />
       <property name="MultiverseId" value="10593" />
     </card>
     <card name="Coercion" id="12540939-c56a-c457-da5a-38d4b7025bf3">
-      <property name="Cost" value="{2}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Target opponent reveals his or her hand. You choose a card from it. That player discards that card." />
+      <property name="Rules">Target opponent reveals his or her hand. You choose a card from it. That player discards that card.</property>
       <property name="Artist" value="Kang Yu" />
       <property name="Number" value="070" />
       <property name="Flavor" value="Though he held the title of prime minister, Cao Cao used the emperor's name to exert his own influence on the empire." />
       <property name="MultiverseId" value="10514" />
     </card>
     <card name="Control of the Court" id="d5077e7c-e7e5-37a6-7f09-b3053d29a620">
-      <property name="Cost" value="{1}{R}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Draw four cards, then discard three cards at random." />
+      <property name="Rules">Draw four cards, then discard three cards at random.</property>
       <property name="Artist" value="Li Yousong" />
       <property name="Number" value="105" />
       <property name="Flavor" value="&quot;Power-hungry eunuchs, the curse of the dynasty, have thrown the masses of the people into the depths of misery.&quot;" />
       <property name="MultiverseId" value="10538" />
     </card>
     <card name="Corrupt Court Official" id="364874de-8e97-6f12-30ef-565a6f862b46">
-      <property name="Cost" value="{1}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Corrupt Court Official enters the battlefield, target opponent discards a card." />
+      <property name="Rules">When Corrupt Court Official enters the battlefield, target opponent discards a card.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -266,13 +330,16 @@
       <property name="MultiverseId" value="10595" />
     </card>
     <card name="Corrupt Eunuchs" id="d8577d67-cc30-45d7-16ff-71719da50ec4">
-      <property name="Cost" value="{3}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Corrupt Eunuchs enters the battlefield, it deals 2 damage to target creature." />
+      <property name="Rules">When Corrupt Eunuchs enters the battlefield, it deals 2 damage to target creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -281,13 +348,16 @@
       <property name="MultiverseId" value="10734" />
     </card>
     <card name="Council of Advisors" id="06ed0f3a-f743-9e4f-5ffc-7d349fd20322">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Council of Advisors enters the battlefield, draw a card." />
+      <property name="Rules">When Council of Advisors enters the battlefield, draw a card.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -297,25 +367,33 @@
       <property name="MultiverseId" value="10601" />
     </card>
     <card name="Counterintelligence" id="520882b9-0c62-be7d-5016-0c72d0932ca1">
-      <property name="Cost" value="{2}{U}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Return one or two target creatures to their owners' hands." />
+      <property name="Rules">Return one or two target creatures to their owners' hands.</property>
       <property name="Artist" value="Wang Feng" />
       <property name="Number" value="041" />
       <property name="Flavor" value="Before the battle of Red Cliffs, a supposedly sleeping Zhou Yu allowed his old friend, a Wei advisor, to steal a planted letter forged as if from Wei's two best admirals." />
       <property name="MultiverseId" value="10628" />
     </card>
     <card name="Cunning Advisor" id="313e8ef4-b844-0b92-fc9f-e554bd082aa8">
-      <property name="Cost" value="{3}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="{T}: Target opponent discards a card. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Target opponent discards a card. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -324,49 +402,62 @@
       <property name="MultiverseId" value="10533" />
     </card>
     <card name="Deception" id="a07e8a76-e517-fb29-c016-1660cc884825">
-      <property name="Cost" value="{2}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Target opponent discards two cards." />
+      <property name="Rules">Target opponent discards two cards.</property>
       <property name="Artist" value="Wang Feng" />
       <property name="Number" value="073" />
       <property name="Flavor" value="Believing they wrote the forged letter that had been stolen from Zhou Yu, Cao Cao rashly executed his two best admirals for treason." />
       <property name="MultiverseId" value="10560" />
     </card>
     <card name="Desert Sandstorm" id="cc3257e0-62f4-551d-07a0-209bd2937b5e">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Desert Sandstorm deals 1 damage to each creature." />
+      <property name="Rules">Desert Sandstorm deals 1 damage to each creature.</property>
       <property name="Artist" value="Xu Tan" />
       <property name="Number" value="107" />
       <property name="Flavor" value="While pursuing the remnants of Yuan Shao's forces into the Wuhan Desert, Cao Cao was temporarily turned back by a fierce sandstorm." />
       <property name="MultiverseId" value="10626" />
     </card>
     <card name="Desperate Charge" id="abba135f-d2d6-cf95-f2a5-32fb187c329f">
-      <property name="Cost" value="{2}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Creatures you control get +2/+0 until end of turn." />
+      <property name="Rules">Creatures you control get +2/+0 until end of turn.</property>
       <property name="Artist" value="Chen Weidong" />
       <property name="Number" value="074" />
       <property name="Flavor" value="&quot;Lieutenants dishonored, corpses carted home; The general raises troops again to take revenge.&quot;" />
       <property name="MultiverseId" value="10512" />
     </card>
     <card name="Diaochan, Artful Beauty" id="9cff5b8f-99c6-572a-d714-0d88aa2e17d5">
-      <property name="Cost" value="{3}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Destroy target creature of your choice, then destroy target creature of an opponent's choice. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Destroy target creature of your choice, then destroy target creature of an opponent's choice. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -375,13 +466,16 @@
       <property name="MultiverseId" value="10544" />
     </card>
     <card name="Dong Zhou, the Tyrant" id="216d2636-a524-0e82-ef4c-f492f2d216c4">
-      <property name="Cost" value="{4}{R}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="When Dong Zhou, the Tyrant enters the battlefield, target creature an opponent controls deals damage equal to its power to that player." />
+      <property name="Rules">When Dong Zhou, the Tyrant enters the battlefield, target creature an opponent controls deals damage equal to its power to that player.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -390,119 +484,148 @@
       <property name="MultiverseId" value="10730" />
     </card>
     <card name="Eightfold Maze" id="93ad077b-365c-2735-8503-035a2fa5b7de">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Cast Eightfold Maze only during the declare attackers step and only if you've been attacked this step.&#xD;&#xA;Destroy target attacking creature." />
+      <property name="Rules">Cast Eightfold Maze only during the declare attackers step and only if you've been attacked this step.
+Destroy target attacking creature.</property>
       <property name="Artist" value="Shang Huitong" />
       <property name="Number" value="002" />
       <property name="MultiverseId" value="10553" />
     </card>
     <card name="Empty City Ruse" id="9527b9e2-5709-c6c5-c2a0-358e3eef7bfe">
-      <property name="Cost" value="{W}" />
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Target opponent skips all combat phases of his or her next turn." />
+      <property name="Rules">Target opponent skips all combat phases of his or her next turn.</property>
       <property name="Artist" value="Qu Xin" />
       <property name="Number" value="003" />
       <property name="Flavor" value="Out of time and options, Kongming was forced to bluff at Xicheng. He tricked an army of 150,000 Wei by leaving the city gates open and calmly playing the zither." />
       <property name="MultiverseId" value="10504" />
     </card>
     <card name="Eunuchs' Intrigues" id="9aed7aa6-0044-af6a-a930-1b53e8aec6db">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Target opponent chooses a creature he or she controls. Other creatures he or she controls can't block this turn." />
+      <property name="Rules">Target opponent chooses a creature he or she controls. Other creatures he or she controls can't block this turn.</property>
       <property name="Artist" value="Li Yousong" />
       <property name="Number" value="110" />
       <property name="Flavor" value="Taking control of powerful court positions one by one, eunuchs eventually brought on the fall of the Han dynasty, leading to the chaos of the Three Kingdoms." />
       <property name="MultiverseId" value="10543" />
     </card>
     <card name="Exhaustion" id="e79ee6fd-8a0b-c5bf-05f1-fd2827674a10">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Creatures and lands target opponent controls don't untap during his or her next untap step." />
+      <property name="Rules">Creatures and lands target opponent controls don't untap during his or her next untap step.</property>
       <property name="Artist" value="Qu Xin" />
       <property name="Number" value="042" />
       <property name="Flavor" value="Starving and worn, Cao Cao escaped from the battle of Red Cliffs with only 27 of his original 800,000 men." />
       <property name="MultiverseId" value="10527" />
     </card>
     <card name="Extinguish" id="95e05356-a92a-63c2-c1f5-ec3b55e36204">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Counter target sorcery spell." />
+      <property name="Rules">Counter target sorcery spell.</property>
       <property name="Artist" value="Ding Songjian" />
       <property name="Number" value="043" />
       <property name="MultiverseId" value="10528" />
     </card>
     <card name="False Defeat" id="5e83e2d7-26ac-140c-4b1a-5c168f31b0dc">
-      <property name="Cost" value="{3}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Return target creature card from your graveyard to the battlefield." />
+      <property name="Rules">Return target creature card from your graveyard to the battlefield.</property>
       <property name="Artist" value="Li Wang" />
       <property name="Number" value="004" />
       <property name="Flavor" value="&quot;All warfare is based on deception.&quot;—Sun Tzu, Art of War (trans. Giles)" />
       <property name="MultiverseId" value="10509" />
     </card>
     <card name="False Mourning" id="511fe33f-ffec-4826-eea2-c25f146a4785">
-      <property name="Cost" value="{G}" />
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Put target card from your graveyard on top of your library." />
+      <property name="Rules">Put target card from your graveyard on top of your library.</property>
       <property name="Artist" value="Koji" />
       <property name="Number" value="134" />
       <property name="Flavor" value="Zhou Yu, Sun Ce, and other famous generals feigned their deaths in order to later surprise their opponents." />
       <property name="MultiverseId" value="10599" />
     </card>
     <card name="Famine" id="c960450d-f4f1-93af-bbf9-f09235689fae">
-      <property name="Cost" value="{3}{B}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Famine deals 3 damage to each creature and each player." />
+      <property name="Rules">Famine deals 3 damage to each creature and each player.</property>
       <property name="Artist" value="Sun Nan" />
       <property name="Number" value="075" />
       <property name="Flavor" value="&quot;But it was a year of dearth. People were reduced to eating leaves of jujube trees. Corpses were seen everywhere in the countryside.&quot;" />
       <property name="MultiverseId" value="10518" />
     </card>
     <card name="Fire Ambush" id="0327a97c-76aa-cc3d-72d4-03c76bbc12bf">
-      <property name="Cost" value="{1}{R}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Fire Ambush deals 3 damage to target creature or player." />
+      <property name="Rules">Fire Ambush deals 3 damage to target creature or player.</property>
       <property name="Artist" value="Tang Xiaogu" />
       <property name="Number" value="111" />
       <property name="Flavor" value="&quot;With fire he broke the battle at Bowang . . . . Striking fear deep into Cao Cao's soul, thus Kongming scored a coup at his debut.&quot;" />
       <property name="MultiverseId" value="10632" />
     </card>
     <card name="Fire Bowman" id="26430515-169b-fd4a-98dd-e52aa5d68980">
-      <property name="Cost" value="{R}" />
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier Archer" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Sacrifice Fire Bowman: Fire Bowman deals 1 damage to target creature or player. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">Sacrifice Fire Bowman: Fire Bowman deals 1 damage to target creature or player. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -511,13 +634,17 @@
       <property name="MultiverseId" value="10535" />
     </card>
     <card name="Flanking Troops" id="955890bb-c301-1338-94c2-cd34d1b83d58">
-      <property name="Cost" value="{2}{W}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Whenever Flanking Troops attacks, you may tap target creature." />
+      <property name="Rules">Whenever Flanking Troops attacks, you may tap target creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -527,12 +654,15 @@
       <property name="MultiverseId" value="10486" />
     </card>
     <card name="Forced Retreat" id="5cb3f420-25d6-a194-953f-f24ea5efa899">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Put target creature on top of its owner's library." />
+      <property name="Rules">Put target creature on top of its owner's library.</property>
       <property name="Artist" value="Huang Qishi" />
       <property name="Number" value="044" />
       <property name="Flavor" value="&quot;Leadership, not numbers, determines victory.&quot;—A Wu commander, before his 5,000 troops forced 15,000 Wei troops to retreat from Ruxu" />
@@ -544,7 +674,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="G" />
+      <property name="Rules">G</property>
       <property name="Artist" value="Ji Yong" />
       <property name="Number" value="178" />
       <property name="MultiverseId" value="10532" />
@@ -556,7 +686,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="G" />
+      <property name="Rules">G</property>
       <property name="Artist" value="Ji Yong" />
       <property name="Number" value="179" />
       <property name="MultiverseId" value="10639" />
@@ -568,20 +698,23 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="G" />
+      <property name="Rules">G</property>
       <property name="Artist" value="Ji Yong" />
       <property name="Number" value="180" />
       <property name="MultiverseId" value="10640" />
       <property name="Flags" value="G" />
     </card>
     <card name="Forest Bear" id="26b786e1-62a1-a2cf-e915-7f63faef0221">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Bear" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -591,37 +724,49 @@
       <property name="MultiverseId" value="10505" />
     </card>
     <card name="Ghostly Visit" id="e05a5db3-5124-24c6-bdf7-d65543c48508">
-      <property name="Cost" value="{2}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Destroy target nonblack creature." />
+      <property name="Rules">Destroy target nonblack creature.</property>
       <property name="Artist" value="Kang Yu" />
       <property name="Number" value="076" />
       <property name="Flavor" value="Cao Cao was haunted to death by the ghosts of the empresses and other high courtiers he had murdered." />
       <property name="MultiverseId" value="10546" />
     </card>
     <card name="Guan Yu's 1,000-Li March" id="1bde5564-ab3c-0215-a57f-50076424052f">
-      <property name="Cost" value="{4}{W}{W}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Destroy all tapped creatures." />
+      <property name="Rules">Destroy all tapped creatures.</property>
       <property name="Artist" value="Yang Guangmai" />
       <property name="Number" value="007" />
       <property name="Flavor" value="&quot;He Guan Yu covered the ground on a thousand-li horse; / With dragon blade he took each pass by force.&quot;" />
       <property name="MultiverseId" value="10597" />
     </card>
     <card name="Guan Yu, Sainted Warrior" id="8d89f719-20bc-2eb8-8ded-13386342cb8c">
-      <property name="Cost" value="{3}{W}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;When Guan Yu, Sainted Warrior is put into your graveyard from the battlefield, you may shuffle Guan Yu into your library." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+When Guan Yu, Sainted Warrior is put into your graveyard from the battlefield, you may shuffle Guan Yu into your library.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
@@ -630,24 +775,33 @@
       <property name="MultiverseId" value="10494" />
     </card>
     <card name="Heavy Fog" id="79cdf405-1595-0261-c514-53cf0202979a">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Cast Heavy Fog only during the declare attackers step and only if you've been attacked this step.&#xD;&#xA;Prevent all damage that would be dealt to you this turn by attacking creatures." />
+      <property name="Rules">Cast Heavy Fog only during the declare attackers step and only if you've been attacked this step.
+Prevent all damage that would be dealt to you this turn by attacking creatures.</property>
       <property name="Artist" value="Liu Shangying" />
       <property name="Number" value="136" />
       <property name="MultiverseId" value="10523" />
     </card>
     <card name="Hua Tuo, Honored Physician" id="39445f64-52a7-6514-4349-28f6d7ba474d">
-      <property name="Cost" value="{1}{G}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Put target creature card from your graveyard on top of your library. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Put target creature card from your graveyard on top of your library. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -656,13 +810,17 @@
       <property name="MultiverseId" value="10570" />
     </card>
     <card name="Huang Zhong, Shu General" id="1caf8fa3-59c7-6439-ac9f-19c80e2812b6">
-      <property name="Cost" value="{2}{W}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Huang Zhong, Shu General can't be blocked by more than one creature." />
+      <property name="Rules">Huang Zhong, Shu General can't be blocked by more than one creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -672,13 +830,16 @@
       <property name="MultiverseId" value="10714" />
     </card>
     <card name="Hunting Cheetah" id="9fb08dcc-5eb9-1006-ede8-03ab0a163fe7">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Whenever Hunting Cheetah deals damage to an opponent, you may search your library for a Forest card, reveal that card, put it into your hand, then shuffle your library." />
+      <property name="Rules">Whenever Hunting Cheetah deals damage to an opponent, you may search your library for a Forest card, reveal that card, put it into your hand, then shuffle your library.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -687,25 +848,31 @@
       <property name="MultiverseId" value="10572" />
     </card>
     <card name="Imperial Edict" id="e0b8c859-cf8d-9200-2051-e49d145a0bf3">
-      <property name="Cost" value="{1}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Target opponent chooses a creature he or she controls. Destroy it." />
+      <property name="Rules">Target opponent chooses a creature he or she controls. Destroy it.</property>
       <property name="Artist" value="Xu Xiaoming" />
       <property name="Number" value="077" />
       <property name="Flavor" value="Frustrated with Cao Cao's control of the imperial court, Emperor Xian secretly issued an edict condemning him, using his own blood as ink." />
       <property name="MultiverseId" value="10515" />
     </card>
     <card name="Imperial Recruiter" id="f5925e75-3ec6-6f72-7ac4-f301898e3d6b">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Imperial Recruiter enters the battlefield, search your library for a creature card with power 2 or less, reveal it, and put it into your hand. Then shuffle your library." />
+      <property name="Rules">When Imperial Recruiter enters the battlefield, search your library for a creature card with power 2 or less, reveal it, and put it into your hand. Then shuffle your library.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -714,25 +881,30 @@
       <property name="MultiverseId" value="10539" />
     </card>
     <card name="Imperial Seal" id="d8c062a8-03d1-968e-48fd-a4effa4863f5">
-      <property name="Cost" value="{B}" />
+      <property name="Cost">
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Search your library for a card, then shuffle your library and put that card on top of it. You lose 2 life." />
+      <property name="Rules">Search your library for a card, then shuffle your library and put that card on top of it. You lose 2 life.</property>
       <property name="Artist" value="Li Tie" />
       <property name="Number" value="078" />
       <property name="Flavor" value="&quot;If Heaven has placed it in your hands, it means that the throne is destined to be yours.&quot;" />
       <property name="MultiverseId" value="10728" />
     </card>
     <card name="Independent Troops" id="e1b687f0-b06e-2d70-94ce-e39eccf79412">
-      <property name="Cost" value="{1}{R}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -747,7 +919,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="U" />
+      <property name="Rules">U</property>
       <property name="Artist" value="Ku Xueming" />
       <property name="Number" value="171" />
       <property name="MultiverseId" value="10642" />
@@ -759,7 +931,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="U" />
+      <property name="Rules">U</property>
       <property name="Artist" value="Ku Xueming" />
       <property name="Number" value="169" />
       <property name="MultiverseId" value="10551" />
@@ -771,20 +943,24 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="U" />
+      <property name="Rules">U</property>
       <property name="Artist" value="Ku Xueming" />
       <property name="Number" value="170" />
       <property name="MultiverseId" value="10641" />
       <property name="Flags" value="U" />
     </card>
     <card name="Kongming's Contraptions" id="8c1cc8fe-ebc8-c6f9-563c-f6f3af561aa0">
-      <property name="Cost" value="{3}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Kongming's Contraptions deals 2 damage to target attacking creature. Activate this ability only during the declare attackers step and only if you've been attacked this step." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Kongming's Contraptions deals 2 damage to target attacking creature. Activate this ability only during the declare attackers step and only if you've been attacked this step.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
@@ -793,13 +969,17 @@
       <property name="MultiverseId" value="10495" />
     </card>
     <card name="Kongming, &quot;Sleeping Dragon&quot;" id="4cf319fd-30b5-2a70-27dc-399d118c6972">
-      <property name="Cost" value="{2}{W}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Other creatures you control get +1/+1." />
+      <property name="Rules">Other creatures you control get +1/+1.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -809,13 +989,18 @@
       <property name="MultiverseId" value="10490" />
     </card>
     <card name="Lady Sun" id="b51e84c5-ee0c-7595-823d-75cea09b9c2b">
-      <property name="Cost" value="{1}{U}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Return Lady Sun and another target creature to their owners' hands. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Return Lady Sun and another target creature to their owners' hands. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -825,13 +1010,16 @@
       <property name="MultiverseId" value="10721" />
     </card>
     <card name="Lady Zhurong, Warrior Queen" id="517572ed-e692-8b75-3b59-04027652d0db">
-      <property name="Cost" value="{4}{G}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="4 / 3" />
@@ -841,13 +1029,18 @@
       <property name="MultiverseId" value="10609" />
     </card>
     <card name="Liu Bei, Lord of Shu" id="a64766b9-75a4-bd74-5598-66d32c5e4c9b">
-      <property name="Cost" value="{3}{W}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;Liu Bei, Lord of Shu gets +2/+2 as long as you control a permanent named Guan Yu, Sainted Warrior or a permanent named Zhang Fei, Fierce Warrior." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+Liu Bei, Lord of Shu gets +2/+2 as long as you control a permanent named Guan Yu, Sainted Warrior or a permanent named Zhang Fei, Fierce Warrior.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
@@ -857,13 +1050,16 @@
       <property name="MultiverseId" value="10499" />
     </card>
     <card name="Lone Wolf" id="7a99c44a-aba1-55ea-9b8b-8c9bf1667541">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wolf" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="You may have Lone Wolf assign its combat damage as though it weren't blocked." />
+      <property name="Rules">You may have Lone Wolf assign its combat damage as though it weren't blocked.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -872,13 +1068,16 @@
       <property name="MultiverseId" value="10556" />
     </card>
     <card name="Loyal Retainers" id="8742ee0e-cca7-6e95-b770-67e8caf97163">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Sacrifice Loyal Retainers: Return target legendary creature card from your graveyard to the battlefield. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">Sacrifice Loyal Retainers: Return target legendary creature card from your graveyard to the battlefield. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -887,13 +1086,16 @@
       <property name="MultiverseId" value="10491" />
     </card>
     <card name="Lu Bu, Master-at-Arms" id="ded390c3-5774-ce38-a9a0-689cf5b77eb4">
-      <property name="Cost" value="{5}{R}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Red" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Haste; horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Haste; horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="4 / 3" />
@@ -903,13 +1105,17 @@
       <property name="MultiverseId" value="10536" />
     </card>
     <card name="Lu Meng, Wu General" id="c802cc1b-63da-c92f-410b-6447b54e5821">
-      <property name="Cost" value="{3}{U}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -919,13 +1125,18 @@
       <property name="MultiverseId" value="10710" />
     </card>
     <card name="Lu Su, Wu Advisor" id="7909cf48-8795-32d0-3613-bf62167a014a">
-      <property name="Cost" value="{3}{U}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Draw a card. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Draw a card. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -935,13 +1146,18 @@
       <property name="MultiverseId" value="10614" />
     </card>
     <card name="Lu Xun, Scholar General" id="ea528eec-f2ac-a638-ecae-bdaee196616e">
-      <property name="Cost" value="{2}{U}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;Whenever Lu Xun, Scholar General deals damage to an opponent, you may draw a card." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+Whenever Lu Xun, Scholar General deals damage to an opponent, you may draw a card.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -950,13 +1166,18 @@
       <property name="MultiverseId" value="10616" />
     </card>
     <card name="Ma Chao, Western Warrior" id="a7ffcb56-f893-e9eb-8f62-af2c921560f8">
-      <property name="Cost" value="{3}{R}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;Whenever Ma Chao, Western Warrior attacks alone, it can't be blocked this combat." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+Whenever Ma Chao, Western Warrior attacks alone, it can't be blocked this combat.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -965,24 +1186,30 @@
       <property name="MultiverseId" value="10729" />
     </card>
     <card name="Marshaling the Troops" id="24eb99a7-5942-6486-fe53-9ef79ce64562">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Tap any number of untapped creatures you control. You gain 4 life for each creature tapped this way." />
+      <property name="Rules">Tap any number of untapped creatures you control. You gain 4 life for each creature tapped this way.</property>
       <property name="Artist" value="Liu Shangying" />
       <property name="Number" value="141" />
       <property name="MultiverseId" value="10547" />
     </card>
     <card name="Meng Huo's Horde" id="f6a834ab-db11-1a84-aa19-70b70f0a7f67">
-      <property name="Cost" value="{4}{G}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="4 / 5" />
@@ -992,13 +1219,17 @@
       <property name="MultiverseId" value="10503" />
     </card>
     <card name="Meng Huo, Barbarian King" id="3c78df09-f4ad-2bad-f227-6f3c12daa910">
-      <property name="Cost" value="{3}{G}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Barbarian Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Other green creatures you control get +1/+1." />
+      <property name="Rules">Other green creatures you control get +1/+1.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -1008,12 +1239,15 @@
       <property name="MultiverseId" value="10732" />
     </card>
     <card name="Misfortune's Gain" id="d1c07998-7ee8-46bb-8c36-44ba2535f35c">
-      <property name="Cost" value="{3}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Destroy target creature. Its owner gains 4 life." />
+      <property name="Rules">Destroy target creature. Its owner gains 4 life.</property>
       <property name="Artist" value="Jiaming" />
       <property name="Number" value="013" />
       <property name="Flavor" value="The mourning families of commanders and generals were often given land, valuables, or money to compensate for their losses." />
@@ -1025,7 +1259,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="R" />
+      <property name="Rules">R</property>
       <property name="Artist" value="Qin Jun" />
       <property name="Number" value="177" />
       <property name="MultiverseId" value="10644" />
@@ -1037,7 +1271,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="R" />
+      <property name="Rules">R</property>
       <property name="Artist" value="Qin Jun" />
       <property name="Number" value="176" />
       <property name="MultiverseId" value="10643" />
@@ -1049,20 +1283,22 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="R" />
+      <property name="Rules">R</property>
       <property name="Artist" value="Qin Jun" />
       <property name="Number" value="175" />
       <property name="MultiverseId" value="10563" />
       <property name="Flags" value="R" />
     </card>
     <card name="Mountain Bandit" id="7aded55c-2e5c-7a31-ec9c-2e2844cad8a9">
-      <property name="Cost" value="{R}" />
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier Rogue" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Haste" />
+      <property name="Rules">Haste</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1072,36 +1308,49 @@
       <property name="MultiverseId" value="10585" />
     </card>
     <card name="Mystic Denial" id="54eb1e0b-13a6-0aee-c6e7-7571b359f6c2">
-      <property name="Cost" value="{1}{U}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Counter target creature or sorcery spell." />
+      <property name="Rules">Counter target creature or sorcery spell.</property>
       <property name="Artist" value="Kang Yu" />
       <property name="Number" value="049" />
       <property name="MultiverseId" value="10565" />
     </card>
     <card name="Overwhelming Forces" id="c0533162-9627-96ce-08be-40c46bd46f9f">
-      <property name="Cost" value="{6}{B}{B}" />
+      <property name="Cost">
+        <s value="6">{6}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="8" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Destroy all creatures target opponent controls. Draw a card for each creature destroyed this way." />
+      <property name="Rules">Destroy all creatures target opponent controls. Draw a card for each creature destroyed this way.</property>
       <property name="Artist" value="Gao Yan" />
       <property name="Number" value="079" />
       <property name="Flavor" value="By the year 208, Cao Cao commanded more than 1,000 experienced generals and a million infantry, cavalry, and naval troops." />
       <property name="MultiverseId" value="10521" />
     </card>
     <card name="Pang Tong, &quot;Young Phoenix&quot;" id="cd96f56c-f7ef-572b-cdc9-3aad3d9731c1">
-      <property name="Cost" value="{1}{W}{W}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Target creature gets +0/+2 until end of turn. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Target creature gets +0/+2 until end of turn. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -1111,12 +1360,14 @@
       <property name="MultiverseId" value="10713" />
     </card>
     <card name="Peach Garden Oath" id="b84df0a9-2dd0-b028-f450-dcbf6ac1b4bf">
-      <property name="Cost" value="{W}" />
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="You gain 2 life for each creature you control." />
+      <property name="Rules">You gain 2 life for each creature you control.</property>
       <property name="Artist" value="Zhao Dafu" />
       <property name="Number" value="015" />
       <property name="Flavor" value="&quot;We three, though of separate ancestry, join in brotherhood . . . . We dare not hope to be together always but hereby vow to die the selfsame day.&quot;—Peach Garden Oath" />
@@ -1128,7 +1379,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="W" />
+      <property name="Rules">W</property>
       <property name="Artist" value="He Jiancheng" />
       <property name="Number" value="168" />
       <property name="MultiverseId" value="10646" />
@@ -1140,7 +1391,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="W" />
+      <property name="Rules">W</property>
       <property name="Artist" value="He Jiancheng" />
       <property name="Number" value="166" />
       <property name="MultiverseId" value="10581" />
@@ -1152,66 +1403,83 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="W" />
+      <property name="Rules">W</property>
       <property name="Artist" value="He Jiancheng" />
       <property name="Number" value="167" />
       <property name="MultiverseId" value="10645" />
       <property name="Flags" value="W" />
     </card>
     <card name="Poison Arrow" id="c2e5b1d5-3bd9-e09e-2b6f-2ad91c2069f9">
-      <property name="Cost" value="{4}{B}{B}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Destroy target nonblack creature. You gain 3 life." />
+      <property name="Rules">Destroy target nonblack creature. You gain 3 life.</property>
       <property name="Artist" value="Li Tie" />
       <property name="Number" value="080" />
       <property name="Flavor" value="In ancient China, not wearing armor could be a fatal mistake. Guan Yu, Zhou Yu, Sun Ce, and other heros were struck by poison arrows." />
       <property name="MultiverseId" value="10587" />
     </card>
     <card name="Preemptive Strike" id="56d0ade4-9213-573d-8dbf-8c796672d339">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Counter target creature spell." />
+      <property name="Rules">Counter target creature spell.</property>
       <property name="Artist" value="Jiaming" />
       <property name="Number" value="050" />
       <property name="MultiverseId" value="10530" />
     </card>
     <card name="Rally the Troops" id="07d66483-3882-824e-3162-14f846819db3">
-      <property name="Cost" value="{W}" />
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Cast Rally the Troops only during the declare attackers step and only if you've been attacked this step.&#xD;&#xA;Untap all creatures you control." />
+      <property name="Rules">Cast Rally the Troops only during the declare attackers step and only if you've been attacked this step.
+Untap all creatures you control.</property>
       <property name="Artist" value="Shang Huitong" />
       <property name="Number" value="016" />
       <property name="MultiverseId" value="10589" />
     </card>
     <card name="Ravages of War" id="3442b748-0f44-dd38-05c9-af545dd80e65">
-      <property name="Cost" value="{3}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Destroy all lands." />
+      <property name="Rules">Destroy all lands.</property>
       <property name="Artist" value="Fang Yue" />
       <property name="Number" value="017" />
       <property name="Flavor" value="&quot;Thorn bushes spring up wherever the army has passed. Lean years follow in the wake of a great war.&quot;Lao Tzu, Tao Te Ching (trans. Feng and English)" />
       <property name="MultiverseId" value="10500" />
     </card>
     <card name="Ravaging Horde" id="ed02b5a2-9a9a-5121-9372-22cd4c23b660">
-      <property name="Cost" value="{3}{R}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Ravaging Horde enters the battlefield, destroy target land." />
+      <property name="Rules">When Ravaging Horde enters the battlefield, destroy target land.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1221,13 +1489,16 @@
       <property name="MultiverseId" value="13805" />
     </card>
     <card name="Red Cliffs Armada" id="4ae0a571-599f-ddfa-23b5-2a4bc8fa5766">
-      <property name="Cost" value="{4}{U}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Red Cliffs Armada can't attack unless defending player controls an Island." />
+      <property name="Rules">Red Cliffs Armada can't attack unless defending player controls an Island.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="5 / 4" />
@@ -1237,25 +1508,32 @@
       <property name="MultiverseId" value="10501" />
     </card>
     <card name="Relentless Assault" id="f441f00a-dff3-7b38-338e-fa25acabef20">
-      <property name="Cost" value="{2}{R}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase." />
+      <property name="Rules">Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.</property>
       <property name="Artist" value="He Jiancheng" />
       <property name="Number" value="119" />
       <property name="Flavor" value="With only 70,000 men under his command at the battle of Guandu, Cao Cao was able to defeat Yuan Shao and his 700,000." />
       <property name="MultiverseId" value="10592" />
     </card>
     <card name="Renegade Troops" id="c68a6115-3b88-8ffc-7882-d9e178f4328a">
-      <property name="Cost" value="{4}{R}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Haste" />
+      <property name="Rules">Haste</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="4 / 2" />
@@ -1265,83 +1543,103 @@
       <property name="MultiverseId" value="10576" />
     </card>
     <card name="Return to Battle" id="3a0d9dd4-0909-faee-d7e7-95ffec279341">
-      <property name="Cost" value="{B}" />
+      <property name="Cost">
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Return target creature card from your graveyard to your hand." />
+      <property name="Rules">Return target creature card from your graveyard to your hand.</property>
       <property name="Artist" value="Ding Songjian" />
       <property name="Number" value="081" />
       <property name="Flavor" value="&quot;Swallowing his eye, the valiant Xiahou Dun fought on; / But Cao Cao's vanguard, its commander wounded, could not hold out for long.&quot;" />
       <property name="MultiverseId" value="10588" />
     </card>
     <card name="Riding Red Hare" id="a0177ceb-0bc8-5750-6e4f-c5de80a8b365">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Target creature gets +3/+3 and gains horsemanship until end of turn. (It can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Target creature gets +3/+3 and gains horsemanship until end of turn. (It can't be blocked except by creatures with horsemanship.)</property>
       <property name="Artist" value="Qi Baocheng" />
       <property name="Number" value="018" />
       <property name="Flavor" value="One of the greatest steeds in the empire, Red Hare could travel a thousand li a day and climb hills as if running on flat ground." />
       <property name="MultiverseId" value="10496" />
     </card>
     <card name="Riding the Dilu Horse" id="0a497945-44cc-005e-74e8-1109bd9655a5">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Target creature gets +2/+2 and gains horsemanship. (It can't be blocked except by creatures with horsemanship. This effect lasts indefinitely.)" />
+      <property name="Rules">Target creature gets +2/+2 and gains horsemanship. (It can't be blocked except by creatures with horsemanship. This effect lasts indefinitely.)</property>
       <property name="Artist" value="Hong Yan" />
       <property name="Number" value="144" />
       <property name="Flavor" value="&quot;All men have their appointed time; that's something no horse can change.&quot;—Liu Bei, after being told that theDilu brings its master ill fortune" />
       <property name="MultiverseId" value="10731" />
     </card>
     <card name="Rockslide Ambush" id="c8ba437b-6f46-fb0d-c6ee-a09909a3d2d0">
-      <property name="Cost" value="{1}{R}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Rockslide Ambush deals damage to target creature equal to the number of Mountains you control." />
+      <property name="Rules">Rockslide Ambush deals damage to target creature equal to the number of Mountains you control.</property>
       <property name="Artist" value="Inoue Junichi" />
       <property name="Number" value="121" />
       <property name="MultiverseId" value="10603" />
     </card>
     <card name="Rolling Earthquake" id="a7db817b-6c15-62bf-b2ba-50d2fb06ce3d">
-      <property name="Cost" value="{X}{R}" />
+      <property name="Cost">
+        <s value="X">{X}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Rolling Earthquake deals X damage to each creature without horsemanship and each player." />
+      <property name="Rules">Rolling Earthquake deals X damage to each creature without horsemanship and each player.</property>
       <property name="Artist" value="Yang Hong" />
       <property name="Number" value="122" />
       <property name="MultiverseId" value="10526" />
     </card>
     <card name="Sage's Knowledge" id="69ae18c7-82f5-7e6c-2eb9-eba394ca65fb">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Return target sorcery card from your graveyard to your hand." />
+      <property name="Rules">Return target sorcery card from your graveyard to your hand.</property>
       <property name="Artist" value="Ding Songjian" />
       <property name="Number" value="052" />
       <property name="Flavor" value="&quot;Those who know do not talk. Those who talk do not know.&quot;—Lao Tzu, Tao Te Ching(trans. Feng and English)" />
       <property name="MultiverseId" value="10524" />
     </card>
     <card name="Shu Cavalry" id="ac5b71c9-41e0-6521-5083-5c6bd94404ea">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1351,13 +1649,16 @@
       <property name="MultiverseId" value="10635" />
     </card>
     <card name="Shu Defender" id="70c3b18f-9510-2dc6-449c-9bab024ef3d9">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever Shu Defender blocks, it gets +0/+2 until end of turn." />
+      <property name="Rules">Whenever Shu Defender blocks, it gets +0/+2 until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1367,13 +1668,16 @@
       <property name="MultiverseId" value="10624" />
     </card>
     <card name="Shu Elite Companions" id="a0423211-4700-52d6-b844-311dd12bff71">
-      <property name="Cost" value="{4}{W}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1383,13 +1687,16 @@
       <property name="MultiverseId" value="10497" />
     </card>
     <card name="Shu Elite Infantry" id="d10941f2-112d-e4e9-aaeb-955f4e4a9f9a">
-      <property name="Cost" value="{3}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1399,13 +1706,17 @@
       <property name="MultiverseId" value="10627" />
     </card>
     <card name="Shu Farmer" id="3bc54f8e-b0f1-aa82-5301-3b20e3910933">
-      <property name="Cost" value="{1}{W}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="{T}: You gain 1 life. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: You gain 1 life. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1415,13 +1726,16 @@
       <property name="MultiverseId" value="10618" />
     </card>
     <card name="Shu Foot Soldiers" id="deae913e-5f93-2b79-305c-2a54ba59b53d">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -1431,13 +1745,16 @@
       <property name="MultiverseId" value="10489" />
     </card>
     <card name="Shu General" id="1561f0d1-798b-eac4-6cfb-db62850e1408">
-      <property name="Cost" value="{3}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Vigilance; horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Vigilance; horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1446,13 +1763,16 @@
       <property name="MultiverseId" value="10502" />
     </card>
     <card name="Shu Grain Caravan" id="8d01ace2-60c9-79aa-f6b2-054957f5d385">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="When Shu Grain Caravan enters the battlefield, you gain 2 life." />
+      <property name="Rules">When Shu Grain Caravan enters the battlefield, you gain 2 life.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1462,13 +1782,16 @@
       <property name="MultiverseId" value="10617" />
     </card>
     <card name="Shu Soldier-Farmers" id="11a7e85c-cd91-4e64-dfce-914eb138e418">
-      <property name="Cost" value="{4}{W}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Shu Soldier-Farmers enters the battlefield, you gain 4 life." />
+      <property name="Rules">When Shu Soldier-Farmers enters the battlefield, you gain 4 life.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
@@ -1478,13 +1801,16 @@
       <property name="MultiverseId" value="10488" />
     </card>
     <card name="Sima Yi, Wei Field Marshal" id="0d1a4260-6d74-230e-5002-97cc13085a46">
-      <property name="Cost" value="{5}{B}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Sima Yi, Wei Field Marshal's power is equal to the number of Swamps you control." />
+      <property name="Rules">Sima Yi, Wei Field Marshal's power is equal to the number of Swamps you control.</property>
       <property name="Power" value="*" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="* / 4" />
@@ -1494,13 +1820,17 @@
       <property name="MultiverseId" value="10630" />
     </card>
     <card name="Slashing Tiger" id="c3b58dc1-6358-630c-a8e8-4f28ea132a79">
-      <property name="Cost" value="{2}{G}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Whenever Slashing Tiger becomes blocked, it gets +2/+2 until end of turn." />
+      <property name="Rules">Whenever Slashing Tiger becomes blocked, it gets +2/+2 until end of turn.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1510,13 +1840,16 @@
       <property name="MultiverseId" value="10591" />
     </card>
     <card name="Southern Elephant" id="e81aceff-793e-e37c-db7a-0fbe7bd0bf6e">
-      <property name="Cost" value="{3}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elephant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="3 / 4" />
@@ -1526,36 +1859,46 @@
       <property name="MultiverseId" value="10545" />
     </card>
     <card name="Spoils of Victory" id="f5a300b2-0854-f084-7b4f-9138c5f08d26">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Search your library for a Plains, Island, Swamp, Mountain, or Forest card and put that card onto the battlefield. Then shuffle your library." />
+      <property name="Rules">Search your library for a Plains, Island, Swamp, Mountain, or Forest card and put that card onto the battlefield. Then shuffle your library.</property>
       <property name="Artist" value="Sun Nan" />
       <property name="Number" value="147" />
       <property name="MultiverseId" value="10629" />
     </card>
     <card name="Spring of Eternal Peace" id="16330c52-8a6e-59fc-f79c-1dece567eebd">
-      <property name="Cost" value="{3}{G}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="You gain 8 life." />
+      <property name="Rules">You gain 8 life.</property>
       <property name="Artist" value="Wang Yuqun" />
       <property name="Number" value="148" />
       <property name="Flavor" value="Bathing in this spring could cure ailments of body and mind alike." />
       <property name="MultiverseId" value="10566" />
     </card>
     <card name="Stalking Tiger" id="7ab613df-c4ec-8d3c-f123-7f2e5e657851">
-      <property name="Cost" value="{3}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Stalking Tiger can't be blocked by more than one creature." />
+      <property name="Rules">Stalking Tiger can't be blocked by more than one creature.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1565,25 +1908,33 @@
       <property name="MultiverseId" value="10550" />
     </card>
     <card name="Stolen Grain" id="bdd27107-941e-0143-ab33-a17d7b02bf39">
-      <property name="Cost" value="{4}{B}{B}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Stolen Grain deals 5 damage to target opponent. You gain 5 life." />
+      <property name="Rules">Stolen Grain deals 5 damage to target opponent. You gain 5 life.</property>
       <property name="Artist" value="LHQ" />
       <property name="Number" value="083" />
       <property name="Flavor" value="At the battle of Guandu, Cao Cao defeated Yuan Shao by raiding his grain depot, leaving him with no way to feed his troops." />
       <property name="MultiverseId" value="10554" />
     </card>
     <card name="Stone Catapult" id="d1b9d9a0-c495-4086-0fa7-7654f924bff3">
-      <property name="Cost" value="{4}{B}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Destroy target tapped nonblack creature. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Destroy target tapped nonblack creature. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -1592,37 +1943,46 @@
       <property name="MultiverseId" value="10508" />
     </card>
     <card name="Stone Rain" id="b402186c-6ff8-0d5d-22d2-37c2332c24f3">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Destroy target land." />
+      <property name="Rules">Destroy target land.</property>
       <property name="Artist" value="Mitsuaki Sagiri" />
       <property name="Number" value="123" />
       <property name="Flavor" value="Soldiers often blocked off the steep mountain passes to ambush enemy troops in western and central China." />
       <property name="MultiverseId" value="10606" />
     </card>
     <card name="Strategic Planning" id="71762a93-74a5-8825-0e33-3353f4b10c1c">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Look at the top three cards of your library. Put one of them into your hand and the rest into your graveyard." />
+      <property name="Rules">Look at the top three cards of your library. Put one of them into your hand and the rest into your graveyard.</property>
       <property name="Artist" value="Zhang Jiazhen" />
       <property name="Number" value="053" />
       <property name="Flavor" value="&quot;Plans evolved within the tent decide a victory 1,000 li away.&quot;" />
       <property name="MultiverseId" value="10602" />
     </card>
     <card name="Straw Soldiers" id="72c66650-c60d-de7c-c198-32688efb61ae">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Scarecrow Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -1632,13 +1992,18 @@
       <property name="MultiverseId" value="10613" />
     </card>
     <card name="Sun Ce, Young Conquerer" id="cd895194-30eb-5a41-a6e8-26d7663cdc7a">
-      <property name="Cost" value="{3}{U}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;When Sun Ce, Young Conquerer enters the battlefield, you may return target creature to its owner's hand." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+When Sun Ce, Young Conquerer enters the battlefield, you may return target creature to its owner's hand.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1647,13 +2012,17 @@
       <property name="MultiverseId" value="10709" />
     </card>
     <card name="Sun Quan, Lord of Wu" id="df5e92f5-219f-445e-4c35-4a9ea849db2f">
-      <property name="Cost" value="{4}{U}{U}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Creatures you control have horsemanship. (They can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Creatures you control have horsemanship. (They can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -1668,7 +2037,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="B" />
+      <property name="Rules">B</property>
       <property name="Artist" value="Wang Chuxiong" />
       <property name="Number" value="174" />
       <property name="MultiverseId" value="10648" />
@@ -1680,7 +2049,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="B" />
+      <property name="Rules">B</property>
       <property name="Artist" value="Wang Chuxiong" />
       <property name="Number" value="172" />
       <property name="MultiverseId" value="10607" />
@@ -1692,20 +2061,23 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="B" />
+      <property name="Rules">B</property>
       <property name="Artist" value="Wang Chuxiong" />
       <property name="Number" value="173" />
       <property name="MultiverseId" value="10647" />
       <property name="Flags" value="B" />
     </card>
     <card name="Taoist Hermit" id="59f78956-6fc3-9086-2689-72f5b7d1c4e6">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Mystic" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Hexproof (This creature can't be the target of spells or abilities your opponents control.)" />
+      <property name="Rules">Hexproof (This creature can't be the target of spells or abilities your opponents control.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1715,13 +2087,16 @@
       <property name="MultiverseId" value="10569" />
     </card>
     <card name="Taoist Mystic" id="9304d91b-95af-db0b-120e-7503966708a0">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Mystic" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Taoist Mystic can't be blocked by creatures with horsemanship." />
+      <property name="Rules">Taoist Mystic can't be blocked by creatures with horsemanship.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1731,37 +2106,47 @@
       <property name="MultiverseId" value="10733" />
     </card>
     <card name="Taunting Challenge" id="60b49a2d-c155-c77d-3cf7-843f8a0a4bde">
-      <property name="Cost" value="{1}{G}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="All creatures able to block target creature this turn do so." />
+      <property name="Rules">All creatures able to block target creature this turn do so.</property>
       <property name="Artist" value="Gao Yan" />
       <property name="Number" value="152" />
       <property name="Flavor" value="Incensed by their opponents' unrelenting taunts, even wise generals were known to rashly lead their troops into battle—often to disastrous defeats." />
       <property name="MultiverseId" value="10492" />
     </card>
     <card name="Three Visits" id="58a3827e-bee0-2123-3d0c-acce45b1ab62">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Search your library for a Forest card and put that card onto the battlefield. Then shuffle your library." />
+      <property name="Rules">Search your library for a Forest card and put that card onto the battlefield. Then shuffle your library.</property>
       <property name="Artist" value="Qu Xin" />
       <property name="Number" value="153" />
       <property name="Flavor" value="&quot;Trying to meet a worthy man in the wrong way is as bad as closing the door on an invited guest.&quot;—Mencius, a Chinese philosopher" />
       <property name="MultiverseId" value="10567" />
     </card>
     <card name="Trained Cheetah" id="6abfa801-261e-6be1-9338-eebd118ea688">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Whenever Trained Cheetah becomes blocked, it gets +1/+1 until end of turn." />
+      <property name="Rules">Whenever Trained Cheetah becomes blocked, it gets +1/+1 until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1771,13 +2156,15 @@
       <property name="MultiverseId" value="10573" />
     </card>
     <card name="Trained Jackal" id="687e3a33-8bd7-323d-be58-6730093565d6">
-      <property name="Cost" value="{G}" />
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Hound" />
+      <property name="Subtype" value="Jackal" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -1787,49 +2174,60 @@
       <property name="MultiverseId" value="10571" />
     </card>
     <card name="Trip Wire" id="cf3abf2c-422b-c42f-19ba-c95aaf99ffc8">
-      <property name="Cost" value="{2}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Destroy target creature with horsemanship." />
+      <property name="Rules">Destroy target creature with horsemanship.</property>
       <property name="Artist" value="Hong Yan" />
       <property name="Number" value="154" />
       <property name="Flavor" value="Trip wire, hooked poles, and sunken pits were commonly used to unhorse riders during the Three Kingdoms period." />
       <property name="MultiverseId" value="10625" />
     </card>
     <card name="Vengeance" id="4c670c27-b8ce-332b-fa49-6ae23e3806e5">
-      <property name="Cost" value="{3}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Destroy target tapped creature." />
+      <property name="Rules">Destroy target tapped creature.</property>
       <property name="Artist" value="Solomon Au Yeung" />
       <property name="Number" value="028" />
       <property name="Flavor" value="&quot;Until I've gnawed their flesh and exterminated their clans, my humiliation will not be effaced.&quot;—Liu Bei, on the death ofhis oath-brother Guan Yu" />
       <property name="MultiverseId" value="10631" />
     </card>
     <card name="Virtuous Charge" id="da9f9a08-8fa4-0ae5-9c88-beeca746cd78">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Creatures you control get +1/+1 until end of turn." />
+      <property name="Rules">Creatures you control get +1/+1 until end of turn.</property>
       <property name="Artist" value="Qu Xin" />
       <property name="Number" value="029" />
       <property name="Flavor" value="&quot;The empire belongs to no one man but to all in the empire. He who has virtue shall possess it.&quot;" />
       <property name="MultiverseId" value="10596" />
     </card>
     <card name="Volunteer Militia" id="a6568fcd-8ddc-6acc-df86-df4629da6356">
-      <property name="Cost" value="{W}" />
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -1839,36 +2237,46 @@
       <property name="MultiverseId" value="10483" />
     </card>
     <card name="Warrior's Oath" id="96254252-4e79-4a70-4713-e3f6be5562d2">
-      <property name="Cost" value="{R}{R}" />
+      <property name="Cost">
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Take an extra turn after this one. At the beginning of that turn's end step, you lose the game." />
+      <property name="Rules">Take an extra turn after this one. At the beginning of that turn's end step, you lose the game.</property>
       <property name="Artist" value="Mitsuaki Sagiri" />
       <property name="Number" value="124" />
       <property name="Flavor" value="&quot;If I fail, my head is yours.&quot;—Warrior's oath commonduring the Three Kingdoms period" />
       <property name="MultiverseId" value="10552" />
     </card>
     <card name="Warrior's Stand" id="3070d636-05ae-4b9f-06ac-d713c7f6cc1b">
-      <property name="Cost" value="{1}{W}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Cast Warrior's Stand only during the declare attackers step and only if you've been attacked this step.&#xD;&#xA;Creatures you control get +2/+2 until end of turn." />
+      <property name="Rules">Cast Warrior's Stand only during the declare attackers step and only if you've been attacked this step.
+Creatures you control get +2/+2 until end of turn.</property>
       <property name="Artist" value="Zhao Dafu" />
       <property name="Number" value="031" />
       <property name="MultiverseId" value="10633" />
     </card>
     <card name="Wei Ambush Force" id="c1a35e3a-17e5-102c-4a7a-96341f44a0cb">
-      <property name="Cost" value="{1}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Whenever Wei Ambush Force attacks, it gets +2/+0 until end of turn." />
+      <property name="Rules">Whenever Wei Ambush Force attacks, it gets +2/+0 until end of turn.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1878,13 +2286,17 @@
       <property name="MultiverseId" value="10557" />
     </card>
     <card name="Wei Assassins" id="e7df65a5-cf67-9b31-4267-059c99ca8126">
-      <property name="Cost" value="{3}{B}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier Assassin" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Wei Assassins enters the battlefield, target opponent chooses a creature he or she controls. Destroy it." />
+      <property name="Rules">When Wei Assassins enters the battlefield, target opponent chooses a creature he or she controls. Destroy it.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -1893,13 +2305,16 @@
       <property name="MultiverseId" value="10583" />
     </card>
     <card name="Wei Elite Companions" id="c575713b-a8ae-f1c2-e99d-094832582fb3">
-      <property name="Cost" value="{4}{B}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1909,13 +2324,16 @@
       <property name="MultiverseId" value="10511" />
     </card>
     <card name="Wei Infantry" id="5dd7f10b-5e8a-475c-5660-0a2aaf3f1cc7">
-      <property name="Cost" value="{1}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -1925,13 +2343,18 @@
       <property name="MultiverseId" value="10519" />
     </card>
     <card name="Wei Night Raiders" id="4029c967-e1f4-ba72-42d7-dbcdddbfe8f5">
-      <property name="Cost" value="{2}{B}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;Whenever Wei Night Raiders deals damage to an opponent, that player discards a card." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+Whenever Wei Night Raiders deals damage to an opponent, that player discards a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1940,13 +2363,16 @@
       <property name="MultiverseId" value="10484" />
     </card>
     <card name="Wei Scout" id="ae19deb7-abd1-080f-ff0f-91b54baa2dc5">
-      <property name="Cost" value="{1}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier Scout" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1956,13 +2382,16 @@
       <property name="MultiverseId" value="10517" />
     </card>
     <card name="Wei Strike Force" id="62f48f8f-020c-1bc9-ed4c-b38bb56942ec">
-      <property name="Cost" value="{2}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -1972,25 +2401,32 @@
       <property name="MultiverseId" value="10561" />
     </card>
     <card name="Wielding the Green Dragon" id="2d7a18e7-3915-5ef0-c70b-2dfcbc79cf76">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Target creature gets +4/+4 until end of turn." />
+      <property name="Rules">Target creature gets +4/+4 until end of turn.</property>
       <property name="Artist" value="Quan Xuejun" />
       <property name="Number" value="157" />
       <property name="Flavor" value="Named for the eastern part of the sky, the source of energy and renewal, Guan Yu's crescent-moon blade weighed over 100 pounds." />
       <property name="MultiverseId" value="10562" />
     </card>
     <card name="Wolf Pack" id="ce6617fb-7e64-d9b4-cfe1-0ed9d77a5a6a">
-      <property name="Cost" value="{6}{G}{G}" />
+      <property name="Cost">
+        <s value="6">{6}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="8" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wolf" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="You may have Wolf Pack assign its combat damage as though it weren't blocked." />
+      <property name="Rules">You may have Wolf Pack assign its combat damage as though it weren't blocked.</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="7 / 6" />
@@ -1999,13 +2435,16 @@
       <property name="MultiverseId" value="10522" />
     </card>
     <card name="Wu Admiral" id="1b2bf8d2-4e90-ec57-cf42-52192258c1c2">
-      <property name="Cost" value="{4}{U}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Wu Admiral gets +1/+1 as long as an opponent controls an Island." />
+      <property name="Rules">Wu Admiral gets +1/+1 as long as an opponent controls an Island.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2015,13 +2454,16 @@
       <property name="MultiverseId" value="10485" />
     </card>
     <card name="Wu Elite Cavalry" id="69562b00-dbb0-c5ab-943f-68db65a3e1e7">
-      <property name="Cost" value="{3}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -2031,13 +2473,16 @@
       <property name="MultiverseId" value="10611" />
     </card>
     <card name="Wu Infantry" id="4e635292-87a6-01ac-0b13-06a8dae48561">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -2047,13 +2492,16 @@
       <property name="MultiverseId" value="10600" />
     </card>
     <card name="Wu Light Cavalry" id="f0f35137-b412-d65a-af6f-504f1668e776">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -2063,13 +2511,17 @@
       <property name="MultiverseId" value="10615" />
     </card>
     <card name="Wu Longbowman" id="1ae14128-0f54-6e5c-10a5-8f5ce01df0bb">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier Archer" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="{T}: Wu Longbowman deals 1 damage to target creature or player. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Wu Longbowman deals 1 damage to target creature or player. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2078,13 +2530,17 @@
       <property name="MultiverseId" value="10498" />
     </card>
     <card name="Wu Scout" id="d0fbdd48-627f-7bc1-8226-724022d253c6">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier Scout" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;When Wu Scout enters the battlefield, look at target opponent's hand." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+When Wu Scout enters the battlefield, look at target opponent's hand.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2093,13 +2549,16 @@
       <property name="MultiverseId" value="10612" />
     </card>
     <card name="Wu Spy" id="16d5a083-ef18-455a-f5da-800814603765">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier Rogue" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="When Wu Spy enters the battlefield, look at the top two cards of target player's library. Put one of them into his or her graveyard." />
+      <property name="Rules">When Wu Spy enters the battlefield, look at the top two cards of target player's library. Put one of them into his or her graveyard.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2108,13 +2567,16 @@
       <property name="MultiverseId" value="10529" />
     </card>
     <card name="Wu Warship" id="0a8c9b76-d965-e116-7c9b-f6821941fe53">
-      <property name="Cost" value="{2}{U}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Wu Warship can't attack unless defending player controls an Island." />
+      <property name="Rules">Wu Warship can't attack unless defending player controls an Island.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2124,13 +2586,18 @@
       <property name="MultiverseId" value="10605" />
     </card>
     <card name="Xiahou Dun, the One-Eyed" id="161541fe-dd98-21ad-c775-9e237ce6841e">
-      <property name="Cost" value="{2}{B}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;Sacrifice Xiahou Dun, the One-Eyed: Return target black card from your graveyard to your hand. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+Sacrifice Xiahou Dun, the One-Eyed: Return target black card from your graveyard to your hand. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -2139,13 +2606,18 @@
       <property name="MultiverseId" value="10590" />
     </card>
     <card name="Xun Yu, Wei Advisor" id="547cec8e-91e6-4425-9957-2d745c921615">
-      <property name="Cost" value="{1}{B}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Target creature you control gets +2/+0 until end of turn. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Target creature you control gets +2/+0 until end of turn. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2155,13 +2627,17 @@
       <property name="MultiverseId" value="13831" />
     </card>
     <card name="Yellow Scarves Cavalry" id="fc0c9e1d-e141-5b48-e2c6-61fc633efb20">
-      <property name="Cost" value="{1}{R}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;Yellow Scarves Cavalry can't block." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+Yellow Scarves Cavalry can't block.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2170,13 +2646,17 @@
       <property name="MultiverseId" value="10537" />
     </card>
     <card name="Yellow Scarves General" id="4f1b36ac-5265-bb93-a36d-83461dc43935">
-      <property name="Cost" value="{3}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;Yellow Scarves General can't block." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+Yellow Scarves General can't block.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2186,13 +2666,16 @@
       <property name="MultiverseId" value="10577" />
     </card>
     <card name="Yellow Scarves Troops" id="614d91c0-fe81-92ea-5fe9-e0519ff52070">
-      <property name="Cost" value="{1}{R}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Yellow Scarves Troops can't block." />
+      <property name="Rules">Yellow Scarves Troops can't block.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2202,13 +2685,16 @@
       <property name="MultiverseId" value="10542" />
     </card>
     <card name="Young Wei Recruits" id="43f321ed-c18d-7b1d-29a3-dcce31d14b58">
-      <property name="Cost" value="{1}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Young Wei Recruits can't block." />
+      <property name="Rules">Young Wei Recruits can't block.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2218,13 +2704,16 @@
       <property name="MultiverseId" value="10584" />
     </card>
     <card name="Yuan Shao's Infantry" id="25e2f5ac-885b-bb5b-b05b-c0cdba123d33">
-      <property name="Cost" value="{3}{R}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Whenever Yuan Shao's Infantry attacks alone, Yuan Shao's Infantry can't be blocked this combat." />
+      <property name="Rules">Whenever Yuan Shao's Infantry attacks alone, Yuan Shao's Infantry can't be blocked this combat.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2233,13 +2722,17 @@
       <property name="MultiverseId" value="10559" />
     </card>
     <card name="Yuan Shao, the Indecisive" id="8d8fd663-37db-cd8c-3503-af6677fd33a8">
-      <property name="Cost" value="{4}{R}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;Each creature you control can't be blocked by more than one creature." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+Each creature you control can't be blocked by more than one creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -2248,13 +2741,17 @@
       <property name="MultiverseId" value="10516" />
     </card>
     <card name="Zhang Fei, Fierce Warrior" id="2b11bc83-de31-3eaa-fd93-c960f49ea203">
-      <property name="Cost" value="{4}{W}{W}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="White" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Vigilance; horsemanship (This creature can't be blocked except by creatures with horsemanship.)" />
+      <property name="Rules">Vigilance; horsemanship (This creature can't be blocked except by creatures with horsemanship.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -2264,13 +2761,18 @@
       <property name="MultiverseId" value="10604" />
     </card>
     <card name="Zhang He, Wei General" id="0d124df4-e491-0ba6-485d-1555c4bfa625">
-      <property name="Cost" value="{3}{B}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;Whenever Zhang He, Wei General attacks, each other creature you control gets +1/+0 until end of turn." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+Whenever Zhang He, Wei General attacks, each other creature you control gets +1/+0 until end of turn.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="4 / 2" />
@@ -2279,13 +2781,17 @@
       <property name="MultiverseId" value="10520" />
     </card>
     <card name="Zhang Liao, Hero of Hefei" id="5ead2e5d-4097-e665-8fda-b43ae5527d32">
-      <property name="Cost" value="{4}{B}{B}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Whenever Zhang Liao, Hero of Hefei deals damage to an opponent, that opponent discards a card." />
+      <property name="Rules">Whenever Zhang Liao, Hero of Hefei deals damage to an opponent, that opponent discards a card.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2294,13 +2800,18 @@
       <property name="MultiverseId" value="10727" />
     </card>
     <card name="Zhao Zilong, Tiger General" id="ae8af31f-993b-d716-e866-6a6f4072a161">
-      <property name="Cost" value="{3}{W}{W}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Horsemanship (This creature can't be blocked except by creatures with horsemanship.)&#xD;&#xA;Whenever Zhao Zilong, Tiger General blocks, it gets +1/+1 until end of turn." />
+      <property name="Rules">Horsemanship (This creature can't be blocked except by creatures with horsemanship.)
+Whenever Zhao Zilong, Tiger General blocks, it gets +1/+1 until end of turn.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2310,13 +2821,17 @@
       <property name="MultiverseId" value="10686" />
     </card>
     <card name="Zhou Yu, Chief Commander" id="331adeb8-f9c6-0c15-2e93-a2f230e36d44">
-      <property name="Cost" value="{5}{U}{U}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="7" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Zhou Yu, Chief Commander can't attack unless defending player controls an Island." />
+      <property name="Rules">Zhou Yu, Chief Commander can't attack unless defending player controls an Island.</property>
       <property name="Power" value="8" />
       <property name="Toughness" value="8" />
       <property name="PT Box" value="8 / 8" />
@@ -2326,13 +2841,18 @@
       <property name="MultiverseId" value="10525" />
     </card>
     <card name="Zhuge Jin, Wu Strategist" id="04ef0fe3-891f-ef0e-7ec7-7a4146838762">
-      <property name="Cost" value="{1}{U}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="{T}: Target creature can't be blocked this turn. Activate this ability only during your turn, before attackers are declared." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Target creature can't be blocked this turn. Activate this ability only during your turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2342,13 +2862,16 @@
       <property name="MultiverseId" value="10711" />
     </card>
     <card name="Zodiac Dog" id="bb6ce530-3d93-0ebc-d438-e377f46c7257">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Hound" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Mountainwalk (This creature can't be blocked as long as defending player controls a Mountain.)" />
+      <property name="Rules">Mountainwalk (This creature can't be blocked as long as defending player controls a Mountain.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2358,13 +2881,17 @@
       <property name="MultiverseId" value="10534" />
     </card>
     <card name="Zodiac Dragon" id="646eec1f-acb9-e0cc-8914-2076080c0064">
-      <property name="Cost" value="{7}{R}{R}" />
+      <property name="Cost">
+        <s value="7">{7}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="9" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="When Zodiac Dragon is put into your graveyard from the battlefield, you may return it to your hand." />
+      <property name="Rules">When Zodiac Dragon is put into your graveyard from the battlefield, you may return it to your hand.</property>
       <property name="Power" value="8" />
       <property name="Toughness" value="8" />
       <property name="PT Box" value="8 / 8" />
@@ -2374,13 +2901,15 @@
       <property name="MultiverseId" value="10510" />
     </card>
     <card name="Zodiac Goat" id="0e96318a-c54d-5a44-8c11-95d865371056">
-      <property name="Cost" value="{R}" />
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goat" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Mountainwalk (This creature can't be blocked as long as defending player controls a Mountain.)" />
+      <property name="Rules">Mountainwalk (This creature can't be blocked as long as defending player controls a Mountain.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2390,13 +2919,16 @@
       <property name="MultiverseId" value="10540" />
     </card>
     <card name="Zodiac Horse" id="6d6fd12a-da77-e8ec-4258-3177db5e017b">
-      <property name="Cost" value="{3}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Horse" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Islandwalk (This creature can't be blocked as long as defending player controls an Island.)" />
+      <property name="Rules">Islandwalk (This creature can't be blocked as long as defending player controls an Island.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2406,13 +2938,16 @@
       <property name="MultiverseId" value="10598" />
     </card>
     <card name="Zodiac Monkey" id="b72dc8a5-566d-a153-49bb-13437258015a">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Ape" />
+      <property name="Subtype" value="Monkey" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)" />
+      <property name="Rules">Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -2422,13 +2957,16 @@
       <property name="MultiverseId" value="10558" />
     </card>
     <card name="Zodiac Ox" id="df0da3d6-ac2d-8586-dce9-1f3e3d2b4dfb">
-      <property name="Cost" value="{3}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Ox" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)" />
+      <property name="Rules">Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2438,13 +2976,16 @@
       <property name="MultiverseId" value="10636" />
     </card>
     <card name="Zodiac Pig" id="386e6bb7-7fe1-96d2-342c-bb15bdb37710">
-      <property name="Cost" value="{3}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Boar" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)" />
+      <property name="Rules">Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2454,13 +2995,15 @@
       <property name="MultiverseId" value="10586" />
     </card>
     <card name="Zodiac Rabbit" id="664e95d5-a126-e229-e646-0b9ff25b4b72">
-      <property name="Cost" value="{G}" />
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Rabbit" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)" />
+      <property name="Rules">Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2470,13 +3013,15 @@
       <property name="MultiverseId" value="10582" />
     </card>
     <card name="Zodiac Rat" id="c6559a30-9377-fc00-c8e0-22fa08a5bc85">
-      <property name="Cost" value="{B}" />
+      <property name="Cost">
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Rat" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)" />
+      <property name="Rules">Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2486,13 +3031,16 @@
       <property name="MultiverseId" value="10564" />
     </card>
     <card name="Zodiac Rooster" id="1adaecf7-85ef-2994-cc6f-16b411830bfc">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Bird" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Plainswalk (This creature can't be blocked as long as defending player controls a Plains.)" />
+      <property name="Rules">Plainswalk (This creature can't be blocked as long as defending player controls a Plains.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -2502,13 +3050,16 @@
       <property name="MultiverseId" value="10506" />
     </card>
     <card name="Zodiac Snake" id="7bdef972-8206-6a8b-d990-ed5209ed7683">
-      <property name="Cost" value="{2}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Snake" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)" />
+      <property name="Rules">Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2518,13 +3069,17 @@
       <property name="MultiverseId" value="10608" />
     </card>
     <card name="Zodiac Tiger" id="cdf41e92-776f-2520-355c-364e3846d62a">
-      <property name="Cost" value="{2}{G}{G}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)" />
+      <property name="Rules">Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="3 / 4" />
@@ -2534,13 +3089,18 @@
       <property name="MultiverseId" value="10594" />
     </card>
     <card name="Zuo Ci, the Mocking Sage" id="aa704156-b2dc-547d-6d2f-366f6777e814">
-      <property name="Cost" value="{1}{G}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Hexproof (This creature can't be the target of spells or abilities your opponents control.)&#xD;&#xA;Zuo Ci, the Mocking Sage can't be blocked by creatures with horsemanship." />
+      <property name="Rules">Hexproof (This creature can't be the target of spells or abilities your opponents control.)
+Zuo Ci, the Mocking Sage can't be blocked by creatures with horsemanship.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />

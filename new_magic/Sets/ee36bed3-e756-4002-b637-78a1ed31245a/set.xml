@@ -2,13 +2,16 @@
 <set name="Premium Deck Series: Slivers" id="ee36bed3-e756-4002-b637-78a1ed31245a" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.3.0.0" version="1.0">
   <cards>
     <card name="Acidic Sliver" id="44b9b8d2-72e0-46ff-5256-abfce957039d">
-      <property name="Cost" value="{B}{R}" />
+      <property name="Cost">
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor Black Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All Slivers have &quot;{2}, Sacrifice this permanent: This permanent deals 2 damage to target creature or player.&quot;" />
+      <property name="Rules">All Slivers have "<s value="2">{2}</s>, Sacrifice this permanent: This permanent deals 2 damage to target creature or player."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -18,13 +21,18 @@
       <property name="MultiverseId" value="207897" />
     </card>
     <card name="Amoeboid Changeling" id="a5b15bed-d785-7435-22cb-373ef8d596d9">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Shapeshifter" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Changeling (This card is every creature type.)&#xD;&#xA;{T}: Target creature gains all creature types until end of turn.&#xD;&#xA;{T}: Target creature loses all creature types until end of turn." />
+      <property name="Rules">Changeling (This card is every creature type.)
+<s value="T">{T}</s>: Target creature gains all creature types until end of turn.
+<s value="T">{T}</s>: Target creature loses all creature types until end of turn.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -37,7 +45,8 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="{T}: Add one mana of any color to your mana pool. Spend this mana only to cast a creature spell." />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add one mana of any color to your mana pool. Spend this mana only to cast a creature spell.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="031" />
       <property name="Flavor" value="Built in honor of Alara's creatures, the ziggurat vanished long ago. When Progenitus awakened, the temple emerged again." />
@@ -45,25 +54,31 @@
       <property name="Flags" value="M" />
     </card>
     <card name="Aphetto Dredging" id="6d8a7fda-fe2e-cd36-41dc-10a2603c927a">
-      <property name="Cost" value="{3}{B}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Return up to three target creature cards of the creature type of your choice from your graveyard to your hand." />
+      <property name="Rules">Return up to three target creature cards of the creature type of your choice from your graveyard to your hand.</property>
       <property name="Artist" value="Monte Michael Moore" />
       <property name="Number" value="028" />
       <property name="Flavor" value="Phage became both executioner and savior, helping others to the same rebirth she had found." />
       <property name="MultiverseId" value="207925" />
     </card>
     <card name="Armor Sliver" id="0fbfdf7c-bd6c-c2ab-76a8-3a843bd9ee32">
-      <property name="Cost" value="{2}{W}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All Sliver creatures have &quot;{2}: This creature gets +0/+1 until end of turn.&quot;" />
+      <property name="Rules">All Sliver creatures have "<s value="2">{2}</s>: This creature gets +0/+1 until end of turn."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -73,13 +88,16 @@
       <property name="MultiverseId" value="207898" />
     </card>
     <card name="Barbed Sliver" id="17179c43-70fe-833f-d183-ec6abb504c76">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All Sliver creatures have &quot;{2}: This creature gets +1/+0 until end of turn.&quot;" />
+      <property name="Rules">All Sliver creatures have "<s value="2">{2}</s>: This creature gets +1/+0 until end of turn."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -89,13 +107,16 @@
       <property name="MultiverseId" value="207899" />
     </card>
     <card name="Brood Sliver" id="620038b8-1c1a-8e96-1565-ce64f9755c8a">
-      <property name="Cost" value="{4}{G}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Whenever a Sliver deals combat damage to a player, its controller may put a 1/1 colorless Sliver creature token onto the battlefield." />
+      <property name="Rules">Whenever a Sliver deals combat damage to a player, its controller may create a 1/1 colorless Sliver creature token.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -105,13 +126,16 @@
       <property name="MultiverseId" value="208039" />
     </card>
     <card name="Clot Sliver" id="c7493aad-ff50-9555-5b57-be9e98a839ef">
-      <property name="Cost" value="{1}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="All Slivers have &quot;{2}: Regenerate this permanent.&quot;" />
+      <property name="Rules">All Slivers have "<s value="2">{2}</s>: Regenerate this permanent."</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -121,25 +145,30 @@
       <property name="MultiverseId" value="207900" />
     </card>
     <card name="Coat of Arms" id="e6d632ed-d1c1-0c37-2742-ec1a4ba706e6">
-      <property name="Cost" value="{5}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Each creature gets +1/+1 for each other creature on the battlefield that shares at least one creature type with it. (For example, if two Goblin Warriors and a Goblin Shaman are on the battlefield, each gets +2/+2.)" />
+      <property name="Rules">Each creature gets +1/+1 for each other creature on the battlefield that shares at least one creature type with it. (For example, if two Goblin Warriors and a Goblin Shaman are on the battlefield, each gets +2/+2.)</property>
       <property name="Artist" value="Scott M. Fischer" />
       <property name="Number" value="029" />
       <property name="Flavor" value="&quot;Hup, two, three, four,Dunno how to count no more.&quot;—Mogg march" />
       <property name="MultiverseId" value="207927" />
     </card>
     <card name="Crystalline Sliver" id="3693becb-d7bb-302c-c410-e956952422a8">
-      <property name="Cost" value="{W}{U}" />
+      <property name="Cost">
+        <s value="W">{W}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor White Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All Slivers have shroud. (They can't be the targets of spells or abilities.)" />
+      <property name="Rules">All Slivers have shroud. (They can't be the targets of spells or abilities.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -149,12 +178,15 @@
       <property name="MultiverseId" value="207901" />
     </card>
     <card name="Distant Melody" id="06262527-7227-0d36-667c-5fed24610608">
-      <property name="Cost" value="{3}{U}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Choose a creature type. Draw a card for each permanent you control of that type." />
+      <property name="Rules">Choose a creature type. Draw a card for each permanent you control of that type.</property>
       <property name="Artist" value="Omar Rayyan" />
       <property name="Number" value="027" />
       <property name="Flavor" value="Oona's song is like a twisted dinner chime. All the faeries return home, but it is Oona who feasts—on the stolen dreams and rumors they serve her." />
@@ -166,20 +198,23 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="G" />
+      <property name="Rules">G</property>
       <property name="Artist" value="Douglas Shuler" />
       <property name="Number" value="041" />
       <property name="MultiverseId" value="207934" />
       <property name="Flags" value="G" />
     </card>
     <card name="Frenzy Sliver" id="1b5d1201-37d3-48c6-0aaf-d7661d7a0f08">
-      <property name="Cost" value="{1}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="All Sliver creatures have frenzy 1. (Whenever a Sliver attacks and isn't blocked, it gets +1/+0 until end of turn.)" />
+      <property name="Rules">All Sliver creatures have frenzy 1. (Whenever a Sliver attacks and isn't blocked, it gets +1/+0 until end of turn.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -189,13 +224,16 @@
       <property name="MultiverseId" value="207902" />
     </card>
     <card name="Fungus Sliver" id="5a8f09f8-fe00-1bef-c09e-ba34cc0920f9">
-      <property name="Cost" value="{3}{G}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Fungus Sliver" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="All Sliver creatures have &quot;Whenever this creature is dealt damage, put a +1/+1 counter on it.&quot; (The damage is dealt before the counter is put on.)" />
+      <property name="Rules">All Sliver creatures have "Whenever this creature is dealt damage, put a +1/+1 counter on it." (The damage is dealt before the counter is put on.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -205,13 +243,16 @@
       <property name="MultiverseId" value="207903" />
     </card>
     <card name="Fury Sliver" id="284e5409-f53a-fe89-de47-03c1ba4495a2">
-      <property name="Cost" value="{5}{R}" />
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All Sliver creatures have double strike." />
+      <property name="Rules">All Sliver creatures have double strike.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -221,13 +262,16 @@
       <property name="MultiverseId" value="207904" />
     </card>
     <card name="Gemhide Sliver" id="f3b294ee-e569-de3f-4393-0c8be94d009a">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="All Slivers have &quot;{T}: Add one mana of any color to your mana pool.&quot;" />
+      <property name="Rules">All Slivers have "<s value="T">{T}</s>: Add one mana of any color to your mana pool."</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -237,13 +281,16 @@
       <property name="MultiverseId" value="207905" />
     </card>
     <card name="Heart Sliver" id="a17189fe-386a-066f-f8db-11342d806077">
-      <property name="Cost" value="{1}{R}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="All Sliver creatures have haste." />
+      <property name="Rules">All Sliver creatures have haste.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -253,25 +300,30 @@
       <property name="MultiverseId" value="207906" />
     </card>
     <card name="Heartstone" id="bbf94db5-1154-665e-1311-9bb54a79ff5a">
-      <property name="Cost" value="{3}" />
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Activated abilities of creatures cost {1} less to activate. This effect can't reduce the amount of mana an ability costs to activate to less than one mana." />
+      <property name="Rules">Activated abilities of creatures cost <s value="1">{1}</s> less to activate. This effect can't reduce the amount of mana an ability costs to activate to less than one mana.</property>
       <property name="Artist" value="John Matson" />
       <property name="Number" value="026" />
       <property name="Flavor" value="&quot;Finding a true heartstone is even harder than finding a true heart.&quot;—Hanna, Weatherlight navigator" />
       <property name="MultiverseId" value="207924" />
     </card>
     <card name="Hibernation Sliver" id="ba25ec73-beed-73a0-99e4-8784b00efe0f">
-      <property name="Cost" value="{U}{B}" />
+      <property name="Cost">
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor Blue Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All Slivers have &quot;Pay 2 life: Return this permanent to its owner's hand.&quot;" />
+      <property name="Rules">All Slivers have "Pay 2 life: Return this permanent to its owner's hand."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -281,13 +333,17 @@
       <property name="MultiverseId" value="207907" />
     </card>
     <card name="Homing Sliver" id="aeae35e2-154b-0d57-04b6-d36d784579f8">
-      <property name="Cost" value="{2}{R}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Each Sliver card in each player's hand has slivercycling {3}.&#xD;&#xA;Slivercycling {3} ({3}, Discard this card: Search your library for a Sliver card, reveal it, and put it into your hand. Then shuffle your library.)" />
+      <property name="Rules">Each Sliver card in each player's hand has slivercycling <s value="3">{3}</s>.
+Slivercycling <s value="3">{3}</s> (<s value="3">{3}</s>, Discard this card: Search your library for a Sliver card, reveal it, and put it into your hand. Then shuffle your library.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -301,20 +357,22 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="U" />
+      <property name="Rules">U</property>
       <property name="Artist" value="Randy Gallegos" />
       <property name="Number" value="038" />
       <property name="MultiverseId" value="207935" />
       <property name="Flags" value="U" />
     </card>
     <card name="Metallic Sliver" id="da7c0f25-8d66-bf00-56d0-69a9c9ac4854">
-      <property name="Cost" value="{1}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="" />
+      <property name="Rules" />
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -324,13 +382,16 @@
       <property name="MultiverseId" value="208040" />
     </card>
     <card name="Might Sliver" id="b452f250-0bea-5503-8a45-a10082cbe622">
-      <property name="Cost" value="{4}{G}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All Sliver creatures get +2/+2." />
+      <property name="Rules">All Sliver creatures get +2/+2.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -345,20 +406,23 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="R" />
+      <property name="Rules">R</property>
       <property name="Artist" value="Mark Poole" />
       <property name="Number" value="040" />
       <property name="MultiverseId" value="207936" />
       <property name="Flags" value="R" />
     </card>
     <card name="Muscle Sliver" id="90e0d82b-1238-5f58-b4d8-d8c94898e1a6">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="All Sliver creatures get +1/+1." />
+      <property name="Rules">All Sliver creatures get +1/+1.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -368,13 +432,17 @@
       <property name="MultiverseId" value="207911" />
     </card>
     <card name="Necrotic Sliver" id="a64f574f-54ea-9e50-54ea-f0cbd0c72f21">
-      <property name="Cost" value="{1}{W}{B}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Multicolor White Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All Slivers have &quot;{3}, Sacrifice this permanent: Destroy target permanent.&quot;" />
+      <property name="Rules">All Slivers have "<s value="3">{3}</s>, Sacrifice this permanent: Destroy target permanent."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -389,20 +457,24 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="W" />
+      <property name="Rules">W</property>
       <property name="Artist" value="Terese Nielsen" />
       <property name="Number" value="037" />
       <property name="MultiverseId" value="207937" />
       <property name="Flags" value="W" />
     </card>
     <card name="Quick Sliver" id="72a90c9d-912d-af82-f9a7-2f6986a229ed">
-      <property name="Cost" value="{1}{G}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Flash&#xD;&#xA;Any player may play Sliver cards as though they had flash." />
+      <property name="Rules">Flash
+Any player may cast Sliver spells as though they had flash.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -416,7 +488,8 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Rootbound Crag enters the battlefield tapped unless you control a Mountain or a Forest.&#xD;&#xA;{T}: Add {R} or {G} to your mana pool." />
+      <property name="Rules">Rootbound Crag enters the battlefield tapped unless you control a Mountain or a Forest.
+<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s> to your mana pool.</property>
       <property name="Artist" value="Matt Stewart" />
       <property name="Number" value="032" />
       <property name="MultiverseId" value="208042" />
@@ -427,20 +500,30 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="Rupture Spire enters the battlefield tapped.&#xD;&#xA;When Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.&#xD;&#xA;{T}: Add one mana of any color to your mana pool." />
+      <property name="Rules">Rupture Spire enters the battlefield tapped.
+When Rupture Spire enters the battlefield, sacrifice it unless you pay <s value="1">{1}</s>.
+<s value="T">{T}</s>: Add one mana of any color to your mana pool.</property>
       <property name="Artist" value="Jaime Jones" />
       <property name="Number" value="033" />
       <property name="MultiverseId" value="207933" />
       <property name="Flags" value="M" />
     </card>
     <card name="Sliver Overlord" id="64d62d54-555d-ea3f-9b1a-c43106dd7c5c">
-      <property name="Cost" value="{W}{U}{B}{R}{G}" />
+      <property name="Cost">
+        <s value="W">{W}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor White Blue Black Red Green" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Sliver Mutant" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules" value="{3}: Search your library for a Sliver card, reveal that card, and put it into your hand. Then shuffle your library.&#xD;&#xA;{3}: Gain control of target Sliver. (This effect lasts indefinitely.)" />
+      <property name="Rules">
+        <s value="3">{3}</s>: Search your library for a Sliver card, reveal that card, and put it into your hand. Then shuffle your library.
+<s value="3">{3}</s>: Gain control of target Sliver. (This effect lasts indefinitely.)</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="7" />
       <property name="PT Box" value="7 / 7" />
@@ -450,13 +533,16 @@
       <property name="MultiverseId" value="207915" />
     </card>
     <card name="Spectral Sliver" id="934f48c0-3e36-5b1f-b6be-b8ac8d8dd649">
-      <property name="Cost" value="{2}{B}" />
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver Spirit" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All Sliver creatures have &quot;{2}: This creature gets +1/+1 until end of turn.&quot;" />
+      <property name="Rules">All Sliver creatures have "<s value="2">{2}</s>: This creature gets +1/+1 until end of turn."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -466,13 +552,16 @@
       <property name="MultiverseId" value="207916" />
     </card>
     <card name="Spined Sliver" id="878b8312-fce9-3b46-b680-8be036e56b1f">
-      <property name="Cost" value="{R}{G}" />
+      <property name="Cost">
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor Red Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Whenever a Sliver becomes blocked, that Sliver gets +1/+1 until end of turn for each creature blocking it." />
+      <property name="Rules">Whenever a Sliver becomes blocked, that Sliver gets +1/+1 until end of turn for each creature blocking it.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -487,7 +576,7 @@
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules" value="B" />
+      <property name="Rules">B</property>
       <property name="Artist" value="Brom" />
       <property name="Number" value="039" />
       <property name="MultiverseId" value="207938" />
@@ -498,19 +587,23 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="{T}, Sacrifice Terramorphic Expanse: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library." />
+      <property name="Rules">
+        <s value="T">{T}</s>, Sacrifice Terramorphic Expanse: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="034" />
       <property name="MultiverseId" value="207928" />
     </card>
     <card name="Victual Sliver" id="343f6567-9beb-d3aa-e033-1720b785f528">
-      <property name="Cost" value="{G}{W}" />
+      <property name="Cost">
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor Green White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="All Slivers have &quot;{2}, Sacrifice this permanent: You gain 4 life.&quot;" />
+      <property name="Rules">All Slivers have "<s value="2">{2}</s>, Sacrifice this permanent: You gain 4 life."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -520,13 +613,15 @@
       <property name="MultiverseId" value="207918" />
     </card>
     <card name="Virulent Sliver" id="c39554db-0389-9b63-d494-7b253027ab80">
-      <property name="Cost" value="{G}" />
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="All Sliver creatures have poisonous 1. (Whenever a Sliver deals combat damage to a player, that player gets a poison counter. A player with ten or more poison counters loses the game.)" />
+      <property name="Rules">All Sliver creatures have poisonous 1. (Whenever a Sliver deals combat damage to a player, that player gets a poison counter. A player with ten or more poison counters loses the game.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -539,7 +634,9 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Vivid Creek enters the battlefield tapped with two charge counters on it.&#xD;&#xA;{T}: Add {U} to your mana pool.&#xD;&#xA;{T}, Remove a charge counter from Vivid Creek: Add one mana of any color to your mana pool." />
+      <property name="Rules">Vivid Creek enters the battlefield tapped with two charge counters on it.
+<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.
+<s value="T">{T}</s>, Remove a charge counter from Vivid Creek: Add one mana of any color to your mana pool.</property>
       <property name="Artist" value="Fred Fields" />
       <property name="Number" value="035" />
       <property name="MultiverseId" value="208043" />
@@ -550,31 +647,40 @@
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules" value="Vivid Grove enters the battlefield tapped with two charge counters on it.&#xD;&#xA;{T}: Add {G} to your mana pool.&#xD;&#xA;{T}, Remove a charge counter from Vivid Grove: Add one mana of any color to your mana pool." />
+      <property name="Rules">Vivid Grove enters the battlefield tapped with two charge counters on it.
+<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.
+<s value="T">{T}</s>, Remove a charge counter from Vivid Grove: Add one mana of any color to your mana pool.</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="036" />
       <property name="MultiverseId" value="207922" />
       <property name="Flags" value="G" />
     </card>
     <card name="Wild Pair" id="0c2b5986-de78-ac6b-dede-17cdd456630a">
-      <property name="Cost" value="{4}{G}{G}" />
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules" value="Whenever a creature enters the battlefield, if you cast it from your hand, you may search your library for a creature card with the same total power and toughness and put it onto the battlefield. If you do, shuffle your library." />
+      <property name="Rules">Whenever a creature enters the battlefield, if you cast it from your hand, you may search your library for a creature card with the same total power and toughness and put it onto the battlefield. If you do, shuffle your library.</property>
       <property name="Artist" value="Mark Brill" />
       <property name="Number" value="030" />
       <property name="MultiverseId" value="207929" />
     </card>
     <card name="Winged Sliver" id="d2b33b71-aefb-003b-5175-05a5a669abe7">
-      <property name="Cost" value="{1}{U}" />
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" value="All Sliver creatures have flying." />
+      <property name="Rules">All Sliver creatures have flying.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
