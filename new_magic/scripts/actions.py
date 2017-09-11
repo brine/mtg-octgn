@@ -115,9 +115,7 @@ def passPriority(group, x = 0, y = 0, autoscriptOverride = False):
         if me._id in priorityList:
             priorityList.remove(me._id)
             setGlobalVariable('priority', str(priorityList))
-            notify('{} passes priority.'.format(me))
-        elif autoscriptOverride == False:
-            whisper('You already passed priority.')
+        notify('{} passes priority.'.format(me))
     else:
         notify('{} passes priority to an opponent.'.format(me))
 
