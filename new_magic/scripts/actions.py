@@ -102,6 +102,13 @@ def initializeGame():
             confirm("What's new in {} ({}):\n-{}".format(stringVersion, date, updates))
     setSetting("lastVersion", convertToString(currentVersion))  ## Store's the current version to a setting
 
+def changePhase(args):
+    mute()
+    phaseIdx = currentPhase()[1]
+    if phaseIdx == 1 and me.isActive:
+        untapStep(table)
+    resetPriority()
+
 #---------------------------------------------------------------------------
 # Table group actions
 #---------------------------------------------------------------------------
@@ -138,12 +145,6 @@ def nextPhase(group, x = 0, y = 0):
         setPhase(0)
     else:
         setPhase(phaseIdx + 1)
-
-def changePhase(args):
-    mute()
-    phaseIdx = currentPhase()[1]
-    if phaseIdx == 1 and me.isActive:
-        untapStep(table)
 
 def untapStep(group, x = 0, y = 0):
     mute()
