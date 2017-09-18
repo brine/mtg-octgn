@@ -277,8 +277,8 @@ Flashback <s value="1">{1}</s><s value="B">{B}</s> (You may cast this card from 
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">W</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="019" />
       <property name="MultiverseId" value="382193" />
@@ -289,8 +289,8 @@ Flashback <s value="1">{1}</s><s value="B">{B}</s> (You may cast this card from 
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="020" />
       <property name="MultiverseId" value="382199" />
@@ -366,15 +366,12 @@ Sacrifice Burrenton Forge-Tender: Prevent all damage a red source of your choice
     </card>
     <card name="Dismember" id="309c29d6-8b83-4476-8e6d-976bcc8b4792">
       <property name="Cost">
-        <s value="1">{1}</s>
-        <s value="PB">{BP}</s>
-        <s value="PB">{BP}</s>
-      </property>
+        <s value="1">{1}</s>{B/P}{B/P}</property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">(<s value="PB">{BP}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
+      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
 Target creature gets -5/-5 until end of turn.</property>
       <property name="Artist" value="Terese Nielsen" />
       <property name="Number" value="025" />

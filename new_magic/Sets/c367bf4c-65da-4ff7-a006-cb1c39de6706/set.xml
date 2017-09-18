@@ -1750,14 +1750,12 @@ Other artifact creatures you control get +1/+1.</property>
     </card>
     <card name="Tezzeret's Gambit" id="8460e9dc-c05f-4b0b-981c-d2c25d38b6fc">
       <property name="Cost">
-        <s value="3">{3}</s>
-        <s value="PU">{UP}</s>
-      </property>
+        <s value="3">{3}</s>{U/P}</property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">(<s value="PU">{UP}</s> can be paid with either <s value="U">{U}</s> or 2 life.)
+      <property name="Rules">({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)
 Draw two cards, then proliferate. (You choose any number of permanents and/or players with counters on them, then give each another counter of a kind already there.)</property>
       <property name="Artist" value="Karl Kopinski" />
       <property name="Number" value="099" />
@@ -2453,7 +2451,7 @@ Return target artifact card from your graveyard to the battlefield.</property>
     </card>
     <card name="Wheel of Fate" id="67f827b9-0cc2-46b2-bfeb-3b1a4a88103c">
       <property name="CMC" value="0" />
-      <property name="Color" value="Red" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Suspend 4—<s value="1">{1}</s><s value="R">{R}</s> (Rather than cast this card from your hand, pay <s value="1">{1}</s><s value="R">{R}</s> and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
@@ -4312,11 +4310,12 @@ Retrace (You may cast this card from your graveyard by discarding a land card in
       <property name="Cost">
         <s value="W">{W}</s>
         <s value="U">{U}</s>
-//
-<s value="U">{U}</s><s value="B">{B}</s></property>
-      <property name="CMC" value="2&#xD;&#xA;//&#xD;&#xA;2" />
-      <property name="Color" value="Multicolor White Blue&#xD;&#xA;//&#xD;&#xA;Multicolor Blue Black" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Instant" />
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor White Blue Black" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Return all creatures blocking or blocked by target creature to their owner's hand.
 //
@@ -4336,7 +4335,6 @@ Counter target multicolored spell.</property>
         <property name="Rules">Return all creatures blocking or blocked by target creature to their owner's hand.</property>
         <property name="Artist" value="Ron Spears &amp; Wayne Reynolds" />
         <property name="Number" value="239" />
-        <property name="MultiverseId" value="420856" />
       </alternate>
       <alternate name="Error" type="splitB">
         <property name="Cost">
@@ -4350,18 +4348,18 @@ Counter target multicolored spell.</property>
         <property name="Rules">Counter target multicolored spell.</property>
         <property name="Artist" value="Ron Spears &amp; Wayne Reynolds" />
         <property name="Number" value="239" />
-        <property name="MultiverseId" value="420856" />
       </alternate>
     </card>
     <card name="Order // Chaos" id="45730a66-22a2-4164-902c-c84885a89ae5">
       <property name="Cost">
         <s value="3">{3}</s>
         <s value="W">{W}</s>
-//
-<s value="2">{2}</s><s value="R">{R}</s></property>
-      <property name="CMC" value="4&#xD;&#xA;//&#xD;&#xA;3" />
-      <property name="Color" value="White&#xD;&#xA;//&#xD;&#xA;Red" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Instant" />
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="7" />
+      <property name="Color" value="Multicolor White Red" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Exile target attacking creature.
 //
@@ -4381,7 +4379,6 @@ Creatures can't block this turn.</property>
         <property name="Rules">Exile target attacking creature.</property>
         <property name="Artist" value="Tim Hildebrandt" />
         <property name="Number" value="240" />
-        <property name="MultiverseId" value="420857" />
       </alternate>
       <alternate name="Chaos" type="splitB">
         <property name="Cost">
@@ -4395,7 +4392,6 @@ Creatures can't block this turn.</property>
         <property name="Rules">Creatures can't block this turn.</property>
         <property name="Artist" value="Tim Hildebrandt" />
         <property name="Number" value="240" />
-        <property name="MultiverseId" value="420857" />
       </alternate>
     </card>
     <card name="Akroan Horse" id="6f143859-8420-4fcd-8e52-e3055360def1">
@@ -5769,8 +5765,8 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">W</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
       <property name="Artist" value="Rebecca Guay" />
       <property name="Number" value="337" />
       <property name="MultiverseId" value="420954" />
@@ -5781,10 +5777,10 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">W</property>
-      <property name="Artist" value="Mark Poole" />
-      <property name="Number" value="338" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
+      <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="339" />
       <property name="MultiverseId" value="420955" />
       <property name="Flags" value="W" />
     </card>
@@ -5793,10 +5789,10 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">W</property>
-      <property name="Artist" value="Kev Walker" />
-      <property name="Number" value="339" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="338" />
       <property name="MultiverseId" value="420956" />
       <property name="Flags" value="W" />
     </card>
@@ -5805,8 +5801,8 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Rebecca Guay" />
       <property name="Number" value="340" />
       <property name="MultiverseId" value="420957" />
@@ -5817,10 +5813,10 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
-      <property name="Artist" value="Mark Poole" />
-      <property name="Number" value="341" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
+      <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="342" />
       <property name="MultiverseId" value="420958" />
       <property name="Flags" value="U" />
     </card>
@@ -5829,10 +5825,10 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
-      <property name="Artist" value="Kev Walker" />
-      <property name="Number" value="342" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="341" />
       <property name="MultiverseId" value="420959" />
       <property name="Flags" value="U" />
     </card>
@@ -5841,8 +5837,8 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Rebecca Guay" />
       <property name="Number" value="343" />
       <property name="MultiverseId" value="420960" />
@@ -5853,10 +5849,10 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
-      <property name="Artist" value="Mark Poole" />
-      <property name="Number" value="344" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
+      <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="345" />
       <property name="MultiverseId" value="420961" />
       <property name="Flags" value="B" />
     </card>
@@ -5865,10 +5861,10 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
-      <property name="Artist" value="Kev Walker" />
-      <property name="Number" value="345" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="344" />
       <property name="MultiverseId" value="420962" />
       <property name="Flags" value="B" />
     </card>
@@ -5877,8 +5873,8 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Rebecca Guay" />
       <property name="Number" value="346" />
       <property name="MultiverseId" value="420963" />
@@ -5889,10 +5885,10 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
-      <property name="Artist" value="Mark Poole" />
-      <property name="Number" value="347" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
+      <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="348" />
       <property name="MultiverseId" value="420964" />
       <property name="Flags" value="R" />
     </card>
@@ -5901,10 +5897,10 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
-      <property name="Artist" value="Kev Walker" />
-      <property name="Number" value="348" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="347" />
       <property name="MultiverseId" value="420965" />
       <property name="Flags" value="R" />
     </card>
@@ -5913,8 +5909,8 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Rebecca Guay" />
       <property name="Number" value="349" />
       <property name="MultiverseId" value="420966" />
@@ -5925,10 +5921,10 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
-      <property name="Artist" value="Mark Poole" />
-      <property name="Number" value="350" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
+      <property name="Artist" value="Kev Walker" />
+      <property name="Number" value="351" />
       <property name="MultiverseId" value="420967" />
       <property name="Flags" value="G" />
     </card>
@@ -5937,10 +5933,10 @@ When Transguild Promenade enters the battlefield, sacrifice it unless you pay <s
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
-      <property name="Artist" value="Kev Walker" />
-      <property name="Number" value="351" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="350" />
       <property name="MultiverseId" value="420968" />
       <property name="Flags" value="G" />
     </card>

@@ -267,7 +267,6 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Rules">+1: Until your next turn, prevent all damage target permanent would deal.
 0: Until end of turn, Gideon of the Trials becomes a 4/4 Human Soldier creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.
 0: You get an emblem with "As long as you control a Gideon planeswalker, you can't lose the game and your opponents can't win the game."</property>
-      <property name="PT Box" value="3" />
       <property name="Artist" value="Izzy" />
       <property name="Number" value="014" />
       <property name="MultiverseId" value="426716" />
@@ -591,7 +590,6 @@ You may exert Tah-Crop Elite as it attacks. When you do, creatures you control g
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" />
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
@@ -737,7 +735,6 @@ Cycling <s value="W">{W}</s> (<s value="W">{W}</s>, Discard this card: Draw a ca
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Crab" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" />
       <property name="Power" value="1" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="1 / 5" />
@@ -1625,7 +1622,6 @@ At the beginning of enchanted player's upkeep, that player sacrifices a creature
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Insect" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" />
       <property name="Power" value="1" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="1 / 4" />
@@ -2493,7 +2489,6 @@ Embalm <s value="5">{5}</s><s value="R">{R}</s> (<s value="5">{5}</s><s value="R
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Hyena" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" />
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="3 / 4" />
@@ -2886,7 +2881,6 @@ Enchanted creature gets +1/+1 and has trample.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Insect" />
       <property name="Rarity" value="Common" />
-      <property name="Rules" />
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
@@ -3800,11 +3794,13 @@ Embalm <s value="3">{3}</s><s value="W">{W}</s><s value="U">{U}</s> (<s value="3
         <s value="2">{2}</s>
         <s value="W">{W}</s>
         <s value="W">{W}</s>
-//
-<s value="3">{3}</s><s value="W">{W}</s><s value="W">{W}</s></property>
-      <property name="CMC" value="4&#xD;&#xA;//&#xD;&#xA;5" />
-      <property name="Color" value="White&#xD;&#xA;//&#xD;&#xA;White" />
-      <property name="Type" value="Sorcery&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="9" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Destroy all creatures with power 3 or greater.
 //
@@ -3826,7 +3822,6 @@ Return all creature cards with power 2 or less from your graveyard to your hand.
         <property name="Rules">Destroy all creatures with power 3 or greater.</property>
         <property name="Artist" value="Noah Bradley" />
         <property name="Number" value="210" />
-        <property name="MultiverseId" value="426912" />
       </alternate>
       <alternate name="Dawn" type="splitB">
         <property name="Cost">
@@ -3842,18 +3837,19 @@ Return all creature cards with power 2 or less from your graveyard to your hand.
 Return all creature cards with power 2 or less from your graveyard to your hand.</property>
         <property name="Artist" value="Noah Bradley" />
         <property name="Number" value="210" />
-        <property name="MultiverseId" value="426912" />
       </alternate>
     </card>
     <card name="Commit // Memory" id="dda3f0d9-3ec1-472f-a041-1ab7dfd3ba90">
       <property name="Cost">
         <s value="3">{3}</s>
         <s value="U">{U}</s>
-//
-<s value="4">{4}</s><s value="U">{U}</s><s value="U">{U}</s></property>
-      <property name="CMC" value="4&#xD;&#xA;//&#xD;&#xA;6" />
-      <property name="Color" value="Blue&#xD;&#xA;//&#xD;&#xA;Blue" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="10" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Put target spell or nonland permanent into its owner's library second from the top.
 //
@@ -3874,7 +3870,6 @@ Each player shuffles his or her hand and graveyard into his or her library, then
         <property name="Rules">Put target spell or nonland permanent into its owner's library second from the top.</property>
         <property name="Artist" value="Ryan Alexander Lee" />
         <property name="Number" value="211" />
-        <property name="MultiverseId" value="426913" />
       </alternate>
       <alternate name="Memory" type="splitB">
         <property name="Cost">
@@ -3890,7 +3885,6 @@ Each player shuffles his or her hand and graveyard into his or her library, then
 Each player shuffles his or her hand and graveyard into his or her library, then draws seven cards.</property>
         <property name="Artist" value="Ryan Alexander Lee" />
         <property name="Number" value="211" />
-        <property name="MultiverseId" value="426913" />
       </alternate>
     </card>
     <card name="Never // Return" id="10e020c3-fbf4-4380-b19a-842d7a9e85a3">
@@ -3898,11 +3892,12 @@ Each player shuffles his or her hand and graveyard into his or her library, then
         <s value="1">{1}</s>
         <s value="B">{B}</s>
         <s value="B">{B}</s>
-//
-<s value="3">{3}</s><s value="B">{B}</s></property>
-      <property name="CMC" value="3&#xD;&#xA;//&#xD;&#xA;4" />
-      <property name="Color" value="Black&#xD;&#xA;//&#xD;&#xA;Black" />
-      <property name="Type" value="Sorcery&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="7" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Destroy target creature or planeswalker.
 //
@@ -3924,7 +3919,6 @@ Exile target card from a graveyard. Create a 2/2 black Zombie creature token.</p
         <property name="Rules">Destroy target creature or planeswalker.</property>
         <property name="Artist" value="Daarken" />
         <property name="Number" value="212" />
-        <property name="MultiverseId" value="426914" />
       </alternate>
       <alternate name="Return" type="splitB">
         <property name="Cost">
@@ -3939,18 +3933,18 @@ Exile target card from a graveyard. Create a 2/2 black Zombie creature token.</p
 Exile target card from a graveyard. Create a 2/2 black Zombie creature token.</property>
         <property name="Artist" value="Daarken" />
         <property name="Number" value="212" />
-        <property name="MultiverseId" value="426914" />
       </alternate>
     </card>
     <card name="Insult // Injury" id="a0100033-3ea3-4196-92c9-a03dbc5ac5ae">
       <property name="Cost">
         <s value="2">{2}</s>
         <s value="R">{R}</s>
-//
-<s value="2">{2}</s><s value="R">{R}</s></property>
-      <property name="CMC" value="3&#xD;&#xA;//&#xD;&#xA;3" />
-      <property name="Color" value="Red&#xD;&#xA;//&#xD;&#xA;Red" />
-      <property name="Type" value="Sorcery&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Damage can't be prevented this turn. If a source you control would deal damage this turn, it deals double that damage instead.
 //
@@ -3971,7 +3965,6 @@ Injury deals 2 damage to target creature and 2 damage to target player.</propert
         <property name="Rules">Damage can't be prevented this turn. If a source you control would deal damage this turn, it deals double that damage instead.</property>
         <property name="Artist" value="Lucas Graciano" />
         <property name="Number" value="213" />
-        <property name="MultiverseId" value="426915" />
       </alternate>
       <alternate name="Injury" type="splitB">
         <property name="Cost">
@@ -3986,18 +3979,18 @@ Injury deals 2 damage to target creature and 2 damage to target player.</propert
 Injury deals 2 damage to target creature and 2 damage to target player.</property>
         <property name="Artist" value="Lucas Graciano" />
         <property name="Number" value="213" />
-        <property name="MultiverseId" value="426915" />
       </alternate>
     </card>
     <card name="Mouth // Feed" id="d52c327b-73cc-441d-b26a-5436be384e4d">
       <property name="Cost">
         <s value="2">{2}</s>
         <s value="G">{G}</s>
-//
-<s value="3">{3}</s><s value="G">{G}</s></property>
-      <property name="CMC" value="3&#xD;&#xA;//&#xD;&#xA;4" />
-      <property name="Color" value="Green&#xD;&#xA;//&#xD;&#xA;Green" />
-      <property name="Type" value="Sorcery&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="7" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Create a 3/3 green Hippo creature token.
 //
@@ -4018,7 +4011,6 @@ Draw a card for each creature you control with power 3 or greater.</property>
         <property name="Rules">Create a 3/3 green Hippo creature token.</property>
         <property name="Artist" value="Zack Stella" />
         <property name="Number" value="214" />
-        <property name="MultiverseId" value="426916" />
       </alternate>
       <alternate name="Feed" type="splitB">
         <property name="Cost">
@@ -4033,18 +4025,18 @@ Draw a card for each creature you control with power 3 or greater.</property>
 Draw a card for each creature you control with power 3 or greater.</property>
         <property name="Artist" value="Zack Stella" />
         <property name="Number" value="214" />
-        <property name="MultiverseId" value="426916" />
       </alternate>
     </card>
     <card name="Start // Finish" id="ed074f8e-8531-4b19-aae9-61c4fa4f5479">
       <property name="Cost">
         <s value="2">{2}</s>
         <s value="W">{W}</s>
-//
-<s value="2">{2}</s><s value="B">{B}</s></property>
-      <property name="CMC" value="3&#xD;&#xA;//&#xD;&#xA;3" />
-      <property name="Color" value="White&#xD;&#xA;//&#xD;&#xA;Black" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Multicolor White Black" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Create two 1/1 white Warrior creature tokens with vigilance.
 //
@@ -4066,7 +4058,6 @@ Destroy target creature.</property>
         <property name="Rules">Create two 1/1 white Warrior creature tokens with vigilance.</property>
         <property name="Artist" value="Magali Villeneuve" />
         <property name="Number" value="215" />
-        <property name="MultiverseId" value="426917" />
       </alternate>
       <alternate name="Finish" type="splitB">
         <property name="Cost">
@@ -4082,18 +4073,18 @@ As an additional cost to cast Finish, sacrifice a creature.
 Destroy target creature.</property>
         <property name="Artist" value="Magali Villeneuve" />
         <property name="Number" value="215" />
-        <property name="MultiverseId" value="426917" />
       </alternate>
     </card>
     <card name="Reduce // Rubble" id="cb7e43cd-e6eb-4398-b00f-bb6bfa3280e6">
       <property name="Cost">
         <s value="2">{2}</s>
         <s value="U">{U}</s>
-//
-<s value="2">{2}</s><s value="R">{R}</s></property>
-      <property name="CMC" value="3&#xD;&#xA;//&#xD;&#xA;3" />
-      <property name="Color" value="Blue&#xD;&#xA;//&#xD;&#xA;Red" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Multicolor Blue Red" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Counter target spell unless its controller pays <s value="3">{3}</s>.
 //
@@ -4114,7 +4105,6 @@ Up to three target lands don't untap during their controller's next untap step.<
         <property name="Rules">Counter target spell unless its controller pays <s value="3">{3}</s>.</property>
         <property name="Artist" value="Eric Deschamps" />
         <property name="Number" value="216" />
-        <property name="MultiverseId" value="426918" />
       </alternate>
       <alternate name="Rubble" type="splitB">
         <property name="Cost">
@@ -4129,18 +4119,18 @@ Up to three target lands don't untap during their controller's next untap step.<
 Up to three target lands don't untap during their controller's next untap step.</property>
         <property name="Artist" value="Eric Deschamps" />
         <property name="Number" value="216" />
-        <property name="MultiverseId" value="426918" />
       </alternate>
     </card>
     <card name="Destined // Lead" id="284ef163-3bde-4490-a7ca-1f98f01d5444">
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="B">{B}</s>
-//
-<s value="3">{3}</s><s value="G">{G}</s></property>
-      <property name="CMC" value="2&#xD;&#xA;//&#xD;&#xA;4" />
-      <property name="Color" value="Black&#xD;&#xA;//&#xD;&#xA;Green" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Multicolor Black Green" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Target creature gets +1/+0 and gains indestructible until end of turn.
 //
@@ -4161,7 +4151,6 @@ All creatures able to block target creature this turn do so.</property>
         <property name="Rules">Target creature gets +1/+0 and gains indestructible until end of turn.</property>
         <property name="Artist" value="Magali Villeneuve" />
         <property name="Number" value="217" />
-        <property name="MultiverseId" value="426919" />
       </alternate>
       <alternate name="Lead" type="splitB">
         <property name="Cost">
@@ -4176,18 +4165,18 @@ All creatures able to block target creature this turn do so.</property>
 All creatures able to block target creature this turn do so.</property>
         <property name="Artist" value="Magali Villeneuve" />
         <property name="Number" value="217" />
-        <property name="MultiverseId" value="426919" />
       </alternate>
     </card>
     <card name="Onward // Victory" id="39042b7e-4a95-4da4-8de6-4ec6bd4624d3">
       <property name="Cost">
         <s value="2">{2}</s>
         <s value="R">{R}</s>
-//
-<s value="2">{2}</s><s value="W">{W}</s></property>
-      <property name="CMC" value="3&#xD;&#xA;//&#xD;&#xA;3" />
-      <property name="Color" value="Red&#xD;&#xA;//&#xD;&#xA;White" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Multicolor Red White" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Target creature gets +X/+0 until end of turn, where X is its power.
 //
@@ -4208,7 +4197,6 @@ Target creature gains double strike until end of turn.</property>
         <property name="Rules">Target creature gets +X/+0 until end of turn, where X is its power.</property>
         <property name="Artist" value="Grzegorz Rutkowski" />
         <property name="Number" value="218" />
-        <property name="MultiverseId" value="426920" />
       </alternate>
       <alternate name="Victory" type="splitB">
         <property name="Cost">
@@ -4223,18 +4211,19 @@ Target creature gains double strike until end of turn.</property>
 Target creature gains double strike until end of turn.</property>
         <property name="Artist" value="Grzegorz Rutkowski" />
         <property name="Number" value="218" />
-        <property name="MultiverseId" value="426920" />
       </alternate>
     </card>
     <card name="Spring // Mind" id="f4de6156-a494-45d0-9de3-78e39f649ba9">
       <property name="Cost">
         <s value="2">{2}</s>
         <s value="G">{G}</s>
-//
-<s value="4">{4}</s><s value="U">{U}</s><s value="U">{U}</s></property>
-      <property name="CMC" value="3&#xD;&#xA;//&#xD;&#xA;6" />
-      <property name="Color" value="Green&#xD;&#xA;//&#xD;&#xA;Blue" />
-      <property name="Type" value="Sorcery&#xD;&#xA;//&#xD;&#xA;Instant" />
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="9" />
+      <property name="Color" value="Multicolor Green Blue" />
+      <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.
 //
@@ -4255,7 +4244,6 @@ Draw two cards.</property>
         <property name="Rules">Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.</property>
         <property name="Artist" value="Josu Hernaiz" />
         <property name="Number" value="219" />
-        <property name="MultiverseId" value="426921" />
       </alternate>
       <alternate name="Mind" type="splitB">
         <property name="Cost">
@@ -4271,18 +4259,18 @@ Draw two cards.</property>
 Draw two cards.</property>
         <property name="Artist" value="Josu Hernaiz" />
         <property name="Number" value="219" />
-        <property name="MultiverseId" value="426921" />
       </alternate>
     </card>
     <card name="Prepare // Fight" id="ba0affa6-855a-4ff5-bf34-aadaac726428">
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="W">{W}</s>
-//
-<s value="3">{3}</s><s value="G">{G}</s></property>
-      <property name="CMC" value="2&#xD;&#xA;//&#xD;&#xA;4" />
-      <property name="Color" value="White&#xD;&#xA;//&#xD;&#xA;Green" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Multicolor White Green" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Untap target creature. It gets +2/+2 and gains lifelink until end of turn.
 //
@@ -4303,7 +4291,6 @@ Target creature you control fights target creature an opponent controls.</proper
         <property name="Rules">Untap target creature. It gets +2/+2 and gains lifelink until end of turn.</property>
         <property name="Artist" value="Zack Stella" />
         <property name="Number" value="220" />
-        <property name="MultiverseId" value="426922" />
       </alternate>
       <alternate name="Fight" type="splitB">
         <property name="Cost">
@@ -4318,18 +4305,17 @@ Target creature you control fights target creature an opponent controls.</proper
 Target creature you control fights target creature an opponent controls.</property>
         <property name="Artist" value="Zack Stella" />
         <property name="Number" value="220" />
-        <property name="MultiverseId" value="426922" />
       </alternate>
     </card>
     <card name="Failure // Comply" id="3ce6468b-0071-4fd6-a600-a16c1f46dc5d">
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="U">{U}</s>
-//
-<s value="W">{W}</s></property>
-      <property name="CMC" value="2&#xD;&#xA;//&#xD;&#xA;1" />
-      <property name="Color" value="Blue&#xD;&#xA;//&#xD;&#xA;White" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor Blue White" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Return target spell to its owner's hand.
 //
@@ -4350,7 +4336,6 @@ Choose a card name. Until your next turn, your opponents can't cast spells with 
         <property name="Rules">Return target spell to its owner's hand.</property>
         <property name="Artist" value="Jason A. Engle" />
         <property name="Number" value="221" />
-        <property name="MultiverseId" value="426923" />
       </alternate>
       <alternate name="Comply" type="splitB">
         <property name="Cost">
@@ -4364,7 +4349,6 @@ Choose a card name. Until your next turn, your opponents can't cast spells with 
 Choose a card name. Until your next turn, your opponents can't cast spells with the chosen name.</property>
         <property name="Artist" value="Jason A. Engle" />
         <property name="Number" value="221" />
-        <property name="MultiverseId" value="426923" />
       </alternate>
     </card>
     <card name="Rags // Riches" id="df883379-4da8-4bfe-9fa3-f7936014be97">
@@ -4372,11 +4356,13 @@ Choose a card name. Until your next turn, your opponents can't cast spells with 
         <s value="2">{2}</s>
         <s value="B">{B}</s>
         <s value="B">{B}</s>
-//
-<s value="5">{5}</s><s value="U">{U}</s><s value="U">{U}</s></property>
-      <property name="CMC" value="4&#xD;&#xA;//&#xD;&#xA;7" />
-      <property name="Color" value="Black&#xD;&#xA;//&#xD;&#xA;Blue" />
-      <property name="Type" value="Sorcery&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="5">{5}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="11" />
+      <property name="Color" value="Multicolor Black Blue" />
+      <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">All creatures get -2/-2 until end of turn.
 //
@@ -4398,7 +4384,6 @@ Each opponent chooses a creature he or she controls. You gain control of those c
         <property name="Rules">All creatures get -2/-2 until end of turn.</property>
         <property name="Artist" value="Greg Opalinski" />
         <property name="Number" value="222" />
-        <property name="MultiverseId" value="426924" />
       </alternate>
       <alternate name="Riches" type="splitB">
         <property name="Cost">
@@ -4414,18 +4399,19 @@ Each opponent chooses a creature he or she controls. You gain control of those c
 Each opponent chooses a creature he or she controls. You gain control of those creatures.</property>
         <property name="Artist" value="Greg Opalinski" />
         <property name="Number" value="222" />
-        <property name="MultiverseId" value="426924" />
       </alternate>
     </card>
     <card name="Cut // Ribbons" id="aa79fdd9-e9e2-49c2-b082-1b70fc36c1a2">
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="R">{R}</s>
-//
-<s value="X">{X}</s><s value="B">{B}</s><s value="B">{B}</s></property>
-      <property name="CMC" value="2&#xD;&#xA;//&#xD;&#xA;2" />
-      <property name="Color" value="Red&#xD;&#xA;//&#xD;&#xA;Black" />
-      <property name="Type" value="Sorcery&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="X">{X}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Red Black" />
+      <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Cut deals 4 damage to target creature.
 //
@@ -4446,7 +4432,6 @@ Each opponent loses X life.</property>
         <property name="Rules">Cut deals 4 damage to target creature.</property>
         <property name="Artist" value="Raymond Swanland" />
         <property name="Number" value="223" />
-        <property name="MultiverseId" value="426925" />
       </alternate>
       <alternate name="Ribbons" type="splitB">
         <property name="Cost">
@@ -4454,7 +4439,7 @@ Each opponent loses X life.</property>
           <s value="B">{B}</s>
           <s value="B">{B}</s>
         </property>
-        <property name="CMC" value="2" />
+        <property name="CMC" value="3" />
         <property name="Color" value="Black" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
@@ -4462,18 +4447,19 @@ Each opponent loses X life.</property>
 Each opponent loses X life.</property>
         <property name="Artist" value="Raymond Swanland" />
         <property name="Number" value="223" />
-        <property name="MultiverseId" value="426925" />
       </alternate>
     </card>
     <card name="Heaven // Earth" id="f6b41486-12de-47bb-9ba2-f7558c40c20b">
       <property name="Cost">
         <s value="X">{X}</s>
         <s value="G">{G}</s>
-//
-<s value="X">{X}</s><s value="R">{R}</s><s value="R">{R}</s></property>
-      <property name="CMC" value="1&#xD;&#xA;//&#xD;&#xA;2" />
-      <property name="Color" value="Green&#xD;&#xA;//&#xD;&#xA;Red" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="X">{X}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor Green Red" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Heaven deals X damage to each creature with flying.
 //
@@ -4487,14 +4473,13 @@ Earth deals X damage to each creature without flying.</property>
           <s value="X">{X}</s>
           <s value="G">{G}</s>
         </property>
-        <property name="CMC" value="1" />
+        <property name="CMC" value="2" />
         <property name="Color" value="Green" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Rare" />
         <property name="Rules">Heaven deals X damage to each creature with flying.</property>
         <property name="Artist" value="Jonas De Ro" />
         <property name="Number" value="224" />
-        <property name="MultiverseId" value="426926" />
       </alternate>
       <alternate name="Earth" type="splitB">
         <property name="Cost">
@@ -4502,7 +4487,7 @@ Earth deals X damage to each creature without flying.</property>
           <s value="R">{R}</s>
           <s value="R">{R}</s>
         </property>
-        <property name="CMC" value="2" />
+        <property name="CMC" value="3" />
         <property name="Color" value="Red" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
@@ -4510,7 +4495,6 @@ Earth deals X damage to each creature without flying.</property>
 Earth deals X damage to each creature without flying.</property>
         <property name="Artist" value="Jonas De Ro" />
         <property name="Number" value="224" />
-        <property name="MultiverseId" value="426926" />
       </alternate>
     </card>
     <card name="Bontu's Monument" id="666db8ff-a9e0-41a4-9117-4094d7b33633">
@@ -4887,8 +4871,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">W</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="250" />
       <property name="MultiverseId" value="426952" />
@@ -4899,8 +4883,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Richard Wright" />
       <property name="Number" value="251" />
       <property name="MultiverseId" value="426953" />
@@ -4911,8 +4895,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Clint Cearley" />
       <property name="Number" value="252" />
       <property name="MultiverseId" value="426954" />
@@ -4923,8 +4907,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Florian de Gesincourt" />
       <property name="Number" value="253" />
       <property name="MultiverseId" value="426955" />
@@ -4935,8 +4919,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Yeong-Hao Han" />
       <property name="Number" value="254" />
       <property name="MultiverseId" value="426956" />
@@ -4947,8 +4931,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">W</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
       <property name="Artist" value="Volkan Baga" />
       <property name="Number" value="255" />
       <property name="MultiverseId" value="426957" />
@@ -4959,8 +4943,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">W</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="256" />
       <property name="MultiverseId" value="426958" />
@@ -4971,8 +4955,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">W</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="257" />
       <property name="MultiverseId" value="426959" />
@@ -4983,8 +4967,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="258" />
       <property name="MultiverseId" value="426960" />
@@ -4995,8 +4979,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="259" />
       <property name="MultiverseId" value="426961" />
@@ -5007,8 +4991,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Mark Poole" />
       <property name="Number" value="260" />
       <property name="MultiverseId" value="426962" />
@@ -5019,8 +5003,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="261" />
       <property name="MultiverseId" value="426963" />
@@ -5031,8 +5015,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="262" />
       <property name="MultiverseId" value="426964" />
@@ -5043,8 +5027,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="263" />
       <property name="MultiverseId" value="426965" />
@@ -5055,8 +5039,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="264" />
       <property name="MultiverseId" value="426966" />
@@ -5067,8 +5051,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="265" />
       <property name="MultiverseId" value="426967" />
@@ -5079,8 +5063,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Chris Rahn" />
       <property name="Number" value="266" />
       <property name="MultiverseId" value="426968" />
@@ -5091,8 +5075,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="267" />
       <property name="MultiverseId" value="426969" />
@@ -5103,8 +5087,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="268" />
       <property name="MultiverseId" value="426970" />
@@ -5115,8 +5099,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Matt Stewart" />
       <property name="Number" value="269" />
       <property name="MultiverseId" value="426971" />
@@ -5787,7 +5771,7 @@ Oketra the True can't attack or block unless you control at least three other cr
         <s value="0">{0}</s>
       </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="Blue" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Masterpiece" />
       <property name="Rules">Counter target spell.

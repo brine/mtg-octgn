@@ -97,11 +97,12 @@ Dredge 2 (If you would draw a card, instead you may put exactly two cards from t
     <card name="Life // Death" id="a7f69b3b-f06c-46c7-980c-8c761dda5cf2">
       <property name="Cost">
         <s value="G">{G}</s>
-//
-<s value="1">{1}</s><s value="B">{B}</s></property>
-      <property name="CMC" value="1&#xD;&#xA;//&#xD;&#xA;2" />
-      <property name="Color" value="Green&#xD;&#xA;//&#xD;&#xA;Black" />
-      <property name="Type" value="Sorcery&#xD;&#xA;//&#xD;&#xA;Sorcery" />
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor Green Black" />
+      <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">All lands you control become 1/1 creatures until end of turn. They're still lands.
 //
@@ -120,7 +121,6 @@ Return target creature card from your graveyard to the battlefield. You lose lif
         <property name="Rules">All lands you control become 1/1 creatures until end of turn. They're still lands.</property>
         <property name="Artist" value="Ryan Barger" />
         <property name="Number" value="077" />
-        <property name="MultiverseId" value="292976" />
       </alternate>
       <alternate name="Death" type="splitB">
         <property name="Cost">
@@ -134,7 +134,6 @@ Return target creature card from your graveyard to the battlefield. You lose lif
         <property name="Rules">Return target creature card from your graveyard to the battlefield. You lose life equal to its converted mana cost.</property>
         <property name="Artist" value="Ryan Barger" />
         <property name="Number" value="077" />
-        <property name="MultiverseId" value="292976" />
       </alternate>
     </card>
     <card name="Dissipate" id="d7900026-23a8-494d-ad9d-fde53c524e36">
@@ -276,11 +275,12 @@ Scavenge <s value="3">{3}</s><s value="B">{B}</s><s value="G">{G}</s> (<s value=
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="R">{R}</s>
-//
-<s value="1">{1}</s><s value="U">{U}</s></property>
-      <property name="CMC" value="2&#xD;&#xA;//&#xD;&#xA;2" />
-      <property name="Color" value="Red&#xD;&#xA;//&#xD;&#xA;Blue" />
-      <property name="Type" value="Instant&#xD;&#xA;//&#xD;&#xA;Instant" />
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Red Blue" />
+      <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Fire deals 2 damage divided as you choose among one or two target creatures and/or players.
 //
@@ -301,7 +301,6 @@ Draw a card.</property>
         <property name="Rules">Fire deals 2 damage divided as you choose among one or two target creatures and/or players.</property>
         <property name="Artist" value="Dan Scott" />
         <property name="Number" value="032" />
-        <property name="MultiverseId" value="292753" />
       </alternate>
       <alternate name="Ice" type="splitB">
         <property name="Cost">
@@ -316,7 +315,6 @@ Draw a card.</property>
 Draw a card.</property>
         <property name="Artist" value="Dan Scott" />
         <property name="Number" value="032" />
-        <property name="MultiverseId" value="292753" />
       </alternate>
     </card>
     <card name="Force Spike" id="d518ae3f-f3ca-4881-8098-e744e6636049">
@@ -338,8 +336,8 @@ Draw a card.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="088" />
       <property name="MultiverseId" value="292945" />
@@ -618,8 +616,8 @@ Dredge 4 (If you would draw a card, instead you may put exactly four cards from 
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="038" />
       <property name="MultiverseId" value="292765" />
@@ -834,8 +832,8 @@ Cycling <s value="U">{U}</s> (<s value="U">{U}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="042" />
       <property name="MultiverseId" value="292769" />
@@ -906,7 +904,7 @@ Whenever you draw a card, Niv-Mizzet, the Firemind deals 1 damage to target crea
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
-      <property name="Artist" value="Parente" />
+      <property name="Artist" value="Paolo Parente" />
       <property name="Number" value="009" />
       <property name="Flavor" value="He's an oxymoron." />
       <property name="MultiverseId" value="338389" />
@@ -1099,7 +1097,7 @@ Enchanted creature has "<s value="T">{T}</s>: This creature deals 1 damage to ta
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
-      <property name="Artist" value="Parente" />
+      <property name="Artist" value="Paolo Parente" />
       <property name="Number" value="062" />
       <property name="Flavor" value="&quot;Victory in the pits is almost as rewarding as the methods I use to achieve it.&quot;" />
       <property name="MultiverseId" value="338408" />
@@ -1250,8 +1248,8 @@ Overload <s value="X">{X}</s><s value="X">{X}</s><s value="R">{R}</s><s value="R
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="084" />
       <property name="MultiverseId" value="292961" />
@@ -1393,8 +1391,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Stephan Martiniere" />
       <property name="Number" value="087" />
       <property name="MultiverseId" value="292943" />
@@ -1405,8 +1403,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Richard Wright" />
       <property name="Number" value="090" />
       <property name="MultiverseId" value="292946" />
@@ -1417,8 +1415,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">G</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Anthony S. Waters" />
       <property name="Number" value="089" />
       <property name="MultiverseId" value="292944" />
@@ -1429,8 +1427,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Anthony S. Waters" />
       <property name="Number" value="039" />
       <property name="MultiverseId" value="292763" />
@@ -1441,8 +1439,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Richard Wright" />
       <property name="Number" value="040" />
       <property name="MultiverseId" value="292766" />
@@ -1453,8 +1451,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">U</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Stephan Martiniere" />
       <property name="Number" value="037" />
       <property name="MultiverseId" value="292764" />
@@ -1465,8 +1463,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Stephan Martiniere" />
       <property name="Number" value="041" />
       <property name="MultiverseId" value="292767" />
@@ -1477,8 +1475,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Anthony S. Waters" />
       <property name="Number" value="043" />
       <property name="MultiverseId" value="292768" />
@@ -1489,8 +1487,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">R</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Richard Wright" />
       <property name="Number" value="044" />
       <property name="MultiverseId" value="292770" />
@@ -1501,8 +1499,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Stephan Martiniere" />
       <property name="Number" value="083" />
       <property name="MultiverseId" value="292962" />
@@ -1513,8 +1511,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Anthony S. Waters" />
       <property name="Number" value="085" />
       <property name="MultiverseId" value="292960" />
@@ -1525,8 +1523,8 @@ When a creature dies, destroy enchanted creature.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Basic Land" />
-      <property name="Rules">B</property>
+      <property name="Rarity" value="Common" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Richard Wright" />
       <property name="Number" value="086" />
       <property name="MultiverseId" value="292963" />
