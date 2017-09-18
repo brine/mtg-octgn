@@ -242,6 +242,10 @@
       <groupactions menu="Move All Cards To...">
         <groupaction menu="Owner's Graveyard" execute="graveyardAll" />
         <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
+        <groupaction menu="Owner's Command Zone" execute="commandAll" />
+        <groupaction menu="Owner's Planes/Schemes (top)" execute="planesTopAll" />
+        <groupaction menu="Owner's Planes/Schemes (bottom)" execute="planesBottomAll" />
+        <groupaction menu="Owner's Sideboard" execute="sideboardAll" />
       </groupactions>
       <cardaction menu="Cast Card" shortcut="ctrl+C" execute="play" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
@@ -258,6 +262,10 @@
         <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
         <groupaction menu="Owner's Library (Bottom)" execute="libraryBottomAll" />
         <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
+        <groupaction menu="Owner's Command Zone" execute="commandAll" />
+        <groupaction menu="Owner's Planes/Schemes (top)" execute="planesTopAll" />
+        <groupaction menu="Owner's Planes/Schemes (bottom)" execute="planesBottomAll" />
+        <groupaction menu="Owner's Sideboard" execute="sideboardAll" />
       </groupactions>
       <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
@@ -277,6 +285,10 @@
         <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
         <groupaction menu="Owner's Library (Bottom)" execute="libraryBottomAll" />
         <groupaction menu="Owner's Graveyard" execute="graveyardAll" />
+        <groupaction menu="Owner's Command Zone" execute="commandAll" />
+        <groupaction menu="Owner's Planes/Schemes (top)" execute="planesTopAll" />
+        <groupaction menu="Owner's Planes/Schemes (bottom)" execute="planesBottomAll" />
+        <groupaction menu="Owner's Sideboard" execute="sideboardAll" />
       </groupactions>
       <cardaction menu="Cast Card" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
@@ -288,14 +300,40 @@
     </group>
     <group name="Sideboard" visibility="me" width="63" height="88" icon="groups/sideboard.png" collapsed="True">
       <groupaction menu="Shuffle" execute="shuffle" />
+      <groupactions menu="Move All Cards To...">
+        <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
+        <groupaction menu="Owner's Library (Bottom)" execute="libraryBottomAll" />
+        <groupaction menu="Owner's Graveyard" execute="graveyardAll" />
+        <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
+        <groupaction menu="Owner's Command Zone" execute="commandAll" />
+        <groupaction menu="Owner's Planes/Schemes (top)" execute="planesTopAll" />
+        <groupaction menu="Owner's Planes/Schemes (bottom)" execute="planesBottomAll" />
+      </groupactions>
     </group>
     <group name="Command Zone" visibility="all" width="63" height="88" icon="groups/commandzone.png" collapsed="True">
       <groupaction menu="Shuffle" execute="shuffle" />
       <cardaction menu="Cast Card/Commander" default="True" execute="play" />
+      <groupactions menu="Move All Cards To...">
+        <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
+        <groupaction menu="Owner's Library (Bottom)" execute="libraryBottomAll" />
+        <groupaction menu="Owner's Graveyard" execute="graveyardAll" />
+        <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
+        <groupaction menu="Owner's Planes/Schemes (top)" execute="planesTopAll" />
+        <groupaction menu="Owner's Planes/Schemes (bottom)" execute="planesBottomAll" />
+        <groupaction menu="Owner's Sideboard" execute="sideboardAll" />
+      </groupactions>
     </group>
     <group name="Planes/Schemes" visibility="none" width="63" height="88" icon="groups/removed.png" collapsed="True">
       <groupaction menu="Shuffle" execute="shuffle" />
       <cardaction menu="Play Card" default="True" execute="play" />
+      <groupactions menu="Move All Cards To...">
+        <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
+        <groupaction menu="Owner's Library (Bottom)" execute="libraryBottomAll" />
+        <groupaction menu="Owner's Graveyard" execute="graveyardAll" />
+        <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
+        <groupaction menu="Owner's Command Zone" execute="commandAll" />
+        <groupaction menu="Owner's Sideboard" execute="sideboardAll" />
+      </groupactions>
     </group>
   </player>
   <deck>

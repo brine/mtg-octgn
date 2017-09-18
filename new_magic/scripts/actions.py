@@ -999,6 +999,30 @@ def libraryBottomAll(group, x = 0, y = 0):
         card.moveToBottom(card.owner.piles['Library'])
     notify("{} moves all cards from their {} to bottom of Library.".format(me, group.name))
 
+def sideboardAll(group, x = 0, y = 0):
+    mute()
+    for card in group:
+        card.moveTo(card.owner.piles['Sideboard'])
+    notify("{} moves all cards from their {} to Sideboard.".format(me, group.name))
+
+def planesTopAll(group, x = 0, y = 0):
+    mute()
+    for card in group:
+        card.moveTo(card.owner.piles['Planes/Schemes'])
+    notify("{} moves all cards from their {} to top of Planes/Schemes Deck.".format(me, group.name))
+
+def planesBottomAll(group, x = 0, y = 0):
+    mute()
+    for card in group:
+        card.moveToBottom(card.owner.piles['Planes/Schemes'])
+    notify("{} moves all cards from their {} to bottom of Planes/Schemes Deck.".format(me, group.name))  
+    
+def commandAll(group, x = 0, y = 0):
+    mute()
+    for card in group:
+        card.moveTo(card.owner.piles['Command Zone'])
+    notify("{} moves all cards from their {} to Command Zone.".format(me, group.name))
+    
 #-------------------------------------------------------------
 # Misc. Functions
 #-------------------------------------------------------------
