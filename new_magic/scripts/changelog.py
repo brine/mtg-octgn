@@ -209,5 +209,14 @@ changelog = {
         ]),
     3031000: ("3.3.10.0", "August 16 2017", [
         "Added Commander 2017, Archenemy Nicol Bolas, Masters Edition IV."
+        ]),
+    3040000: ("3.4.0.0", "September 18 2017", [
+        "Added rich text formatting for mana costs and rules text in deck editor, providing full color mana symbols.",
+        "Added a Deck Editor Plugin which downloads and installs card images.  No more image packs needed!",
+        "Added Ixalan and Iconic Masters.",
+        "Fixed some bugs relating to activated ability scripting.",
+        "Passing priority hotkey will always announce even if you've already passed priority.",
+        "Changing phases will reset the priority tracker.",
+        "Added a 'Move All Cards To' submenus in all groups, with more destination groups available."
         ])
 }
