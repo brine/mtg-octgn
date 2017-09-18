@@ -175,6 +175,7 @@ tokenTypes = {
     'demon**b': ('* / * Black Demon', 'd7f65953-cbe0-46ea-ad32-3646d0381c88'), #DDC CNS
     'deserter01w': ('0 / 1 White Deserter', '85197940-766e-4046-aa48-6d50bad3b963'),
     'devil11r': ('1 / 1 Red Devil', 'b67e87ca-29a7-4b65-b507-2aee907aad9b'),
+    'dinosaur33g': ('3 / 3 Green Dinosaur', '4be59cad-2733-4d3d-891a-4026c6da28c8'),
     'djinn55c': ('5 / 5 Colorless Djinn', '38bb8262-3ab3-4ad4-a0b1-4bb8f806ee3d'),
     'djinnmonk22u': ('2 / 2 Blue Djinn Monk', '4d1431d7-2eb3-49e3-9919-b3a64c05f52e'),
     'dragon11m': ('1 / 1 Multicolor Red Green Dragon', '5f6939ba-43bc-4c5b-b329-d6c58a5ddd28'),
@@ -258,6 +259,7 @@ tokenTypes = {
     'homunculus01u': ('0 / 1 Blue Homunculus', '813ee2b1-8b8f-4e9b-81d7-c6709a7664df'),
     'homunculus22u': ('2 / 2 Blue Homunculus', 'be838ce5-fbd6-46f5-b9c9-eaf7154fbda9'),
     'hornet11c': ('1 / 1 Colorless Hornet', '7b4f4c7b-ef2d-49f3-88f7-652f46cecabe'), #DDE STH
+    'horror33b': ('3 / 34 Black Horror', '150c2fe5-4068-45c1-95d9-f71dc30d368d'),
     'horror44b': ('4 / 4 Black Horror', 'a0e12aaf-2667-4410-acf6-326647c2944d'),
     'horror11m': ('1/1 Multicolor Blue Black Horror', '1e601ccc-eb1d-4a0f-a626-08c741c8b1a3'),
     'horror**b': ('* / * Colorless Horror', '1c035033-b343-4050-a0f5-c15ed57760e8'),
@@ -272,6 +274,7 @@ tokenTypes = {
     'hydra**g': ('*/* Green Hydra', 'fa61b41d-b3ab-452f-a3a8-4c68b6c6ed73'),
     'illusion11u': ('1 / 1 Blue Illusion', 'a7411656-5fe2-466b-98dd-5b943bb97164'), #MMA CHK
     'illusion22u': ('2 / 2 Blue Illusion', 'fdd96bcf-75cc-477d-981a-b65e336623f5'),
+    'illusion22u2': ('2 / 2 Blue Illusion', 'bb023250-dfde-4141-809d-930d5a85928c'), #XLN
     'insect01b': ('0 / 1 Black Insect', '3fab8819-3c34-4652-8797-25debdd7c322'),
     'insect11b': ('1 / 1 Black Insect', '8363d27d-c64b-4f54-8377-b7612c29cbbd'),
     'insect11g': ('1 / 1 Green Insect', '6cd95e82-f30e-4a06-8d9b-ed11d1c08ad0'), #M10 MPRONS SOI CN2
@@ -301,6 +304,7 @@ tokenTypes = {
     'maggot01b': ('0 / 1 Black Maggot', 'a0ec1195-c5e8-411e-a01e-a3aa1b8ad259'),
     'maritlage2020b': ('20 / 20 Black Marit Lage', '267758b2-4102-4182-a2aa-4a8907b05289'),
     'merfolk11u': ('1 / 1 Blue Merfolk', '3e2a300a-4ef7-4d67-8271-89b8331869fe'),
+    'merfolk11u2': ('1 / 1 Blue Merfolk', 'bb023250-dfde-4141-809d-930d5a85928c'), #XLN
     'merfolkwizard11u': ('1 / 1 Blue Merfolk Wizard', 'b53c1420-67a4-41b7-8d04-3461cdb65e36'),
     'metallicsliver11c': ('1 / 1 Colorless Metallic Sliver', '287f8073-6784-42b7-b312-01741c9fa332'),
     'minion11b': ('1 / 1 Black Minion', 'a0b95860-4a75-429e-a759-e8d68f7c9abb'),
@@ -322,7 +326,9 @@ tokenTypes = {
     'pentavite11c': ('1 / 1 Colorless Pentavite', '40236e71-a22d-430a-a152-c33132c6bfae'),
     'pest01c': ('0 / 1 Colorless Pest', 'b211942a-dac7-4202-8039-4caa1ea567e6'),
     'pincher22c': ('2 / 2 Colorless Pincher', '8c3f12b5-b145-4b8b-98bc-ed2cbeeb54a6'),
+    'pirate22b': ('2 / 2 Black Pirate', '5917b038-6193-45b8-84be-e1bb4d392fc5'),
     'plant01g': ('0 / 1 Green Plant', 'de2367b7-77b3-4d7c-89f7-98532b46b9e8'),
+    'plant02g': ('0 / 2 Green Plant', 'cc8721a5-6a95-4c47-b3f2-4997a204a687'),
     'plant11g': ('1 / 1 Green Plant', 'c0c17814-c90f-4e8c-8e25-2667ac7069d9'),
     'plantwall01g': ('0 / 1 Green Plant Wall', 'abd17205-ffda-4661-b3c3-33ba67ae76a7'),
     'poisonsnake11c': ('1 / 1 Colorless Poison Snake', '9bc647b5-8bc8-42f9-ab88-31b0c24fd01b'),
@@ -387,6 +393,7 @@ tokenTypes = {
     'thrull01b': ('0 / 1 Black Thrull', '20e4653d-f948-46e4-9851-9a1a547d2889'), #DDC FEM
     'thrull11b': ('1 / 1 Black Thrull', '588e17d2-4edc-44e0-af9c-e2fc31b621c4'),
     'tombspawn22b': ('2 / 2 Black Tombspawn', '5da0e2e6-b8b5-49b6-994f-c4835e8ef0f9'),
+    'treasure': ('Treasure', '75b3fb90-b278-4634-bafc-29cee2468ae0'), #XLN XLN XLN XLN
     'treefolk**g': ('* / * Green Treefolk', '4d654a81-324b-4f57-bf9b-65c372e0e424'),
     'treefolkshaman25g': ('2 / 5 Green Treefolk Shaman', '640494d9-76e5-440e-88a5-c45bcc036398'), #MOR MMA
     'treefolkwarrior**g': ('* / * Green Treefolk Warrior', 'd5fc0edf-c35f-467f-b092-61993ba98d31'),
@@ -394,6 +401,7 @@ tokenTypes = {
     'tuktukthereturned55c': ('5 / 5 Colorless Tuktuk The Returned', '06625711-0b80-4754-9105-6b9d8a5d7733'),
     'twin34c': ('3 / 4 Colorless Twin', 'd04b89a0-704f-464e-92ca-4a9b37d1bc48'),
     'urami55b': ('5 / 5 Black Urami', '141d6b6a-5d39-437e-9e20-30df7cab1b9a'),
+    'vampire11w': ('1 / 1 White Vampire', 'f4644d50-15ba-45e2-8955-0b5d8245f625'),
     'vampire11b': ('1 / 1 Black Vampire', 'e502f2f1-ebdd-42ab-8682-ef243a2aa44d'), #C17
     'vampire11b': ('1 / 1 Black Vampire', '9fba15b2-c215-4ed7-9659-d24e981b8d15'), #DKA
     'vampire22b': ('2 / 2 Black Vampire', '866e540a-db70-40f3-892a-2f7070f60742'),
