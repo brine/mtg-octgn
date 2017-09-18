@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <set name="Fate Reforged" id="eb15b566-bde2-4c14-ac89-baa56034f71f" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.3.0.0" version="1.0">
   <packaging>
+    <pack name="Booster" id="4a33b47f-0038-42d7-8698-714f04091831">
       <include id="bda35224-e80e-4cc3-8166-4a97990c99d0" set="81a3839a-d590-4843-82dc-c2ee1f002db6">
         <property name="Rarity" value="fetchland" />
       </include>
@@ -15,7 +16,30 @@
       </include>
       <include id="921fe637-662e-4921-b98e-2298d151adda" set="81a3839a-d590-4843-82dc-c2ee1f002db6">
         <property name="Rarity" value="fetchland" />
-      </include><pack name="Booster" id="4a33b47f-0038-42d7-8698-714f04091831"><options><option probability="0.125"><pick qty="1" key="Rarity" value="Mythic Rare" /></option><option probability="0.875"><pick qty="1" key="Rarity" value="Rare" /></option></options><pick qty="3" key="Rarity" value="Uncommon" /><pick qty="10" key="Rarity" value="Common" /><options><option probability="0.125"><pick qty="1" key="Rarity" value="fetchland" /></option><option probability="0.875"><pick qty="1" key="Rarity" value="lifeland" /></option></options></pack><pack name="Lands" id="13dc5e65-ae22-4f0b-ba45-223d0d05949b"><pick qty="unlimited" key="Rarity" value="Basic Land" /></pack></packaging>
+      </include>
+      <options>
+        <option probability="0.125">
+          <pick qty="1" key="Rarity" value="Mythic Rare" />
+        </option>
+        <option probability="0.875">
+          <pick qty="1" key="Rarity" value="Rare" />
+        </option>
+      </options>
+      <pick qty="3" key="Rarity" value="Uncommon" />
+      <pick qty="10" key="Rarity" value="Common" />
+      <options>
+        <option probability="0.125">
+          <pick qty="1" key="Rarity" value="fetchland" />
+        </option>
+        <option probability="0.875">
+          <pick qty="1" key="Rarity" value="lifeland" />
+        </option>
+      </options>
+    </pack>
+    <pack name="Lands" id="13dc5e65-ae22-4f0b-ba45-223d0d05949b">
+      <pick qty="unlimited" key="Rarity" value="Basic Land" />
+    </pack>
+  </packaging>
   <cards>
     <card name="Ugin, the Spirit Dragon" id="a5074ed9-9bd1-477f-a394-5021cd3d1e99">
       <property name="Cost">
@@ -3087,7 +3111,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Basic Land" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="176" />
@@ -3099,7 +3123,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Basic Land" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="177" />
@@ -3111,7 +3135,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Basic Land" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Florian de Gesincourt" />
       <property name="Number" value="178" />
@@ -3123,7 +3147,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Basic Land" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="179" />
@@ -3135,7 +3159,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Basic Land" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="180" />
@@ -3147,7 +3171,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Basic Land" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="181" />
@@ -3159,7 +3183,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Basic Land" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="182" />
@@ -3171,7 +3195,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Basic Land" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
       <property name="Artist" value="Florian de Gesincourt" />
       <property name="Number" value="183" />
@@ -3183,7 +3207,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Basic Land" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="184" />
@@ -3195,7 +3219,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Basic Land" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="185" />
