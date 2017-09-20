@@ -218,5 +218,10 @@ changelog = {
         "Passing priority hotkey will always announce even if you've already passed priority.",
         "Changing phases will reset the priority tracker.",
         "Added a 'Move All Cards To' submenus in all groups, with more destination groups available."
+        ]),
+    3040001: ("3.4.0.1", "September 20 2017", [
+        "White corners on card images shouldn't appear in the game table.",
+        "Fixed issues with image downloader fetching some wrong token arts and not rotating plane cards.",
+        "Please re-download the Tokens, Planechase, and Planechase 2012 images from the plugin to correct this error."
         ])
 }
