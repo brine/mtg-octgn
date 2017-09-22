@@ -1,0 +1,51 @@
+﻿<Window x:Class="ScryfallExtractor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:entities="clr-namespace:Octgn.DataNew.Entities;assembly=Octgn.DataNew"
+        xmlns:local="clr-namespace:ScryfallExtractor"
+        mc:Ignorable="d"
+        Title="MTG Image Downloader Plugin" Height="550" Width="825">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="275" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="SetList" Grid.RowSpan="4" SelectionMode="Single" DisplayMemberPath="Name" SelectionChanged="SetList_SelectionChanged"/>
+
+        <TextBlock Text="Local Image" Grid.Column="2" HorizontalAlignment="Center" FontSize="15" />
+        
+        <Image x:Name="LocalImage" Grid.Row="1" Grid.Column="2" />
+        <StackPanel Grid.Row="2" Grid.Column="2"  Orientation="Horizontal">
+            <TextBlock Text="Dimensions: " />
+            <TextBlock x:Name="LocalDimensions" />
+        </StackPanel>
+        
+        <Image x:Name="WebImage" Grid.Row="1" Grid.Column="3" />
+        <TextBlock Text="Online Image" Grid.Column="3" HorizontalAlignment="Center" FontSize="15" />
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2">
+            <CheckBox x:Name="XLImages" Content="Download Extra-Large Images" Checked="XLImages_Checked" Unchecked="XLImages_Checked" Foreground="Black" />
+            <Rectangle Width="15" />
+            <CheckBox x:Name="ReplaceImages" Content="Always Overwrite Image (even if its low resolution)" Unchecked="ReplaceImages_Checked" Checked="ReplaceImages_Checked" Foreground="Black" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="3">
+            <Button Content="Cancel" Click="CancelWorkers" Visibility="Collapsed" x:Name="CancelButton"/>
+            <Button Content="Download Images" Click="Generate" x:Name="DownloadButton"/>
+            <TextBlock Text="Loading:" />
+            <TextBlock x:Name="CurrentCard" />
+        </StackPanel>
+        <ProgressBar x:Name="ProgressBar" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="2" Minimum="0" Maximum="100" Height="20"></ProgressBar>
+    </Grid>
+</Window>
