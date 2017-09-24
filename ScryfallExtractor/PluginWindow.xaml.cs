@@ -30,7 +30,7 @@ namespace ScryfallExtractor
     public partial class MainWindow : Window
     {
         public Game game;
-        public IEnumerable<Set> sets;
+        public List<SetInfo> sets;
         public bool xl = false;
         public bool replace = false;
         public Set selectedSet;
@@ -44,13 +44,47 @@ namespace ScryfallExtractor
             {
                 game = DbContext.Get().GameById(Guid.Parse("A6C8D2E8-7CD8-11DD-8F94-E62B56D89593")) ?? throw new Exception("MTG is not installed!");
             }
-            sets = game.Sets().Where(x => x.Hidden == false && x.Cards.Count() > 0).OrderBy(x => x.Name);
+            
+            JArray octgnSetData;
+            JArray scryfallSetData;
+
+            using (var webclient = new WebClient() { Encoding = Encoding.UTF8 })
+            {
+                octgnSetData = (JArray)JsonConvert.DeserializeObject(webclient.DownloadString("http://www.octgngames.com/forum/json.php"));
+                scryfallSetData = (JsonConvert.DeserializeObject(webclient.DownloadString("https://api.scryfall.com/sets")) as JObject)["data"] as JArray;
+            }
+
+            sets = new List<SetInfo>();
+
+            foreach (var set in game.Sets().OrderBy(x => x.Name))
+            {
+                if (!set.Hidden && set.Cards.Count() > 0)
+                {
+                    var setInfo = new SetInfo();
+                    setInfo.Set = set;
+                    var jsonset = octgnSetData.FirstOrDefault(x => x.Value<string>("guid") == set.Id.ToString());
+                    if (jsonset == null) continue;
+                    setInfo.Code = jsonset.Value<string>("octgn_code");
+
+                    var scryfallset = scryfallSetData.FirstOrDefault(x => x.Value<string>("code") == setInfo.Code.ToLower());
+                    if (scryfallset == null)
+                        continue;
+                    setInfo.SearchUri = scryfallset.Value<string>("search_uri");
+                    var scryfalltokens = scryfallSetData.FirstOrDefault(x => x.Value<string>("parent_set_code") == setInfo.Code.ToLower() && x.Value<string>("set_type") == "token");
+                    if (scryfalltokens != null)
+                       setInfo.TokenUri = scryfalltokens.Value<string>("search_uri");
+
+
+                    sets.Add(setInfo);
+                }
+            }
+
             SetList.ItemsSource = sets;
+
 
             this.Closing += CancelWorkers;
             backgroundWorker.WorkerReportsProgress = true;
             backgroundWorker.WorkerSupportsCancellation = true;
-            backgroundWorker.DoWork += DoWork;
             backgroundWorker.ProgressChanged += ProgressChanged;
             backgroundWorker.RunWorkerCompleted += BackgroundWorker_RunWorkerCompleted;
         }
@@ -69,10 +103,58 @@ namespace ScryfallExtractor
             DownloadButton.Visibility = Visibility.Collapsed;
             CancelButton.Visibility = Visibility.Visible;
             ProgressBar.Maximum = selectedSet.Cards.Count();
+
+            backgroundWorker.DoWork += DownloadSet;
             backgroundWorker.RunWorkerAsync(true);
         }
 
-        private void DoWork(object sender, DoWorkEventArgs e)
+        public class SetInfo
+        {
+            public List<CardInfo> Cards;
+            public string SearchUri;
+            public string TokenUri;
+            public List<CardInfo> Tokens;
+            public bool? IsHiRes;
+            public string Code;
+            public Set Set;
+
+            public string Name
+            {
+                get
+                {
+                    return Set.Name;
+                }
+            }
+            
+        }
+
+        public class CardInfo
+        {
+            public string NormalUrl;
+            public string LargeUrl;
+            public string Layout;
+
+        }
+
+        public void GetCardInfo()
+        {
+
+        }
+
+        private void ClickSet(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count == 0)
+            {
+                selectedSet = null;
+            }
+            else
+            {
+                Set set = e.AddedItems[0] as Set;
+
+            }
+        }
+
+        private void DownloadSet(object sender, DoWorkEventArgs e)
         {
             var i = 0;
             
