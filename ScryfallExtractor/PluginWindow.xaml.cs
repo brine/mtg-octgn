@@ -16,10 +16,12 @@ using System.Windows.Media.Imaging;
 using Octgn.DataNew;
 using System.Collections.ObjectModel;
 using System.Net;
+using System.Drawing;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Windows.Controls.Primitives;
 using System.Drawing.Imaging;
+using System.Runtime.Serialization;
 
 namespace ScryfallExtractor
 {
@@ -121,7 +123,7 @@ namespace ScryfallExtractor
                 var card = selectedSet.Set.Cards.FirstOrDefault();
                 var cardInfo = getCardInfo(selectedSet, card);
                 var cardImageUrl = FindLocalCardImages(card).FirstOrDefault();
-
+                
                 BitmapImage local = cardImageUrl == null ? null : StreamToBitmapImage(UriToStream(cardImageUrl));
                 LocalImage.Source = local;
                 LocalDimensions.Text = local == null ? null : local.PixelWidth.ToString() + " x " + local.PixelHeight.ToString();
@@ -219,7 +221,7 @@ namespace ScryfallExtractor
                         backgroundWorker.ReportProgress(i, workerItem);
                         continue;
                     }
-                    
+
                     workerItem.local = files.Length > 0 ? UriToStream(files.First()) : null;
                     
                     // don't overwrite with low res images unless replace is selected
@@ -269,7 +271,31 @@ namespace ScryfallExtractor
                         backgroundWorker.ReportProgress(i, workerItem);
                         continue;
                     }
-                    
+
+                    // check if the web image has been updated
+
+                    var webTimestamp = Convert.ToInt32(imageDownloadUrl.Split('?')[1]);
+
+                    if (files.Length > 0)
+                    {
+                        int localTimestamp;
+                        using (System.Drawing.Image image = System.Drawing.Image.FromFile(files.First()))
+                            if (image.PropertyIdList.FirstOrDefault(x => x == 40092) == 0)
+                            {
+                                localTimestamp = 0;
+                            }
+                            else
+                            {
+                                localTimestamp = Convert.ToInt32(Encoding.Unicode.GetString(image.GetPropertyItem(40092).Value));
+                            }
+
+                        if (webTimestamp <= localTimestamp)
+                        {
+                            backgroundWorker.ReportProgress(i, workerItem);
+                            continue;
+                        }
+                    }
+
                     // download image
 
                     var garbage = Config.Instance.Paths.GraveyardPath;
@@ -283,7 +309,7 @@ namespace ScryfallExtractor
                     var newPath = Path.Combine(set.Set.ImagePackUri, card.GetImageUri() + ".jpg");
 
                     MemoryStream imagestream = UriToStream(imageDownloadUrl);
-
+                    
                     workerItem.web = imagestream;
 
                     using (var newimg = StreamToImage(imagestream))
@@ -296,6 +322,15 @@ namespace ScryfallExtractor
                         {
                             newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate90FlipNone);
                         }
+
+                        var commentMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
+                        
+                        commentMetadata.Id = 40092; // this is the comments field
+                        commentMetadata.Value = Encoding.Unicode.GetBytes(webTimestamp.ToString());
+                        commentMetadata.Len = commentMetadata.Value.Length;
+                        commentMetadata.Type = 1;
+
+                        newimg.SetPropertyItem(commentMetadata);
                         newimg.Save(newPath, ImageFormat.Jpeg);
                     }
 
