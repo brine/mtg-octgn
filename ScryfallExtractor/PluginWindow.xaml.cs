@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using System.Windows.Controls.Primitives;
 using System.Drawing.Imaging;
 using System.Runtime.Serialization;
+using Image = System.Drawing.Image;
 
 namespace ScryfallExtractor
 {
@@ -118,6 +119,7 @@ namespace ScryfallExtractor
             }
             else
             {
+                ProgressBar.Value = 0;
                 selectedSet = e.AddedItems[0] as SetInfo;
                 var card = selectedSet.Set.Cards.FirstOrDefault();
                 var cardInfo = getCardInfo(selectedSet, card);
@@ -208,7 +210,7 @@ namespace ScryfallExtractor
                     if (workerItem.local != null)
                     {
                         int localTimestamp;
-                        using (var image = System.Drawing.Image.FromStream(workerItem.local))
+                        using (var image = Image.FromStream(workerItem.local))
                         {
                             if (image.PropertyIdList.FirstOrDefault(x => x == 40092) == 0)
                             {
@@ -244,7 +246,7 @@ namespace ScryfallExtractor
                     
                     workerItem.web = UriToStream(imageDownloadUrl);
 
-                    using (var newimg = System.Drawing.Image.FromStream(workerItem.web))
+                    using (var newimg = Image.FromStream(workerItem.web))
                     {
                         if (flipCard)
                         {
