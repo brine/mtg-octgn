@@ -101,7 +101,6 @@ namespace ScryfallExtractor
             }
 
             if (selectedSet == null) return;
-            ReplaceImages.IsEnabled = false;
             XLImages.IsEnabled = false;
             SetList.IsEnabled = false;
             DownloadButton.Visibility = Visibility.Collapsed;
@@ -133,66 +132,6 @@ namespace ScryfallExtractor
             }
         }
         
-        public string[] FindLocalCardImages(Card card)
-        {
-
-            var imageUri = card.GetImageUri();
-            var files =
-                Directory.GetFiles(card.GetSet().ImagePackUri, imageUri + ".*")
-                    .Where(x => System.IO.Path.GetFileNameWithoutExtension(x).Equals(imageUri, StringComparison.InvariantCultureIgnoreCase))
-                    .OrderBy(x => x.Length)
-                    .ToArray();
-            return files;
-        }
-
-        public CardInfo getCardInfo(SetInfo set, Card card)
-        {
-            if (set.Cards == null) // cards have not yet been initialized
-                set.Cards = new List<CardInfo>();
-
-            var ret = set.Cards.FirstOrDefault(x => x.id == card.Id.ToString() || x.multiverseId == card.Properties[""].Properties.FirstOrDefault(y => y.Key.Name == "MultiverseId").Value.ToString());
-
-            if (ret == null)
-            {
-                using (var webclient = new WebClient() { Encoding = Encoding.UTF8 })
-                {
-                    while (set.SearchUri != null && ret == null)
-                    {
-                        var jsonsetdata = (JObject)JsonConvert.DeserializeObject(webclient.DownloadString(set.SearchUri));
-                        foreach (var jsoncarddata in jsonsetdata["data"])
-                        {
-                            CardInfo cardInfo = new CardInfo();
-                            cardInfo.layout = jsoncarddata.Value<string>("layout");
-                            if (jsoncarddata["card_faces"] == null)
-                            {
-                                cardInfo.normalUrl = jsoncarddata["image_uris"].Value<string>("normal");
-                                cardInfo.largeUrl = jsoncarddata["image_uris"].Value<string>("large");
-                            }
-                            else
-                            {
-
-                                cardInfo.normalUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("normal");
-                                cardInfo.largeUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("large");
-                                cardInfo.normalBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("normal");
-                                cardInfo.largeBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("large");
-                            }
-                            cardInfo.isHiRes = jsoncarddata.Value<bool>("highres_image");
-                            cardInfo.id = jsoncarddata.Value<string>("id");
-                            cardInfo.multiverseId = jsoncarddata.Value<string>("multiverse_id");
-                            set.Cards.Add(cardInfo);
-                        }
-
-                        set.SearchUri = (jsonsetdata.Value<bool>("has_more") == true) ? jsonsetdata.Value<string>("next_page") : null;
-
-                        ret = set.Cards.FirstOrDefault(x => x.id == card.Id.ToString() || x.multiverseId == card.Properties[""].Properties.FirstOrDefault(y => y.Key.Name == "MultiverseId").Value.ToString());
-                    }
-                }
-            }
-
-            return ret;
-        }
-
-
         private void DownloadSet(object sender, DoWorkEventArgs e)
         {
             var i = 0;
@@ -221,16 +160,8 @@ namespace ScryfallExtractor
                         backgroundWorker.ReportProgress(i, workerItem);
                         continue;
                     }
-
                     workerItem.local = files.Length > 0 ? UriToStream(files.First()) : null;
-                    
-                    // don't overwrite with low res images unless replace is selected
-                    if (replace == false && cardInfo.isHiRes == false && workerItem.local != null)
-                    {
-                        backgroundWorker.ReportProgress(i, workerItem);
-                        continue;
-                    }
-
+                                        
                     var imageDownloadUrl = "";
                     var flipCard = false;
 
@@ -254,7 +185,7 @@ namespace ScryfallExtractor
                             {
                                 if (card.Alternate == "flip")
                                     flipCard = true;
-                                imageDownloadUrl = xl ? cardInfo.largeUrl : cardInfo.normalUrl; ;
+                                imageDownloadUrl = xl ? cardInfo.largeUrl : cardInfo.normalUrl;
                                 break;
                             }
                         default:
@@ -264,22 +195,21 @@ namespace ScryfallExtractor
                             }
                     }
 
-                    // if the card has no web image 
-
+                    // if the card has no web image
                     if (string.IsNullOrEmpty(imageDownloadUrl))
                     {
                         backgroundWorker.ReportProgress(i, workerItem);
                         continue;
                     }
 
-                    // check if the web image has been updated
-
+                    // check if the web image has a newer timestamp
                     var webTimestamp = Convert.ToInt32(imageDownloadUrl.Split('?')[1]);
 
-                    if (files.Length > 0)
+                    if (workerItem.local != null)
                     {
                         int localTimestamp;
-                        using (System.Drawing.Image image = System.Drawing.Image.FromFile(files.First()))
+                        using (var image = System.Drawing.Image.FromStream(workerItem.local))
+                        {
                             if (image.PropertyIdList.FirstOrDefault(x => x == 40092) == 0)
                             {
                                 localTimestamp = 0;
@@ -288,11 +218,14 @@ namespace ScryfallExtractor
                             {
                                 localTimestamp = Convert.ToInt32(Encoding.Unicode.GetString(image.GetPropertyItem(40092).Value));
                             }
-
-                        if (webTimestamp <= localTimestamp)
-                        {
-                            backgroundWorker.ReportProgress(i, workerItem);
-                            continue;
+                            if (localTimestamp > 0 && ((image.Width == 672 && xl) || (image.Width == 488 && !xl)))
+                            {
+                                if (webTimestamp <= localTimestamp)
+                                {
+                                    backgroundWorker.ReportProgress(i, workerItem);
+                                    continue;
+                                }
+                            }
                         }
                     }
 
@@ -307,12 +240,11 @@ namespace ScryfallExtractor
                     }
 
                     var newPath = Path.Combine(set.Set.ImagePackUri, card.GetImageUri() + ".jpg");
-
-                    MemoryStream imagestream = UriToStream(imageDownloadUrl);
                     
-                    workerItem.web = imagestream;
+                    
+                    workerItem.web = UriToStream(imageDownloadUrl);
 
-                    using (var newimg = StreamToImage(imagestream))
+                    using (var newimg = System.Drawing.Image.FromStream(workerItem.web))
                     {
                         if (flipCard)
                         {
@@ -339,6 +271,59 @@ namespace ScryfallExtractor
             }
         }
 
+        public string[] FindLocalCardImages(Card card)
+        {
+
+            var imageUri = card.GetImageUri();
+            var files =
+                Directory.GetFiles(card.GetSet().ImagePackUri, imageUri + ".*")
+                    .Where(x => System.IO.Path.GetFileNameWithoutExtension(x).Equals(imageUri, StringComparison.InvariantCultureIgnoreCase))
+                    .OrderBy(x => x.Length)
+                    .ToArray();
+            return files;
+        }
+
+        public CardInfo getCardInfo(SetInfo set, Card card)
+        {
+            if (set.Cards == null) // cards have not yet been initialized
+                set.Cards = new List<CardInfo>();
+            var ret = set.Cards.FirstOrDefault(x => x.id == card.Id.ToString() || x.multiverseId == card.Properties[""].Properties.FirstOrDefault(y => y.Key.Name == "MultiverseId").Value.ToString());
+
+            if (ret == null)
+            {
+                using (var webclient = new WebClient() { Encoding = Encoding.UTF8 })
+                {
+                    while (set.SearchUri != null && ret == null)
+                    {
+                        var jsonsetdata = (JObject)JsonConvert.DeserializeObject(webclient.DownloadString(set.SearchUri));
+                        foreach (var jsoncarddata in jsonsetdata["data"])
+                        {
+                            CardInfo cardInfo = new CardInfo();
+                            cardInfo.layout = jsoncarddata.Value<string>("layout");
+                            if (jsoncarddata["card_faces"] == null)
+                            {
+                                cardInfo.normalUrl = jsoncarddata["image_uris"].Value<string>("normal");
+                                cardInfo.largeUrl = jsoncarddata["image_uris"].Value<string>("large");
+                            }
+                            else
+                            {
+                                cardInfo.normalUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("normal");
+                                cardInfo.largeUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("large");
+                                cardInfo.normalBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("normal");
+                                cardInfo.largeBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("large");
+                            }
+                            cardInfo.id = jsoncarddata.Value<string>("id");
+                            cardInfo.multiverseId = jsoncarddata.Value<string>("multiverse_id");
+                            set.Cards.Add(cardInfo);
+                        }
+                        set.SearchUri = (jsonsetdata.Value<bool>("has_more") == true) ? jsonsetdata.Value<string>("next_page") : null;
+                        ret = set.Cards.FirstOrDefault(x => x.id == card.Id.ToString() || x.multiverseId == card.Properties[""].Properties.FirstOrDefault(y => y.Key.Name == "MultiverseId").Value.ToString());
+                    }
+                }
+            }
+            return ret;
+        }
+
         private MemoryStream UriToStream(string uri)
         {
             MemoryStream ms;
@@ -349,12 +334,7 @@ namespace ScryfallExtractor
             }
             return ms;
         }
-
-        private System.Drawing.Image StreamToImage(MemoryStream ms)
-        {
-            return System.Drawing.Image.FromStream(ms);
-        }
-        
+                
         private BitmapImage StreamToBitmapImage(MemoryStream ms)
         {
             ms.Position = 0;
@@ -390,7 +370,6 @@ namespace ScryfallExtractor
         private void BackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             CurrentCard.Text = "DONE";
-            ReplaceImages.IsEnabled = true;
             XLImages.IsEnabled = true;
             SetList.IsEnabled = true;
             DownloadButton.Visibility = Visibility.Visible;
@@ -410,11 +389,7 @@ namespace ScryfallExtractor
         {
             xl = XLImages.IsChecked ?? false;
         }
-
-        private void ReplaceImages_Checked(object sender, RoutedEventArgs e)
-        {
-            replace = ReplaceImages.IsChecked ?? false;
-        }
+        
 
         private class WorkerItem
         {
