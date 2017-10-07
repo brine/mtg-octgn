@@ -38,6 +38,7 @@ namespace ScryfallExtractor
         public bool xl = false;
         public bool replace = false;
         public Set selectedSet;
+        public Set tokenSet;
 
         private BackgroundWorker backgroundWorker = new BackgroundWorker();
 
@@ -57,10 +58,13 @@ namespace ScryfallExtractor
                 OctgnSetData = (JArray)JsonConvert.DeserializeObject(webclient.DownloadString("http://www.octgngames.com/forum/json.php"));
                 scryfallSetData = (JsonConvert.DeserializeObject(webclient.DownloadString("https://api.scryfall.com/sets")) as JObject)["data"] as JArray;
             }
-            
-            SetList.ItemsSource = game.Sets().Where(x => !x.Hidden && x.Cards.Count() > 0).OrderBy(x => x.Name);
+
+            tokenSet = game.GetSetById(new Guid("a584b75b-266f-4378-bed5-9ffa96cd3961"));
+
+            SetList.ItemsSource = game.Sets().Where(x => !x.Hidden && x.Cards.Count() > 0 && x != tokenSet).OrderBy(x => x.Name);
 
             sets = new List<SetInfo>();
+
 
             foreach (var jsonset in scryfallSetData)
             {
@@ -102,7 +106,7 @@ namespace ScryfallExtractor
             CancelButton.Visibility = Visibility.Visible;
             ProgressBar.Maximum = selectedSet.Cards.Count();
 
-            backgroundWorker.RunWorkerAsync(selectedSet);
+            backgroundWorker.RunWorkerAsync(tokenSet);
         }
         
         private void ClickSet(object sender, SelectionChangedEventArgs e)
@@ -133,11 +137,20 @@ namespace ScryfallExtractor
         {
             CardInfo ret = null;
 
-            var mainSet = sets.FirstOrDefault(x => x.Id == set.Id.ToString());
+            var mainSet = sets.FirstOrDefault(x => x.Id == selectedSet.Id.ToString());
             if (mainSet == null) return null;
 
             ret = mainSet.FindCard(card);
             if (ret != null) return ret;
+
+            if (set == tokenSet)
+            {
+                var tokenSet = sets.FirstOrDefault(x => x.ParentCode == mainSet.Code && x.Type == "token");
+                if (tokenSet == null) return null;
+
+                return tokenSet.FindCard(card);
+
+            }
 
             var extraSets = sets.Where(x => x.ParentCode == mainSet.Code);
             foreach (var ex in extraSets)
@@ -166,8 +179,7 @@ namespace ScryfallExtractor
         {
             var i = 0;
             var set = (e.Argument as Set);
-
-
+            
             foreach (var c in set.Cards)
             {
                 i++;
@@ -188,7 +200,8 @@ namespace ScryfallExtractor
 
                     if (cardInfo == null)
                     {
-                        MessageBox.Show(String.Format("Cannot find scryfall data for card {0}.", card.Name));
+                        if (set != tokenSet)
+                            MessageBox.Show(String.Format("Cannot find scryfall data for card {0}.", card.Name));
                         backgroundWorker.ReportProgress(i, workerItem);
                         continue;
                     }
@@ -409,7 +422,16 @@ namespace ScryfallExtractor
                 
                 while (ret == null)
                 {
-                    ret = Cards.FirstOrDefault(x => x.Id == card.Id.ToString() || x.MultiverseId == card.Properties[""].Properties.FirstOrDefault(y => y.Key.Name == "MultiverseId").Value.ToString());
+                    if (Type == "token")
+                    {
+                        var props = card.Properties[card.Alternate].Properties;
+                        if (props.First(x => x.Key.Name == "Flags").Value.ToString().ToLower() != Code)
+                            return null;
+
+                        ret = Cards.FirstOrDefault(x => x.Number == props.First(y => y.Key.Name == "Number").Value.ToString());
+                    }
+                    else
+                        ret = Cards.FirstOrDefault(x => x.Id == card.Id.ToString() || x.MultiverseId == card.Properties[""].Properties.First(y => y.Key.Name == "MultiverseId").Value.ToString());
                     if (ret == null)
                     {
                         if (SearchUri == null) break;
@@ -435,6 +457,7 @@ namespace ScryfallExtractor
                                 }
                                 cardInfo.Id = jsoncarddata.Value<string>("id");
                                 cardInfo.MultiverseId = jsoncarddata.Value<string>("multiverse_id");
+                                cardInfo.Number = jsoncarddata.Value<string>("collector_number");
                                 Cards.Add(cardInfo);
                             }
                             SearchUri = (jsonsetdata.Value<bool>("has_more") == true) ? jsonsetdata.Value<string>("next_page") : null;
