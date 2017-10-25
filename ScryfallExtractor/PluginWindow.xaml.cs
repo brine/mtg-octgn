@@ -23,6 +23,7 @@ using System.Windows.Controls.Primitives;
 using System.Drawing.Imaging;
 using System.Runtime.Serialization;
 using Image = System.Drawing.Image;
+using System.Threading;
 
 namespace ScryfallExtractor
 {
@@ -40,7 +41,8 @@ namespace ScryfallExtractor
         public Set selectedSet;
         public Set tokenSet;
 
-        private BackgroundWorker backgroundWorker = new BackgroundWorker();
+        // private BackgroundWorker backgroundWorker = new BackgroundWorker();
+        private CancellationTokenSource _cts;
 
         public MainWindow()
         {
@@ -85,28 +87,32 @@ namespace ScryfallExtractor
             }
             
             this.Closing += CancelWorkers;
-            backgroundWorker.WorkerReportsProgress = true;
-            backgroundWorker.WorkerSupportsCancellation = true;
-            backgroundWorker.ProgressChanged += ProgressChanged;
-            backgroundWorker.DoWork += DownloadSet;
-            backgroundWorker.RunWorkerCompleted += BackgroundWorker_RunWorkerCompleted;
         }
                 
-        private void Generate(object sender, RoutedEventArgs e)
+        private async void Generate(object sender, RoutedEventArgs e)
         {
-            if (backgroundWorker.IsBusy)
-            {
-                return;
-            }
-
             if (selectedSet == null) return;
             XLImages.IsEnabled = false;
             SetList.IsEnabled = false;
             DownloadButton.Visibility = Visibility.Collapsed;
             CancelButton.Visibility = Visibility.Visible;
-            ProgressBar.Maximum = selectedSet.Cards.Count();
 
-            backgroundWorker.RunWorkerAsync(tokenSet);
+            _cts = new CancellationTokenSource();
+            var token = _cts.Token;
+
+            var progressHandler = new Progress<WorkerItem>(value =>
+            {
+                ProgressChanged(value);
+            });
+
+            var progress = progressHandler as IProgress<WorkerItem>;
+            await Task.Run(() =>
+                {
+                    DownloadSet(selectedSet, progress);
+                    DownloadSet(tokenSet, progress);
+                });
+
+            WorkerCompleted();
         }
         
         private void ClickSet(object sender, SelectionChangedEventArgs e)
@@ -175,10 +181,10 @@ namespace ScryfallExtractor
             return null;
         }
 
-        private void DownloadSet(object sender, DoWorkEventArgs e)
+        private void DownloadSet(Set set, IProgress<WorkerItem> progress)
         {
             var i = 0;
-            var set = (e.Argument as Set);
+            var setSize = set.Cards.Count();
             
             foreach (var c in set.Cards)
             {
@@ -187,11 +193,12 @@ namespace ScryfallExtractor
                 {
                     var card = c.Clone();
                     card.Alternate = alt.Key;
-                    if (backgroundWorker.CancellationPending) break;
+                    if (_cts.IsCancellationRequested) break;
 
                     var cardInfo = GetCardInfo(set, card);
 
                     var workerItem = new WorkerItem();
+                    workerItem.progress = (double) i / setSize;
                     workerItem.card = card;
 
                     // get local image info
@@ -202,7 +209,7 @@ namespace ScryfallExtractor
                     {
                         if (set != tokenSet)
                             MessageBox.Show(String.Format("Cannot find scryfall data for card {0}.", card.Name));
-                        backgroundWorker.ReportProgress(i, workerItem);
+                        progress.Report(workerItem);
                         continue;
                     }
                     workerItem.local = files.Length > 0 ? UriToStream(files.First()) : null;
@@ -243,7 +250,7 @@ namespace ScryfallExtractor
                     // if the card has no web image
                     if (string.IsNullOrEmpty(imageDownloadUrl))
                     {
-                        backgroundWorker.ReportProgress(i, workerItem);
+                        progress.Report(workerItem);
                         continue;
                     }
 
@@ -267,7 +274,7 @@ namespace ScryfallExtractor
                             {
                                 if (webTimestamp <= localTimestamp)
                                 {
-                                    backgroundWorker.ReportProgress(i, workerItem);
+                                    progress.Report(workerItem);
                                     continue;
                                 }
                             }
@@ -311,7 +318,7 @@ namespace ScryfallExtractor
                         newimg.Save(newPath, ImageFormat.Jpeg);
                     }
 
-                    backgroundWorker.ReportProgress(i, workerItem);
+                    progress.Report(workerItem);
                 }
             }
         }
@@ -351,27 +358,37 @@ namespace ScryfallExtractor
             return ret;
         }
 
-        private void ProgressChanged(object sender, ProgressChangedEventArgs e)
+        private void ProgressChanged(WorkerItem workerItem)
         {
-            ProgressBar.Value = e.ProgressPercentage;
-            WorkerItem workerItem = e.UserState as WorkerItem;
+            ProgressBar.Value = workerItem.progress;
             CurrentCard.Text = workerItem.card.Name;
+
+            if (workerItem.local == null && workerItem.web == null)
+            {
+                return;
+            }
+
             LocalImage.Source = null;
+            WebImage.Source = null;
+
             if (workerItem.local != null)
             {
                 BitmapImage local = StreamToBitmapImage(workerItem.local);
                 LocalImage.Source = local;
                 LocalDimensions.Text = local.PixelWidth.ToString() + " x " + local.PixelHeight.ToString();
             }
-            WebImage.Source = null;
             if (workerItem.web != null)
             {
                 BitmapImage web = StreamToBitmapImage(workerItem.web);
                 WebImage.Source = web;
+                if (LocalImage.Source == null)
+                {
+                    LocalImage.Source = web;
+                }
             }
         }
 
-        private void BackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void WorkerCompleted()
         {
             CurrentCard.Text = "DONE";
             XLImages.IsEnabled = true;
@@ -382,10 +399,10 @@ namespace ScryfallExtractor
 
         private void CancelWorkers(object sender, EventArgs e)
         {
-            if (backgroundWorker.IsBusy)
+            if (_cts != null)
             {
                 CurrentCard.Text = "Cancel";
-                backgroundWorker.CancelAsync();
+                _cts.Cancel();
             }
         }
 
@@ -394,13 +411,14 @@ namespace ScryfallExtractor
             xl = XLImages.IsChecked ?? false;
         }
         
-
         private class WorkerItem
         {
             public Card card;
             public MemoryStream local;
             public MemoryStream web;
+            public double progress;
         }
+
         public class SetInfo
         {
             public string SearchUri;
