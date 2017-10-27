@@ -126,15 +126,22 @@ namespace ScryfallExtractor
                 ProgressBar.Value = 0;
                 selectedSet = e.AddedItems[0] as Set;
                 var card = selectedSet.Cards.FirstOrDefault();
-                var cardInfo = GetCardInfo(selectedSet, card);
                 var cardImageUrl = FindLocalCardImages(selectedSet, card).FirstOrDefault();
-                
+
                 BitmapImage local = cardImageUrl == null ? null : StreamToBitmapImage(UriToStream(cardImageUrl));
                 LocalImage.Source = local;
                 LocalDimensions.Text = local == null ? null : local.PixelWidth.ToString() + " x " + local.PixelHeight.ToString();
 
-                BitmapImage web = StreamToBitmapImage(UriToStream(cardInfo.NormalUrl));
-                WebImage.Source = web;
+                var cardInfo = GetCardInfo(selectedSet, card);
+                if (cardInfo == null)
+                {
+                    WebImage.Source = null;
+                }
+                else
+                {
+                    BitmapImage web = StreamToBitmapImage(UriToStream(cardInfo.NormalUrl));
+                    WebImage.Source = web;
+                }
             }
         }
 
