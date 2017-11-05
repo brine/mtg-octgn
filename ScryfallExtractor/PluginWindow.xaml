@@ -21,8 +21,19 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="SetList" Grid.RowSpan="4" SelectionMode="Single" DisplayMemberPath="Name" SelectionChanged="ClickSet"/>
-
+        <ListBox x:Name="SetList" Grid.RowSpan="4" SelectionMode="Single" SelectionChanged="ClickSet">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                        <TextBlock Margin="4,0,0,0" Foreground="Red" Text="{Binding ImageCount}"/>
+                        <TextBlock Text=" / " Foreground="Red"/>
+                        <TextBlock Margin="0,0,0,4" Foreground="Red" Text="{Binding CardCount}"/>
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <TextBlock Text="Local Image" Grid.Column="2" HorizontalAlignment="Center" FontSize="15" />
         
         <Image x:Name="LocalImage" Grid.Row="1" Grid.Column="2" />

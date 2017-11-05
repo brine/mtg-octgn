@@ -38,8 +38,9 @@ namespace ScryfallExtractor
         public List<SetInfo> sets;
         public bool xl = false;
         public bool replace = false;
-        public Set selectedSet;
-        public Set tokenSet;
+        public SetItem selectedSet;
+
+        public ObservableCollection<SetItem> setList;
 
         // private BackgroundWorker backgroundWorker = new BackgroundWorker();
         private CancellationTokenSource _cts;
@@ -60,14 +61,9 @@ namespace ScryfallExtractor
                 OctgnSetData = (JArray)JsonConvert.DeserializeObject(webclient.DownloadString("http://www.octgngames.com/forum/json.php"));
                 scryfallSetData = (JsonConvert.DeserializeObject(webclient.DownloadString("https://api.scryfall.com/sets")) as JObject)["data"] as JArray;
             }
-
-            tokenSet = game.GetSetById(new Guid("a584b75b-266f-4378-bed5-9ffa96cd3961"));
-
-            SetList.ItemsSource = game.Sets().Where(x => !x.Hidden && x.Cards.Count() > 0 && x != tokenSet).OrderBy(x => x.Name);
-
+                        
             sets = new List<SetInfo>();
-
-
+            
             foreach (var jsonset in scryfallSetData)
             {
                 var setInfo = new SetInfo();
@@ -85,7 +81,40 @@ namespace ScryfallExtractor
                 
                 sets.Add(setInfo);
             }
-            
+
+            setList = new ObservableCollection<SetItem>();
+
+            foreach (var set in game.Sets())
+            {
+                if (!set.Hidden && set.Cards.Count() > 0 && set.Id.ToString() != "a584b75b-266f-4378-bed5-9ffa96cd3961")
+                {
+                    var octgndbset = OctgnSetData.FirstOrDefault(x => x.Value<string>("guid") == set.Id.ToString());
+                    if (octgndbset == null)
+                        continue;
+
+                    var setItem = new SetItem();
+                    setItem.set = set;
+
+                    var setCode = octgndbset.Value<string>("octgn_code").ToLower();
+
+                    setItem.setData = sets.First(x => x.Code == setCode);
+
+                    setItem.extraSets = new List<SetInfo>();
+                    
+                    setItem.extraSets.AddRange(sets.Where(x => x.ParentCode == setItem.setData.Code));
+                    if (setItem.setData.BlockCode != setItem.setData.Code)
+                    {
+                        setItem.extraSets.AddRange(sets.Where(x => x.ParentCode == setItem.setData.BlockCode));
+                    }
+
+                    setItem.releaseDate = Convert.ToDateTime(octgndbset.Value<string>("date"));
+                    CountImageFiles(setItem);
+                    setList.Add(setItem);
+                }
+            }
+
+            SetList.ItemsSource = setList.OrderByDescending(x => x.releaseDate);
+
             this.Closing += CancelWorkers;
         }
                 
@@ -109,7 +138,6 @@ namespace ScryfallExtractor
             await Task.Run(() =>
                 {
                     DownloadSet(selectedSet, progress);
-                    DownloadSet(tokenSet, progress);
                 });
 
             WorkerCompleted();
@@ -124,9 +152,9 @@ namespace ScryfallExtractor
             else
             {
                 ProgressBar.Value = 0;
-                selectedSet = e.AddedItems[0] as Set;
-                var card = selectedSet.Cards.FirstOrDefault();
-                var cardImageUrl = FindLocalCardImages(selectedSet, card).FirstOrDefault();
+                selectedSet = e.AddedItems[0] as SetItem;
+                var card = selectedSet.set.Cards.FirstOrDefault();
+                var cardImageUrl = FindLocalCardImages(selectedSet.set, card, card.Alternate).FirstOrDefault();
 
                 BitmapImage local = cardImageUrl == null ? null : StreamToBitmapImage(UriToStream(cardImageUrl));
                 LocalImage.Source = local;
@@ -146,16 +174,29 @@ namespace ScryfallExtractor
         }
 
 
-        public CardInfo GetCardInfo(Set set, Card card)
+        public CardInfo GetCardInfo(SetItem setItem, Card card)
         {
             CardInfo ret = null;
 
-            var mainSet = sets.FirstOrDefault(x => x.Id == selectedSet.Id.ToString());
+            ret = setItem.setData.FindCard(card);
+            if (ret != null) return ret;
+
+            foreach (var ex in setItem.extraSets)
+            {
+                ret = ex.FindCard(card);
+                if (ret != null) return ret;
+            }
+
+            return ret;
+
+            /*
+            CardInfo ret = null;
+
+            var mainSet = sets.FirstOrDefault(x => x.Id == selectedSet.set.Id.ToString());
             if (mainSet == null) return null;
 
             ret = mainSet.FindCard(card);
             if (ret != null) return ret;
-
             if (set == tokenSet)
             {
                 var tokenSet = sets.FirstOrDefault(x => x.ParentCode == mainSet.Code && x.Type == "token");
@@ -186,11 +227,13 @@ namespace ScryfallExtractor
             }
             
             return null;
+            */
         }
 
-        private void DownloadSet(Set set, IProgress<WorkerItem> progress)
+        private void DownloadSet(SetItem setItem, IProgress<WorkerItem> progress)
         {
             var i = 0;
+            var set = setItem.set; //TODO: remove this and use setItem
             var setSize = set.Cards.Count();
             
             foreach (var c in set.Cards)
@@ -202,7 +245,7 @@ namespace ScryfallExtractor
                     card.Alternate = alt.Key;
                     if (_cts.IsCancellationRequested) break;
 
-                    var cardInfo = GetCardInfo(set, card);
+                    var cardInfo = GetCardInfo(setItem, card);
 
                     var workerItem = new WorkerItem();
                     workerItem.progress = (double) i / setSize;
@@ -210,11 +253,11 @@ namespace ScryfallExtractor
 
                     // get local image info
 
-                    var files = FindLocalCardImages(set, card);
+                    var files = FindLocalCardImages(set, card, card.Alternate);
 
                     if (cardInfo == null)
                     {
-                        if (set != tokenSet)
+                        if (set.Id.ToString() != "a584b75b-266f-4378-bed5-9ffa96cd3961")
                             MessageBox.Show(String.Format("Cannot find scryfall data for card {0}.", card.Name));
                         progress.Report(workerItem);
                         continue;
@@ -329,8 +372,29 @@ namespace ScryfallExtractor
                 }
             }
         }
+        
+        public void CountImageFiles(SetItem setItem)
+        {
+            setItem.ImageCount = 0;
+            setItem.CardCount = 0;
 
-        public string[] FindLocalCardImages(Set set, Card card)
+            foreach (var card in setItem.set.Cards)
+            {
+                foreach (var alt in card.Properties)
+                {
+                    if (!alt.Key.Contains("split"))
+                    {
+                        setItem.CardCount += 1;
+                        if (FindLocalCardImages(setItem.set, card, alt.Key).Count() > 0)
+                        {
+                            setItem.ImageCount += 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        public string[] FindLocalCardImages(Set set, Card card, string alt)
         {
 
             var imageUri = card.GetImageUri();
@@ -426,6 +490,80 @@ namespace ScryfallExtractor
             public double progress;
         }
 
+        public class SetItem
+        {
+            public Set set;
+            public DateTime releaseDate;
+            public int imageCount;
+            public int cardCount;
+
+            public SetInfo setData;
+            public List<SetInfo> extraSets;
+
+            public int tokenImageCount;
+            public int tokenCardCount;
+
+            public string Name
+            {
+                get
+                {
+                    return set.Name;
+                }
+            }
+
+            public int CardCount
+            {
+                get
+                {
+                    return cardCount;
+                }
+                set
+                {
+                    if (cardCount == value) return;
+                    cardCount = value;
+                }
+            }
+
+            public int ImageCount
+            {
+                get
+                {
+                    return imageCount;
+                }
+                set
+                {
+                    if (imageCount == value) return;
+                    imageCount = value;
+                }
+            }
+
+            public int TokenImageCount
+            {
+                get
+                {
+                    return tokenImageCount;
+                }
+                set
+                {
+                    if (tokenImageCount == value) return;
+                    tokenImageCount = value;
+                }
+            }
+
+            public int TokenCardCount
+            {
+                get
+                {
+                    return tokenCardCount;
+                }
+                set
+                {
+                    if (tokenCardCount == value) return;
+                    tokenCardCount = value;
+                }
+            }
+        }
+
         public class SetInfo
         {
             public string SearchUri;
@@ -468,17 +606,17 @@ namespace ScryfallExtractor
                             {
                                 CardInfo cardInfo = new CardInfo();
                                 cardInfo.Layout = jsoncarddata.Value<string>("layout");
-                                if (jsoncarddata["card_faces"] == null)
-                                {
-                                    cardInfo.NormalUrl = jsoncarddata["image_uris"].Value<string>("normal");
-                                    cardInfo.LargeUrl = jsoncarddata["image_uris"].Value<string>("large");
-                                }
-                                else
+                                if (cardInfo.Layout == "transform")
                                 {
                                     cardInfo.NormalUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("normal");
                                     cardInfo.LargeUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("large");
                                     cardInfo.NormalBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("normal");
                                     cardInfo.LargeBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("large");
+                                }
+                                else
+                                {
+                                    cardInfo.NormalUrl = jsoncarddata["image_uris"].Value<string>("normal");
+                                    cardInfo.LargeUrl = jsoncarddata["image_uris"].Value<string>("large");
                                 }
                                 cardInfo.Id = jsoncarddata.Value<string>("id");
                                 cardInfo.MultiverseId = jsoncarddata.Value<string>("multiverse_id");
