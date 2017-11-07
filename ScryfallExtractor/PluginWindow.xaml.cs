@@ -31,16 +31,44 @@ namespace ScryfallExtractor
     /// Interaction logic for PluginWindow.xaml
     /// </summary>
     /// 
-    
-    public partial class MainWindow : Window
+
+    public partial class MainWindow : INotifyPropertyChanged
     {
         public Game game;
         public List<SetInfo> sets;
         public bool xl = false;
         public bool replace = false;
-        public SetItem selectedSet;
+        private string _currentCard;
+        private string _currentSet;
 
-        public ObservableCollection<SetItem> setList;
+        public string CurrentCard
+        {
+            get
+            {
+                return _currentCard;
+            }
+            set
+            {
+                if (_currentCard == value) return;
+                _currentCard = value;
+                OnPropertyChanged("CurrentCard");
+            }
+        }
+        public string CurrentSet
+        {
+            get
+            {
+                return _currentSet;
+            }
+            set
+            {
+                if (_currentSet == value) return;
+                _currentSet = value;
+                OnPropertyChanged("CurrentSet");
+            }
+        }
+
+        public List<SetItem> setList { get; private set; }
 
         // private BackgroundWorker backgroundWorker = new BackgroundWorker();
         private CancellationTokenSource _cts;
@@ -48,11 +76,12 @@ namespace ScryfallExtractor
         public MainWindow()
         {
             this.InitializeComponent();
+            this.DataContext = this;
             if (game == null)
             {
                 game = DbContext.Get().GameById(Guid.Parse("A6C8D2E8-7CD8-11DD-8F94-E62B56D89593")) ?? throw new Exception("MTG is not installed!");
             }
-            
+
             JArray scryfallSetData;
             JArray OctgnSetData;
 
@@ -61,28 +90,25 @@ namespace ScryfallExtractor
                 OctgnSetData = (JArray)JsonConvert.DeserializeObject(webclient.DownloadString("http://www.octgngames.com/forum/json.php"));
                 scryfallSetData = (JsonConvert.DeserializeObject(webclient.DownloadString("https://api.scryfall.com/sets")) as JObject)["data"] as JArray;
             }
-                        
+
             sets = new List<SetInfo>();
-            
+
             foreach (var jsonset in scryfallSetData)
             {
                 var setInfo = new SetInfo();
-                
+
                 setInfo.Code = jsonset.Value<string>("code");
                 setInfo.ParentCode = jsonset.Value<string>("parent_set_code");
                 setInfo.BlockCode = jsonset.Value<string>("block_code");
-
-                var OctgnId = OctgnSetData.FirstOrDefault(x => x.Value<string>("octgn_code").ToLower() == setInfo.Code);
-                if (OctgnId != null)
-                    setInfo.Id = OctgnId.Value<string>("guid");
-
+                
                 setInfo.Type = jsonset.Value<string>("set_type");
                 setInfo.SearchUri = jsonset.Value<string>("search_uri");
-                
+
                 sets.Add(setInfo);
             }
 
-            setList = new ObservableCollection<SetItem>();
+            setList = new List<SetItem>();
+            SetList.ItemsSource = setList;
 
             foreach (var set in game.Sets())
             {
@@ -100,7 +126,7 @@ namespace ScryfallExtractor
                     setItem.setData = sets.First(x => x.Code == setCode);
 
                     setItem.extraSets = new List<SetInfo>();
-                    
+
                     setItem.extraSets.AddRange(sets.Where(x => x.ParentCode == setItem.setData.Code));
                     if (setItem.setData.BlockCode != setItem.setData.Code)
                     {
@@ -112,18 +138,32 @@ namespace ScryfallExtractor
                     setList.Add(setItem);
                 }
             }
-
-            SetList.ItemsSource = setList.OrderByDescending(x => x.releaseDate);
-
+            
             this.Closing += CancelWorkers;
         }
-                
-        private async void Generate(object sender, RoutedEventArgs e)
+
+        
+
+        private void DownloadSingle(object sender, RoutedEventArgs e)
         {
+            var selectedSet = SetList.SelectedItem as SetItem;
             if (selectedSet == null) return;
+            Generate(new List<SetItem>() { selectedSet });
+        }
+
+        private void DownloadAll(object sender, RoutedEventArgs e)
+        {
+            Generate(setList.ToList());
+        }
+
+        private async void Generate(List<SetItem> sets)
+        { 
             XLImages.IsEnabled = false;
             SetList.IsEnabled = false;
+            NameRadio.IsEnabled = false;
+            DateRadio.IsEnabled = false;
             DownloadButton.Visibility = Visibility.Collapsed;
+            DownloadAllButton.Visibility = Visibility.Collapsed;
             CancelButton.Visibility = Visibility.Visible;
 
             _cts = new CancellationTokenSource();
@@ -133,26 +173,38 @@ namespace ScryfallExtractor
             {
                 ProgressChanged(value);
             });
-
             var progress = progressHandler as IProgress<WorkerItem>;
+
+            var setProgressHandler = new Progress<int>(value =>
+            {
+                SetProgressBar.Value = value;
+            });
+            var setProgress = setProgressHandler as IProgress<int>;
+
+            SetProgressBar.Maximum = sets.Count;
+            SetProgressBar.Value = 0;
             await Task.Run(() =>
                 {
-                    DownloadSet(selectedSet, progress);
+                    var count = 0;
+                    foreach (var set in sets)
+                    {
+                        CurrentSet = set.Name;
+                        if (set.imageCount < set.cardCount)
+                            DownloadSet(set, progress);
+                        count += 1;
+                        setProgress.Report(count);
+                    }
                 });
 
             WorkerCompleted();
         }
-        
+
         private void ClickSet(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count == 0)
-            {
-                selectedSet = null;
-            }
-            else
+            if (e.AddedItems.Count > 0)
             {
                 ProgressBar.Value = 0;
-                selectedSet = e.AddedItems[0] as SetItem;
+                var selectedSet = e.AddedItems[0] as SetItem;
                 var card = selectedSet.set.Cards.FirstOrDefault();
                 var cardImageUrl = FindLocalCardImages(selectedSet.set, card, card.Alternate).FirstOrDefault();
 
@@ -160,7 +212,7 @@ namespace ScryfallExtractor
                 LocalImage.Source = local;
                 LocalDimensions.Text = local == null ? null : local.PixelWidth.ToString() + " x " + local.PixelHeight.ToString();
 
-                var cardInfo = GetCardInfo(selectedSet, card);
+                var cardInfo = GetCardInfo(selectedSet, card, "");
                 if (cardInfo == null)
                 {
                     WebImage.Source = null;
@@ -174,60 +226,20 @@ namespace ScryfallExtractor
         }
 
 
-        public CardInfo GetCardInfo(SetItem setItem, Card card)
+        public CardInfo GetCardInfo(SetItem setItem, Card card, string alt)
         {
             CardInfo ret = null;
 
-            ret = setItem.setData.FindCard(card);
+            ret = setItem.setData.FindCard(card, alt);
             if (ret != null) return ret;
 
             foreach (var ex in setItem.extraSets)
             {
-                ret = ex.FindCard(card);
+                ret = ex.FindCard(card, alt);
                 if (ret != null) return ret;
             }
 
             return ret;
-
-            /*
-            CardInfo ret = null;
-
-            var mainSet = sets.FirstOrDefault(x => x.Id == selectedSet.set.Id.ToString());
-            if (mainSet == null) return null;
-
-            ret = mainSet.FindCard(card);
-            if (ret != null) return ret;
-            if (set == tokenSet)
-            {
-                var tokenSet = sets.FirstOrDefault(x => x.ParentCode == mainSet.Code && x.Type == "token");
-                if (tokenSet == null) return null;
-
-                return tokenSet.FindCard(card);
-
-            }
-
-            var extraSets = sets.Where(x => x.ParentCode == mainSet.Code);
-            foreach (var ex in extraSets)
-            {
-                ret = ex.FindCard(card);
-                if (ret != null) return ret;
-            }
-
-            var baseSet = sets.FirstOrDefault(x => x.Code == mainSet.BlockCode);
-            if (baseSet == null) return null;
-
-            ret = baseSet.FindCard(card);
-            if (ret != null) return ret;
-
-            var extraBaseSets = sets.Where(x => x.ParentCode == baseSet.Code);
-            foreach (var ex in extraBaseSets)
-            {
-                ret = ex.FindCard(card);
-                if (ret != null) return ret;
-            }
-            
-            return null;
-            */
         }
 
         private void DownloadSet(SetItem setItem, IProgress<WorkerItem> progress)
@@ -235,30 +247,30 @@ namespace ScryfallExtractor
             var i = 0;
             var set = setItem.set; //TODO: remove this and use setItem
             var setSize = set.Cards.Count();
-            
+
             foreach (var c in set.Cards)
             {
                 i++;
                 foreach (var alt in c.Properties)
                 {
-                    var card = c.Clone();
-                    card.Alternate = alt.Key;
                     if (_cts.IsCancellationRequested) break;
 
-                    var cardInfo = GetCardInfo(setItem, card);
+                    var cardInfo = GetCardInfo(setItem, c, alt.Key);
 
                     var workerItem = new WorkerItem();
-                    workerItem.progress = (double) i / setSize;
-                    workerItem.card = card;
+                    workerItem.set = setItem;
+                    workerItem.alt = alt.Key;
+                    workerItem.progress = (double)i / setSize;
+                    workerItem.card = c;
 
                     // get local image info
 
-                    var files = FindLocalCardImages(set, card, card.Alternate);
+                    var files = FindLocalCardImages(set, c, workerItem.alt);
 
                     if (cardInfo == null)
                     {
                         if (set.Id.ToString() != "a584b75b-266f-4378-bed5-9ffa96cd3961")
-                            MessageBox.Show(String.Format("Cannot find scryfall data for card {0}.", card.Name));
+                            MessageBox.Show(String.Format("Cannot find scryfall data for card {0}.", c.Name));
                         progress.Report(workerItem);
                         continue;
                     }
@@ -271,7 +283,7 @@ namespace ScryfallExtractor
                     {
                         case "transform":
                             {
-                                if (card.Alternate == "transform")
+                                if (workerItem.alt == "transform")
                                     imageDownloadUrl = xl ? cardInfo.LargeBackUrl : cardInfo.NormalBackUrl;
                                 else
                                     imageDownloadUrl = xl ? cardInfo.LargeUrl : cardInfo.NormalUrl;
@@ -279,13 +291,13 @@ namespace ScryfallExtractor
                             }
                         case "split":
                             {
-                                if (card.Alternate == "")
+                                if (workerItem.alt == "")
                                     imageDownloadUrl = xl ? cardInfo.LargeUrl : cardInfo.NormalUrl;
                                 break;
                             }
                         case "flip":
                             {
-                                if (card.Alternate == "flip")
+                                if (workerItem.alt == "flip")
                                     flipCard = true;
                                 imageDownloadUrl = xl ? cardInfo.LargeUrl : cardInfo.NormalUrl;
                                 break;
@@ -341,7 +353,9 @@ namespace ScryfallExtractor
                         f.MoveTo(Path.Combine(garbage, f.Name));
                     }
 
-                    var newPath = Path.Combine(set.ImagePackUri, card.GetImageUri() + ".jpg");
+                    var imageUri = String.IsNullOrWhiteSpace(workerItem.alt) ? c.ImageUri : c.ImageUri + "." + workerItem.alt;
+
+                    var newPath = Path.Combine(set.ImagePackUri, imageUri + ".jpg");
 
 
                     workerItem.web = UriToStream(imageDownloadUrl);
@@ -372,7 +386,7 @@ namespace ScryfallExtractor
                 }
             }
         }
-        
+
         public void CountImageFiles(SetItem setItem)
         {
             setItem.ImageCount = 0;
@@ -397,7 +411,8 @@ namespace ScryfallExtractor
         public string[] FindLocalCardImages(Set set, Card card, string alt)
         {
 
-            var imageUri = card.GetImageUri();
+            var imageUri = card.ImageUri;
+            if (!String.IsNullOrWhiteSpace(alt)) imageUri = imageUri + "." + alt;
             var files =
                 Directory.GetFiles(set.ImagePackUri, imageUri + ".*")
                     .Where(x => System.IO.Path.GetFileNameWithoutExtension(x).Equals(imageUri, StringComparison.InvariantCultureIgnoreCase))
@@ -405,7 +420,7 @@ namespace ScryfallExtractor
                     .ToArray();
             return files;
         }
-        
+
         private MemoryStream UriToStream(string uri)
         {
             MemoryStream ms;
@@ -416,7 +431,7 @@ namespace ScryfallExtractor
             }
             return ms;
         }
-                
+
         private BitmapImage StreamToBitmapImage(MemoryStream ms)
         {
             ms.Position = 0;
@@ -432,7 +447,11 @@ namespace ScryfallExtractor
         private void ProgressChanged(WorkerItem workerItem)
         {
             ProgressBar.Value = workerItem.progress;
-            CurrentCard.Text = workerItem.card.Name;
+            CurrentCard = workerItem.card.Properties[workerItem.alt].Properties.First(x => x.Key.Name == "Name").Value.ToString();
+            if (workerItem.set != null && workerItem.local == null && workerItem.web != null)
+            {
+                workerItem.set.ImageCount += 1;
+            }
 
             if (workerItem.local == null && workerItem.web == null)
             {
@@ -461,10 +480,14 @@ namespace ScryfallExtractor
 
         private void WorkerCompleted()
         {
-            CurrentCard.Text = "DONE";
+            CurrentCard = "";
+            CurrentSet = "";
             XLImages.IsEnabled = true;
             SetList.IsEnabled = true;
+            NameRadio.IsEnabled = true;
+            DateRadio.IsEnabled = true;
             DownloadButton.Visibility = Visibility.Visible;
+            DownloadAllButton.Visibility = Visibility.Visible;
             CancelButton.Visibility = Visibility.Collapsed;
         }
 
@@ -472,7 +495,8 @@ namespace ScryfallExtractor
         {
             if (_cts != null)
             {
-                CurrentCard.Text = "Cancel";
+                CurrentCard = "";
+                CurrentSet = "";
                 _cts.Cancel();
             }
         }
@@ -481,170 +505,184 @@ namespace ScryfallExtractor
         {
             xl = XLImages.IsChecked ?? false;
         }
+
+        #region INotifyPropertyChanged Members
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        #endregion
+
+        private void NameRadioClick(object sender, RoutedEventArgs e)
+        {
+            setList = setList.OrderBy(x => x.Name).ToList();
+            SetList.ItemsSource = setList;
+        }
+
+        private void DateRadioClick(object sender, RoutedEventArgs e)
+        {
+            setList = setList.OrderByDescending(x => x.releaseDate).ToList();
+            SetList.ItemsSource = setList;
+        }
+    }
+
+
+    public class WorkerItem
+    {
+        public Card card;
+        public string alt;
+        public SetItem set;
+        public MemoryStream local;
+        public MemoryStream web;
+        public double progress;
+    }
+
+    public partial class SetItem : INotifyPropertyChanged
+    {
+        public Set set;
+        public DateTime releaseDate;
+        public int imageCount;
+        public int cardCount;
+
+        public SetInfo setData;
+        public List<SetInfo> extraSets;
         
-        private class WorkerItem
+        public string Name
         {
-            public Card card;
-            public MemoryStream local;
-            public MemoryStream web;
-            public double progress;
-        }
-
-        public class SetItem
-        {
-            public Set set;
-            public DateTime releaseDate;
-            public int imageCount;
-            public int cardCount;
-
-            public SetInfo setData;
-            public List<SetInfo> extraSets;
-
-            public int tokenImageCount;
-            public int tokenCardCount;
-
-            public string Name
+            get
             {
-                get
-                {
-                    return set.Name;
-                }
-            }
-
-            public int CardCount
-            {
-                get
-                {
-                    return cardCount;
-                }
-                set
-                {
-                    if (cardCount == value) return;
-                    cardCount = value;
-                }
-            }
-
-            public int ImageCount
-            {
-                get
-                {
-                    return imageCount;
-                }
-                set
-                {
-                    if (imageCount == value) return;
-                    imageCount = value;
-                }
-            }
-
-            public int TokenImageCount
-            {
-                get
-                {
-                    return tokenImageCount;
-                }
-                set
-                {
-                    if (tokenImageCount == value) return;
-                    tokenImageCount = value;
-                }
-            }
-
-            public int TokenCardCount
-            {
-                get
-                {
-                    return tokenCardCount;
-                }
-                set
-                {
-                    if (tokenCardCount == value) return;
-                    tokenCardCount = value;
-                }
+                return set.Name;
             }
         }
 
-        public class SetInfo
+        public int CardCount
         {
-            public string SearchUri;
-            public bool? IsHiRes;
-            public string Id;
-            public string Type;
-            public string Code;
-            public string ParentCode;
-            public string BlockCode;
-
-            public List<CardInfo> Cards;
-
-            public CardInfo FindCard(Card card)
+            get
             {
-                if (Cards == null)
-                    Cards = new List<CardInfo>();
+                return cardCount;
+            }
+            set
+            {
+                if (cardCount == value) return;
+                cardCount = value;
+                OnPropertyChanged("CardCount");
+            }
+        }
 
-                CardInfo ret = null;
-                
-                while (ret == null)
+        public int ImageCount
+        {
+            get
+            {
+                return imageCount;
+            }
+            set
+            {
+                if (imageCount == value) return;
+                imageCount = value;
+                OnPropertyChanged("ImageCount");
+            }
+        }
+        
+        #region INotifyPropertyChanged Members
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        #endregion
+    }
+
+    public class SetInfo
+    {
+        public string SearchUri;
+        public bool? IsHiRes;
+        public string Type;
+        public string Code;
+        public string ParentCode;
+        public string BlockCode;
+
+        public List<CardInfo> Cards;
+
+        public CardInfo FindCard(Card card, string alt)
+        {
+            if (Cards == null)
+                Cards = new List<CardInfo>();
+
+            CardInfo ret = null;
+
+            while (ret == null)
+            {
+                if (Type == "token")
                 {
-                    if (Type == "token")
-                    {
-                        var props = card.Properties[card.Alternate].Properties;
-                        if (props.First(x => x.Key.Name == "Flags").Value.ToString().ToLower() != Code)
-                            return null;
+                    var props = card.Properties[alt].Properties;
+                    if (props.First(x => x.Key.Name == "Flags").Value.ToString().ToLower() != Code)
+                        return null;
 
-                        ret = Cards.FirstOrDefault(x => x.Number == props.First(y => y.Key.Name == "Number").Value.ToString());
-                    }
-                    else
-                        ret = Cards.FirstOrDefault(x => x.Id == card.Id.ToString() || x.MultiverseId == card.Properties[""].Properties.First(y => y.Key.Name == "MultiverseId").Value.ToString());
-                    if (ret == null)
-                    {
-                        if (SearchUri == null) break;
+                    ret = Cards.FirstOrDefault(x => x.Number == props.First(y => y.Key.Name == "Number").Value.ToString());
+                }
+                else
+                    ret = Cards.FirstOrDefault(x => x.Id == card.Id.ToString() || x.MultiverseId == card.Properties[""].Properties.First(y => y.Key.Name == "MultiverseId").Value.ToString());
+                if (ret == null)
+                {
+                    if (SearchUri == null) break;
 
-                        using (var webclient = new WebClient() { Encoding = Encoding.UTF8 })
+                    using (var webclient = new WebClient() { Encoding = Encoding.UTF8 })
+                    {
+                        var jsonsetdata = (JObject)JsonConvert.DeserializeObject(webclient.DownloadString(SearchUri));
+                        foreach (var jsoncarddata in jsonsetdata["data"])
                         {
-                            var jsonsetdata = (JObject)JsonConvert.DeserializeObject(webclient.DownloadString(SearchUri));
-                            foreach (var jsoncarddata in jsonsetdata["data"])
+                            CardInfo cardInfo = new CardInfo();
+                            cardInfo.Layout = jsoncarddata.Value<string>("layout");
+                            if (cardInfo.Layout == "transform")
                             {
-                                CardInfo cardInfo = new CardInfo();
-                                cardInfo.Layout = jsoncarddata.Value<string>("layout");
-                                if (cardInfo.Layout == "transform")
-                                {
-                                    cardInfo.NormalUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("normal");
-                                    cardInfo.LargeUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("large");
-                                    cardInfo.NormalBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("normal");
-                                    cardInfo.LargeBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("large");
-                                }
-                                else
-                                {
-                                    cardInfo.NormalUrl = jsoncarddata["image_uris"].Value<string>("normal");
-                                    cardInfo.LargeUrl = jsoncarddata["image_uris"].Value<string>("large");
-                                }
-                                cardInfo.Id = jsoncarddata.Value<string>("id");
-                                cardInfo.MultiverseId = jsoncarddata.Value<string>("multiverse_id");
-                                cardInfo.Number = jsoncarddata.Value<string>("collector_number");
-                                Cards.Add(cardInfo);
+                                cardInfo.NormalUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("normal");
+                                cardInfo.LargeUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("large");
+                                cardInfo.NormalBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("normal");
+                                cardInfo.LargeBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("large");
                             }
-                            SearchUri = (jsonsetdata.Value<bool>("has_more") == true) ? jsonsetdata.Value<string>("next_page") : null;
+                            else
+                            {
+                                cardInfo.NormalUrl = jsoncarddata["image_uris"].Value<string>("normal");
+                                cardInfo.LargeUrl = jsoncarddata["image_uris"].Value<string>("large");
+                            }
+                            cardInfo.Id = jsoncarddata.Value<string>("id");
+                            cardInfo.MultiverseId = jsoncarddata.Value<string>("multiverse_id");
+                            cardInfo.Number = jsoncarddata.Value<string>("collector_number");
+                            Cards.Add(cardInfo);
                         }
+                        SearchUri = (jsonsetdata.Value<bool>("has_more") == true) ? jsonsetdata.Value<string>("next_page") : null;
                     }
                 }
-                
-                return ret;
             }
-        }
 
-        public class CardInfo
-        {
-            public string NormalUrl;
-            public string LargeUrl;
-            public string NormalBackUrl;
-            public string LargeBackUrl;
-            public string Layout;
-            public string Id;
-            public string MultiverseId;
-            public string Number;
-            public string Alt;
-            public string Name;
+            return ret;
         }
-        
+    }
+
+    public class CardInfo
+    {
+        public string NormalUrl;
+        public string LargeUrl;
+        public string NormalBackUrl;
+        public string LargeBackUrl;
+        public string Layout;
+        public string Id;
+        public string MultiverseId;
+        public string Number;
+        public string Alt;
+        public string Name;
     }
 }

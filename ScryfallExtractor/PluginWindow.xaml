@@ -6,6 +6,7 @@
         xmlns:entities="clr-namespace:Octgn.DataNew.Entities;assembly=Octgn.DataNew"
         xmlns:local="clr-namespace:ScryfallExtractor"
         mc:Ignorable="d"
+        x:Name="me"
         Title="MTG Image Downloader Plugin" Height="550" Width="825">
     <Grid>
         <Grid.RowDefinitions>
@@ -21,7 +22,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="SetList" Grid.RowSpan="4" SelectionMode="Single" SelectionChanged="ClickSet">
+        <ListBox x:Name="SetList" Grid.RowSpan="2" SelectionMode="Single" SelectionChanged="ClickSet">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -34,6 +35,14 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0,4,0,0">
+            <TextBlock Text="Sort Sets By: "/>
+            <RadioButton GroupName="Radio" x:Name="NameRadio" Content="Name" Click="NameRadioClick"/>
+            <Rectangle Width="10"/>
+            <RadioButton GroupName="Radio" x:Name="DateRadio" Content="Release Date" Click="DateRadioClick"/>
+        </StackPanel>
+
+        <CheckBox x:Name="XLImages" Margin="0,2,0,2" Content="Download Extra-Large Images" Grid.Row="3" Checked="XLImages_Checked" Unchecked="XLImages_Checked" Foreground="Black" />
         <TextBlock Text="Local Image" Grid.Column="2" HorizontalAlignment="Center" FontSize="15" />
         
         <Image x:Name="LocalImage" Grid.Row="1" Grid.Column="2" />
@@ -45,17 +54,23 @@
         <Image x:Name="WebImage" Grid.Row="1" Grid.Column="3" />
         <TextBlock Text="Online Image" Grid.Column="3" HorizontalAlignment="Center" FontSize="15" />
 
-        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2">
-            <CheckBox x:Name="XLImages" Content="Download Extra-Large Images" Checked="XLImages_Checked" Unchecked="XLImages_Checked" Foreground="Black" />
-            <Rectangle Width="15" />
-        </StackPanel>
+        <TextBlock Grid.Row="3" Grid.Column="2">
+            <Run Text="Loading set: " />
+            <Run Text="{Binding CurrentSet}"/>
+        </TextBlock>
+        
+        <TextBlock Grid.Row="3" Grid.Column="3">
+            <Run Text="Loading card: " />
+            <Run Text="{Binding CurrentCard}"/>
+        </TextBlock>
         
         <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="3">
             <Button Content="Cancel" Click="CancelWorkers" Visibility="Collapsed" x:Name="CancelButton"/>
-            <Button Content="Download Images" Click="Generate" x:Name="DownloadButton"/>
-            <TextBlock Text="Loading:" />
-            <TextBlock x:Name="CurrentCard" />
+            <Button Content="Download Selected Set" Click="DownloadSingle" x:Name="DownloadButton" Margin="0,0,5,0"/>
+            <Button Content="Download All Sets" Click="DownloadAll" x:Name="DownloadAllButton"/>
         </StackPanel>
-        <ProgressBar x:Name="ProgressBar" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="2" Minimum="0" Maximum="1" Height="20"></ProgressBar>
+        <GridSplitter Grid.Column="1" />
+        <ProgressBar x:Name="SetProgressBar" Margin="2,0,2,0" Grid.Row="4" Grid.Column="2" Minimum="0" Maximum="1" Height="20"></ProgressBar>
+        <ProgressBar x:Name="ProgressBar" Margin="2,0,2,0" Grid.Row="4" Grid.Column="3" Minimum="0" Maximum="1" Height="20"></ProgressBar>
     </Grid>
 </Window>
