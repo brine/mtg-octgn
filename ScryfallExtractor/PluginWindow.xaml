@@ -37,9 +37,9 @@
         </ListBox>
         <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0,4,0,0">
             <TextBlock Text="Sort Sets By: "/>
-            <RadioButton GroupName="Radio" x:Name="NameRadio" Content="Name" Click="NameRadioClick"/>
+            <RadioButton GroupName="Radio" Foreground="Black" x:Name="NameRadio" Content="Name" Click="NameRadioClick"/>
             <Rectangle Width="10"/>
-            <RadioButton GroupName="Radio" x:Name="DateRadio" Content="Release Date" Click="DateRadioClick"/>
+            <RadioButton GroupName="Radio" Foreground="Black" x:Name="DateRadio" Content="Release Date" Click="DateRadioClick"/>
         </StackPanel>
 
         <CheckBox x:Name="XLImages" Margin="0,2,0,2" Content="Download Extra-Large Images" Grid.Row="3" Checked="XLImages_Checked" Unchecked="XLImages_Checked" Foreground="Black" />

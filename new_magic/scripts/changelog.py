@@ -223,5 +223,10 @@ changelog = {
         "White corners on card images shouldn't appear in the game table.",
         "Fixed issues with image downloader fetching some wrong token arts and not rotating plane cards.",
         "Please re-download the Tokens, Planechase, and Planechase 2012 images from the plugin to correct this error."
+        ]),
+    3040002: ("3.4.0.2", "November 9 2017", [
+        "Fixed many serious errors with the image downloader plugin.",
+        "Added ability to download images from all sets at once",
+        "Temporarily disabled Theros Challenge Decks and Unique Promotional Cards sets"
         ])
 }
