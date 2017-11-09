@@ -112,30 +112,43 @@ namespace ScryfallExtractor
 
             foreach (var set in game.Sets())
             {
-                if (!set.Hidden && set.Cards.Count() > 0 && set.Id.ToString() != "a584b75b-266f-4378-bed5-9ffa96cd3961")
+                if (!set.Hidden && set.Cards.Count() > 0)
                 {
-                    var octgndbset = OctgnSetData.FirstOrDefault(x => x.Value<string>("guid") == set.Id.ToString());
-                    if (octgndbset == null)
-                        continue;
-
-                    var setItem = new SetItem();
-                    setItem.set = set;
-
-                    var setCode = octgndbset.Value<string>("octgn_code").ToLower();
-
-                    setItem.setData = sets.First(x => x.Code == setCode);
-
-                    setItem.extraSets = new List<SetInfo>();
-
-                    setItem.extraSets.AddRange(sets.Where(x => x.ParentCode == setItem.setData.Code));
-                    if (setItem.setData.BlockCode != setItem.setData.Code)
+                    if (set.Id.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
                     {
-                        setItem.extraSets.AddRange(sets.Where(x => x.ParentCode == setItem.setData.BlockCode));
-                    }
+                        var setItem = new SetItem();
+                        setItem.set = set;
 
-                    setItem.releaseDate = Convert.ToDateTime(octgndbset.Value<string>("date"));
-                    CountImageFiles(setItem);
-                    setList.Add(setItem);
+                        setItem.releaseDate = new DateTime(3000, 1, 1);
+                        setItem.extraSets = new List<SetInfo>();
+                        CountImageFiles(setItem);
+                        setList.Add(setItem);
+                    }
+                    else
+                    {
+                        var octgndbset = OctgnSetData.FirstOrDefault(x => x.Value<string>("guid") == set.Id.ToString());
+                        if (octgndbset == null)
+                            continue;
+
+                        var setItem = new SetItem();
+                        setItem.set = set;
+
+                        var setCode = octgndbset.Value<string>("octgn_code").ToLower();
+
+                        setItem.setData = sets.First(x => x.Code == setCode);
+
+                        setItem.extraSets = new List<SetInfo>();
+
+                        setItem.extraSets.AddRange(sets.Where(x => x.ParentCode == setItem.setData.Code));
+                        if (setItem.setData.BlockCode != setItem.setData.Code)
+                        {
+                            setItem.extraSets.AddRange(sets.Where(x => x.ParentCode == setItem.setData.BlockCode));
+                        }
+
+                        setItem.releaseDate = Convert.ToDateTime(octgndbset.Value<string>("date"));
+                        CountImageFiles(setItem);
+                        setList.Add(setItem);
+                    }
                 }
             }
             
@@ -230,7 +243,18 @@ namespace ScryfallExtractor
         {
             CardInfo ret = null;
 
-            ret = setItem.setData.FindCard(card, alt);
+            if (setItem.set.Id.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
+            {
+                var searchSet = sets.FirstOrDefault(x => x.Code == card.Properties[alt].Properties.First(y => y.Key.Name == "Flags").Value.ToString().ToLower());
+                if (searchSet != null)
+                {
+                    ret = searchSet.FindCard(card, alt);
+                }
+            }
+            else
+            {
+                ret = setItem.setData.FindCard(card, alt);
+            }
             if (ret != null) return ret;
 
             foreach (var ex in setItem.extraSets)
@@ -625,16 +649,16 @@ namespace ScryfallExtractor
 
             while (ret == null)
             {
-                if (Type == "token")
+                
+                if (card.SetId.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
                 {
                     var props = card.Properties[alt].Properties;
-                    if (props.First(x => x.Key.Name == "Flags").Value.ToString().ToLower() != Code)
-                        return null;
-
                     ret = Cards.FirstOrDefault(x => x.Number == props.First(y => y.Key.Name == "Number").Value.ToString());
                 }
                 else
                     ret = Cards.FirstOrDefault(x => x.Id == card.Id.ToString() || x.MultiverseId == card.Properties[""].Properties.First(y => y.Key.Name == "MultiverseId").Value.ToString());
+
+
                 if (ret == null)
                 {
                     if (SearchUri == null) break;
@@ -655,8 +679,11 @@ namespace ScryfallExtractor
                             }
                             else
                             {
-                                cardInfo.NormalUrl = jsoncarddata["image_uris"].Value<string>("normal");
-                                cardInfo.LargeUrl = jsoncarddata["image_uris"].Value<string>("large");
+                                if (jsoncarddata["image_uris"] != null)
+                                {
+                                    cardInfo.NormalUrl = jsoncarddata["image_uris"].Value<string>("normal");
+                                    cardInfo.LargeUrl = jsoncarddata["image_uris"].Value<string>("large");
+                                }
                             }
                             cardInfo.Id = jsoncarddata.Value<string>("id");
                             cardInfo.MultiverseId = jsoncarddata.Value<string>("multiverse_id");
