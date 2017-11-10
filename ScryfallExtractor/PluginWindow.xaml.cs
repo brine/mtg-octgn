@@ -356,7 +356,7 @@ namespace ScryfallExtractor
                             {
                                 localTimestamp = Convert.ToInt32(Encoding.Unicode.GetString(image.GetPropertyItem(40092).Value));
                             }
-                            if (localTimestamp > 0 && ((image.Width == 672 && xl) || (image.Width == 488 && !xl)))
+                            if (localTimestamp > 0 && ((image.Width > 600 && xl) || (image.Width < 500 && !xl)))
                             {
                                 if (webTimestamp <= localTimestamp)
                                 {
