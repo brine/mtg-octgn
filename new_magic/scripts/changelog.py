@@ -228,5 +228,8 @@ changelog = {
         "Fixed many serious errors with the image downloader plugin.",
         "Added ability to download images from all sets at once",
         "Temporarily disabled Theros Challenge Decks and Unique Promotional Cards sets"
+        ]),
+    3040100: ("3.4.1.0", "December 6 2017", [
+        "Added Unstable, Duel Deck Merfolk vs Goblins, FTV Transform."
         ])
 }
