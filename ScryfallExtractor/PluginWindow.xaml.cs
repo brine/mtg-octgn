@@ -24,6 +24,7 @@ using System.Drawing.Imaging;
 using System.Runtime.Serialization;
 using Image = System.Drawing.Image;
 using System.Threading;
+using ScryfallExtractor.Entities;
 
 namespace ScryfallExtractor
 {
@@ -37,7 +38,7 @@ namespace ScryfallExtractor
         public Game game;
         public List<SetInfo> sets;
         public bool xl = false;
-        public bool replace = false;
+        public bool update = false;
         private string _currentCard;
         private string _currentSet;
 
@@ -172,6 +173,7 @@ namespace ScryfallExtractor
         private async void Generate(List<SetItem> sets)
         { 
             XLImages.IsEnabled = false;
+            UpdateImages.IsEnabled = false;
             SetList.IsEnabled = false;
             NameRadio.IsEnabled = false;
             DateRadio.IsEnabled = false;
@@ -202,8 +204,7 @@ namespace ScryfallExtractor
                     foreach (var set in sets)
                     {
                         CurrentSet = set.Name;
-                        if (set.imageCount < set.cardCount)
-                            DownloadSet(set, progress);
+                        DownloadSet(set, progress);
                         count += 1;
                         setProgress.Report(count);
                     }
@@ -345,19 +346,18 @@ namespace ScryfallExtractor
 
                     if (workerItem.local != null)
                     {
-                        int localTimestamp;
                         using (var image = Image.FromStream(workerItem.local))
                         {
-                            if (image.PropertyIdList.FirstOrDefault(x => x == 40092) == 0)
+                            if ((image.Width > 600 && xl) || (image.Width < 500 && !xl))
                             {
-                                localTimestamp = 0;
-                            }
-                            else
-                            {
-                                localTimestamp = Convert.ToInt32(Encoding.Unicode.GetString(image.GetPropertyItem(40092).Value));
-                            }
-                            if (localTimestamp > 0 && ((image.Width > 600 && xl) || (image.Width < 500 && !xl)))
-                            {
+                                bool hires = (image.PropertyIdList.FirstOrDefault(x => x == 40094) == 0) ? false : Convert.ToBoolean(Encoding.Unicode.GetString(image.GetPropertyItem(40094).Value));
+                                if (hires && !update)
+                                {
+                                    progress.Report(workerItem);
+                                    continue;
+                                }
+
+                                int localTimestamp = (image.PropertyIdList.FirstOrDefault(x => x == 40092) == 0) ? 0 : Convert.ToInt32(Encoding.Unicode.GetString(image.GetPropertyItem(40092).Value));
                                 if (webTimestamp <= localTimestamp)
                                 {
                                     progress.Report(workerItem);
@@ -403,6 +403,17 @@ namespace ScryfallExtractor
                         commentMetadata.Type = 1;
 
                         newimg.SetPropertyItem(commentMetadata);
+
+                        var keywordsMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
+
+                        keywordsMetadata.Id = 40094; // this is the keywords field
+                        keywordsMetadata.Value = Encoding.Unicode.GetBytes(cardInfo.HiRes.ToString());
+                        keywordsMetadata.Len = commentMetadata.Value.Length;
+                        keywordsMetadata.Type = 1;
+
+                        newimg.SetPropertyItem(keywordsMetadata);
+
+
                         newimg.Save(newPath, ImageFormat.Jpeg);
                     }
 
@@ -507,6 +518,7 @@ namespace ScryfallExtractor
             CurrentCard = "";
             CurrentSet = "";
             XLImages.IsEnabled = true;
+            UpdateImages.IsEnabled = true;
             SetList.IsEnabled = true;
             NameRadio.IsEnabled = true;
             DateRadio.IsEnabled = true;
@@ -528,6 +540,11 @@ namespace ScryfallExtractor
         private void XLImages_Checked(object sender, RoutedEventArgs e)
         {
             xl = XLImages.IsChecked ?? false;
+        }
+
+        private void Update_Checked(object sender, RoutedEventArgs e)
+        {
+            update = UpdateImages.IsChecked ?? false;
         }
 
         #region INotifyPropertyChanged Members
@@ -556,160 +573,6 @@ namespace ScryfallExtractor
             SetList.ItemsSource = setList;
         }
     }
+    
 
-
-    public class WorkerItem
-    {
-        public Card card;
-        public string alt;
-        public SetItem set;
-        public MemoryStream local;
-        public MemoryStream web;
-        public double progress;
-    }
-
-    public partial class SetItem : INotifyPropertyChanged
-    {
-        public Set set;
-        public DateTime releaseDate;
-        public int imageCount;
-        public int cardCount;
-
-        public SetInfo setData;
-        public List<SetInfo> extraSets;
-        
-        public string Name
-        {
-            get
-            {
-                return set.Name;
-            }
-        }
-
-        public int CardCount
-        {
-            get
-            {
-                return cardCount;
-            }
-            set
-            {
-                if (cardCount == value) return;
-                cardCount = value;
-                OnPropertyChanged("CardCount");
-            }
-        }
-
-        public int ImageCount
-        {
-            get
-            {
-                return imageCount;
-            }
-            set
-            {
-                if (imageCount == value) return;
-                imageCount = value;
-                OnPropertyChanged("ImageCount");
-            }
-        }
-        
-        #region INotifyPropertyChanged Members
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        #endregion
-    }
-
-    public class SetInfo
-    {
-        public string SearchUri;
-        public bool? IsHiRes;
-        public string Type;
-        public string Code;
-        public string ParentCode;
-        public string BlockCode;
-
-        public List<CardInfo> Cards;
-
-        public CardInfo FindCard(Card card, string alt)
-        {
-            if (Cards == null)
-                Cards = new List<CardInfo>();
-
-            CardInfo ret = null;
-
-            while (ret == null)
-            {
-                
-                if (card.SetId.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
-                {
-                    var props = card.Properties[alt].Properties;
-                    ret = Cards.FirstOrDefault(x => x.Number == props.First(y => y.Key.Name == "Number").Value.ToString());
-                }
-                else
-                    ret = Cards.FirstOrDefault(x => x.Id == card.Id.ToString() || x.MultiverseId == card.Properties[""].Properties.First(y => y.Key.Name == "MultiverseId").Value.ToString());
-
-
-                if (ret == null)
-                {
-                    if (SearchUri == null) break;
-
-                    using (var webclient = new WebClient() { Encoding = Encoding.UTF8 })
-                    {
-                        var jsonsetdata = (JObject)JsonConvert.DeserializeObject(webclient.DownloadString(SearchUri));
-                        foreach (var jsoncarddata in jsonsetdata["data"])
-                        {
-                            CardInfo cardInfo = new CardInfo();
-                            cardInfo.Layout = jsoncarddata.Value<string>("layout");
-                            if (cardInfo.Layout == "transform")
-                            {
-                                cardInfo.NormalUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("normal");
-                                cardInfo.LargeUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("large");
-                                cardInfo.NormalBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("normal");
-                                cardInfo.LargeBackUrl = jsoncarddata["card_faces"][1]["image_uris"].Value<string>("large");
-                            }
-                            else
-                            {
-                                if (jsoncarddata["image_uris"] != null)
-                                {
-                                    cardInfo.NormalUrl = jsoncarddata["image_uris"].Value<string>("normal");
-                                    cardInfo.LargeUrl = jsoncarddata["image_uris"].Value<string>("large");
-                                }
-                            }
-                            cardInfo.Id = jsoncarddata.Value<string>("id");
-                            cardInfo.MultiverseId = jsoncarddata.Value<string>("multiverse_id");
-                            cardInfo.Number = jsoncarddata.Value<string>("collector_number");
-                            Cards.Add(cardInfo);
-                        }
-                        SearchUri = (jsonsetdata.Value<bool>("has_more") == true) ? jsonsetdata.Value<string>("next_page") : null;
-                    }
-                }
-            }
-
-            return ret;
-        }
-    }
-
-    public class CardInfo
-    {
-        public string NormalUrl;
-        public string LargeUrl;
-        public string NormalBackUrl;
-        public string LargeBackUrl;
-        public string Layout;
-        public string Id;
-        public string MultiverseId;
-        public string Number;
-        public string Alt;
-        public string Name;
-    }
 }

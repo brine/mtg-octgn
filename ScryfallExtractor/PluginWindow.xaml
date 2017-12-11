@@ -15,6 +15,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="275" />
@@ -42,35 +43,38 @@
             <RadioButton GroupName="Radio" Foreground="Black" x:Name="DateRadio" Content="Release Date" Click="DateRadioClick"/>
         </StackPanel>
 
-        <CheckBox x:Name="XLImages" Margin="0,2,0,2" Content="Download Extra-Large Images" Grid.Row="3" Checked="XLImages_Checked" Unchecked="XLImages_Checked" Foreground="Black" />
+        <CheckBox x:Name="XLImages" Margin="0,2,0,2" Content="Download Extra-Large Images" Grid.Row="3" Checked="XLImages_Checked" Unchecked="XLImages_Checked" Foreground="Black"
+                  ToolTip="Extra large images are the same resolution.  They will will appear larger when hovered in OCTGN games."/>
+        <CheckBox x:Name="UpdateImages" Margin="0,2,0,2" Content="Allow Updating of Existing Hi-Res Images" Grid.Row="4" Checked="Update_Checked" Unchecked="XLImages_Checked" Foreground="Black"
+                  ToolTip="Scryfall will occasionally update the quality of existing high resolution images on their website.  This is disabled by default to decrease download times.  Note that low resolution images will always upgrade to high resolution when available." />
         <TextBlock Text="Local Image" Grid.Column="2" HorizontalAlignment="Center" FontSize="15" />
         
-        <Image x:Name="LocalImage" Grid.Row="1" Grid.Column="2" />
-        <StackPanel Grid.Row="2" Grid.Column="2"  Orientation="Horizontal">
+        <Image x:Name="LocalImage" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" />
+        <StackPanel Grid.Row="3" Grid.Column="2"  Orientation="Horizontal">
             <TextBlock Text="Dimensions: " />
             <TextBlock x:Name="LocalDimensions" />
         </StackPanel>
-        
-        <Image x:Name="WebImage" Grid.Row="1" Grid.Column="3" />
+
+        <Image x:Name="WebImage" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2"/>
         <TextBlock Text="Online Image" Grid.Column="3" HorizontalAlignment="Center" FontSize="15" />
 
-        <TextBlock Grid.Row="3" Grid.Column="2">
+        <TextBlock Grid.Row="4" Grid.Column="2">
             <Run Text="Loading set: " />
             <Run Text="{Binding CurrentSet}"/>
         </TextBlock>
         
-        <TextBlock Grid.Row="3" Grid.Column="3">
+        <TextBlock Grid.Row="4" Grid.Column="3">
             <Run Text="Loading card: " />
             <Run Text="{Binding CurrentCard}"/>
         </TextBlock>
         
-        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="3">
+        <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="3">
             <Button Content="Cancel" Click="CancelWorkers" Visibility="Collapsed" x:Name="CancelButton"/>
             <Button Content="Download Selected Set" Click="DownloadSingle" x:Name="DownloadButton" Margin="0,0,5,0"/>
             <Button Content="Download All Sets" Click="DownloadAll" x:Name="DownloadAllButton"/>
         </StackPanel>
         <GridSplitter Grid.Column="1" />
-        <ProgressBar x:Name="SetProgressBar" Margin="2,0,2,0" Grid.Row="4" Grid.Column="2" Minimum="0" Maximum="1" Height="20"></ProgressBar>
-        <ProgressBar x:Name="ProgressBar" Margin="2,0,2,0" Grid.Row="4" Grid.Column="3" Minimum="0" Maximum="1" Height="20"></ProgressBar>
+        <ProgressBar x:Name="SetProgressBar" Margin="2,0,2,0" Grid.Row="5" Grid.Column="2" Minimum="0" Maximum="1" Height="20"></ProgressBar>
+        <ProgressBar x:Name="ProgressBar" Margin="2,0,2,0" Grid.Row="5" Grid.Column="3" Minimum="0" Maximum="1" Height="20"></ProgressBar>
     </Grid>
 </Window>
