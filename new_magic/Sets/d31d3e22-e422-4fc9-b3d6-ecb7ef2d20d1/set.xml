@@ -1512,7 +1512,7 @@ At the beginning of your upkeep, Force of Nature deals 8 damage to you unless yo
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Fungus Lizard" />
+      <property name="Subtype" value="Fungus Dinosaur" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever Fungusaur is dealt damage, put a +1/+1 counter on it.</property>
       <property name="Power" value="2" />
@@ -2141,7 +2141,7 @@ Enchanted creature can't be blocked except by Walls.</property>
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Juggernaut" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Juggernaut attacks each turn if able.
+      <property name="Rules">Juggernaut attacks each combat if able.
 Juggernaut can't be blocked by Walls.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="3" />
@@ -2798,7 +2798,7 @@ At the beginning of your upkeep, if Nether Shadow is in your graveyard with thre
       <property name="Subtype" value="Imp" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Choose target non-Wall creature the active player has controlled continuously since the beginning of the turn. That creature attacks this turn if able. If it doesn't, destroy it at the beginning of the next end step. Activate this ability only during an opponent's turn, before attackers are declared.</property>
+        <s value="T">{T}</s>: Choose target non-Wall creature the active player has controlled continuously since the beginning of the turn. That creature attacks this turn if able. Destroy it at the beginning of the next end step if it didn't attack this turn. Activate this ability only during an opponent's turn, before attackers are declared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />

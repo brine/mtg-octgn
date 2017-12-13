@@ -231,5 +231,12 @@ changelog = {
         ]),
     3040100: ("3.4.1.0", "December 6 2017", [
         "Added Unstable, Duel Deck Merfolk vs Goblins, FTV Transform."
+        ]),
+    3040200: ("3.4.2.0", "December 12 2017", [
+        "Fixed issues with Unstable text extraction and booster generator (how do you give high fives or throw Slaying Mantis cards on OCTGN?).",
+        "Oracle text update to all sets (legendary planeswalker, dinosaurs, and wording updates).",
+        "Card color no longer defaults to colorless for cards that have a color indicator.",
+        "Fixed major bugs with the image downloader plugin.",
+        "Added new option in image downloader plugin to skip downloading new versions of images if a hi-res version is already installed."
         ])
 }

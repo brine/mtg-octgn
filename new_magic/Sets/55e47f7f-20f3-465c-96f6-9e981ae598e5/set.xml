@@ -446,7 +446,7 @@ Enchanted creature gets +2/+2 and has vigilance.</property>
         <property name="Cost" />
         <property name="CMC" value="1" />
         <property name="Color" value="White" />
-        <property name="Type" value="Planeswalker" />
+        <property name="Type" value="Legendary Planeswalker" />
         <property name="Subtype" value="Gideon" />
         <property name="Rules">+2: Up to one target creature an opponent controls attacks Gideon, Battle-Forged during its controller's next turn if able.
 +1: Until your next turn, target creature gains indestructible. Untap that creature.
@@ -1112,7 +1112,7 @@ Draw a card.</property>
         <property name="Cost" />
         <property name="CMC" value="2" />
         <property name="Color" value="Blue" />
-        <property name="Type" value="Planeswalker" />
+        <property name="Type" value="Legendary Planeswalker" />
         <property name="Subtype" value="Jace" />
         <property name="Rules">+1: Up to one target creature gets -2/-0 until your next turn.
 −3: You may cast target instant or sorcery card from your graveyard this turn. If that card would be put into your graveyard this turn, exile it instead.
@@ -1964,7 +1964,7 @@ Whenever another nontoken creature you control dies, exile Liliana, Heretical He
         <property name="Cost" />
         <property name="CMC" value="3" />
         <property name="Color" value="Black" />
-        <property name="Type" value="Planeswalker" />
+        <property name="Type" value="Legendary Planeswalker" />
         <property name="Subtype" value="Liliana" />
         <property name="Rules">+2: Each player discards a card.
 −X: Return target nonlegendary creature card with converted mana cost X from your graveyard to the battlefield.
@@ -2410,25 +2410,37 @@ At the beginning of your end step, discard your hand.</property>
       <property name="Flavor" value="Waste follows want." />
       <property name="MultiverseId" value="398667" />
     </card>
-    <card name="Bellows Lizard" id="5585a88a-2c4b-44d1-9cea-197ff3ab2df1">
+    <card name="Nissa, Vastwood Seer" id="5585a88a-2c4b-44d1-9cea-197ff3ab2df1">
       <property name="Cost">
-        <s value="R">{R}</s>
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
       </property>
-      <property name="CMC" value="1" />
-      <property name="Color" value="Red" />
-      <property name="Type" value="Creature" />
-      <property name="Subtype" value="Lizard" />
-      <property name="Rarity" value="Common" />
-      <property name="Rules">
-        <s value="1">{1}</s>
-        <s value="R">{R}</s>: Bellows Lizard gets +1/+0 until end of turn.</property>
-      <property name="Power" value="1" />
-      <property name="Toughness" value="1" />
-      <property name="PT Box" value="1 / 1" />
-      <property name="Artist" value="Jack Wang" />
-      <property name="Number" value="132" />
-      <property name="Flavor" value="As the price of wood and coal rose, smiths found creative ways to keep their forges burning." />
+      <property name="CMC" value="3" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Elf Scout" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">When Nissa, Vastwood Seer enters the battlefield, you may search your library for a basic Forest card, reveal it, put it into your hand, then shuffle your library.
+Whenever a land enters the battlefield under your control, if you control seven or more lands, exile Nissa, then return her to the battlefield transformed under her owner's control.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="PT Box" value="2 / 2" />
+      <property name="Artist" value="Wesley Burt" />
+      <property name="Number" value="189" />
       <property name="MultiverseId" value="398439" />
+      <alternate name="Nissa, Sage Animist" type="transform">
+        <property name="Cost" />
+        <property name="CMC" value="3" />
+        <property name="Color" value="Green" />
+        <property name="Type" value="Legendary Planeswalker" />
+        <property name="Subtype" value="Nissa" />
+        <property name="Rules">+1: Reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put it into your hand.
+−2: Create a legendary 4/4 green Elemental creature token named Ashaya, the Awoken World.
+−7: Untap up to six target lands. They become 6/6 Elemental creatures. They're still lands.</property>
+        <property name="PT Box" value="3" />
+        <property name="Artist" value="Wesley Burt" />
+        <property name="Number" value="189" />
+      </alternate>
     </card>
     <card name="Boggart Brute" id="d89804df-be6e-4fd7-9683-1022e8d0caab">
       <property name="Cost">
@@ -2489,7 +2501,7 @@ At the beginning of each upkeep, if a player cast two or more spells last turn, 
         <property name="Cost" />
         <property name="CMC" value="3" />
         <property name="Color" value="Red" />
-        <property name="Type" value="Planeswalker" />
+        <property name="Type" value="Legendary Planeswalker" />
         <property name="Subtype" value="Chandra" />
         <property name="Rules">+1: Chandra, Roaring Flame deals 2 damage to target player.
 −2: Chandra, Roaring Flame deals 2 damage to target creature.
@@ -2780,7 +2792,7 @@ Whenever Goblin Piledriver attacks, it gets +2/+0 until end of turn for each oth
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant creature
-Enchanted creature gets +2/+1, has haste, and attacks each turn if able.
+Enchanted creature gets +2/+1, has haste, and attacks each combat if able.
 When enchanted creature dies, you may search your library for a card named Infectious Bloodlust, reveal it, put it into your hand, then shuffle your library.</property>
       <property name="Artist" value="Zoltan Boros" />
       <property name="Number" value="152" />
@@ -2812,7 +2824,7 @@ When enchanted creature dies, you may search your library for a card named Infec
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
-Mage-Ring Bully attacks each turn if able.</property>
+Mage-Ring Bully attacks each combat if able.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -3449,7 +3461,7 @@ Whenever a land enters the battlefield under your control, if you control seven 
         <property name="Cost" />
         <property name="CMC" value="3" />
         <property name="Color" value="Green" />
-        <property name="Type" value="Planeswalker" />
+        <property name="Type" value="Legendary Planeswalker" />
         <property name="Subtype" value="Nissa" />
         <property name="Rules">+1: Reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put it into your hand.
 −2: Create a legendary 4/4 green Elemental creature token named Ashaya, the Awoken World.
@@ -4308,7 +4320,7 @@ Whenever you cast a spell of the chosen color, you gain 1 life.</property>
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Juggernaut" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Ramroller attacks each turn if able.
+      <property name="Rules">Ramroller attacks each combat if able.
 Ramroller gets +2/+0 as long as you control another artifact.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
@@ -4447,7 +4459,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.</property>
+        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="246" />
       <property name="Flavor" value="Without the interfering hands of civilization, nature will always shape itself to its own needs." />
