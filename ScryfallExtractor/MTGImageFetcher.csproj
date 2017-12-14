@@ -5,9 +5,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{097499E1-5996-4E09-8BD5-412CCB3F13E3}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>ScryfallExtractor</RootNamespace>
-    <AssemblyName>ScryfallExtractor</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MTGImageFetcher</RootNamespace>
+    <AssemblyName>MTGImageFetcher</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -86,10 +86,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <None Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </ApplicationDefinition>
+    </None>
     <Page Include="PluginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

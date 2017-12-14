@@ -24,9 +24,9 @@ using System.Drawing.Imaging;
 using System.Runtime.Serialization;
 using Image = System.Drawing.Image;
 using System.Threading;
-using ScryfallExtractor.Entities;
+using MTGImageFetcher.Entities;
 
-namespace ScryfallExtractor
+namespace MTGImageFetcher
 {
     /// <summary>
     /// Interaction logic for PluginWindow.xaml

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ScryfallExtractor.Entities
+namespace MTGImageFetcher.Entities
 {
     public partial class SetItem : INotifyPropertyChanged
     {

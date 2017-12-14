@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ScryfallExtractor.Entities
+namespace MTGImageFetcher.Entities
 {
     public class SetInfo
     {

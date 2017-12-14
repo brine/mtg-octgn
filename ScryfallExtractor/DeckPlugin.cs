@@ -9,7 +9,7 @@ using Octgn.Core.Plugin;
 using System.Net;
 using System.Linq;
 
-namespace ScryfallExtractor
+namespace MTGImageFetcher
 {
 
     public class MTGImageDownloader : IDeckBuilderPlugin
