@@ -99,8 +99,8 @@ namespace ScryfallExtractor
                 var setInfo = new SetInfo();
 
                 setInfo.Code = jsonset.Value<string>("code");
-                setInfo.ParentCode = jsonset.Value<string>("parent_set_code");
-                setInfo.BlockCode = jsonset.Value<string>("block_code");
+                setInfo.ParentCode = jsonset.Value<string>("parent_set_code") ?? setInfo.Code;
+                setInfo.BlockCode = jsonset.Value<string>("block_code") ?? setInfo.Code;
                 
                 setInfo.Type = jsonset.Value<string>("set_type");
                 setInfo.SearchUri = jsonset.Value<string>("search_uri");
