@@ -1,8 +1,8 @@
 This is the github repository for the OCTGN3 MTG game definition source code from http://www.octgngames.com/mtg
 
 If you find a bug/issue with the game definition, or an autoscript tag that's not working properly, please report it in the issues section of this page.
-NOTE: Do not report issues related to the OCTGN client itself, those should be reported at http://www.github.com/kellyelton/OCTGN/issues.
+NOTE: Do not report issues related to the OCTGN client itself, those should be reported at http://www.github.com/octgn/OCTGN/issues.
 
 This repository is licensed under the Unlicense, providing full access from the public domain.  Contributors are always welcome; user-submitted code/changes will be analyzed before being merged into the main branch.
 
-You may fork this repository and play using the current build hosted here at your own risk; the commits are not necessarily stable between official releases.
+Please note that the code in this repository is considered *in-development*, and may not represent the stable builds that are released to the public in the OCTGN games feed.  Incompatibility errors or fatal crashes may occur when playing games against players using the game feed releases.
