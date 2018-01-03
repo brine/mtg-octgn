@@ -369,6 +369,14 @@ namespace MTGImageFetcher
 
                     // download image
 
+                    workerItem.web = UriToStream(imageDownloadUrl);
+
+                    if (workerItem.web == null)
+                    {
+                        progress.Report(workerItem);
+                        continue;
+                    }
+
                     var garbage = Config.Instance.Paths.GraveyardPath;
                     if (!Directory.Exists(garbage)) Directory.CreateDirectory(garbage);
 
@@ -376,13 +384,6 @@ namespace MTGImageFetcher
                     {
                         f.MoveTo(Path.Combine(garbage, f.Name));
                     }
-
-                    var imageUri = String.IsNullOrWhiteSpace(workerItem.alt) ? c.ImageUri : c.ImageUri + "." + workerItem.alt;
-
-                    var newPath = Path.Combine(set.ImagePackUri, imageUri + ".jpg");
-
-
-                    workerItem.web = UriToStream(imageDownloadUrl);
 
                     using (var newimg = Image.FromStream(workerItem.web))
                     {
@@ -414,6 +415,8 @@ namespace MTGImageFetcher
                         newimg.SetPropertyItem(keywordsMetadata);
 
 
+                        var imageUri = String.IsNullOrWhiteSpace(workerItem.alt) ? c.ImageUri : c.ImageUri + "." + workerItem.alt;
+                        var newPath = Path.Combine(set.ImagePackUri, imageUri + ".jpg");
                         newimg.Save(newPath, ImageFormat.Jpeg);
                     }
 
@@ -458,11 +461,22 @@ namespace MTGImageFetcher
 
         private MemoryStream UriToStream(string uri)
         {
-            MemoryStream ms;
+            MemoryStream ms = null;
             using (WebClient wc = new WebClient())
             {
-                byte[] bytes = wc.DownloadData(uri);
-                ms = new MemoryStream(bytes);
+                while (ms == null)
+                {
+                    try
+                    {
+                        byte[] bytes = wc.DownloadData(uri);
+                        ms = new MemoryStream(bytes);
+                    }
+                    catch (WebException e)
+                    {
+                        var ret = MessageBox.Show(String.Format("{0}.  Try again?", e.Message), "Error", MessageBoxButton.YesNo);
+                        if (ret != MessageBoxResult.Yes) return ms;
+                    }
+                }
             }
             return ms;
         }
