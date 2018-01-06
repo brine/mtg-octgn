@@ -238,5 +238,9 @@ changelog = {
         "Card color no longer defaults to colorless for cards that have a color indicator.",
         "Fixed major bugs with the image downloader plugin.",
         "Added new option in image downloader plugin to skip downloading new versions of images if a hi-res version is already installed."
+        ]),
+    3040300: ("3.4.3.0", "January 6 2017", [
+        "Added Rivals of Ixalan",
+        "Added a dialog window to image downloader plugin when an image file download errors out."
         ])
 }
