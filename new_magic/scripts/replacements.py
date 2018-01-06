@@ -165,6 +165,7 @@ tokenTypes = {
     'centaur33g2': ('3 / 3 Green Centaur', '6b134506-3040-4b1e-8249-44c5d2419918'), #protection from black
     'centaur33g3': ('3 / 3 Green Centaur', 'd27f81eb-5631-4d95-ab8c-21eda7921129'), #enchantment
     'citizen11w': ('1 / 1 White Citizen', 'b0ad9093-84a2-412f-971e-71d0fc42dae2'),
+    'citysblessing': ("City's Blessing", 'ba64ed3e-93c5-406f-a38d-65cc68472122'),
     'cleric11m': ('1/1 Multicolor White Black Cleric', 'b6e9b1c2-b6c5-4697-88fa-6b59702ffc22'),
     'cleric21w': ('2/1 White Cleric', '068c78c0-2432-428c-8316-13b7b353d9ad'),
     'cloudsprite11u': ('1 / 1 Blue Cloud Sprite', '7499185a-6b3e-4d96-a2c3-947dd0f11629'),
@@ -195,7 +196,8 @@ tokenTypes = {
     'elemental44w': ('4 / 4 White Elemental', '401c9416-4b6b-477c-9bef-6fce5a9d4e84'),
     'elemental10u': ('1/ 0 Blue Elemental', 'e9969757-cb36-4ff2-b8da-048c5d4934b9'),
     'elemental22u': ('2 / 2 Blue Elemental', 'f31761bf-3bad-4b26-83e3-53a7435c2c02'),
-    'elemental11r': ('1/ 1 Red Elemental', '4a280f46-c63d-4522-99cd-49e4c2093b95'), #M14 M14
+    'elemental01r': ('0/ 1 Red Elemental', 'bd0bf1d7-2e66-41fd-ae9a-ea86b939e7c9'),
+    'elemental11r': ('1/ 1 Red Elemental', '4a280f46-c63d-4522-99cd-49e4c2093b95'), #M14 M14 RIX
     'elemental11r2': ('1/ 1 Red Elemental', '9cf39bf6-7508-4243-b05a-7fcbc9adc800'), #haste
     'elemental31r': ('3 / 1 Red Elemental', '283f82f8-e3ee-4191-852a-60e2312d8e32'), #CFX DIS OGW
     'elemental31r2': ('3 / 1 Red Elemental', '5086e801-b0f5-4ac0-9442-6f2e8312c647'), #haste
@@ -251,6 +253,7 @@ tokenTypes = {
     'goldmeadowharrier11w': ('1 / 1 White Goldmeadow Harrier', 'd6cdd78a-81a3-40b4-87b5-dfa7781b7294'),
     'golem33c': ('3 / 3 Colorless Golem', 'e0566739-f080-448c-b79e-68c55265dfe1'), #SOM NPH
     'golem33c2': ('3 / 3 Colorless Golem', 'b18e2591-c594-425c-9111-771224086f19'), #enchantment artifact
+    'golem44c': ('4 / 4 Colorless Golem', 'a7820eb9-6d7f-4bc4-b421-4e4420642fb7'), 
     'golem99c': ('9 / 9 Colorless Golem', 'b61b969e-73a6-4646-be13-8b0d98b10743'),
     'graveborn31m': ('3 / 1 Multicolor Black Red Graveborn', '9c2731ac-5832-45cd-87ef-e5be6c8f4b3b'),
     'gremlin22r': ('2 / 2 Red Gremlin', 'd71b2470-a814-49d1-a1d1-36fa7527032f'),
@@ -347,7 +350,7 @@ tokenTypes = {
     'ruhk44r': ('4 / 4 Red Ruhk', '64abc862-a3f4-4b4f-b137-33c2508e3eef'),
     'sand11c': ('1 / 1 Colorless Sand', '27f24b0d-073a-40c5-bfc2-a2d2a06554bf'),
     'sandwarrior11m': ('1 / 1 Multicolor Red Green White Sand Warrior', 'ccb8200b-95c3-432d-b2f9-b38df3b77cc5'),
-    'saproling11g': ('1 / 1 Green Saproling', '080583c4-5f53-4921-a84d-d840d740e7eb'), #ALA INV DDE M12 M13 ALA
+    'saproling11g': ('1 / 1 Green Saproling', '080583c4-5f53-4921-a84d-d840d740e7eb'), #ALA INV DDE M12 M13 ALA RIX
     'saproling**g': ('* / * Green Saproling', 'f10998f6-b463-40a0-92f0-3a5cb09143ae'),
     'satyr22m': ('2 / 2 Multicolor Red Green Satyr', '5f26295b-d0d3-4c0b-8019-d122ad7af534'),
     'serf01b': ('0 / 1 Black Serf', 'c98eb86f-c022-4c28-9167-f1cd3166c9a0'), #TSP EMA
@@ -479,8 +482,9 @@ tokenTypes = {
     'elspethemblem2': ("Elspeth's Emblem", '527f7aa8-0823-4522-b2d1-b8a90ca0b9ec'), #Sun's Champion
     'garrukemblem': ("Garruk's Emblem", 'bee095dd-635c-4f7d-a708-e6e514913dbd'),
     'garrukemblem2': ("Garruk's Emblem", '52d1a753-64a8-4ed5-a28a-f0fa6a82b843'),
-    'gideonemblem': ("Gideon's Emblem", 'ce0879df-31e8-4466-bd7d-19f0e0c3e868'),
-    'gideonemblem2': ("Gideon's Emblem", '5bb7cc16-9c2a-48d2-b8cd-766b880eecbe'),
+    'gideonemblem': ("Gideon's Emblem", 'ce0879df-31e8-4466-bd7d-19f0e0c3e868'), #ally of zendikar
+    'gideonemblem2': ("Gideon's Emblem", '5bb7cc16-9c2a-48d2-b8cd-766b880eecbe'), #of the trials
+    'huatliemblem': ("Huatli's Emblem", '859f645b-24e0-4c34-ae82-ba0ae9854377'),
     'jaceemblem': ("Jace's Emblem", 'e164ba8c-dd76-4bf1-bfa9-a3fa36a2a64b'),
     'jaceemblem2': ("Jace's Emblem", '7336aabc-55ab-4041-948f-9779f5924b02'),
     'kioraemblem': ("Kiora's Emblem", '61c58834-6efc-40fa-8ba0-aa7927e7c9bd'),
