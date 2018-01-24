@@ -242,5 +242,9 @@ changelog = {
     3040300: ("3.4.3.0", "January 6 2017", [
         "Added Rivals of Ixalan",
         "Added a dialog window to image downloader plugin when an image file download errors out."
+        ]),
+    3040400: ("3.4.4.0", "January 23 2017", [
+        "Minor Text Fixes to Ixalan Block sets and recent supplemental releases",
+        "Fixed some issues with Ixalan booster packs not generating accurately and including Planeswalker deck cards."
         ])
 }
