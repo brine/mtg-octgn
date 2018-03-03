@@ -965,7 +965,7 @@ def cardalign():
                 dictname = card.Name
             else:
                 dictname = 'Card'
-            if card.highlight in [AttackColor, AttackDoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
+            if card.highlight in [AttackColor, AttackDoesntUntapColor, BlockColor, BlockDoesntUntapColor]:
                 dictname += str(card._id) ##uniquely separates any card designated as an attacker or blocker
             height = 0
             for marker in card.markers:
