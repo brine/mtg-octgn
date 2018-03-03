@@ -965,6 +965,8 @@ def cardalign():
                 dictname = card.Name
             else:
                 dictname = 'Card'
+            if card.highlight in [AttackColor, AttackDoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
+                dictname += str(card._id) ##uniquely separates any card designated as an attacker or blocker
             height = 0
             for marker in card.markers:
                 dictname += marker[0]
@@ -1010,7 +1012,10 @@ def cardalign():
         for cardname in cardtype:
             for card in carddict[cardname]:
                 if allowAlign == "True":
-                    card.moveToTable(flip * xpos, side * ypos + (44*side - 44))
+                    newx = flip * xpos
+                    newy = side * ypos + (44*side - 44)
+                    if card.position != (newx, newy):
+                        card.moveToTable(newx, newy)
                 xpos += 9
                 if card._id in attachDict:
                     alignAttachments(card, attachDict[card._id])
@@ -1035,8 +1040,9 @@ def alignAttachments(card, attachments = None):  ## Aligns all attachments on th
     for c in attachments:
         if not isStack(c):  ## Ignore attachments that have yet to resolve off the stack
             attachY = y - 9 * yyy * side * count ## the equation to identify the y coordinate of the new card
-            c.moveToTable(x, attachY)
-            c.index = lastCard.index
+            if c.position != (x, attachY):
+                c.moveToTable(x, attachY)
+                c.index = lastCard.index
             lastCard = c
             count += 1
 
