@@ -246,5 +246,10 @@ changelog = {
     3040400: ("3.4.4.0", "January 23 2017", [
         "Minor Text Fixes to Ixalan Block sets and recent supplemental releases",
         "Fixed some issues with Ixalan booster packs not generating accurately and including Planeswalker deck cards."
+        ]),
+    3040500: ("3.4.5.0", "March 4 2017", [
+        "Oracle text update - fixes issues with 0 cost colored cards showing as colorless",
+        "Added Masters 25.",
+        "Attacking and blocking cards will separate from alignment piles."
         ])
 }
