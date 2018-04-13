@@ -251,5 +251,8 @@ changelog = {
         "Oracle text update - fixes issues with 0 cost colored cards showing as colorless",
         "Added Masters 25.",
         "Attacking and blocking cards will separate from alignment piles."
+        ]),
+    3040600: ("3.4.6.0", "April 12 2017", [
+        "Added Dominaria"
         ])
 }
