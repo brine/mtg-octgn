@@ -68,7 +68,7 @@ At the beginning of combat on your turn, reveal the top card of your library. If
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Untap Endbringer during each other player's untap step.
-<s value="T">{T}</s>: Endbringer deals 1 damage to target creature or player.
+<s value="T">{T}</s>: Endbringer deals 1 damage to any target.
 <s value="C">{C}</s>, <s value="T">{T}</s>: Target creature can't attack or block this turn.
 <s value="C">{C}</s><s value="C">{C}</s>, <s value="T">{T}</s>: Draw a card.</property>
       <property name="Power" value="5" />
@@ -89,7 +89,7 @@ At the beginning of combat on your turn, reveal the top card of your library. If
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">When you cast Kozilek, the Great Distortion, if you have fewer than seven cards in hand, draw cards equal to the difference.
+      <property name="Rules">When you cast this spell, if you have fewer than seven cards in hand, draw cards equal to the difference.
 Menace
 Discard a card with converted mana cost X: Counter target spell with converted mana cost X.</property>
       <property name="Power" value="12" />
@@ -186,7 +186,7 @@ Target creature gets +3/-3 until end of turn.</property>
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="C">{C}</s> represents colorless mana.)
-When Thought-Knot Seer enters the battlefield, target opponent reveals his or her hand. You choose a nonland card from it and exile that card.
+When Thought-Knot Seer enters the battlefield, target opponent reveals their hand. You choose a nonland card from it and exile that card.
 When Thought-Knot Seer leaves the battlefield, target opponent draws a card.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -226,7 +226,7 @@ Walker of the Wastes gets +1/+1 for each land you control named Wastes.</propert
       <property name="Subtype" value="Eldrazi Drone" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Vigilance
-<s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool. (<s value="C">{C}</s> represents colorless mana.)</property>
+<s value="T">{T}</s>: Add <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -248,7 +248,7 @@ Walker of the Wastes gets +1/+1 for each land you control named Wastes.</propert
 Choose one —
 • Exile target creature with power or toughness 1 or less.
 • Counter target sorcery spell.
-• Create a 1/1 colorless Eldrazi Scion creature token. It has "Sacrifice this creature: Add <s value="C">{C}</s> to your mana pool."</property>
+• Create a 1/1 colorless Eldrazi Scion creature token. It has "Sacrifice this creature: Add <s value="C">{C}</s>."</property>
       <property name="Artist" value="Jason Felix" />
       <property name="Number" value="012" />
       <property name="MultiverseId" value="407522" />
@@ -744,7 +744,7 @@ When Wall of Resurgence enters the battlefield, you may put three +1/+1 counters
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Devoid (This card has no color.)
-Counter target spell unless its controller pays <s value="1">{1}</s>. You create a 1/1 colorless Eldrazi Scion creature token. It has "Sacrifice this creature: Add <s value="C">{C}</s> to your mana pool." (<s value="C">{C}</s> represents colorless mana.)</property>
+Counter target spell unless its controller pays <s value="1">{1}</s>. You create a 1/1 colorless Eldrazi Scion creature token. It has "Sacrifice this creature: Add <s value="C">{C}</s>." (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Artist" value="Igor Kieryluk" />
       <property name="Number" value="040" />
       <property name="MultiverseId" value="407550" />
@@ -782,7 +782,7 @@ Counter target spell unless its controller pays <s value="1">{1}</s>. You create
       <property name="Subtype" value="Eldrazi Drone" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Devoid (This card has no color.)
-<s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool. Spend this mana only to cast a colorless spell, activate an ability of a colorless permanent, or pay a cost that contains <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)</property>
+<s value="T">{T}</s>: Add <s value="C">{C}</s>. Spend this mana only to cast a colorless spell, activate an ability of a colorless permanent, or pay a cost that contains <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -825,7 +825,7 @@ Whenever a creature you control deals combat damage to a player, you may draw a 
       <property name="Rules">Devoid (This card has no color.)
 Flash
 Flying
-<s value="1">{1}</s><s value="C">{C}</s>: Target opponent exiles the top card of his or her library. If it's a land card, you may return Dimensional Infiltrator to its owner's hand. (<s value="C">{C}</s> represents colorless mana.)</property>
+<s value="1">{1}</s><s value="C">{C}</s>: Target opponent exiles the top card of their library. If it's a land card, you may return Dimensional Infiltrator to its owner's hand. (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -904,7 +904,7 @@ Draw a card.</property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Devoid (This card has no color.)
 Flying
-Whenever you cast a colorless spell, target opponent exiles the top card of his or her library.</property>
+Whenever you cast a colorless spell, target opponent exiles the top card of their library.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
@@ -1128,7 +1128,7 @@ At the beginning of your upkeep, scry X, where X is the number of planeswalkers 
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Surge <s value="U">{U}</s><s value="U">{U}</s> (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)
-Overwhelming Denial can't be countered by spells or abilities.
+This spell can't be countered.
 Counter target spell.</property>
       <property name="Artist" value="Jama Jurabaev" />
       <property name="Number" value="061" />
@@ -1161,9 +1161,9 @@ Counter target spell.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sphinx" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Sphinx of the Final Word can't be countered.
+      <property name="Rules">This spell can't be countered.
 Flying, hexproof
-Instant and sorcery spells you control can't be countered by spells or abilities.</property>
+Instant and sorcery spells you control can't be countered.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
@@ -1233,7 +1233,7 @@ Untap each creature you control with a +1/+1 counter on it.</property>
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Devoid (This card has no color.)
-When you cast Bearer of Silence, you may pay <s value="1">{1}</s><s value="C">{C}</s>. If you do, target opponent sacrifices a creature. (<s value="C">{C}</s> represents colorless mana.)
+When you cast this spell, you may pay <s value="1">{1}</s><s value="C">{C}</s>. If you do, target opponent sacrifices a creature. (<s value="C">{C}</s> represents colorless mana.)
 Flying
 Bearer of Silence can't block.</property>
       <property name="Power" value="2" />
@@ -1380,7 +1380,7 @@ When Inverter of Truth enters the battlefield, exile all cards from your library
       <property name="Subtype" value="Eldrazi Drone" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Devoid (This card has no color.)
-Pay 1 life: Add <s value="C">{C}</s> to your mana pool. Activate this ability only once each turn. (<s value="C">{C}</s> represents colorless mana.)</property>
+Pay 1 life: Add <s value="C">{C}</s>. Activate this ability only once each turn. (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
@@ -1438,7 +1438,7 @@ At the beginning of your upkeep, you lose 1 life unless you control another colo
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Devoid (This card has no color.)
-Whenever another nontoken creature you control dies, create a 1/1 colorless Eldrazi Scion creature token. It has "Sacrifice this creature: Add <s value="C">{C}</s> to your mana pool." (<s value="C">{C}</s> represents colorless mana.)</property>
+Whenever another nontoken creature you control dies, create a 1/1 colorless Eldrazi Scion creature token. It has "Sacrifice this creature: Add <s value="C">{C}</s>." (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="4 / 3" />
@@ -1535,7 +1535,7 @@ Whenever enchanted creature deals damage, its controller loses that much life.</
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Devoid (This card has no color.)
-Target opponent exiles two cards from his or her hand and loses 2 life.</property>
+Target opponent exiles two cards from their hand and loses 2 life.</property>
       <property name="Artist" value="Igor Kieryluk" />
       <property name="Number" value="082" />
       <property name="Flavor" value="&quot;Ulamog stood before us at Sea Gate, ready to succumb . . . and then Kozilek arose. Whatever hope I had for our world died.&quot; —Vandri, Kalastria emissary" />
@@ -1751,7 +1751,7 @@ Whenever Vampire Envoy becomes tapped, you gain 1 life.</property>
       <property name="Rules">Devoid (This card has no color.)
 Choose one —
 • Exile target land creature.
-• Consuming Sinkhole deals 4 damage to target player.</property>
+• Consuming Sinkhole deals 4 damage to target player or planeswalker.</property>
       <property name="Artist" value="Igor Kieryluk" />
       <property name="Number" value="094" />
       <property name="Flavor" value="&quot;What will not yield will be consumed.&quot; —Ayli, high priest of the Eternal Pilgrims" />
@@ -1790,7 +1790,7 @@ Eldrazi Aggressor has haste as long as you control another colorless creature.</
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Devoid (This card has no color.)
-When you cast Eldrazi Obligator, you may pay <s value="1">{1}</s><s value="C">{C}</s>. If you do, gain control of target creature until end of turn, untap that creature, and it gains haste until end of turn. (<s value="C">{C}</s> represents colorless mana.)
+When you cast this spell, you may pay <s value="1">{1}</s><s value="C">{C}</s>. If you do, gain control of target creature until end of turn, untap that creature, and it gains haste until end of turn. (<s value="C">{C}</s> represents colorless mana.)
 Haste</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
@@ -1869,7 +1869,7 @@ Whenever you cast an Eldrazi creature spell with converted mana cost 7 or greate
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Devoid (This card has no color.)
-Reality Hemorrhage deals 2 damage to target creature or player.</property>
+Reality Hemorrhage deals 2 damage to any target.</property>
       <property name="Artist" value="Chris Rallis" />
       <property name="Number" value="100" />
       <property name="Flavor" value="Tarek could not tell whether he was losing his blood or his mind." />
@@ -1956,7 +1956,7 @@ Boulder Salvo deals 4 damage to target creature.</property>
       <property name="Subtype" value="Hellion" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Trample
-When Cinder Hellion enters the battlefield, it deals 2 damage to target opponent.</property>
+When Cinder Hellion enters the battlefield, it deals 2 damage to target opponent or planeswalker.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -1974,7 +1974,7 @@ When Cinder Hellion enters the battlefield, it deals 2 damage to target opponent
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">As an additional cost to cast Devour in Flames, return a land you control to its owner's hand.
+      <property name="Rules">As an additional cost to cast this spell, return a land you control to its owner's hand.
 Devour in Flames deals 5 damage to target creature or planeswalker.</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="106" />
@@ -2027,7 +2027,7 @@ Draw a card.</property>
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Surge <s value="X">{X}</s><s value="R">{R}</s> (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)
-Fall of the Titans deals X damage to each of up to two target creatures and/or players.</property>
+Fall of the Titans deals X damage to each of up to two targets.</property>
       <property name="Artist" value="Chris Rallis" />
       <property name="Number" value="109" />
       <property name="Flavor" value="As Gideon kept the brood lineages at bay, Chandra incinerated the bound Eldrazi titans." />
@@ -2133,7 +2133,7 @@ Gain control of target creature until end of turn. Untap that creature. It gains
       <property name="Color" value="Red" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever you cast your second spell each turn, Pyromancer's Assault deals 2 damage to target creature or player.</property>
+      <property name="Rules">Whenever you cast your second spell each turn, Pyromancer's Assault deals 2 damage to any target.</property>
       <property name="Artist" value="Todd Lockwood" />
       <property name="Number" value="115" />
       <property name="Flavor" value="Never ask a pyromancer if that's the best she's got." />
@@ -2183,7 +2183,7 @@ When Reckless Bushwhacker enters the battlefield, if its surge cost was paid, ot
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Tears of Valakut can't be countered by spells or abilities.
+      <property name="Rules">This spell can't be countered.
 Tears of Valakut deals 5 damage to target creature with flying.</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="118" />
@@ -2203,7 +2203,7 @@ Tears of Valakut deals 5 damage to target creature with flying.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Surge <s value="3">{3}</s><s value="R">{R}</s><s value="R">{R}</s> (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)
 Flying
-When Tyrant of Valakut enters the battlefield, if its surge cost was paid, it deals 3 damage to target creature or player.</property>
+When Tyrant of Valakut enters the battlefield, if its surge cost was paid, it deals 3 damage to any target.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="5 / 4" />
@@ -2222,7 +2222,7 @@ When Tyrant of Valakut enters the battlefield, if its surge cost was paid, it de
       <property name="Subtype" value="Goblin Archer Ally" />
       <property name="Rarity" value="Common" />
       <property name="Rules">First strike
-Cohort — <s value="T">{T}</s>, Tap an untapped Ally you control: Zada's Commando deals 1 damage to target opponent.</property>
+Cohort — <s value="T">{T}</s>, Tap an untapped Ally you control: Zada's Commando deals 1 damage to target opponent or planeswalker.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -2242,7 +2242,7 @@ Cohort — <s value="T">{T}</s>, Tap an untapped Ally you control: Zada's Comman
       <property name="Subtype" value="Eldrazi Drone" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Devoid (This card has no color.)
-When Birthing Hulk enters the battlefield, create two 1/1 colorless Eldrazi Scion creature tokens. They have "Sacrifice this creature: Add <s value="C">{C}</s> to your mana pool." (<s value="C">{C}</s> represents colorless mana.)
+When Birthing Hulk enters the battlefield, create two 1/1 colorless Eldrazi Scion creature tokens. They have "Sacrifice this creature: Add <s value="C">{C}</s>." (<s value="C">{C}</s> represents colorless mana.)
 <s value="1">{1}</s><s value="C">{C}</s>: Regenerate Birthing Hulk.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
@@ -2279,7 +2279,7 @@ Search your library for a basic land card and reveal it. You may put that card o
       <property name="Subtype" value="Eldrazi Drone" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Devoid (This card has no color.)
-When Scion Summoner enters the battlefield, create a 1/1 colorless Eldrazi Scion creature token. It has "Sacrifice this creature: Add <s value="C">{C}</s> to your mana pool." (<s value="C">{C}</s> represents colorless mana.)</property>
+When Scion Summoner enters the battlefield, create a 1/1 colorless Eldrazi Scion creature token. It has "Sacrifice this creature: Add <s value="C">{C}</s>." (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2321,7 +2321,7 @@ When Scion Summoner enters the battlefield, create a 1/1 colorless Eldrazi Scion
       <property name="Rarity" value="Rare" />
       <property name="Rules">Devoid (This card has no color.)
 Flash
-When you cast Vile Redeemer, you may pay <s value="C">{C}</s>. If you do, create a 1/1 colorless Eldrazi Scion creature token for each nontoken creature that died under your control this turn. Those tokens have "Sacrifice this creature: Add <s value="C">{C}</s> to your mana pool."</property>
+When you cast this spell, you may pay <s value="C">{C}</s>. If you do, create a 1/1 colorless Eldrazi Scion creature token for each nontoken creature that died under your control this turn. Those tokens have "Sacrifice this creature: Add <s value="C">{C}</s>."</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2341,7 +2341,7 @@ When you cast Vile Redeemer, you may pay <s value="C">{C}</s>. If you do, create
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Devoid (This card has no color.)
-When you cast World Breaker, exile target artifact, enchantment, or land.
+When you cast this spell, exile target artifact, enchantment, or land.
 Reach
 <s value="2">{2}</s><s value="C">{C}</s>, Sacrifice a land: Return World Breaker from your graveyard to your hand. (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Power" value="5" />
@@ -2715,7 +2715,7 @@ As long as you control six or more lands, Sylvan Advocate and land creatures you
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever you tap a land for mana, add one mana to your mana pool of any type that land produced. (The types of mana are white, blue, black, red, green, and colorless.)
+      <property name="Rules">Whenever you tap a land for mana, add one mana of any type that land produced. (The types of mana are white, blue, black, red, green, and colorless.)
 Whenever you cast a creature spell, draw a card.</property>
       <property name="Artist" value="Chris Rallis" />
       <property name="Number" value="147" />
@@ -2756,7 +2756,7 @@ Whenever another colorless creature enters the battlefield under your control, t
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Devoid (This card has no color.)
 Mindmelter can't be blocked.
-<s value="3">{3}</s><s value="C">{C}</s>: Target opponent exiles a card from his or her hand. Activate this ability only any time you could cast a sorcery. (<s value="C">{C}</s> represents colorless mana.)</property>
+<s value="3">{3}</s><s value="C">{C}</s>: Target opponent exiles a card from their hand. Activate this ability only any time you could cast a sorcery. (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -3052,7 +3052,7 @@ Equip <s value="3">{3}</s></property>
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool. (<s value="C">{C}</s> represents colorless mana.)</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="0 / 1" />
@@ -3070,7 +3070,7 @@ Equip <s value="3">{3}</s></property>
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool. (<s value="C">{C}</s> represents colorless mana.)
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)
 <s value="2">{2}</s>, <s value="T">{T}</s>: Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)</property>
       <property name="Artist" value="Jung Park" />
       <property name="Number" value="165" />
@@ -3115,7 +3115,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Cinder Barrens enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="168" />
       <property name="Flavor" value="A mudflow swallowed the lowlands years ago. All that remains are a bottomless mire and an endless rain of ash." />
@@ -3128,8 +3128,8 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool. (<s value="C">{C}</s> represents colorless mana.)
-<s value="T">{T}</s>, Pay 1 life: Add one mana of any color to your mana pool. Spend this mana only to cast a spell with devoid.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)
+<s value="T">{T}</s>, Pay 1 life: Add one mana of any color. Spend this mana only to cast a spell with devoid.</property>
       <property name="Artist" value="Ryan Pancoast" />
       <property name="Number" value="169" />
       <property name="Flavor" value="&quot;Look, and see the future.&quot; —Ayli, high priest of the Eternal Pilgrims" />
@@ -3142,8 +3142,8 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Crumbling Vestige enters the battlefield tapped.
-When Crumbling Vestige enters the battlefield, add one mana of any color to your mana pool.
-<s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool. (<s value="C">{C}</s> represents colorless mana.)</property>
+When Crumbling Vestige enters the battlefield, add one mana of any color.
+<s value="T">{T}</s>: Add <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)</property>
       <property name="Artist" value="Zack Stella" />
       <property name="Number" value="170" />
       <property name="MultiverseId" value="407680" />
@@ -3155,7 +3155,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Hissing Quagmire enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s> to your mana pool.
+<s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>.
 <s value="1">{1}</s><s value="B">{B}</s><s value="G">{G}</s>: Hissing Quagmire becomes a 2/2 black and green Elemental creature with deathtouch until end of turn. It's still a land.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="171" />
@@ -3168,8 +3168,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool. (<s value="C">{C}</s> represents colorless mana.)
-<s value="T">{T}</s>, Tap an untapped creature you control: Add one mana of any color to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)
+<s value="T">{T}</s>, Tap an untapped creature you control: Add one mana of any color.</property>
       <property name="Artist" value="Kieran Yanner" />
       <property name="Number" value="172" />
       <property name="Flavor" value="Even in areas of profound devastation, the hedrons remained intact." />
@@ -3182,7 +3182,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Meandering River enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="173" />
       <property name="Flavor" value="The river split into many channels as it flowed to the Halimar Sea. Few travelers could follow the same one twice." />
@@ -3195,7 +3195,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Mirrorpool enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+<s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="2">{2}</s><s value="C">{C}</s>, <s value="T">{T}</s>, Sacrifice Mirrorpool: Copy target instant or sorcery spell you control. You may choose new targets for the copy.
 <s value="4">{4}</s><s value="C">{C}</s>, <s value="T">{T}</s>, Sacrifice Mirrorpool: Create a token that's a copy of target creature you control.</property>
       <property name="Artist" value="Cliff Childs" />
@@ -3209,7 +3209,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Needle Spires enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s> to your mana pool.
+<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.
 <s value="2">{2}</s><s value="R">{R}</s><s value="W">{W}</s>: Needle Spires becomes a 2/1 red and white Elemental creature with double strike until end of turn. It's still a land.</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="175" />
@@ -3222,7 +3222,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Ruins of Oran-Rief enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool. (<s value="C">{C}</s> represents colorless mana.)
+<s value="T">{T}</s>: Add <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)
 <s value="T">{T}</s>: Put a +1/+1 counter on target colorless creature that entered the battlefield this turn.</property>
       <property name="Artist" value="Jason Felix" />
       <property name="Number" value="176" />
@@ -3235,7 +3235,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool. (<s value="C">{C}</s> represents colorless mana.)
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)
 <s value="2">{2}</s><s value="C">{C}</s>, <s value="T">{T}</s>: Draw a card. Activate this ability only if you have no cards in hand.</property>
       <property name="Artist" value="Zack Stella" />
       <property name="Number" value="177" />
@@ -3249,7 +3249,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Submerged Boneyard enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="178" />
       <property name="Flavor" value="&quot;Long after the land has given up the last of its secrets, there will still be mysteries in the depths of the sea.&quot; —Kiora" />
@@ -3262,7 +3262,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Timber Gorge enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="179" />
       <property name="Flavor" value="Tazeem's embrace is harsh, but for those that call it home, nothing else will do." />
@@ -3275,7 +3275,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Tranquil Expanse enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="180" />
       <property name="Flavor" value="Despite the chaos of the Roil and the devastation of the Eldrazi, Zendikar is a world of breathtaking beauty." />
@@ -3288,8 +3288,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="1">{1}</s>, <s value="T">{T}</s>: Add one mana of any color to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="1">{1}</s>, <s value="T">{T}</s>: Add one mana of any color.</property>
       <property name="Artist" value="Jung Park" />
       <property name="Number" value="181" />
       <property name="Flavor" value="Kozilek's presence warped the land, stripping away layer after layer." />
@@ -3302,7 +3302,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Wandering Fumarole enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s> to your mana pool.
+<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.
 <s value="2">{2}</s><s value="U">{U}</s><s value="R">{R}</s>: Until end of turn, Wandering Fumarole becomes a 1/4 blue and red Elemental creature with "<s value="0">{0}</s>: Switch this creature's power and toughness until end of turn." It's still a land.</property>
       <property name="Artist" value="Florian de Gesincourt" />
       <property name="Number" value="182" />
@@ -3315,7 +3315,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Basic Land" />
       <property name="Rarity" value="Basic Land" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.</property>
       <property name="Artist" value="Jason Felix" />
       <property name="Number" value="183" />
       <property name="MultiverseId" value="407694" />
@@ -3327,7 +3327,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Basic Land" />
       <property name="Rarity" value="Basic Land" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.</property>
       <property name="Artist" value="Raymond Swanland" />
       <property name="Number" value="184" />
       <property name="MultiverseId" value="407696" />
@@ -3339,8 +3339,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="WU">{W/U}</s>, <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="W">{W}</s>, <s value="W">{W}</s><s value="U">{U}</s>, or <s value="U">{U}</s><s value="U">{U}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="WU">{W/U}</s>, <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="W">{W}</s>, <s value="W">{W}</s><s value="U">{U}</s>, or <s value="U">{U}</s><s value="U">{U}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="026" />
       <property name="MultiverseId" value="409557" />
@@ -3352,8 +3352,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="UB">{U/B}</s>, <s value="T">{T}</s>: Add <s value="U">{U}</s><s value="U">{U}</s>, <s value="U">{U}</s><s value="B">{B}</s>, or <s value="B">{B}</s><s value="B">{B}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="UB">{U/B}</s>, <s value="T">{T}</s>: Add <s value="U">{U}</s><s value="U">{U}</s>, <s value="U">{U}</s><s value="B">{B}</s>, or <s value="B">{B}</s><s value="B">{B}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="027" />
       <property name="MultiverseId" value="409558" />
@@ -3365,8 +3365,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="BR">{B/R}</s>, <s value="T">{T}</s>: Add <s value="B">{B}</s><s value="B">{B}</s>, <s value="B">{B}</s><s value="R">{R}</s>, or <s value="R">{R}</s><s value="R">{R}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="BR">{B/R}</s>, <s value="T">{T}</s>: Add <s value="B">{B}</s><s value="B">{B}</s>, <s value="B">{B}</s><s value="R">{R}</s>, or <s value="R">{R}</s><s value="R">{R}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="028" />
       <property name="MultiverseId" value="409559" />
@@ -3378,8 +3378,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="RG">{R/G}</s>, <s value="T">{T}</s>: Add <s value="R">{R}</s><s value="R">{R}</s>, <s value="R">{R}</s><s value="G">{G}</s>, or <s value="G">{G}</s><s value="G">{G}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="RG">{R/G}</s>, <s value="T">{T}</s>: Add <s value="R">{R}</s><s value="R">{R}</s>, <s value="R">{R}</s><s value="G">{G}</s>, or <s value="G">{G}</s><s value="G">{G}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="029" />
       <property name="MultiverseId" value="409560" />
@@ -3391,8 +3391,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="GW">{G/W}</s>, <s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s>, <s value="G">{G}</s><s value="W">{W}</s>, or <s value="W">{W}</s><s value="W">{W}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="GW">{G/W}</s>, <s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s>, <s value="G">{G}</s><s value="W">{W}</s>, or <s value="W">{W}</s><s value="W">{W}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="030" />
       <property name="MultiverseId" value="409561" />
@@ -3404,8 +3404,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="WB">{W/B}</s>, <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="W">{W}</s>, <s value="W">{W}</s><s value="B">{B}</s>, or <s value="B">{B}</s><s value="B">{B}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="WB">{W/B}</s>, <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="W">{W}</s>, <s value="W">{W}</s><s value="B">{B}</s>, or <s value="B">{B}</s><s value="B">{B}</s>.</property>
       <property name="Artist" value="Christine Choi" />
       <property name="Number" value="031" />
       <property name="MultiverseId" value="409562" />
@@ -3417,8 +3417,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="UR">{U/R}</s>, <s value="T">{T}</s>: Add <s value="U">{U}</s><s value="U">{U}</s>, <s value="U">{U}</s><s value="R">{R}</s>, or <s value="R">{R}</s><s value="R">{R}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="UR">{U/R}</s>, <s value="T">{T}</s>: Add <s value="U">{U}</s><s value="U">{U}</s>, <s value="U">{U}</s><s value="R">{R}</s>, or <s value="R">{R}</s><s value="R">{R}</s>.</property>
       <property name="Artist" value="Christine Choi" />
       <property name="Number" value="032" />
       <property name="MultiverseId" value="409563" />
@@ -3430,8 +3430,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="BG">{B/G}</s>, <s value="T">{T}</s>: Add <s value="B">{B}</s><s value="B">{B}</s>, <s value="B">{B}</s><s value="G">{G}</s>, or <s value="G">{G}</s><s value="G">{G}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="BG">{B/G}</s>, <s value="T">{T}</s>: Add <s value="B">{B}</s><s value="B">{B}</s>, <s value="B">{B}</s><s value="G">{G}</s>, or <s value="G">{G}</s><s value="G">{G}</s>.</property>
       <property name="Artist" value="Christine Choi" />
       <property name="Number" value="033" />
       <property name="MultiverseId" value="409564" />
@@ -3443,8 +3443,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="RW">{R/W}</s>, <s value="T">{T}</s>: Add <s value="R">{R}</s><s value="R">{R}</s>, <s value="R">{R}</s><s value="W">{W}</s>, or <s value="W">{W}</s><s value="W">{W}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="RW">{R/W}</s>, <s value="T">{T}</s>: Add <s value="R">{R}</s><s value="R">{R}</s>, <s value="R">{R}</s><s value="W">{W}</s>, or <s value="W">{W}</s><s value="W">{W}</s>.</property>
       <property name="Artist" value="Christine Choi" />
       <property name="Number" value="034" />
       <property name="MultiverseId" value="409565" />
@@ -3456,8 +3456,8 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="GU">{G/U}</s>, <s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s>, <s value="G">{G}</s><s value="U">{U}</s>, or <s value="U">{U}</s><s value="U">{U}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="GU">{G/U}</s>, <s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s>, <s value="G">{G}</s><s value="U">{U}</s>, or <s value="U">{U}</s><s value="U">{U}</s>.</property>
       <property name="Artist" value="Christine Choi" />
       <property name="Number" value="035" />
       <property name="MultiverseId" value="409566" />
@@ -3469,7 +3469,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s> to your mana pool. Ancient Tomb deals 2 damage to you.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>. Ancient Tomb deals 2 damage to you.</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="036" />
       <property name="MultiverseId" value="409567" />
@@ -3481,7 +3481,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="3">{3}</s>, <s value="T">{T}</s>, Sacrifice a land: Destroy target nonbasic land.</property>
       <property name="Artist" value="Florian de Gesincourt" />
       <property name="Number" value="037" />
@@ -3506,7 +3506,7 @@ When Crumbling Vestige enters the battlefield, add one mana of any color to your
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add one mana of any color to your mana pool.
+        <s value="T">{T}</s>: Add one mana of any color.
 Whenever you tap Forbidden Orchard for mana, target opponent creates a 1/1 colorless Spirit creature token.</property>
       <property name="Artist" value="Jesper Ejsing" />
       <property name="Number" value="039" />
@@ -3519,7 +3519,7 @@ Whenever you tap Forbidden Orchard for mana, target opponent creates a 1/1 color
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>, Pay 1 life: Add <s value="G">{G}</s> or <s value="W">{W}</s> to your mana pool.
+        <s value="T">{T}</s>, Pay 1 life: Add <s value="G">{G}</s> or <s value="W">{W}</s>.
 <s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Horizon Canopy: Draw a card.</property>
       <property name="Artist" value="Florian de Gesincourt" />
       <property name="Number" value="040" />
@@ -3532,7 +3532,7 @@ Whenever you tap Forbidden Orchard for mana, target opponent creates a 1/1 color
       <property name="Type" value="Legendary Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="1">{1}</s><s value="W">{W}</s>, <s value="T">{T}</s>: Prevent all combat damage that would be dealt by target attacking creature this turn.</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="041" />
@@ -3545,7 +3545,7 @@ Whenever you tap Forbidden Orchard for mana, target opponent creates a 1/1 color
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>, Pay 1 life: Add one mana of any color to your mana pool.</property>
+        <s value="T">{T}</s>, Pay 1 life: Add one mana of any color.</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="042" />
       <property name="MultiverseId" value="409573" />
@@ -3557,7 +3557,7 @@ Whenever you tap Forbidden Orchard for mana, target opponent creates a 1/1 color
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="T">{T}</s>, Sacrifice Strip Mine: Destroy target land.</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="043" />
@@ -3570,7 +3570,7 @@ Whenever you tap Forbidden Orchard for mana, target opponent creates a 1/1 color
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Tectonic Edge: Destroy target nonbasic land. Activate this ability only if an opponent controls four or more lands.</property>
       <property name="Artist" value="Raymond Swanland" />
       <property name="Number" value="044" />
@@ -3583,7 +3583,7 @@ Whenever you tap Forbidden Orchard for mana, target opponent creates a 1/1 color
       <property name="Type" value="Land" />
       <property name="Rarity" value="Expedition" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="T">{T}</s>, Sacrifice Wasteland: Destroy target nonbasic land.</property>
       <property name="Artist" value="William Wu" />
       <property name="Number" value="045" />

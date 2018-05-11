@@ -72,7 +72,7 @@ At the beginning of each upkeep, if a player cast two or more spells last turn, 
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Altar of the Lost enters the battlefield tapped.
-<s value="T">{T}</s>: Add two mana in any combination of colors to your mana pool. Spend this mana only to cast spells with flashback from a graveyard.</property>
+<s value="T">{T}</s>: Add two mana in any combination of colors. Spend this mana only to cast spells with flashback from a graveyard.</property>
       <property name="Artist" value="Daarken" />
       <property name="Number" value="144" />
       <property name="MultiverseId" value="262846" />
@@ -135,7 +135,7 @@ At the beginning of each upkeep, if a player cast two or more spells last turn, 
       <property name="Subtype" value="Aura Curse" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Enchant player
-At the beginning of enchanted player's upkeep, Curse of Thirst deals damage to that player equal to the number of Curses attached to him or her.</property>
+At the beginning of enchanted player's upkeep, Curse of Thirst deals damage to that player equal to the number of Curses attached to them.</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="057" />
       <property name="Flavor" value="&quot;May you drink until you drown but never be sated.&quot; —Odila, witch of Morkrut" />
@@ -224,7 +224,7 @@ Fateful hour — If you have 5 or less life, create five of those tokens instead
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie Treefolk" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Ghoultree costs <s value="1">{1}</s> less to cast for each creature card in your graveyard.</property>
+      <property name="Rules">This spell costs <s value="1">{1}</s> less to cast for each creature card in your graveyard.</property>
       <property name="Power" value="10" />
       <property name="Toughness" value="10" />
       <property name="PT Box" value="10 / 10" />
@@ -314,7 +314,7 @@ At the beginning of each upkeep, if no spells were cast last turn, transform Hun
         <property name="Type" value="Creature" />
         <property name="Subtype" value="Werewolf" />
         <property name="Rules">Trample
-Whenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent and 2 damage to up to one target creature that player controls.
+Whenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.
 At the beginning of each upkeep, if a player cast two or more spells last turn, transform Ravager of the Fells.</property>
         <property name="Power" value="4" />
         <property name="Toughness" value="4" />
@@ -353,7 +353,7 @@ Non-Human Werewolves you control can't transform.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target player puts the top X cards of his or her library into his or her graveyard. If Increasing Confusion was cast from a graveyard, that player puts twice that many cards into his or her graveyard instead.
+      <property name="Rules">Target player puts the top X cards of their library into their graveyard. If Increasing Confusion was cast from a graveyard, that player puts twice that many cards into their graveyard instead.
 Flashback <s value="X">{X}</s><s value="U">{U}</s> (You may cast this card from your graveyard for its flashback cost. Then exile it.)</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="041" />
@@ -592,7 +592,7 @@ Flashback <s value="G">{G}</s> (You may cast this card from your graveyard for i
       <property name="Subtype" value="Human Werewolf" />
       <property name="Rarity" value="DFC Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="G">{G}</s>.
 At the beginning of each upkeep, if no spells were cast last turn, transform Scorned Villager.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
@@ -608,7 +608,7 @@ At the beginning of each upkeep, if no spells were cast last turn, transform Sco
         <property name="Type" value="Creature" />
         <property name="Subtype" value="Werewolf" />
         <property name="Rules">Vigilance
-<s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s> to your mana pool.
+<s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s>.
 At the beginning of each upkeep, if a player cast two or more spells last turn, transform Moonscarred Werewolf.</property>
         <property name="Power" value="2" />
         <property name="Toughness" value="2" />
@@ -734,7 +734,7 @@ Noncreature spells cost <s value="1">{1}</s> more to cast.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
-      <property name="Artist" value="Johannes Voss &amp; Jana Schirmer" />
+      <property name="Artist" value="Jana Schirmer &amp; Johannes Voss" />
       <property name="Number" value="024" />
       <property name="Flavor" value="&quot;Thraben is our home and I will not see it fall to this unhallowed horde.&quot;" />
       <property name="MultiverseId" value="270445" />
@@ -826,7 +826,7 @@ At the beginning of each upkeep, if a player cast two or more spells last turn, 
       <property name="Subtype" value="Vampire Wizard" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Fiend of the Shadows deals combat damage to a player, that player exiles a card from his or her hand. You may play that card for as long as it remains exiled.
+Whenever Fiend of the Shadows deals combat damage to a player, that player exiles a card from their hand. You may play that card for as long as it remains exiled.
 Sacrifice a Human: Regenerate Fiend of the Shadows.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -846,11 +846,11 @@ Sacrifice a Human: Regenerate Fiend of the Shadows.</property>
       <property name="Subtype" value="Devil" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)
-Whenever Flayer of the Hatebound or another creature enters the battlefield from your graveyard, that creature deals damage equal to its power to target creature or player.</property>
+Whenever Flayer of the Hatebound or another creature enters the battlefield from your graveyard, that creature deals damage equal to its power to any target.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="4 / 2" />
-      <property name="Artist" value="Johannes Voss &amp; Jana Schirmer" />
+      <property name="Artist" value="Jana Schirmer &amp; Johannes Voss" />
       <property name="Number" value="089" />
       <property name="MultiverseId" value="262853" />
     </card>
@@ -965,7 +965,7 @@ Flashback <s value="G">{G}</s> (You may cast this card from your graveyard for i
       <property name="Subtype" value="Devil" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Haste
-Whenever a creature you control attacks, Hellrider deals 1 damage to defending player.</property>
+Whenever a creature you control attacks, Hellrider deals 1 damage to the player or planeswalker it's attacking.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1012,7 +1012,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Warden of the Wall enters the battlefield tapped.
-<s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+<s value="T">{T}</s>: Add <s value="C">{C}</s>.
 As long as it's not your turn, Warden of the Wall is a 2/3 Gargoyle artifact creature with flying.</property>
       <property name="Artist" value="Daniel Ljunggren" />
       <property name="Number" value="153" />
@@ -1024,7 +1024,7 @@ As long as it's not your turn, Warden of the Wall is a 2/3 Gargoyle artifact cre
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="2">{2}</s><s value="W">{W}</s><s value="B">{B}</s>, <s value="T">{T}</s>: Creatures you control gain deathtouch and lifelink until end of turn.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="158" />
@@ -1098,7 +1098,7 @@ Whenever Markov Blademaster deals combat damage to a player, put a +1/+1 counter
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
-      <property name="Artist" value="Johannes Voss &amp; Jana Schirmer" />
+      <property name="Artist" value="Jana Schirmer &amp; Johannes Voss" />
       <property name="Number" value="096" />
       <property name="Flavor" value="&quot;Mortals practice swordplay for a few decades at best. How can they ever attain the exquisite mastery that eternity has to offer?&quot;" />
       <property name="MultiverseId" value="249419" />
@@ -1154,7 +1154,7 @@ Other Vampire creatures you control get +1/+1 and have first strike.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
-      <property name="Artist" value="Johannes Voss &amp; Jana Schirmer" />
+      <property name="Artist" value="Jana Schirmer &amp; Johannes Voss" />
       <property name="Number" value="143" />
       <property name="Flavor" value="&quot;No longer can we allow our human populations to be mindlessly slaughtered by ghouls. Slay all who trespass.&quot; —Runo Stromkirk" />
       <property name="MultiverseId" value="262676" />
@@ -1184,8 +1184,8 @@ When Helvault is put into a graveyard from the battlefield, return all cards exi
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">As an additional cost to cast Fling, sacrifice a creature.
-Fling deals damage equal to the sacrificed creature's power to target creature or player.</property>
+      <property name="Rules">As an additional cost to cast this spell, sacrifice a creature.
+Fling deals damage equal to the sacrificed creature's power to any target.</property>
       <property name="Artist" value="Izzy" />
       <property name="Number" value="090" />
       <property name="Flavor" value="Masters of the sword know the blade is not the only weapon at their disposal." />
@@ -1199,7 +1199,7 @@ Fling deals damage equal to the sacrificed creature's power to target creature o
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Target player puts the top two cards of his or her library into his or her graveyard.
+      <property name="Rules">Target player puts the top two cards of their library into their graveyard.
 Draw a card.</property>
       <property name="Artist" value="David Rapoza" />
       <property name="Number" value="052" />
@@ -1289,7 +1289,7 @@ Flashback <s value="5">{5}</s><s value="G">{G}</s><s value="G">{G}</s> (You may 
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Target player discards two cards.
-Morbid — If a creature died this turn, instead that player reveals his or her hand, you choose two cards from it, then that player discards those cards.</property>
+Morbid — If a creature died this turn, instead that player reveals their hand, you choose two cards from it, then that player discards those cards.</property>
       <property name="Artist" value="John Stanko" />
       <property name="Number" value="066" />
       <property name="MultiverseId" value="262843" />
@@ -1655,7 +1655,7 @@ At the beginning of your upkeep, you may look at the top five cards of your libr
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Each player puts the top five cards of his or her library into his or her graveyard.
+      <property name="Rules">Each player puts the top five cards of their library into their graveyard.
 Flashback <s value="7">{7}</s><s value="U">{U}</s> (You may cast this card from your graveyard for its flashback cost. Then exile it.)</property>
       <property name="Artist" value="Terese Nielsen" />
       <property name="Number" value="032" />
@@ -1689,7 +1689,7 @@ Flashback <s value="7">{7}</s><s value="U">{U}</s> (You may cast this card from 
       <property name="Subtype" value="Aura Curse" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Enchant player
-Whenever enchanted player casts an instant or sorcery spell, each other player may copy that spell and may choose new targets for the copy he or she controls.</property>
+Whenever enchanted player casts an instant or sorcery spell, each other player may copy that spell and may choose new targets for the copy they control.</property>
       <property name="Artist" value="Slawomir Maniak" />
       <property name="Number" value="034" />
       <property name="MultiverseId" value="262841" />
@@ -1740,7 +1740,7 @@ When Dungeon Geists enters the battlefield, tap target creature an opponent cont
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie Horror" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Geralf's Mindcrusher enters the battlefield, target player puts the top five cards of his or her library into his or her graveyard.
+      <property name="Rules">When Geralf's Mindcrusher enters the battlefield, target player puts the top five cards of their library into their graveyard.
 Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
@@ -1796,7 +1796,7 @@ Undying (When this creature dies, if it had no +1/+1 counters on it, return it t
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie Warrior" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">As an additional cost to cast Headless Skaab, exile a creature card from your graveyard.
+      <property name="Rules">As an additional cost to cast this spell, exile a creature card from your graveyard.
 Headless Skaab enters the battlefield tapped.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="6" />
@@ -1872,7 +1872,7 @@ Flying</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">As an additional cost to cast Relentless Skaabs, exile a creature card from your graveyard.
+      <property name="Rules">As an additional cost to cast this spell, exile a creature card from your graveyard.
 Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -1926,7 +1926,7 @@ Flashback <s value="W">{W}</s> (You may cast this card from your graveyard for i
       <property name="Subtype" value="Spirit" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Flying
-Whenever Shriekgeist deals combat damage to a player, that player puts the top two cards of his or her library into his or her graveyard.</property>
+Whenever Shriekgeist deals combat damage to a player, that player puts the top two cards of their library into their graveyard.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2384,7 +2384,7 @@ Whenever Erdwal Ripper deals combat damage to a player, put a +1/+1 counter on i
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Fires of Undeath deals 2 damage to target creature or player.
+      <property name="Rules">Fires of Undeath deals 2 damage to any target.
 Flashback <s value="5">{5}</s><s value="B">{B}</s> (You may cast this card from your graveyard for its flashback cost. Then exile it.)</property>
       <property name="Artist" value="Jason Chan" />
       <property name="Number" value="088" />
@@ -2853,7 +2853,7 @@ Deathtouch (Any amount of damage this deals to a creature is enough to destroy i
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Equipped creature has "<s value="T">{T}</s>: This creature deals 1 damage to target creature or player" and "<s value="T">{T}</s>: This creature deals 3 damage to target Werewolf creature."
+      <property name="Rules">Equipped creature has "<s value="T">{T}</s>: This creature deals 1 damage to any target" and "<s value="T">{T}</s>: This creature deals 3 damage to target Werewolf creature."
 Equip <s value="5">{5}</s></property>
       <property name="Artist" value="Daniel Ljunggren" />
       <property name="Number" value="154" />
@@ -2985,7 +2985,7 @@ Flashback <s value="3">{3}</s><s value="R">{R}</s> (You may cast this card from 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="2">{2}</s><s value="B">{B}</s><s value="G">{G}</s>, <s value="T">{T}</s>, Sacrifice a creature: Draw a card.</property>
       <property name="Artist" value="Vincent Proce" />
       <property name="Number" value="156" />
@@ -2998,7 +2998,7 @@ Flashback <s value="3">{3}</s><s value="R">{R}</s> (You may cast this card from 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="3">{3}</s>, <s value="T">{T}</s>, Sacrifice Haunted Fengraf: Return a creature card at random from your graveyard to your hand.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="157" />

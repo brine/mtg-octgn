@@ -252,7 +252,7 @@ When a Dragon enters the battlefield, you may return Bladewing's Thrall from you
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Whenever a permanent is turned face up, Bonethorn Valesk deals 1 damage to target creature or player.</property>
+      <property name="Rules">Whenever a permanent is turned face up, Bonethorn Valesk deals 1 damage to any target.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="4 / 2" />
@@ -270,7 +270,7 @@ When a Dragon enters the battlefield, you may return Bladewing's Thrall from you
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Target player puts the top three cards of his or her library into his or her graveyard.
+      <property name="Rules">Target player puts the top three cards of their library into their graveyard.
 Storm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)</property>
       <property name="Artist" value="Tim Hildebrandt" />
       <property name="Number" value="029" />
@@ -320,7 +320,7 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="X">{X}</s>
-        <s value="B">{B}</s>, <s value="T">{T}</s>: Target player reveals X cards from his or her hand and you choose one of them. That player discards that card. Activate this ability only any time you could cast a sorcery.</property>
+        <s value="B">{B}</s>, <s value="T">{T}</s>: Target player reveals X cards from their hand and you choose one of them. That player discards that card. Activate this ability only any time you could cast a sorcery.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -352,7 +352,7 @@ At the beginning of the end step, if no creatures are on the battlefield, sacrif
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Carbonize deals 3 damage to target creature or player. That creature can't be regenerated this turn. If the creature would die this turn, exile it instead.</property>
+      <property name="Rules">Carbonize deals 3 damage to any target. If it's a creature, it can't be regenerated this turn, and if it would die this turn, exile it instead.</property>
       <property name="Artist" value="Alex Horley-Orlandelli" />
       <property name="Number" value="083" />
       <property name="MultiverseId" value="47226" />
@@ -388,7 +388,7 @@ Sacrifice a creature: Put a +1/+1 counter on Carrion Feeder.</property>
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="R">{R}</s>: Chartooth Cougar gets +1/+0 until end of turn.
-Mountaincycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Mountain card, reveal it, and put it into your hand. Then shuffle your library.)</property>
+Mountaincycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Mountain card, reveal it, put it into your hand, then shuffle your library.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -405,7 +405,7 @@ Mountaincycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: S
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">As an additional cost to cast Chill Haunting, exile X creature cards from your graveyard.
+      <property name="Rules">As an additional cost to cast this spell, exile X creature cards from your graveyard.
 Target creature gets -X/-X until end of turn.</property>
       <property name="Artist" value="Brian Snõddy" />
       <property name="Number" value="060" />
@@ -683,7 +683,7 @@ When you cycle Decree of Silence, you may counter target spell.</property>
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Exile all permanents. For as long as any of those cards remain exiled, at the beginning of each player's upkeep, that player returns one of the exiled cards he or she owns to the battlefield.</property>
+      <property name="Rules">Exile all permanents. For as long as any of those cards remain exiled, at the beginning of each player's upkeep, that player returns one of the exiled cards they own to the battlefield.</property>
       <property name="Artist" value="Dave Dorman" />
       <property name="Number" value="009" />
       <property name="MultiverseId" value="43573" />
@@ -711,7 +711,7 @@ When you cycle Decree of Silence, you may counter target spell.</property>
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Until end of turn, lands you control gain "<s value="T">{T}</s>: Add one mana of any color to your mana pool."</property>
+      <property name="Rules">Until end of turn, lands you control gain "<s value="T">{T}</s>: Add one mana of any color."</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="116" />
       <property name="Flavor" value="Nature has forgotten its own rules." />
@@ -764,7 +764,7 @@ When a creature with converted mana cost 6 or greater enters the battlefield, yo
       <property name="Subtype" value="Dragon Wizard" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Dragon Mage deals combat damage to a player, each player discards his or her hand, then draws seven cards.</property>
+Whenever Dragon Mage deals combat damage to a player, each player discards their hand, then draws seven cards.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
@@ -931,8 +931,8 @@ Storm (When you cast this spell, copy it for each spell cast before it this turn
       <property name="Subtype" value="Elf Mutant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s><s value="G">{G}</s> to your mana pool.
-Forestcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand. Then shuffle your library.)</property>
+        <s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s><s value="G">{G}</s>.
+Forestcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand, then shuffle your library.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="4 / 5" />
@@ -968,7 +968,7 @@ Forestcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Sea
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
 <s value="3">{3}</s><s value="W">{W}</s><s value="W">{W}</s>: Return Eternal Dragon from your graveyard to your hand. Activate this ability only during your upkeep.
-Plainscycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)</property>
+Plainscycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffle your library.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
@@ -1006,7 +1006,7 @@ Plainscycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Sea
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Enchant creature
-Whenever enchanted creature attacks, it deals 2 damage to target creature or player.</property>
+Whenever enchanted creature attacks, it deals 2 damage to any target.</property>
       <property name="Artist" value="Greg Staples" />
       <property name="Number" value="092" />
       <property name="Flavor" value="&quot;Perhaps extra heads would have served them better.&quot; —Foothill guide" />
@@ -1071,7 +1071,7 @@ When enchanted creature is turned face up, destroy it. It can't be regenerated.<
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target player loses life equal to the damage already dealt to him or her this turn.</property>
+      <property name="Rules">Target player loses life equal to the damage already dealt to that player this turn.</property>
       <property name="Artist" value="Matt Thompson" />
       <property name="Number" value="067" />
       <property name="Flavor" value="The pain of a lifetime—every scrape, illness, and bruise—condensed into a single moment." />
@@ -1125,7 +1125,7 @@ At the beginning of your upkeep, you may move any number of +1/+1 counters from 
       <property name="Color" value="Red" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of your upkeep, Form of the Dragon deals 5 damage to target creature or player.
+      <property name="Rules">At the beginning of your upkeep, Form of the Dragon deals 5 damage to any target.
 At the beginning of each end step, your life total becomes 5.
 Creatures without flying can't attack you.</property>
       <property name="Artist" value="Carl Critchlow" />
@@ -1230,7 +1230,7 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Goblin War Strike deals damage to target player equal to the number of Goblins you control.</property>
+      <property name="Rules">Goblin War Strike deals damage to target player or planeswalker equal to the number of Goblins you control.</property>
       <property name="Artist" value="Pete Venters" />
       <property name="Number" value="096" />
       <property name="Flavor" value="&quot;Fire, aim, ready!&quot;" />
@@ -1248,7 +1248,7 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Subtype" value="Goblin Warrior" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Goblin spells you cast cost <s value="1">{1}</s> less to cast.
-Goblin creatures you control have haste.</property>
+Goblins you control have haste.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1498,7 +1498,7 @@ Whenever Mercurial Kite deals combat damage to a creature, tap that creature. Th
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Put target permanent an opponent controls on top of its owner's library. That opponent may put an artifact, creature, enchantment, or land card from his or her hand onto the battlefield.</property>
+      <property name="Rules">Put target permanent an opponent controls on top of its owner's library. That opponent may put an artifact, creature, enchantment, or land card from their hand onto the battlefield.</property>
       <property name="Artist" value="Ron Spencer" />
       <property name="Number" value="040" />
       <property name="Flavor" value="If it's not one thing, it's another." />
@@ -1608,7 +1608,7 @@ When Mischievous Quanar is turned face up, copy target instant or sorcery spell.
       <property name="Subtype" value="Human Cleric Soldier" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Vigilance
-Plainscycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Plains card, reveal it, and put it into your hand. Then shuffle your library.)</property>
+Plainscycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffle your library.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="3 / 6" />
@@ -1779,7 +1779,7 @@ When Proteus Machine is turned face up, it becomes the creature type of your cho
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Wizard Mutant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Raven Guild Master deals combat damage to a player, that player exiles the top ten cards of his or her library.
+      <property name="Rules">Whenever Raven Guild Master deals combat damage to a player, that player exiles the top ten cards of their library.
 Morph <s value="2">{2}</s><s value="U">{U}</s><s value="U">{U}</s> (You may cast this card face down as a 2/2 creature for <s value="3">{3}</s>. Turn it face up any time for its morph cost.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
@@ -1863,7 +1863,7 @@ When Riptide Survivor is turned face up, discard two cards, then draw three card
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">You can't cast Rock Jockey if you've played a land this turn.
+      <property name="Rules">You can't cast this spell if you've played a land this turn.
 You can't play lands if you've cast Rock Jockey this turn.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -1953,7 +1953,7 @@ Storm (When you cast this spell, copy it for each spell cast before it this turn
       <property name="Subtype" value="Bird Soldier" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Flying
-Islandcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for an Island card, reveal it, and put it into your hand. Then shuffle your library.)</property>
+Islandcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for an Island card, reveal it, put it into your hand, then shuffle your library.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="3 / 4" />
@@ -1973,7 +1973,7 @@ Islandcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Sea
       <property name="Subtype" value="Goblin" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Siege-Gang Commander enters the battlefield, create three 1/1 red Goblin creature tokens.
-<s value="1">{1}</s><s value="R">{R}</s>, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to target creature or player.</property>
+<s value="1">{1}</s><s value="R">{R}</s>, Sacrifice a Goblin: Siege-Gang Commander deals 2 damage to any target.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2028,7 +2028,7 @@ When Skirk Volcanist is turned face up, it deals 3 damage divided as you choose 
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">As an additional cost to cast Skulltap, sacrifice a creature.
+      <property name="Rules">As an additional cost to cast this spell, sacrifice a creature.
 Draw two cards.</property>
       <property name="Artist" value="Adam Rex" />
       <property name="Number" value="073" />
@@ -2088,7 +2088,7 @@ Morph <s value="B">{B}</s><s value="B">{B}</s><s value="B">{B}</s> (You may cast
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Spark Spray deals 1 damage to target creature or player.
+      <property name="Rules">Spark Spray deals 1 damage to any target.
 Cycling <s value="R">{R}</s> (<s value="R">{R}</s>, Discard this card: Draw a card.)</property>
       <property name="Artist" value="Pete Venters" />
       <property name="Number" value="105" />
@@ -2160,7 +2160,7 @@ If a player would gain life, that player gains no life instead.</property>
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s> to your mana pool. Activate this ability only if you control five or more lands.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>. Activate this ability only if you control five or more lands.</property>
       <property name="Artist" value="Brian Snõddy" />
       <property name="Number" value="143" />
       <property name="Flavor" value="Those who bring nothing to the temple take nothing away." />
@@ -2250,7 +2250,7 @@ Morph <s value="4">{4}</s><s value="G">{G}</s><s value="G">{G}</s><s value="G">{
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Torrent of Fire deals damage to target creature or player equal to the highest converted mana cost among permanents you control.</property>
+      <property name="Rules">Torrent of Fire deals damage to any target equal to the highest converted mana cost among permanents you control.</property>
       <property name="Artist" value="Thomas M. Baxa" />
       <property name="Number" value="107" />
       <property name="Flavor" value="Dragon fire melts any instrument designed to measure it." />
@@ -2307,7 +2307,7 @@ Sacrifice a land with a trap counter on it: Trap Digger deals 3 damage to target
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="B">{B}</s>: Regenerate Twisted Abomination.
-Swampcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Swamp card, reveal it, and put it into your hand. Then shuffle your library.)</property>
+Swampcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Swamp card, reveal it, put it into your hand, then shuffle your library.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="5 / 3" />
@@ -2395,7 +2395,7 @@ Zombie creatures you control get +2/+1.</property>
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Mana pools don't empty as steps and phases end.</property>
+      <property name="Rules">Players don't lose unspent mana as steps and phases end.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="131" />
       <property name="Flavor" value="Once again, Kamahl felt the full force of the Mirari's pull, but he had learned much since the last time." />
@@ -2463,7 +2463,7 @@ Cycling <s value="3">{3}</s> (<s value="3">{3}</s>, Discard this card: Draw a ca
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Mutant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Forestcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Forest card, reveal it, and put it into your hand. Then shuffle your library.)</property>
+      <property name="Rules">Forestcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Forest card, reveal it, put it into your hand, then shuffle your library.)</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="6 / 6" />

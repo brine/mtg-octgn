@@ -46,7 +46,7 @@ At the beginning of your upkeep, tap target creature.</property>
       <property name="Subtype" value="Spirit" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="R">{R}</s>, Sacrifice a creature: Scorched Rusalka deals 1 damage to target player.</property>
+        <s value="R">{R}</s>, Sacrifice a creature: Scorched Rusalka deals 1 damage to target player or planeswalker.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -123,7 +123,7 @@ If a card would be put into an opponent's graveyard from anywhere, exile it inst
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Replicate <s value="1">{1}</s><s value="R">{R}</s> (When you cast this spell, copy it for each time you paid its replicate cost. You may choose new targets for the copies.)
-Pyromatics deals 1 damage to target creature or player.</property>
+Pyromatics deals 1 damage to any target.</property>
       <property name="Artist" value="Glen Angus" />
       <property name="Number" value="072" />
       <property name="Faction" value="Izzet" />
@@ -297,7 +297,7 @@ When Orzhov Euthanist enters the battlefield or the creature it haunts dies, des
       <property name="Color" value="Multicolor Blue Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Electrolyze deals 2 damage divided as you choose among one or two target creatures and/or players.
+      <property name="Rules">Electrolyze deals 2 damage divided as you choose among one or two targets.
 Draw a card.</property>
       <property name="Artist" value="Zoltan Boros &amp; Gabor Szikszai" />
       <property name="Number" value="111" />
@@ -432,7 +432,7 @@ When the creature Benediction of Moons haunts dies, you gain 1 life for each pla
       <property name="Subtype" value="Dragon Wizard" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever you draw a card, Niv-Mizzet, the Firemind deals 1 damage to target creature or player.
+Whenever you draw a card, Niv-Mizzet, the Firemind deals 1 damage to any target.
 <s value="T">{T}</s>: Draw a card.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -449,7 +449,7 @@ Whenever you draw a card, Niv-Mizzet, the Firemind deals 1 damage to target crea
       <property name="Type" value="Land" />
       <property name="Subtype" value="Island Mountain" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s> to your mana pool.)
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.)
 As Steam Vents enters the battlefield, you may pay 2 life. If you don't, Steam Vents enters the battlefield tapped.</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="164" />
@@ -700,7 +700,7 @@ Whenever you cast a red spell, Tibor and Lumia deals 1 damage to each creature w
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">If Leyline of Lightning is in your opening hand, you may begin the game with it on the battlefield.
-Whenever you cast a spell, you may pay <s value="1">{1}</s>. If you do, Leyline of Lightning deals 1 damage to target player.</property>
+Whenever you cast a spell, you may pay <s value="1">{1}</s>. If you do, Leyline of Lightning deals 1 damage to target player or planeswalker.</property>
       <property name="Artist" value="Paolo Parente" />
       <property name="Number" value="068" />
       <property name="Flavor" value="Where storm and spellcraft converge." />
@@ -868,7 +868,7 @@ When Belfry Spirit enters the battlefield or the creature it haunts dies, create
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elephant Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever an opponent casts a spell, that player sacrifices a permanent unless he or she pays <s value="1">{1}</s>.</property>
+      <property name="Rules">Whenever an opponent casts a spell, that player sacrifices a permanent unless they pay <s value="1">{1}</s>.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -925,7 +925,7 @@ When Angel of Despair enters the battlefield, destroy target permanent.</propert
       <property name="Rarity" value="Common" />
       <property name="Rules">Gruul Turf enters the battlefield tapped.
 When Gruul Turf enters the battlefield, return a land you control to its owner's hand.
-<s value="T">{T}</s>: Add <s value="R">{R}</s><s value="G">{G}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="R">{R}</s><s value="G">{G}</s>.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="158" />
       <property name="Faction" value="Gruul" />
@@ -981,7 +981,7 @@ Create a 3/3 blue Weird creature token with defender and flying. Exile it at the
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Petrified Wood-Kin can't be countered.
+      <property name="Rules">This spell can't be countered.
 Bloodthirst X (This creature enters the battlefield with X +1/+1 counters on it, where X is the damage dealt to your opponents this turn.)
 Protection from instants</property>
       <property name="Power" value="3" />
@@ -1001,7 +1001,7 @@ Protection from instants</property>
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="U">{U}</s><s value="R">{R}</s> to your mana pool.</property>
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="U">{U}</s><s value="R">{R}</s>.</property>
       <property name="Artist" value="Greg Hildebrandt" />
       <property name="Number" value="152" />
       <property name="Flavor" value="The Izzet signet is redesigned often, each time becoming closer to a vanity portrait of Niv-Mizzet." />
@@ -1111,7 +1111,7 @@ Whenever Borborygmos deals combat damage to a player, put a +1/+1 counter on eac
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Replicate <s value="3">{3}</s><s value="U">{U}</s> (When you cast this spell, copy it for each time you paid its replicate cost. You may choose new targets for the copies.)
-Choose target permanent an opponent controls. Search that player's library for a card with the same name and put it onto the battlefield under your control. Then that player shuffles his or her library.</property>
+Choose target permanent an opponent controls. Search that player's library for a card with the same name and put it onto the battlefield under your control. Then that player shuffles their library.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="030" />
       <property name="Faction" value="Izzet" />
@@ -1126,7 +1126,7 @@ Choose target permanent an opponent controls. Search that player's library for a
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Prevent the next 3 damage that would be dealt to target creature or player this turn.
+      <property name="Rules">Prevent the next 3 damage that would be dealt to any target this turn.
 Draw a card.</property>
       <property name="Artist" value="Ron Spears" />
       <property name="Number" value="021" />
@@ -1272,7 +1272,7 @@ Creatures with power less than Battering Wurm's power can't block it.</property>
       <property name="Color" value="Multicolor Blue Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target player draws two cards, then Cerebral Vortex deals damage to that player equal to the number of cards he or she has drawn this turn.</property>
+      <property name="Rules">Target player draws two cards, then Cerebral Vortex deals damage to that player equal to the number of cards they've drawn this turn.</property>
       <property name="Artist" value="Jeremy Jarvis" />
       <property name="Number" value="107" />
       <property name="Flavor" value="Izzet brains and Izzet boilers: contents under pressure." />
@@ -1285,7 +1285,7 @@ Creatures with power less than Battering Wurm's power can't block it.</property>
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="2">{2}</s><s value="U">{U}</s><s value="R">{R}</s>, <s value="T">{T}</s>: Exile the top card of your library. Until your next turn, you may cast that card if it's an instant or sorcery card.</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="160" />
@@ -1346,7 +1346,7 @@ At the beginning of your upkeep, put target creature card from a graveyard onto 
       <property name="Rarity" value="Rare" />
       <property name="Rules">Choose one —
 • Draw X cards.
-• Invoke the Firemind deals X damage to target creature or player.</property>
+• Invoke the Firemind deals X damage to any target.</property>
       <property name="Artist" value="Zoltan Boros &amp; Gabor Szikszai" />
       <property name="Number" value="118" />
       <property name="Flavor" value="To those in tune with the Firemind, there is no difference between knowledge and flame." />
@@ -1570,7 +1570,7 @@ Sacrifice Gristleback: You gain life equal to Gristleback's power.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Mountain Forest" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s> to your mana pool.)
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.)
 As Stomping Ground enters the battlefield, you may pay 2 life. If you don't, Stomping Ground enters the battlefield tapped.</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="165" />
@@ -1748,7 +1748,7 @@ Daggerclaw Imp can't block.</property>
       <property name="Subtype" value="Weird" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Gelectrode deals 1 damage to target creature or player.
+        <s value="T">{T}</s>: Gelectrode deals 1 damage to any target.
 Whenever you cast an instant or sorcery spell, you may untap Gelectrode.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="1" />
@@ -1801,7 +1801,7 @@ When Sky Swallower enters the battlefield, target opponent gains control of all 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="R">{R}</s><s value="G">{G}</s>, <s value="T">{T}</s>: Target creature gets +1/+1 and gains trample until end of turn.</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="163" />
@@ -1942,7 +1942,7 @@ When Orzhov Pontiff enters the battlefield or the creature it haunts dies, choos
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="R">{R}</s><s value="G">{G}</s> to your mana pool.</property>
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="R">{R}</s><s value="G">{G}</s>.</property>
       <property name="Artist" value="Tim Hildebrandt" />
       <property name="Number" value="150" />
       <property name="Flavor" value="Gruul territorial markings need not be legible. The blood, snot, and muck used to smear them are unmistakably Gruul." />
@@ -2119,7 +2119,7 @@ Enchanted creature has "<s value="T">{T}</s>: This creature deals damage equal t
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Weird" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Steamcore Weird enters the battlefield, if <s value="R">{R}</s> was spent to cast Steamcore Weird, it deals 2 damage to target creature or player.</property>
+      <property name="Rules">When Steamcore Weird enters the battlefield, if <s value="R">{R}</s> was spent to cast Steamcore Weird, it deals 2 damage to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -2179,7 +2179,7 @@ Enchanted creature has "<s value="T">{T}</s>: This creature deals damage equal t
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="B">{B}</s> to your mana pool.</property>
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="B">{B}</s>.</property>
       <property name="Artist" value="Tim Hildebrandt" />
       <property name="Number" value="155" />
       <property name="Flavor" value="The form of the sigil is just as important as the sigil itself. If it's carried on a medallion, its bearer is a master. If it's tattooed on the body, its bearer is a slave." />
@@ -2296,7 +2296,7 @@ Enchanted creature has "At the beginning of your upkeep, you lose 1 life."</prop
       <property name="Rarity" value="Common" />
       <property name="Rules">Izzet Boilerworks enters the battlefield tapped.
 When Izzet Boilerworks enters the battlefield, return a land you control to its owner's hand.
-<s value="T">{T}</s>: Add <s value="U">{U}</s><s value="R">{R}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="U">{U}</s><s value="R">{R}</s>.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="159" />
       <property name="Faction" value="Izzet" />
@@ -2386,7 +2386,7 @@ Creatures you control that are enchanted get +1/+1 and have first strike.</prope
       <property name="Subtype" value="Human Shaman" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">(<s value="RG">{R/G}</s> can be paid with either <s value="R">{R}</s> or <s value="G">{G}</s>.)
-<s value="3">{3}</s><s value="R">{R}</s>, Sacrifice a land: Gruul Guildmage deals 2 damage to target player.
+<s value="3">{3}</s><s value="R">{R}</s>, Sacrifice a land: Gruul Guildmage deals 2 damage to target player or planeswalker.
 <s value="3">{3}</s><s value="G">{G}</s>: Target creature gets +2/+2 until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -2441,7 +2441,7 @@ Whenever Mourning Thrull deals damage, you gain that much life.</property>
       <property name="Rarity" value="Common" />
       <property name="Rules">Orzhov Basilica enters the battlefield tapped.
 When Orzhov Basilica enters the battlefield, return a land you control to its owner's hand.
-<s value="T">{T}</s>: Add <s value="W">{W}</s><s value="B">{B}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="W">{W}</s><s value="B">{B}</s>.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="161" />
       <property name="Faction" value="Orzhov" />
@@ -2458,7 +2458,7 @@ When Orzhov Basilica enters the battlefield, return a land you control to its ow
       <property name="Subtype" value="Human Druid" />
       <property name="Rarity" value="Common" />
       <property name="Rules">(<s value="RG">{R/G}</s> can be paid with either <s value="R">{R}</s> or <s value="G">{G}</s>.)
-Sacrifice Wild Cantor: Add one mana of any color to your mana pool.</property>
+Sacrifice Wild Cantor: Add one mana of any color.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2533,7 +2533,7 @@ Order of the Stars has protection from the chosen color.</property>
       <property name="Color" value="Multicolor White Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Target opponent reveals his or her hand. You choose a nonland card from it and exile that card.</property>
+      <property name="Rules">Target opponent reveals their hand. You choose a nonland card from it and exile that card.</property>
       <property name="Artist" value="Darrell Riche" />
       <property name="Number" value="106" />
       <property name="Flavor" value="&quot;We have no need for military might. We wield two of the sharpest swords ever forged: Faith in our left hand, Wealth in our right.&quot; —Vuliev of the Ghost Council" />
@@ -2609,7 +2609,7 @@ Order of the Stars has protection from the chosen color.</property>
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Enchant creature
-Enchanted creature has "<s value="T">{T}</s>: This creature deals 1 damage to target creature or player."
+Enchanted creature has "<s value="T">{T}</s>: This creature deals 1 damage to any target."
 <s value="1">{1}</s><s value="U">{U}</s>: Return Hypervolt Grasp to its owner's hand.</property>
       <property name="Artist" value="Mark Romanoski" />
       <property name="Number" value="067" />
@@ -2675,7 +2675,7 @@ When Absolver Thrull enters the battlefield or the creature it haunts dies, dest
       <property name="Type" value="Land" />
       <property name="Subtype" value="Plains Swamp" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s> to your mana pool.)
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.)
 As Godless Shrine enters the battlefield, you may pay 2 life. If you don't, Godless Shrine enters the battlefield tapped.</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="157" />
@@ -2772,7 +2772,7 @@ Creatures you control that are enchanted get +1/+1.</property>
       <property name="Color" value="Multicolor Red Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Wreak Havoc can't be countered by spells or abilities.
+      <property name="Rules">This spell can't be countered.
 Destroy target artifact or land.</property>
       <property name="Artist" value="Wayne Reynolds" />
       <property name="Number" value="139" />
@@ -2790,7 +2790,7 @@ Destroy target artifact or land.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spirit" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Revenant Patriarch enters the battlefield, if <s value="W">{W}</s> was spent to cast it, target player skips his or her next combat phase.
+      <property name="Rules">When Revenant Patriarch enters the battlefield, if <s value="W">{W}</s> was spent to cast it, target player skips their next combat phase.
 Revenant Patriarch can't block.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
@@ -2887,7 +2887,7 @@ Whenever another black creature you control dies, create a 1/1 white Spirit crea
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="3">{3}</s><s value="W">{W}</s><s value="B">{B}</s>, <s value="T">{T}</s>: Target player loses 1 life and you gain 1 life.</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="162" />
@@ -2981,7 +2981,7 @@ Creatures with power less than Skarrgan Pit-Skulk's power can't block it.</prope
       <property name="Subtype" value="Giant Shaman" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Bloodthirst 3 (If an opponent was dealt damage this turn, this creature enters the battlefield with three +1/+1 counters on it.)
-<s value="1">{1}</s>, Sacrifice Skarrgan Skybreaker: Skarrgan Skybreaker deals damage equal to its power to target creature or player.</property>
+<s value="1">{1}</s>, Sacrifice Skarrgan Skybreaker: It deals damage equal to its power to any target.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -3098,7 +3098,7 @@ Draw a card.</property>
       <property name="Rarity" value="Common" />
       <property name="Rules">Reach (This creature can block creatures with flying.)
 As Silhana Starfletcher enters the battlefield, choose a color.
-<s value="T">{T}</s>: Add one mana of the chosen color to your mana pool.</property>
+<s value="T">{T}</s>: Add one mana of the chosen color.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />

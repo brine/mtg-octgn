@@ -70,7 +70,7 @@
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying, vigilance
 <s value="1">{1}</s><s value="W">{W}</s>: Prevent all damage that would be dealt to another target creature this turn by sources of the color of your choice.
-<s value="5">{5}</s><s value="W">{W}</s><s value="W">{W}</s>: Prevent all damage that would be dealt to target player this turn by sources of the color of your choice.</property>
+<s value="5">{5}</s><s value="W">{W}</s><s value="W">{W}</s>: Prevent all damage that would be dealt to target player or planeswalker this turn by sources of the color of your choice.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="5 / 4" />
@@ -807,7 +807,7 @@ Warden of the Beyond gets +2/+2 as long as an opponent owns a card in exile.</pr
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">For each attacking creature, its owner puts it on the top or bottom of his or her library.</property>
+      <property name="Rules">For each attacking creature, its owner puts it on the top or bottom of their library.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="044" />
       <property name="Flavor" value="&quot;Don't worry, there's plenty for everyone.&quot; —Vickon, Eleventh Company battlemage" />
@@ -1039,7 +1039,7 @@ Enchanted artifact is a creature with base power and toughness 5/5 in addition t
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)
+      <property name="Rules">Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
 Glacial Crasher can't attack unless there is a Mountain on the battlefield.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
@@ -1072,8 +1072,8 @@ Glacial Crasher can't attack unless there is a Mountain on the battlefield.</pro
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel Illusion" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying
-Cast Illusory Angel only if you've cast another spell this turn.</property>
+      <property name="Rules">Cast this spell only if you've cast another spell this turn.
+Flying</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -1127,7 +1127,7 @@ Enchanted creature can't be blocked except by Walls.</property>
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">+1: Look at the top two cards of your library. Put one of them into your graveyard.
 −3: Return another target nonland permanent to its owner's hand.
-−8: Each player shuffles his or her hand and graveyard into his or her library. You draw seven cards.</property>
+−8: Each player shuffles their hand and graveyard into their library. You draw seven cards.</property>
       <property name="PT Box" value="5" />
       <property name="Artist" value="Chase Stone" />
       <property name="Number" value="062" />
@@ -1274,7 +1274,7 @@ Whenever Master of Predicaments deals combat damage to a player, choose a card i
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Target opponent puts the top seven cards of his or her library into his or her graveyard.</property>
+      <property name="Rules">Target opponent puts the top seven cards of their library into their graveyard.</property>
       <property name="Artist" value="Michael C. Hayes" />
       <property name="Number" value="070" />
       <property name="Flavor" value="&quot;Your mind was a curious mix of madness and genius. I just took away the genius.&quot; —Jace Beleren" />
@@ -1661,7 +1661,7 @@ Enchanted land has "<s value="T">{T}</s>: Target player loses 3 life."</property
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for <s value="1">{1}</s> or one mana of that creature's color.)
-Covenant of Blood deals 4 damage to target creature or player and you gain 4 life.</property>
+Covenant of Blood deals 4 damage to any target and you gain 4 life.</property>
       <property name="Artist" value="Seb McKinnon" />
       <property name="Number" value="091" />
       <property name="MultiverseId" value="383217" />
@@ -1970,7 +1970,7 @@ When Necrogen Scudder enters the battlefield, you lose 3 life.</property>
       <property name="Subtype" value="Zombie Giant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Nightfire Giant gets +1/+1 as long as you control a Mountain.
-<s value="4">{4}</s><s value="R">{R}</s>: Nightfire Giant deals 2 damage to target creature or player.</property>
+<s value="4">{4}</s><s value="R">{R}</s>: Nightfire Giant deals 2 damage to any target.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="4 / 3" />
@@ -1991,7 +1991,7 @@ When Necrogen Scudder enters the battlefield, you lose 3 life.</property>
       <property name="Subtype" value="Demon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying, trample
-Whenever an opponent searches his or her library, that player sacrifices a creature and loses 10 life.
+Whenever an opponent searches their library, that player sacrifices a creature and loses 10 life.
 Whenever another creature dies, put a +1/+1 counter on Ob Nixilis, Unshackled.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -2121,7 +2121,7 @@ At the beginning of the upkeep of enchanted creature's controller, that player l
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for <s value="1">{1}</s> or one mana of that creature's color.)
-Choose a nonland card name. Search target player's graveyard, hand, and library for any number of cards with that name and exile them. Then that player shuffles his or her library.</property>
+Choose a nonland card name. Search target player's graveyard, hand, and library for any number of cards with that name and exile them. Then that player shuffles their library.</property>
       <property name="Artist" value="Jason Rainville" />
       <property name="Number" value="117" />
       <property name="MultiverseId" value="383402" />
@@ -2204,7 +2204,7 @@ Whenever you gain life, put a +1/+1 counter on Wall of Limbs.
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever an opponent discards a creature card, create a 2/2 black Zombie creature token.
-Whenever an opponent discards a land card, add <s value="B">{B}</s><s value="B">{B}</s> to your mana pool.
+Whenever an opponent discards a land card, add <s value="B">{B}</s><s value="B">{B}</s>.
 Whenever an opponent discards a noncreature, nonland card, draw a card.</property>
       <property name="Artist" value="Matt Stewart" />
       <property name="Number" value="122" />
@@ -2402,7 +2402,7 @@ Sacrifice a land: Draw two cards. Activate this ability only once each turn.</pr
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Enchant creature
-Enchanted creature has "<s value="T">{T}</s>: This creature deals damage equal to its power to target creature or player."</property>
+Enchanted creature has "<s value="T">{T}</s>: This creature deals damage equal to its power to any target."</property>
       <property name="Artist" value="Anthony Palumbo" />
       <property name="Number" value="133" />
       <property name="Flavor" value="&quot;With rage as your forge, your hammer can smite anything.&quot;" />
@@ -2419,7 +2419,7 @@ Enchanted creature has "<s value="T">{T}</s>: This creature deals damage equal t
       <property name="Type" value="Legendary Planeswalker" />
       <property name="Subtype" value="Chandra" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">+1: Chandra, Pyromaster deals 1 damage to target player and 1 damage to up to one target creature that player controls. That creature can't block this turn.
+      <property name="Rules">+1: Chandra, Pyromaster deals 1 damage to target player or planeswalker and 1 damage to up to one target creature that player or that planeswalker's controller controls. That creature can't block this turn.
 0: Exile the top card of your library. You may play it this turn.
 −7: Exile the top ten cards of your library. Choose an instant or sorcery card exiled this way and copy it three times. You may cast the copies without paying their mana costs.</property>
       <property name="PT Box" value="4" />
@@ -2466,7 +2466,7 @@ Enchanted creature has "<s value="T">{T}</s>: This creature deals damage equal t
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Cone of Flame deals 1 damage to target creature or player, 2 damage to another target creature or player, and 3 damage to a third target creature or player.</property>
+      <property name="Rules">Cone of Flame deals 1 damage to any target, 2 damage to another target, and 3 damage to a third target.</property>
       <property name="Artist" value="Chippy" />
       <property name="Number" value="137" />
       <property name="MultiverseId" value="383213" />
@@ -2565,7 +2565,7 @@ Target creature gets +1/+0 and gains first strike until end of turn. (It deals c
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Generator Servant: Add <s value="C">{C}</s><s value="C">{C}</s> to your mana pool. If that mana is spent on a creature spell, it gains haste until end of turn. (That creature can attack and <s value="T">{T}</s> as soon as it comes under your control.)</property>
+        <s value="T">{T}</s>, Sacrifice Generator Servant: Add <s value="C">{C}</s><s value="C">{C}</s>. If that mana is spent on a creature spell, it gains haste until end of turn. (That creature can attack and <s value="T">{T}</s> as soon as it comes under your control.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -2694,7 +2694,7 @@ When Hoarding Dragon dies, you may put the exiled card into its owner's hand.</p
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant creature you control
 Enchanted creature gets +2/+0.
-<s value="R">{R}</s>, Sacrifice Inferno Fist: Inferno Fist deals 2 damage to target creature or player.</property>
+<s value="R">{R}</s>, Sacrifice Inferno Fist: Inferno Fist deals 2 damage to any target.</property>
       <property name="Artist" value="James Ryman" />
       <property name="Number" value="150" />
       <property name="Flavor" value="&quot;I've never been above throwing the first punch.&quot;" />
@@ -2711,7 +2711,7 @@ Enchanted creature gets +2/+0.
       <property name="Subtype" value="Ape" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Kird Chieftain gets +1/+1 as long as you control a Forest.
-<s value="4">{4}</s><s value="G">{G}</s>: Target creature gets +2/+2 and gains trample until end of turn. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)</property>
+<s value="4">{4}</s><s value="G">{G}</s>: Target creature gets +2/+2 and gains trample until end of turn. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2768,7 +2768,7 @@ Enchanted creature gets +2/+0.
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Lava Axe deals 5 damage to target player.</property>
+      <property name="Rules">Lava Axe deals 5 damage to target player or planeswalker.</property>
       <property name="Artist" value="Brian Snõddy" />
       <property name="Number" value="154" />
       <property name="Flavor" value="A strict upgrade over the cinder hatchet." />
@@ -2783,7 +2783,7 @@ Enchanted creature gets +2/+0.
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Lightning Strike deals 3 damage to target creature or player.</property>
+      <property name="Rules">Lightning Strike deals 3 damage to any target.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="155" />
       <property name="Flavor" value="To wield lightning is to tame chaos." />
@@ -2817,7 +2817,7 @@ Enchanted creature gets +2/+0.
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="2">{2}</s>
-        <s value="R">{R}</s>: Miner's Bane gets +1/+0 and gains trample until end of turn. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)</property>
+        <s value="R">{R}</s>: Miner's Bane gets +1/+0 and gains trample until end of turn. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="6 / 3" />
@@ -2875,7 +2875,7 @@ Enchanted creature gets +2/+0.
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Hound" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">As long as you control an artifact, Scrapyard Mongrel gets +2/+0 and has trample. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)</property>
+      <property name="Rules">As long as you control an artifact, Scrapyard Mongrel gets +2/+0 and has trample. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2893,8 +2893,8 @@ Enchanted creature gets +2/+0.
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">As an additional cost to cast Shrapnel Blast, sacrifice an artifact.
-Shrapnel Blast deals 5 damage to target creature or player.</property>
+      <property name="Rules">As an additional cost to cast this spell, sacrifice an artifact.
+Shrapnel Blast deals 5 damage to any target.</property>
       <property name="Artist" value="Hideaki Takamura" />
       <property name="Number" value="161" />
       <property name="Flavor" value="It requires immense pressure to imbue an item with magic. If the spell is broken . . ." />
@@ -2933,8 +2933,8 @@ Whenever Siege Dragon attacks, if defending player controls no Walls, it deals 2
       <property name="Subtype" value="Avatar" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">First strike
-<s value="3">{3}</s><s value="R">{R}</s><s value="R">{R}</s>: Soul of Shandalar deals 3 damage to target player and 3 damage to up to one target creature that player controls.
-<s value="3">{3}</s><s value="R">{R}</s><s value="R">{R}</s>, Exile Soul of Shandalar from your graveyard: Soul of Shandalar deals 3 damage to target player and 3 damage to up to one target creature that player controls.</property>
+<s value="3">{3}</s><s value="R">{R}</s><s value="R">{R}</s>: Soul of Shandalar deals 3 damage to target player or planeswalker and 3 damage to up to one target creature that player or that planeswalker's controller controls.
+<s value="3">{3}</s><s value="R">{R}</s><s value="R">{R}</s>, Exile Soul of Shandalar from your graveyard: Soul of Shandalar deals 3 damage to target player or planeswalker and 3 damage to up to one target creature that player or that planeswalker's controller controls.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="6 / 6" />
@@ -2953,7 +2953,7 @@ Whenever Siege Dragon attacks, if defending player controls no Walls, it deals 2
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for <s value="1">{1}</s> or one mana of that creature's color.)
-Stoke the Flames deals 4 damage to target creature or player.</property>
+Stoke the Flames deals 4 damage to any target.</property>
       <property name="Artist" value="Ryan Barger" />
       <property name="Number" value="164" />
       <property name="MultiverseId" value="383404" />
@@ -3124,7 +3124,7 @@ Search your library for a creature card with converted mana cost X or less and p
       <property name="Subtype" value="Elf Druid" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="G">{G}</s>.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -3174,7 +3174,7 @@ Target creature gets +2/+2 until end of turn.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Plant Hydra" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When you cast Genesis Hydra, reveal the top X cards of your library. You may put a nonland permanent card with converted mana cost X or less from among them onto the battlefield. Then shuffle the rest into your library.
+      <property name="Rules">When you cast this spell, reveal the top X cards of your library. You may put a nonland permanent card with converted mana cost X or less from among them onto the battlefield. Then shuffle the rest into your library.
 Genesis Hydra enters the battlefield with X +1/+1 counters on it.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="0" />
@@ -3302,7 +3302,7 @@ When Kalonian Twingrove enters the battlefield, create a green Treefolk Warrior 
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As an additional cost to cast Life's Legacy, sacrifice a creature.
+      <property name="Rules">As an additional cost to cast this spell, sacrifice a creature.
 Draw cards equal to the sacrificed creature's power.</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="183" />
@@ -3425,7 +3425,7 @@ Creatures you control get +3/+3 until end of turn.</property>
       <property name="Subtype" value="Human Druid" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Other green creatures you control get +1/+1.
-<s value="G">{G}</s>, <s value="T">{T}</s>: Another target green creature you control gains trample until end of turn. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)</property>
+<s value="G">{G}</s>, <s value="T">{T}</s>: Another target green creature you control gains trample until end of turn. (If it would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -3444,7 +3444,7 @@ Creatures you control get +3/+3 until end of turn.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Plant Elemental" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Phytotitan dies, return it to the battlefield tapped under its owner's control at the beginning of his or her next upkeep.</property>
+      <property name="Rules">When Phytotitan dies, return it to the battlefield tapped under its owner's control at the beginning of their next upkeep.</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="7 / 2" />
@@ -3604,7 +3604,7 @@ Creatures you control get +3/+3 until end of turn.</property>
       <property name="Subtype" value="Wurm" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for <s value="1">{1}</s> or one mana of that creature's color.)
-Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)</property>
+Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
@@ -3717,7 +3717,7 @@ Trample (This creature can deal excess combat damage to defending player or plan
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant land
 When Verdant Haven enters the battlefield, you gain 2 life.
-Whenever enchanted land is tapped for mana, its controller adds one mana of any color to his or her mana pool (in addition to the mana the land produces).</property>
+Whenever enchanted land is tapped for mana, its controller adds an additional one mana of any color.</property>
       <property name="Artist" value="Daniel Ljunggren" />
       <property name="Number" value="206" />
       <property name="MultiverseId" value="383427" />
@@ -3848,7 +3848,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Equipped creature gets +2/+2 and has trample. (It can deal excess combat damage to defending player or planeswalker while attacking.)
+      <property name="Rules">Equipped creature gets +2/+2 and has trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)
 Equip <s value="4">{4}</s> (<s value="4">{4}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Jung Park" />
       <property name="Number" value="213" />
@@ -3914,7 +3914,7 @@ Equip <s value="4">{4}</s> (<s value="4">{4}</s>: Attach to target creature you 
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="T">{T}</s>: Put a charge counter on Grindclock.
-<s value="T">{T}</s>: Target player puts the top X cards of his or her library into his or her graveyard, where X is the number of charge counters on Grindclock.</property>
+<s value="T">{T}</s>: Target player puts the top X cards of their library into their graveyard, where X is the number of charge counters on Grindclock.</property>
       <property name="Artist" value="Nils Hamm" />
       <property name="Number" value="217" />
       <property name="Flavor" value="Pray you never hear it chime." />
@@ -3980,8 +3980,8 @@ Juggernaut can't be blocked by Walls.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Meteorite enters the battlefield, it deals 2 damage to target creature or player.
-<s value="T">{T}</s>: Add one mana of any color to your mana pool.</property>
+      <property name="Rules">When Meteorite enters the battlefield, it deals 2 damage to any target.
+<s value="T">{T}</s>: Add one mana of any color.</property>
       <property name="Artist" value="Scott Murphy" />
       <property name="Number" value="221" />
       <property name="Flavor" value="&quot;And if I'm lying,&quot; he began . . ." />
@@ -4109,7 +4109,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Scuttling Doom Engine can't be blocked by creatures with power 2 or less.
-When Scuttling Doom Engine dies, it deals 6 damage to target opponent.</property>
+When Scuttling Doom Engine dies, it deals 6 damage to target opponent or planeswalker.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="6 / 6" />
@@ -4277,8 +4277,8 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s> to your mana pool. Battlefield Forge deals 1 damage to you.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>. Battlefield Forge deals 1 damage to you.</property>
       <property name="Artist" value="Darrell Riche" />
       <property name="Number" value="240" />
       <property name="MultiverseId" value="383189" />
@@ -4290,8 +4290,8 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s> to your mana pool. Caves of Koilos deals 1 damage to you.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>. Caves of Koilos deals 1 damage to you.</property>
       <property name="Artist" value="Jim Nelson" />
       <property name="Number" value="241" />
       <property name="MultiverseId" value="383203" />
@@ -4303,7 +4303,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Artifact Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Indestructible
-<s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="C">{C}</s>.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="242" />
       <property name="Flavor" value="Structures built from darksteel yield to neither assault nor age." />
@@ -4329,8 +4329,8 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s> to your mana pool. Llanowar Wastes deals 1 damage to you.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>. Llanowar Wastes deals 1 damage to you.</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="244" />
       <property name="MultiverseId" value="383302" />
@@ -4342,7 +4342,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">When Radiant Fountain enters the battlefield, you gain 2 life.
-<s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="C">{C}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="245" />
       <property name="Flavor" value="&quot;All peoples treasure a place where the weary traveler may drink in peace.&quot; —Ajani Goldmane" />
@@ -4355,8 +4355,8 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s> to your mana pool. Shivan Reef deals 1 damage to you.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>. Shivan Reef deals 1 damage to you.</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="246" />
       <property name="MultiverseId" value="383379" />
@@ -4368,8 +4368,8 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="T">{T}</s>: Add one mana of any color to your mana pool. Spend this mana only to cast a Sliver spell.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a Sliver spell.
 <s value="5">{5}</s>, <s value="T">{T}</s>: Create a 1/1 colorless Sliver creature token. Activate this ability only if you control a Sliver.</property>
       <property name="Artist" value="Igor Kieryluk" />
       <property name="Number" value="247" />
@@ -4394,8 +4394,8 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
-<s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s> to your mana pool. Yavimaya Coast deals 1 damage to you.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>. Yavimaya Coast deals 1 damage to you.</property>
       <property name="Artist" value="Anthony S. Waters" />
       <property name="Number" value="249" />
       <property name="MultiverseId" value="383441" />
@@ -4407,7 +4407,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s>.)</property>
       <property name="Artist" value="Nils Hamm" />
       <property name="Number" value="251" />
       <property name="MultiverseId" value="383346" />
@@ -4419,7 +4419,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s>.)</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="250" />
       <property name="MultiverseId" value="383347" />
@@ -4431,7 +4431,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s>.)</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="252" />
       <property name="MultiverseId" value="383348" />
@@ -4443,7 +4443,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s>.)</property>
       <property name="Artist" value="Andreas Rocha" />
       <property name="Number" value="253" />
       <property name="MultiverseId" value="383349" />
@@ -4455,7 +4455,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
       <property name="Artist" value="Florian de Gesincourt" />
       <property name="Number" value="255" />
       <property name="MultiverseId" value="383281" />
@@ -4467,7 +4467,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
       <property name="Artist" value="Andreas Rocha" />
       <property name="Number" value="257" />
       <property name="MultiverseId" value="383282" />
@@ -4479,7 +4479,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
       <property name="Artist" value="Peter Mohrbacher" />
       <property name="Number" value="256" />
       <property name="MultiverseId" value="383283" />
@@ -4491,7 +4491,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="254" />
       <property name="MultiverseId" value="383284" />
@@ -4503,7 +4503,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s>.)</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="259" />
       <property name="MultiverseId" value="383410" />
@@ -4515,7 +4515,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s>.)</property>
       <property name="Artist" value="Jung Park" />
       <property name="Number" value="261" />
       <property name="MultiverseId" value="383408" />
@@ -4527,7 +4527,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s>.)</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="258" />
       <property name="MultiverseId" value="383409" />
@@ -4539,7 +4539,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s>.)</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="260" />
       <property name="MultiverseId" value="383411" />
@@ -4551,7 +4551,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
       <property name="Artist" value="Florian de Gesincourt" />
       <property name="Number" value="263" />
       <property name="MultiverseId" value="383317" />
@@ -4563,7 +4563,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="262" />
       <property name="MultiverseId" value="383315" />
@@ -4575,7 +4575,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
       <property name="Artist" value="Karl Kopinski" />
       <property name="Number" value="265" />
       <property name="MultiverseId" value="383316" />
@@ -4587,7 +4587,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
       <property name="Artist" value="Nils Hamm" />
       <property name="Number" value="264" />
       <property name="MultiverseId" value="383318" />
@@ -4599,7 +4599,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="267" />
       <property name="MultiverseId" value="383242" />
@@ -4611,7 +4611,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="269" />
       <property name="MultiverseId" value="383241" />
@@ -4623,7 +4623,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="268" />
       <property name="MultiverseId" value="383243" />
@@ -4635,7 +4635,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="266" />
       <property name="MultiverseId" value="383244" />
@@ -4703,8 +4703,7 @@ When Aegis Angel enters the battlefield, another target permanent gains indestru
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying (This creature can't be blocked except by creatures with flying or reach.)
-Vigilance (Attacking doesn't cause this creature to tap.)</property>
+      <property name="Rules">Flying, vigilance</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -4914,8 +4913,8 @@ Whenever a creature dealt damage by Sengir Vampire this turn dies, put a +1/+1 c
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Terra Stomper can't be countered.
-Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)</property>
+      <property name="Rules">This spell can't be countered.
+Trample  (This creature can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="8" />
       <property name="Toughness" value="8" />
       <property name="PT Box" value="8 / 8" />

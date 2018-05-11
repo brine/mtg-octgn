@@ -229,12 +229,12 @@ When Whitemane Lion enters the battlefield, return a creature you control to its
     <card name="Intet, the Dreamer" id="15b0d295-9def-2536-cc85-52cbb9e814b6">
       <property name="Cost">
         <s value="3">{3}</s>
+        <s value="G">{G}</s>
         <s value="U">{U}</s>
         <s value="R">{R}</s>
-        <s value="G">{G}</s>
       </property>
       <property name="CMC" value="6" />
-      <property name="Color" value="Multicolor Blue Red Green" />
+      <property name="Color" value="Multicolor Green Blue Red" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
@@ -287,7 +287,7 @@ Whenever Intet, the Dreamer deals combat damage to a player, you may pay <s valu
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Ape Spirit" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Exile Simian Spirit Guide from your hand: Add <s value="R">{R}</s> to your mana pool.</property>
+      <property name="Rules">Exile Simian Spirit Guide from your hand: Add <s value="R">{R}</s>.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -401,12 +401,12 @@ At the beginning of each end step, if Dunerider Outlaw dealt damage to an oppone
     <card name="Numot, the Devastator" id="26558392-e7ba-fcc8-5ef7-7f9c4595a509">
       <property name="Cost">
         <s value="3">{3}</s>
+        <s value="U">{U}</s>
         <s value="R">{R}</s>
         <s value="W">{W}</s>
-        <s value="U">{U}</s>
       </property>
       <property name="CMC" value="6" />
-      <property name="Color" value="Multicolor Red White Blue" />
+      <property name="Color" value="Multicolor Blue Red White" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
@@ -431,7 +431,7 @@ Whenever Numot, the Devastator deals combat damage to a player, you may pay <s v
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="3">{3}</s>, <s value="T">{T}</s>: Tap target creature you control and target creature of an opponent's choice he or she controls. Those creatures fight each other. (Each deals damage equal to its power to the other.)</property>
+        <s value="3">{3}</s>, <s value="T">{T}</s>: Tap target creature you control and target creature of an opponent's choice they control. Those creatures fight each other. (Each deals damage equal to its power to the other.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
@@ -670,7 +670,7 @@ Whenever Stormfront Riders or another creature is returned to your hand from the
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When you cast Temporal Extortion, any player may pay half his or her life, rounded up. If a player does, counter Temporal Extortion.
+      <property name="Rules">When you cast this spell, any player may pay half their life, rounded up. If a player does, counter Temporal Extortion.
 Take an extra turn after this one.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="081" />
@@ -707,7 +707,7 @@ Take an extra turn after this one.</property>
       <property name="Rarity" value="Common" />
       <property name="Rules">Choose one —
 • Target player gains 3 life.
-• Prevent the next 3 damage that would be dealt to target creature or player this turn.</property>
+• Prevent the next 3 damage that would be dealt to any target this turn.</property>
       <property name="Artist" value="Michael Sutfin" />
       <property name="Number" value="150" />
       <property name="Flavor" value="The elves of Llanowar don't trust in alchemy. They rely instead on pure herbs harvested from the forest's sacred heart." />
@@ -783,7 +783,7 @@ When Stonecloaker enters the battlefield, exile target card from a graveyard.</p
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Kicker <s value="3">{3}</s><s value="G">{G}</s> (You may pay an additional <s value="3">{3}</s><s value="G">{G}</s> as you cast this spell.)
 Search your library for up to two Forest cards and put them onto the battlefield tapped. Then shuffle your library.
-If Hunting Wilds was kicked, untap all Forests put onto the battlefield this way. They become 3/3 green creatures with haste that are still lands.</property>
+If this spell was kicked, untap all Forests put onto the battlefield this way. They become 3/3 green creatures with haste that are still lands.</property>
       <property name="Artist" value="Steve Ellis" />
       <property name="Number" value="130" />
       <property name="MultiverseId" value="122458" />
@@ -872,7 +872,7 @@ When you control no Swamps, sacrifice Bog Serpent.</property>
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Vanishing 2 (This creature enters the battlefield with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)
-When Keldon Marauders enters the battlefield or leaves the battlefield, it deals 1 damage to target player.</property>
+When Keldon Marauders enters the battlefield or leaves the battlefield, it deals 1 damage to target player or planeswalker.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -930,7 +930,7 @@ When Keldon Marauders enters the battlefield or leaves the battlefield, it deals
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Prodigal Pyromancer deals 1 damage to target creature or player.</property>
+        <s value="T">{T}</s>: Prodigal Pyromancer deals 1 damage to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1064,7 +1064,7 @@ Tumble deals 6 damage to each creature with flying.</property>
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Split second (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)
-Choose target card in a graveyard other than a basic land card. Search its owner's graveyard, hand, and library for all cards with the same name as that card and exile them. Then that player shuffles his or her library.</property>
+Choose target card in a graveyard other than a basic land card. Search its owner's graveyard, hand, and library for all cards with the same name as that card and exile them. Then that player shuffles their library.</property>
       <property name="Artist" value="Jon Foster" />
       <property name="Number" value="071" />
       <property name="MultiverseId" value="126804" />
@@ -1213,7 +1213,7 @@ When Dust Elemental enters the battlefield, return three creatures you control t
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Horror" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When you cast Phantasmagorian, any player may discard three cards. If a player does, counter Phantasmagorian.
+      <property name="Rules">When you cast this spell, any player may discard three cards. If a player does, counter Phantasmagorian.
 Discard three cards: Return Phantasmagorian from your graveyard to your hand.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
@@ -1286,7 +1286,7 @@ When there are no creatures on the battlefield, sacrifice Porphyry Nodes.</prope
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant creature
 Enchanted creature can't attack or block.
-Enchanted creature has "<s value="T">{T}</s>: Add one mana of any color to your mana pool."</property>
+Enchanted creature has "<s value="T">{T}</s>: Add one mana of any color."</property>
       <property name="Artist" value="Heather Hudson" />
       <property name="Number" value="142" />
       <property name="Flavor" value="&quot;I'll guard this fruit and its seedling until the land is healed. My life now belongs to Dominaria.&quot;" />
@@ -1393,7 +1393,7 @@ If Pouncing Wurm was kicked, it enters the battlefield with three +1/+1 counters
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When you cast Brain Gorgers, any player may sacrifice a creature. If a player does, counter Brain Gorgers.
+      <property name="Rules">When you cast this spell, any player may sacrifice a creature. If a player does, counter Brain Gorgers.
 Madness <s value="1">{1}</s><s value="B">{B}</s> (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="2" />
@@ -1482,8 +1482,8 @@ Whenever a time counter is removed from Benalish Commander while it's exiled, cr
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elf Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Radha, Heir to Keld attacks, you may add <s value="R">{R}</s><s value="R">{R}</s> to your mana pool.
-<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.</property>
+      <property name="Rules">Whenever Radha, Heir to Keld attacks, you may add <s value="R">{R}</s><s value="R">{R}</s>.
+<s value="T">{T}</s>: Add <s value="G">{G}</s>.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1714,7 +1714,7 @@ When Deadly Grub dies, if it had no time counters on it, create a 6/1 green Inse
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Target player reveals his or her hand. You choose a nonland card with converted mana cost X or less from it. That player discards that card.</property>
+      <property name="Rules">Target player reveals their hand. You choose a nonland card with converted mana cost X or less from it. That player discards that card.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="052" />
       <property name="Flavor" value="Dream of nothing, and wake to a dream come true." />
@@ -1833,7 +1833,7 @@ Sacrifice a Saproling: Target creature gains haste until end of turn.</property>
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of each player's upkeep, that player may put an artifact, creature, or land card from his or her hand onto the battlefield.</property>
+      <property name="Rules">At the beginning of each player's upkeep, that player may put an artifact, creature, or land card from their hand onto the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2044,7 +2044,7 @@ Whenever enchanted creature deals damage, you gain that much life.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">For each tapped nonland permanent target opponent controls, search that player's library for a card with the same name as that permanent and put it onto the battlefield under your control. Then that player shuffles his or her library.
+      <property name="Rules">For each tapped nonland permanent target opponent controls, search that player's library for a card with the same name as that permanent and put it onto the battlefield under your control. Then that player shuffles their library.
 Suspend 3—<s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> (Rather than cast this card from your hand, you may pay <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="038" />
@@ -2061,7 +2061,7 @@ Suspend 3—<s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> (Rather
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="T">{T}</s>: Draw a card. Activate this ability only if you have exactly seven cards in hand.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
@@ -2244,7 +2244,7 @@ When Ana Battlemage enters the battlefield, if it was kicked with its <s value="
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Akroma, Angel of Fury can't be countered.
+      <property name="Rules">This spell can't be countered.
 Flying, trample, protection from white and from blue
 <s value="R">{R}</s>: Akroma, Angel of Fury gets +1/+0 until end of turn.
 Morph <s value="3">{3}</s><s value="R">{R}</s><s value="R">{R}</s><s value="R">{R}</s> (You may cast this card face down as a 2/2 creature for <s value="3">{3}</s>. Turn it face up any time for its morph cost.)</property>
@@ -2340,8 +2340,8 @@ Destroy all lands.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Sliver" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">All Slivers have "<s value="1">{1}</s>, Sacrifice this permanent: This permanent deals 1 damage to target creature or player."
-All Slivers have "<s value="1">{1}</s>, Sacrifice this permanent: Prevent the next 1 damage that would be dealt to target Sliver creature or player this turn."</property>
+      <property name="Rules">All Slivers have "<s value="1">{1}</s>, Sacrifice this permanent: This permanent deals 1 damage to any target."
+All Slivers have "<s value="1">{1}</s>, Sacrifice this permanent: Prevent the next 1 damage that would be dealt to target player, planeswalker, or Sliver creature this turn."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2574,12 +2574,12 @@ Whenever a time counter is removed from Detritivore while it's exiled, destroy t
     <card name="Oros, the Avenger" id="cee74e21-27bd-f23e-9046-9365976d4f7b">
       <property name="Cost">
         <s value="3">{3}</s>
+        <s value="R">{R}</s>
         <s value="W">{W}</s>
         <s value="B">{B}</s>
-        <s value="R">{R}</s>
       </property>
       <property name="CMC" value="6" />
-      <property name="Color" value="Multicolor White Black Red" />
+      <property name="Color" value="Multicolor Red White Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
@@ -2601,7 +2601,7 @@ Whenever Oros, the Avenger deals combat damage to a player, you may pay <s value
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Target opponent reveals his or her hand. You may put a creature card from it onto the battlefield under your control. That creature gains haste. Sacrifice it at the beginning of the next end step.</property>
+      <property name="Rules">Target opponent reveals their hand. You may put a creature card from it onto the battlefield under your control. That creature gains haste. Sacrifice it at the beginning of the next end step.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="082" />
       <property name="MultiverseId" value="131002" />
@@ -2682,12 +2682,12 @@ Echo <s value="1">{1}</s><s value="G">{G}</s><s value="G">{G}</s> (At the beginn
     <card name="Teneb, the Harvester" id="d355dc55-006b-1339-9cc3-6c3e1e848c4c">
       <property name="Cost">
         <s value="3">{3}</s>
+        <s value="W">{W}</s>
         <s value="B">{B}</s>
         <s value="G">{G}</s>
-        <s value="W">{W}</s>
       </property>
       <property name="CMC" value="6" />
-      <property name="Color" value="Multicolor Black Green White" />
+      <property name="Color" value="Multicolor White Black Green" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
@@ -2769,7 +2769,7 @@ Sacrifice a Saproling: You gain 2 life.</property>
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When you cast Dash Hopes, any player may pay 5 life. If a player does, counter Dash Hopes.
+      <property name="Rules">When you cast this spell, any player may pay 5 life. If a player does, counter Dash Hopes.
 Counter target spell.</property>
       <property name="Artist" value="Zoltan Boros &amp; Gabor Szikszai" />
       <property name="Number" value="068" />
@@ -2801,7 +2801,7 @@ Counter target spell.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Counter target instant or sorcery spell. Its controller reveals cards from the top of his or her library until he or she reveals an instant or sorcery card. That player may cast that card without paying its mana cost. Then he or she shuffles his or her library.</property>
+      <property name="Rules">Counter target instant or sorcery spell. Its controller reveals cards from the top of their library until they reveal an instant or sorcery card. That player may cast that card without paying its mana cost. Then the player shuffles their library.</property>
       <property name="Artist" value="Stephen Tappin" />
       <property name="Number" value="047" />
       <property name="MultiverseId" value="122459" />
@@ -2809,12 +2809,12 @@ Counter target spell.</property>
     <card name="Vorosh, the Hunter" id="e0c50200-c6e2-2bb1-5ae4-a2c7205de18d">
       <property name="Cost">
         <s value="3">{3}</s>
+        <s value="B">{B}</s>
         <s value="G">{G}</s>
         <s value="U">{U}</s>
-        <s value="B">{B}</s>
       </property>
       <property name="CMC" value="6" />
-      <property name="Color" value="Multicolor Green Blue Black" />
+      <property name="Color" value="Multicolor Black Green Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
@@ -2971,7 +2971,7 @@ Whenever a time counter is removed from Aeon Chronicler while it's exiled, draw 
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="2">{2}</s>, <s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool for each Swamp you control.</property>
+        <s value="2">{2}</s>, <s value="T">{T}</s>: Add <s value="B">{B}</s> for each Swamp you control.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />

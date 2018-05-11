@@ -70,7 +70,7 @@
       <property name="Rarity" value="Common" />
       <property name="Rules">Choose one —
 • Target player gains X life.
-• Prevent the next X damage that would be dealt to target creature or player this turn.</property>
+• Prevent the next X damage that would be dealt to any target this turn.</property>
       <property name="Artist" value="Harold McNeill" />
       <property name="Number" value="001" />
       <property name="Flavor" value="&quot;Healing is a matter of time, but it is sometimes also a matter of opportunity.&quot; —D'Avenant proverb" />
@@ -99,7 +99,7 @@
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="8">{8}</s>, <s value="T">{T}</s>: Aladdin's Ring deals 4 damage to target creature or player.</property>
+        <s value="8">{8}</s>, <s value="T">{T}</s>: Aladdin's Ring deals 4 damage to any target.</property>
       <property name="Artist" value="Dan Frazier" />
       <property name="Number" value="292" />
       <property name="Flavor" value="&quot;After these words the magician drew a ring off his finger, and put it on one of Aladdin's, saying: 'It is a talisman against all evil, so long as you obey me.'&quot; —The Arabian Nights, Junior Classics trans." />
@@ -152,7 +152,7 @@
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="2">{2}</s>, <s value="T">{T}</s>: Prevent the next 1 damage that would be dealt to target creature or player this turn.</property>
+        <s value="2">{2}</s>, <s value="T">{T}</s>: Prevent the next 1 damage that would be dealt to any target this turn.</property>
       <property name="Artist" value="Margaret Organ-Kean" />
       <property name="Number" value="293" />
       <property name="Flavor" value="Among the first allies Urza gained were the people of Kroog. As a sign of friendship, Urza gave the healers of the city potent amulets; afterwards, thousands journeyed to Kroog in hope of healing." />
@@ -251,7 +251,7 @@ Enchanted Wall can attack as though it didn't have defender.</property>
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="U">{U}</s>, <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s><s value="C">{C}</s> to your mana pool.</property>
+        <s value="U">{U}</s>, <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s><s value="C">{C}</s>.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="0 / 1" />
@@ -373,7 +373,7 @@ Whenever enchanted creature deals damage to you, Backfire deals that much damage
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Each player chooses a number of lands he or she controls equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.</property>
+      <property name="Rules">Each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.</property>
       <property name="Artist" value="Mark Poole" />
       <property name="Number" value="006" />
       <property name="MultiverseId" value="2321" />
@@ -389,7 +389,7 @@ Whenever enchanted creature deals damage to you, Backfire deals that much damage
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)
+      <property name="Rules">Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
 Haste (This creature can attack and <s value="T">{T}</s> as soon as it comes under your control.)
 At the beginning of the end step, sacrifice Ball Lightning.</property>
       <property name="Power" value="6" />
@@ -465,7 +465,7 @@ Whenever Battering Ram becomes blocked by a Wall, destroy that Wall at end of co
       <property name="Subtype" value="Bird" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-<s value="T">{T}</s>: Add one mana of any color to your mana pool.</property>
+<s value="T">{T}</s>: Add one mana of any color.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="0 / 1" />
@@ -503,7 +503,7 @@ Protection from white (This creature can't be blocked, targeted, dealt damage, o
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="2">{2}</s>, <s value="T">{T}</s>: Put a charge counter on Black Mana Battery.
-<s value="T">{T}</s>, Remove any number of charge counters from Black Mana Battery: Add <s value="B">{B}</s> to your mana pool, then add an additional <s value="B">{B}</s> to your mana pool for each charge counter removed this way.</property>
+<s value="T">{T}</s>, Remove any number of charge counters from Black Mana Battery: Add <s value="B">{B}</s>, then add an additional <s value="B">{B}</s> for each charge counter removed this way.</property>
       <property name="Artist" value="Anson Maddocks" />
       <property name="Number" value="298" />
       <property name="MultiverseId" value="2021" />
@@ -517,7 +517,7 @@ Protection from white (This creature can't be blocked, targeted, dealt damage, o
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">As Black Vise enters the battlefield, choose an opponent.
-At the beginning of the chosen player's upkeep, Black Vise deals X damage to that player, where X is the number of cards in his or her hand minus 4.</property>
+At the beginning of the chosen player's upkeep, Black Vise deals X damage to that player, where X is the number of cards in their hand minus 4.</property>
       <property name="Artist" value="Richard Thomas" />
       <property name="Number" value="299" />
       <property name="MultiverseId" value="2022" />
@@ -608,7 +608,7 @@ When enchanted land becomes tapped, destroy it.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="2">{2}</s>, <s value="T">{T}</s>: Put a charge counter on Blue Mana Battery.
-<s value="T">{T}</s>, Remove any number of charge counters from Blue Mana Battery: Add <s value="U">{U}</s> to your mana pool, then add an additional <s value="U">{U}</s> to your mana pool for each charge counter removed this way.</property>
+<s value="T">{T}</s>, Remove any number of charge counters from Blue Mana Battery: Add <s value="U">{U}</s>, then add an additional <s value="U">{U}</s> for each charge counter removed this way.</property>
       <property name="Artist" value="Amy Weber" />
       <property name="Number" value="300" />
       <property name="MultiverseId" value="2023" />
@@ -724,7 +724,7 @@ At the beginning of your upkeep, you may pay <s value="1">{1}</s>. If you do, un
       <property name="Rarity" value="Rare" />
       <property name="Rules">Remove Bronze Tablet from your deck before playing if you're not playing for ante.
 Bronze Tablet enters the battlefield tapped.
-<s value="4">{4}</s>, <s value="T">{T}</s>: Exile Bronze Tablet and target nontoken permanent an opponent owns. That player may pay 10 life. If he or she does, put Bronze Tablet into its owner's graveyard. Otherwise, that player owns Bronze Tablet and you own the other exiled card.</property>
+<s value="4">{4}</s>, <s value="T">{T}</s>: Exile Bronze Tablet and target nontoken permanent an opponent owns. That player may pay 10 life. If they do, put Bronze Tablet into its owner's graveyard. Otherwise, that player owns Bronze Tablet and you own the other exiled card.</property>
       <property name="Artist" value="Tom Wänerstrand" />
       <property name="Number" value="303" />
       <property name="MultiverseId" value="2026" />
@@ -743,7 +743,7 @@ Bronze Tablet enters the battlefield tapped.
       <property name="Rules">
         <s value="1">{1}</s>
         <s value="R">{R}</s>
-        <s value="R">{R}</s>: Brothers of Fire deals 1 damage to target creature or player and 1 damage to you.</property>
+        <s value="R">{R}</s>: Brothers of Fire deals 1 damage to any target and 1 damage to you.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -850,7 +850,7 @@ Enchanted creature has mountainwalk. (It can't be blocked as long as defending p
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="2">{2}</s>, <s value="T">{T}</s>: Add one mana of any color to your mana pool.</property>
+        <s value="2">{2}</s>, <s value="T">{T}</s>: Add one mana of any color.</property>
       <property name="Artist" value="Amy Weber" />
       <property name="Number" value="304" />
       <property name="MultiverseId" value="2027" />
@@ -864,7 +864,7 @@ Enchanted creature has mountainwalk. (It can't be blocked as long as defending p
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add <s value="C">{C}</s> to your mana pool.</property>
+      <property name="Rules">Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add <s value="C">{C}</s>.</property>
       <property name="Artist" value="Richard Thomas" />
       <property name="Number" value="236" />
       <property name="MultiverseId" value="2203" />
@@ -1059,7 +1059,7 @@ Whenever Cockatrice blocks or becomes blocked by a non-Wall creature, destroy th
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)
+      <property name="Rules">Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
 Colossus of Sardia doesn't untap during your untap step.
 <s value="9">{9}</s>: Untap Colossus of Sardia. Activate this ability only during your upkeep.</property>
       <property name="Power" value="9" />
@@ -1341,7 +1341,7 @@ The chosen player's maximum hand size is four.</property>
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Add <s value="B">{B}</s><s value="B">{B}</s><s value="B">{B}</s> to your mana pool.</property>
+      <property name="Rules">Add <s value="B">{B}</s><s value="B">{B}</s><s value="B">{B}</s>.</property>
       <property name="Artist" value="Sandra Everingham" />
       <property name="Number" value="129" />
       <property name="MultiverseId" value="2096" />
@@ -1472,7 +1472,7 @@ The chosen player's maximum hand size is four.</property>
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Disintegrate deals X damage to target creature or player. That creature can't be regenerated this turn. If the creature would die this turn, exile it instead.</property>
+      <property name="Rules">Disintegrate deals X damage to any target. If it's a creature, it can't be regenerated this turn, and if it would die this turn, exile it instead.</property>
       <property name="Artist" value="Anson Maddocks" />
       <property name="Number" value="185" />
       <property name="MultiverseId" value="2268" />
@@ -1560,7 +1560,7 @@ Enchanted creature gets +3/+3.</property>
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Spend only black mana on X.
-Drain Life deals X damage to target creature or player. You gain life equal to the damage dealt, but not more life than the player's life total before Drain Life dealt damage or the creature's toughness.</property>
+Drain Life deals X damage to any target. You gain life equal to the damage dealt, but not more life than the player's life total before the damage was dealt, the planeswalker's loyalty before the damage was dealt, or the creature's toughness.</property>
       <property name="Artist" value="Douglas Shuler" />
       <property name="Number" value="132" />
       <property name="MultiverseId" value="2099" />
@@ -1574,7 +1574,7 @@ Drain Life deals X damage to target creature or player. You gain life equal to t
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target player activates a mana ability of each land he or she controls. Then put all mana from that player's mana pool into yours.</property>
+      <property name="Rules">Target player activates a mana ability of each land they control. Then that player loses all unspent mana and you add the mana lost this way.</property>
       <property name="Artist" value="Douglas Shuler" />
       <property name="Number" value="067" />
       <property name="MultiverseId" value="2150" />
@@ -1785,7 +1785,7 @@ When Elder Land Wurm blocks, it loses defender.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Tap target untapped creature you control. If you do, add an amount of <s value="C">{C}</s> to your mana pool equal to that creature's converted mana cost.</property>
+      <property name="Rules">Tap target untapped creature you control. If you do, add an amount of <s value="C">{C}</s> equal to that creature's converted mana cost.</property>
       <property name="Artist" value="Daniel Gelon" />
       <property name="Number" value="069" />
       <property name="MultiverseId" value="2152" />
@@ -1911,7 +1911,7 @@ At the beginning of the upkeep of enchanted enchantment's controller, Feedback d
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add to your mana pool one mana of any color that a land an opponent controls could produce.</property>
+        <s value="T">{T}</s>: Add one mana of any color that a land an opponent controls could produce.</property>
       <property name="Artist" value="Quinton Hoover" />
       <property name="Number" value="319" />
       <property name="Flavor" value="&quot;What do you have that I cannot obtain?&quot; —Mairsil, called the Pretender" />
@@ -1945,8 +1945,8 @@ At the beginning of the upkeep of enchanted enchantment's controller, Feedback d
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Fireball deals X damage divided evenly, rounded down, among any number of target creatures and/or players.
-Fireball costs <s value="1">{1}</s> more to cast for each target beyond the first.</property>
+      <property name="Rules">This spell costs <s value="1">{1}</s> more to cast for each target beyond the first.
+Fireball deals X damage divided evenly, rounded down, among any number of targets.</property>
       <property name="Artist" value="Mark Tedin" />
       <property name="Number" value="192" />
       <property name="MultiverseId" value="2275" />
@@ -2068,7 +2068,7 @@ Enchanted creature has flying.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)
+      <property name="Rules">Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
 At the beginning of your upkeep, Force of Nature deals 8 damage to you unless you pay <s value="G">{G}</s><s value="G">{G}</s><s value="G">{G}</s><s value="G">{G}</s>.</property>
       <property name="Power" value="8" />
       <property name="Toughness" value="8" />
@@ -2083,7 +2083,7 @@ At the beginning of your upkeep, Force of Nature deals 8 damage to you unless yo
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
       <property name="Artist" value="Christopher Rush" />
       <property name="Number" value="378" />
       <property name="MultiverseId" value="2379" />
@@ -2095,7 +2095,7 @@ At the beginning of your upkeep, Force of Nature deals 8 damage to you unless yo
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
       <property name="Artist" value="Christopher Rush" />
       <property name="Number" value="376" />
       <property name="MultiverseId" value="2378" />
@@ -2107,7 +2107,7 @@ At the beginning of your upkeep, Force of Nature deals 8 damage to you unless yo
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Forest" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
       <property name="Artist" value="Christopher Rush" />
       <property name="Number" value="377" />
       <property name="MultiverseId" value="2377" />
@@ -2444,7 +2444,7 @@ Goblin Rock Sled can't attack unless defending player controls a Mountain.</prop
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="2">{2}</s>, <s value="T">{T}</s>: Put a charge counter on Green Mana Battery.
-<s value="T">{T}</s>, Remove any number of charge counters from Green Mana Battery: Add <s value="G">{G}</s> to your mana pool, then add an additional <s value="G">{G}</s> to your mana pool for each charge counter removed this way.</property>
+<s value="T">{T}</s>, Remove any number of charge counters from Green Mana Battery: Add <s value="G">{G}</s>, then add an additional <s value="G">{G}</s> for each charge counter removed this way.</property>
       <property name="Artist" value="Christopher Rush" />
       <property name="Number" value="323" />
       <property name="MultiverseId" value="2046" />
@@ -2492,7 +2492,7 @@ Enchanted creature has protection from green. This effect doesn't remove Green W
       <property name="Rarity" value="Common" />
       <property name="Rules">Choose one —
 • Target player gains 3 life.
-• Prevent the next 3 damage that would be dealt to target creature or player this turn.</property>
+• Prevent the next 3 damage that would be dealt to any target this turn.</property>
       <property name="Artist" value="Dan Frazier" />
       <property name="Number" value="028" />
       <property name="MultiverseId" value="2343" />
@@ -2596,7 +2596,7 @@ Enchanted creature gets +1/+2.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Return all artifacts target player owns to his or her hand.</property>
+      <property name="Rules">Return all artifacts target player owns to their hand.</property>
       <property name="Artist" value="NéNé Thomas" />
       <property name="Number" value="077" />
       <property name="Flavor" value="This spell, like many attributed to Drafna, was actually the work of his wife and former student, Hurkyl." />
@@ -2777,7 +2777,7 @@ Enchanted creature can attack as though it had haste.
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
       <property name="Artist" value="Mark Poole" />
       <property name="Number" value="367" />
       <property name="MultiverseId" value="2391" />
@@ -2789,7 +2789,7 @@ Enchanted creature can attack as though it had haste.
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
       <property name="Artist" value="Mark Poole" />
       <property name="Number" value="368" />
       <property name="MultiverseId" value="2389" />
@@ -2801,7 +2801,7 @@ Enchanted creature can attack as though it had haste.
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Island" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
       <property name="Artist" value="Mark Poole" />
       <property name="Number" value="369" />
       <property name="MultiverseId" value="2390" />
@@ -2957,7 +2957,7 @@ At the beginning of your upkeep, sacrifice Junún Efreet unless you pay <s value
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">At the beginning of each player's upkeep, Karma deals damage to that player equal to the number of Swamps he or she controls.</property>
+      <property name="Rules">At the beginning of each player's upkeep, Karma deals damage to that player equal to the number of Swamps they control.</property>
       <property name="Artist" value="Richard Thomas" />
       <property name="Number" value="032" />
       <property name="MultiverseId" value="2347" />
@@ -3171,7 +3171,7 @@ If an effect causes you to discard a card, discard it, but you may put it on top
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Lightning Bolt deals 3 damage to target creature or player.</property>
+      <property name="Rules">Lightning Bolt deals 3 damage to any target.</property>
       <property name="Artist" value="Christopher Rush" />
       <property name="Number" value="208" />
       <property name="MultiverseId" value="2291" />
@@ -3216,7 +3216,7 @@ At the beginning of your upkeep, you may remove a vitality counter from Living A
       <property name="Subtype" value="Elf Druid" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="G">{G}</s>.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -3326,7 +3326,7 @@ All creatures able to block enchanted creature do so.</property>
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Blue creatures don't untap during their controllers' untap steps.
-At the beginning of each player's upkeep, that player may choose any number of tapped blue creatures he or she controls and pay <s value="4">{4}</s> for each creature chosen this way. If the player does, untap those creatures.</property>
+At the beginning of each player's upkeep, that player may choose any number of tapped blue creatures they control and pay <s value="4">{4}</s> for each creature chosen this way. If the player does, untap those creatures.</property>
       <property name="Artist" value="Susan Van Camp" />
       <property name="Number" value="209" />
       <property name="MultiverseId" value="2292" />
@@ -3373,7 +3373,7 @@ At the beginning of each player's upkeep, that player may choose any number of t
       <property name="Color" value="Red" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever a player taps a land for mana, that player adds one mana to his or her mana pool of any type that land produced.</property>
+      <property name="Rules">Whenever a player taps a land for mana, that player adds one mana of any type that land produced.</property>
       <property name="Artist" value="Christopher Rush" />
       <property name="Number" value="211" />
       <property name="MultiverseId" value="2294" />
@@ -3387,7 +3387,7 @@ At the beginning of each player's upkeep, that player may choose any number of t
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Tap all lands target player controls and empty his or her mana pool.</property>
+      <property name="Rules">Tap all lands target player controls and that player loses all unspent mana.</property>
       <property name="Artist" value="Dameon Willich" />
       <property name="Number" value="085" />
       <property name="MultiverseId" value="2168" />
@@ -3403,7 +3403,7 @@ At the beginning of each player's upkeep, that player may choose any number of t
       <property name="Rules">Mana Vault doesn't untap during your untap step.
 At the beginning of your upkeep, you may pay <s value="4">{4}</s>. If you do, untap Mana Vault.
 At the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you.
-<s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s><s value="C">{C}</s> to your mana pool.</property>
+<s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s><s value="C">{C}</s>.</property>
       <property name="Artist" value="Mark Tedin" />
       <property name="Number" value="334" />
       <property name="MultiverseId" value="2057" />
@@ -3513,7 +3513,7 @@ At the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage t
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="2">{2}</s>, <s value="T">{T}</s>: Target player puts the top two cards of his or her library into his or her graveyard.</property>
+        <s value="2">{2}</s>, <s value="T">{T}</s>: Target player puts the top two cards of their library into their graveyard.</property>
       <property name="Artist" value="Kaja Foglio" />
       <property name="Number" value="336" />
       <property name="Flavor" value="More than one mage was driven insane by the sound of the Millstone relentlessly grinding away." />
@@ -3527,7 +3527,7 @@ At the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage t
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Each player may discard up to three cards. Mind Bomb deals damage to each player equal to 3 minus the number of cards he or she discarded this way.</property>
+      <property name="Rules">Each player may discard up to three cards. Mind Bomb deals damage to each player equal to 3 minus the number of cards they discarded this way.</property>
       <property name="Artist" value="Mark Tedin" />
       <property name="Number" value="087" />
       <property name="MultiverseId" value="2170" />
@@ -3552,10 +3552,10 @@ At the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage t
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="1">{1}</s>: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.
 <s value="T">{T}</s>: Target Assembly-Worker creature gets +1/+1 until end of turn.</property>
-      <property name="Artist" value="Phil Foglio &amp; Kaja Foglio" />
+      <property name="Artist" value="Kaja Foglio &amp; Phil Foglio" />
       <property name="Number" value="361" />
       <property name="MultiverseId" value="2387" />
     </card>
@@ -3616,7 +3616,7 @@ At the beginning of your upkeep, Mishra's War Machine deals 3 damage to you unle
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
       <property name="Artist" value="Douglas Shuler" />
       <property name="Number" value="375" />
       <property name="MultiverseId" value="2383" />
@@ -3628,7 +3628,7 @@ At the beginning of your upkeep, Mishra's War Machine deals 3 damage to you unle
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
       <property name="Artist" value="Douglas Shuler" />
       <property name="Number" value="374" />
       <property name="MultiverseId" value="2382" />
@@ -3640,7 +3640,7 @@ At the beginning of your upkeep, Mishra's War Machine deals 3 damage to you unle
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Mountain" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
       <property name="Artist" value="Douglas Shuler" />
       <property name="Number" value="373" />
       <property name="MultiverseId" value="2381" />
@@ -3674,7 +3674,7 @@ At the beginning of your upkeep, Mishra's War Machine deals 3 damage to you unle
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Snake" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Whenever Nafs Asp deals damage to a player, that player loses 1 life at the beginning of his or her next draw step unless he or she pays <s value="1">{1}</s> before that draw step.</property>
+      <property name="Rules">Whenever Nafs Asp deals damage to a player, that player loses 1 life at the beginning of their next draw step unless they pay <s value="1">{1}</s> before that draw step.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -3815,7 +3815,7 @@ Nightmare's power and toughness are each equal to the number of Swamps you contr
       <property name="Subtype" value="Orc Warrior" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Orcish Artillery deals 2 damage to target creature or player and 3 damage to you.</property>
+        <s value="T">{T}</s>: Orcish Artillery deals 2 damage to any target and 3 damage to you.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -3888,7 +3888,7 @@ Remove two carrion counters from Osai Vultures: Osai Vultures gets +1/+1 until e
       <property name="Rules">Enchant creature
 When Paralyze enters the battlefield, tap enchanted creature.
 Enchanted creature doesn't untap during its controller's untap step.
-At the beginning of the upkeep of enchanted creature's controller, that player may pay <s value="4">{4}</s>. If he or she does, untap the creature.</property>
+At the beginning of the upkeep of enchanted creature's controller, that player may pay <s value="4">{4}</s>. If the player does, untap the creature.</property>
       <property name="Artist" value="Anson Maddocks" />
       <property name="Number" value="151" />
       <property name="MultiverseId" value="2118" />
@@ -3925,7 +3925,7 @@ At the beginning of the upkeep of enchanted creature's controller, that player m
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="0">{0}</s>: The next 1 damage that would be dealt to Personal Incarnation this turn is dealt to its owner instead. Only Personal Incarnation's owner may activate this ability.
-When Personal Incarnation dies, its owner loses half his or her life, rounded up.</property>
+When Personal Incarnation dies, its owner loses half their life, rounded up.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="6 / 6" />
@@ -4050,7 +4050,7 @@ Enchanted land is the chosen type.</property>
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Pirate Ship can't attack unless defending player controls an Island.
-<s value="T">{T}</s>: Pirate Ship deals 1 damage to target creature or player.
+<s value="T">{T}</s>: Pirate Ship deals 1 damage to any target.
 When you control no Islands, sacrifice Pirate Ship.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
@@ -4103,7 +4103,7 @@ When you control no Islands, sacrifice Pirate Ship.</property>
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s>.)</property>
       <property name="Artist" value="Jesper Myrfors" />
       <property name="Number" value="365" />
       <property name="MultiverseId" value="2384" />
@@ -4115,7 +4115,7 @@ When you control no Islands, sacrifice Pirate Ship.</property>
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s>.)</property>
       <property name="Artist" value="Jesper Myrfors" />
       <property name="Number" value="364" />
       <property name="MultiverseId" value="2386" />
@@ -4127,7 +4127,7 @@ When you control no Islands, sacrifice Pirate Ship.</property>
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Plains" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s>.)</property>
       <property name="Artist" value="Jesper Myrfors" />
       <property name="Number" value="366" />
       <property name="MultiverseId" value="2385" />
@@ -4158,7 +4158,7 @@ At the beginning of the upkeep of enchanted enchantment's controller, that playe
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Counter target spell unless its controller pays <s value="X">{X}</s>. If he or she doesn't, that player taps all lands with mana abilities he or she controls and empties his or her mana pool.</property>
+      <property name="Rules">Counter target spell unless its controller pays <s value="X">{X}</s>. If that player doesn't, they tap all lands with mana abilities they control and lose all unspent mana.</property>
       <property name="Artist" value="Richard Thomas" />
       <property name="Number" value="093" />
       <property name="MultiverseId" value="2176" />
@@ -4172,7 +4172,7 @@ At the beginning of the upkeep of enchanted enchantment's controller, that playe
       <property name="Color" value="Red" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of each player's upkeep, Power Surge deals X damage to that player, where X is the number of untapped lands he or she controlled at the beginning of this turn.</property>
+      <property name="Rules">At the beginning of each player's upkeep, Power Surge deals X damage to that player, where X is the number of untapped lands they controlled at the beginning of this turn.</property>
       <property name="Artist" value="Douglas Shuler" />
       <property name="Number" value="216" />
       <property name="MultiverseId" value="2299" />
@@ -4225,7 +4225,7 @@ At the beginning of the upkeep of enchanted enchantment's controller, that playe
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Prodigal Sorcerer deals 1 damage to target creature or player.</property>
+        <s value="T">{T}</s>: Prodigal Sorcerer deals 1 damage to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -4245,7 +4245,7 @@ At the beginning of the upkeep of enchanted enchantment's controller, that playe
       <property name="Subtype" value="Illusion" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Psionic Entity deals 2 damage to target creature or player and 3 damage to itself.</property>
+        <s value="T">{T}</s>: Psionic Entity deals 2 damage to any target and 3 damage to itself.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -4292,7 +4292,7 @@ Whenever enchanted land becomes tapped, Psychic Venom deals 2 damage to that lan
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Pyrotechnics deals 4 damage divided as you choose among any number of target creatures and/or players.</property>
+      <property name="Rules">Pyrotechnics deals 4 damage divided as you choose among any number of targets.</property>
       <property name="Artist" value="Anson Maddocks" />
       <property name="Number" value="217" />
       <property name="Flavor" value="&quot;Hi! ni! ya! Behold the man of flint, that's me! Four lightnings zigzag from me, strike and return.&quot; —Navajo war chant" />
@@ -4331,7 +4331,7 @@ Whenever enchanted land becomes tapped, Psychic Venom deals 2 damage to that lan
       <property name="Rules">
         <s value="B">{B}</s>
         <s value="B">{B}</s>
-        <s value="B">{B}</s>, <s value="T">{T}</s>: Target opponent reveals his or her hand and discards a creature card at random. Activate this ability only during your turn.</property>
+        <s value="B">{B}</s>, <s value="T">{T}</s>: Target opponent reveals their hand and discards a creature card at random. Activate this ability only during your turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -4365,7 +4365,7 @@ Whenever enchanted land becomes tapped, Psychic Venom deals 2 damage to that lan
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Remove Rebirth from your deck before playing if you're not playing for ante.
-Each player may ante the top card of his or her library. If a player does, his or her life total becomes 20.</property>
+Each player may ante the top card of their library. If a player does, that player's life total becomes 20.</property>
       <property name="Artist" value="Mark Tedin" />
       <property name="Number" value="267" />
       <property name="MultiverseId" value="2234" />
@@ -4395,7 +4395,7 @@ Each player may ante the top card of his or her library. If a player does, his o
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="2">{2}</s>, <s value="T">{T}</s>: Put a charge counter on Red Mana Battery.
-<s value="T">{T}</s>, Remove any number of charge counters from Red Mana Battery: Add <s value="R">{R}</s> to your mana pool, then add an additional <s value="R">{R}</s> to your mana pool for each charge counter removed this way.</property>
+<s value="T">{T}</s>, Remove any number of charge counters from Red Mana Battery: Add <s value="R">{R}</s>, then add an additional <s value="R">{R}</s> for each charge counter removed this way.</property>
       <property name="Artist" value="Mark Tedin" />
       <property name="Number" value="343" />
       <property name="MultiverseId" value="2066" />
@@ -4443,7 +4443,7 @@ Enchanted creature has protection from red. This effect doesn't remove Red Ward.
       <property name="Rarity" value="Rare" />
       <property name="Rules">Enchant artifact an opponent controls
 Whenever enchanted artifact becomes tapped, choose one —
-• Relic Bind deals 1 damage to target player.
+• Relic Bind deals 1 damage to target player or planeswalker.
 • Target player gains 1 life.</property>
       <property name="Artist" value="Christopher Rush" />
       <property name="Number" value="097" />
@@ -4486,7 +4486,7 @@ Whenever enchanted artifact becomes tapped, choose one —
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="3">{3}</s>, <s value="T">{T}</s>: Rod of Ruin deals 1 damage to target creature or player.</property>
+        <s value="3">{3}</s>, <s value="T">{T}</s>: Rod of Ruin deals 1 damage to any target.</property>
       <property name="Artist" value="Christopher Rush" />
       <property name="Number" value="344" />
       <property name="MultiverseId" value="2067" />
@@ -4523,7 +4523,7 @@ Whenever enchanted artifact becomes tapped, choose one —
       <property name="Subtype" value="Human Cleric" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Prevent the next 1 damage that would be dealt to target creature or player this turn.</property>
+        <s value="T">{T}</s>: Prevent the next 1 damage that would be dealt to any target this turn.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -4705,8 +4705,7 @@ Whenever a creature dealt damage by Sengir Vampire this turn dies, put a +1/+1 c
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying (This creature can't be blocked except by creatures with flying or reach.)
-Vigilance (Attacking doesn't cause this creature to tap.)</property>
+      <property name="Rules">Flying, vigilance</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -4828,7 +4827,7 @@ Shapeshifter's power is equal to the last chosen number and its toughness is equ
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Cast Siren's Call only during an opponent's turn, before attackers are declared.
+      <property name="Rules">Cast this spell only during an opponent's turn, before attackers are declared.
 Creatures the active player controls attack this turn if able.
 At the beginning of the next end step, destroy all non-Wall creatures that player controls that didn't attack this turn. Ignore this effect for each creature the player didn't control continuously since the beginning of the turn.</property>
       <property name="Artist" value="Anson Maddocks" />
@@ -4847,7 +4846,7 @@ At the beginning of the next end step, destroy all non-Wall creatures that playe
       <property name="Subtype" value="Human Shaman" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="R">{R}</s> to your mana pool.</property>
+        <s value="T">{T}</s>: Add <s value="R">{R}</s>.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -5047,7 +5046,7 @@ You control enchanted artifact.</property>
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s> to your mana pool.
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="T">{T}</s>, Sacrifice Strip Mine: Destroy target land.</property>
       <property name="Artist" value="Daniel Gelon" />
       <property name="Number" value="363" />
@@ -5088,7 +5087,7 @@ Blue creatures get +1/+1.</property>
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s>.)</property>
       <property name="Artist" value="Dan Frazier" />
       <property name="Number" value="372" />
       <property name="MultiverseId" value="2375" />
@@ -5100,7 +5099,7 @@ Blue creatures get +1/+1.</property>
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s>.)</property>
       <property name="Artist" value="Dan Frazier" />
       <property name="Number" value="370" />
       <property name="MultiverseId" value="2376" />
@@ -5112,7 +5111,7 @@ Blue creatures get +1/+1.</property>
       <property name="Type" value="Basic Land" />
       <property name="Subtype" value="Swamp" />
       <property name="Rarity" value="Basic Land" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> to your mana pool.)</property>
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s>.)</property>
       <property name="Artist" value="Dan Frazier" />
       <property name="Number" value="371" />
       <property name="MultiverseId" value="2374" />
@@ -5187,7 +5186,7 @@ Blue creatures get +1/+1.</property>
       <property name="Subtype" value="Efreet" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Remove Tempest Efreet from your deck before playing if you're not playing for ante.
-<s value="T">{T}</s>, Sacrifice Tempest Efreet: Target opponent may pay 10 life. If that player doesn't, he or she reveals a card at random from his or her hand. Exchange ownership of the revealed card and Tempest Efreet. Put the revealed card into your hand and Tempest Efreet from anywhere into that player's graveyard. This change in ownership is permanent.</property>
+<s value="T">{T}</s>, Sacrifice Tempest Efreet: Target opponent may pay 10 life. If that player doesn't, they reveal a card at random from their hand. Exchange ownership of the revealed card and Tempest Efreet. Put the revealed card into your hand and Tempest Efreet from anywhere into that player's graveyard. This change in ownership is permanent.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -5270,7 +5269,7 @@ Enchanted creature gets +1/+0.
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">As The Rack enters the battlefield, choose an opponent.
-At the beginning of the chosen player's upkeep, The Rack deals X damage to that player, where X is 3 minus the number of cards in his or her hand.</property>
+At the beginning of the chosen player's upkeep, The Rack deals X damage to that player, where X is 3 minus the number of cards in their hand.</property>
       <property name="Artist" value="Richard Thomas" />
       <property name="Number" value="352" />
       <property name="Flavor" value="Invented in Mishra's earlier days, the Rack was once his most feared creation." />
@@ -5397,7 +5396,7 @@ At the beginning of the chosen player's upkeep, The Rack deals X damage to that 
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Triskelion enters the battlefield with three +1/+1 counters on it.
-Remove a +1/+1 counter from Triskelion: Triskelion deals 1 damage to target creature or player.</property>
+Remove a +1/+1 counter from Triskelion: It deals 1 damage to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -6036,7 +6035,7 @@ Protection from black (This creature can't be blocked, targeted, dealt damage, o
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="2">{2}</s>, <s value="T">{T}</s>: Put a charge counter on White Mana Battery.
-<s value="T">{T}</s>, Remove any number of charge counters from White Mana Battery: Add <s value="W">{W}</s> to your mana pool, then add an additional <s value="W">{W}</s> to your mana pool for each charge counter removed this way.</property>
+<s value="T">{T}</s>, Remove any number of charge counters from White Mana Battery: Add <s value="W">{W}</s>, then add an additional <s value="W">{W}</s> for each charge counter removed this way.</property>
       <property name="Artist" value="Anthony S. Waters" />
       <property name="Number" value="357" />
       <property name="MultiverseId" value="2080" />
@@ -6066,7 +6065,7 @@ Enchanted creature has protection from white. This effect doesn't remove White W
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant land
-Whenever enchanted land is tapped for mana, its controller adds <s value="G">{G}</s> to his or her mana pool (in addition to the mana the land produces).</property>
+Whenever enchanted land is tapped for mana, its controller adds an additional <s value="G">{G}</s>.</property>
       <property name="Artist" value="Mark Poole" />
       <property name="Number" value="289" />
       <property name="MultiverseId" value="2256" />
@@ -6098,7 +6097,7 @@ Whenever enchanted land is tapped for mana, its controller adds <s value="G">{G}
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Each player shuffles the cards from his or her hand into his or her library, then draws that many cards.</property>
+      <property name="Rules">Each player shuffles the cards from their hand into their library, then draws that many cards.</property>
       <property name="Artist" value="Justin Hampton" />
       <property name="Number" value="232" />
       <property name="Flavor" value="&quot;'Tis the set of sails, and not the gales, Which tells us the way to go.&quot; —Ella Wheeler Wilcox" />
