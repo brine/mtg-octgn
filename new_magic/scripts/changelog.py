@@ -254,5 +254,10 @@ changelog = {
         ]),
     3040600: ("3.4.6.0", "April 12 2017", [
         "Added Dominaria"
+        ]),
+    3040700: ("3.4.7.0", "May 13 2017", [
+        "Fixed an issue with merfolk hexproof tokens being shown as illusion tokens",
+        "bug fix with multi-modal spells",
+        "Updated oracle text for dominaria's big changes"
         ])
 }
