@@ -314,7 +314,7 @@ tokenTypes = {
     'maggot01b': ('0 / 1 Black Maggot', 'a0ec1195-c5e8-411e-a01e-a3aa1b8ad259'),
     'maritlage2020b': ('20 / 20 Black Marit Lage', '267758b2-4102-4182-a2aa-4a8907b05289'),
     'merfolk11u': ('1 / 1 Blue Merfolk', '3e2a300a-4ef7-4d67-8271-89b8331869fe'),
-    'merfolk11u2': ('1 / 1 Blue Merfolk', 'bb023250-dfde-4141-809d-930d5a85928c'), #XLN
+    'merfolk11u2': ('1 / 1 Blue Merfolk', '1335cf81-7066-4344-8e4f-11ccc2c178fd'), #XLN
     'merfolkwizard11u': ('1 / 1 Blue Merfolk Wizard', 'b53c1420-67a4-41b7-8d04-3461cdb65e36'),
     'metallicsliver11c': ('1 / 1 Colorless Metallic Sliver', '287f8073-6784-42b7-b312-01741c9fa332'),
     'minion11b': ('1 / 1 Black Minion', 'a0b95860-4a75-429e-a759-e8d68f7c9abb'),
