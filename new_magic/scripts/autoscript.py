@@ -260,7 +260,8 @@ def tagConstructor(card, key, modeModifier = ''):
                     if returnTags[tagIndex] == None:
                         returnTags[tagIndex] = newTags[tagIndex]
                     else:
-                        returnTags[tagIndex] += newTags[tagIndex]
+                        if newTags[tagIndex] != None:
+                            returnTags[tagIndex] += newTags[tagIndex]
             returnModeChoice = (int("".join([str(x) for x in choiceList])), ", ".join([modeList[x - 1] for x in choiceList]))
     return (returnTags, returnActiChoice, returnModeChoice)
 
