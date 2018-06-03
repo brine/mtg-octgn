@@ -259,5 +259,9 @@ changelog = {
         "Fixed an issue with merfolk hexproof tokens being shown as illusion tokens",
         "bug fix with multi-modal spells",
         "Updated oracle text for dominaria's big changes"
+        ]),
+    3040800: ("3.4.8.0", "June 3 2017", [
+        "Added Battlebond",
+        "Added Duel Decks: Elves vs Inventors"
         ])
 }

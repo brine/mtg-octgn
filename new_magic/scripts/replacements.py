@@ -512,5 +512,7 @@ tokenTypes = {
     'teferiemblem': ("Teferi's Emblem", '4863a0dc-9d01-49c1-a906-34730019eaef'),
     'teferiemblem2': ("Teferi's Emblem", 'f874b4ad-4306-41bc-bd6f-fe8a5b1b049a'),
     'tezzeretemblem': ("Tezzeret's Emblem", '6a406eb1-7467-4e42-8ac0-c5e5cddfeb9a'),
-    'venseremblem': ("Venser's Emblem", '3ec344de-90cb-480e-94be-96ff4ff774af')
+    'venseremblem': ("Venser's Emblem", '3ec344de-90cb-480e-94be-96ff4ff774af'),
+    'willemblem': ("Will's Emblem", '12bacd5f-089b-4247-8f33-863363d88b14'),
+    'rowanemblem': ("Rowan's Emblem", '7b0e1f85-3593-4e0e-aead-6faf94a2714a')
 }
