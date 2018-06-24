@@ -214,7 +214,7 @@
     <counter name="General" icon="counters/general.png" />
     <counter name="Experience" icon="counters/exp.png" />
 	<globalvariable name="f6" value="False" />
-    <hand name="Hand" shortcut="ctrl+H" visibility="me" width="63" height="88" icon="groups/hand.png">
+    <hand name="Hand" shortcut="ctrl+H" visibility="me" icon="groups/hand.png">
       <cardaction menu="Cast Spell" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
       <cardaction menu="Suspend Card" execute="suspend" />
@@ -232,7 +232,7 @@
         <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
       </groupactions>
     </hand>
-    <group name="Library" shortcut="ctrl+I" visibility="none" width="63" height="88" icon="groups/library.png">
+    <group name="Library" shortcut="ctrl+I" visibility="none" icon="groups/library.png">
       <groupaction menu="Scry" shortcut="ctrl+shift+C" execute="scry" />
       <groupaction menu="Draw" shortcut="ctrl+D" default="True" execute="draw" />
       <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
@@ -255,7 +255,7 @@
       <cardaction menu="Move Card to Hand" default="True" shortcut="ctrl+H" execute="tohand" />
       <groupaction menu="Reveal/Hide Card" shortcut="ctrl+R" execute="revealtoplibrary" />
     </group>
-    <group name="Graveyard" shortcut="del" visibility="all" width="63" height="88" icon="groups/graveyard.png">
+    <group name="Graveyard" shortcut="del" visibility="all" icon="groups/graveyard.png">
       <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />
       <groupaction menu="Shuffle" execute="shuffle" />
       <groupactions menu="Move All Cards To...">
@@ -278,7 +278,7 @@
       <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
       <cardaction menu="Submit Tags" execute="submitTags" />
     </group>
-    <group name="Exiled Zone" shortcut="ctrl+E" visibility="all" width="63" height="88" icon="groups/removed.png" collapsed="True">
+    <group name="Exiled Zone" shortcut="ctrl+E" visibility="all" icon="groups/removed.png" collapsed="True">
       <groupaction menu="Shuffle" execute="shuffle" />
       <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />
       <groupactions menu="Move All Cards To...">
@@ -298,7 +298,7 @@
       <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" /> 
       <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />      
     </group>
-    <group name="Sideboard" visibility="me" width="63" height="88" icon="groups/sideboard.png" collapsed="True">
+    <group name="Sideboard" visibility="me" icon="groups/sideboard.png" collapsed="True">
       <groupaction menu="Shuffle" execute="shuffle" />
       <groupactions menu="Move All Cards To...">
         <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
@@ -310,7 +310,7 @@
         <groupaction menu="Owner's Planes/Schemes (bottom)" execute="planesBottomAll" />
       </groupactions>
     </group>
-    <group name="Command Zone" visibility="all" width="63" height="88" icon="groups/commandzone.png" collapsed="True">
+    <group name="Command Zone" visibility="all" icon="groups/commandzone.png" collapsed="True">
       <groupaction menu="Shuffle" execute="shuffle" />
       <cardaction menu="Cast Card/Commander" default="True" execute="play" />
       <groupactions menu="Move All Cards To...">
@@ -323,7 +323,7 @@
         <groupaction menu="Owner's Sideboard" execute="sideboardAll" />
       </groupactions>
     </group>
-    <group name="Planes/Schemes" visibility="none" width="63" height="88" icon="groups/removed.png" collapsed="True">
+    <group name="Planes/Schemes" visibility="none" icon="groups/removed.png" collapsed="True">
       <groupaction menu="Shuffle" execute="shuffle" />
       <cardaction menu="Play Card" default="True" execute="play" />
       <groupactions menu="Move All Cards To...">
