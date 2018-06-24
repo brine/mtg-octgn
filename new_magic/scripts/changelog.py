@@ -263,5 +263,8 @@ changelog = {
     3040800: ("3.4.8.0", "June 3 2017", [
         "Added Battlebond",
         "Added Duel Decks: Elves vs Inventors"
+        ]),
+    3040900: ("3.4.9.0", "June 24 2017", [
+        "Added Core Set 2019, Global Deck Series, Jace Spellbook, and Commander Anthology 2"
         ])
 }
