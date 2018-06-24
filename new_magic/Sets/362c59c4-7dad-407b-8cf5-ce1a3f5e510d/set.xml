@@ -54,12 +54,15 @@
             </options>
             <pick qty="1" key="Rarity" value="Uncommon" />
         </option>
-        <option probability="0.055">
-          <pick qty="1" key="Rarity" value="Mythic Rare" />
-          <pick qty="3" key="Rarity" value="Uncommon" />
-        </option>
-        <option probability="0.388">
-          <pick qty="1" key="Rarity" value="Rare" />
+        <option probability="0.443">
+          <options>
+            <option probability="0.125">
+              <pick qty="1" key="Rarity" value="Mythic Rare" />
+            </option>
+            <option probability="0.875">
+              <pick qty="1" key="Rarity" value="Rare" />
+            </option>
+          </options>
           <pick qty="3" key="Rarity" value="Uncommon" />
         </option>
       </options>
