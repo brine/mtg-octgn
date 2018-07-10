@@ -266,5 +266,8 @@ changelog = {
         ]),
     3040900: ("3.4.9.0", "June 24 2017", [
         "Added Core Set 2019, Global Deck Series, Jace Spellbook, and Commander Anthology 2"
+        ]),
+    3040901: ("3.4.9.1", "July 10 2017", [
+        "Fixed some bugs with meld cards not working in-game, in the deck editor, and through the image downloader"
         ])
 }

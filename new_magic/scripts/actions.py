@@ -633,6 +633,12 @@ def transform(card, x = 0, y = 0):
             card.alternate = 'transform'
         else:
             card.alternate = ''
+    elif 'meld' in card.alternates:
+        notify("{} transforms {}.".format(me, card))
+        if card.alternate == '':
+            card.alternate = 'meld'
+        else:
+            card.alternate = ''
     elif 'flip' in card.alternates:
         notify("{} flips {}.".format(me, card))
         if card.alternate == '':

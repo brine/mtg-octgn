@@ -725,6 +725,11 @@ def autotransform(card, tag):
             card.alternate = 'transform'
         else:
             card.alternate = ''
+    elif 'meld' in card.alternates:
+        if card.alternate == '':
+            card.alternate = 'meld'
+        else:
+            card.alternate = ''
     else:
         whisper("Oops, transform cards aren't ready yet!")
     return ", transforming to {}".format(card)

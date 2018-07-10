@@ -37,6 +37,10 @@ namespace MTGImageFetcher.Entities
                     var props = card.Properties[alt].Properties;
                     ret = Cards.FirstOrDefault(x => x.Number == props.First(y => y.Key.Name == "Number").Value.ToString());
                 }
+                else if (alt == "meld")
+                {
+                    ret = Cards.FirstOrDefault(x => x.Name == card.Properties[alt].Properties.First(y => y.Key.Name == "Name").Value.ToString());
+                }
                 else
                     ret = Cards.FirstOrDefault(x => x.Id == card.Id.ToString() || x.MultiverseId == card.Properties[""].Properties.First(y => y.Key.Name == "MultiverseId").Value.ToString());
 
@@ -50,8 +54,14 @@ namespace MTGImageFetcher.Entities
                         var jsonsetdata = (JObject)JsonConvert.DeserializeObject(webclient.DownloadString(SearchUri));
                         foreach (var jsoncarddata in jsonsetdata["data"])
                         {
-                            CardInfo cardInfo = new CardInfo();
-                            cardInfo.Layout = jsoncarddata.Value<string>("layout");
+                            CardInfo cardInfo = new CardInfo
+                            {
+                                Layout = jsoncarddata.Value<string>("layout"),
+                                Name = jsoncarddata.Value<string>("name"),
+                                HiRes = jsoncarddata.Value<string>("highres_image"),
+                                Id = jsoncarddata.Value<string>("id"),
+                                Number = jsoncarddata.Value<string>("collector_number")
+                            };
                             if (cardInfo.Layout == "transform")
                             {
                                 cardInfo.NormalUrl = jsoncarddata["card_faces"][0]["image_uris"].Value<string>("normal");
@@ -67,11 +77,7 @@ namespace MTGImageFetcher.Entities
                                     cardInfo.LargeUrl = jsoncarddata["image_uris"].Value<string>("large");
                                 }
                             }
-                            cardInfo.HiRes = jsoncarddata.Value<string>("highres_image");
-                            cardInfo.Id = jsoncarddata.Value<string>("id");
-                            var multiverseIds = (jsoncarddata["multiverse_ids"] == null) ? new List<string>() : jsoncarddata["multiverse_ids"].Select(x => x.ToString());
                             cardInfo.MultiverseId = (jsoncarddata["multiverse_ids"].FirstOrDefault() == null) ? null : jsoncarddata["multiverse_ids"].First().ToString();
-                            cardInfo.Number = jsoncarddata.Value<string>("collector_number");
                             Cards.Add(cardInfo);
                         }
                         SearchUri = (jsonsetdata.Value<bool>("has_more") == true) ? jsonsetdata.Value<string>("next_page") : null;
