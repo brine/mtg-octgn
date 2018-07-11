@@ -269,5 +269,8 @@ changelog = {
         ]),
     3040901: ("3.4.9.1", "July 10 2017", [
         "Fixed some bugs with meld cards not working in-game, in the deck editor, and through the image downloader"
+        ]),
+    3040902: ("3.4.9.2", "July 11 2017", [
+        "Added M19 tokens"
         ])
 }
