@@ -239,38 +239,41 @@ changelog = {
         "Fixed major bugs with the image downloader plugin.",
         "Added new option in image downloader plugin to skip downloading new versions of images if a hi-res version is already installed."
         ]),
-    3040300: ("3.4.3.0", "January 6 2017", [
+    3040300: ("3.4.3.0", "January 6 2018", [
         "Added Rivals of Ixalan",
         "Added a dialog window to image downloader plugin when an image file download errors out."
         ]),
-    3040400: ("3.4.4.0", "January 23 2017", [
+    3040400: ("3.4.4.0", "January 23 2018", [
         "Minor Text Fixes to Ixalan Block sets and recent supplemental releases",
         "Fixed some issues with Ixalan booster packs not generating accurately and including Planeswalker deck cards."
         ]),
-    3040500: ("3.4.5.0", "March 4 2017", [
+    3040500: ("3.4.5.0", "March 4 2018", [
         "Oracle text update - fixes issues with 0 cost colored cards showing as colorless",
         "Added Masters 25.",
         "Attacking and blocking cards will separate from alignment piles."
         ]),
-    3040600: ("3.4.6.0", "April 12 2017", [
+    3040600: ("3.4.6.0", "April 12 2018", [
         "Added Dominaria"
         ]),
-    3040700: ("3.4.7.0", "May 13 2017", [
+    3040700: ("3.4.7.0", "May 13 2018", [
         "Fixed an issue with merfolk hexproof tokens being shown as illusion tokens",
         "bug fix with multi-modal spells",
         "Updated oracle text for dominaria's big changes"
         ]),
-    3040800: ("3.4.8.0", "June 3 2017", [
+    3040800: ("3.4.8.0", "June 3 2018", [
         "Added Battlebond",
         "Added Duel Decks: Elves vs Inventors"
         ]),
-    3040900: ("3.4.9.0", "June 24 2017", [
+    3040900: ("3.4.9.0", "June 24 2018", [
         "Added Core Set 2019, Global Deck Series, Jace Spellbook, and Commander Anthology 2"
         ]),
-    3040901: ("3.4.9.1", "July 10 2017", [
+    3040901: ("3.4.9.1", "July 10 2018", [
         "Fixed some bugs with meld cards not working in-game, in the deck editor, and through the image downloader"
         ]),
-    3040902: ("3.4.9.2", "July 11 2017", [
+    3040902: ("3.4.9.2", "July 11 2018", [
         "Added M19 tokens"
+        ]),
+    3040903: ("3.4.9.3", "July 30 2018", [
+        "Added Commander 2018"
         ])
 }
