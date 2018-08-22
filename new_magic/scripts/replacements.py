@@ -176,6 +176,7 @@ tokenTypes = {
     'construct00c': ('0 / 0 Colorless Construct', 'e7ef7715-68bd-4aa5-872f-72405170d522'),
     'construct612c': ('6 / 12 Colorless Construct', '35e3799c-dd78-46e1-999b-f9f6abf2fdf9'),
     'construct11c': ('1 / 1 Colorless Construct', '8941be34-f9d7-41f0-9749-400de2399c54'), #CNS CN2
+    'construct44c': ('4 / 4 Colorless Construct', '2a8e879e-ddea-43b7-95eb-95cac810ea95'), 
     'construct**c': ('* / * Colorless Construct', 'c93bea45-2e84-441f-ada8-b6970ad23ffb'), #KLD KLD UST
     'demon55b': ('5 / 5 Black Demon', '9b9aeb57-b37d-4a9e-9369-28997479f518'), #ISD AVR
     'demon66b': ('6 / 6 Black Demon', '98601612-a132-41ab-9f9b-9d7d085d6beb'),
@@ -191,6 +192,7 @@ tokenTypes = {
     'dragon55r': ('5 / 5 Red Dragon', '9ae59296-d44e-4d12-b26b-9326d6489239'), #10E MPRONS WWK M19
     'dragon66r': ('6 /6 Red Dragon', '58006984-ba3e-4d6f-9918-01126f580b80'),
     'dragon44m': ('6 / 6 Multicolor Gold Dragon', '477b427c-98e0-4c45-9434-7f0b47e3d2e1'),
+    'dragonegg02r': ('0 / 2 Red Dragon Egg', '7db21ec4-c31e-4aa8-b043-1b192c0d4235'),
     'dragonspirit55u': ('5 / 5 Blue Dragon Spirit', 'dd16c561-04aa-4cc2-8b7d-1f5a209e854e'),
     'drake22u': ('2/2 Blue Drake', '254765e9-be8a-4f98-93ce-15b6ee29fed5'), #M13 AKH
     'drake22m': ('2 / 2 Multicolor Green Blue Drake', 'fc271093-f18e-418a-bce3-527bdab948f9'),
@@ -215,7 +217,7 @@ tokenTypes = {
     'elemental44g': ('4 / 4 Green Elemental', '3c1f93e6-dbd6-4ab8-9a7a-17ffe15a21a1'),
     'elemental53g': ('5 / 3 Green Elemental', 'cb75cd77-2074-4ee7-a4d5-5f71976472b7'),
     'elemental77g': ('7 / 7 Green Elemental', 'f3149eb3-d8e2-4142-9306-504cf938719f'),
-    'elemental**g': ('* / * Green Elemental', '46cf4187-fa7b-407d-bdf1-e8a63d45d1be'),
+    'elemental**g': ('* / * Green Elemental', '46cf4187-fa7b-407d-bdf1-e8a63d45d1be'), #C18 OGW
     'elemental55m': ('5 / 5 Multicolor Black Red Elemental', 'dd6b1a3e-4055-4d94-96a1-3f9628058fad'),
     'elemental55m2': ('5 / 5 Multicolor Blue Red Elemental', '3b8d25a0-4cb0-4f24-86b8-925e89d263f6'),
     'elemental55m3': ('5 / 5 Multicolor Red Green Elemental', '557faf98-cdc8-4e8e-b029-ae91257bb633'),
@@ -315,6 +317,7 @@ tokenTypes = {
     'llanowarelves11g': ('1 / 1 Green Llanowar Elves', 'fbc94498-01a9-47eb-b6b7-e96a6dc66e24'),
     'maggot01b': ('0 / 1 Black Maggot', 'a0ec1195-c5e8-411e-a01e-a3aa1b8ad259'),
     'maritlage2020b': ('20 / 20 Black Marit Lage', '267758b2-4102-4182-a2aa-4a8907b05289'),
+    'maskw': ('White Mask', '5ef9a338-fe31-4af0-ae7e-5f481b491aea'),
     'merfolk11u': ('1 / 1 Blue Merfolk', '3e2a300a-4ef7-4d67-8271-89b8331869fe'),
     'merfolk11u2': ('1 / 1 Blue Merfolk', '1335cf81-7066-4344-8e4f-11ccc2c178fd'), #XLN
     'merfolkwizard11u': ('1 / 1 Blue Merfolk Wizard', 'b53c1420-67a4-41b7-8d04-3461cdb65e36'),
@@ -326,6 +329,7 @@ tokenTypes = {
     'monarch': ('The Monarch', '2b8d6bc4-b81b-40a0-93fb-5081fcb1990d'),
     'monk11w': ('1 / 1 White Monk', '5b6e6944-f114-42bc-bbea-cfff3e4f5fab'),
     'myr11c': ('1 / 1 Colorless Myr', '16003e42-3ff7-478d-8f8c-2b5af4847da0'), #SOM NPH
+    'myr21u': ('2 / 1 Blue Myr', '039bc09e-f7fe-40df-98e1-f6faea3620a6'),
     'nightmarehorror**b': ('* / * Black Nightmare Horror', '75de60cd-4202-454d-865c-dbaed249c9f3'),
     'octopus88u': ('8 / 8 Blue Octopus', 'a71d612b-e76f-42ee-8c9d-82254daae0f9'),
     'ogre33r': ('3 / 3 Red Ogre', 'f23096c9-932d-4ae2-85a7-d328eb543dbe'),
