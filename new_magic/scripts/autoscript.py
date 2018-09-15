@@ -902,7 +902,6 @@ def sideFlip():  ## Initializes the player's left/right side of table variables
     return sideflip
 
 def cardalign():
-    rnd(1, 100)
     mute()
     side = playerSide()    ## Stores the Y-axis multiplier to determine which side of the table to align to
     flip = sideFlip()    ## Stores the X-axis multiplier to determine if cards align on the left or right half
@@ -986,8 +985,6 @@ def cardalign():
                     index = 0
                 elif counters["suspend"] in card.markers:
                     index = 6
-                elif re.search(r"Land", card.Type):
-                    index = 3
                 elif re.search(r"Planeswalker", card.Type):
                     index = 4
                 elif re.search(r"Emblem", card.Type):
@@ -998,6 +995,8 @@ def cardalign():
                     index = 1
                 elif re.search(r"Enchantment", card.Type):
                     index = 2
+                elif re.search(r"Land", card.Type):
+                    index = 3
                 else:
                     index = 7
                 cardorder[index].append(dictname)

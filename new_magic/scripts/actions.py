@@ -502,6 +502,7 @@ def batchAttack(cards, x = 0, y = 0):
     mute()
     for card in cards:
         attack(card)
+    cardalign()
 
 def attack(card, x = 0, y = 0):
     mute()
@@ -527,12 +528,12 @@ def attack(card, x = 0, y = 0):
         else:
             card.highlight = AttackColor
         notify('{} attacks with {}'.format(me, card))
-    cardalign()
 
 def batchAttackWithoutTapping(cards, x = 0, y = 0):
     mute()
     for card in cards:
         attackWithoutTapping(card)
+    cardalign()
 
 def attackWithoutTapping(card, x = 0, y = 0):
     mute()
@@ -556,12 +557,12 @@ def attackWithoutTapping(card, x = 0, y = 0):
         else:
             card.highlight = AttackColor
         notify('{} attacks without tapping with {}'.format(me, card))
-    cardalign()
 
 def batchBlock(cards, x = 0, y = 0):
     mute()
     for card in cards:
         block(card)
+    cardalign()
 
 def block(card, x = 0, y = 0):
     mute()
@@ -579,7 +580,6 @@ def block(card, x = 0, y = 0):
         else:
             card.highlight = BlockColor
         notify('{} blocks with {}'.format(me, card))
-    cardalign()
 
 def batchActivate(cards, x = 0, y = 0):
     mute()
