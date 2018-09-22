@@ -275,5 +275,10 @@ changelog = {
         ]),
     3040903: ("3.4.9.3", "July 30 2018", [
         "Added Commander 2018"
+        ]),
+    3041000: ("3.4.10.0", "September 22 2018", [
+        "Added Guilds of Ravnica",
+        "Land Creatures now align in creature row",
+        "Minor performance improvements to alignment when using certain actions on a selection of cards"
         ])
 }
