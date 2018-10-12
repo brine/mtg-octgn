@@ -147,6 +147,7 @@ tokenTypes = {
     'bird22u2': ('2 / 2 Blue Bird', '3aab274b-f3e8-48f5-89f3-5886d7ff06cd'), #enchantment
     'bird33w': ('3 / 3 White Bird', '7caad070-0517-4a14-b866-92917ae0af9d'),
     'bird34w': ('3 / 4 White Bird', '3aa04c49-2943-43ba-bb72-cd87a7e5d8f5'),
+    'birdillusion11u': ('1 / 1 Blue Bird Illusion', '205cbe45-53e5-48a3-bd08-f77d3aeeb5c9'),
     'birdsoldier11w': ('1 / 1 White Bird Soldier', 'bc146367-fbbb-4878-bc9b-d23ed2f5069b'),
     'boar22g': ('2 / 2 Green Boar', 'd5e5eccc-0758-41b4-8593-b441f3102646'),
     'boar33g': ('3 / 3 Green Boar', 'c8e283c4-e96e-4399-8ec0-d7e1256f81f6'),
@@ -229,6 +230,7 @@ tokenTypes = {
     'elephant33g': ('3 / 3 Green Elephant', '26df2446-e7c7-49ec-ad51-840c8bd34148'), #WWK INV DDD CNS
     'elephant**g': ('* / * Green Elephant', '315bb2f3-589c-4202-b281-e985ff9b0e95'),
     'elfdruid11g': ('1 / 1 Green Elf Druid', 'b0efd2ee-2797-4af7-926d-06aac2146186'),
+    'elfknight22g': ('2 / 2 Green Elf Knight', '8a2cb2ab-314b-4430-a151-d5bd343f361f'),
     'elfwarrior11g': ('1 / 1 Green Elf Warrior', '84eb1264-dce2-49bc-a4ab-d0553d6035c8'), #LRW SHA
     'elfwarrior11m': ('1 / 1 Multicolor Green White Elf Warrior', '21a00ccf-853e-4885-8802-3d119b46b03f'),
     'etheriumcell': ('Etherium Cell', 'f5a47d46-8c87-4fa7-b09a-e6576d983ac7'),
@@ -296,6 +298,7 @@ tokenTypes = {
     'insect11g3': ('1/1 Green Insect', '2bce1692-5bba-4c10-8e72-2f8c7107bca0'), #(flying deathtouch) C13, M15
     'insect61g': ('6 / 1 Green Insect', '7e482343-9720-4a11-a3e2-baa89713e26c'),
     'insect11m': ('1 / 1 Multicolor Blue Red Insect', '5674320b-b499-459c-a8ca-4c9e3b398940'),
+    'insect11m2': ('1 / 1 Multicolor Black Green Insect', '8a2cb2ab-314b-4430-a151-d5bd343f361f'),
     'kaldra44c': ('4 / 4 Colorless Kaldra', '24c9642f-666e-43b3-aaae-d676b94b20ec'),
     'karoxbladewing44r': ('4 / 4 Red Karox Bladewing', '91ca92a6-573f-4396-a114-e5dbab88fe5f'),
     'kavu33b': ('3 / 3 Black Kavu', '7f4f8367-da77-43e5-bf24-ea9326e6aa2a'),
@@ -381,6 +384,7 @@ tokenTypes = {
     'snake11c': ('1 / 1 Colorless Snake', '19165d01-8ed8-4a7b-8432-3317477f4667'),
     'soldier11w': ('1 / 1 White Soldier', '696a4f4c-8794-4290-98f8-522b1ef7b93a'), #ALA UNG MPRONS SOM M12 M13 RTR THS THS M15 DOM
     'soldier11w2': ('1 / 1 White Soldier', 'd4d816a4-c805-4ae4-b633-7fd5515f5db4'), #enchantment
+    'soldier11w3': ('1 / 1 White Soldier', '6c6db3f8-bbb0-49a4-ab03-065b4eac255e'), #lifelink
     'soldier12': ('1 / 2 White Soldier', '0a11130f-7b21-4d9a-b94e-03e005e91def'),
     'soldier11r': ('1 / 1 Red Soldier', 'aafd95ac-25b2-4abd-869e-ca89c31f10f9'),
     'soldier11m': ('1/1 Multicolor Red White Soldier', 'fe57dd41-0ad7-4570-b1cb-fe2a4218bcb4'), #GTC LEAGUEGTC
@@ -513,6 +517,7 @@ tokenTypes = {
     'nissaemblem': ("Nissa's Emblem", 'da7f9909-c93f-4907-b3e7-d39998ac549e'),
     'obnixilisemblem': ("Ob Nixilis's Emblem", '1622a22a-a22a-4a47-8969-eef8632bde23'),
     'obnixilisemblem2': ("Ob Nixilis's Emblem", '86423661-6c13-4c19-a169-6a248cc4b9d9'),
+    'ralemblem': ("Ral's Emblem", '88beb471-6382-40c3-afb7-efea583a3631'),
     'rowanemblem': ("Rowan's Emblem", '7b0e1f85-3593-4e0e-aead-6faf94a2714a'),
     'sarkhanemblem': ("Sarkhan's Emblem", '307fb3a2-010c-4e8e-883e-768dd3804db4'),
     'sorinemblem': ("Sorin's Emblem", 'b916e959-5a1d-4903-850a-95544f6ae566'),
@@ -525,5 +530,6 @@ tokenTypes = {
     'tezzeretemblem2': ("Tezzeret's Emblem", 'cceaa03a-4120-496c-8d04-db4acceaf654'), #M19
     'venseremblem': ("Venser's Emblem", '3ec344de-90cb-480e-94be-96ff4ff774af'),
     'vivienemblem': ("Vivien's Emblem", 'df13d0c1-3223-45e2-982d-757f15592845'), #M19
+    'vraskaemblem': ("Vraska's Emblem", '70fbdf56-7ac7-48b5-81c6-de5b76968bd9'),
     'willemblem': ("Will's Emblem", '12bacd5f-089b-4247-8f33-863363d88b14')
 }
