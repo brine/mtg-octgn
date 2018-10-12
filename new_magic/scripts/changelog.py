@@ -280,5 +280,9 @@ changelog = {
         "Added Guilds of Ravnica",
         "Land Creatures now align in creature row",
         "Minor performance improvements to alignment when using certain actions on a selection of cards"
+        ]),
+    3041001: ("3.4.10.1", "September 22 2018", [
+        "Updated Guilds of Ravnica with proper booster pack content and added tokens",
+        "Removed some unused tokens -- previously saved token arts may have changed",
         ])
 }
