@@ -283,6 +283,9 @@ changelog = {
         ]),
     3041001: ("3.4.10.1", "October 12 2018", [
         "Updated Guilds of Ravnica with proper booster pack content and added tokens",
-        "Removed some unused tokens -- previously saved token arts may have changed",
+        "Removed some unused tokens -- previously saved token arts may have changed"
+        ]),
+    3041002: ("3.4.10.2", "December 19 2018", [
+        "Added Ultimate Masters (tokens coming soon)"
         ])
 }
