@@ -89,7 +89,7 @@ Enchanted creature gets +3/+2 and has vigilance.</property>
       <property name="Rules">Destroy all creatures with toughness 4 or greater.</property>
       <property name="Artist" value="Victor Adame Minguez" />
       <property name="Number" value="004" />
-      <property name="Flavor" value="&quot;Oh, you fellas are going to love the lockup. Excellent gruel. Very low ceilings.&quot;—Libuse, Boros sergeant" />
+      <property name="Flavor" value="&quot;Oh, you fellas are going to love the lockup. Excellent gruel. Very low ceilings.&quot;" />
       <property name="MultiverseId" value="452754" />
     </card>
     <card name="Collar the Culprit" id="cdf305b7-d1f7-4770-9201-8f3fb6735cd9">
@@ -166,7 +166,7 @@ When Conclave Tribunal enters the battlefield, exile target nonland permanent an
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Enchant creature
-Enchanted creature can't block, and its activated abilities can't be activated.</property>
+Enchanted creature can't block and its activated abilities can't be activated.</property>
       <property name="Artist" value="Joe Slucher" />
       <property name="Number" value="009" />
       <property name="Flavor" value="There's no greater honor than joining your chosen guild, and no greater shame than failing it." />
@@ -1058,7 +1058,7 @@ Surveil 1. (Look at the top card of your library. You may put that card into you
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Defender</property>
+      <property name="Rules">Defender (This creature can't attack.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="0 / 5" />
@@ -1196,7 +1196,7 @@ Whenever you surveil, if Blood Operative is in your graveyard, you may pay 3 lif
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Lifelink</property>
+      <property name="Rules">Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -1306,7 +1306,7 @@ Pay 2 life: Surveil 2. (Look at the top two cards of your library, then put any 
       <property name="Rules">Choose a creature card with converted mana cost 1 in your graveyard, then do the same for creature cards with converted mana costs 2 and 3. Return those cards to the battlefield.</property>
       <property name="Artist" value="Yeong-Hao Han" />
       <property name="Number" value="071" />
-      <property name="Flavor" value="&quot;Variety is also the spice of death.&quot;—Cevraya, Golgari shaman" />
+      <property name="Flavor" value="&quot;Variety is also the spice of death.&quot;—Covraya, Golgari shaman" />
       <property name="MultiverseId" value="452821" />
     </card>
     <card name="Hired Poisoner" id="bf97e572-90d6-46fc-81c3-956a7ef88983">
@@ -1659,7 +1659,7 @@ You gain life equal to the sacrificed creature's toughness. Destroy target creat
       <property name="Subtype" value="Phoenix" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Flying, haste
-At the beginning of combat on your turn, if you've cast three or more instant and sorcery spells this turn, return Arclight Phoenix from your graveyard to the battlefield.</property>
+At the beginning of combat on your turn, if you've cast three or more instant and sorcery spells this turn, you may return Arclight Phoenix from your graveyard to the battlefield.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -1767,7 +1767,7 @@ Jump-start (You may cast this card from your graveyard by discarding a card in a
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Defender
-Whenever you cast an instant or sorcery spell, Electrostatic Field deals 1 damage to each opponent.</property>
+When you cast an instant or sorcery spell, Electrostatic Field deals 1 damage to each opponent.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="0 / 4" />
@@ -2148,7 +2148,7 @@ Remove three +1/+1 counters from Runaway Steam-Kin: Add <s value="R">{R}</s><s v
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Target creature gets +3/+0 and gains first strike until end of turn.</property>
+      <property name="Rules">Target creature gets +3/+0 and gains first strike until end of turn. (It deals combat damage before creatures without first strike.)</property>
       <property name="Artist" value="Steve Argyle" />
       <property name="Number" value="118" />
       <property name="Flavor" value="&quot;I packed three more electroconduits into each test wand. You'll experience a brief tingling sensation.&quot;" />
@@ -2881,7 +2881,7 @@ Jump-start (You may cast this card from your graveyard by discarding a card in a
       <property name="Rules">You gain X life and draw X cards, where X is the number of creatures you control. Creatures you control get +1/+1 until end of turn.</property>
       <property name="Artist" value="Sidharth Chaturvedi" />
       <property name="Number" value="157" />
-      <property name="Flavor" value="&quot;Within the song of Mat'Selesnya, one becomes all.&quot;—Heruj, Selesnya hierophant" />
+      <property name="Flavor" value="&quot;Within the song of Mat'Selesnya, one becomes all.&quot;—Heruj, Selesyna hierophant" />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="452907" />
     </card>
@@ -3023,7 +3023,7 @@ When Crackling Drake enters the battlefield, draw a card.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Assassin" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">As long as you've surveilled this turn, Darkblade Agent has deathtouch and "Whenever this creature deals combat damage to a player, you draw a card."</property>
+      <property name="Rules">As long as you've surveilled this turn, Darkblade Agent has deathtouch and "Whenever this creature deals combat damage to a player, draw a card."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -3464,7 +3464,7 @@ Whenever Etrata deals combat damage to a player, exile target creature that play
       <property name="Subtype" value="Elf Knight" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Whenever Ledev Champion attacks, you may tap any number of untapped creatures you control. Ledev Champion gets +1/+1 until end of turn for each creature tapped this way.
-<s value="3">{3}</s><s value="G">{G}</s><s value="W">{W}</s>: Create a 1/1 white Soldier creature token with lifelink.</property>
+<s value="3">{3}</s><s value="G">{G}</s><s value="W">{W}</s>: Create a 1/1 white soldier creature token with lifelink.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -3524,7 +3524,7 @@ Create X 1/1 white Soldier creature tokens with lifelink.</property>
       <property name="Color" value="Multicolor Blue Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Exile all cards from all opponents' graveyards. You may cast those cards this turn, and you may spend mana as though it were mana of any type to cast those spells. At the beginning of the next end step, if any of those cards remain exiled, return them to their owners' graveyards.
+      <property name="Rules">Exile all cards from all opponents' graveyards. You may cast those cards this turn, and you may spend mana as though it were mana of any type to cast those spells. At the beginning of the next end step, if any of those cards remain exiled, return them to their owner's graveyards.
 Exile Mnemonic Betrayal.</property>
       <property name="Artist" value="Clint Cearley" />
       <property name="Number" value="189" />
@@ -3860,7 +3860,7 @@ Prevent all noncombat damage that would be dealt to other creatures you control.
       <property name="Subtype" value="Specter" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Thief of Sanity deals combat damage to a player, look at the top three cards of that player's library, exile one of them face down, then put the rest into their graveyard. You may look at and cast that card for as long as it remains exiled, and you may spend mana as though it were mana of any type to cast that spell.</property>
+Whenever Thief of Sanity deals combat damage to a player, look at the top three cards of that player's library, exile one of them face down, then put the rest into their graveyard. For as long as that card remains exiled, you may look at it, you may cast it, and you may spend mana as though it were mana of any type to cast it.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -3957,7 +3957,7 @@ Whenever Truefire Captain is dealt damage, it deals that much damage to target p
       <property name="Color" value="Multicolor Black Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Creatures you control gain deathtouch until end of turn. Then target creature you control fights target creature you don't control. (Each deals damage equal to its power to the other.)</property>
+      <property name="Rules">Creatures you control gain deathtouch until end of turn. Target creature you control fights target creature you don't control. (Each deals damage equal to its power to the other.)</property>
       <property name="Artist" value="Magali Villeneuve" />
       <property name="Number" value="210" />
       <property name="Flavor" value="&quot;Now it's your turn to hide.&quot;—Vraska" />
@@ -4144,7 +4144,7 @@ As long as you've cast an instant or sorcery spell this turn, Piston-Fist Cyclop
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="Matt Stewart" />
       <property name="Number" value="219" />
-      <property name="Flavor" value="&quot;Selesnya's soil is sacred, and you're about to meet it with your face.&quot;" />
+      <property name="Flavor" value="&quot;Selesyna's soil is sacred, and you're about to meet it with your face.&quot;" />
       <property name="Faction" value="Selesnya" />
       <property name="MultiverseId" value="452969" />
     </card>
@@ -4182,7 +4182,7 @@ When Whisper Agent enters the battlefield, surveil 1. (Look at the top card of y
       <property name="Color" value="Hybrid Green White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Put a +1/+1 counter on target creature. That creature gains indestructible until end of turn.
+      <property name="Rules">Put a +1/+1 counter on target creature. It gains indestructible until end of turn.
 //
 Create three 2/2 green and white Elf Knight creature tokens with vigilance.</property>
       <property name="Artist" value="Jason A. Engle" />
@@ -4197,7 +4197,7 @@ Create three 2/2 green and white Elf Knight creature tokens with vigilance.</pro
         <property name="Color" value="Hybrid Green White" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Rare" />
-        <property name="Rules">Put a +1/+1 counter on target creature. That creature gains indestructible until end of turn.</property>
+        <property name="Rules">Put a +1/+1 counter on target creature. It gains indestructible until end of turn.</property>
         <property name="Artist" value="Jason A. Engle" />
         <property name="Number" value="221" />
         <property name="Faction" value="Selesnya" />
@@ -4215,7 +4215,6 @@ Create three 2/2 green and white Elf Knight creature tokens with vigilance.</pro
         <property name="Rules">Create three 2/2 green and white Elf Knight creature tokens with vigilance.</property>
         <property name="Artist" value="Jason A. Engle" />
         <property name="Number" value="221" />
-        <property name="Faction" value="Selesnya" />
       </alternate>
     </card>
     <card name="Connive // Concoct" id="890ac54c-6fd7-4e46-8ce4-8926c6975f60">
@@ -4265,7 +4264,6 @@ Surveil 3, then return a creature card from your graveyard to the battlefield.</
         <property name="Rules">Surveil 3, then return a creature card from your graveyard to the battlefield.</property>
         <property name="Artist" value="Dan Scott" />
         <property name="Number" value="222" />
-        <property name="Faction" value="Dimir" />
       </alternate>
     </card>
     <card name="Discovery // Dispersal" id="ace631d1-897a-417e-8628-0170713f03d3">
@@ -4313,7 +4311,6 @@ Each opponent returns a nonland permanent they control with the highest converte
         <property name="Rules">Each opponent returns a nonland permanent they control with the highest converted mana cost among permanents they control to its owner's hand, then discards a card.</property>
         <property name="Artist" value="Mark Behm" />
         <property name="Number" value="223" />
-        <property name="Faction" value="Dimir" />
       </alternate>
     </card>
     <card name="Expansion // Explosion" id="e0644c92-4d67-475e-8c8e-0e2c493682fb">
@@ -4365,7 +4362,6 @@ Explosion deals X damage to any target. Target player draws X cards.</property>
         <property name="Rules">Explosion deals X damage to any target. Target player draws X cards.</property>
         <property name="Artist" value="Deruchenko Alexander" />
         <property name="Number" value="224" />
-        <property name="Faction" value="Izzet" />
       </alternate>
     </card>
     <card name="Find // Finality" id="1e4e9e35-6cbc-4997-beff-d1a22d87545e">
@@ -4413,7 +4409,6 @@ You may put two +1/+1 counters on a creature you control. Then all creatures get
         <property name="Rules">You may put two +1/+1 counters on a creature you control. Then all creatures get -4/-4 until end of turn.</property>
         <property name="Artist" value="Tomasz Jedruszek" />
         <property name="Number" value="225" />
-        <property name="Faction" value="Golgari" />
       </alternate>
     </card>
     <card name="Flower // Flourish" id="feb4b39f-d309-49ba-b427-240b7fdc1099">
@@ -4459,7 +4454,6 @@ Creatures you control get +2/+2 until end of turn.</property>
         <property name="Rules">Creatures you control get +2/+2 until end of turn.</property>
         <property name="Artist" value="Dmitry Burmak" />
         <property name="Number" value="226" />
-        <property name="Faction" value="Selesnya" />
       </alternate>
     </card>
     <card name="Integrity // Intervention" id="4a82084e-b178-442b-8007-7b2a70f3fbba">
@@ -4505,7 +4499,6 @@ Intervention deals 3 damage to any target and you gain 3 life.</property>
         <property name="Rules">Intervention deals 3 damage to any target and you gain 3 life.</property>
         <property name="Artist" value="Ben Maier" />
         <property name="Number" value="227" />
-        <property name="Faction" value="Boros" />
       </alternate>
     </card>
     <card name="Invert // Invent" id="054a4e4f-8baa-41cf-b24c-d068e8b9a070">
@@ -4551,7 +4544,6 @@ Search your library for an instant card and/or a sorcery card, reveal them, put 
         <property name="Rules">Search your library for an instant card and/or a sorcery card, reveal them, put them into your hand, then shuffle your library.</property>
         <property name="Artist" value="Mathias Kollros" />
         <property name="Number" value="228" />
-        <property name="Faction" value="Izzet" />
       </alternate>
     </card>
     <card name="Response // Resurgence" id="92162888-35ea-4f4f-ab99-64dd3104e230">
@@ -4599,7 +4591,6 @@ Creatures you control gain first strike and vigilance until end of turn. After t
         <property name="Rules">Creatures you control gain first strike and vigilance until end of turn. After this main phase, there is an additional combat phase followed by an additional main phase.</property>
         <property name="Artist" value="Daarken" />
         <property name="Number" value="229" />
-        <property name="Faction" value="Boros" />
       </alternate>
     </card>
     <card name="Status // Statue" id="44614c6d-5508-4077-b825-66d5d684086c">
@@ -4645,7 +4636,6 @@ Destroy target artifact, creature, or enchantment.</property>
         <property name="Rules">Destroy target artifact, creature, or enchantment.</property>
         <property name="Artist" value="Ben Wootten" />
         <property name="Number" value="230" />
-        <property name="Faction" value="Golgari" />
       </alternate>
     </card>
     <card name="Boros Locket" id="5e972d97-0df2-44e4-8ff2-cc8707316dc1">
@@ -5007,7 +4997,7 @@ When Gateway Plaza enters the battlefield, sacrifice it unless you pay <s value=
       <property name="Subtype" value="Swamp Forest" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>.)
-As Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.</property>
+As Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, Overgrown Tomb enters the battlefield tapped.</property>
       <property name="Artist" value="Yeong-Hao Han" />
       <property name="Number" value="253" />
       <property name="Flavor" value="Cradle of the Golgari's new kingdom. Grave of those who wronged its queen." />
@@ -5022,7 +5012,7 @@ As Overgrown Tomb enters the battlefield, you may pay 2 life. If you don't, it e
       <property name="Subtype" value="Mountain Plains" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.)
-As Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.</property>
+As Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, Sacred Foundry enters the battlefield tapped.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="254" />
       <property name="Flavor" value="&quot;You will not be trained here. You will be forged.&quot;—Commander Yaszen" />
@@ -5067,7 +5057,7 @@ As Sacred Foundry enters the battlefield, you may pay 2 life. If you don't, it e
       <property name="Subtype" value="Island Mountain" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.)
-As Steam Vents enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.</property>
+As Steam Vents enters the battlefield, you may pay 2 life. If you don't, Steam Vents enters the battlefield tapped.</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="257" />
       <property name="Flavor" value="&quot;A massive new Izzet building project with an unstated purpose? Probably fine.&quot;—Zija, Simic mutationist" />
@@ -5082,7 +5072,7 @@ As Steam Vents enters the battlefield, you may pay 2 life. If you don't, it ente
       <property name="Subtype" value="Forest Plains" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.)
-As Temple Garden enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.</property>
+As Temple Garden enters the battlefield, you may pay 2 life. If you don't, Temple Garden enters the battlefield tapped.</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="258" />
       <property name="Flavor" value="&quot;Where the roots reach, there the temple rises.&quot;—Niszka, Selesnya evangel" />
@@ -5097,7 +5087,7 @@ As Temple Garden enters the battlefield, you may pay 2 life. If you don't, it en
       <property name="Subtype" value="Island Swamp" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.)
-As Watery Grave enters the battlefield, you may pay 2 life. If you don't, it enters the battlefield tapped.</property>
+As Watery Grave enters the battlefield, you may pay 2 life. If you don't, Watery Grave enters the battlefield tapped.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="259" />
       <property name="Flavor" value="Few believe Duskmantle exists. Fewer find it. None live to bear witness." />
@@ -5177,8 +5167,8 @@ As Watery Grave enters the battlefield, you may pay 2 life. If you don't, it ent
       <property name="Subtype" value="Ral" />
       <property name="Rarity" value="Special Mythic Rare" />
       <property name="Rules">+1: Draw a card.
-−2: Ral, Caller of Storms deals 3 damage divided as you choose among one, two, or three targets.
-−7: Draw seven cards. Ral, Caller of Storms deals 7 damage to each creature your opponents control.</property>
+-2: Ral, Caller of Storms deals 3 damage divided as you choose among one, two, or three targets.
+-7: Draw seven cards. Ral, Caller of Storms deals 7 damage to each creature your opponents control.</property>
       <property name="PT Box" value="4" />
       <property name="Artist" value="Kieran Yanner" />
       <property name="Number" value="265" />
@@ -5247,8 +5237,8 @@ Whenever Ral's Staticaster attacks, if you control a Ral planeswalker, Ral's Sta
       <property name="Subtype" value="Vraska" />
       <property name="Rarity" value="Special Mythic Rare" />
       <property name="Rules">+2: Put a +1/+1 counter on up to one target creature. That creature gains menace until end of turn.
-−3: Destroy target creature.
-−10: For each creature card in your graveyard, put a +1/+1 counter on each creature you control.</property>
+-3: Destroy target creature.
+-10: For each creature card in your graveyard, put a +1/+1 counter on each creature you control.</property>
       <property name="PT Box" value="5" />
       <property name="Artist" value="Magali Villeneuve" />
       <property name="Number" value="269" />
