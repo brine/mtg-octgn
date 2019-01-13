@@ -287,5 +287,9 @@ changelog = {
         ]),
     3041002: ("3.4.10.2", "December 19 2018", [
         "Added Ultimate Masters (tokens coming soon)"
+        ]),
+    3041003: ("3.4.10.3", "January 12 2019", [
+        "Added Ravnica Allegiance",
+        "Added RNA and UMA tokens"
         ])
 }
