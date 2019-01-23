@@ -291,5 +291,13 @@ changelog = {
     3041003: ("3.4.10.3", "January 12 2019", [
         "Added Ravnica Allegiance",
         "Added RNA and UMA tokens"
+        ]),
+    3041100: ("3.4.11.0", "January 23 2019", [
+        "Replaced autoscript settings actions with a single dialog window",
+        "Redesign of automatic alignment system, fixing several bugs involving alignment of attachments",
+        "Rancor-style attachments will no longer crash OCTGN when the target card leaves play",
+        "Changes to the Auto-Pass Priority system, and how it interacts with players who have autoscripts disabled",
+        "Alignment now groups tapped cards separately from untapped cards",
+        "NOTE: Some of these changes may have bugs -- please let me know via the discord channel if any oddities occur!"
         ])
 }

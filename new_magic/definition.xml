@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.4.10.3" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.4.11.0" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://www.octgngames.com/mtg/download-links/" gameurl="http://www.octgngames.com/mtg/" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -16,7 +16,7 @@
     <event name="OnGlobalVariableChanged" action="priorityResolve" />
     <event name="OnTurnPassed" action="endTurn" />
 	<event name="OnPhasePassed" action="changePhase" />
-	<event name="OnCardsMoved" action="moveEvent" />
+	<event name="OverrideCardsMoved" action="moveEvent" />
 	<event name="OnTableLoaded" action="initializeGame" />
   </events>
   <fonts>
@@ -155,13 +155,7 @@
     <groupaction menu="Lose 1 Life" shortcut="ctrl+Q" execute="lose1Life" />
     <groupaction menu="Gain 1 Life" shortcut="ctrl+W" execute="gain1Life" />
     <groupaction menu="Re-align Cards" execute="align" />
-	<groupactions menu="Autoscript Settings">
-      <groupaction menu="Enable/Disable Autoscripts" execute="autoDisable" />
-      <groupaction menu="Enable/Disable Auto-Alignment" execute="alignDisable" />
-      <groupaction menu="Enable/Disable Attachment Alignment" execute="attachDisable" />
-      <groupaction menu="Enable/Disable Alignment Anchoring" execute="anchorDisable" />
-      <groupaction menu="Enable/Disable Debug" execute="debugDisable" />
-	</groupactions>
+	<groupaction menu="Change Automation Settings" execute="autoscriptMenu" />
     <groupaction menu="View Update Log" execute="changeLog" />
     <cardaction menu="Tap/Untap or Resolve" default="True" batchExecute="batchResolve" />
     <cardaction menu="Exert (Don't Untap Next Untap Step)" shortcut="ctrl+V" execute="exert" />

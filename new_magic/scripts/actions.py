@@ -25,8 +25,6 @@ playerside = None
 sideflip = None
 offlinedisable = False
 savedtags = { }
-timer = []
-debugMode = False
 alignIgnore = []
 
 stackDict = {} ## Needs to move to a global variable for game reconnects
@@ -52,9 +50,8 @@ def priorityResolve(args):
                 if isStack(c)]
         if len(stack) == 0:
             return
-        if stack[-1].controller == me and autoscriptCheck() == "True":
+        if stack[-1].controller == me and autoscriptCheck():
             resolve(stack[-1])
-            cardalign()
 
 def endTurn(args):
     mute()
@@ -63,26 +60,29 @@ def endTurn(args):
         clearAll(table, x = 0, y = 0)
 
 def moveEvent(args):
+    global alignIgnore
     mute()
     player = args.player
     cards = args.cards
-    fromGroups = args.fromGroups
     toGroups = args.toGroups
-    if player != me:
-        return
-    count = -1
-    for card in cards:
-        count += 1
-        if fromGroups[count] != table or toGroups[count] != table:  ## Ignore non-table movements
-            continue
-        if anchorCheck() == "True":
-            global alignIgnore
-            if not card in alignIgnore and alignCheck() == "True":  ## Moving a card will automatically disable it from alignment
-                alignIgnore.append(card)  ## anchors the card to the table
-        if alignCheck() == "False" and attachCheck() == "True":  ## If the user disabled alignment and enabled attachment aligning
-            alignAttachments(card)
-    if alignCheck() == "True":
-        cardalign()
+    cattach = None
+    for i in range(len(args.cards)):
+        card = cards[i]
+        toGroup = toGroups[i]
+        ## Moving a card will automatically disable it from alignment
+        if attachCheck():
+            if cattach == None:
+                cattach = eval(getGlobalVariable('cattach'))
+            if card._id in cattach:
+                continue
+        if anchorCheck() and toGroup == table and not card in alignIgnore: 
+            alignIgnore.append(card)  ## anchors the card to the table
+        ## if it's gotten this far, proceed to default movement action
+        if toGroup == table:
+            card.moveToTable(args.xs[i], args.ys[i], not args.faceups[i])
+        else:
+            card.moveTo(toGroup)
+    cardalign()
 
 def initializeGame():
     mute()
@@ -117,19 +117,14 @@ def respond(group, x = 0, y = 0):
     notify('{} RESPONDS!'.format(me))
 
 def passPriority(group, x = 0, y = 0, autoscriptOverride = False):
-    if autoscriptCheck() == "True" or autoscriptOverride == True:
-        priorityList = eval(getGlobalVariable('priority'))
-        if me._id in priorityList:
-            priorityList.remove(me._id)
-            setGlobalVariable('priority', str(priorityList))
-        notify('{} passes priority.'.format(me))
-    else:
-        notify('{} passes priority to an opponent.'.format(me))
+    priorityList = eval(getGlobalVariable('priority'))
+    if me._id in priorityList:
+        priorityList.remove(me._id)
+        setGlobalVariable('priority', str(priorityList))
+    notify('{} passes priority.'.format(me))
 
 def autoPass(group, x = 0, y = 0):
     mute()
-    if not autoscriptCheck():  ## autoscripts must be enabled to use this
-        return
     if me.getGlobalVariable("f6") == "False":
         me.setGlobalVariable("f6", "True")
         whisper("You are now auto-passing priority.")
@@ -320,7 +315,7 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
 def play(card, x = 0, y = 0):
     mute()
     text = ''
-    if autoscriptCheck() == "True":
+    if autoscriptCheck():
         src = card.group
         if src == me.hand:
             srcText = ""
@@ -360,7 +355,6 @@ def play(card, x = 0, y = 0):
                 if resData != "BREAK":
                     text += resData['text']
                 notify("{} plays {}{}.".format(me, card, text))
-                cardalign()
                 etbData = autoTrigger(card, 'etb', cost = resData['cost'], x = resData['x'])
             else:
                 modeTuple = stackDict[card]['mode']
@@ -375,7 +369,7 @@ def play(card, x = 0, y = 0):
         else:
             card.moveToTable(defaultX, defaultY)
         notify("{} plays {} from their {}.".format(me, card, src))
-        cardalign()
+    cardalign()
 
 def flashback(card, x = 0, y = 0):
     mute()
@@ -387,11 +381,12 @@ def batchResolve(cards, x = 0, y = 0):
     mute()
     for card in cards:
         resolve(card)
+    cardalign()
 
-def resolve(card, x = 0, y = 0):
+def resolve(card):
     mute()
     global stackDict
-    if autoscriptCheck() == "True":
+    if autoscriptCheck():
         ## double-clicking a suspended card
         if counters['suspend'] in card.markers:
             ## Remove a time counter
@@ -419,7 +414,6 @@ def resolve(card, x = 0, y = 0):
                 notify("{} resolves {} ({}){}.".format(me, card, stackData['class'], stackData['text']))
             if stackData['class'] == 'cast':
                 etbData = autoTrigger(stackData['src'], 'etb', cost = stackData['cost'], x = stackData['x'])
-            cardalign()
         ## double-clicking a card in play just taps it
         else:
             card.orientation ^= Rot90
@@ -438,11 +432,12 @@ def batchDestroy(cards, x = 0, y = 0):
     mute()
     for card in cards:
         destroy(card)
+    cardalign()
 
 def destroy(card, x = 0, y = 0):
     mute()
     src = card.group
-    if autoscriptCheck() == "True" and src == table:
+    if autoscriptCheck() and src == table:
         global stackDict
         if card in stackDict: #Destroying a card on a stack is considered countering that spell
             if stackDict[card]['moveto'] == 'exile':
@@ -459,12 +454,11 @@ def destroy(card, x = 0, y = 0):
     else:
         card.moveTo(card.owner.Graveyard)
         notify("{} destroys {}.".format(me, card))
-        cardalign()
 
 def discard(card, x = 0, y = 0):
     mute()
     src = card.group
-    if autoscriptCheck() == "True":
+    if autoscriptCheck():
         if src == me.hand:  ## Only run discard scripts if the card is discarded from hand
             card.moveTo(card.owner.Graveyard)
             stackData = autoTrigger(card, 'discard')
@@ -472,6 +466,7 @@ def discard(card, x = 0, y = 0):
             if stackData != "BREAK":
                 text = stackData['text']
             notify("{} discards {} from hand{}.".format(me, card, text))
+            cardalign()
         else:
             card.moveTo(card.owner.Graveyard)
             notify("{} discards {} from {}.".format(me, card, src))
@@ -483,11 +478,12 @@ def batchExile(cards, x = 0, y = 0):
     mute()
     for card in cards:
         exile(card)
+    cardalign()
 
 def exile(card, x = 0, y = 0):
     mute()
     src = card.group
-    if autoscriptCheck() == "True" and src == table:
+    if autoscriptCheck() and src == table:
         stackData = autoTrigger(card, 'exile')
         if stackData != "BREAK":
             card.moveTo(card.owner.piles['Exiled Zone'])
@@ -496,7 +492,6 @@ def exile(card, x = 0, y = 0):
         fromText = " from the battlefield" if src == table else " from their " + src.name
         card.moveTo(card.owner.piles['Exiled Zone'])
         notify("{} exiles {}{}.".format(me, card, fromText))
-        cardalign()
 
 def batchAttack(cards, x = 0, y = 0):
     mute()
@@ -506,7 +501,7 @@ def batchAttack(cards, x = 0, y = 0):
 
 def attack(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck() == "True":
+    if autoscriptCheck():
         if card.orientation == Rot90:
             if confirm("Cannot attack: already tapped. Continue?") != True:
                 return
@@ -537,7 +532,7 @@ def batchAttackWithoutTapping(cards, x = 0, y = 0):
 
 def attackWithoutTapping(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck() == "True":
+    if autoscriptCheck():
         if card.orientation == Rot90:
             if confirm("Cannot attack: {} is tapped. Continue?".format(card)) != True:
                 return
@@ -566,7 +561,7 @@ def batchBlock(cards, x = 0, y = 0):
 
 def block(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck() == "True":
+    if autoscriptCheck():
         if card.highlight in [DoesntUntapColor, AttackDoesntUntapColor, BlockDoesntUntapColor]:
             card.highlight = BlockDoesntUntapColor
         else:
@@ -585,30 +580,29 @@ def batchActivate(cards, x = 0, y = 0):
     mute()
     for card in cards:
         activate(card)
+    cardalign()
 
 def activate(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck() == "True":
+    if autoscriptCheck():
         stackData = autoTrigger(card, 'acti')
         if stackData != "BREAK":
             notify("{} activates {}'s ability #{}{}.".format(me, card, stackData['acti'][0], stackData['text']))
     else:
         notify("{} uses {}'s ability.".format(me, card))
-        cardalign()
 
 def morph(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck() == "True":
+    if autoscriptCheck():
         card.isFaceUp = False
         stackData = autoCast(card, morph = True)
         notify("{} casts a card face-down.".format(me))
         card.peek()
-        cardalign()
     else:
         notify("{} casts a card face-down from their {}.".format(me, card.group.name))
         card.moveToTable(defaultX, defaultY, True)
         card.peek()
-        cardalign()
+    cardalign()
 
 def manifest(card, x = 0, y = 0):
     mute()
@@ -650,20 +644,19 @@ def transform(card, x = 0, y = 0):
             notify("{} morphs {} face down.".format(me, card))
             card.isFaceUp = False
         else:
-            if autoscriptCheck() == "True":
+            if autoscriptCheck():
                 card.peek()
                 rnd(1,10)
                 card.isFaceUp = True
                 stackData = autoTrigger(card, 'morph') ## The card will flip up in the autoParser
                 card.markers[counters['manifest']] = 0
-                cardalign()
                 if stackData != "BREAK":
                     notify("{} morphs {} face up{}.".format(me, card, stackData['text']))
             else:
                 card.isFaceUp = True
                 card.markers[counters['manifest']] = 0
-                cardalign()
                 notify("{} morphs {} face up.".format(me, card))
+    cardalign()
 
 def suspend(card, x = 0, y = 0):
     mute()
@@ -672,24 +665,24 @@ def suspend(card, x = 0, y = 0):
         card.moveToTable(defaultX, defaultY)
         card.markers[counters['suspend']] = 1
         card.markers[counters['time']] = num
-        cardalign()
         notify("{} suspends {} for {}.".format(me, card, num))
+        cardalign()
 
 def blink(card, x = 0, y = 0):
     mute()
     src = card.group
     if src == table:
-        if autoscriptCheck() == "True":
+        if autoscriptCheck():
             exileData = autoTrigger(card, 'exile')
             if exileData == "BREAK":
                 return
             card.moveTo(card.owner.piles['Exiled Zone'])
-            cardalign()
             card.moveToTable(defaultX, defaultY)
             notify("{} blinks {}.".format(me, card))
         else:
             clear(card)
             notify("{} blinks {}.".format(me, card))
+        cardalign()
 
 #---------------------------------------------------------------------------
 # Table card actions
@@ -929,11 +922,11 @@ def draw(group, x = 0, y = 0):
     rnd(10,100)
     if re.search(r'Miracle ', card.Rules):
         if confirm("Cast this card for its Miracle cost?\n\n{}\n{}".format(card.Name, card.Rules)):
-            if autoscriptCheck() == "True":
+            if autoscriptCheck():
                 stackData = autoTrigger(card, 'miracle', forceCreate = True)
                 card.highlight = MiracleColor
-                cardalign()
                 notify("{} draws a miracle {}{}.".format(me, card, stackData['text']))
+                cardalign()
             else:
                 miracletrig = card
                 miracletrig.moveToTable(defaultX, defaultY)

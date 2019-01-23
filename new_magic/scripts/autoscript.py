@@ -8,83 +8,63 @@ def clearCache(group, x = 0, y = 0):
         setGlobalVariable('cattach', "{ }")
         notify("{} reset the global attachment dictionary.".format(me))
 
-def debugWhisper(text, card, timer):
-    if debugMode == "True":
-        timer = time.clock() - timer
-        if timer > 1:
-            whisper("DEBUG({} {}: {})".format(text, card, timer))
-    return time.clock()
-
-def debugDisable(group, x = 0, y = 0):
-    mute()
-    global debugMode
-    if getSetting("debugTimer", "False") == "True":
-        setSetting("debugTimer", "False")
-        debugMode = "False"
-        whisper("(you disabled the Debug Timer)")
-    else:
-        setSetting("debugTimer", "True")
-        debugMode = "True"
-        whisper("(you enabled the Debug Timer)")
-
-def autoDisable(group, x = 0, y = 0):
-    mute()
-    if autoscriptCheck() == "True":
-        setSetting("autoscripts", "False")
-        notify("{} disables autoscripts.".format(me))
-        passPriority(group,0,0,True) ## Remove the player from the priority list since they hate autoscripts so much
-    else:
-        setSetting("autoscripts", "True")
-        notify("{} enables autoscripts.".format(me))
-    ## Now we have to update the active players to let others know you're a big quitter
-    playersDict = eval(getGlobalVariable('activePlayers'))
-    if me._id in playersDict:
-        playersDict[me._id] = autoscriptCheck()
-        setGlobalVariable('activePlayers', str(playersDict))
-
 def autoscriptCheck():
-    return getSetting("autoscripts", "True")
-
-def alignDisable(group, x = 0, y = 0):
-    mute()
-    if alignCheck() == "True":
-        setSetting("alignment", "False")
-        notify("{} disables alignment.".format(me))
-    else:
-        setSetting("alignment", "True")
-        notify("{} enables alignment.".format(me))
+    return getSetting("autoscripts", True)
 
 def alignCheck():
-    return getSetting("alignment", "True")
-
-def attachDisable(group, x = 0, y = 0):
-    mute()
-    if attachCheck() == "True":
-        setSetting("attachments", "False")
-        notify("{} disables attachment alignment.".format(me))
-    else:
-        setSetting("attachments", "True")
-        notify("{} enables attachment alignment.".format(me))
+    return getSetting("alignment", True)
 
 def attachCheck():
-    return getSetting("attachments", "True")
-
-def anchorDisable(group, x = 0, y = 0):
-    mute()
-    if anchorCheck() == "True":
-        setSetting("anchor", "False")
-        notify("{} disables attachment anchoring.".format(me))
-        global alignIgnore
-        alignIgnore = []
-    else:
-        setSetting("anchor", "True")
-        notify("{} enables attachment anchoring.".format(me))
+    return getSetting("attachments", True)
 
 def anchorCheck():
-    return getSetting("anchor", "True")
+    return getSetting("anchor", True)
+
+def debugCheck():
+    return getSetting("debugTimer", False)
+
+def autoscriptMenu(group, x = 0, y = 0):
+    mute()
+    options = {1: ("autoscripts", "Autoscripts", autoscriptCheck()),
+               2: ("alignment", "Automatic Alignment", alignCheck()),
+               3: ("attachments", "Attachment Alignment", attachCheck()),
+               4: ("anchor", "Alignment Anchoring", anchorCheck()),
+               5: ("debugTimer", "Debug Message", debugCheck()) }
+    ret = 1
+    while ret > 0:
+        names = []
+        colors = []
+        for x in options:
+            names.append(options[x][1])
+            colors.append("#666666" if options[x][2] == False else "#000077")
+        ret = askChoice("Toggle Automation Settings:", names, colors)
+        if ret > 0:
+            options[ret] = (options[ret][0], options[ret][1], not options[ret][2])
+    if options[1][2] != autoscriptCheck():
+        setSetting(options[1][0], options[1][2])
+    if options[2][2] != alignCheck():
+        setSetting(options[2][0], options[2][2])
+        if options[2][0]:
+            cardalign()
+    if options[3][2] != attachCheck():
+        setSetting(options[3][0], options[3][2])
+    if options[4][2] != anchorCheck():
+        setSetting(options[4][0], options[4][2])
+        if not options[4][2]:
+            global alignIgnore
+            alignIgnore = []
+    if options[5][2] != debugCheck():
+        setSetting(options[5][0], options[5][2])
+
+def debugWhisper(text, timer):
+    if debugCheck():
+        elapsedTime = time.clock() - timer
+        whisper("DEBUG({}: {})".format(text, elapsedTime))
+    return time.clock()
 
 def getTags(card, key = None):
     mute()
+    timer = time.clock()
     global savedtags, offlinedisable
     cardname = card.Name
     encodedcardname = Convert.ToBase64String(Text.Encoding.UTF8.GetBytes(cardname)) #encodes the card name so the website can parse it safely
@@ -143,6 +123,7 @@ def getTags(card, key = None):
                     actiondict[actionname].append(actionparam)
                 tagdict[actionlist[0]] = actiondict
         savedtags[cardname] = tagdict
+    debugWhisper("getTags {} {}".format(card, key), timer)
     #### Fetch and return the card tags to previous functions
     if key in savedtags[cardname]:
         returnTags = savedtags[cardname][key]
@@ -320,7 +301,6 @@ def autoCast(card, morph = False, split = ''):
         stackDict[card] = stackData
         addStackMarkers(card)
         resetPriority()
-        cardalign()
     return stackData
 
 def autoTrigger(card, tagClass, forceCreate = False, cost = 0, x = 0):
@@ -343,7 +323,6 @@ def autoTrigger(card, tagClass, forceCreate = False, cost = 0, x = 0):
         stackDict[stackCard] = stackData
         addStackMarkers(stackCard)
         resetPriority()
-        cardalign()
     return stackData
 
 def autoResolve(card):
@@ -526,19 +505,13 @@ def parseScripts(card, stackData):
                 
 def resetPriority():
     mute()
-    priorityList = []
-    activePlayers = eval(getGlobalVariable('activePlayers'))
-    for playerId in activePlayers:
-        if playerId not in [x._id for x in getPlayers()]: #If the player has left the game, they need to be removed from the dictionary
-            del activePlayers[playerId]
-            setGlobalVariable('activePlayers', str(activePlayers))
-        elif activePlayers[playerId] == "True": ## Only select the players who have their autoscripts enabled.
-            p = Player(playerId)
-            if p.getGlobalVariable("f6") == "False":
-                priorityList.append(playerId)
-            else:
-                notify('{} auto-passes priority.'.format(p.name))
-    setGlobalVariable('priority', str(priorityList))
+    priorityList = [] ## lists the players who still have priority
+    for player in getPlayers():
+        if player.getGlobalVariable("f6") == "False":
+            priorityList.append(player._id)
+        else:
+            notify('{} auto-passes priority.'.format(player))
+    setGlobalVariable("priority", str(priorityList))
 
 ############################
 #Autoscript functions
@@ -832,7 +805,7 @@ def autosmartmarker(card, marker):
 
 def attach(card, x = 0, y = 0):
     mute()
-    if autoscriptCheck() == "True":
+    if autoscriptCheck():
         target = [cards for cards in table if cards.targetedBy]
         if len(target) == 0 or (len(target) == 1 and card in target):
             text = autodetach(card)
@@ -852,12 +825,12 @@ def align(group, x = 0, y = 0):  ## This is the menu groupaction for aligning AL
     mute()
     global alignIgnore
     alignIgnore = []  ## forces all cards to realign, even ones previously anchored to the board
-    if cardalign() != "BREAK":  ## Don't show the notify message if cardalign fails
+    if cardalign(force = True) != "BREAK":  ## Don't show the notify message if cardalign fails
         notify("{} re-aligns his cards on the table".format(me))
 
 def alignCard(cards, x = 0, y = 0):  ##This is the menu cardaction for reactivating alignment on a card
     mute()
-    if alignCheck == "False":
+    if not alignCheck():
         whisper("Cannot align card: You must enable auto-alignment.")
         return
     global alignIgnore
@@ -901,11 +874,10 @@ def sideFlip():  ## Initializes the player's left/right side of table variables
             sideflip = -1
     return sideflip
 
-def cardalign():
+def cardalign(force = False):
     mute()
-    side = playerSide()    ## Stores the Y-axis multiplier to determine which side of the table to align to
-    flip = sideFlip()    ## Stores the X-axis multiplier to determine if cards align on the left or right half
-    if flip == 0:    ## the 'disabled' state for alignment so the alignment positioning doesn't have to process each time
+    timer = time.clock()
+    if sideFlip() == 0:    ## the 'disabled' state for alignment so the alignment positioning doesn't have to process each time
         return
     if not Table.isTwoSided():  ## the case where two-sided table is disabled
         whisper("Cannot align: Two-sided table is required for card alignment.")
@@ -933,26 +905,37 @@ def cardalign():
     for p in alignQueue:
         if p in getPlayers():
             remoteCall(p, 'remoteAlign', str(alignQueue[p]))
+    ## cleans up the alignment ignore list
+    global alignIgnore
+    for x in alignIgnore:
+        if x not in table:
+            alignIgnore.remove(x)
     ## Cleans up and updates the global attachment dict
     cattach = eval(getGlobalVariable('cattach'))    ##converts attachment dict to a real dictionary
-    group1 = [cardid for cardid in cattach if Card(cattach[cardid]) not in table]    ##selects attachment cards missing their original targets
-    for cardid in group1:
-        c = Card(cardid)
-        if c.Subtype != None and re.search(r'Aura', c.Subtype) and c in table:    ##if the attachment is an aura, run the destroy scripts since aura's need targets
-            if c.controller == me:
-                destroy(c)
-            else:
-                remoteCall(c.controller, 'destroy', [c])
-        del cattach[cardid]    ##cleans up the attachment dict when the targeted card is no longer on the battlefield
-    group2 = [cardid for cardid in cattach if Card(cardid) not in table]    ##selects targeted cards whose attachment cards are now missing
-    for cardid in group2:
-        del cattach[cardid]    ##clean up attachment dict
-    if cattach != eval(getGlobalVariable('cattach')): ##checks to see if we changed the attached cards, because Kelly whined that we were updating global variables too often
-        setGlobalVariable('cattach', str(cattach))    ##updates the global attachment dictionary with our changes
+    cattachchanged = False
+    auraRemovalQueue = []
+    for k,v in cattach.items():
+        attachment = Card(k)
+        target = Card(v)
+        if attachment not in table:
+            del cattach[k]
+            cattachchanged = True
+        elif target not in table:
+            if attachment.Subtype and "Aura" in attachment.Subtype:
+                auraRemovalQueue.append(attachment)
+            del cattach[k]
+            cattachchanged = True
+    if cattachchanged:
+        setGlobalVariable('cattach', str(cattach)) ##updates the global attachment dictionary with our changes
+    for aura in auraRemovalQueue:
+        if aura.controller == me:
+            destroy(aura) ##TODO: Fix looping crash when rancor is destroyed
+        else:
+            remoteCall(aura.controller, "destroy", [aura])
     ## invert the attachment dict so keys are the target cards
     attachDict = {}
     for attachment in cattach:
-        targetCard = cattach[attachment]
+        targetCard = Card(cattach[attachment])
         if targetCard not in attachDict: ## Add the key if it doesn't exist
             attachDict[targetCard] = []
         attachDict[targetCard].append(Card(attachment))
@@ -960,91 +943,101 @@ def cardalign():
     carddict = { } ## This groups cards based on similar properties
     cardorder = [[],[],[],[],[],[],[],[]]
     attachHeight = [0,0,0,0,0,0,0,0] ## This part counts the total number of attachments on each card in each row, to optimize the vertical spacing between rows
-    for card in sorted([c for c in table], key=lambda c: flip * c.position[0]):
+    for card in sorted([c for c in table], key=lambda c: sideFlip() * c.position[0]):
         if (not counters['general'] in card.markers  ## Cards with General markers ignore alignment
                     and not card in alignIgnore
                     and not isStack(card)  ## cards on the stack have already been aligned so ignore them
                     and card.controller == me  ## don't align other player's cards
-                    and not card._id in cattach):  ## don't align attachments yet
-            if card.isFaceUp:
-                dictname = card.Name
-            else:
-                dictname = 'Card'
+                    ):  
+            if (card._id in cattach and attachCheck()):
+                continue ## attachments have a special alignment if that mode is enabled
+            height = 0
+            dictname = card.Name if card.isFaceUp else "Card"
             if card.highlight in [AttackColor, AttackDoesntUntapColor, BlockColor, BlockDoesntUntapColor]:
                 dictname += str(card._id) ##uniquely separates any card designated as an attacker or blocker
-            height = 0
             for marker in card.markers:
-                dictname += marker[0]
-                dictname += str(card.markers[marker])
-            if card._id in attachDict:  ## for cards that have stuff attached to them
+                dictname += marker[0] ## adds the name of the marker
+                dictname += str(card.markers[marker]) ## adds the qty of marker
+            if card in attachDict:  ## for cards that have stuff attached to them
                 dictname += str(card._id)
-                height = len(attachDict[card._id])
-            if not dictname in carddict:
-                carddict[dictname] = []
+                height = len(attachDict[card])
+            orientationdictname = dictname + str(card.orientation)
+            if not orientationdictname in carddict:
+                carddict[dictname + "0"] = []
+                carddict[dictname + "1"] = []
+                carddict[dictname + "2"] = []
+                carddict[dictname + "3"] = []
                 if not card.isFaceUp:
                     index = 0
                 elif counters["suspend"] in card.markers:
                     index = 6
-                elif re.search(r"Planeswalker", card.Type):
+                elif "Planeswalker" in card.Type:
                     index = 4
-                elif re.search(r"Emblem", card.Type):
+                elif "Emblem" in card.Type:
                     index = 5
-                elif re.search(r"Creature", card.Type):
+                elif "Creature" in card.Type:
                     index = 0
-                elif re.search(r"Artifact", card.Type):
+                elif "Artifact" in card.Type:
                     index = 1
-                elif re.search(r"Enchantment", card.Type):
+                elif "Enchantment" in card.Type:
                     index = 2
-                elif re.search(r"Land", card.Type):
+                elif "Land" in card.Type:
                     index = 3
                 else:
                     index = 7
-                cardorder[index].append(dictname)
-            if height > attachHeight[index]:  ## Make sure the largest height
+                cardorder[index].append(dictname + "0")
+                cardorder[index].append(dictname + "1")
+                cardorder[index].append(dictname + "2")
+                cardorder[index].append(dictname + "3")
+            if height > attachHeight[index]:  ## Tracks the largest height in each section
                 attachHeight[index] = height
-            carddict[dictname].append(card)
-    xpos = 80
+            carddict[orientationdictname].append(card)
+    xpos = 80 if playerSide()*sideFlip() == 1 else 25
     ypos = 5 + 10*max([attachHeight[0], attachHeight[1], attachHeight[2]])
     index = 0
-    allowAlign = alignCheck()
-    for cardtype in cardorder:
-        if index == 3:
-            xpos = 80
-            ypos += 93 + 10*max([attachHeight[3], attachHeight[4], attachHeight[5]])
-        elif index == 6:
-            xpos = 80
-            ypos += 93 + 10*max([attachHeight[6], attachHeight[7]])
-        for cardname in cardtype:
-            for card in carddict[cardname]:
-                if allowAlign == "True":
-                    newx = flip * xpos
-                    newy = side * ypos + (44*side - 44)
+    if alignCheck() or force:
+        for groupsection in cardorder:
+            if index == 3: ## start of second row
+                xpos = 80 if playerSide()*sideFlip() == 1 else 25
+                ypos += 93 + 10*max([attachHeight[3], attachHeight[4], attachHeight[5]])
+            elif index == 6: ## start of third row
+                xpos = 80 if playerSide()*sideFlip() == 1 else 25
+                ypos += 93 + 10*max([attachHeight[6], attachHeight[7]])
+            for cardgroup in groupsection:
+                lastCard = None
+                for card in carddict[cardgroup]:
+                    if playerSide()*sideFlip() == -1 and not lastCard:
+                        xpos += 80 if card.orientation == Rot90 else 55
+                    newx = sideFlip() * xpos
+                    newy = playerSide() * ypos + (44*playerSide() - 44)
                     if card.position != (newx, newy):
                         card.moveToTable(newx, newy)
-                xpos += 9
-                if card._id in attachDict:
-                    alignAttachments(card, attachDict[card._id])
-            xpos += 70
-        index += 1
+                    elif lastCard and lastCard.index > card.index:
+                        card.index = lastCard.index
+                    xpos += 10
+                    lastCard = card
+                if lastCard and sideFlip()*playerSide() == 1:
+                    xpos += 80 if lastCard.orientation == Rot90 else 55
+            index += 1
+    if attachCheck():
+        for card, attachments in attachDict.items():
+            alignAttachments(card, attachments)
+    debugWhisper("Alignment", timer)
 
-def alignAttachments(card, attachments = None):  ## Aligns all attachments on the card
+def alignAttachments(card, attachments):  ## Aligns all attachments on the card
     mute()
-    side = playerSide()
-    if attachments == None:
-        cattach = eval(getGlobalVariable('cattach'))
-        attachments = [Card(key) for (key,value) in cattach.iteritems() if value == card._id]
-    if attachments == []:
+    if len(attachments) < 1:
         return
     lastCard = card
     x, y = card.position
     count = 1
-    if side*y < 0:  ## A position modifier that has to take into account the vertical orientation of the card
+    if playerSide() * y < 0:  ## A position modifier that has to take into account the vertical orientation of the card
         yyy = -1
     else:
         yyy = 1
     for c in attachments:
         if not isStack(c):  ## Ignore attachments that have yet to resolve off the stack
-            attachY = y - 9 * yyy * side * count ## the equation to identify the y coordinate of the new card
+            attachY = y - 9 * yyy * playerSide() * count ## the equation to identify the y coordinate of the new card
             if c.position != (x, attachY):
                 c.moveToTable(x, attachY)
                 c.index = lastCard.index
@@ -1079,7 +1072,7 @@ def autoCreateToken(card, x = 0, y = 0):
             tokencard = tokenArtSelector(token)
             tokencard.moveToTable(x ,y)
             text += "{}/{} {} {}, ".format(tokencard.Power, tokencard.Toughness, tokencard.Color, tokencard.Name)
-        if autoscriptCheck() == "True":
+        if autoscriptCheck():
             cardalign()
         notify("{} creates {}.".format(me, text[0:-2]))
 
