@@ -14,9 +14,6 @@ def autoscriptCheck():
 def alignCheck():
     return getSetting("alignment", True)
 
-def attachCheck():
-    return getSetting("attachments", True)
-
 def anchorCheck():
     return getSetting("anchor", True)
 
@@ -27,9 +24,8 @@ def autoscriptMenu(group, x = 0, y = 0):
     mute()
     options = {1: ("autoscripts", "Autoscripts", autoscriptCheck()),
                2: ("alignment", "Automatic Alignment", alignCheck()),
-               3: ("attachments", "Attachment Alignment", attachCheck()),
-               4: ("anchor", "Alignment Anchoring", anchorCheck()),
-               5: ("debugTimer", "Debug Message", debugCheck()) }
+               3: ("anchor", "Alignment Anchoring", anchorCheck()),
+               4: ("debugTimer", "Debug Message", debugCheck()) }
     ret = 1
     while ret > 0:
         names = []
@@ -46,15 +42,13 @@ def autoscriptMenu(group, x = 0, y = 0):
         setSetting(options[2][0], options[2][2])
         if options[2][0]:
             cardalign()
-    if options[3][2] != attachCheck():
-        setSetting(options[3][0], options[3][2])
-    if options[4][2] != anchorCheck():
-        setSetting(options[4][0], options[4][2])
-        if not options[4][2]:
+    if options[3][2] != anchorCheck():
+        setSetting(options[4][0], options[3][2])
+        if not options[3][2]:
             global alignIgnore
             alignIgnore = []
-    if options[5][2] != debugCheck():
-        setSetting(options[5][0], options[5][2])
+    if options[4][2] != debugCheck():
+        setSetting(options[4][0], options[4][2])
 
 def debugWhisper(text, timer):
     if debugCheck():
@@ -934,11 +928,14 @@ def cardalign(force = False):
             remoteCall(aura.controller, "destroy", [aura])
     ## invert the attachment dict so keys are the target cards
     attachDict = {}
-    for attachment in cattach:
-        targetCard = Card(cattach[attachment])
+    for attachId in cattach:
+        attachment = Card(attachId)
+        targetCard = Card(cattach[attachId])
+        if attachment in alignIgnore:
+            continue
         if targetCard not in attachDict: ## Add the key if it doesn't exist
             attachDict[targetCard] = []
-        attachDict[targetCard].append(Card(attachment))
+        attachDict[targetCard].append(attachment)
     ##determine coordinates for cards
     carddict = { } ## This groups cards based on similar properties
     cardorder = [[],[],[],[],[],[],[],[]]
@@ -949,7 +946,7 @@ def cardalign(force = False):
                     and not isStack(card)  ## cards on the stack have already been aligned so ignore them
                     and card.controller == me  ## don't align other player's cards
                     ):  
-            if (card._id in cattach and attachCheck()):
+            if (card._id in cattach):
                 continue ## attachments have a special alignment if that mode is enabled
             height = 0
             dictname = card.Name if card.isFaceUp else "Card"
@@ -1019,9 +1016,8 @@ def cardalign(force = False):
                 if lastCard and sideFlip()*playerSide() == 1:
                     xpos += 80 if lastCard.orientation == Rot90 else 55
             index += 1
-    if attachCheck():
-        for card, attachments in attachDict.items():
-            alignAttachments(card, attachments)
+    for card, attachments in attachDict.items():
+        alignAttachments(card, attachments)
     debugWhisper("Alignment", timer)
 
 def alignAttachments(card, attachments):  ## Aligns all attachments on the card

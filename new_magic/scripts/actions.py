@@ -62,26 +62,16 @@ def endTurn(args):
 def moveEvent(args):
     global alignIgnore
     mute()
-    player = args.player
-    cards = args.cards
-    toGroups = args.toGroups
-    cattach = None
     for i in range(len(args.cards)):
-        card = cards[i]
-        toGroup = toGroups[i]
+        card = args.cards[i]
         ## Moving a card will automatically disable it from alignment
-        if attachCheck():
-            if cattach == None:
-                cattach = eval(getGlobalVariable('cattach'))
-            if card._id in cattach:
-                continue
-        if anchorCheck() and toGroup == table and not card in alignIgnore: 
+        if anchorCheck() and card.group == table and args.toGroups[i] == table and not card in alignIgnore: 
             alignIgnore.append(card)  ## anchors the card to the table
         ## if it's gotten this far, proceed to default movement action
-        if toGroup == table:
+        if args.toGroups[i] == table:
             card.moveToTable(args.xs[i], args.ys[i], not args.faceups[i])
         else:
-            card.moveTo(toGroup)
+            card.moveTo(args.toGroups[i], args.indexs[i])
     cardalign()
 
 def initializeGame():

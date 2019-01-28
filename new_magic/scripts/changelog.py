@@ -299,5 +299,10 @@ changelog = {
         "Changes to the Auto-Pass Priority system, and how it interacts with players who have autoscripts disabled",
         "Alignment now groups tapped cards separately from untapped cards",
         "NOTE: Some of these changes may have bugs -- please let me know via the discord channel if any oddities occur!"
+        ]),
+    3041101: ("3.4.11.1", "January 28 2019", [
+        "Removed Attachment Alignment setting -- it's now shared with regular alignment",
+        "Dragging a card to the table will not anchor it to the table by default",
+        "Fixed moving a card to the bottom of a pile"
         ])
 }
