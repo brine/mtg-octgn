@@ -156,6 +156,19 @@
             <property name="Artist" value="Winona Nelson" />
             <property name="Number" value="1" />
             <property name="Flags" value="TM19"/>
+            <alternate name="Angel" type="1">
+                <property name="Color" value="White" />
+                <property name="Type" value="Creature" />
+                <property name="Subtype" value="Angel" />
+                <property name="Rarity" value="Token" />
+                <property name="Rules">Flying, Vigilance</property>
+                <property name="Power" value="4" />
+                <property name="Toughness" value="4" />
+                <property name="PT Box" value="4 / 4" />
+                <property name="Artist" value="Volkan Baga" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="TWAR"/>
+            </alternate>
         </card>
         <card name="Ape" id="48c2b391-2b78-45b4-ba66-775d97dcd748">
             <property name="Color" value="Green" />
@@ -230,6 +243,20 @@
             <property name="Artist" value="Josu Hernaiz" />
             <property name="Number" value="5" />
             <property name="Flags" value="TCN2"/>
+        </card>
+        <card name="Assassin" id="f6a4db6e-18cb-4874-ada1-b743861f9a01">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Assassin" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Deathtouch
+            When this creature deals damage to a planeswalker, destroy that planeswalker.</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="PT Box" value="1 / 1" />
+            <property name="Artist" value="Zezhou Chen" />
+            <property name="Number" value="6" />
+            <property name="Flags" value="TWAR"/>
         </card>
         <card name="Assembly-Worker" id="6c4d590f-a3c8-4d94-b113-a586c471c2a2">
             <property name="Color" value="Colorless" />
@@ -1028,9 +1055,21 @@
             <property name="Number" value="1" />
             <property name="Flags" value="TUMA"/>
         </card>
+        <card name="Citizen" id="d39b168d-251d-4398-bbe7-c5ae92eef7ad">
+            <property name="Color" value="Multicolor White Blue Black Red Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Citizen" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="PT Box" value="2 / 2" />
+            <property name="Artist" value="Winona Nelson" />
+            <property name="Number" value="16" />
+            <property name="Flags" value="TWAR"/>
+        </card>
         <card name="City's Blessing" id="ba64ed3e-93c5-406f-a38d-65cc68472122">
             <property name="Color" value="Colorless" />
-            <property name="Type" value="" />
+            <property name="Type" value="Emblem" />
             <property name="Rarity" value="Token" />
             <property name="Artist" value="Yeong-Hao Han" />
             <property name="Number" value="6" />
@@ -1354,13 +1393,18 @@
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Devil" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">When this creature dies, it deals 1 damage to target creature or player.</property>
+            <property name="Rules">When this creature dies, it deals 1 damage to any target.</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="PT Box" value="1 / 1" />
             <property name="Artist" value="Wayne England" />
             <property name="Number" value="6" />
             <property name="Flags" value="TSOI"/>
+            <alternate name="Devil" type="1">
+                <property name="Artist" value="Kev Walker" />
+                <property name="Number" value="12" />
+                <property name="Flags" value="TWAR"/>
+            </alternate>
         </card>
         <card name="Dinosaur" id="4be59cad-2733-4d3d-891a-4026c6da28c8">
             <property name="Color" value="Green" />
@@ -1453,6 +1497,11 @@
                 <property name="Artist" value="Gabor Szikszai" />
                 <property name="Number" value="5" />
                 <property name="Flags" value="TDTK"/>
+            </alternate>
+            <alternate name="Dragon" type="2">
+                <property name="Artist" value="Kieran Yanner" />
+                <property name="Number" value="13" />
+                <property name="Flags" value="TWAR"/>
             </alternate>
         </card>
         <card name="Dragon" id="9ae59296-d44e-4d12-b26b-9326d6489239">
@@ -2780,6 +2829,11 @@
                 <property name="PT Box" value="1 / 1" />
                 <property name="Artist" value="Svetlin Velinov" />
                 <property name="Number" value="4" />
+                <property name="Flags" value="TRNA"/>
+            </alternate>
+            <alternate name="Goblin" type="17">
+                <property name="Artist" value="Mark Behm" />
+                <property name="Number" value="14" />
                 <property name="Flags" value="TRNA"/>
             </alternate>
         </card>
@@ -4695,6 +4749,11 @@
                 <property name="Number" value="5" />
                 <property name="Flags" value="TKLD"/>
             </alternate>
+            <alternate name="Servo" type="3">
+                <property name="Artist" value="Victor Adame Minguez" />
+                <property name="Number" value="18" />
+                <property name="Flags" value="TWAR"/>
+            </alternate>
         </card>
         <card name="Shapeshifter" id="714f4756-f2f2-4d0f-8325-938f20653c97">
             <property name="Color" value="Colorless" />
@@ -5076,6 +5135,19 @@
             <property name="Artist" value="Jason A. Engle" />
             <property name="Number" value="3" />
             <property name="Flags" value="TCN2"/>
+        </card>
+        <card name="Soldier" id="36d8ce5e-757d-430e-afbf-a6836ad35cc1">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Soldier" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Vigilance</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="PT Box" value="2 / 2" />
+            <property name="Artist" value="Johan Grenier" />
+            <property name="Number" value="3" />
+            <property name="Flags" value="TWAR"/>
         </card>
         <card name="Soldier" id="aafd95ac-25b2-4abd-869e-ca89c31f10f9">
             <property name="Color" value="Red" />
@@ -5495,6 +5567,18 @@
                 <property name="Number" value="1" />
                 <property name="Flags" value="TEMA"/>
             </alternate>
+        </card>
+        <card name="Spirit" id="7446e671-1183-484d-b99b-5f95c5f9a8c9">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Spirit" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="PT Box" value="2 / 2" />
+            <property name="Artist" value="Johann Bodin" />
+            <property name="Number" value="1" />
+            <property name="Flags" value="TWAR"/>
         </card>
         <card name="Spirit Warrior" id="a3e73a8c-0a65-441b-817c-5cd385a4861f">
             <property name="Color" value="Multicolor Black Green" />
@@ -6027,6 +6111,18 @@
             <property name="Number" value="11" />
             <property name="Flags" value="TJK1"/>
         </card>
+        <card name="Voja, Friend To Elves" id="eda41bb9-70cf-4a6b-afb2-4e8cca9e911f">
+            <property name="Color" value="Multicolor Green White" />
+            <property name="Type" value="Legendary Creature" />
+            <property name="Subtype" value="Wolf" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="PT Box" value="3 / 3" />
+            <property name="Artist" value="Chris Seaman" />
+            <property name="Number" value="17" />
+            <property name="Flags" value="TWAR"/>
+        </card>
         <card name="Wall" id="4d8efc05-4746-4e69-8d09-e64416bdbe08">
             <property name="Color" value="Blue" />
             <property name="Type" value="Creature" />
@@ -6052,6 +6148,19 @@
             <property name="Artist" value="Kathy Wells Hill" />
             <property name="Number" value="0" />
             <property name="Flags" value="TMIR?"/>
+        </card>
+        <card name="Wall" id="5c1be2e3-3a18-4465-8cf6-fbaef34d8fd3">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Wall" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Defender</property>
+            <property name="Power" value="0" />
+            <property name="Toughness" value="3" />
+            <property name="PT Box" value="0 / 3" />
+            <property name="Artist" value="Jason Rainville" />
+            <property name="Number" value="4" />
+            <property name="Flags" value="TWAR"/>
         </card>
         <card name="Warrior" id="49fb23bd-dfdb-4a72-99fd-a7cc6d16d15c">
             <property name="Color" value="White" />
@@ -6164,6 +6273,18 @@
             <property name="Artist" value="Dan Scott" />
             <property name="Number" value="10" />
             <property name="Flags" value="TC14"/>
+        </card>
+        <card name="Wizard" id="9be6ef38-fbd4-46e4-b187-55f3cf90fec1">
+            <property name="Color" value="Blue" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Wizard" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="PT Box" value="2 / 2" />
+            <property name="Artist" value="Sara Winters" />
+            <property name="Number" value="5" />
+            <property name="Flags" value="TWAR"/>
         </card>
         <card name="Wirefly" id="d505c602-3e9b-4f9b-a7eb-3380b39b7356">
             <property name="Color" value="Colorless" />
@@ -6297,6 +6418,11 @@
                 <property name="Artist" value="Aaron Miller" />
                 <property name="Number" value="9" />
                 <property name="Flags" value="TSOI"/>
+            </alternate>
+            <alternate name="Wolf" type="8">
+                <property name="Artist" value="Lars Grant-West" />
+                <property name="Number" value="15" />
+                <property name="Flags" value="TWAR"/>
             </alternate>
         </card>
         <card name="Wolves of The Hunt" id="66dea368-12dc-4cb7-b01a-4cc6d76a1c46">
@@ -6686,6 +6812,18 @@
                 <property name="Number" value="3" />
                 <property name="Flags" value="TRNA"/>
             </alternate>
+            <alternate name="Zombie" type="22">
+                <property name="Color" value="Black" />
+                <property name="Type" value="Creature" />
+                <property name="Subtype" value="Zombie" />
+                <property name="Rarity" value="Token" />
+                <property name="Power" value="2" />
+                <property name="Toughness" value="2" />
+                <property name="PT Box" value="2 / 2" />
+                <property name="Artist" value="Simon Dominic" />
+                <property name="Number" value="7" />
+                <property name="Flags" value="TWAR"/>
+            </alternate>
         </card>
         <card name="Zombie" id="ebc67e29-00a2-4a72-806b-915fa5f9d75e">
             <property name="Color" value="Black" />
@@ -6722,6 +6860,24 @@
             <property name="Artist" value="Zack Stella" />
             <property name="Number" value="2" />
             <property name="Flags" value="TJOU"/>
+        </card>
+        <card name="Zombie Army" id="cd37a3f8-a28b-418e-acd6-9c8fc0e6a233">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Zombie Army" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="0" />
+            <property name="Toughness" value="0" />
+            <property name="PT Box" value="0 / 0" />
+            <property name="Artist" value="Tomasz Jedruszek" />
+            <property name="Number" value="8" />
+            <property name="Flags" value="TWAR"/>
+            <alternate name="Zombie Army" type="1" >
+                <property name="Number" value="9" />
+            </alternate>
+            <alternate name="Zombie Army" type="2" >
+                <property name="Number" value="10" />
+            </alternate>
         </card>
         <card name="Zombie Horror" id="5f80aca2-6de2-44ad-8e56-669ccd52276b">
             <property name="Color" value="Black" />
@@ -6771,6 +6927,19 @@
             <property name="Artist" value="Dave Allsop" />
             <property name="Number" value="4" />
             <property name="Flags" value="TARB"/>
+        </card>
+        <card name="Zombie Warrior" id="2f03c2ee-9613-41f1-bba3-916b224788a9">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Zombie Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Vigilance</property>
+            <property name="Power" value="4" />
+            <property name="Toughness" value="4" />
+            <property name="PT Box" value="4 / 4" />
+            <property name="Artist" value="Mike Bierek" />
+            <property name="Number" value="11" />
+            <property name="Flags" value="TWAR"/>
         </card>
         <card name="Elspeth's Emblem" id="10281a72-4654-4416-a24a-293ce0d732ea">
             <property name="Color" value="Colorless" />
@@ -7203,6 +7372,16 @@
             <property name="PT Box" value="" />
             <property name="Number" value="11" />
             <property name="Flags" value="TKLD"/>
+        </card>
+        <card name="Nissa's Emblem" id="2d554a82-af77-4bba-b417-a83a0bd25bbc">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Subtype" value="Nissa, Who Shakes the World" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Lands you control have indestructible.</property>
+            <property name="Artist" value="Chris Rallis" />
+            <property name="Number" value="19" />
+            <property name="Flags" value="TWAR"/>
         </card>
         <card name="Dovin's Emblem" id="ceffb182-7d68-44d6-8e21-88c99cf84b29">
             <property name="Color" value="Colorless" />

@@ -117,13 +117,14 @@ tokenTypes = {
     'angel33W': ('3 / 3 White Angel', 'e2d290bb-a6f6-4385-8b65-8e272b66c0fa'),
     'angel33b': ('3 / 3 Black Angel', 'e2d290bb-a6f6-4385-8b65-8e272b66c0fa'), #APC1 APC2
     'angel44w': ('4 / 4 White Angel', '581e92be-a8b6-47b0-8051-f7d31fd77cc1'), #MPRSCG CFX ZEN ISD AVR1 AVR2 RTR SOI
-    'angel44w2': ('4 / 4 White Angel', '55d17efa-1789-43ac-ad66-e6de8ce159ed'), #M19
+    'angel44w2': ('4 / 4 White Angel', '55d17efa-1789-43ac-ad66-e6de8ce159ed'), #flying vigilance M19 WAR
     'ape11g': ('1 / 1 Green Ape', '48c2b391-2b78-45b4-ba66-775d97dcd748'),
     'ape22g': ('2 / 2 Green Ape', '934dbdba-1bd1-40dc-8d68-227ae79dc369'),
     'ape33g': ('3 / 3 Green Ape', '1667d12a-4beb-4754-bf77-6fd1d23e12ff'),
     'ashayatheawokenworld44g': ('4/4 Green Ashaya, the Awoken World', '2f7b9897-8819-42c8-885e-aab0e94faeae'),
     'assassin11b': ('1/1 Black Assassin', 'f960e50c-0eeb-444d-990c-be2cbec88385'),
     'assassin11b2': ('1/1 Black Assassin', '8e7308ed-727b-465d-9d8b-7ada62ed827e'), #CN2
+    'assassin11b3': ('1/1 Black Assassin', 'f6a4db6e-18cb-4874-ada1-b743861f9a01'), #WAR
     'assemblyworker22c': ('2 / 2 Colorless Assembly Worker', '6c4d590f-a3c8-4d94-b113-a586c471c2a2'),
     'avatar**w': ('* / * White Avatar', 'ebfa36c6-2c4e-4a5f-9730-010e7b50bd19'),
     'avatar44w': ('4 / 4 White Avatar', '00348a3e-c739-4a07-a31b-efaff054329d'), #M19
@@ -169,6 +170,7 @@ tokenTypes = {
     'centaur33g2': ('3 / 3 Green Centaur', '6b134506-3040-4b1e-8249-44c5d2419918'), #protection from black
     'centaur33g3': ('3 / 3 Green Centaur', 'd27f81eb-5631-4d95-ab8c-21eda7921129'), #enchantment
     'citizen11w': ('1 / 1 White Citizen', 'b0ad9093-84a2-412f-971e-71d0fc42dae2'),
+    'citizen22m': ('2 / 2 Multicolor Citizen', 'd39b168d-251d-4398-bbe7-c5ae92eef7ad'),
     'citysblessing': ("City's Blessing", 'ba64ed3e-93c5-406f-a38d-65cc68472122'),
     'cleric01b': ('0/1 Black Cleric', '219f6951-234a-4ac5-ab24-8e0ec474d6ff'),
     'cleric11m': ('1/1 Multicolor White Black Cleric', 'b6e9b1c2-b6c5-4697-88fa-6b59702ffc22'),
@@ -184,13 +186,13 @@ tokenTypes = {
     'demon66b': ('6 / 6 Black Demon', '98601612-a132-41ab-9f9b-9d7d085d6beb'),
     'demon**b': ('* / * Black Demon', 'd7f65953-cbe0-46ea-ad32-3646d0381c88'), #DDC CNS
     'deserter01w': ('0 / 1 White Deserter', '85197940-766e-4046-aa48-6d50bad3b963'),
-    'devil11r': ('1 / 1 Red Devil', 'b67e87ca-29a7-4b65-b507-2aee907aad9b'),
+    'devil11r': ('1 / 1 Red Devil', 'b67e87ca-29a7-4b65-b507-2aee907aad9b'), #SOI WAR
     'dinosaur33g': ('3 / 3 Green Dinosaur', '4be59cad-2733-4d3d-891a-4026c6da28c8'),
     'djinn55c': ('5 / 5 Colorless Djinn', '38bb8262-3ab3-4ad4-a0b1-4bb8f806ee3d'),
     'djinnmonk22u': ('2 / 2 Blue Djinn Monk', '4d1431d7-2eb3-49e3-9919-b3a64c05f52e'),
     'dragon11m': ('1 / 1 Multicolor Red Green Dragon', '5f6939ba-43bc-4c5b-b329-d6c58a5ddd28'),
     'dragon22r': ('2 / 2 Red Dragon', 'a6693042-8f74-4a29-816b-61974cca5041'), #M14 M15
-    'dragon44r': ('4 / 4 Red Dragon', 'abdc289a-4783-41db-95bc-42955fef0b16'), #WWK DTK
+    'dragon44r': ('4 / 4 Red Dragon', 'abdc289a-4783-41db-95bc-42955fef0b16'), #WWK DTK WAR
     'dragon55r': ('5 / 5 Red Dragon', '9ae59296-d44e-4d12-b26b-9326d6489239'), #10E MPRONS WWK M19
     'dragon66r': ('6 /6 Red Dragon', '58006984-ba3e-4d6f-9918-01126f580b80'),
     'dragon44m': ('6 / 6 Multicolor Gold Dragon', '477b427c-98e0-4c45-9434-7f0b47e3d2e1'),
@@ -252,7 +254,7 @@ tokenTypes = {
     'giantwarrior55w': ('5 / 5 White Giant Warrior', '73683460-63eb-444b-b418-e87ec50c1e95'),
     'gnome11c': ('1 / 1 Colorless Gnome', 'd1fa9cdb-7efa-4408-a086-009d6cc0e537'), #USG UST
     'goat01w': ('0 / 1 White Goat', '1631dd68-5afb-4ae2-8f4b-db67b0398c7a'), #EVE M13 UST
-    'goblin11r': ('1 / 1 Red Goblin', 'b1dc79df-5a3b-40dd-a927-11857bb95afb'), #10E UNG MPRLGN ALA SOM NPH M13 LEAGUEM13 RTR M15 KTK DTK UST DOM M19 RNA
+    'goblin11r': ('1 / 1 Red Goblin', 'b1dc79df-5a3b-40dd-a927-11857bb95afb'), #10E UNG MPRLGN ALA SOM NPH M13 LEAGUEM13 RTR M15 KTK DTK UST DOM M19 RNA WAR
     'goblin11r2': ('1 / 1 Red Goblin', '4605c074-94a4-4997-a313-3bff975b488b'), #CN2
     'goblin11r3': ('1 / 1 Red Goblin', '8f20b38d-f067-4dac-87dd-95b5615d711a'), #C16
     'goblin21r': ('2 / 1 Red Goblin', '672b3979-79ea-4d52-a3aa-b1d69a9b6fa3'),
@@ -388,7 +390,8 @@ tokenTypes = {
     'soldier11w': ('1 / 1 White Soldier', '696a4f4c-8794-4290-98f8-522b1ef7b93a'), #ALA UNG MPRONS SOM M12 M13 RTR THS THS M15 DOM
     'soldier11w2': ('1 / 1 White Soldier', 'd4d816a4-c805-4ae4-b633-7fd5515f5db4'), #enchantment
     'soldier11w3': ('1 / 1 White Soldier', '6c6db3f8-bbb0-49a4-ab03-065b4eac255e'), #lifelink
-    'soldier12': ('1 / 2 White Soldier', '0a11130f-7b21-4d9a-b94e-03e005e91def'),
+    'soldier12w': ('1 / 2 White Soldier', '0a11130f-7b21-4d9a-b94e-03e005e91def'), #defender
+    'soldier22w': ('2 / 2 White Soldier', '36d8ce5e-757d-430e-afbf-a6836ad35cc1'), #vigilance
     'soldier11r': ('1 / 1 Red Soldier', 'aafd95ac-25b2-4abd-869e-ca89c31f10f9'),
     'soldier11m': ('1/1 Multicolor Red White Soldier', 'fe57dd41-0ad7-4570-b1cb-fe2a4218bcb4'), #GTC LEAGUEGTC
     'soldierally11w': ('1 / 1 White Soldier Ally', '9624bca2-94bd-4f9b-96f4-5a1ce682974f'),
@@ -405,6 +408,7 @@ tokenTypes = {
     'spirit11m': ('1 / 1 Multicolor White Black Spirit', '55353de2-1086-4174-8904-b57db68708fd'), #EVE GTC RNA
     'spirit**m': ('* / * Multicolor White Black Spirit', '077636e0-3abe-441c-848e-19aed15a0eb3'),
     'spirit11c': ('1 / 1 Colorless Spirit', 'c30cf64a-475d-4fa4-bfeb-8d7d65afc42f'), #CHK EMA
+    'spirit11c': ('2 / 2 Colorless Spirit', '7446e671-1183-484d-b99b-5f95c5f9a8c9'),
     'spirit33w': ('3 / 3 White Spirit', '716114fc-cac6-43cc-a94e-17dd9e272b71'),
     'spirit**b': ('* / * Black Spirit', '40c570e4-a2f8-4032-89bb-d5a49c170302'),
     'spiritwarrior**m': ('* / * Multicolor Spirit Warrior', 'a3e73a8c-0a65-441b-817c-5cd385a4861f'),
@@ -437,7 +441,9 @@ tokenTypes = {
     'vampire**b': ('* / * Black Vampire', 'baa92925-d00e-46fa-85b3-a80313f4eab5'),
     'vampireknight11b': ('1 / 1 Black Vampire Knight', '6c337ac0-00de-4f6b-b48e-ee0d5a8d157f'),
     'voja22m': ('2 / 2 Multicolor Green White Voja', '776e6adf-b4a0-47a6-9fcf-85fb60b566c1'),
+    'vojafriendtoelves33m': ('3 / 3 Multicolor Green White Voja, Friend to Elves', 'eda41bb9-70cf-4a6b-afb2-4e8cca9e911f'),
     'wall02c': ('0 / 2 Colorless Wall', '4a094bd3-6330-4e63-bdde-9ee04beb07df'),
+    'wall03w': ('0 / 3 White Wall', '5c1be2e3-3a18-4465-8cf6-fbaef34d8fd3'),
     'wall55u': ('5 / 5 Blue Wall', '4d8efc05-4746-4e69-8d09-e64416bdbe08'), #MIR EMA
     'warrior11w': ('1 / 1 White Warrior', '49fb23bd-dfdb-4a72-99fd-a7cc6d16d15c'), #KTK KTK DTK
     'warrior11w2': ('1 / 1 White Warrior', '4c8f86b0-c7d5-4949-9873-e87935f97e77'),
@@ -446,10 +452,11 @@ tokenTypes = {
     'wasp11c': ('1 / 1 Colorless Wasp', 'e92fb94a-4060-4afb-944a-69367af00b19'),
     'weird33u': ('3 / 3 Blue Weird', 'b584d099-2ee4-41e0-8c8a-ad0b75e73fbb'),
     'whale66u': ('6 / 6 Blue Whale', '38517b29-f443-46da-b70b-2b5e1c0d1da6'),
+    'wizard22u': ('2 / 2 Blue Wizard', '9be6ef38-fbd4-46e4-b187-55f3cf90fec1'),
     'wirefly22c': ('2 / 2 Colorless Wirefly', 'd505c602-3e9b-4f9b-a7eb-3380b39b7356'),
     'wolf11b': ('1 / 1 Black Wolf', '114d0111-46a1-4d3d-9009-f8e2a2cf4744'),
     'wolf11g': ('1 / 1 Green Wolf', '8aefc79e-3789-474f-9d3a-69f6637f44d1'),
-    'wolf22g': ('2 / 2 Green Wolf', 'f5528690-5b0f-4b3a-9e77-388aef404409'), #LRW SHA ZEN SOM ISD FNM BNG SOI
+    'wolf22g': ('2 / 2 Green Wolf', 'f5528690-5b0f-4b3a-9e77-388aef404409'), #LRW SHA ZEN SOM ISD FNM BNG SOI WAR
     'wolvesofthehunt11g': ('1 / 1 Green Wolves of The Hunt', '66dea368-12dc-4cb7-b01a-4cc6d76a1c46'),
     'worm11m': ('1 / 1 Multicolor Black Green Worm', 'fd6aa5b4-3be4-4826-91af-48ad8472216a'),
     'wurm33c': ('3 / 3 Colorless Wurm', '7876a3ed-19ab-41fb-8d41-d2e82aea5d96'), #deathtouch
@@ -459,13 +466,15 @@ tokenTypes = {
     'wurm66g': ('6 / 6 Green Wurm', '4e259c1c-f66a-444a-9c08-6e6bdc42db23'), #M12 MPRODY
     'wurm66b': ('6 / 6 Black Wurm', '5e914c05-f6a8-46f3-bd58-e32c83c386a7'),
     'wurm**g': ('* / * Green Wurm', '6c6cf231-531b-4273-a6e5-383c476ec1c7'),
-    'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK DTK OGW SOI EMN EMN EMN EMN CN2 AKH M19 RNA
+    'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK DTK OGW SOI EMN EMN EMN EMN CN2 AKH M19 RNA WAR
     'zombie22b2': ('2 / 2 Black Zombie', 'ebc67e29-00a2-4a72-806b-915fa5f9d75e'), #enchantment
     'zombie**u': ('* / * Blue Zombie', 'bcb88192-ce2f-4288-8799-c9264b38c78f'),
     'zombie**b': ('* / * Black Zombie', '5de01d24-b85f-4ca2-8868-d0a2adec7904'),
-    'zombiehorror**b': ('* / * Black Zombie Horrpr', '5f80aca2-6de2-44ad-8e56-669ccd52276b'),
+    'zombiearmy00b': ('0 / 0 Black Zombie Army', 'cd37a3f8-a28b-418e-acd6-9c8fc0e6a233'), #WAR WAR WAR
+    'zombiehorror**b': ('* / * Black Zombie Horror', '5f80aca2-6de2-44ad-8e56-669ccd52276b'),
     'zombiegiant55b': ('5 / 5 Black Zombie Giant', '84f5b8a0-050e-4078-88e2-0f9dd6182ea0'),
     'zombieknight22b': ('2 / 2 Black Zombie Knight', '1898e08c-7a88-408e-93d3-5f939f65a5e6'),
+    'zombiewarrior44b': ('4 / 4 Black Zombie Warrior', '2f03c2ee-9613-41f1-bba3-916b224788a9'),
     'zombiewizard11m': ('1 / 1 Multicolor Blue Black Zombie Wizard', '7c543985-82bc-4173-8d6c-3a901f65c4bf'),
 
     'angelofsanctions': ("Angel of Sanctions", 'c9642934-ba2e-4927-b60c-997348c007ed'),
@@ -519,7 +528,8 @@ tokenTypes = {
     'lilianaemblem2': ("Liliana's Emblem", '2066641c-49f9-40a0-b93d-a0f02164efb0'),
     'lilianaemblem3': ("Liliana's Emblem", '7e989d06-4bf4-4182-b65d-df391de89763'), #Last Hope
     'narsetemblem': ("Narset's Emblem", '5ed2ac04-ea4f-4746-bbe0-25ccb6e953cf'),
-    'nissaemblem': ("Nissa's Emblem", 'da7f9909-c93f-4907-b3e7-d39998ac549e'),
+    'nissaemblem': ("Nissa's Emblem", 'da7f9909-c93f-4907-b3e7-d39998ac549e'), #vital force
+    'nissaemblem2': ("Nissa's Emblem", '2d554a82-af77-4bba-b417-a83a0bd25bbc'), #who shakes the world
     'obnixilisemblem': ("Ob Nixilis's Emblem", '1622a22a-a22a-4a47-8969-eef8632bde23'),
     'obnixilisemblem2': ("Ob Nixilis's Emblem", '86423661-6c13-4c19-a169-6a248cc4b9d9'),
     'ralemblem': ("Ral's Emblem", '88beb471-6382-40c3-afb7-efea583a3631'),

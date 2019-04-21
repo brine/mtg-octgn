@@ -304,5 +304,8 @@ changelog = {
         "Removed Attachment Alignment setting -- it's now shared with regular alignment",
         "Dragging a card to the table will not anchor it to the table by default",
         "Fixed moving a card to the bottom of a pile"
+        ]),
+    3041102: ("3.4.11.2", "April 21 2019", [
+        "Added War of the Spark"
         ])
 }
