@@ -307,5 +307,8 @@ changelog = {
         ]),
     3041102: ("3.4.11.2", "April 21 2019", [
         "Added War of the Spark"
+        ]),
+    3041103: ("3.4.11.3", "June 2 2019", [
+        "Added Modern Horizons and Gideon Spellbook"
         ])
 }

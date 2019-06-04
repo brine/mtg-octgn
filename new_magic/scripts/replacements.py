@@ -377,6 +377,7 @@ tokenTypes = {
     'serf01b': ('0 / 1 Black Serf', 'c98eb86f-c022-4c28-9167-f1cd3166c9a0'), #TSP EMA
     'servo11c': ('1 / 1 Colorless Servo', 'eb2381b8-b695-499f-8dc0-bc54447848f6'), #KLD KLD KLD
     'shapeshifter11c': ('1 / 1 Colorless Shapeshifter', '714f4756-f2f2-4d0f-8325-938f20653c97'),
+    'shapeshifter22c': ('2 / 2 Colorless Shapeshifter', 'f4b94def-f1be-4077-826f-f262b2edeb9e'),
     'sheep01g': ('0 / 1 Green Sheep', 'b17a0924-b2ec-4eec-9bba-c4ff96b9b833'), #TSP UNG
     'skeleton11b': ('1 / 1 Black Skeleton', 'ac0b1792-0f7e-47c2-b0ba-eca01badb5cd'), #ALA HML
     'sliver11c': ('1 / 1 Colorless Sliver', '2ead35a2-d474-4866-9bb2-c099c3d40922'), #MPRLGN LEAGUEM14 M15
@@ -535,6 +536,7 @@ tokenTypes = {
     'ralemblem': ("Ral's Emblem", '88beb471-6382-40c3-afb7-efea583a3631'),
     'rowanemblem': ("Rowan's Emblem", '7b0e1f85-3593-4e0e-aead-6faf94a2714a'),
     'sarkhanemblem': ("Sarkhan's Emblem", '307fb3a2-010c-4e8e-883e-768dd3804db4'),
+    'serraemblem': ("Serra's Emblem", '68b1bcf4-54f7-4194-a088-47bdcad86007'),
     'sorinemblem': ("Sorin's Emblem", 'b916e959-5a1d-4903-850a-95544f6ae566'),
     'sorinemblem2': ("Sorin's Emblem", '9473211d-25a2-406d-bc0f-df0cf92ed2cc'),
     'tamiyoemblem': ("Tamiyo's Emblem", '638f93d1-0c9d-45b5-a0c3-487d4590a7a3'),
@@ -546,5 +548,6 @@ tokenTypes = {
     'venseremblem': ("Venser's Emblem", '3ec344de-90cb-480e-94be-96ff4ff774af'),
     'vivienemblem': ("Vivien's Emblem", 'df13d0c1-3223-45e2-982d-757f15592845'), #M19
     'vraskaemblem': ("Vraska's Emblem", '70fbdf56-7ac7-48b5-81c6-de5b76968bd9'),
-    'willemblem': ("Will's Emblem", '12bacd5f-089b-4247-8f33-863363d88b14')
+    'willemblem': ("Will's Emblem", '12bacd5f-089b-4247-8f33-863363d88b14'),
+    'wrennemblem': ("Wrenn's Emblem", '61c1257b-7ac1-4c5a-9c42-885909ca65b9')
 }
