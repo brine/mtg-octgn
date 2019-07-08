@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <set name="Tokens" id="A584b75b-266f-4378-bed5-9ffa96cd3961" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" gameVersion="3.0.9" version="1.6">
     <cards>
+        <card name="Ajani's Pridemate" id="4eac3bfc-9dcb-4496-94fb-b5eb8633e323">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Cat Soldier" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Whenever you gain life, put a +1/+1 counter on Ajani’s Pridemate.</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="PT Box" value="2 / 2" />
+            <property name="Artist" value="Howard Lyon" />
+            <property name="Flags" value="TM20"/>
+            <property name="Number" value="1"/>
+        </card>
         <card name="Angel" id="6d93099f-cfc0-49ef-b0a4-9bd01ff18405">
             <property name="Color" value="White" />
             <property name="Type" value="Creature" />
@@ -1331,6 +1344,19 @@
                 <property name="Number" value="5★" />
                 <property name="Flags" value="TAVR"/>
             </alternate>
+            <alternate name="Demon" type="2">
+                <property name="Color" value="Black" />
+                <property name="Type" value="Creature" />
+                <property name="Subtype" value="Demon" />
+                <property name="Rarity" value="Token" />
+                <property name="Rules">Flying</property>
+                <property name="Power" value="5" />
+                <property name="Toughness" value="5" />
+                <property name="PT Box" value="5 / 5" />
+                <property name="Artist" value="Sidharth Chaturvedi" />
+                <property name="Number" value="5" />
+                <property name="Flags" value="TM20"/>
+            </alternate>
         </card>
         <card name="Demon" id="98601612-a132-41ab-9f9b-9d7d085d6beb">
             <property name="Color" value="Black" />
@@ -1911,7 +1937,7 @@
             <property name="PT Box" value="1/ 1" />
             <property name="Artist" value="Winona Nelson" />
             <property name="Number" value="8" />
-            <property name="Flags" value="TM14"/>
+            <property name="Flags" value="TM20"/>
             <alternate name="Elemental" type="1">
                 <property name="Color" value="Red" />
                 <property name="Type" value="Creature" />
@@ -2198,6 +2224,19 @@
             <property name="Artist" value="Mark Winters" />
             <property name="Number" value="1" />
             <property name="Flags" value="TDGM"/>
+        </card>
+        <card name="Elemental Bird" id="f269c024-9d8c-46b7-abdb-8aca77b7f08d">
+            <property name="Color" value="Blue" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Elemental Bird" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying</property>
+            <property name="Power" value="4" />
+            <property name="Toughness" value="4" />
+            <property name="PT Box" value="4 / 4" />
+            <property name="Artist" value="Jana Schirmer" />
+            <property name="Number" value="4" />
+            <property name="Flags" value="TM20"/>
         </card>
         <card name="Elemental Cat" id="2eb297c2-f371-4e76-b5f2-f8d2a4cea5db">
             <property name="Color" value="Red" />
@@ -3000,6 +3039,18 @@
                 <property name="Artist" value="Volkan Baga" />
                 <property name="Number" value="3" />
                 <property name="Flags" value="TNPH"/>
+            </alternate>
+            <alternate name="Golem" type="2">
+                <property name="Color" value="Colorless" />
+                <property name="Type" value="Artifact Creature" />
+                <property name="Subtype" value="Golem" />
+                <property name="Rarity" value="Token" />
+                <property name="Power" value="3" />
+                <property name="Toughness" value="3" />
+                <property name="PT Box" value="3 / 3" />
+                <property name="Artist" value="Daarken" />
+                <property name="Number" value="9" />
+                <property name="Flags" value="TM20"/>
             </alternate>
         </card>
         <card name="Golem" id="b18e2591-c594-425c-9111-771224086f19">
@@ -5091,8 +5142,8 @@
                 <property name="Toughness" value="1" />
                 <property name="PT Box" value="1 / 1" />
                 <property name="Artist" value="Jakub Kasper" />
-                <property name="Number" value="3" />
-                <property name="Flags" value="TDOM"/>
+                <property name="Number" value="2" />
+                <property name="Flags" value="TM20"/>
             </alternate>
         </card>
         <card name="Soldier" id="d4d816a4-c805-4ae4-b633-7fd5515f5db4">
@@ -5448,7 +5499,7 @@
                 <property name="PT Box" value="1 / 1" />
                 <property name="Artist" value="Jason A. Engle" />
                 <property name="Number" value="3" />
-                <property name="Flags" value="TSOI"/>
+                <property name="Flags" value="TM20"/>
             </alternate>
         </card>
         <card name="Spirit" id="716114fc-cac6-43cc-a94e-17dd9e272b71">
@@ -5908,6 +5959,17 @@
                 <property name="Artist" value="Mark Behm" />
                 <property name="Number" value="12" />
                 <property name="Flags" value="TRNA"/>
+            </alternate>
+            <alternate name="Treasure" type="5">
+                <property name="Color" value="Colorless" />
+                <property name="Type" value="Artifact" />
+                <property name="Subtype" value="Treasure" />
+                <property name="Rarity" value="Token" />
+                <property name="Rules">
+                    <s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.</property>
+                <property name="Artist" value="Alayna Danner" />
+                <property name="Number" value="10" />
+                <property name="Flags" value="TM20"/>
             </alternate>
         </card>
         <card name="Treefolk" id="4d654a81-324b-4f57-bf9b-65c372e0e424">
@@ -6416,8 +6478,8 @@
                 <property name="Toughness" value="2" />
                 <property name="PT Box" value="2 / 2" />
                 <property name="Artist" value="Aaron Miller" />
-                <property name="Number" value="9" />
-                <property name="Flags" value="TSOI"/>
+                <property name="Number" value="8" />
+                <property name="Flags" value="TM20"/>
             </alternate>
             <alternate name="Wolf" type="8">
                 <property name="Artist" value="Lars Grant-West" />
@@ -6749,8 +6811,8 @@
                 <property name="Toughness" value="2" />
                 <property name="PT Box" value="2 / 2" />
                 <property name="Artist" value="Anna Steinbauer" />
-                <property name="Number" value="5" />
-                <property name="Flags" value="TEMN"/>
+                <property name="Number" value="6" />
+                <property name="Flags" value="TM20"/>
             </alternate>
             <alternate name="Zombie" type="17">
                 <property name="Color" value="Black" />
@@ -7213,6 +7275,16 @@
             <property name="Number" value="14" />
             <property name="Flags" value="TORI"/>
         </card>
+        <card name="Chandra's Emblem" id="9465b3c6-af60-404d-ae8d-d887806df423">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Subtype" value="Chandra, Awakened Inferno" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">At the beginning of your upkeep, this emblem deals 1 damage to you.</property>
+            <property name="Artist" value="Chris Rahn" />
+            <property name="Number" value="11" />
+            <property name="Flags" value="TM20"/>
+        </card>
         <card name="Gideon's Emblem" id="ce0879df-31e8-4466-bd7d-19f0e0c3e868">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Emblem" />
@@ -7419,7 +7491,6 @@
             <property name="Subtype" value="Serra the Benevolent" />
             <property name="Rarity" value="Token" />
             <property name="Rules">If you control a creature, damage that would reduce your life total to less than 1 reduces it to 1 instead.</property>
-
             <property name="Artist" value="Magali Villeneuve" />
             <property name="Number" value="20" />
             <property name="Flags" value="TMH1"/>
@@ -7431,10 +7502,20 @@
             <property name="Rarity" value="Token" />
             <property name="Rules">Instant and sorcery cards in your graveyard have retrace. <i>(You may cast instant and sorcery cards from your graveyard by discarding a land card in addition to paying their other costs.)</i>
             </property>
-
             <property name="Artist" value="Chase Stone" />
             <property name="Number" value="21" />
             <property name="Flags" value="TMH1"/>
+        </card>
+        <card name="Mu Yanling's Emblem" id="b171c993-4248-439e-8ef2-5d1b6dfeb757">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Subtype" value="Mu Yanling, Sky Dancer" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Islands you control have "<s value="T">{T}</s>: Draw a card.&quot;
+            </property>
+            <property name="Artist" value="G-host Lee" />
+            <property name="Number" value="12" />
+            <property name="Flags" value="TM20"/>
         </card>
         <card name="Angel of Sanctions" id="c9642934-ba2e-4927-b60c-997348c007ed">
             <property name="Color" value="White" />

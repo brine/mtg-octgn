@@ -310,5 +310,8 @@ changelog = {
         ]),
     3041103: ("3.4.11.3", "June 2 2019", [
         "Added Modern Horizons and Gideon Spellbook"
+        ]),
+    3041104: ("3.4.11.4", "July 8 2019", [
+        "Added Core Set 2020"
         ])
 }
