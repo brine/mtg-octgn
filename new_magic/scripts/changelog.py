@@ -313,5 +313,8 @@ changelog = {
         ]),
     3041104: ("3.4.11.4", "July 8 2019", [
         "Added Core Set 2020"
+        ]),
+    3041105: ("3.4.11.5", "August 29 2019", [
+        "Added Commander 2019"
         ])
 }
