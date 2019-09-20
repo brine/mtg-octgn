@@ -316,5 +316,8 @@ changelog = {
         ]),
     3041105: ("3.4.11.5", "August 29 2019", [
         "Added Commander 2019"
+        ]),
+    3041106: ("3.4.11.6", "September 20 2019", [
+        "Added Throne of Eldraine"
         ])
 }
