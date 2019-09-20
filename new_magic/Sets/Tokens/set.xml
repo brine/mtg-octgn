@@ -377,6 +377,11 @@
                 <property name="Number" value="12" />
                 <property name="Flags" value="TC15" />
             </alternate>
+            <alternate name="Bear" type="3">
+                <property name="Artist" value="Forrest Imel" />
+                <property name="Number" value="8" />
+                <property name="Flags" value="TELD" />
+            </alternate>
         </card>
         <card name="Bear" id="5bedae6c-9574-4b52-b538-1336330b0e3e">
             <property name="Color" value="Green" />
@@ -810,6 +815,19 @@
             <property name="Artist" value="Matt Cavotta" />
             <property name="Number" value="1" />
             <property name="Flags" value="TARB"/>
+        </card>
+        <card name="Boar" id="73d901dd-2217-4216-9170-e25e700bfa2c">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Boar" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">When this creature dies, create a Food token.</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="PT Box" value="1 / 1" />
+            <property name="Artist" value="Stacie Pitt" />
+            <property name="Number" value="9" />
+            <property name="Flags" value="TELD"/>
         </card>
         <card name="Boar" id="d5e5eccc-0758-41b4-8593-b441f3102646">
             <property name="Color" value="Green" />
@@ -1723,6 +1741,18 @@
             <property name="Number" value="18" />
             <property name="Flags" value="TCMA"/>
         </card>
+        <card name="Dwarf" id="6a94aefd-bdbb-4b30-9fe6-92b300ddf00c">
+            <property name="Color" value="Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Dwarf" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="PT Box" value="1 / 1" />
+            <property name="Artist" value="Kari Christensen" />
+            <property name="Number" value="7" />
+            <property name="Flags" value="TELD"/>
+        </card>
         <card name="Egg" id="660593e6-c7f5-4937-a167-d022239e04ba">
             <property name="Color" value="Green" />
             <property name="Type" value="Creature" />
@@ -2494,9 +2524,9 @@
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="PT Box" value="1 / 1" />
-            <property name="Artist" value="Greg Staples" />
-            <property name="Number" value="0" />
-            <property name="Flags" value="TRAV?"/>
+            <property name="Artist" value="Irina Nordsol" />
+            <property name="Number" value="5" />
+            <property name="Flags" value="TELD"/>
         </card>
         <card name="Faerie Rogue" id="bf9857cc-505b-4cc1-abdc-606f784918fe">
             <property name="Color" value="Black" />
@@ -2577,6 +2607,32 @@
             <property name="Number" value="8" />
             <property name="Flags" value="TC14"/>
         </card>
+        <card name="Food" id="d6459e6b-e94e-475a-ab73-5342e26dddb7">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact" />
+            <property name="Subtype" value="Food" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">
+                <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: You gain 3 life.</property>
+            <property name="Artist" value="Steven Belledin" />
+            <property name="Number" value="15" />
+            <property name="Flags" value="TELD"/>
+            <alternate name="Food" type="1">
+                <property name="Artist" value="Randy Gallegos" />
+                <property name="Number" value="16" />
+                <property name="Flags" value="TELD" />
+            </alternate>
+            <alternate name="Food" type="2">
+                <property name="Artist" value="Donato Giancola" />
+                <property name="Number" value="17" />
+                <property name="Flags" value="TELD" />
+            </alternate>
+            <alternate name="Food" type="3">
+                <property name="Artist" value="Lucas Graciano" />
+                <property name="Number" value="18" />
+                <property name="Flags" value="TELD" />
+            </alternate>
+        </card>
         <card name="Frog Lizard" id="a890864d-6d00-4c5e-a173-bd01f0737739">
             <property name="Color" value="Green" />
             <property name="Type" value="Creature" />
@@ -2630,6 +2686,18 @@
             <property name="Artist" value="Raymond Swanland" />
             <property name="Number" value="0" />
             <property name="Flags" value="TFUT?"/>
+        </card>
+        <card name="Giant" id="50c530f2-041f-4003-9cdb-606fa8830030">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Giant" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="7" />
+            <property name="Toughness" value="7" />
+            <property name="PT Box" value="7 / 7" />
+            <property name="Artist" value="YW Tang" />
+            <property name="Number" value="10" />
+            <property name="Flags" value="TELD"/>
         </card>
         <card name="Giant Chicken" id="6d20de89-3f0d-4144-9fda-9e12d2a15431">
             <property name="Color" value="Red" />
@@ -2726,6 +2794,11 @@
                 <property name="Artist" value="Carl Critchlow" />
                 <property name="Number" value="2" />
                 <property name="Flags" value="TUST"/>
+            </alternate>
+            <alternate name="Goat" type="3">
+                <property name="Artist" value="Forrest Imel" />
+                <property name="Number" value="1" />
+                <property name="Flags" value="TELD" />
             </alternate>
         </card>
         <card name="Goblin" id="b1dc79df-5a3b-40dd-a927-11857bb95afb">
@@ -3436,6 +3509,11 @@
                 <property name="Number" value="3" />
                 <property name="Flags" value="TC19"/>
             </alternate>
+            <alternate name="Human" type="5">
+                <property name="Artist" value="Ben Maier" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="TELD" />
+            </alternate>
         </card>
         <card name="Human" id="f05acb33-16f2-41a4-acb5-dad4e6659b90">
             <property name="Color" value="Red" />
@@ -3484,6 +3562,46 @@
             <property name="Artist" value="Min Yum" />
             <property name="Number" value="10" />
             <property name="Flags" value="TSOI"/>
+        </card>
+        <card name="Human Cleric" id="c8c8e57a-d67d-4ef8-a9e7-9b8e59a38565">
+            <property name="Color" value="Multicolor Red White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Human Cleric" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Lifelink, haste</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="1" />
+            <property name="PT Box" value="2 / 1" />
+            <property name="Artist" value="Suzanne Helmigh" />
+            <property name="Number" value="11" />
+            <property name="Flags" value="TELD"/>
+        </card>
+        <card name="Human Rogue" id="2d513c99-6c5a-4df9-b4d8-059472b01145">
+            <property name="Color" value="Multicolor Red White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Human Rogue" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Haste
+When this creature enters the battlefield, it deals 1 damage to any target.</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="2" />
+            <property name="PT Box" value="1 / 2" />
+            <property name="Artist" value="Suzanne Helmigh" />
+            <property name="Number" value="12" />
+            <property name="Flags" value="TELD"/>
+        </card>
+        <card name="Human Warrior" id="78a00154-4e55-4a52-bf67-5d5fb7b6c2bc">
+            <property name="Color" value="Multicolor Red White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Human Rogue" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Trample, haste</property>
+            <property name="Power" value="3" />
+            <property name="Toughness" value="1" />
+            <property name="PT Box" value="3 / 1" />
+            <property name="Artist" value="Suzanne Helmigh" />
+            <property name="Number" value="13" />
+            <property name="Flags" value="TELD"/>
         </card>
         <card name="Human Wizard" id="f0cc8106-5d4c-4308-adb8-070d8e8e23d0">
             <property name="Color" value="Blue" />
@@ -3858,6 +3976,11 @@
                 <property name="Number" value="2" />
                 <property name="Flags" value="TDOM"/>
             </alternate>
+            <alternate name="Knight" type="4">
+                <property name="Artist" value="Dan Scott" />
+                <property name="Number" value="3" />
+                <property name="Flags" value="TELD" />
+            </alternate>
         </card>
         <card name="Knight" id="e8aa7dd3-0cde-4253-b467-a65c3f94dabb">
             <property name="Color" value="Black" />
@@ -4151,6 +4274,18 @@
             <property name="Artist" value="Steven Belledin" />
             <property name="Number" value="1" />
             <property name="Flags" value="TFRF"/>
+        </card>
+        <card name="Mouse" id="cebe03d3-79dd-4b41-895b-d7087603b385">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Mouse" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="PT Box" value="1 / 1" />
+            <property name="Artist" value="Stacie Pitt" />
+            <property name="Number" value="4" />
+            <property name="Flags" value="TELD"/>
         </card>
         <card name="Myr" id="16003e42-3ff7-478d-8f8c-2b5af4847da0">
             <property name="Color" value="Colorless" />
@@ -4577,6 +4712,11 @@
                 <property name="Artist" value="Nils Hamm" />
                 <property name="Number" value="2" />
                 <property name="Flags" value="TGTC"/>
+            </alternate>
+            <alternate name="Rat" type="2">
+                <property name="Artist" value="Mike Bierek" />
+                <property name="Number" value="6" />
+                <property name="Flags" value="TELD" />
             </alternate>
         </card>
         <card name="Rat" id="57da841d-2fe8-4765-bdd7-ce80087efedc">
@@ -6618,6 +6758,19 @@
                 <property name="Flags" value="TM20"/>
             </alternate>
         </card>
+        <card name="Wolf" id="3beed264-ae1d-46b7-8693-348fddaeb057">
+            <property name="Color" value="Multicolor Black Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Wolf" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">When this creature dies, put a loyalty counter on each Garruk you control.</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="PT Box" value="2 / 2" />
+            <property name="Artist" value="David Gaillet" />
+            <property name="Number" value="14" />
+            <property name="Flags" value="TELD"/>
+        </card>
         <card name="Wolves of The Hunt" id="66dea368-12dc-4cb7-b01a-4cc6d76a1c46">
             <property name="Color" value="Green" />
             <property name="Type" value="Creature" />
@@ -7250,6 +7403,16 @@
             <property name="Artist" value="Karl Kopinski" />
             <property name="Number" value="13" />
             <property name="Flags" value="TM14"/>
+        </card>
+        <card name="Garruk's Emblem" id="7a7770af-f48d-4400-9d65-255f19d0779d">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Subtype" value="Garruk, Cursed Huntsman" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Creatures you control get +3/+3 and have trample.</property>
+            <property name="Artist" value="Eric Deschamps" />
+            <property name="Number" value="19" />
+            <property name="Flags" value="TELD"/>
         </card>
         <card name="Elspeth's Emblem" id="527f7aa8-0823-4522-b2d1-b8a90ca0b9ec">
             <property name="Color" value="Colorless" />
