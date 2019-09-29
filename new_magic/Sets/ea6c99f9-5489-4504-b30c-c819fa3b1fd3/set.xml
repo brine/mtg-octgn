@@ -2505,12 +2505,15 @@ Enchanted creature gets +2/+2, has intimidate, and can't attack you or a planesw
     </card>
     <card name="Act of Aggression" id="8d34c3aa-7d74-4a8b-898c-cb62b1f05989">
       <property name="Cost">
-        <s value="3">{3}</s>{R/P}{R/P}</property>
+        <s value="3">{3}</s>
+        <s value="PR">{R/P}</s>
+        <s value="PR">{R/P}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({R/P} can be paid with either <s value="R">{R}</s> or 2 life.)
+      <property name="Rules">(<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)
 Gain control of target creature an opponent controls until end of turn. Untap that creature. It gains haste until end of turn.</property>
       <property name="Artist" value="Whit Brachna" />
       <property name="Number" value="141" />
@@ -3677,7 +3680,7 @@ When Stingerfling Spider enters the battlefield, you may destroy target creature
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Shaman" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Saproling creatures get +1/+1.
+      <property name="Rules">All Saprolings get +1/+1.
 Morph <s value="3">{3}</s><s value="G">{G}</s><s value="G">{G}</s> (You may cast this card face down as a 2/2 creature for <s value="3">{3}</s>. Turn it face up any time for its morph cost.)
 When Thelonite Hermit is turned face up, create four 1/1 green Saproling creature tokens.</property>
       <property name="Power" value="1" />

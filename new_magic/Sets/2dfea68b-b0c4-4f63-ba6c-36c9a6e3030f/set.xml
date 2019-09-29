@@ -140,7 +140,7 @@ Whenever you cast an instant or sorcery spell, Wee Dragonauts gets +2/+0 until e
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Weird" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Steamcore Weird enters the battlefield, if <s value="R">{R}</s> was spent to cast Steamcore Weird, it deals 2 damage to any target.</property>
+      <property name="Rules">When Steamcore Weird enters the battlefield, if <s value="R">{R}</s> was spent to cast it, it deals 2 damage to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -181,7 +181,7 @@ Whenever you cast a red spell, remove a -1/-1 counter from Shrewd Hatchling.</pr
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Ogre Wizard" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Ogre Savant enters the battlefield, if <s value="U">{U}</s> was spent to cast Ogre Savant, return target creature to its owner's hand.</property>
+      <property name="Rules">When Ogre Savant enters the battlefield, if <s value="U">{U}</s> was spent to cast it, return target creature to its owner's hand.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -558,13 +558,10 @@ Overload <s value="X">{X}</s><s value="X">{X}</s><s value="R">{R}</s><s value="R
     <card name="Fire // Ice" id="ab8292ae-9a52-43e7-92f7-0f45f4bb71ec">
       <property name="Cost">
         <s value="1">{1}</s>
-        <s value="R">{R}</s>
-        <s value="1">{1}</s>
-        <s value="U">{U}</s>
-      </property>
+        <s value="R">{R}</s> // <s value="1">{1}</s><s value="U">{U}</s></property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Red Blue" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Fire deals 2 damage divided as you choose among one or two targets.
 //
@@ -1325,7 +1322,7 @@ Dredge 2 (If you would draw a card, instead you may put exactly two cards from t
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Return target creature card from your graveyard to the battlefield. If <s value="G">{G}</s> was spent to cast Vigor Mortis, that creature enters the battlefield with an additional +1/+1 counter on it.</property>
+      <property name="Rules">Return target creature card from your graveyard to the battlefield. If <s value="G">{G}</s> was spent to cast this spell, that creature enters the battlefield with an additional +1/+1 counter on it.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="074" />
       <property name="Flavor" value="After fear and weakness rot away, that which remains is stronger than its living form." />
@@ -1366,13 +1363,10 @@ Each player returns all creature cards from their graveyard to the battlefield.<
     </card>
     <card name="Life // Death" id="2424f2c4-366b-42cf-bf4b-a8a5bfdd2c4b">
       <property name="Cost">
-        <s value="G">{G}</s>
-        <s value="1">{1}</s>
-        <s value="B">{B}</s>
-      </property>
+        <s value="G">{G}</s> // <s value="1">{1}</s><s value="B">{B}</s></property>
       <property name="CMC" value="3" />
       <property name="Color" value="Multicolor Green Black" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">All lands you control become 1/1 creatures until end of turn. They're still lands.
 //

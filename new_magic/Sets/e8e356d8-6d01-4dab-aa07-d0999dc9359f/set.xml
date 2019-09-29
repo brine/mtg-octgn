@@ -38,12 +38,14 @@
     </card>
     <card name="Apostle's Blessing" id="9f7c3571-925d-486e-80dd-bac47aa48283">
       <property name="Cost">
-        <s value="1">{1}</s>{W/P}</property>
+        <s value="1">{1}</s>
+        <s value="PW">{W/P}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({W/P} can be paid with either <s value="W">{W}</s> or 2 life.)
+      <property name="Rules">(<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)
 Target artifact or creature you control gains protection from artifacts or from the color of your choice until end of turn.</property>
       <property name="Artist" value="Brad Rigney" />
       <property name="Number" value="002" />
@@ -92,13 +94,15 @@ Golem creatures you control have first strike.</property>
     </card>
     <card name="Cathedral Membrane" id="07592731-68be-4218-bb2c-c2523c5a27f1">
       <property name="Cost">
-        <s value="1">{1}</s>{W/P}</property>
+        <s value="1">{1}</s>
+        <s value="PW">{W/P}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="White" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({W/P} can be paid with either <s value="W">{W}</s> or 2 life.)
+      <property name="Rules">(<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)
 Defender
 When Cathedral Membrane dies during combat, it deals 6 damage to each creature it blocked this combat.</property>
       <property name="Power" value="0" />
@@ -287,12 +291,14 @@ Enchanted creature can't attack.
       <property name="MultiverseId" value="218013" />
     </card>
     <card name="Marrow Shards" id="53ca60ee-e54b-4a28-b6a6-7bf3503c35b4">
-      <property name="Cost">{W/P}</property>
+      <property name="Cost">
+        <s value="PW">{W/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({W/P} can be paid with either <s value="W">{W}</s> or 2 life.)
+      <property name="Rules">(<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)
 Marrow Shards deals 1 damage to each attacking creature.</property>
       <property name="Artist" value="Raymond Swanland" />
       <property name="Number" value="015" />
@@ -323,13 +329,16 @@ Golems you control get +1/+1.</property>
     </card>
     <card name="Norn's Annex" id="a64073f2-99f5-4dc7-9403-e7cb94ce0e60">
       <property name="Cost">
-        <s value="3">{3}</s>{W/P}{W/P}</property>
+        <s value="3">{3}</s>
+        <s value="PW">{W/P}</s>
+        <s value="PW">{W/P}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">({W/P} can be paid with either <s value="W">{W}</s> or 2 life.)
-Creatures can't attack you or a planeswalker you control unless their controller pays {W/P} for each of those creatures.</property>
+      <property name="Rules">(<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)
+Creatures can't attack you or a planeswalker you control unless their controller pays <s value="PW">{W/P}</s> for each of those creatures.</property>
       <property name="Artist" value="James Paick" />
       <property name="Number" value="017" />
       <property name="Faction" value="Phyrexian" />
@@ -353,13 +362,15 @@ As long as you have 0 or less life, all damage is dealt to you as though its sou
     </card>
     <card name="Porcelain Legionnaire" id="2616aa0e-8413-4e63-877c-bffd5263f552">
       <property name="Cost">
-        <s value="2">{2}</s>{W/P}</property>
+        <s value="2">{2}</s>
+        <s value="PW">{W/P}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({W/P} can be paid with either <s value="W">{W}</s> or 2 life.)
+      <property name="Rules">(<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)
 First strike</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
@@ -661,12 +672,14 @@ Enchanted creature gets -1/+1.</property>
       <property name="MultiverseId" value="217987" />
     </card>
     <card name="Gitaxian Probe" id="995486ce-58bb-4753-a812-0ca73ef1a235">
-      <property name="Cost">{U/P}</property>
+      <property name="Cost">
+        <s value="PU">{U/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)
+      <property name="Rules">(<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)
 Look at target player's hand.
 Draw a card.</property>
       <property name="Artist" value="Chippy" />
@@ -721,12 +734,14 @@ Each opponent's maximum hand size is reduced by seven.</property>
       <property name="MultiverseId" value="214349" />
     </card>
     <card name="Mental Misstep" id="61e9c6df-1c84-4eab-9076-a4feb6347c10">
-      <property name="Cost">{U/P}</property>
+      <property name="Cost">
+        <s value="PU">{U/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)
+      <property name="Rules">(<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)
 Counter target spell with converted mana cost 1.</property>
       <property name="Artist" value="Erica Yang" />
       <property name="Number" value="038" />
@@ -791,13 +806,15 @@ Phyrexian Ingester gets +X/+Y, where X is the exiled creature card's power and Y
     </card>
     <card name="Phyrexian Metamorph" id="d2e27911-87cb-49a0-a34f-6afe4bddd592">
       <property name="Cost">
-        <s value="3">{3}</s>{U/P}</property>
+        <s value="3">{3}</s>
+        <s value="PU">{U/P}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Shapeshifter" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)
+      <property name="Rules">(<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)
 You may have Phyrexian Metamorph enter the battlefield as a copy of any artifact or creature on the battlefield, except it's an artifact in addition to its other types.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="0" />
@@ -840,13 +857,15 @@ You may have Phyrexian Metamorph enter the battlefield as a copy of any artifact
     </card>
     <card name="Spined Thopter" id="bd27f71a-cd22-4b5e-9536-3e160111875a">
       <property name="Cost">
-        <s value="2">{2}</s>{U/P}</property>
+        <s value="2">{2}</s>
+        <s value="PU">{U/P}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Thopter" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)
+      <property name="Rules">(<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)
 Flying</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
@@ -880,12 +899,14 @@ Flying</property>
     </card>
     <card name="Tezzeret's Gambit" id="fff5a09e-9276-44b8-b374-4b84aebd47cc">
       <property name="Cost">
-        <s value="3">{3}</s>{U/P}</property>
+        <s value="3">{3}</s>
+        <s value="PU">{U/P}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)
+      <property name="Rules">(<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)
 Draw two cards, then proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</property>
       <property name="Artist" value="Karl Kopinski" />
       <property name="Number" value="047" />
@@ -1063,12 +1084,15 @@ Flying, lifelink</property>
     </card>
     <card name="Dismember" id="064dfdeb-485f-473e-9fa0-8fdb7638cdc6">
       <property name="Cost">
-        <s value="1">{1}</s>{B/P}{B/P}</property>
+        <s value="1">{1}</s>
+        <s value="PB">{B/P}</s>
+        <s value="PB">{B/P}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
 Target creature gets -5/-5 until end of turn.</property>
       <property name="Artist" value="Terese Nielsen" />
       <property name="Number" value="057" />
@@ -1283,13 +1307,15 @@ Whenever a source deals damage to Phyrexian Obliterator, that source's controlle
     </card>
     <card name="Pith Driller" id="28e960c6-6da0-4679-87eb-55bac890e0c6">
       <property name="Cost">
-        <s value="4">{4}</s>{B/P}</property>
+        <s value="4">{4}</s>
+        <s value="PB">{B/P}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Black" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Horror" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
 When Pith Driller enters the battlefield, put a -1/-1 counter on target creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
@@ -1302,12 +1328,14 @@ When Pith Driller enters the battlefield, put a -1/-1 counter on target creature
     </card>
     <card name="Postmortem Lunge" id="d5f8b46e-1ad3-4c6e-aa63-376f2d222d46">
       <property name="Cost">
-        <s value="X">{X}</s>{B/P}</property>
+        <s value="X">{X}</s>
+        <s value="PB">{B/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
 Return target creature card with converted mana cost X from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step.</property>
       <property name="Artist" value="Daarken" />
       <property name="Number" value="070" />
@@ -1374,12 +1402,14 @@ At the beginning of each opponent's upkeep, that player sacrifices a creature.</
       <property name="MultiverseId" value="214382" />
     </card>
     <card name="Surgical Extraction" id="dca7e072-edb5-4f7e-bdec-a3a393053c80">
-      <property name="Cost">{B/P}</property>
+      <property name="Cost">
+        <s value="PB">{B/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
 Choose target card in a graveyard other than a basic land card. Search its owner's graveyard, hand, and library for any number of cards with the same name as that card and exile them. Then that player shuffles their library.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="074" />
@@ -1410,13 +1440,15 @@ Choose target card in a graveyard other than a basic land card. Search its owner
     </card>
     <card name="Vault Skirge" id="f254239c-c07a-4c41-98f7-8f4de539c73e">
       <property name="Cost">
-        <s value="1">{1}</s>{B/P}</property>
+        <s value="1">{1}</s>
+        <s value="PB">{B/P}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Imp" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
 Flying
 Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="1" />
@@ -1452,12 +1484,15 @@ Whenever Whispering Specter deals combat damage to a player, you may sacrifice i
     </card>
     <card name="Act of Aggression" id="61a9f30b-d154-49a4-ad6b-f05601992de3">
       <property name="Cost">
-        <s value="3">{3}</s>{R/P}{R/P}</property>
+        <s value="3">{3}</s>
+        <s value="PR">{R/P}</s>
+        <s value="PR">{R/P}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({R/P} can be paid with either <s value="R">{R}</s> or 2 life.)
+      <property name="Rules">(<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)
 Gain control of target creature an opponent controls until end of turn. Untap that creature. It gains haste until end of turn.</property>
       <property name="Artist" value="Whit Brachna" />
       <property name="Number" value="078" />
@@ -1596,12 +1631,14 @@ When Chancellor of the Forge enters the battlefield, create X 1/1 red Goblin cre
       <property name="MultiverseId" value="218004" />
     </card>
     <card name="Gut Shot" id="a54a2a30-b96a-49c7-9151-1f4b0d4a4413">
-      <property name="Cost">{R/P}</property>
+      <property name="Cost">
+        <s value="PR">{R/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({R/P} can be paid with either <s value="R">{R}</s> or 2 life.)
+      <property name="Rules">(<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)
 Gut Shot deals 1 damage to any target.</property>
       <property name="Artist" value="Greg Staples" />
       <property name="Number" value="086" />
@@ -1632,15 +1669,18 @@ Whenever a land with the same name as the exiled card enters the battlefield und
     </card>
     <card name="Moltensteel Dragon" id="13b78018-bfbe-43fa-809f-9b52a155e11c">
       <property name="Cost">
-        <s value="4">{4}</s>{R/P}{R/P}</property>
+        <s value="4">{4}</s>
+        <s value="PR">{R/P}</s>
+        <s value="PR">{R/P}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Red" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">({R/P} can be paid with either <s value="R">{R}</s> or 2 life.)
+      <property name="Rules">(<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)
 Flying
-{R/P}: Moltensteel Dragon gets +1/+0 until end of turn.</property>
+<s value="PR">{R/P}</s>: Moltensteel Dragon gets +1/+0 until end of turn.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -1692,12 +1732,14 @@ Flying
     </card>
     <card name="Rage Extractor" id="d8cebc2c-a46b-4459-b62b-7fce1a744b11">
       <property name="Cost">
-        <s value="4">{4}</s>{R/P}</property>
+        <s value="4">{4}</s>
+        <s value="PR">{R/P}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({R/P} can be paid with either <s value="R">{R}</s> or 2 life.)
+      <property name="Rules">(<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)
 Whenever you cast a spell with {P} in its mana cost, Rage Extractor deals damage equal to that spell's converted mana cost to any target.</property>
       <property name="Artist" value="Raymond Swanland" />
       <property name="Number" value="091" />
@@ -1728,12 +1770,14 @@ Infect (This creature deals damage to creatures in the form of -1/-1 counters an
     </card>
     <card name="Ruthless Invasion" id="bc2bbff9-af57-4858-9351-d148b8c4bc3a">
       <property name="Cost">
-        <s value="3">{3}</s>{R/P}</property>
+        <s value="3">{3}</s>
+        <s value="PR">{R/P}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({R/P} can be paid with either <s value="R">{R}</s> or 2 life.)
+      <property name="Rules">(<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)
 Nonartifact creatures can't block this turn.</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="093" />
@@ -1779,13 +1823,15 @@ Nonartifact creatures can't block this turn.</property>
     </card>
     <card name="Slash Panther" id="2f510946-34de-4c12-8998-f61887d1a0e1">
       <property name="Cost">
-        <s value="4">{4}</s>{R/P}</property>
+        <s value="4">{4}</s>
+        <s value="PR">{R/P}</s>
+      </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Red" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Cat" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({R/P} can be paid with either <s value="R">{R}</s> or 2 life.)
+      <property name="Rules">(<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)
 Haste</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="2" />
@@ -1926,13 +1972,15 @@ Creatures your opponents control enter the battlefield tapped.</property>
     </card>
     <card name="Birthing Pod" id="b768efa2-e56b-4a7e-ace8-d673f10e0714">
       <property name="Cost">
-        <s value="3">{3}</s>{G/P}</property>
+        <s value="3">{3}</s>
+        <s value="PG">{G/P}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">({G/P} can be paid with either <s value="G">{G}</s> or 2 life.)
-<s value="1">{1}</s>{G/P}, <s value="T">{T}</s>, Sacrifice a creature: Search your library for a creature card with converted mana cost equal to 1 plus the sacrificed creature's converted mana cost, put that card onto the battlefield, then shuffle your library. Activate this ability only any time you could cast a sorcery.</property>
+      <property name="Rules">(<s value="PG">{G/P}</s> can be paid with either <s value="G">{G}</s> or 2 life.)
+<s value="1">{1}</s><s value="PG">{G/P}</s>, <s value="T">{T}</s>, Sacrifice a creature: Search your library for a creature card with converted mana cost equal to 1 plus the sacrificed creature's converted mana cost, put that card onto the battlefield, then shuffle your library. Activate this ability only any time you could cast a sorcery.</property>
       <property name="Artist" value="Daarken" />
       <property name="Number" value="104" />
       <property name="Faction" value="Phyrexian" />
@@ -1983,12 +2031,14 @@ Vigilance, reach</property>
     </card>
     <card name="Corrosive Gale" id="04a13825-ab9b-4ffd-9b59-6198181891b9">
       <property name="Cost">
-        <s value="X">{X}</s>{G/P}</property>
+        <s value="X">{X}</s>
+        <s value="PG">{G/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({G/P} can be paid with either <s value="G">{G}</s> or 2 life.)
+      <property name="Rules">(<s value="PG">{G/P}</s> can be paid with either <s value="G">{G}</s> or 2 life.)
 Corrosive Gale deals X damage to each creature with flying.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="107" />
@@ -2149,12 +2199,14 @@ Creatures your opponents control lose infect.</property>
       <property name="MultiverseId" value="194274" />
     </card>
     <card name="Mutagenic Growth" id="af2d23da-70a1-49ba-91bf-c110cc4bbedc">
-      <property name="Cost">{G/P}</property>
+      <property name="Cost">
+        <s value="PG">{G/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({G/P} can be paid with either <s value="G">{G}</s> or 2 life.)
+      <property name="Rules">(<s value="PG">{G/P}</s> can be paid with either <s value="G">{G}</s> or 2 life.)
 Target creature gets +2/+2 until end of turn.</property>
       <property name="Artist" value="Dave Kendall" />
       <property name="Number" value="116" />
@@ -2183,12 +2235,14 @@ Target creature gets +2/+2 until end of turn.</property>
       <property name="MultiverseId" value="217995" />
     </card>
     <card name="Noxious Revival" id="1bdd1243-1d14-496a-9b7a-0c5b34461361">
-      <property name="Cost">{G/P}</property>
+      <property name="Cost">
+        <s value="PG">{G/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({G/P} can be paid with either <s value="G">{G}</s> or 2 life.)
+      <property name="Rules">(<s value="PG">{G/P}</s> can be paid with either <s value="G">{G}</s> or 2 life.)
 Put target card from a graveyard on top of its owner's library.</property>
       <property name="Artist" value="Matt Stewart" />
       <property name="Number" value="118" />
@@ -2259,13 +2313,16 @@ You may have Spinebiter assign its combat damage as though it weren't blocked.</
     </card>
     <card name="Thundering Tanadon" id="e2fab443-0f4b-45ea-8a6d-435b93803409">
       <property name="Cost">
-        <s value="4">{4}</s>{G/P}{G/P}</property>
+        <s value="4">{4}</s>
+        <s value="PG">{G/P}</s>
+        <s value="PG">{G/P}</s>
+      </property>
       <property name="CMC" value="6" />
       <property name="Color" value="Green" />
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({G/P} can be paid with either <s value="G">{G}</s> or 2 life.)
+      <property name="Rules">(<s value="PG">{G/P}</s> can be paid with either <s value="G">{G}</s> or 2 life.)
 Trample</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
@@ -2442,7 +2499,8 @@ Equip <s value="5">{5}</s></property>
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Cleric" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">{W/P}, <s value="T">{T}</s>: Tap target creature. ({W/P} can be paid with either <s value="W">{W}</s> or 2 life.)</property>
+      <property name="Rules">
+        <s value="PW">{W/P}</s>, <s value="T">{T}</s>: Tap target creature. (<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -2545,7 +2603,8 @@ Whenever a land's ability causes you to add one or more mana of the chosen color
       <property name="Subtype" value="Insect" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="X">{X}</s>{B/P}: Remove up to X counters from target permanent. For each counter removed this way, Hex Parasite gets +1/+0 until end of turn. ({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)</property>
+        <s value="X">{X}</s>
+        <s value="PB">{B/P}</s>: Remove up to X counters from target permanent. For each counter removed this way, Hex Parasite gets +1/+0 until end of turn. (<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2583,7 +2642,8 @@ Whenever a land's ability causes you to add one or more mana of the chosen color
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Hound" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">{R/P}: Immolating Souleater gets +1/+0 until end of turn. ({R/P} can be paid with either <s value="R">{R}</s> or 2 life.)</property>
+      <property name="Rules">
+        <s value="PR">{R/P}</s>: Immolating Souleater gets +1/+0 until end of turn. (<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -2602,7 +2662,8 @@ Whenever a land's ability causes you to add one or more mana of the chosen color
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">{G/P}: Insatiable Souleater gains trample until end of turn. ({G/P} can be paid with either <s value="G">{G}</s> or 2 life.)</property>
+      <property name="Rules">
+        <s value="PG">{G/P}</s>: Insatiable Souleater gains trample until end of turn. (<s value="PG">{G/P}</s> can be paid with either <s value="G">{G}</s> or 2 life.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="5 / 1" />
@@ -2657,7 +2718,7 @@ Whenever a land's ability causes you to add one or more mana of the chosen color
       <property name="Rarity" value="Rare" />
       <property name="Rules">Living weapon (When this Equipment enters the battlefield, create a 0/0 black Germ creature token, then attach this to it.)
 Equipped creature gets +1/+1 for each Swamp you control.
-Equip {B/P}{B/P} ({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)</property>
+Equip <s value="PB">{B/P}</s><s value="PB">{B/P}</s> (<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)</property>
       <property name="Artist" value="Jason Felix" />
       <property name="Number" value="143" />
       <property name="Faction" value="Phyrexian" />
@@ -2702,7 +2763,7 @@ Equip {B/P}{B/P} ({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Myr" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Spend only mana produced by creatures to cast Myr Superion.</property>
+      <property name="Rules">Spend only mana produced by creatures to cast this spell.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="5 / 6" />
@@ -2753,7 +2814,8 @@ At the beginning of each player's draw step, that player exiles the top card of 
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Insect" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">{B/P}: Pestilent Souleater gains infect until end of turn. ({B/P} can be paid with either <s value="B">{B}</s> or 2 life. A creature with infect deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</property>
+      <property name="Rules">
+        <s value="PB">{B/P}</s>: Pestilent Souleater gains infect until end of turn. (<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life. A creature with infect deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -2913,7 +2975,8 @@ Equip <s value="4">{4}</s></property>
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Horror" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">{U/P}: Change a target of target spell or ability to Spellskite. ({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)</property>
+      <property name="Rules">
+        <s value="PU">{U/P}</s>: Change a target of target spell or ability to Spellskite. (<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="0 / 4" />
@@ -2980,7 +3043,8 @@ Equip <s value="2">{2}</s></property>
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">{U/P}: Trespassing Souleater can't be blocked this turn. ({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)</property>
+      <property name="Rules">
+        <s value="PU">{U/P}</s>: Trespassing Souleater can't be blocked this turn. (<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />

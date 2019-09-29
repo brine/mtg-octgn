@@ -368,12 +368,15 @@ Sacrifice Burrenton Forge-Tender: Prevent all damage a red source of your choice
     </card>
     <card name="Dismember" id="e48e2da3-8597-48c2-8287-f0264a7788c7">
       <property name="Cost">
-        <s value="1">{1}</s>{B/P}{B/P}</property>
+        <s value="1">{1}</s>
+        <s value="PB">{B/P}</s>
+        <s value="PB">{B/P}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
 Target creature gets -5/-5 until end of turn.</property>
       <property name="Artist" value="Terese Nielsen" />
       <property name="Number" value="025" />

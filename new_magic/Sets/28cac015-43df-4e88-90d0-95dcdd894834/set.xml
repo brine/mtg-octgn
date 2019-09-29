@@ -145,12 +145,14 @@ Ulamog's Crusher attacks each combat if able.</property>
     </card>
     <card name="Apostle's Blessing" id="fdfbc07e-d726-4d42-9394-6aa0f5fc3a3a">
       <property name="Cost">
-        <s value="1">{1}</s>{W/P}</property>
+        <s value="1">{1}</s>
+        <s value="PW">{W/P}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({W/P} can be paid with either <s value="W">{W}</s> or 2 life.)
+      <property name="Rules">(<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)
 Target artifact or creature you control gains protection from artifacts or from the color of your choice until end of turn.</property>
       <property name="Artist" value="Brad Rigney" />
       <property name="Number" value="008" />
@@ -1135,12 +1137,14 @@ Whenever Surrakar Spellblade deals combat damage to a player, you may draw X car
     </card>
     <card name="Tezzeret's Gambit" id="b8f09f8e-f212-4b79-98fd-d1c6277a48c2">
       <property name="Cost">
-        <s value="3">{3}</s>{U/P}</property>
+        <s value="3">{3}</s>
+        <s value="PU">{U/P}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)
+      <property name="Rules">(<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)
 Draw two cards, then proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</property>
       <property name="Artist" value="Karl Kopinski" />
       <property name="Number" value="063" />
@@ -1413,12 +1417,15 @@ Target player loses 2 life plus 2 life for each Spirit sacrificed this way. You 
     </card>
     <card name="Dismember" id="3d286cf6-3e16-4941-9326-1818b1e06d69">
       <property name="Cost">
-        <s value="1">{1}</s>{B/P}{B/P}</property>
+        <s value="1">{1}</s>
+        <s value="PB">{B/P}</s>
+        <s value="PB">{B/P}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
 Target creature gets -5/-5 until end of turn.</property>
       <property name="Artist" value="Terese Nielsen" />
       <property name="Number" value="079" />
@@ -1777,12 +1784,14 @@ Soulshift 4 (When this creature dies, you may return target Spirit card with con
       <property name="MultiverseId" value="397823" />
     </card>
     <card name="Surgical Extraction" id="6e438caf-9373-4de8-b4ac-212f5036e677">
-      <property name="Cost">{B/P}</property>
+      <property name="Cost">
+        <s value="PB">{B/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
 Choose target card in a graveyard other than a basic land card. Search its owner's graveyard, hand, and library for any number of cards with the same name as that card and exile them. Then that player shuffles their library.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="099" />
@@ -1958,7 +1967,7 @@ First strike (This creature deals combat damage before creatures without first s
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Kicker <s value="4">{4}</s> (You may pay an additional <s value="4">{4}</s> as you cast this spell.)
-Burst Lightning deals 2 damage to any target. If this spell was kicked, it deals 4 damage to that permanent or player instead.</property>
+Burst Lightning deals 2 damage to any target. If this spell was kicked, it deals 4 damage instead.</property>
       <property name="Artist" value="Vance Kovacs" />
       <property name="Number" value="109" />
       <property name="MultiverseId" value="397662" />
@@ -2087,12 +2096,14 @@ Enchanted creature gets +2/+2 and has haste.</property>
       <property name="MultiverseId" value="397809" />
     </card>
     <card name="Gut Shot" id="461987da-8860-4a04-8f93-d182523ca311">
-      <property name="Cost">{R/P}</property>
+      <property name="Cost">
+        <s value="PR">{R/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">({R/P} can be paid with either <s value="R">{R}</s> or 2 life.)
+      <property name="Rules">(<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)
 Gut Shot deals 1 damage to any target.</property>
       <property name="Artist" value="Greg Staples" />
       <property name="Number" value="117" />
@@ -2679,12 +2690,14 @@ If Kavu Primarch was kicked, it enters the battlefield with four +1/+1 counters 
       <property name="MultiverseId" value="397886" />
     </card>
     <card name="Mutagenic Growth" id="2e0861a2-1858-47af-8154-20a977c2b298">
-      <property name="Cost">{G/P}</property>
+      <property name="Cost">
+        <s value="PG">{G/P}</s>
+      </property>
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({G/P} can be paid with either <s value="G">{G}</s> or 2 life.)
+      <property name="Rules">(<s value="PG">{G/P}</s> can be paid with either <s value="G">{G}</s> or 2 life.)
 Target creature gets +2/+2 until end of turn.</property>
       <property name="Artist" value="Dave Kendall" />
       <property name="Number" value="149" />
@@ -3690,7 +3703,8 @@ If a spell or ability an opponent controls causes you to discard Wilt-Leaf Liege
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Cleric" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">{W/P}, <s value="T">{T}</s>: Tap target creature. ({W/P} can be paid with either <s value="W">{W}</s> or 2 life.)</property>
+      <property name="Rules">
+        <s value="PW">{W/P}</s>, <s value="T">{T}</s>: Tap target creature. (<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -4158,7 +4172,8 @@ Flying</property>
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Horror" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">{U/P}: Change a target of target spell or ability to Spellskite. ({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)</property>
+      <property name="Rules">
+        <s value="PU">{U/P}</s>: Change a target of target spell or ability to Spellskite. (<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="0 / 4" />

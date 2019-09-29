@@ -1845,14 +1845,17 @@ When Skull Saucer enters the battlefield, destroy target creature and put your h
     </card>
     <card name="Spike, Tournament Grinder" id="b0e90b22-6f43-4e9a-a236-f33191768813">
       <property name="Cost">
-        <s value="2">{2}</s>{B/P}{B/P}</property>
+        <s value="2">{2}</s>
+        <s value="PB">{B/P}</s>
+        <s value="PB">{B/P}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Gamer" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
-{B/P}{B/P}{B/P}{B/P}: Choose a card you own from outside the game that has been banned or restricted in a Constructed format, reveal that card, and put it into your hand.</property>
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
+<s value="PB">{B/P}</s><s value="PB">{B/P}</s><s value="PB">{B/P}</s><s value="PB">{B/P}</s>: Choose a card you own from outside the game that has been banned or restricted in a Constructed format, reveal that card, and put it into your hand.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -3284,7 +3287,8 @@ Whenever a host enters the battlefield under your control, you may search your l
       <property name="Color" value="Multicolor White Blue" />
       <property name="Type" value="Legendary Artifact" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">When The Grand Calcutron enters the battlefield, each player's hand becomes a program (an ordered row of revealed cards).
+      <property name="Rules">The Grand Calcutron can be your commander.
+When The Grand Calcutron enters the battlefield, each player's hand becomes a program (an ordered row of revealed cards).
 Players can only play the first card of their program.
 If a card would be put into a player's hand from anywhere, that player reveals it and places it anywhere within their program instead.
 At the beginning of each player's end step, if that player's program has fewer than five cards, they draw cards equal to the difference.</property>

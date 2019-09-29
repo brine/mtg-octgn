@@ -876,7 +876,7 @@ Unearth <s value="2">{2}</s><s value="U">{U}</s> (<s value="2">{2}</s><s value="
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Weird" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Steamcore Weird enters the battlefield, if <s value="R">{R}</s> was spent to cast Steamcore Weird, it deals 2 damage to any target.</property>
+      <property name="Rules">When Steamcore Weird enters the battlefield, if <s value="R">{R}</s> was spent to cast it, it deals 2 damage to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -977,7 +977,7 @@ Evoke <s value="1">{1}</s><s value="B">{B}</s> (You may cast this spell for its 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Ogre Wizard" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Ogre Savant enters the battlefield, if <s value="U">{U}</s> was spent to cast Ogre Savant, return target creature to its owner's hand.</property>
+      <property name="Rules">When Ogre Savant enters the battlefield, if <s value="U">{U}</s> was spent to cast it, return target creature to its owner's hand.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -1245,13 +1245,10 @@ Whenever enchanted creature deals damage to a player, that player discards two c
     <card name="Spite // Malice" id="5e50dd95-0f65-4150-9f22-0cabcabe2c30">
       <property name="Cost">
         <s value="3">{3}</s>
-        <s value="U">{U}</s>
-        <s value="3">{3}</s>
-        <s value="B">{B}</s>
-      </property>
+        <s value="U">{U}</s> // <s value="3">{3}</s><s value="B">{B}</s></property>
       <property name="CMC" value="8" />
       <property name="Color" value="Multicolor Blue Black" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Counter target noncreature spell.
 //
@@ -1287,13 +1284,10 @@ Destroy target nonblack creature. It can't be regenerated.</property>
     </card>
     <card name="Pain // Suffering" id="d61af2e9-754d-48a6-8708-e5b54037f1bf">
       <property name="Cost">
-        <s value="B">{B}</s>
-        <s value="3">{3}</s>
-        <s value="R">{R}</s>
-      </property>
+        <s value="B">{B}</s> // <s value="3">{3}</s><s value="R">{R}</s></property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor Black Red" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Target player discards a card.
 //
@@ -1329,13 +1323,10 @@ Destroy target land.</property>
     <card name="Rise // Fall" id="37257329-5946-44df-9f5a-50bd38b6a151">
       <property name="Cost">
         <s value="U">{U}</s>
-        <s value="B">{B}</s>
-        <s value="B">{B}</s>
-        <s value="R">{R}</s>
-      </property>
+        <s value="B">{B}</s> // <s value="B">{B}</s><s value="R">{R}</s></property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Blue Black Red" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Return target creature card from a graveyard and target creature on the battlefield to their owners' hands.
 //

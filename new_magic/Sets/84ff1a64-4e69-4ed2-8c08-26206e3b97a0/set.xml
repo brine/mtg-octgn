@@ -1609,7 +1609,6 @@ Exile target attacking creature. Create a token that's a copy of that creature. 
       <property name="MultiverseId" value="247175" />
       <alternate name="Nighteyes the Desecrator" type="flip">
         <property name="Cost" />
-        <property name="CMC" value="2" />
         <property name="Color" value="Black" />
         <property name="Type" value="Legendary Creature" />
         <property name="Subtype" value="Rat Wizard" />
@@ -1619,8 +1618,6 @@ Exile target attacking creature. Create a token that's a copy of that creature. 
         <property name="Power" value="4" />
         <property name="Toughness" value="2" />
         <property name="PT Box" value="4 / 2" />
-        <property name="Artist" value="Jim Nelson" />
-        <property name="Number" value="092" />
       </alternate>
     </card>
     <card name="Patron of the Nezumi" id="b0e6847b-38fa-400a-b4aa-8861d18e5c8e">
@@ -1995,7 +1992,7 @@ Breath of Darigaaz deals 1 damage to each creature without flying and each playe
       <property name="Rules">Chain Reaction deals X damage to each creature, where X is the number of creatures on the battlefield.</property>
       <property name="Artist" value="Trevor Claxton" />
       <property name="Number" value="113" />
-      <property name="Flavor" value="&quot;We train for the improbable, like lightning striking the same place twice, or striking everywhere at once.&quot; —Nundari, Sea Gate militia captain" />
+      <property name="Flavor" value="&quot;We train for the improbable, like lightning striking the same place twice, or striking everywhere at once.&quot;—Nundari, Sea Gate militia captain" />
       <property name="MultiverseId" value="247538" />
     </card>
     <card name="Chaos Warp" id="042431bc-0b21-4920-802f-6dd02e4c8721">
@@ -3543,13 +3540,10 @@ Draw a card.</property>
     <card name="Fire // Ice" id="230e65b2-a908-4418-8ef9-ecc475ff0b27">
       <property name="Cost">
         <s value="1">{1}</s>
-        <s value="R">{R}</s>
-        <s value="1">{1}</s>
-        <s value="U">{U}</s>
-      </property>
+        <s value="R">{R}</s> // <s value="1">{1}</s><s value="U">{U}</s></property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Red Blue" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Fire deals 2 damage divided as you choose among one or two targets.
 //
@@ -3594,7 +3588,7 @@ Draw a card.</property>
       <property name="Color" value="Hybrid Red Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Firespout deals 3 damage to each creature without flying if <s value="R">{R}</s> was spent to cast Firespout and 3 damage to each creature with flying if <s value="G">{G}</s> was spent to cast it. (Do both if <s value="R">{R}</s><s value="G">{G}</s> was spent.)</property>
+      <property name="Rules">Firespout deals 3 damage to each creature without flying if <s value="R">{R}</s> was spent to cast this spell and 3 damage to each creature with flying if <s value="G">{G}</s> was spent to cast this spell. (Do both if <s value="R">{R}</s><s value="G">{G}</s> was spent.)</property>
       <property name="Artist" value="Jeff Miracola" />
       <property name="Number" value="199" />
       <property name="MultiverseId" value="247407" />
@@ -4441,7 +4435,7 @@ Whenever Wrexial, the Risen Deep deals combat damage to a player, you may cast t
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Armillary Sphere: Search your library for up to two basic land cards, reveal them, and put them into your hand. Then shuffle your library.</property>
+        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Armillary Sphere: Search your library for up to two basic land cards, reveal them, put them into your hand, then shuffle your library.</property>
       <property name="Artist" value="Franz Vohwinkel" />
       <property name="Number" value="242" />
       <property name="Flavor" value="The mysterious purpose of two of the rings had eluded Esper mages—until now." />

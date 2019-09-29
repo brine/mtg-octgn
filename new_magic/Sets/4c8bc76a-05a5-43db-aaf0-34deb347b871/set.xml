@@ -241,7 +241,7 @@ Creatures with art by the chosen artist get +2/+2.</property>
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">If you control two or more white permanents that share an artist, you may cast Erase (Not the Urza's Legacy One) without paying its mana cost.
+      <property name="Rules">If you control two or more white permanents that share an artist, you may cast this spell without paying its mana cost.
 Exile target enchantment.</property>
       <property name="Artist" value="Pete “Yes the Urza's Legacy One” Venters" />
       <property name="Number" value="010" />
@@ -1535,7 +1535,6 @@ Curse of the Fire Penguin consumes and confuses enchanted creature.</property>
       <property name="MultiverseId" value="73956" />
       <alternate name="Curse of the Fire Penguin Creature" type="flip">
         <property name="Cost" />
-        <property name="CMC" value="6" />
         <property name="Color" value="Red" />
         <property name="Type" value="Creature" />
         <property name="Subtype" value="Penguin" />
@@ -1544,8 +1543,6 @@ When this creature dies, return Curse of the Fire Penguin to the battlefield.</p
         <property name="Power" value="6" />
         <property name="Toughness" value="5" />
         <property name="PT Box" value="6 / 5" />
-        <property name="Artist" value="Matt Thompson" />
-        <property name="Number" value="073" />
       </alternate>
     </card>
     <card name="Deal Damage" id="de905517-983d-4996-a680-3a5cf91bfe11">
@@ -1689,7 +1686,7 @@ At the beginning of your upkeep, reveal a card from your hand at random.</proper
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="Tony Szczudlo" />
       <property name="Number" value="079" />
-      <property name="Flavor" value="SECRET AGENT PD042198 LICENSE TO BE KILLED" />
+      <property name="Flavor" value="SECRET AGENTPD042198LICENSE TO BE KILLED" />
       <property name="MultiverseId" value="74295" />
     </card>
     <card name="Goblin S.W.A.T. Team" id="91848051-4c72-44be-b779-53dbb528e265">
@@ -1723,7 +1720,7 @@ At the beginning of your upkeep, reveal a card from your hand at random.</proper
       <property name="Rules">Add <s value="R">{R}</s> for each nonland permanent with art by the artist of your choice.</property>
       <property name="Artist" value="Paolo “That's Actually Me” Parente" />
       <property name="Number" value="081" />
-      <property name="Flavor" value="What began as black Has slowly shifted to red. Fickle color pie." />
+      <property name="Flavor" value="What began as blackHas slowly shifted to red.Fickle color pie." />
       <property name="MultiverseId" value="74266" />
     </card>
     <card name="Mons's Goblin Waiters" id="729238ee-b3ea-4c1d-852c-2dc9a2c58356">
@@ -1741,7 +1738,7 @@ At the beginning of your upkeep, reveal a card from your hand at random.</proper
       <property name="PT Box" value="1 / 1" />
       <property name="Artist" value="Pete Venters" />
       <property name="Number" value="082" />
-      <property name="Flavor" value="Poached Rukh Eggs Rock Cooked Rock Unicorn-on-the-Cob Wormfang Turtle Soup" />
+      <property name="Flavor" value="Poached Rukh EggsRockCooked RockUnicorn-on-the-CobWormfang Turtle Soup" />
       <property name="MultiverseId" value="73957" />
     </card>
     <card name="Mons's Goblin Waiters" id="ae733007-3089-43fc-a14d-7c1919554923">
@@ -1759,7 +1756,7 @@ At the beginning of your upkeep, reveal a card from your hand at random.</proper
       <property name="PT Box" value="1 / 1" />
       <property name="Artist" value="Pete Venters" />
       <property name="Number" value="082" />
-      <property name="Flavor" value="Poached Rukh Eggs Rock Cooked Rock Unicorn-on-the-Cob Wormfang Turtle Soup" />
+      <property name="Flavor" value="Poached Rukh EggsRockCooked RockUnicorn-on-the-CobWormfang Turtle Soup" />
     </card>
     <card name="Orcish Paratroopers" id="5864cddb-7b2e-434c-8cb6-4e44b802add6">
       <property name="Cost">
@@ -2085,7 +2082,7 @@ When the chosen finger isn't touching Gluetius Maximus, sacrifice Gluetius Maxim
       <property name="Rules">You gain life equal to your age.</property>
       <property name="Artist" value="Joel Thomas" />
       <property name="Number" value="099" />
-      <property name="Flavor" value="R&amp;D Comments BB 10/10: Why does a life-gaining card show an old lady killing people? MR (10/10/03): We'll fix it in the flavor text." />
+      <property name="Flavor" value="R&amp;D CommentsBB 10/10: Why does a life-gaining card show an old lady killing people?MR (10/10/03): We'll fix it in the flavor text." />
       <property name="MultiverseId" value="74281" />
     </card>
     <card name="Graphic Violence" id="b92ab617-2b06-4030-a15b-5a6db3e5b1fb">
@@ -2540,13 +2537,10 @@ Spells with the chosen word in their text box can't be cast.</property>
     <card name="Who // What // When // Where // Why" id="8987644d-5a31-4a4e-9a8a-3d6260ed0fd6">
       <property name="Cost">
         <s value="X">{X}</s>
-        <s value="W">{W}</s>
-        <s value="2">{2}</s>
-        <s value="R">{R}</s>
-      </property>
-      <property name="CMC" value="13" />
+        <s value="W">{W}</s> // <s value="2">{2}</s><s value="R">{R}</s></property>
+      <property name="CMC" value="4" />
       <property name="Color" value="Multicolor White Red" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Target player gains X life.
 //
@@ -2558,7 +2552,7 @@ Destroy target artifact.</property>
           <s value="X">{X}</s>
           <s value="W">{W}</s>
         </property>
-        <property name="CMC" value="2" />
+        <property name="CMC" value="1" />
         <property name="Color" value="White" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Rare" />

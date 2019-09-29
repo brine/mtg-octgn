@@ -12,7 +12,7 @@
       <property name="Subtype" value="Kor Soldier" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Vigilance
-<s value="T">{T}</s>, Sacrifice Cliffside Rescuer: Target permanent you control gets protection from each opponent until end of turn.</property>
+<s value="T">{T}</s>, Sacrifice Cliffside Rescuer: Target permanent you control gains protection from each of your opponents until end of turn. (It can't be blocked, targeted, dealt damage, enchanted, or equipped by anything controlled by those players.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -221,7 +221,7 @@ When Thought Sponge dies, draw cards equal to its power.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Shapeshifter Wall" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">You may have Wall of Stolen Identity enter the battlefield as a copy of any creature on the battlefield, except it's a wall in addition to its other types and it has defender. When you do, tap the copied creature and it doesn't untap during its controller's untap step for as long as you control Wall of Stolen Identity.</property>
+      <property name="Rules">You may have Wall of Stolen Identity enter the battlefield as a copy of any creature on the battlefield, except it's a Wall in addition to its other types and has defender. When you do, tap the copied creature and it doesn't untap during its controller's untap step for as long as you control Wall of Stolen Identity.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="0" />
       <property name="PT Box" value="0 / 0" />
@@ -300,7 +300,7 @@ Madness <s value="3">{3}</s><s value="B">{B}</s> (If you discard this card, disc
       <property name="Rarity" value="Rare" />
       <property name="Rules">Enchant creature
 Enchanted creature has deathtouch and indestructible.
-Morph—Sacrifice another creature. (You may cast this card face down as a 2/2 creature for <s value="3">{3}</s>. Turn it face up at any time for its morph cost.)
+Morph—Sacrifice another creature. (You may cast this card face down as a 2/2 creature for <s value="3">{3}</s>. Turn it face up any time for its morph cost.)
 As Gift of Doom is turned face up, you may attach it to a creature.</property>
       <property name="Artist" value="James Zapata" />
       <property name="Number" value="017" />
@@ -308,13 +308,17 @@ As Gift of Doom is turned face up, you may attach it to a creature.</property>
     </card>
     <card name="K'rrik, Son of Yawgmoth" id="3592fbe4-8588-486e-99ba-c327b0b6ba24">
       <property name="Cost">
-        <s value="4">{4}</s>{B/P}{B/P}{B/P}</property>
+        <s value="4">{4}</s>
+        <s value="PB">{B/P}</s>
+        <s value="PB">{B/P}</s>
+        <s value="PB">{B/P}</s>
+      </property>
       <property name="CMC" value="7" />
       <property name="Color" value="Black" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Horror Minion" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">({B/P} can be paid with either <s value="B">{B}</s> or 2 life.)
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
 Lifelink
 For each <s value="B">{B}</s> in a cost, you may pay 2 life rather than pay that mana.
 Whenever you cast a black spell, put a +1/+1 counter on K'rrik, Son of Yawgmoth.</property>
@@ -1165,14 +1169,10 @@ Flashback <s value="5">{5}</s><s value="W">{W}</s><s value="W">{W}</s> (You may 
       <property name="Cost">
         <s value="2">{2}</s>
         <s value="W">{W}</s>
-        <s value="W">{W}</s>
-        <s value="3">{3}</s>
-        <s value="W">{W}</s>
-        <s value="W">{W}</s>
-      </property>
+        <s value="W">{W}</s> // <s value="3">{3}</s><s value="W">{W}</s><s value="W">{W}</s></property>
       <property name="CMC" value="9" />
       <property name="Color" value="White" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Destroy all creatures with power 3 or greater.
 //
@@ -1795,12 +1795,14 @@ When Stratus Dancer is turned face up, counter target instant or sorcery spell.<
     </card>
     <card name="Tezzeret's Gambit" id="1beea6e6-d201-4f6a-ab06-e5a3d04db123">
       <property name="Cost">
-        <s value="3">{3}</s>{U/P}</property>
+        <s value="3">{3}</s>
+        <s value="PU">{U/P}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)
+      <property name="Rules">(<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)
 Draw two cards, then proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</property>
       <property name="Artist" value="Karl Kopinski" />
       <property name="Number" value="098" />
@@ -2073,7 +2075,7 @@ Madness <s value="B">{B}</s> (If you discard this card, discard it into exile. W
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Madness <s value="X">{X}</s><s value="B">{B}</s><s value="B">{B}</s> (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)
-Create three tapped 2/2 black Zombie creature tokens and you gain 3 life. If From Under the Floorboards's madness cost was paid, instead create X of those tokens and you gain X life.</property>
+Create three tapped 2/2 black Zombie creature tokens and you gain 3 life. If this spell's madness cost was paid, instead create X of those tokens and you gain X life.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="113" />
       <property name="MultiverseId" value="470659" />
@@ -2456,7 +2458,7 @@ Madness <s value="1">{1}</s><s value="R">{R}</s> (If you discard this card, disc
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Madness <s value="X">{X}</s><s value="R">{R}</s> (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)
-Avacyn's Judgment deals 2 damage divided as you choose among any number of targets. If Avacyn's Judgment's madness cost was paid, it deals X damage divided as you choose among those permanents and/or players instead.</property>
+Avacyn's Judgment deals 2 damage divided as you choose among any number of targets. If this spell's madness cost was paid, it deals X damage divided as you choose among those permanents and/or players instead.</property>
       <property name="Artist" value="Victor Adame Minguez" />
       <property name="Number" value="134" />
       <property name="MultiverseId" value="470680" />
@@ -3331,7 +3333,7 @@ Draw a card.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Shaman" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Saproling creatures get +1/+1.
+      <property name="Rules">All Saprolings get +1/+1.
 Morph <s value="3">{3}</s><s value="G">{G}</s><s value="G">{G}</s> (You may cast this card face down as a 2/2 creature for <s value="3">{3}</s>. Turn it face up any time for its morph cost.)
 When Thelonite Hermit is turned face up, create four 1/1 green Saproling creature tokens.</property>
       <property name="Power" value="1" />
@@ -3472,13 +3474,10 @@ When Crackling Drake enters the battlefield, draw a card.</property>
     <card name="Farm // Market" id="fe3b32dc-f7e6-455c-b9d1-c7f8d6259179">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="W">{W}</s>
-        <s value="2">{2}</s>
-        <s value="U">{U}</s>
-      </property>
+        <s value="W">{W}</s> // <s value="2">{2}</s><s value="U">{U}</s></property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor White Blue" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Destroy target attacking or blocking creature.
 //
@@ -3627,13 +3626,10 @@ Whenever you cast a noncreature spell, untap Pristine Skywise. It gains protecti
     <card name="Refuse // Cooperate" id="ca4caa4e-6b8f-4be8-b177-de2ebe2c9201">
       <property name="Cost">
         <s value="3">{3}</s>
-        <s value="R">{R}</s>
-        <s value="2">{2}</s>
-        <s value="U">{U}</s>
-      </property>
+        <s value="R">{R}</s> // <s value="2">{2}</s><s value="U">{U}</s></property>
       <property name="CMC" value="7" />
       <property name="Color" value="Multicolor Red Blue" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Refuse deals damage to target spell's controller equal to that spell's converted mana cost.
 //
@@ -3849,7 +3845,7 @@ Whenever Wayfaring Temple deals combat damage to a player, populate. (Create a t
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Armillary Sphere: Search your library for up to two basic land cards, reveal them, and put them into your hand. Then shuffle your library.</property>
+        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Armillary Sphere: Search your library for up to two basic land cards, reveal them, put them into your hand, then shuffle your library.</property>
       <property name="Artist" value="Franz Vohwinkel" />
       <property name="Number" value="209" />
       <property name="Flavor" value="The mysterious purpose of two of the rings had eluded Esper mages—until now." />
@@ -4130,7 +4126,7 @@ When Akoum Refuge enters the battlefield, you gain 1 life.
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-Basic landcycling <s value="1">{1}</s> (<s value="1">{1}</s>, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand, then shuffle your library.)</property>
+Basic landcycling <s value="1">{1}</s> (<s value="1">{1}</s>, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="227" />
       <property name="MultiverseId" value="470773" />

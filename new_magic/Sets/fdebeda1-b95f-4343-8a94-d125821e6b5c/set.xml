@@ -1100,7 +1100,7 @@ Hellbent — Slithering Shade can attack as though it didn't have defender as lo
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Cackling Flames deals 3 damage to any target.
-Hellbent — Cackling Flames deals 5 damage to that permanent or player instead if you have no cards in hand.</property>
+Hellbent — Cackling Flames deals 5 damage instead if you have no cards in hand.</property>
       <property name="Artist" value="Shishizaru" />
       <property name="Number" value="059" />
       <property name="Flavor" value="&quot;I like a little entertainment with my dinner.&quot; —Rakdos" />
@@ -1379,7 +1379,7 @@ Whenever another creature you control dies, it deals damage equal to its power t
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="2">{2}</s>
-        <s value="R">{R}</s>, Discard a card at random: Stormscale Anarch deals 2 damage to any target. If the discarded card was multicolored, Stormscale Anarch deals 4 damage to that permanent or player instead.</property>
+        <s value="R">{R}</s>, Discard a card at random: Stormscale Anarch deals 2 damage to any target. If the discarded card was multicolored, Stormscale Anarch deals 4 damage instead.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2834,13 +2834,10 @@ Enchanted creature can't be the target of spells or abilities your opponents con
       <property name="Cost">
         <s value="3">{3}</s>
         <s value="B">{B}</s>
-        <s value="G">{G}</s>
-        <s value="G">{G}</s>
-        <s value="U">{U}</s>
-      </property>
+        <s value="G">{G}</s> // <s value="G">{G}</s><s value="U">{U}</s></property>
       <property name="CMC" value="7" />
       <property name="Color" value="Multicolor Black Green Blue" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Sacrifice a creature. Return up to X cards from your graveyard to your hand, where X is the number of colors that creature was. Exile this card.
 //
@@ -2883,14 +2880,10 @@ Draw a card.</property>
       <property name="Cost">
         <s value="3">{3}</s>
         <s value="W">{W}</s>
-        <s value="B">{B}</s>
-        <s value="X">{X}</s>
-        <s value="B">{B}</s>
-        <s value="G">{G}</s>
-      </property>
+        <s value="B">{B}</s> // <s value="X">{X}</s><s value="B">{B}</s><s value="G">{G}</s></property>
       <property name="CMC" value="7" />
       <property name="Color" value="Multicolor White Black Green" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Put target creature or enchantment card from an opponent's graveyard onto the battlefield under your control.
 //
@@ -2918,7 +2911,7 @@ Destroy each artifact, creature, and enchantment with converted mana cost X.</pr
           <s value="B">{B}</s>
           <s value="G">{G}</s>
         </property>
-        <property name="CMC" value="3" />
+        <property name="CMC" value="2" />
         <property name="Color" value="Multicolor Black Green" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Rare" />
@@ -2931,13 +2924,10 @@ Destroy each artifact, creature, and enchantment with converted mana cost X.</pr
     <card name="Hide // Seek" id="ac347ec8-4537-4cdf-aeff-44da1f7be01b">
       <property name="Cost">
         <s value="R">{R}</s>
-        <s value="W">{W}</s>
-        <s value="W">{W}</s>
-        <s value="B">{B}</s>
-      </property>
+        <s value="W">{W}</s> // <s value="W">{W}</s><s value="B">{B}</s></property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Red White Black" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Put target artifact or enchantment on the bottom of its owner's library.
 //
@@ -2977,14 +2967,10 @@ Search target opponent's library for a card and exile it. You gain life equal to
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="B">{B}</s>
-        <s value="R">{R}</s>
-        <s value="3">{3}</s>
-        <s value="R">{R}</s>
-        <s value="G">{G}</s>
-      </property>
+        <s value="R">{R}</s> // <s value="3">{3}</s><s value="R">{R}</s><s value="G">{G}</s></property>
       <property name="CMC" value="8" />
       <property name="Color" value="Multicolor Black Red Green" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Target player sacrifices an artifact or creature. Hit deals damage to that player equal to that permanent's converted mana cost.
 //
@@ -3025,14 +3011,10 @@ Attacking creatures you control get +1/+0 until end of turn for each other attac
     <card name="Odds // Ends" id="4bb07091-86d6-4735-82b6-6e71e26710f4">
       <property name="Cost">
         <s value="U">{U}</s>
-        <s value="R">{R}</s>
-        <s value="3">{3}</s>
-        <s value="R">{R}</s>
-        <s value="W">{W}</s>
-      </property>
+        <s value="R">{R}</s> // <s value="3">{3}</s><s value="R">{R}</s><s value="W">{W}</s></property>
       <property name="CMC" value="7" />
       <property name="Color" value="Multicolor Blue Red White" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flip a coin. If it comes up heads, counter target instant or sorcery spell. If it comes up tails, copy that spell and you may choose new targets for the copy.
 //
@@ -3073,14 +3055,10 @@ Target player sacrifices two attacking creatures.</property>
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="R">{R}</s>
-        <s value="G">{G}</s>
-        <s value="1">{1}</s>
-        <s value="G">{G}</s>
-        <s value="W">{W}</s>
-      </property>
+        <s value="G">{G}</s> // <s value="1">{1}</s><s value="G">{G}</s><s value="W">{W}</s></property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Red Green White" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Destroy target multicolored permanent.
 //
@@ -3121,14 +3099,10 @@ Destroy all Auras and Equipment.</property>
     <card name="Research // Development" id="5d48ee48-aaeb-4907-b9dc-32f22e95ae4c">
       <property name="Cost">
         <s value="G">{G}</s>
-        <s value="U">{U}</s>
-        <s value="3">{3}</s>
-        <s value="U">{U}</s>
-        <s value="R">{R}</s>
-      </property>
+        <s value="U">{U}</s> // <s value="3">{3}</s><s value="U">{U}</s><s value="R">{R}</s></property>
       <property name="CMC" value="7" />
       <property name="Color" value="Multicolor Green Blue Red" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Choose up to four cards you own from outside the game and shuffle them into your library.
 //
@@ -3168,13 +3142,10 @@ Create a 3/1 red Elemental creature token unless any opponent has you draw a car
     <card name="Rise // Fall" id="a6bd585d-0155-4ed8-8b8a-9c0b7604e942">
       <property name="Cost">
         <s value="U">{U}</s>
-        <s value="B">{B}</s>
-        <s value="B">{B}</s>
-        <s value="R">{R}</s>
-      </property>
+        <s value="B">{B}</s> // <s value="B">{B}</s><s value="R">{R}</s></property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Blue Black Red" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Return target creature card from a graveyard and target creature on the battlefield to their owners' hands.
 //
@@ -3214,14 +3185,10 @@ Target player reveals two cards at random from their hand, then discards each no
       <property name="Cost">
         <s value="X">{X}</s>
         <s value="G">{G}</s>
-        <s value="W">{W}</s>
-        <s value="1">{1}</s>
-        <s value="W">{W}</s>
-        <s value="U">{U}</s>
-      </property>
+        <s value="W">{W}</s> // <s value="1">{1}</s><s value="W">{W}</s><s value="U">{U}</s></property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor Green White Blue" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Create X 1/1 green Saproling creature tokens.
 //
@@ -3234,7 +3201,7 @@ Search your library for a multicolored card, reveal it, and put it into your han
           <s value="G">{G}</s>
           <s value="W">{W}</s>
         </property>
-        <property name="CMC" value="3" />
+        <property name="CMC" value="2" />
         <property name="Color" value="Multicolor Green White" />
         <property name="Type" value="Sorcery" />
         <property name="Rarity" value="Uncommon" />
@@ -3262,13 +3229,10 @@ Search your library for a multicolored card, reveal it, and put it into your han
     <card name="Trial // Error" id="553028fc-eeab-42e2-9887-cf45ea3f01a6">
       <property name="Cost">
         <s value="W">{W}</s>
-        <s value="U">{U}</s>
-        <s value="U">{U}</s>
-        <s value="B">{B}</s>
-      </property>
+        <s value="U">{U}</s> // <s value="U">{U}</s><s value="B">{B}</s></property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor White Blue Black" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Return all creatures blocking or blocked by target creature to their owner's hand.
 //

@@ -2321,12 +2321,10 @@ Whenever you tap Zhur-Taa Druid for mana, it deals 1 damage to each opponent.</p
     <card name="Alive // Well" id="db84415e-048a-4cfc-9121-5ae17a412198">
       <property name="Cost">
         <s value="3">{3}</s>
-        <s value="G">{G}</s>
-        <s value="W">{W}</s>
-      </property>
+        <s value="G">{G}</s> // <s value="W">{W}</s></property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor Green White" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Create a 3/3 green Centaur creature token.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2364,17 +2362,31 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="121" />
         <property name="Faction" value="Selesnya" />
       </alternate>
+      <alternate name="Alive and Well" type="splitC">
+        <property name="Cost">
+          <s value="3">{3}</s>
+          <s value="G">{G}</s>
+          <s value="W">{W}</s>
+        </property>
+        <property name="CMC" value="5" />
+        <property name="Color" value="Multicolor Green White" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rarity" value="Uncommon" />
+        <property name="Rules">Create a 3/3 green Centaur creature token.
+Fuse (You may cast one or both halves of this card from your hand.)
+You gain 2 life for each creature you control.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Nils Hamm" />
+        <property name="Number" value="121" />
+      </alternate>
     </card>
     <card name="Armed // Dangerous" id="ff7f4fc2-6f76-44e7-a30b-7166a0d10d2a">
       <property name="Cost">
         <s value="1">{1}</s>
-        <s value="R">{R}</s>
-        <s value="3">{3}</s>
-        <s value="G">{G}</s>
-      </property>
+        <s value="R">{R}</s> // <s value="3">{3}</s><s value="G">{G}</s></property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Red Green" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Target creature gets +1/+1 and gains double strike until end of turn.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2413,18 +2425,32 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="122" />
         <property name="Faction" value="Gruul" />
       </alternate>
+      <alternate name="Armed and Dangerous" type="splitC">
+        <property name="Cost">
+          <s value="1">{1}</s>
+          <s value="R">{R}</s>
+          <s value="3">{3}</s>
+          <s value="G">{G}</s>
+        </property>
+        <property name="CMC" value="6" />
+        <property name="Color" value="Multicolor Red Green" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rarity" value="Uncommon" />
+        <property name="Rules">Target creature gets +1/+1 and gains double strike until end of turn.
+Fuse (You may cast one or both halves of this card from your hand.)
+All creatures able to block target creature this turn do so.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="David Palumbo" />
+        <property name="Number" value="122" />
+      </alternate>
     </card>
     <card name="Beck // Call" id="a01d6540-9eaf-4e08-a62d-682551ee78e9">
       <property name="Cost">
         <s value="G">{G}</s>
-        <s value="U">{U}</s>
-        <s value="4">{4}</s>
-        <s value="W">{W}</s>
-        <s value="U">{U}</s>
-      </property>
+        <s value="U">{U}</s> // <s value="4">{4}</s><s value="W">{W}</s><s value="U">{U}</s></property>
       <property name="CMC" value="8" />
       <property name="Color" value="Multicolor Green Blue White" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever a creature enters the battlefield this turn, you may draw a card.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2464,18 +2490,33 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="123" />
         <property name="Faction" value="Azorius" />
       </alternate>
+      <alternate name="Beck and Call" type="splitC">
+        <property name="Cost">
+          <s value="G">{G}</s>
+          <s value="U">{U}</s>
+          <s value="4">{4}</s>
+          <s value="W">{W}</s>
+          <s value="U">{U}</s>
+        </property>
+        <property name="CMC" value="8" />
+        <property name="Color" value="Multicolor Green Blue White" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rarity" value="Rare" />
+        <property name="Rules">Whenever a creature enters the battlefield this turn, you may draw a card.
+Fuse (You may cast one or both halves of this card from your hand.)
+Create four 1/1 white Bird creature tokens with flying.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Adam Paquette" />
+        <property name="Number" value="123" />
+      </alternate>
     </card>
     <card name="Breaking // Entering" id="66724f4e-59dd-4c70-b09b-49947320e6d1">
       <property name="Cost">
         <s value="U">{U}</s>
-        <s value="B">{B}</s>
-        <s value="4">{4}</s>
-        <s value="B">{B}</s>
-        <s value="R">{R}</s>
-      </property>
+        <s value="B">{B}</s> // <s value="4">{4}</s><s value="B">{B}</s><s value="R">{R}</s></property>
       <property name="CMC" value="8" />
       <property name="Color" value="Multicolor Blue Black Red" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Target player puts the top eight cards of their library into their graveyard.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2515,19 +2556,34 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="124" />
         <property name="Faction" value="Rakdos" />
       </alternate>
+      <alternate name="Breaking and Entering" type="splitC">
+        <property name="Cost">
+          <s value="U">{U}</s>
+          <s value="B">{B}</s>
+          <s value="4">{4}</s>
+          <s value="B">{B}</s>
+          <s value="R">{R}</s>
+        </property>
+        <property name="CMC" value="8" />
+        <property name="Color" value="Multicolor Blue Black Red" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rarity" value="Rare" />
+        <property name="Rules">Target player puts the top eight cards of their library into their graveyard.
+Fuse (You may cast one or both halves of this card from your hand.)
+Put a creature card from a graveyard onto the battlefield under your control. It gains haste until end of turn.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Mathias Kollros" />
+        <property name="Number" value="124" />
+      </alternate>
     </card>
     <card name="Catch // Release" id="29968873-56f3-4528-ab0b-f11dd67dd162">
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="U">{U}</s>
-        <s value="R">{R}</s>
-        <s value="4">{4}</s>
-        <s value="R">{R}</s>
-        <s value="W">{W}</s>
-      </property>
+        <s value="R">{R}</s> // <s value="4">{4}</s><s value="R">{R}</s><s value="W">{W}</s></property>
       <property name="CMC" value="9" />
       <property name="Color" value="Multicolor Blue Red White" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Gain control of target permanent until end of turn. Untap it. It gains haste until end of turn.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2568,17 +2624,34 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="125" />
         <property name="Faction" value="Boros" />
       </alternate>
+      <alternate name="Catch and Release" type="splitC">
+        <property name="Cost">
+          <s value="1">{1}</s>
+          <s value="U">{U}</s>
+          <s value="R">{R}</s>
+          <s value="4">{4}</s>
+          <s value="R">{R}</s>
+          <s value="W">{W}</s>
+        </property>
+        <property name="CMC" value="9" />
+        <property name="Color" value="Multicolor Blue Red White" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rarity" value="Rare" />
+        <property name="Rules">Gain control of target permanent until end of turn. Untap it. It gains haste until end of turn.
+Fuse (You may cast one or both halves of this card from your hand.)
+Each player sacrifices an artifact, a creature, an enchantment, a land, and a planeswalker.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Kev Walker" />
+        <property name="Number" value="125" />
+      </alternate>
     </card>
     <card name="Down // Dirty" id="c35c63c1-6344-4d8c-8f7d-cd253d12f9ae">
       <property name="Cost">
         <s value="3">{3}</s>
-        <s value="B">{B}</s>
-        <s value="2">{2}</s>
-        <s value="G">{G}</s>
-      </property>
+        <s value="B">{B}</s> // <s value="2">{2}</s><s value="G">{G}</s></property>
       <property name="CMC" value="7" />
       <property name="Color" value="Multicolor Black Green" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Target player discards two cards.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2617,17 +2690,32 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="126" />
         <property name="Faction" value="Golgari" />
       </alternate>
+      <alternate name="Down and Dirty" type="splitC">
+        <property name="Cost">
+          <s value="3">{3}</s>
+          <s value="B">{B}</s>
+          <s value="2">{2}</s>
+          <s value="G">{G}</s>
+        </property>
+        <property name="CMC" value="7" />
+        <property name="Color" value="Multicolor Black Green" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rarity" value="Uncommon" />
+        <property name="Rules">Target player discards two cards.
+Fuse (You may cast one or both halves of this card from your hand.)
+Return target card from your graveyard to your hand.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Svetlin Velinov" />
+        <property name="Number" value="126" />
+      </alternate>
     </card>
     <card name="Far // Away" id="d13cdb71-a499-41db-84e6-95f84650c524">
       <property name="Cost">
         <s value="1">{1}</s>
-        <s value="U">{U}</s>
-        <s value="2">{2}</s>
-        <s value="B">{B}</s>
-      </property>
+        <s value="U">{U}</s> // <s value="2">{2}</s><s value="B">{B}</s></property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor Blue Black" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Return target creature to its owner's hand.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2666,18 +2754,33 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="127" />
         <property name="Faction" value="Dimir" />
       </alternate>
+      <alternate name="Far and Away" type="splitC">
+        <property name="Cost">
+          <s value="1">{1}</s>
+          <s value="U">{U}</s>
+          <s value="2">{2}</s>
+          <s value="B">{B}</s>
+        </property>
+        <property name="CMC" value="5" />
+        <property name="Color" value="Multicolor Blue Black" />
+        <property name="Type" value="Instant" />
+        <property name="Rarity" value="Uncommon" />
+        <property name="Rules">Return target creature to its owner's hand.
+Fuse (You may cast one or both halves of this card from your hand.)
+Target player sacrifices a creature.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Greg Staples" />
+        <property name="Number" value="127" />
+      </alternate>
     </card>
     <card name="Flesh // Blood" id="02b40fe4-901a-4832-8d52-a6bb5cc07b63">
       <property name="Cost">
         <s value="3">{3}</s>
         <s value="B">{B}</s>
-        <s value="G">{G}</s>
-        <s value="R">{R}</s>
-        <s value="G">{G}</s>
-      </property>
+        <s value="G">{G}</s> // <s value="R">{R}</s><s value="G">{G}</s></property>
       <property name="CMC" value="7" />
       <property name="Color" value="Multicolor Black Green Red" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Exile target creature card from a graveyard. Put X +1/+1 counters on target creature, where X is the power of the card you exiled.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2717,17 +2820,33 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="128" />
         <property name="Faction" value="Gruul" />
       </alternate>
+      <alternate name="Flesh and Blood" type="splitC">
+        <property name="Cost">
+          <s value="3">{3}</s>
+          <s value="B">{B}</s>
+          <s value="G">{G}</s>
+          <s value="R">{R}</s>
+          <s value="G">{G}</s>
+        </property>
+        <property name="CMC" value="7" />
+        <property name="Color" value="Multicolor Black Green Red" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rarity" value="Rare" />
+        <property name="Rules">Exile target creature card from a graveyard. Put X +1/+1 counters on target creature, where X is the power of the card you exiled.
+Fuse (You may cast one or both halves of this card from your hand.)
+Target creature you control deals damage equal to its power to any target.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Lucas Graciano" />
+        <property name="Number" value="128" />
+      </alternate>
     </card>
     <card name="Give // Take" id="9af07d28-45a2-45d6-b1cb-0858c609a881">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="G">{G}</s>
-        <s value="2">{2}</s>
-        <s value="U">{U}</s>
-      </property>
+        <s value="G">{G}</s> // <s value="2">{2}</s><s value="U">{U}</s></property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Green Blue" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Put three +1/+1 counters on target creature.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2766,17 +2885,32 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="129" />
         <property name="Faction" value="Simic" />
       </alternate>
+      <alternate name="Give and Take" type="splitC">
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="G">{G}</s>
+          <s value="2">{2}</s>
+          <s value="U">{U}</s>
+        </property>
+        <property name="CMC" value="6" />
+        <property name="Color" value="Multicolor Green Blue" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rarity" value="Uncommon" />
+        <property name="Rules">Put three +1/+1 counters on target creature.
+Fuse (You may cast one or both halves of this card from your hand.)
+Remove all +1/+1 counters from target creature you control. Draw that many cards.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Steve Prescott" />
+        <property name="Number" value="129" />
+      </alternate>
     </card>
     <card name="Profit // Loss" id="0eb3ce46-ddd2-43b3-9e45-019ae91df686">
       <property name="Cost">
         <s value="1">{1}</s>
-        <s value="W">{W}</s>
-        <s value="2">{2}</s>
-        <s value="B">{B}</s>
-      </property>
+        <s value="W">{W}</s> // <s value="2">{2}</s><s value="B">{B}</s></property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor White Black" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Creatures you control get +1/+1 until end of turn.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2815,17 +2949,32 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="130" />
         <property name="Faction" value="Orzhov" />
       </alternate>
+      <alternate name="Profit and Loss" type="splitC">
+        <property name="Cost">
+          <s value="1">{1}</s>
+          <s value="W">{W}</s>
+          <s value="2">{2}</s>
+          <s value="B">{B}</s>
+        </property>
+        <property name="CMC" value="5" />
+        <property name="Color" value="Multicolor White Black" />
+        <property name="Type" value="Instant" />
+        <property name="Rarity" value="Uncommon" />
+        <property name="Rules">Creatures you control get +1/+1 until end of turn.
+Fuse (You may cast one or both halves of this card from your hand.)
+Creatures your opponents control get -1/-1 until end of turn.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Kev Walker" />
+        <property name="Number" value="130" />
+      </alternate>
     </card>
     <card name="Protect // Serve" id="9b8acd7d-f3e2-4358-91ab-40901b68d64c">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="W">{W}</s>
-        <s value="1">{1}</s>
-        <s value="U">{U}</s>
-      </property>
+        <s value="W">{W}</s> // <s value="1">{1}</s><s value="U">{U}</s></property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor White Blue" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Target creature gets +2/+4 until end of turn.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2864,19 +3013,33 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="131" />
         <property name="Faction" value="Azorius" />
       </alternate>
+      <alternate name="Protect and Serve" type="splitC">
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="W">{W}</s>
+          <s value="1">{1}</s>
+          <s value="U">{U}</s>
+        </property>
+        <property name="CMC" value="5" />
+        <property name="Color" value="Multicolor White Blue" />
+        <property name="Type" value="Instant" />
+        <property name="Rarity" value="Uncommon" />
+        <property name="Rules">Target creature gets +2/+4 until end of turn.
+Fuse (You may cast one or both halves of this card from your hand.)
+Target creature gets -6/-0 until end of turn.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Ryan Barger" />
+        <property name="Number" value="131" />
+      </alternate>
     </card>
     <card name="Ready // Willing" id="22081f95-dc8e-41ed-b609-b6a22ee5428b">
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="G">{G}</s>
-        <s value="W">{W}</s>
-        <s value="1">{1}</s>
-        <s value="W">{W}</s>
-        <s value="B">{B}</s>
-      </property>
+        <s value="W">{W}</s> // <s value="1">{1}</s><s value="W">{W}</s><s value="B">{B}</s></property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Green White Black" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Creatures you control gain indestructible until end of turn. Untap each creature you control.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2917,17 +3080,34 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="132" />
         <property name="Faction" value="Orzhov" />
       </alternate>
+      <alternate name="Ready and Willing" type="splitC">
+        <property name="Cost">
+          <s value="1">{1}</s>
+          <s value="G">{G}</s>
+          <s value="W">{W}</s>
+          <s value="1">{1}</s>
+          <s value="W">{W}</s>
+          <s value="B">{B}</s>
+        </property>
+        <property name="CMC" value="6" />
+        <property name="Color" value="Multicolor Green White Black" />
+        <property name="Type" value="Instant" />
+        <property name="Rarity" value="Rare" />
+        <property name="Rules">Creatures you control gain indestructible until end of turn. Untap each creature you control.
+Fuse (You may cast one or both halves of this card from your hand.)
+Creatures you control gain deathtouch and lifelink until end of turn.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Zoltan Boros" />
+        <property name="Number" value="132" />
+      </alternate>
     </card>
     <card name="Toil // Trouble" id="15bb3454-e3bb-4af9-9e93-461e210c26b7">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="B">{B}</s>
-        <s value="2">{2}</s>
-        <s value="R">{R}</s>
-      </property>
+        <s value="B">{B}</s> // <s value="2">{2}</s><s value="R">{R}</s></property>
       <property name="CMC" value="6" />
       <property name="Color" value="Multicolor Black Red" />
-      <property name="Type" value="Sorcery" />
+      <property name="Type" value="Sorcery // Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Target player draws two cards and loses 2 life.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -2966,17 +3146,32 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="133" />
         <property name="Faction" value="Rakdos" />
       </alternate>
+      <alternate name="Toil and Trouble" type="splitC">
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="B">{B}</s>
+          <s value="2">{2}</s>
+          <s value="R">{R}</s>
+        </property>
+        <property name="CMC" value="6" />
+        <property name="Color" value="Multicolor Black Red" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rarity" value="Uncommon" />
+        <property name="Rules">Target player draws two cards and loses 2 life.
+Fuse (You may cast one or both halves of this card from your hand.)
+Trouble deals damage to target player equal to the number of cards in that player's hand.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Nils Hamm" />
+        <property name="Number" value="133" />
+      </alternate>
     </card>
     <card name="Turn // Burn" id="8d7fdd59-6d76-4a0c-ac75-816345ef4a39">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="U">{U}</s>
-        <s value="1">{1}</s>
-        <s value="R">{R}</s>
-      </property>
+        <s value="U">{U}</s> // <s value="1">{1}</s><s value="R">{R}</s></property>
       <property name="CMC" value="5" />
       <property name="Color" value="Multicolor Blue Red" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Until end of turn, target creature loses all abilities and becomes a red Weird with base power and toughness 0/1.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -3015,16 +3210,32 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Number" value="134" />
         <property name="Faction" value="Izzet" />
       </alternate>
+      <alternate name="Turn and Burn" type="splitC">
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="U">{U}</s>
+          <s value="1">{1}</s>
+          <s value="R">{R}</s>
+        </property>
+        <property name="CMC" value="5" />
+        <property name="Color" value="Multicolor Blue Red" />
+        <property name="Type" value="Instant" />
+        <property name="Rarity" value="Uncommon" />
+        <property name="Rules">Until end of turn, target creature loses all abilities and becomes a red Weird with base power and toughness 0/1.
+Fuse (You may cast one or both halves of this card from your hand.)
+Burn deals 2 damage to any target.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Ryan Barger" />
+        <property name="Number" value="134" />
+      </alternate>
     </card>
     <card name="Wear // Tear" id="d169a3b2-18ae-4414-98ef-d879676fdcc0">
       <property name="Cost">
         <s value="1">{1}</s>
-        <s value="R">{R}</s>
-        <s value="W">{W}</s>
-      </property>
+        <s value="R">{R}</s> // <s value="W">{W}</s></property>
       <property name="CMC" value="3" />
       <property name="Color" value="Multicolor Red White" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Destroy target artifact.
 Fuse (You may cast one or both halves of this card from your hand.)
@@ -3061,6 +3272,23 @@ Fuse (You may cast one or both halves of this card from your hand.)</property>
         <property name="Artist" value="Ryan Pancoast" />
         <property name="Number" value="135" />
         <property name="Faction" value="Boros" />
+      </alternate>
+      <alternate name="Wear and Tear" type="splitC">
+        <property name="Cost">
+          <s value="1">{1}</s>
+          <s value="R">{R}</s>
+          <s value="W">{W}</s>
+        </property>
+        <property name="CMC" value="3" />
+        <property name="Color" value="Multicolor Red White" />
+        <property name="Type" value="Instant" />
+        <property name="Rarity" value="Uncommon" />
+        <property name="Rules">Destroy target artifact.
+Fuse (You may cast one or both halves of this card from your hand.)
+Destroy target enchantment.
+Fuse (You may cast one or both halves of this card from your hand.)</property>
+        <property name="Artist" value="Ryan Pancoast" />
+        <property name="Number" value="135" />
       </alternate>
     </card>
     <card name="Azorius Cluestone" id="09eeb301-bc28-4515-ad69-0b1b5164a5bc">

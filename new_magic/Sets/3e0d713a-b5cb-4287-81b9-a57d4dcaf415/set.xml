@@ -1023,7 +1023,7 @@ Domain — <s value="T">{T}</s>: Add X mana in any combination of colors, where 
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-Basic landcycling <s value="1">{1}</s> (<s value="1">{1}</s>, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand, then shuffle your library.)</property>
+Basic landcycling <s value="1">{1}</s> (<s value="1">{1}</s>, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="056" />
       <property name="MultiverseId" value="420673" />
@@ -1750,12 +1750,14 @@ Other artifact creatures you control get +1/+1.</property>
     </card>
     <card name="Tezzeret's Gambit" id="373a2f6a-a659-4551-8fcd-acf49964f795">
       <property name="Cost">
-        <s value="3">{3}</s>{U/P}</property>
+        <s value="3">{3}</s>
+        <s value="PU">{U/P}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)
+      <property name="Rules">(<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)
 Draw two cards, then proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</property>
       <property name="Artist" value="Karl Kopinski" />
       <property name="Number" value="099" />
@@ -3009,7 +3011,7 @@ Choose any number of target creatures. Double the number of +1/+1 counters on ea
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Shaman" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Saproling creatures get +1/+1.
+      <property name="Rules">All Saprolings get +1/+1.
 Morph <s value="3">{3}</s><s value="G">{G}</s><s value="G">{G}</s> (You may cast this card face down as a 2/2 creature for <s value="3">{3}</s>. Turn it face up any time for its morph cost.)
 When Thelonite Hermit is turned face up, create four 1/1 green Saproling creature tokens.</property>
       <property name="Power" value="1" />
@@ -4309,13 +4311,10 @@ Retrace (You may cast this card from your graveyard by discarding a land card in
     <card name="Trial // Error" id="383451e1-9b97-4c85-a044-7c68b61c8c65">
       <property name="Cost">
         <s value="W">{W}</s>
-        <s value="U">{U}</s>
-        <s value="U">{U}</s>
-        <s value="B">{B}</s>
-      </property>
+        <s value="U">{U}</s> // <s value="U">{U}</s><s value="B">{B}</s></property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor White Blue Black" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Return all creatures blocking or blocked by target creature to their owner's hand.
 //
@@ -4352,13 +4351,10 @@ Counter target multicolored spell.</property>
     <card name="Order // Chaos" id="2a427922-c659-4563-ada5-4237e3e6353b">
       <property name="Cost">
         <s value="3">{3}</s>
-        <s value="W">{W}</s>
-        <s value="2">{2}</s>
-        <s value="R">{R}</s>
-      </property>
+        <s value="W">{W}</s> // <s value="2">{2}</s><s value="R">{R}</s></property>
       <property name="CMC" value="7" />
       <property name="Color" value="Multicolor White Red" />
-      <property name="Type" value="Instant" />
+      <property name="Type" value="Instant // Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Exile target attacking creature.
 //

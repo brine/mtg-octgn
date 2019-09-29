@@ -942,12 +942,14 @@ Cycling <s value="1">{1}</s><s value="U">{U}</s> (<s value="1">{1}</s><s value="
     </card>
     <card name="Tezzeret's Gambit" id="0dac20a1-ddc6-4dda-b8f6-19f3389dfda7">
       <property name="Cost">
-        <s value="3">{3}</s>{U/P}</property>
+        <s value="3">{3}</s>
+        <s value="PU">{U/P}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">({U/P} can be paid with either <s value="U">{U}</s> or 2 life.)
+      <property name="Rules">(<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)
 Draw two cards, then proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</property>
       <property name="Artist" value="Karl Kopinski" />
       <property name="Number" value="051" />
@@ -1327,7 +1329,6 @@ Dredge 2 (If you would draw a card, instead you may put exactly two cards from t
       <property name="MultiverseId" value="446807" />
       <alternate name="Nighteyes the Desecrator" type="flip">
         <property name="Cost" />
-        <property name="CMC" value="2" />
         <property name="Color" value="Black" />
         <property name="Type" value="Legendary Creature" />
         <property name="Subtype" value="Rat Wizard" />
@@ -1337,8 +1338,6 @@ Dredge 2 (If you would draw a card, instead you may put exactly two cards from t
         <property name="Power" value="4" />
         <property name="Toughness" value="2" />
         <property name="PT Box" value="4 / 2" />
-        <property name="Artist" value="Jim Nelson" />
-        <property name="Number" value="071" />
       </alternate>
     </card>
     <card name="Patron of the Nezumi" id="61740668-9f85-43ed-aaa0-33ce7101da6e">
@@ -4172,7 +4171,7 @@ When Wurmcoil Engine dies, create a 3/3 colorless Wurm artifact creature token w
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-Basic landcycling <s value="1">{1}</s> (<s value="1">{1}</s>, Discard this card: Search your library for a basic land card, reveal it, and put it into your hand, then shuffle your library.)</property>
+Basic landcycling <s value="1">{1}</s> (<s value="1">{1}</s>, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="235" />
       <property name="MultiverseId" value="446971" />
