@@ -285,9 +285,9 @@ def passControl(card, player):  ## Remote call for taking control of cards you d
 #Card Functions -- Autoscripted  
 ##################################
 
-def autoCast(card, morph = False, split = ''):
+def autoCast(card, morph = False, alt = ''):
     mute()
-    stackData = initializeStackItem(card, 'cast', split)
+    stackData = initializeStackItem(card, 'cast', alt)
     if stackData != "BREAK":
         card.moveToTable(0,0, morph)
         card.alternate = stackData['alt']
@@ -338,15 +338,15 @@ def autoResolve(card):
     resetPriority()
     return stackData
 
-def initializeStackItem(card, tagClass, split = '', cost = 0, x = 0):
+def initializeStackItem(card, tagClass, alt = '', cost = 0, x = 0):
     mute()
-    tagTuple = tagConstructor(card, tagClass, split)
+    tagTuple = tagConstructor(card, tagClass, alt)
     if tagTuple == "BREAK":
         return "BREAK"
-    if split == '':
+    if alt == '':
         splitAlt = card.alternate
     else:
-        splitAlt = 'split' + split
+        splitAlt = 'split' + alt
     ## stores all the relevant data for the card on the stack
     stackData = {
         'src': card,

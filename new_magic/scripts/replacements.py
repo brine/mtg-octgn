@@ -96,7 +96,8 @@ counters = {
     'choice': ('Mode Indicator', '1c8f7028-ea97-4fa4-93ce-ba0bb55b31e7'), ###
     'brick': ('Brick counter', '03238215-0f29-4414-b17c-51b3d6e1285f'), ###
     'exert': ('Exert Indicator', '842a6ebf-f08a-4430-82d4-63c5b73b8ab6'), ###
-    'manifest': ('Manifest Indicator', 'd1f367bd-69eb-47b4-8cfa-13ef11419173') ###
+    'manifest': ('Manifest Indicator', 'd1f367bd-69eb-47b4-8cfa-13ef11419173'), ###
+    'adventure': ('Adventure Indicator', '32ea7747-10a3-40d2-9d58-111ca6a63c4c')
 
 }
 

@@ -323,7 +323,17 @@ def play(card, x = 0, y = 0):
             choice = askChoice('Cast which side of {}?'.format(card.name), splitRules)
             if choice == 0: ## closing the window will cancel the Cast
                 return
-            stackData = autoCast(card, split = splitFlags[choice - 1])
+            stackData = autoCast(card, alt = splitFlags[choice - 1])
+        elif 'adventure' in card.alternates and counters['adventure'] not in card.markers:
+            choice = askChoice('Casting adventure card:', ["Cast {} (creature)".format((card.alternateProperty("", 'Name'))), "Cast adventure (spell)"]) ##TODO: alternate property name doesn't work
+            if choice == 0:
+                return
+            if choice == 2:
+                card.alternate = "adventure"
+                stackData = autoCast(card)
+                stackDict[card]['moveto'] = 'exile'
+            else:
+                stackData = autoCast(card)
         else:
             stackData = autoCast(card)
         if stackData != "BREAK":
@@ -393,6 +403,7 @@ def resolve(card):
                     notify("{} casts suspended {}{}.".format(me, card, stackData['text']))
         ## double-clicking cards on the stack will resolve them
         elif card in stackDict:
+            alt = card.alternate
             stackData = autoResolve(card)
             if stackData == "BREAK": return
             if stackData['class'] == 'miracle':
@@ -402,6 +413,8 @@ def resolve(card):
                     notify("{}'s {} Miracle trigger is countered (no longer in hand.)".format(me, card))
             else:
                 notify("{} resolves {} ({}){}.".format(me, card, stackData['class'], stackData['text']))
+            if alt == "adventure":
+                card.markers[counters['adventure']] = 1
             if stackData['class'] == 'cast':
                 etbData = autoTrigger(stackData['src'], 'etb', cost = stackData['cost'], x = stackData['x'])
         ## double-clicking a card in play just taps it
