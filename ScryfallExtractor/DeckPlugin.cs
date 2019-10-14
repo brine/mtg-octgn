@@ -43,7 +43,7 @@ namespace MTGImageFetcher
             get
             {
                 // Display name of the plugin.
-                return "MTG Plugin";
+                return "Magic: The Gathering Image Downloader Plugin";
             }
         }
 
@@ -52,7 +52,7 @@ namespace MTGImageFetcher
             get
             {
                 // Version of the plugin.
-                return Version.Parse("4.0.0.0");
+                return Version.Parse("5.0.0.0");
             }
         }
 
@@ -72,7 +72,7 @@ namespace MTGImageFetcher
         {
             get
             {
-                return "MTG Image Downloader";
+                return "Magic: The Gathering Image Downloader";
             }
         }
 

@@ -84,11 +84,9 @@ namespace MTGImageFetcher
             }
 
             JArray scryfallSetData;
-            JArray OctgnSetData;
 
             using (var webclient = new WebClient() { Encoding = Encoding.UTF8 })
             {
-                OctgnSetData = (JArray)JsonConvert.DeserializeObject(webclient.DownloadString("http://www.octgngames.com/forum/json.php"));
                 scryfallSetData = (JsonConvert.DeserializeObject(webclient.DownloadString("https://api.scryfall.com/sets")) as JObject)["data"] as JArray;
             }
 
@@ -115,6 +113,7 @@ namespace MTGImageFetcher
             {
                 if (!set.Hidden && set.Cards.Count() > 0)
                 {
+                    // token set
                     if (set.Id.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
                     {
                         var setItem = new SetItem();
@@ -127,14 +126,11 @@ namespace MTGImageFetcher
                     }
                     else
                     {
-                        var octgndbset = OctgnSetData.FirstOrDefault(x => x.Value<string>("guid") == set.Id.ToString());
-                        if (octgndbset == null)
-                            continue;
 
                         var setItem = new SetItem();
                         setItem.set = set;
 
-                        var setCode = octgndbset.Value<string>("octgn_code").ToLower();
+                        var setCode = set.ShortName;
 
                         setItem.setData = sets.First(x => x.Code == setCode);
 
@@ -146,7 +142,7 @@ namespace MTGImageFetcher
                             setItem.extraSets.AddRange(sets.Where(x => x.ParentCode == setItem.setData.BlockCode));
                         }
 
-                        setItem.releaseDate = Convert.ToDateTime(octgndbset.Value<string>("date"));
+                        setItem.releaseDate = set.ReleaseDate;
                         CountImageFiles(setItem);
                         setList.Add(setItem);
                     }
