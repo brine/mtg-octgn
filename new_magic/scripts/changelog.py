@@ -319,5 +319,11 @@ changelog = {
         ]),
     3041106: ("3.4.11.6", "September 20 2019", [
         "Added Throne of Eldraine"
+        ]),
+    3050000: ("3.5.0.0", "October 14 2019", [
+        "Massive changes to set structure -- most GUIDs for cards have changed. All decks should still be valid, however they may have changed printings.",
+        "Lots of fixes to card data, including Adventure, Split, Meld, and other non-standard card layouts.",
+        "Mulligans have been updated to the London rules.",
+        "Adventure card support in scripting."
         ])
 }
