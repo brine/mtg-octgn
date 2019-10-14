@@ -310,6 +310,7 @@ namespace MTGImageFetcher
                                     imageDownloadUrl = xl ? cardInfo.LargeUrl : cardInfo.NormalUrl;
                                 break;
                             }
+                        case "adventure":
                         case "split":
                             {
                                 if (workerItem.alt == "")
@@ -430,7 +431,7 @@ namespace MTGImageFetcher
             {
                 foreach (var alt in card.Properties)
                 {
-                    if (!alt.Key.Contains("split"))
+                    if (!alt.Key.Contains("split") && !alt.Key.Contains("adventure"))
                     {
                         setItem.CardCount += 1;
                         if (FindLocalCardImages(setItem.set, card, alt.Key).Count() > 0)
