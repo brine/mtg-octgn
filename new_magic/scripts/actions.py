@@ -904,12 +904,12 @@ def randomPick(group, x = 0, y = 0):
 
 def mulligan(group, x = 0, y = 0):
     mute()
-    newCount = len(group) - 1
+    newCount = len(group)
     if newCount < 0:
         return
-    if not confirm("Mulligan down to %i ?" % newCount):
+    if not confirm("Take a Mulligan?"):
         return
-    notify("{} mulligans down to {}".format(me, newCount))
+    notify("{} mulligans.".format(me))
     for card in group:
         card.moveTo(card.owner.Library)
     shuffle(me.Library, silence = True)
