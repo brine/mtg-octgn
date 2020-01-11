@@ -322,8 +322,12 @@ changelog = {
         ]),
     3050000: ("3.5.0.0", "October 14 2019", [
         "Massive changes to set structure -- most GUIDs for cards have changed. All decks should still be valid, however they may have changed printings.",
+        "You will need to run the image downloader plugin to re-install most images due to this change.",
         "Lots of fixes to card data, including Adventure, Split, Meld, and other non-standard card layouts.",
         "Mulligans have been updated to the London rules.",
         "Adventure card support in scripting."
+        ]),
+    3050001: ("3.5.0.1", "January 11 2019", [
+        "Added Theros Beyond Death"
         ])
 }
