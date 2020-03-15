@@ -329,5 +329,8 @@ changelog = {
         ]),
     3050001: ("3.5.0.1", "January 11 2019", [
         "Added Theros Beyond Death"
+        ]),
+    3050002: ("3.5.0.2", "March 15 2019", [
+        "Added Mystery Boosters"
         ])
 }

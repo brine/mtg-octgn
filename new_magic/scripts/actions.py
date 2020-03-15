@@ -61,7 +61,6 @@ def endTurn(args):
 
 def moveEvent(args):
     global alignIgnore
-    mute()
     for i in range(len(args.cards)):
         card = args.cards[i]
         ## Moving a card will automatically disable it from alignment
