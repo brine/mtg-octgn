@@ -327,10 +327,13 @@ changelog = {
         "Mulligans have been updated to the London rules.",
         "Adventure card support in scripting."
         ]),
-    3050001: ("3.5.0.1", "January 11 2019", [
+    3050001: ("3.5.0.1", "January 11 2020", [
         "Added Theros Beyond Death"
         ]),
-    3050002: ("3.5.0.2", "March 15 2019", [
+    3050002: ("3.5.0.2", "March 15 2020", [
         "Added Mystery Boosters"
+        ]),
+    3050004: ("3.5.0.4", "April 8 2020", [
+        "Added Secret Lair Drops, Commander 2020 (no tokens yet)"
         ])
 }
