@@ -335,5 +335,8 @@ changelog = {
         ]),
     3050004: ("3.5.0.4", "April 8 2020", [
         "Added Secret Lair Drops, Commander 2020 (no tokens yet)"
+        ]),
+    3050005: ("3.5.0.5", "April 10 2020", [
+        "Added Ikoria"
         ])
 }
