@@ -242,7 +242,7 @@ namespace MTGImageFetcher
 
             if (setItem.set.Id.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
             {
-                var searchSet = sets.FirstOrDefault(x => x.Code == card.GetProperty("Flags", alt).ToString().ToLower());
+                var searchSet = sets.FirstOrDefault(x => x.Code == card.GetCardProperties(alt).FirstOrDefault(y => y.Key.Name == "Flags").Value?.ToString().ToLower());
                 if (searchSet != null)
                 {
                     ret = searchSet.FindCard(card, alt);
