@@ -338,5 +338,9 @@ changelog = {
         ]),
     3050005: ("3.5.0.5", "April 10 2020", [
         "Added Ikoria"
+        ]),
+    3060000: ("3.6.0.0", "May 23 2020", [
+        "Added missing planes and schemes sets",
+        "fixed some bugs with the image downloader",
         ])
 }

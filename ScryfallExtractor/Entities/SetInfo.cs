@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Octgn.DataNew.Entities;
+using Octgn.Core.DataExtensionMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,15 +35,15 @@ namespace MTGImageFetcher.Entities
 
                 if (card.SetId.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
                 {
-                    var props = card.Properties[alt].Properties;
-                    ret = Cards.FirstOrDefault(x => x.Number == props.First(y => y.Key.Name == "Number").Value.ToString());
+                    var cardNumber = card.GetProperty("Number").ToString();
+                    ret = Cards.FirstOrDefault(x => x.Number.Equals(cardNumber, StringComparison.InvariantCultureIgnoreCase));
                 }
                 else if (alt == "meld")
                 {
-                    ret = Cards.FirstOrDefault(x => x.Name == card.Properties[alt].Properties.First(y => y.Key.Name == "Name").Value.ToString());
+                    ret = Cards.FirstOrDefault(x => x.Name == card.PropertySets[alt].Name);
                 }
                 else
-                    ret = Cards.FirstOrDefault(x => x.Id == card.Id.ToString() || x.MultiverseId == card.Properties[""].Properties.First(y => y.Key.Name == "MultiverseId").Value.ToString());
+                    ret = Cards.FirstOrDefault(x => x.Id == card.Id.ToString());
 
 
                 if (ret == null)

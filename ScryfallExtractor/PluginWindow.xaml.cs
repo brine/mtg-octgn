@@ -242,7 +242,7 @@ namespace MTGImageFetcher
 
             if (setItem.set.Id.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
             {
-                var searchSet = sets.FirstOrDefault(x => x.Code == card.Properties[alt].Properties.First(y => y.Key.Name == "Flags").Value.ToString().ToLower());
+                var searchSet = sets.FirstOrDefault(x => x.Code == card.GetProperty("Flags", alt).ToString().ToLower());
                 if (searchSet != null)
                 {
                     ret = searchSet.FindCard(card, alt);
@@ -272,7 +272,7 @@ namespace MTGImageFetcher
             foreach (var c in set.Cards)
             {
                 i++;
-                foreach (var alt in c.Properties)
+                foreach (var alt in c.PropertySets)
                 {
                     if (_cts.IsCancellationRequested) break;
 
@@ -296,6 +296,9 @@ namespace MTGImageFetcher
                         continue;
                     }
                     workerItem.local = files.Length > 0 ? UriToStream(files.First()) : null;
+
+                    if (workerItem.local != null && workerItem.local.Length == 0)  //sometimes an empty image file saves into the image database.  This makes sure it's not gonna break anything
+                        workerItem.local = null;
 
                     var imageDownloadUrl = "";
                     var flipCard = false;
@@ -343,26 +346,34 @@ namespace MTGImageFetcher
 
                     if (workerItem.local != null)
                     {
-                        using (var image = Image.FromStream(workerItem.local))
+                        try
                         {
-                            if ((image.Width > 600 && xl) || (image.Width < 500 && !xl))
+                            using (var image = Image.FromStream(workerItem.local))
                             {
-                                bool hires = (image.PropertyIdList.FirstOrDefault(x => x == 40094) == 0) ? false : Convert.ToBoolean(Encoding.Unicode.GetString(image.GetPropertyItem(40094).Value));
-                                if (hires && !update)
+                                if ((image.Width > 600 && xl) || (image.Width < 500 && !xl))
                                 {
-                                    progress.Report(workerItem);
-                                    continue;
-                                }
+                                    bool hires = (image.PropertyIdList.FirstOrDefault(x => x == 40094) == 0) ? false : Convert.ToBoolean(Encoding.Unicode.GetString(image.GetPropertyItem(40094).Value));
+                                    if (hires && !update)
+                                    {
+                                        progress.Report(workerItem);
+                                        continue;
+                                    }
 
-                                int localTimestamp = (image.PropertyIdList.FirstOrDefault(x => x == 40092) == 0) ? 0 : Convert.ToInt32(Encoding.Unicode.GetString(image.GetPropertyItem(40092).Value));
-                                if (webTimestamp <= localTimestamp)
-                                {
-                                    progress.Report(workerItem);
-                                    continue;
+                                    int localTimestamp = (image.PropertyIdList.FirstOrDefault(x => x == 40092) == 0) ? 0 : Convert.ToInt32(Encoding.Unicode.GetString(image.GetPropertyItem(40092).Value));
+                                    if (webTimestamp <= localTimestamp)
+                                    {
+                                        progress.Report(workerItem);
+                                        continue;
+                                    }
                                 }
                             }
                         }
+                        catch (ArgumentException ex)
+                        {
+                            // cleanly catches cases where the image or its headers can't be loaded
+                        }
                     }
+
 
                     // download image
 
@@ -388,7 +399,7 @@ namespace MTGImageFetcher
                         {
                             newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate180FlipNone);
                         }
-                        else if (cardInfo.Layout == "Planar")
+                        else if (cardInfo.Layout == "planar")
                         {
                             newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate90FlipNone);
                         }
@@ -406,7 +417,7 @@ namespace MTGImageFetcher
 
                         keywordsMetadata.Id = 40094; // this is the keywords field
                         keywordsMetadata.Value = Encoding.Unicode.GetBytes(cardInfo.HiRes.ToString());
-                        keywordsMetadata.Len = commentMetadata.Value.Length;
+                        keywordsMetadata.Len = keywordsMetadata.Value.Length;
                         keywordsMetadata.Type = 1;
 
                         newimg.SetPropertyItem(keywordsMetadata);
@@ -429,12 +440,12 @@ namespace MTGImageFetcher
 
             foreach (var card in setItem.set.Cards)
             {
-                foreach (var alt in card.Properties)
+                foreach (var alt in card.PropertySets.Values)
                 {
-                    if (!alt.Key.Contains("split") && !alt.Key.Contains("adventure"))
+                    if (!alt.Type.Contains("split") && !alt.Type.Contains("adventure"))
                     {
                         setItem.CardCount += 1;
-                        if (FindLocalCardImages(setItem.set, card, alt.Key).Count() > 0)
+                        if (FindLocalCardImages(setItem.set, card, alt.Type).Count() > 0)
                         {
                             setItem.ImageCount += 1;
                         }
@@ -493,7 +504,7 @@ namespace MTGImageFetcher
         private void ProgressChanged(WorkerItem workerItem)
         {
             ProgressBar.Value = workerItem.progress;
-            CurrentCard = workerItem.card.Properties[workerItem.alt].Properties.First(x => x.Key.Name == "Name").Value.ToString();
+            CurrentCard = workerItem.card.PropertySets[workerItem.alt].Name;
             if (workerItem.set != null && workerItem.local == null && workerItem.web != null)
             {
                 workerItem.set.ImageCount += 1;
