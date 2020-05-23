@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.5.0.6" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.0.0" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="http://www.octgngames.com/mtg/download-links/" gameurl="http://www.octgngames.com/mtg/" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -24,6 +24,62 @@
     <font src="fonts/MPlantin_chat_symbols.ttf" size="12" target="chat"/>
     <font src="fonts/MPlantin_chat_symbols.ttf" size="12" target="deckeditor"/>
   </fonts>
+  <markers>
+    <marker src="Markers/blaze.png" id="blaze" name="blaze counter" />
+    <marker src="Markers/bribery.png" id="bribery" name="bribery counter" />
+    <marker src="Markers/charge.png" id="charge" name="charge counter" />
+    <marker src="Markers/feather.png" id="feather" name="feather counter" />
+    <marker src="Markers/flood.png" id="flood" name="flood counter" />
+    <marker src="Markers/hoofprint.png" id="hoofprint" name="hoofprint counter" />
+    <marker src="Markers/level.png" id="level" name="level counter" />
+    <marker src="Markers/loyalty.png" id="loyalty" name="loyalty counter" />
+    <marker src="Markers/quest.png" id="quest" name="quest counter" />
+    <marker src="Markers/time.png" id="time" name="time counter" />
+    <marker src="Markers/spore.png" id="spore" name="spore counter" />
+    <marker src="Markers/tower.png" id="tower" name="tower counter" />
+    <marker src="Markers/blood.png" id="blood" name="blood counter" />
+    <marker src="Markers/death.png" id="death" name="death counter" />
+    <marker src="Markers/eyeball.png" id="eyeball" name="eyeball counter" />
+    <marker src="Markers/sleep.png" id="sleep" name="sleep counter" />
+    <marker src="Markers/slime.png" id="slime" name="slime counter" />
+    <marker src="Markers/fade.png" id="fade" name="fade counter" />
+    <marker src="Markers/magnet.png" id="magnet" name="magnet counter" />
+    <marker src="Markers/brick.png" id="brick" name="brick counter" />
+    
+    <marker src="Markers/p1p1.png" id="p1p1" name=" +1/+1 counter" />
+    <marker src="Markers/m1m1.png" id="m1m1" name=" -1/-1 counter" />
+    <marker src="Markers/p1p0.png" id="p1p0" name=" +1/+0 counter" />
+    <marker src="Markers/p0p1.png" id="p0p1" name=" +0/+1 counter" />
+    <marker src="Markers/p1p2.png" id="p1p2" name=" +1/+2 counter" />
+    <marker src="Markers/p2p2.png" id="p2p2" name=" +2/+2 counter" />
+    <marker src="Markers/m0m2.png" id="m0m2" name=" -0/-2 counter" />
+    <marker src="Markers/m1m0.png" id="m1m0" name=" -1/-0 counter" />
+    <marker src="Markers/m2m1.png" id="m2m1" name=" -2/-1 counter" />
+    <marker src="Markers/m2m2.png" id="m2m2" name=" -2/-2 counter" />
+
+    <marker src="Markers/monstrous.png" id="monstrous" name="monstrous indicator" />
+    <marker src="Markers/renowned.png" id="renowned" name="renown indicator" />
+    <marker src="Markers/khans.png" id="khans" name="khans indicator" />
+    <marker src="Markers/dragons.png" id="dragons" name="dragons indicator" />
+    <marker src="Markers/exerted.png" id="exert" name="exerted indicator" />
+    <marker src="Markers/morph.png" id="morph" name="morph indicator" />
+    <marker src="Markers/manifest.png" id="manifest" name="manifest indicator" />
+    <marker src="Markers/suspend.png" id="suspend" name="suspended indicator" />
+
+    <marker src="Markers/commander.png" id="commander" name="Commander Not-In-Play indicator" />
+
+    <marker src="Markers/cast.png" id="cast" name="cast trigger" />
+    <marker src="Markers/xcost.png" id="xcost" name="x trigger" />
+    <marker src="Markers/cost.png" id="cost" name="cost trigger" />
+    <marker src="Markers/etb.png" id="etb" name="enters the battlefield trigger" />
+    <marker src="Markers/ability.png" id="ability" name="activated ability trigger" />
+    <marker src="Markers/attack.png" id="attack" name="attack trigger" />
+    <marker src="Markers/destroy.png" id="destroy" name="destroy trigger" />
+    <marker src="Markers/block.png" id="block" name="block trigger" />
+    <marker src="Markers/exile.png" id="exile" name="exile trigger" />
+    <marker src="Markers/miracle.png" id="miracle" name="miracle trigger" />
+    <marker src="Markers/choice.png" id="choice" name="choice trigger" />
+  </markers>
   <symbols>
     <symbol name="Black" id="B" src="symbols/mana_b.png" />
     <symbol name="Blue" id="U" src="symbols/mana_u.png" />
@@ -113,7 +169,7 @@
     <globalvariable name="priority" value="[]"/>
     <globalvariable name="morphCount" value="0"/>
   </globalvariables>
-  <card back="cards/back.jpg" front="cards/front.jpg" width="63" height="88" cornerRadius="3">
+  <card back="cards/back.jpg" front="cards/front.jpg" width="63" height="88" cornerRadius="3" backWidth="63" backHeight="88" backCornerRadius="3">
     <property name="Cost" type="RichText" />
     <property name="CMC" type="String" textKind="Enum" />
     <property name="Color" textKind="Tokens" type="String" />
@@ -131,8 +187,8 @@
     <property name="Faction" type="String" textKind="Tokens" />
     <property name="Flags" type="String" ignoreText="True" />
     <property name="Packaging" type="String" ignoreText="True" />
-	<size name="Plane" back="cards/planeback.jpg" front="cards/front.jpg" width="126" height="88" cornerRadius="6" />
-	<size name="Scheme" back="cards/schemeback.jpg" front="cards/front.jpg" width="88" height="126" cornerRadius="6" />
+	<size name="Plane" back="cards/planeback.jpg" front="cards/front.jpg" width="126" height="88" cornerRadius="6" backWidth="126" backHeight="88" backCornerRadius="6" />
+	<size name="Scheme" back="cards/schemeback.jpg" front="cards/front.jpg" width="88" height="126" cornerRadius="6" backWidth="88" backHeight="126" backCornerRadius="6" />
   </card>
   <table name="Table" visibility="undefined" ordered="False" width="640" height="480" board="background/board.png" boardPosition="-7,-27,76,190" background="background/background.jpg" backgroundStyle="uniformToFill">
     <groupaction menu="Clean-up Targets and Combat" shortcut="esc" execute="clearAll" />
@@ -209,7 +265,7 @@
     <counter name="General" icon="counters/general.png" />
     <counter name="Experience" icon="counters/exp.png" />
 	<globalvariable name="f6" value="False" />
-    <hand name="Hand" shortcut="ctrl+H" visibility="me" icon="groups/hand.png">
+    <group viewState="expanded" name="Hand" shortcut="ctrl+H" visibility="me" icon="groups/hand.png">
       <cardaction menu="Cast Spell" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
       <cardaction menu="Suspend Card" execute="suspend" />
@@ -226,7 +282,7 @@
         <groupaction menu="Owner's Graveyard" execute="graveyardAll" />
         <groupaction menu="Owner's Exiled Zone" execute="exileAll" />
       </groupactions>
-    </hand>
+    </group>
     <group name="Library" shortcut="ctrl+I" visibility="none" icon="groups/library.png">
       <groupaction menu="Scry" shortcut="ctrl+shift+C" execute="scry" />
       <groupaction menu="Draw" shortcut="ctrl+D" default="True" execute="draw" />
@@ -273,7 +329,7 @@
       <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
       <cardaction menu="Submit Tags" execute="submitTags" />
     </group>
-    <group name="Exiled Zone" shortcut="ctrl+E" visibility="all" icon="groups/removed.png" collapsed="True">
+    <group name="Exiled Zone" shortcut="ctrl+E" visibility="all" icon="groups/removed.png" viewState="collapsed">
       <groupaction menu="Shuffle" execute="shuffle" />
       <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />
       <groupactions menu="Move All Cards To...">
@@ -293,7 +349,7 @@
       <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" /> 
       <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />      
     </group>
-    <group name="Sideboard" visibility="me" icon="groups/sideboard.png" collapsed="True">
+    <group name="Sideboard" visibility="me" icon="groups/sideboard.png" viewState="collapsed">
       <groupaction menu="Shuffle" execute="shuffle" />
       <groupactions menu="Move All Cards To...">
         <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
@@ -305,7 +361,7 @@
         <groupaction menu="Owner's Planes/Schemes (bottom)" execute="planesBottomAll" />
       </groupactions>
     </group>
-    <group name="Command Zone" visibility="all" icon="groups/commandzone.png" collapsed="True">
+    <group name="Command Zone" visibility="all" icon="groups/commandzone.png" viewState="collapsed">
       <groupaction menu="Shuffle" execute="shuffle" />
       <cardaction menu="Cast Card/Commander" default="True" execute="play" />
       <groupactions menu="Move All Cards To...">
@@ -318,7 +374,7 @@
         <groupaction menu="Owner's Sideboard" execute="sideboardAll" />
       </groupactions>
     </group>
-    <group name="Planes/Schemes" visibility="none" icon="groups/removed.png" collapsed="True">
+    <group name="Planes/Schemes" visibility="none" icon="groups/removed.png" viewState="collapsed">
       <groupaction menu="Shuffle" execute="shuffle" />
       <cardaction menu="Play Card" default="True" execute="play" />
       <groupactions menu="Move All Cards To...">

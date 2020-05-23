@@ -1,117 +1,117 @@
 counters = {
-    'general': ('Commander Not-In-Play', 'bf97836f-3395-4add-b807-daa568c036d6'), ###
-    'p1p1': ('+1/+1 counter', '6480e55b-0864-41bf-ad00-43cc2482a75c'), ###
-    'm1m1': ('-1/-1 counter', '6f180a03-b3f5-4e6f-96b5-9ff1597d2226'), ###
-    'charge': ('Charge counter', 'fabd2965-929e-4ee9-b69c-e278e3cd4098'), ###
-    'loyalty': ('Loyalty counter', 'c77596e1-d930-4726-896c-22f7354617fb'), ###
-    'level': ('Level counter', 'feb56d02-b34f-48bb-8af2-a25604763953'), ###
-    'quest': ('Quest counter', 'fc5129bc-2a49-466a-8821-36d2a5d2b8b5'), ###
-    'time': ('Time counter', '40bba10f-82e5-4f7e-986b-e9c850524f88'), ###
-    'spore': ('Spore counter', '88c02a4a-a988-4161-a8bd-fc9f5a9aa9f4'), ###
-    'blaze': ('Blaze counter', '73df240a-a9ab-4884-adb1-62ab3efcf786'), ###
-    'bribery': ('Bribery counter', '730a1f35-ad86-46a5-8ec6-2ad53e45ff12'), ###
-    'feather': ('Feather counter', 'cff5e184-c909-4c2f-ab79-7a2ea7d92cca'), ###
-    'flood': ('Flood counter', 'cf81e766-34ee-4473-9665-61f0a34dbc29'), ###
-    'hoofprint': ('Hoofprint counter', 'c36b87fb-b325-4e02-b367-2ad1775111e8'), ###
-    'tower': ('Tower counter', '73ec89c1-5cb6-4a44-ae85-d6b15e94c1d6'), ###
-    'phylactery': ('Phylactery counter', '756f94b6-7c73-4a59-be29-f596693d9410'),
-    'eon': ('Eon counter', 'f18a0845-efbb-473f-a8b9-9448ca2b3939'),
-    'wish': ('Wish counter', '30e9d5d4-f867-4604-8acf-2630303f6855'),
-    'study': ('Study counter', 'cfb948cb-accf-41f5-894e-bf0cb2eaa19c'),
-    'ki': ('Ki counter', 'a730ad66-253c-44ef-911c-59236da45f36'),
-    'hatchling': ('Hatchling counter', 'f64955fd-36ff-4b18-a531-a58ee2895cee'),
-    'eyeball': ('Eyeball counter', '1c11f783-4952-4d6d-9184-390c9c1520ce'), ###
-    'lore': ('Lore counter', '19b0b70b-af22-49a9-a45a-1e62c7aa12d6'),
-    'awakening': ('Awakening counter', 'a3174d98-53c8-42ad-bbb7-aa6f3e5d446e'),
-    'slime': ('Slime counter', '84958d74-9251-4fcd-96ab-9a30f2d1808f'), ###
-    'scream': ('Scream counter', 'ebd89178-8d75-4ed0-9836-8e887c28f3b6'),
-    'age': ('Age counter', '39cc6b9f-1ee0-49d5-804e-ee9a70e80d94'),
-    'fade': ('Fade counter', 'e438dab8-0b45-4328-b440-7828eaee069b'), ###
-    'p1p2': ('+1/+2 counter', '9840bac0-c9df-47ab-acb2-136a4ff4f3d5'),
-    'chip': ('Chip counter', '54fd2a16-5bf5-4040-8f11-2a11251035cc'),
-    'blood': ('Blood counter', 'c9ce6273-1679-4ed7-94d1-ad08d6dda1df'), ###
-    'devotion': ('Devotion counter', 'ab9e8f59-b1ae-48ed-ad9b-d0c7811ef1e3'),
-    'death': ('Death counter', '79c9cbe1-b614-474d-90f9-74a21fba4042'), ###
-    'bounty': ('Bounty counter', 'e8b523e1-78b5-4a7b-aeab-7c2eeba283ab'),
-    'p2p2': ('+2/+2 counter', '09e2a41e-dd0f-4afd-9c85-7a2aadd9d79b'), ###
-    'omen': ('Omen counter', '42634c6a-c568-421c-bafc-859bf80e2665'),
-    'luck': ('Luck counter', '95f32a4c-2453-45e2-a09b-ac7892ea456c'),
-    'shred': ('Shred counter', 'b9396e79-8cac-4a3e-93b9-88f373c6b96f'),
-    'p1p0': ('+1/+0 counter', '8ca289b4-d35a-403c-96fa-cdd60251f6fd'), ###
-    'm2m1': ('-2/-1 counter', '3cb3e78d-7d33-484c-ae4f-767dd6b90b3a'), ###
-    'polyp': ('Polyp counter', 'd0c20535-ae84-406d-97a0-0db7b02a4402'),
-    'mire': ('Mire counter', '8ababa02-bc51-4635-afeb-14d04974bbad'),
-    'verse': ('Verse counter', '11a71f47-9667-43a3-a120-8adc95a3aec0'),
-    'intervention': ('Intervention counter', 'a2bebd0d-34fb-4860-9e66-8e138383565e'),
-    'p0p1': ('+0/+1 counter', '4e4bd562-53f7-4e53-bd4a-d8c004e28a05'), ###
-    'm2m2': ('-2/-2 counter', '6ef50026-d84f-4c6d-9fdc-fcb22e5c0897'), ###
-    'delay': ('Delay counter', '44f60da1-6481-44c5-87d4-9c7517951c3a'),
-    'elixir': ('Elixir counter', '22dc6537-1a81-41b6-b92f-1ff878779fef'),
-    'm0m1': ('-0/-1 counter', 'f64a857f-c87c-403e-95fa-a4f33ce7298a'), ###
-    'wind': ('Wind counter', 'ef89f800-e4fe-4dd0-9bf4-436d21038819'),
-    'mining': ('Mining counter', '333be161-c53f-4283-894f-53a1c30bf14e'),
-    'glyph': ('Glyph counter', 'af9f0540-c6d9-4f12-8e7f-a8078a014945'),
-    'depletion': ('Depletion counter', 'd415ca2d-9c01-4432-8ebf-d4eeddd84454'),
-    'ice': ('Ice counter', 'a20315c4-bc8e-4ac9-a44b-04a6eceb3582'),
-    'm1m0': ('-1/-0 counter', 'a8fcb056-e6a4-4f13-b43e-892c05947a58'), ###
-    'treasure': ('Treasure counter', '03fde517-8a39-4b44-b6a2-03ace460ea4d'),
-    'matrix': ('Matrix counter', '208c3b26-6b5e-4365-96d5-6a69f4d85b1f'),
-    'petal': ('Petal counter', '094c12fc-e4f7-4ef7-9520-1b3668dda604'),
-    'magnet': ('Magnet counter', '803f4e8b-1d6c-4cc5-9552-bf6c66207326'), ###
-    'mannequin': ('Mannequin counter', 'ca021203-cdd7-42da-b0a4-e9058479eacf'),
-    'winch': ('Winch counter', '90a86ed7-5941-495a-87e9-bca4d3258978'),
-    'net': ('Net counter', '333ea44c-8afe-48e8-b41b-961df2eb87b5'),
-    'divinity': ('Divinity counter', '44dbb003-7869-4b1e-a26c-e53653624396'),
-    'fate': ('Fate counter', '8a90691d-ceb9-4e42-981b-ec921ca2a629'),
-    'plague': ('Plague counter', '2af568fa-a15f-440a-8478-174f84cb84c0'),
-    'fuse': ('Fuse counter', '0c5f4e58-5c27-4ef9-b39d-00402d362788'),
-    'shell': ('Shell counter', 'd46aa939-b583-4504-ae14-c68f6b555bc9'),
-    'corpse': ('Corpse counter', '4ed63776-a6cf-47b9-967c-4df2ff268fa4'),
-    'soot': ('Soot counter', '484fd00f-2a83-4c21-905b-00e194e11383'),
-    'm0m2': ('-0/-2 counter', '8a58b338-0b33-4121-9d18-51f6859e154e'), ###
-    'fungus': ('Fungus counter', 'c5f546e8-c949-468e-95b8-8c925af13ea7'),
-    'funk': ('Funk counter', '2469d0dd-1711-4cb5-a5d9-2171125f3f4d'),
-    'hourglass': ('Hourglass counter', 'e307dbd2-c6d5-4200-9e74-b2edbf9e19c0'),
-    'tide': ('Tide counter', 'e99232dd-4fa0-4394-ac5c-d779258e11ae'),
-    'currency': ('Currency counter', 'ed87dd52-9441-4233-818f-21e3d99ea03f'),
-    'sleep': ('Sleep counter', 'fb2f69b1-f3a9-48a9-be78-fc4de06316c3'), ###
-    'pop': ('Pop counter', '7323299a-5629-4f7b-a379-a6ed10728c87'),
-    'despair': ('Despair counter', 'd6a26d9e-d015-4279-ad18-59cd24065358'),
-    'pressure': ('Pressure counter', '99bf7053-16a9-4742-a24c-2e038281bd1a'),
-    'petrification': ('Petrification counter', '30e61000-ac2e-417d-91c5-b86f33256564'),
-    'gold': ('Gold counter', 'e2797e92-0e4a-42ce-ac98-2b2d9958b1a1'),
-    'infection': ('Petrification counter', 'f495743e-9ce0-48ee-92c4-952aa5012860'),
-    'filibuster': ('Filibuster counter', '7ea9761d-4ed0-4b24-b921-67106a5d7782'),
-    'muster': ('Muster counter', '5ee900f7-fa38-451f-9791-12c9144c59af'),
-    'monstrous': ('Monstrous counter', 'a60101d3-e9a9-400b-aa46-69a990beb25c'), ###
-    'renowned': ('Renowned counter', '4cc72de1-a079-4ef4-b863-f14f4474704d'), ###
-    'khans': ('Khans counter', '4a6986b1-cd8b-4692-94cc-7b4af9ea24eb'), ###
-    'dragons': ('Dragons counter', '0137b1eb-9465-4e40-af6d-c6b1d77ae2e8'), ###
-    'gem': ('Gem counter', '7215352b-e285-4794-b791-5580c865c6ed'),
-    'javelin': ('Javelin counter', '5545a9a0-bdd9-4c37-b063-a9b83fef8988'),
-    'crystal': ('Crystal counter', '556b6d1d-28fe-40e0-ad8b-642f0c7d9f2f'),
-    'suspend': ('Suspended Indicator', '9cc0fc15-9967-4e98-9afb-a2d5e1479920'), ###
-    'x': ('X Variable', 'fd936437-1d94-48a1-9367-4be0bc389fb4'), ###
-    'cost': ('Alternate/Additional cost', '699f849b-c55d-409f-8223-7b4d297eb723'), ###
-    'choice': ('Mode Indicator', '1c8f7028-ea97-4fa4-93ce-ba0bb55b31e7'), ###
-    'brick': ('Brick counter', '03238215-0f29-4414-b17c-51b3d6e1285f'), ###
-    'exert': ('Exert Indicator', '842a6ebf-f08a-4430-82d4-63c5b73b8ab6'), ###
-    'manifest': ('Manifest Indicator', 'd1f367bd-69eb-47b4-8cfa-13ef11419173'), ###
-    'adventure': ('Adventure Indicator', '32ea7747-10a3-40d2-9d58-111ca6a63c4c')
+    'general': ('Commander Not-In-Play', 'commander'), ###
+    'p1p1': ('+1/+1 counter', 'p1p1'), ###
+    'm1m1': ('-1/-1 counter', 'm1m1'), ###
+    'charge': ('Charge counter', 'charge'), ###
+    'loyalty': ('Loyalty counter', 'loyalty'), ###
+    'level': ('Level counter', 'level'), ###
+    'quest': ('Quest counter', 'quest'), ###
+    'time': ('Time counter', 'time'), ###
+    'spore': ('Spore counter', 'spore'), ###
+    'blaze': ('Blaze counter', 'blaze'), ###
+    'bribery': ('Bribery counter', 'bribery'), ###
+    'feather': ('Feather counter', 'feather'), ###
+    'flood': ('Flood counter', 'flood'), ###
+    'hoofprint': ('Hoofprint counter', 'hoofprint'), ###
+    'tower': ('Tower counter', 'tower'), ###
+    'phylactery': ('Phylactery counter', 'phylactery'),
+    'eon': ('Eon counter', 'eon'),
+    'wish': ('Wish counter', 'wish'),
+    'study': ('Study counter', 'study'),
+    'ki': ('Ki counter', 'ki'),
+    'hatchling': ('Hatchling counter', 'hatchling'),
+    'eyeball': ('Eyeball counter', 'eyeball'), ###
+    'lore': ('Lore counter', 'lore'),
+    'awakening': ('Awakening counter', 'awakening'),
+    'slime': ('Slime counter', 'slime'), ###
+    'scream': ('Scream counter', 'scream'),
+    'age': ('Age counter', 'age'),
+    'fade': ('Fade counter', 'fade'), ###
+    'p1p2': ('+1/+2 counter', 'p1p2'),
+    'chip': ('Chip counter', 'chip'),
+    'blood': ('Blood counter', 'blood'), ###
+    'devotion': ('Devotion counter', 'devotion'),
+    'death': ('Death counter', 'death'), ###
+    'bounty': ('Bounty counter', 'bounty'),
+    'p2p2': ('+2/+2 counter', 'p2p2'), ###
+    'omen': ('Omen counter', 'omen'),
+    'luck': ('Luck counter', 'luck'),
+    'shred': ('Shred counter', 'shred'),
+    'p1p0': ('+1/+0 counter', 'p1p0'), ###
+    'm2m1': ('-2/-1 counter', 'm2m1'), ###
+    'polyp': ('Polyp counter', 'polyp'),
+    'mire': ('Mire counter', 'mire'),
+    'verse': ('Verse counter', 'verse'),
+    'intervention': ('Intervention counter', 'intervention'),
+    'p0p1': ('+0/+1 counter', 'p0p1'), ###
+    'm2m2': ('-2/-2 counter', 'm2m2'), ###
+    'delay': ('Delay counter', 'delay'),
+    'elixir': ('Elixir counter', 'elixir'),
+    'm0m1': ('-0/-1 counter', 'm0m1'), ###
+    'wind': ('Wind counter', 'wind'),
+    'mining': ('Mining counter', 'mining'),
+    'glyph': ('Glyph counter', 'glyph'),
+    'depletion': ('Depletion counter', 'depletion'),
+    'ice': ('Ice counter', 'ice'),
+    'm1m0': ('-1/-0 counter', 'm1m0'), ###
+    'treasure': ('Treasure counter', 'treasure'),
+    'matrix': ('Matrix counter', 'matrix'),
+    'petal': ('Petal counter', 'petal'),
+    'magnet': ('Magnet counter', 'magnet'), ###
+    'mannequin': ('Mannequin counter', 'mannequin'),
+    'winch': ('Winch counter', 'winch'),
+    'net': ('Net counter', 'net'),
+    'divinity': ('Divinity counter', 'divinity'),
+    'fate': ('Fate counter', 'fate'),
+    'plague': ('Plague counter', 'plague'),
+    'fuse': ('Fuse counter', 'fuse'),
+    'shell': ('Shell counter', 'shell'),
+    'corpse': ('Corpse counter', 'corpse'),
+    'soot': ('Soot counter', 'soot'),
+    'm0m2': ('-0/-2 counter', 'm0m2'), ###
+    'fungus': ('Fungus counter', 'fungus'),
+    'funk': ('Funk counter', 'funk'),
+    'hourglass': ('Hourglass counter', 'hourglass'),
+    'tide': ('Tide counter', 'tide'),
+    'currency': ('Currency counter', 'currency'),
+    'sleep': ('Sleep counter', 'sleep'), ###
+    'pop': ('Pop counter', 'pop'),
+    'despair': ('Despair counter', 'despair'),
+    'pressure': ('Pressure counter', 'pressure'),
+    'petrification': ('Petrification counter', 'petrification'),
+    'gold': ('Gold counter', 'gold'),
+    'infection': ('Petrification counter', 'infection'),
+    'filibuster': ('Filibuster counter', 'filibuster'),
+    'muster': ('Muster counter', 'muster'),
+    'monstrous': ('Monstrous counter', 'monstrous'), ###
+    'renowned': ('Renowned counter', 'renowned'), ###
+    'khans': ('Khans counter', 'khans'), ###
+    'dragons': ('Dragons counter', 'dragons'), ###
+    'gem': ('Gem counter', 'gem'),
+    'javelin': ('Javelin counter', 'javelin'),
+    'crystal': ('Crystal counter', 'crystal'),
+    'suspend': ('Suspended Indicator', 'suspend'), ###
+    'x': ('X Variable', 'xcost'), ###
+    'cost': ('Alternate/Additional cost', 'cost'), ###
+    'choice': ('Mode Indicator', 'choice'), ###
+    'brick': ('Brick counter', 'brick'), ###
+    'exert': ('Exert Indicator', 'exert'), ###
+    'manifest': ('Manifest Indicator', 'manifest'), ###
+    'adventure': ('Adventure Indicator', 'adventure')
 
 }
 
 scriptMarkers = {
-    'cast': ('Cast Spell trigger', '84aa67dc-9507-45cf-adcf-7865e7223648'), ###
-    'etb': ('Enters the battlefield trigger', '3a946aa5-4fd9-4f2f-a8bc-bfe8614e8c44'), ###
-    'destroy': ('Sent to graveyard trigger', '663a9532-98d2-4d30-b41b-70c582b6357f'), ###
-    'attack': ('Attack trigger', '9f8ff955-97b7-4881-a0a5-823a7413a6d6'), ###
-    'block': ('Block trigger', '759e7a00-e6f1-4cfb-9f74-d8ff58e44e30'), ###
-    'acti': ('Activated ability trigger', '2dd4da20-eec5-47e9-9adc-2b502ebc4f5d'), ###
-    'exile': ('Exile trigger', '9f315796-c2b2-4159-bcf6-3e28ecddfbc9'), ###
-    'discard': ('Discard trigger', 'e9f688b5-5068-404c-9979-23098aa37dfa'), ###
-    'morph': ('Morph trigger', '96268748-c55b-4513-82e4-0466d39137c0'), ###
-    'miracle': ('Miracle trigger', 'aee4bba3-9375-4f14-9882-5d8d6fdd1660') ###
+    'cast': ('Cast Spell trigger', 'cast'), ###
+    'etb': ('Enters the battlefield trigger', 'etb'), ###
+    'destroy': ('Sent to graveyard trigger', 'destroy'), ###
+    'attack': ('Attack trigger', 'attack'), ###
+    'block': ('Block trigger', 'block'), ###
+    'acti': ('Activated ability trigger', 'acti'), ###
+    'exile': ('Exile trigger', 'exile'), ###
+    'discard': ('Discard trigger', 'discard'), ###
+    'morph': ('Morph trigger', 'morph'), ###
+    'miracle': ('Miracle trigger', 'miracle') ###
 }
 
 tokenTypes = {
