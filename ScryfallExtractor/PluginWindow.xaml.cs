@@ -33,7 +33,7 @@ namespace MTGImageFetcher
     /// </summary>
     /// 
 
-    public partial class MainWindow : INotifyPropertyChanged
+    public partial class PluginWindow : INotifyPropertyChanged
     {
         public Game game;
         public List<SetInfo> sets;
@@ -71,17 +71,13 @@ namespace MTGImageFetcher
 
         public List<SetItem> setList { get; private set; }
 
-        // private BackgroundWorker backgroundWorker = new BackgroundWorker();
         private CancellationTokenSource _cts;
 
-        public MainWindow()
+        public PluginWindow()
         {
             this.InitializeComponent();
             this.DataContext = this;
-            if (game == null)
-            {
-                game = DbContext.Get().GameById(Guid.Parse("A6C8D2E8-7CD8-11DD-8F94-E62B56D89593")) ?? throw new Exception("MTG is not installed!");
-            }
+            game = DbContext.Get().GameById(Guid.Parse("A6C8D2E8-7CD8-11DD-8F94-E62B56D89593")) ?? throw new Exception("MTG is not installed!");
 
             JArray scryfallSetData;
 
