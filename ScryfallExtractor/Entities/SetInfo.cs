@@ -35,7 +35,7 @@ namespace MTGImageFetcher.Entities
 
                 if (card.SetId.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
                 {
-                    var cardNumber = card.GetProperty("Number").ToString();
+                    var cardNumber = card.GetProperty("Number", alt).ToString();
                     ret = Cards.FirstOrDefault(x => x.Number.Equals(cardNumber, StringComparison.InvariantCultureIgnoreCase));
                 }
                 else if (alt == "meld")
