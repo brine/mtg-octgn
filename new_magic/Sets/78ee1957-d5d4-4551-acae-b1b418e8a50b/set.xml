@@ -228,26 +228,6 @@ You may spend white mana as though it were mana of any color. You may spend othe
       <property name="Number" value="013" />
       <property name="MultiverseId" value="14503" />
     </card>
-    <card name="D'Avenant Archer" id="e97985bb-75ab-454e-894d-963890043caf">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="W">{W}</s>
-      </property>
-      <property name="CMC" value="3" />
-      <property name="Color" value="White" />
-      <property name="Type" value="Creature" />
-      <property name="Subtype" value="Human Soldier Archer" />
-      <property name="Rarity" value="Common" />
-      <property name="Rules">
-        <s value="T">{T}</s>: D'Avenant Archer deals 1 damage to target attacking or blocking creature.</property>
-      <property name="Power" value="1" />
-      <property name="Toughness" value="2" />
-      <property name="PT Box" value="1 / 2" />
-      <property name="Artist" value="Douglas Shuler" />
-      <property name="Number" value="014" />
-      <property name="Flavor" value="Avenant's archers are also trained as poets, so that each arrow is guided by a fragment of verse." />
-      <property name="MultiverseId" value="14472" />
-    </card>
     <card name="Daraja Griffin" id="0795a1d6-9caf-472a-a349-fca97bccf8e2">
       <property name="Cost">
         <s value="3">{3}</s>
@@ -264,9 +244,29 @@ Sacrifice Daraja Griffin: Destroy target black creature.</property>
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
       <property name="Artist" value="Stuart Griffin" />
-      <property name="Number" value="015" />
+      <property name="Number" value="014" />
       <property name="Flavor" value="&quot;And the flamingos said, 'Get out of our nest—we can't be seen with the likes of you!' So, the griffin ate them.&quot; —Azeworai, &quot;The Ugly Bird&quot;" />
       <property name="MultiverseId" value="15358" />
+    </card>
+    <card name="D'Avenant Archer" id="e97985bb-75ab-454e-894d-963890043caf">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Soldier Archer" />
+      <property name="Rarity" value="Common" />
+      <property name="Rules">
+        <s value="T">{T}</s>: D'Avenant Archer deals 1 damage to target attacking or blocking creature.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="2" />
+      <property name="PT Box" value="1 / 2" />
+      <property name="Artist" value="Douglas Shuler" />
+      <property name="Number" value="015" />
+      <property name="Flavor" value="Avenant's archers are also trained as poets, so that each arrow is guided by a fragment of verse." />
+      <property name="MultiverseId" value="14472" />
     </card>
     <card name="Disenchant" id="47578ce0-dbaa-4a15-b46c-2fd2cb352be9">
       <property name="Cost">
@@ -2233,7 +2233,7 @@ Enchanted creature has fear. (It can't be blocked except by artifact creatures a
 Enchanted creature gets +4/+0.</property>
       <property name="Artist" value="Dennis Detwiller" />
       <property name="Number" value="130" />
-      <property name="Flavor" value="&quot;Could there be a fouler act? No doubt the baron knows of one.&quot; —Autumn Willow" />
+      <property name="Flavor" value="&quot;Could there be a fouler act? No doubt the baron knows of one.&quot;—Autumn Willow" />
       <property name="MultiverseId" value="16625" />
     </card>
     <card name="Feral Shadow" id="08263b27-487c-4b5c-aca6-0d77acdcc624">
@@ -4054,7 +4054,7 @@ Haste (This creature can attack and <s value="T">{T}</s> as soon as it comes und
       <property name="PT Box" value="3 / 3" />
       <property name="Artist" value="Quinton Hoover" />
       <property name="Number" value="235" />
-      <property name="Flavor" value="&quot;In the soil of leadership sprout the seeds of immortality.&quot; —Kaysa, Elder Druid of the Juniper" />
+      <property name="Flavor" value="&quot;In the soil of leadership sprout the seeds of immortality.&quot;—Kaysa, Elder Druid of the Juniper" />
       <property name="MultiverseId" value="15427" />
     </card>
     <card name="Grizzly Bears" id="10c845b8-40f1-44df-9e91-dab7606f6271">
@@ -4926,6 +4926,21 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Number" value="288" />
       <property name="MultiverseId" value="15406" />
     </card>
+    <card name="The Hive" id="fa3aa493-3801-400e-965e-e518c38eb770">
+      <property name="Cost">
+        <s value="5">{5}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="5">{5}</s>, <s value="T">{T}</s>: Create a 1/1 colorless Insect artifact creature token with flying named Wasp. (It can't be blocked except by creatures with flying or reach.)</property>
+      <property name="Artist" value="Sandra Everingham" />
+      <property name="Number" value="289" />
+      <property name="Flavor" value="Mouths and wings beyond numbering, but a single mind to guide them." />
+      <property name="MultiverseId" value="11530" />
+    </card>
     <card name="Howling Mine" id="649a6afe-c030-458c-8cc5-5051e0cd6fd2">
       <property name="Cost">
         <s value="2">{2}</s>
@@ -4936,7 +4951,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rarity" value="Rare" />
       <property name="Rules">At the beginning of each player's draw step, if Howling Mine is untapped, that player draws an additional card.</property>
       <property name="Artist" value="Mark Poole" />
-      <property name="Number" value="289" />
+      <property name="Number" value="290" />
       <property name="MultiverseId" value="14777" />
     </card>
     <card name="Iron Star" id="43e1a0e8-3ca4-4928-9299-36efce7fb641">
@@ -4949,7 +4964,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Whenever a player casts a red spell, you may pay <s value="1">{1}</s>. If you do, you gain 1 life.</property>
       <property name="Artist" value="Donato Giancola" />
-      <property name="Number" value="290" />
+      <property name="Number" value="291" />
       <property name="MultiverseId" value="14761" />
     </card>
     <card name="Ivory Cup" id="ade1a965-fd85-4545-a850-65c93132b8b5">
@@ -4962,7 +4977,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Whenever a player casts a white spell, you may pay <s value="1">{1}</s>. If you do, you gain 1 life.</property>
       <property name="Artist" value="Donato Giancola" />
-      <property name="Number" value="291" />
+      <property name="Number" value="292" />
       <property name="MultiverseId" value="14759" />
     </card>
     <card name="Jade Monolith" id="8f3055a4-9a1e-4cd3-993e-8fecb6eee9a3">
@@ -4976,7 +4991,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">
         <s value="1">{1}</s>: The next time a source of your choice would deal damage to target creature this turn, that source deals that damage to you instead.</property>
       <property name="Artist" value="Richard Kane Ferguson" />
-      <property name="Number" value="292" />
+      <property name="Number" value="293" />
       <property name="MultiverseId" value="11355" />
     </card>
     <card name="Jalum Tome" id="a0489c2d-bcf9-4179-b07a-781c6ac07980">
@@ -4990,7 +5005,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">
         <s value="2">{2}</s>, <s value="T">{T}</s>: Draw a card, then discard a card.</property>
       <property name="Artist" value="Tom Wänerstrand" />
-      <property name="Number" value="293" />
+      <property name="Number" value="294" />
       <property name="Flavor" value="This timeworn relic was responsible for many of Urza's victories, though he never fully comprehended its mystic runes." />
       <property name="MultiverseId" value="14778" />
     </card>
@@ -5005,7 +5020,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">
         <s value="4">{4}</s>, <s value="T">{T}</s>: Draw a card.</property>
       <property name="Artist" value="Mark Tedin" />
-      <property name="Number" value="294" />
+      <property name="Number" value="295" />
       <property name="MultiverseId" value="14780" />
     </card>
     <card name="Lead Golem" id="b2ba3857-9bd7-434d-b77f-d697776f33e4">
@@ -5022,7 +5037,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
       <property name="Artist" value="Hannibal King" />
-      <property name="Number" value="295" />
+      <property name="Number" value="296" />
       <property name="Flavor" value="Slow and heavy swings the club." />
       <property name="MultiverseId" value="15407" />
     </card>
@@ -5038,7 +5053,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="1">{1}</s>, <s value="T">{T}</s>: Add one mana of any color.</property>
       <property name="Artist" value="Margaret Organ-Kean" />
-      <property name="Number" value="296" />
+      <property name="Number" value="297" />
       <property name="MultiverseId" value="15439" />
     </card>
     <card name="Marble Diamond" id="c20b4858-3648-4a86-a3c1-698254f90d5b">
@@ -5052,7 +5067,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">Marble Diamond enters the battlefield tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s>.</property>
       <property name="Artist" value="Jeff Miracola" />
-      <property name="Number" value="297" />
+      <property name="Number" value="298" />
       <property name="MultiverseId" value="15441" />
     </card>
     <card name="Meekstone" id="89d01df6-ede2-4cca-89a5-b041b1238ebb">
@@ -5065,7 +5080,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rarity" value="Rare" />
       <property name="Rules">Creatures with power 3 or greater don't untap during their controllers' untap steps.</property>
       <property name="Artist" value="Quinton Hoover" />
-      <property name="Number" value="298" />
+      <property name="Number" value="299" />
       <property name="Flavor" value="When the mighty sleep, the lowly prowl." />
       <property name="MultiverseId" value="14781" />
     </card>
@@ -5080,7 +5095,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">
         <s value="2">{2}</s>, <s value="T">{T}</s>: Target player puts the top two cards of their library into their graveyard.</property>
       <property name="Artist" value="Kaja Foglio" />
-      <property name="Number" value="299" />
+      <property name="Number" value="300" />
       <property name="Flavor" value="More than one mage has been driven insane by the sound of the millstone relentlessly grinding away." />
       <property name="MultiverseId" value="14782" />
     </card>
@@ -5095,7 +5110,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">Moss Diamond enters the battlefield tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s>.</property>
       <property name="Artist" value="Donato Giancola" />
-      <property name="Number" value="300" />
+      <property name="Number" value="301" />
       <property name="MultiverseId" value="15442" />
     </card>
     <card name="Mystic Compass" id="e80bfd76-52f9-4dea-9056-8570c9b290a4">
@@ -5109,7 +5124,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">
         <s value="1">{1}</s>, <s value="T">{T}</s>: Target land becomes the basic land type of your choice until end of turn.</property>
       <property name="Artist" value="Amy Weber" />
-      <property name="Number" value="301" />
+      <property name="Number" value="302" />
       <property name="MultiverseId" value="15435" />
     </card>
     <card name="Obsianus Golem" id="96123be9-c1df-418f-b2b3-98746a0f1692">
@@ -5125,8 +5140,8 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Toughness" value="6" />
       <property name="PT Box" value="4 / 6" />
       <property name="Artist" value="Jesper Myrfors" />
-      <property name="Number" value="302" />
-      <property name="Flavor" value="&quot;The foot stone is connected to the ankle stone, the ankle stone is connected to the leg stone . . . .&quot; —&quot;Song of the Artificer&quot;" />
+      <property name="Number" value="303" />
+      <property name="Flavor" value="&quot;The foot stone is connected to the ankle stone, the ankle stone is connected to the leg stone . . . .&quot;—*&quot;Song of the Artificer&quot;*" />
       <property name="MultiverseId" value="15401" />
     </card>
     <card name="Ornithopter" id="09c6ac8a-01b1-4af5-89d8-ad66d9a81ceb">
@@ -5143,7 +5158,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Toughness" value="2" />
       <property name="PT Box" value="0 / 2" />
       <property name="Artist" value="Amy Weber" />
-      <property name="Number" value="303" />
+      <property name="Number" value="304" />
       <property name="Flavor" value="&quot;It has been my honor to improve on the Thran's original design. Perhaps history will remember me in some small part for my work.&quot; —Urza, in his apprenticeship" />
       <property name="MultiverseId" value="14767" />
     </card>
@@ -5162,7 +5177,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
       <property name="Artist" value="Scott Kirschner" />
-      <property name="Number" value="304" />
+      <property name="Number" value="305" />
       <property name="Flavor" value="It scattered falcons like a lion hunting among jackals." />
       <property name="MultiverseId" value="15408" />
     </card>
@@ -5177,7 +5192,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">
         <s value="4">{4}</s>, <s value="T">{T}</s>: The next time a source of your choice would deal damage to you this turn, prevent that damage.</property>
       <property name="Artist" value="Douglas Shuler" />
-      <property name="Number" value="305" />
+      <property name="Number" value="306" />
       <property name="Flavor" value="A mirror, a shield, a promise, a great distance, and a kind word—five ways to avoid harm." />
       <property name="MultiverseId" value="14784" />
     </card>
@@ -5192,7 +5207,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">
         <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice a creature: Draw a card.</property>
       <property name="Artist" value="Hannibal King" />
-      <property name="Number" value="306" />
+      <property name="Number" value="307" />
       <property name="Flavor" value="&quot;The secrets of Phyrexia are expensive. You will pay in brass and bone, steel and sinew.&quot; —Kaervek" />
       <property name="MultiverseId" value="15436" />
     </card>
@@ -5210,7 +5225,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Toughness" value="*" />
       <property name="PT Box" value="* / *" />
       <property name="Artist" value="Adam Rex" />
-      <property name="Number" value="307" />
+      <property name="Number" value="308" />
       <property name="MultiverseId" value="11454" />
     </card>
     <card name="Rod of Ruin" id="d59bf5fd-141a-4743-ad73-70ec2173e476">
@@ -5224,7 +5239,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">
         <s value="3">{3}</s>, <s value="T">{T}</s>: Rod of Ruin deals 1 damage to any target.</property>
       <property name="Artist" value="Christopher Rush" />
-      <property name="Number" value="308" />
+      <property name="Number" value="309" />
       <property name="MultiverseId" value="14768" />
     </card>
     <card name="Skull Catapult" id="7b1967f0-f6a9-469a-96f9-57fe77059e88">
@@ -5238,7 +5253,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">
         <s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice a creature: Skull Catapult deals 2 damage to any target.</property>
       <property name="Artist" value="Ian Miller" />
-      <property name="Number" value="309" />
+      <property name="Number" value="310" />
       <property name="Flavor" value="&quot;What manner of fiend would design such a sadistic device?&quot; —Sorine Relicbane, Soldevi heretic" />
       <property name="MultiverseId" value="11503" />
     </card>
@@ -5253,7 +5268,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">Sky Diamond enters the battlefield tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s>.</property>
       <property name="Artist" value="D. Alexander Gregory" />
-      <property name="Number" value="310" />
+      <property name="Number" value="311" />
       <property name="MultiverseId" value="15443" />
     </card>
     <card name="Snake Basket" id="3a9bc174-1d10-49bf-af4f-2f6061b1796e">
@@ -5267,7 +5282,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">
         <s value="X">{X}</s>, Sacrifice Snake Basket: Create X 1/1 green Snake creature tokens. Activate this ability only any time you could cast a sorcery.</property>
       <property name="Artist" value="Roger Raupp" />
-      <property name="Number" value="311" />
+      <property name="Number" value="312" />
       <property name="Flavor" value="&quot;Uh, does anyone have a flute?&quot; —Rana, Suq'Ata market fool" />
       <property name="MultiverseId" value="15409" />
     </card>
@@ -5281,7 +5296,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Whenever a creature dies, you may pay <s value="1">{1}</s>. If you do, you gain 1 life.</property>
       <property name="Artist" value="Andrew Robinson" />
-      <property name="Number" value="312" />
+      <property name="Number" value="313" />
       <property name="MultiverseId" value="14769" />
     </card>
     <card name="Storm Cauldron" id="ab556986-a6f4-4445-b004-64b4bc189e55">
@@ -5295,7 +5310,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Rules">Each player may play an additional land during each of their turns.
 Whenever a land is tapped for mana, return it to its owner's hand.</property>
       <property name="Artist" value="Dan Frazier" />
-      <property name="Number" value="313" />
+      <property name="Number" value="314" />
       <property name="MultiverseId" value="15402" />
     </card>
     <card name="Teferi's Puzzle Box" id="bc5caf27-e426-420b-895d-a359e6021993">
@@ -5308,23 +5323,8 @@ Whenever a land is tapped for mana, return it to its owner's hand.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">At the beginning of each player's draw step, that player puts the cards in their hand on the bottom of their library in any order, then draws that many cards.</property>
       <property name="Artist" value="Kaja Foglio" />
-      <property name="Number" value="314" />
-      <property name="MultiverseId" value="15410" />
-    </card>
-    <card name="The Hive" id="fa3aa493-3801-400e-965e-e518c38eb770">
-      <property name="Cost">
-        <s value="5">{5}</s>
-      </property>
-      <property name="CMC" value="5" />
-      <property name="Color" value="Colorless" />
-      <property name="Type" value="Artifact" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">
-        <s value="5">{5}</s>, <s value="T">{T}</s>: Create a 1/1 colorless Insect artifact creature token with flying named Wasp. (It can't be blocked except by creatures with flying or reach.)</property>
-      <property name="Artist" value="Sandra Everingham" />
       <property name="Number" value="315" />
-      <property name="Flavor" value="Mouths and wings beyond numbering, but a single mind to guide them." />
-      <property name="MultiverseId" value="11530" />
+      <property name="MultiverseId" value="15410" />
     </card>
     <card name="Throne of Bone" id="bca1df90-d51a-4d2f-a03f-a4591031671d">
       <property name="Cost">
