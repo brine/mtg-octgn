@@ -6,7 +6,9 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Octgn.DataNew;
 using Octgn.Library;
+using MTGImageFetcher;
 
 namespace MTGImageDownloaderPluginConsole
 {
@@ -15,19 +17,18 @@ namespace MTGImageDownloaderPluginConsole
     /// </summary>
     public partial class App : Application
     {
-
-        protected override void OnStartup(StartupEventArgs e)
+        private void Application_Startup(object sender, StartupEventArgs e)
         {
             try
             {
                 Config.Instance = new Config();
-                Config.Instance.ImageDirectory = Path.Combine(Config.Instance.DataDirectory, "ImageDatabase");
             }
             catch (Exception ex)
             {
-
+                Shutdown();
             }
-            base.OnStartup(e);
+            var window = new PluginWindow();
+            window.ShowDialog();
         }
     }
 }
