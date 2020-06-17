@@ -497,7 +497,7 @@ Whenever Ink-Eyes, Servant of Oni deals combat damage to a player, you may put t
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
-      <property name="Artist" value="Jenn Ravenna" />
+      <property name="Artist" value="Jenn Ravenna Tran" />
       <property name="Number" value="034" />
       <property name="Flavor" value="A sumptuous feast with friends starts the new year off on a good paw." />
       <property name="MultiverseId" value="479366" />
@@ -618,6 +618,81 @@ Noncreature spells cost <s value="1">{1}</s> more to cast.</property>
       <property name="Number" value="040" />
       <property name="Flavor" value="&quot;I am the Guardian of Thraben, and I claim my right to speak before the council.&quot;" />
     </card>
+    <card name="Spell Pierce" id="a4f8b11a-6b21-4532-96c9-bdb2cad603e8">
+      <property name="Cost">
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Counter target noncreature spell unless its controller pays <s value="2">{2}</s>.</property>
+      <property name="Artist" value="Joshua Howard" />
+      <property name="Number" value="041" />
+      <property name="Flavor" value="A great wizard always has a few surprises up their sleeve." />
+    </card>
+    <card name="Blood Artist" id="8a5b65ed-250c-42a6-84c0-ac06662ca5ed">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Vampire" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever Blood Artist or another creature dies, target player loses 1 life and you gain 1 life.</property>
+      <property name="Power" value="0" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="0 / 1" />
+      <property name="Artist" value="Joshua Howard" />
+      <property name="Number" value="042" />
+      <property name="Flavor" value="Great art requires pain... but not necessarily the artist's." />
+    </card>
+    <card name="Eternal Witness" id="55bb37b7-3474-42af-abf0-0b713bf34174">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Shaman" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When Eternal Witness enters the battlefield, you may return target card from your graveyard to your hand.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="2 / 1" />
+      <property name="Artist" value="Joshua Howard" />
+      <property name="Number" value="043" />
+      <property name="Flavor" value="Our lives are etched on our bodies, memories illustrated on skin." />
+    </card>
+    <card name="Pithing Needle" id="e503b59c-df3e-4f52-9a59-195f02a6cb18">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">As Pithing Needle enters the battlefield, choose a card name.
+Activated abilities of sources with the chosen name can't be activated unless they're mana abilities.</property>
+      <property name="Artist" value="Joshua Howard" />
+      <property name="Number" value="044" />
+    </card>
+    <card name="Inkmoth Nexus" id="38c41b06-407e-497a-adb9-a19687fad1e8">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="1">{1}</s>: Inkmoth Nexus becomes a 1/1 Blinkmoth artifact creature with flying and infect until end of turn. It's still a land. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</property>
+      <property name="Artist" value="Joshua Howard" />
+      <property name="Number" value="045" />
+      <property name="Flags" value="C" />
+    </card>
     <card name="Captain Sisay" id="f44d22ed-7b85-4669-b49c-b1872a448611">
       <property name="Cost">
         <s value="2">{2}</s>
@@ -716,6 +791,59 @@ Whenever a creature you control deals combat damage to a player, it deals that m
       <property name="PT Box" value="3 / 4" />
       <property name="Artist" value="Anna Steinbauer" />
       <property name="Number" value="055" />
+    </card>
+    <card name="Arcbound Ravager" id="6a898fbf-5c73-4a50-8bf5-126051747659">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact Creature" />
+      <property name="Subtype" value="Beast" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Sacrifice an artifact: Put a +1/+1 counter on Arcbound Ravager.
+Modular 1 (This creature enters the battlefield with a +1/+1 counter on it. When it dies, you may put its +1/+1 counters on target artifact creature.)</property>
+      <property name="Power" value="0" />
+      <property name="Toughness" value="0" />
+      <property name="PT Box" value="0 / 0" />
+      <property name="Artist" value="Danny Miller" />
+      <property name="Number" value="056" />
+    </card>
+    <card name="Darksteel Colossus" id="44012fb2-9dbc-408a-b84b-1302b442f699">
+      <property name="Cost">
+        <s value="11">{11}</s>
+      </property>
+      <property name="CMC" value="11" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact Creature" />
+      <property name="Subtype" value="Golem" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Trample, indestructible
+If Darksteel Colossus would be put into a graveyard from anywhere, reveal Darksteel Colossus and shuffle it into its owner's library instead.</property>
+      <property name="Power" value="11" />
+      <property name="Toughness" value="11" />
+      <property name="PT Box" value="11 / 11" />
+      <property name="Artist" value="Hector Ortiz" />
+      <property name="Number" value="057" />
+    </card>
+    <card name="Walking Ballista" id="60107410-7076-4fcc-b1f7-123dd3b442b0">
+      <property name="Cost">
+        <s value="X">{X}</s>
+        <s value="X">{X}</s>
+      </property>
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact Creature" />
+      <property name="Subtype" value="Construct" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Walking Ballista enters the battlefield with X +1/+1 counters on it.
+<s value="4">{4}</s>: Put a +1/+1 counter on Walking Ballista.
+Remove a +1/+1 counter from Walking Ballista: It deals 1 damage to any target.</property>
+      <property name="Power" value="0" />
+      <property name="Toughness" value="0" />
+      <property name="PT Box" value="0 / 0" />
+      <property name="Artist" value="Bad Flip Productions, Inc." />
+      <property name="Number" value="058" />
     </card>
     <card name="Squire" id="0d03170e-e724-4ec0-a123-b7ac4820d20f">
       <property name="Cost">
@@ -1082,6 +1210,211 @@ As long as your devotion to black and green is less than seven, Pharika isn't a 
       <property name="PT Box" value="5 / 5" />
       <property name="Artist" value="Jason A. Engle" />
       <property name="Number" value="082" />
+    </card>
+    <card name="Lightning Bolt" id="45184cd7-b037-4a85-a063-e622ca928d17">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Lightning Bolt deals 3 damage to any target.</property>
+      <property name="Artist" value="Noah Bradley" />
+      <property name="Number" value="083" />
+    </card>
+    <card name="Lightning Bolt" id="6fb94c1b-8002-4d79-add0-c4dfef9019ee">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Lightning Bolt deals 3 damage to any target.</property>
+      <property name="Artist" value="Brigitte Roka" />
+      <property name="Number" value="084" />
+    </card>
+    <card name="Lightning Bolt" id="6ab06973-6440-4b12-8947-8c412500fa41">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Lightning Bolt deals 3 damage to any target.</property>
+      <property name="Artist" value="Robbie Trevino" />
+      <property name="Number" value="085" />
+    </card>
+    <card name="Lightning Bolt" id="c3eb3895-b64c-46ab-b704-3c46963920ba">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Lightning Bolt deals 3 damage to any target.</property>
+      <property name="Artist" value="Alexis Ziritt" />
+      <property name="Number" value="086" />
+    </card>
+    <card name="Ajani Steadfast" id="370e6f6f-67a7-4eea-9a33-efbb64783e4a">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Ajani" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">+1: Until end of turn, up to one target creature gets +1/+1 and gains first strike, vigilance, and lifelink.
+−2: Put a +1/+1 counter on each creature you control and a loyalty counter on each other planeswalker you control.
+−7: You get an emblem with "If a source would deal damage to you or a planeswalker you control, prevent all but 1 of that damage."</property>
+      <property name="PT Box" value="4" />
+      <property name="Artist" value="David Rapoza" />
+      <property name="Number" value="087" />
+    </card>
+    <card name="Domri Rade" id="e724c648-0585-451f-afcd-7efff2521151">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor Red Green" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Domri" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">+1: Look at the top card of your library. If it's a creature card, you may reveal it and put it into your hand.
+−2: Target creature you control fights another target creature.
+−7: You get an emblem with "Creatures you control have double strike, trample, hexproof, and haste."</property>
+      <property name="PT Box" value="3" />
+      <property name="Artist" value="Chris Rallis" />
+      <property name="Number" value="088" />
+    </card>
+    <card name="Tamiyo, Field Researcher" id="c8320f71-e958-4e40-9304-bd115f29d67c">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Green White Blue" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Tamiyo" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">+1: Choose up to two target creatures. Until your next turn, whenever either of those creatures deals combat damage, you draw a card.
+−2: Tap up to two target nonland permanents. They don't untap during their controller's next untap step.
+−7: Draw three cards. You get an emblem with "You may cast spells from your hand without paying their mana costs."</property>
+      <property name="PT Box" value="4" />
+      <property name="Artist" value="Yeong-Hao Han" />
+      <property name="Number" value="089" />
+    </card>
+    <card name="Vraska, Golgari Queen" id="d004e922-1f2b-4325-93f1-04a336192c06">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Black Green" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Vraska" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">+2: You may sacrifice another permanent. If you do, you gain 1 life and draw a card.
+−3: Destroy target nonland permanent with converted mana cost 3 or less.
+−9: You get an emblem with "Whenever a creature you control deals combat damage to a player, that player loses the game."</property>
+      <property name="PT Box" value="4" />
+      <property name="Artist" value="Mike Uziel" />
+      <property name="Number" value="090" />
+    </card>
+    <card name="Swan Song" id="40fc6412-df1c-4bfa-842b-8c3a6f14e19d">
+      <property name="Cost">
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Counter target enchantment, instant, or sorcery spell. Its controller creates a 2/2 blue Bird creature token with flying.</property>
+      <property name="Artist" value="Allen Douglas" />
+      <property name="Number" value="091" />
+      <property name="Flavor" value="The gracefulness of their flight makes one wonder whether Nature or, indeed, a rare sort of Magic lifts their wings." />
+    </card>
+    <card name="Birds of Paradise" id="fdfeeb64-0f86-45e9-97e3-dcec72683164">
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Bird" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Flying
+<s value="T">{T}</s>: Add one mana of any color.</property>
+      <property name="Power" value="0" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="0 / 1" />
+      <property name="Artist" value="Ovidio Cartagena" />
+      <property name="Number" value="092" />
+      <property name="Flavor" value="A single vivid feather fetches a royal price—but who, having seen these magnificient creations of Nature, would settle for a feather?" />
+    </card>
+    <card name="Gilded Goose" id="eb08b642-aff6-4c37-a952-f8ddcfc4767e">
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Bird" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Flying
+When Gilded Goose enters the battlefield, create a Food token. (It's an artifact with "<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: You gain 3 life.")
+<s value="1">{1}</s><s value="G">{G}</s>, <s value="T">{T}</s>: Create a Food token.
+<s value="T">{T}</s>, Sacrifice a Food: Add one mana of any color.</property>
+      <property name="Power" value="0" />
+      <property name="Toughness" value="2" />
+      <property name="PT Box" value="0 / 2" />
+      <property name="Artist" value="Allen Douglas" />
+      <property name="Number" value="093" />
+    </card>
+    <card name="Baleful Strix" id="7f7c9b54-0b40-4007-8d24-bc3945be319f">
+      <property name="Cost">
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Multicolor Blue Black" />
+      <property name="Type" value="Artifact Creature" />
+      <property name="Subtype" value="Bird" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Flying, deathtouch
+When Baleful Strix enters the battlefield, draw a card.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="1 / 1" />
+      <property name="Artist" value="Allen Douglas" />
+      <property name="Number" value="094" />
+      <property name="Flavor" value="Some superstitious persons believe that owls, being creatures of the night, are agents of Evil; but those who make such claims see only the reflection of their own guilty Consciences." />
+    </card>
+    <card name="Dovescape" id="8ebc97bd-508f-4af5-a308-46cb1f256534">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="WU">{W/U}</s>
+        <s value="WU">{W/U}</s>
+        <s value="WU">{W/U}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Hybrid White Blue" />
+      <property name="Type" value="Enchantment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">(<s value="WU">{W/U}</s> can be paid with either <s value="W">{W}</s> or <s value="U">{U}</s>.)
+Whenever a player casts a noncreature spell, counter that spell. That player creates X 1/1 white and blue Bird creature tokens with flying, where X is the spell's converted mana cost.</property>
+      <property name="Artist" value="Ovidio Cartagena" />
+      <property name="Number" value="095" />
     </card>
   </cards>
 </set>
