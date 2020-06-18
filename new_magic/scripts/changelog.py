@@ -342,5 +342,13 @@ changelog = {
     3060000: ("3.6.0.0", "May 23 2020", [
         "Added missing planes and schemes sets",
         "fixed some bugs with the image downloader",
+        ]),
+    3060100: ("3.6.1.0", "June 17 2020", [
+        "Added M21, Chandra Spellbook, Secret Lair Ultimate Edition,  and Unsanctioned",
+        "New table card action:  CTRL+SHIFT+C  toggles the Commander indicator marker on the card.",
+        "New Command Zone card action:  DOUBLE-CLICK casts the card as your Commander.",
+        "Changed Command Zone card action hotkey: CTRL+C  Cast Card (was the default double-click action.)",
+        "Anchoring a card or putting the Commander indicator marker on a card will prevent it from auto-aligning.",
+        "fixed a bug affecting token images in the image downloader.",
         ])
 }

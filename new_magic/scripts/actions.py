@@ -370,6 +370,12 @@ def play(card, x = 0, y = 0):
         notify("{} plays {} from their {}.".format(me, card, src))
     cardalign()
 
+def playCommander(card, x = 0, y = 0):
+    play(card, x, y)
+    if card in table:
+        card.markers[counters['general']] = 1
+        notify("{} makes {} their Commander.".format(me, card))
+
 def flashback(card, x = 0, y = 0):
     mute()
     global stackDict
@@ -695,14 +701,13 @@ def rulings(card, x = 0, y = 0):
     if not card.MultiverseId == None:
         openUrl('http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid={}'.format(card.MultiverseId))
 
-def generaltoggle(card, x = 0, y = 0): ## This isn't used anymore
+def commanderToggle(card, x = 0, y = 0):
     mute()
     if counters['general'] in card.markers:
         card.markers[counters['general']] = 0
-        notify("{}'s commander {} enters the battlefield.".format(me, card))
     else:
         card.markers[counters['general']] = 1
-        notify("{}'s commander {} leaves the battlefield.".format(me, card))
+        notify("{}  marks  {} as their Commander.".format(me, card))
 
 def exert(card, x = 0, y = 0):
     mute()

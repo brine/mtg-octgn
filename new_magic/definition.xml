@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.0.2" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.1.0" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="https://github.com/brine/mtg-octgn" gameurl="https://github.com/brine/mtg-octgn" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -245,6 +245,7 @@
       <cardaction menu="Remove -1/-1 Counter" shortcut="ctrl+shift+3" execute="removeMinusOneMarker" />
       <cardaction menu="Remove Charge Counter" shortcut="ctrl+shift+4" execute="removeChargeMarker" />
       <cardaction menu="Add Other Counter..." shortcut="ctrl+0" batchExecute="addMarker" />
+      <cardaction menu="Mark as Commander" shortcut="ctrl+shift+c" execute="commanderToggle" />
     </cardactions>
     <cardaction menu="Auto-Create Token" shortcut="ctrl+shift+T" execute="autoCreateToken" />
     <cardaction menu="Swap Token Art" execute="nextTokenArt" />
@@ -363,7 +364,8 @@
     </group>
     <group name="Command Zone" visibility="all" icon="groups/commandzone.png" viewState="collapsed">
       <groupaction menu="Shuffle" execute="shuffle" />
-      <cardaction menu="Cast Card/Commander" default="True" execute="play" />
+      <cardaction menu="Cast as Commander" default="True" execute="playCommander" />
+      <cardaction menu="Cast Card" shortcut="ctrl+C" execute="play" />
       <groupactions menu="Move All Cards To...">
         <groupaction menu="Owner's Library (Top)" execute="libraryTopAll" />
         <groupaction menu="Owner's Library (Bottom)" execute="libraryBottomAll" />

@@ -942,6 +942,7 @@ def cardalign(force = False):
     attachHeight = [0,0,0,0,0,0,0,0] ## This part counts the total number of attachments on each card in each row, to optimize the vertical spacing between rows
     for card in sorted([c for c in table], key=lambda c: sideFlip() * c.position[0]):
         if (not counters['general'] in card.markers  ## Cards with General markers ignore alignment
+                    and card.anchor == False
                     and not card in alignIgnore
                     and not isStack(card)  ## cards on the stack have already been aligned so ignore them
                     and card.controller == me  ## don't align other player's cards

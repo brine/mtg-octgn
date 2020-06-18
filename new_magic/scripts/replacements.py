@@ -107,7 +107,7 @@ scriptMarkers = {
     'destroy': ('Sent to graveyard trigger', 'destroy'), ###
     'attack': ('Attack trigger', 'attack'), ###
     'block': ('Block trigger', 'block'), ###
-    'acti': ('Activated ability trigger', 'acti'), ###
+    'acti': ('Activated ability trigger', 'ability'), ###
     'exile': ('Exile trigger', 'exile'), ###
     'discard': ('Discard trigger', 'discard'), ###
     'morph': ('Morph trigger', 'morph'), ###
