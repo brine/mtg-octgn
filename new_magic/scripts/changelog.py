@@ -350,5 +350,8 @@ changelog = {
         "Changed Command Zone card action hotkey: CTRL+C  Cast Card (was the default double-click action.)",
         "Anchoring a card or putting the Commander indicator marker on a card will prevent it from auto-aligning.",
         "fixed a bug affecting token images in the image downloader.",
+        ]),
+    3060101: ("3.6.1.1", "June 20 2020", [
+        "Added Jumpstart"
         ])
 }
