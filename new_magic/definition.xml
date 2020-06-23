@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.1.1" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.1.2" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
     setsurl="https://github.com/brine/mtg-octgn" gameurl="https://github.com/brine/mtg-octgn" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -10,6 +10,7 @@
     <script src="scripts/replacements.py" />
     <script src="scripts/tags.py" />
     <script src="scripts/changelog.py" />
+    <script src="scripts/jumpstart.py" />
   </scripts>
   <events>
     <event name="OnDeckLoaded" action="registerPlayer" />
@@ -306,6 +307,7 @@
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Move Card to Hand" default="True" shortcut="ctrl+H" execute="tohand" />
       <groupaction menu="Reveal/Hide Card" shortcut="ctrl+R" execute="revealtoplibrary" />
+      <groupaction menu="Load Jumpstart Deck" execute="loadJumpstart" />
     </group>
     <group name="Graveyard" shortcut="del" visibility="all" icon="groups/graveyard.png">
       <groupaction menu="Pick a Random Card" shortcut="ctrl+R" execute="randomPick" />

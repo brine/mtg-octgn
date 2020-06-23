@@ -1035,6 +1035,20 @@ def commandAll(group, x = 0, y = 0):
 # Misc. Functions
 #-------------------------------------------------------------
 
+def loadJumpstart(group, x = 0, y = 0):
+    mute()
+    if len(group) > 0:
+        if not confirm("WARNING: You are about to load a Jumpstart deck into a library that already contains cards.\r\nContinue?"): return
+    deck1 = JumpstartDecks.keys()[rnd(0,120)]
+    for card in JumpstartDecks[deck1]:
+        group.create(card["id"], card["count"])
+    deck2 = JumpstartDecks.keys()[rnd(0,120)]
+    for card in JumpstartDecks[deck2]:
+        group.create(card["id"], card["count"])
+    notify("{} loaded a Jumpstart Deck".format(me))
+
+
+
 def shuffle(group, x = 0, y = 0, silence = False):
     mute()
     for card in group:

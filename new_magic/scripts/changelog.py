@@ -353,5 +353,10 @@ changelog = {
         ]),
     3060101: ("3.6.1.1", "June 20 2020", [
         "Added Jumpstart"
+        ]),
+    3060102: ("3.6.1.2", "June 22 2020", [
+        "Added Jumpstart",
+        "Jumpstart decks can be loaded directly from the preset decks menu option.",
+        "An option to load two random Jumpstart decks has also been added to the Library group actions menu."
         ])
 }
