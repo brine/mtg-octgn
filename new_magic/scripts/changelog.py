@@ -358,5 +358,8 @@ changelog = {
         "Added Jumpstart",
         "Jumpstart decks can be loaded directly from the preset decks menu option.",
         "An option to load two random Jumpstart decks has also been added to the Library group actions menu."
+        ]),
+    3060103: ("3.6.1.3", "July 31 2020", [
+        "Added Double Masters"
         ])
 }
