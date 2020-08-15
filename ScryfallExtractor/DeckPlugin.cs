@@ -40,9 +40,10 @@ namespace MTGImageFetcher
 
         public void OnClick(IDeckBuilderPluginController con)
         {
-            PluginWindow window = new PluginWindow();
-            if (window.game != null)
-                window.ShowDialog();
+            var game = con.GetLoadedGame();
+            if (game== null || game.Id != Guid.Parse("A6C8D2E8-7CD8-11DD-8F94-E62B56D89593")) throw new Exception("This plugin requires Magic: the Gathering to be loaded into the deck editor first.");
+            PluginWindow window = new PluginWindow(game);
+            window.ShowDialog();
         }
     }
 }

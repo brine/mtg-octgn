@@ -35,7 +35,6 @@ namespace MTGImageFetcher
 
     public partial class PluginWindow : INotifyPropertyChanged
     {
-        public Game game;
         public List<SetInfo> sets;
         public bool xl = false;
         public bool update = false;
@@ -73,11 +72,10 @@ namespace MTGImageFetcher
 
         private CancellationTokenSource _cts;
 
-        public PluginWindow()
+        public PluginWindow(Game game)
         {
             this.InitializeComponent();
             this.DataContext = this;
-            game = DbContext.Get().GameById(Guid.Parse("A6C8D2E8-7CD8-11DD-8F94-E62B56D89593")) ?? throw new Exception("MTG is not installed!");
 
             JArray scryfallSetData;
 

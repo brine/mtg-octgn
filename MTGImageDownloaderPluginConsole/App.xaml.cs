@@ -27,7 +27,8 @@ namespace MTGImageDownloaderPluginConsole
             {
                 Shutdown();
             }
-            var window = new PluginWindow();
+            var game = DbContext.Get().GameById(Guid.Parse("A6C8D2E8-7CD8-11DD-8F94-E62B56D89593")) ?? throw new Exception("MTG is not installed!");
+            var window = new PluginWindow(game);
             window.ShowDialog();
         }
     }
