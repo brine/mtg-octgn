@@ -324,7 +324,7 @@ def play(card, x = 0, y = 0):
                 return
             stackData = autoCast(card, alt = splitFlags[choice - 1])
         elif 'adventure' in card.alternates and counters['adventure'] not in card.markers:
-            choice = askChoice('Casting adventure card:', ["Cast {} (creature)".format((card.alternateProperty("", 'Name'))), "Cast adventure (spell)"]) ##TODO: alternate property name doesn't work
+            choice = askChoice('Casting adventure card:', ["Cast {})".format(card.alternateProperty("", 'Name')), "Cast Adventure ({})".format(card.alternateProperty("adventure", 'Name'))])
             if choice == 0:
                 return
             if choice == 2:
@@ -333,6 +333,13 @@ def play(card, x = 0, y = 0):
                 stackDict[card]['moveto'] = 'exile'
             else:
                 stackData = autoCast(card)
+        elif 'modal_dfc' in card.alternates:
+            choice = askChoice('Cast which side of {}?'.format(card.name), ["Spell side - {}".format(card.alternateProperty("", "Name")), "Land side - {}".format(card.alternateProperty("modal_dfc", "Name"))])
+            if choice == 0:
+                return
+            if choice == 2:
+                card.alternate = "modal_dfc"
+            stackData = autoCast(card)
         else:
             stackData = autoCast(card)
         if stackData != "BREAK":
@@ -633,6 +640,12 @@ def transform(card, x = 0, y = 0):
         notify("{} transforms {}.".format(me, card))
         if card.alternate == '':
             card.alternate = 'transform'
+        else:
+            card.alternate = ''
+    elif 'modal_dfc' in card.alternates:
+        notify("{} transforms {}.".format(me, card))
+        if card.alternate == '':
+            card.alternate = 'modal_dfc'
         else:
             card.alternate = ''
     elif 'meld' in card.alternates:
