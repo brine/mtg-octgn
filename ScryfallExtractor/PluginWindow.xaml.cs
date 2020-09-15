@@ -7,24 +7,17 @@ using System.Windows;
 using System.Windows.Controls;
 using Octgn.Library;
 using Octgn.DataNew.Entities;
-using Octgn.DataNew.FileDB;
-using Octgn.Core;
 using Octgn.Core.DataExtensionMethods;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Media.Imaging;
-using Octgn.DataNew;
-using System.Collections.ObjectModel;
 using System.Net;
-using System.Drawing;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
-using System.Windows.Controls.Primitives;
 using System.Drawing.Imaging;
 using System.Runtime.Serialization;
 using Image = System.Drawing.Image;
 using System.Threading;
 using MTGImageFetcher.Entities;
+using System.Net.Http;
 
 namespace MTGImageFetcher
 {
@@ -35,9 +28,9 @@ namespace MTGImageFetcher
 
     public partial class PluginWindow : INotifyPropertyChanged
     {
-        public List<SetInfo> sets;
         public bool xl = false;
-        public bool update = false;
+        public bool onlyMissingImages = false;
+        public string selectedLanguage;
         private string _currentCard;
         private string _currentSet;
 
@@ -77,29 +70,6 @@ namespace MTGImageFetcher
             this.InitializeComponent();
             this.DataContext = this;
 
-            JArray scryfallSetData;
-
-            using (var webclient = new WebClient() { Encoding = Encoding.UTF8 })
-            {
-                scryfallSetData = (JsonConvert.DeserializeObject(webclient.DownloadString("https://api.scryfall.com/sets")) as JObject)["data"] as JArray;
-            }
-
-            sets = new List<SetInfo>();
-
-            foreach (var jsonset in scryfallSetData)
-            {
-                var setInfo = new SetInfo();
-
-                setInfo.Code = jsonset.Value<string>("code");
-                setInfo.ParentCode = jsonset.Value<string>("parent_set_code") ?? setInfo.Code;
-                setInfo.BlockCode = jsonset.Value<string>("block_code") ?? setInfo.Code;
-                
-                setInfo.Type = jsonset.Value<string>("set_type");
-                setInfo.SearchUri = jsonset.Value<string>("search_uri");
-
-                sets.Add(setInfo);
-            }
-
             setList = new List<SetItem>();
             SetList.ItemsSource = setList;
 
@@ -107,39 +77,9 @@ namespace MTGImageFetcher
             {
                 if (!set.Hidden && set.Cards.Count() > 0)
                 {
-                    // token set
-                    if (set.Id.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
-                    {
-                        var setItem = new SetItem();
-                        setItem.set = set;
-
-                        setItem.releaseDate = new DateTime(3000, 1, 1);
-                        setItem.extraSets = new List<SetInfo>();
-                        CountImageFiles(setItem);
-                        setList.Add(setItem);
-                    }
-                    else
-                    {
-
-                        var setItem = new SetItem();
-                        setItem.set = set;
-
-                        var setCode = set.ShortName;
-
-                        setItem.setData = sets.First(x => x.Code == setCode);
-
-                        setItem.extraSets = new List<SetInfo>();
-
-                        setItem.extraSets.AddRange(sets.Where(x => x.ParentCode == setItem.setData.Code));
-                        if (setItem.setData.BlockCode != setItem.setData.Code)
-                        {
-                            setItem.extraSets.AddRange(sets.Where(x => x.ParentCode == setItem.setData.BlockCode));
-                        }
-
-                        setItem.releaseDate = set.ReleaseDate;
-                        CountImageFiles(setItem);
-                        setList.Add(setItem);
-                    }
+                    var setItem = new SetItem();
+                    setItem.set = set;
+                    setList.Add(setItem);
                 }
             }
             
@@ -161,46 +101,248 @@ namespace MTGImageFetcher
         }
 
         private async void Generate(List<SetItem> sets)
-        { 
+        {
             XLImages.IsEnabled = false;
-            UpdateImages.IsEnabled = false;
+            MissingImages.IsEnabled = false;
             SetList.IsEnabled = false;
             NameRadio.IsEnabled = false;
             DateRadio.IsEnabled = false;
+            LanguageBox.IsEnabled = false;
             DownloadButton.Visibility = Visibility.Collapsed;
             DownloadAllButton.Visibility = Visibility.Collapsed;
             CancelButton.Visibility = Visibility.Visible;
 
+            selectedLanguage = ((ComboBoxItem)LanguageBox.SelectedItem).Tag.ToString();
+
             _cts = new CancellationTokenSource();
             var token = _cts.Token;
 
-            var progressHandler = new Progress<WorkerItem>(value =>
-            {
-                ProgressChanged(value);
-            });
-            var progress = progressHandler as IProgress<WorkerItem>;
+            var progressUpdater = new Progress<double>(ProgressChanged) as IProgress<double>;
+            var setProgressUpdater = new Progress<int>(SetProgressChanged) as IProgress<int>;
+            var localImageUpdater = new Progress<BitmapImage>(LocalImageChanged) as IProgress<BitmapImage>;
+            var webImageUpdater = new Progress<BitmapImage>(WebImageChanged) as IProgress<BitmapImage>;
+            var currentCardUpdater = new Progress<string>(CurrentCardChanged) as IProgress<string>;
+            var currentSetUpdater = new Progress<string>(CurrentSetChanged) as IProgress<string>;
 
-            var setProgressHandler = new Progress<int>(value =>
+            var finishedHandler = new Progress<bool>(value =>
             {
-                SetProgressBar.Value = value;
+                if (value == true)
+                    WorkerCompleted();
             });
-            var setProgress = setProgressHandler as IProgress<int>;
+            var finished = finishedHandler as IProgress<bool>;
 
             SetProgressBar.Maximum = sets.Count;
             SetProgressBar.Value = 0;
             await Task.Run(() =>
                 {
-                    var count = 0;
-                    foreach (var set in sets)
+                    var setIndex = -1;
+                    foreach (var setItem in sets)
                     {
-                        CurrentSet = set.Name;
-                        DownloadSet(set, progress);
-                        count += 1;
-                        setProgress.Report(count);
-                    }
-                });
+                        setProgressUpdater.Report(setIndex++);
+                        currentSetUpdater.Report(setItem.Name);
 
-            WorkerCompleted();
+                        double i = 0.0;
+                        var isTokenSet = setItem.set.Id.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961";
+
+                        foreach (var card in setItem.set.Cards)
+                        {
+                            foreach (var alt in card.PropertySets.Values)
+                            {
+                                progressUpdater.Report(i / setItem.CardCount);
+
+                                if (_cts.IsCancellationRequested) break;
+                                currentCardUpdater.Report(alt.Name);
+
+                                string imageParameters = "?format=image";
+
+                                if (xl == true)
+                                    imageParameters += "&version=large";
+                                else
+                                    imageParameters += "&version=normal";
+
+                                if (!isTokenSet)
+                                {
+                                    switch (alt.Type)
+                                    {
+                                        case "modal_dfc":
+                                        case "meld":
+                                        case "transform":
+                                            {
+                                                imageParameters += "&face=back";
+                                                break;
+                                            }
+                                        case "flip":
+                                        case "":
+                                            {
+                                                break;
+                                            }
+                                        default:
+                                            {
+                                                //skip any card that has an unusual alt type (like split cards)
+                                                continue;
+                                            }
+                                    }
+                                }
+                                i++;
+
+                                // local image file check
+
+                                var files = FindLocalCardImages(setItem.set, card, alt.Type);
+                                var localImagePath = files.FirstOrDefault();
+
+                                string imageLanguage = null;
+                                int imageTimeStamp = 0;
+                                int imageWidth = 0;
+                                if (localImagePath == null)
+                                {
+                                    localImageUpdater.Report(null);
+                                }
+                                else
+                                {
+                                    if (onlyMissingImages == true)
+                                    {
+                                        webImageUpdater.Report(null);
+                                        continue;
+                                    }
+                                    try
+                                    {
+                                        using (var filestream = File.OpenRead(localImagePath))
+                                        {
+                                            var bitmap = StreamToBitmapImage(filestream);
+                                            localImageUpdater.Report(bitmap);
+                                            using (var image = Image.FromStream(filestream))
+                                            {
+                                                imageLanguage = Encoding.Unicode.GetString(image.PropertyItems.FirstOrDefault(x => x.Id == 40094)?.Value);
+                                                imageTimeStamp = Convert.ToInt32(Encoding.Unicode.GetString(image.PropertyItems.FirstOrDefault(x => x.Id == 40092)?.Value));
+                                                imageWidth = image.Width;
+                                            }
+                                        }
+                                    }
+                                    catch
+                                    {
+
+                                    }
+                                }
+
+                                // get web image data from headers
+
+                                var setCode = isTokenSet ? card.GetProperty("Flags", alt.Type).ToString().ToLower() : setItem.set.ShortName;
+                                var webImageLanguage = selectedLanguage;
+
+                                var url = string.Format("https://api.scryfall.com/cards/{0}/{1}/{2}{3}",
+                                                                                        setCode,
+                                                                                        card.GetProperty("Number", alt.Type).ToString().TrimStart('0'),
+                                                                                        selectedLanguage,
+                                                                                        imageParameters);
+
+                                var header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, url)).Result;
+
+                                if (header.StatusCode != HttpStatusCode.Found)
+                                {
+                                    webImageLanguage = "en";
+                                    var englishUrl = string.Format("https://api.scryfall.com/cards/{0}/{1}/{2}{3}",
+                                                                                            setCode,
+                                                                                            card.GetProperty("Number", alt.Type).ToString().TrimStart('0'),
+                                                                                            "en",
+                                                                                            imageParameters);
+
+                                    header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, englishUrl)).Result;
+
+                                    if (header.StatusCode != HttpStatusCode.Found)
+                                    {
+                                        var backupUrl = string.Format("https://api.scryfall.com/cards/{0}{1}",
+                                                                                            card.Id,
+                                                                                            imageParameters);
+                                        header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, backupUrl)).Result;
+                                        if (header.StatusCode != HttpStatusCode.Found)
+                                        {
+                                            // no image found
+                                            webImageUpdater.Report(null);
+                                            continue;
+                                        }
+                                    }
+                                }
+                                var webImageUrl = header.Headers.Location;
+                                var webTimestamp = Convert.ToInt32(webImageUrl.Query.TrimStart('?'));
+
+                                // figure out if we should be downloading and updating this card image
+
+                                if (localImagePath != null
+                                    && imageWidth != 0
+                                    && imageWidth > 600 == xl
+                                    && imageLanguage.Equals(webImageLanguage,StringComparison.InvariantCultureIgnoreCase)
+                                    && imageTimeStamp >= webTimestamp)
+                                {
+                                    webImageUpdater.Report(null);
+                                    continue;
+                                }
+
+                                // download image
+
+                                var webResponse = Client.GetAsync(webImageUrl).Result;
+                                
+                                using (var webImageStream = webResponse.Content.ReadAsStreamAsync().Result)
+                                {
+                                    if (webImageStream == null)
+                                    {
+                                        // if for whatever reason the image didn't download, skip the install.
+                                        webImageUpdater.Report(null);
+                                        continue;
+                                    }
+                                    using (var ms = new MemoryStream())
+                                    {
+                                        webImageStream.CopyTo(ms);
+                                        webImageUpdater.Report(StreamToBitmapImage(ms));
+                                    }
+                                    using (var newimg = Image.FromStream(webImageStream))
+                                    {
+                                        if (alt.Type == "flip")
+                                        {
+                                            newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate180FlipNone);
+                                        }
+                                        else if (alt.Size.Name == "Plane")
+                                        {
+                                            newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate90FlipNone);
+                                        }
+
+                                        //comment metadata stores the timestamp data to compare updated images
+                                        var commentMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
+                                        commentMetadata.Id = 40092; // this is the comments field
+                                        commentMetadata.Value = Encoding.Unicode.GetBytes(webTimestamp.ToString());
+                                        commentMetadata.Len = commentMetadata.Value.Length;
+                                        commentMetadata.Type = 1;
+                                        newimg.SetPropertyItem(commentMetadata);
+
+                                        //keywords metadata stores language information
+                                        var keywordsMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
+                                        keywordsMetadata.Id = 40094; // this is the keywords field
+                                        keywordsMetadata.Value = Encoding.Unicode.GetBytes(webImageLanguage);
+                                        keywordsMetadata.Len = keywordsMetadata.Value.Length;
+                                        keywordsMetadata.Type = 1;
+                                        newimg.SetPropertyItem(keywordsMetadata);
+
+                                        var garbage = Config.Instance.Paths.GraveyardPath;
+                                        if (!Directory.Exists(garbage)) Directory.CreateDirectory(garbage);
+
+                                        if (files.Count() == 0)
+                                            setItem.ImageCount++;
+
+                                        foreach (var f in files.Select(x => new FileInfo(x)))
+                                        {
+                                            f.MoveTo(Path.Combine(garbage, f.Name));
+                                        }
+
+                                        var imageUri = String.IsNullOrWhiteSpace(alt.Type) ? card.ImageUri : card.ImageUri + "." + alt.Type;
+                                        var newPath = Path.Combine(setItem.set.ImagePackUri, imageUri + ".jpg");
+                                        newimg.Save(newPath, ImageFormat.Jpeg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    finished.Report(true);
+                });
         }
 
         private void ClickSet(object sender, SelectionChangedEventArgs e)
@@ -212,248 +354,25 @@ namespace MTGImageFetcher
                 var card = selectedSet.set.Cards.FirstOrDefault();
                 var cardImageUrl = FindLocalCardImages(selectedSet.set, card, card.Alternate).FirstOrDefault();
 
-                BitmapImage local = cardImageUrl == null ? null : StreamToBitmapImage(UriToStream(cardImageUrl));
-                LocalImage.Source = local;
-                LocalDimensions.Text = local == null ? null : local.PixelWidth.ToString() + " x " + local.PixelHeight.ToString();
-
-                var cardInfo = GetCardInfo(selectedSet, card, "");
-                if (cardInfo == null)
+                if (cardImageUrl != null)
                 {
-                    WebImage.Source = null;
-                }
-                else
-                {
-                    BitmapImage web = StreamToBitmapImage(UriToStream(cardInfo.NormalUrl));
-                    WebImage.Source = web;
-                }
-            }
-        }
-
-
-        public CardInfo GetCardInfo(SetItem setItem, Card card, string alt)
-        {
-            CardInfo ret = null;
-
-            if (setItem.set.Id.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961")
-            {
-                var scryfallSetCode = card.GetProperty("Flags", alt)?.ToString().ToLower();
-                var searchSet = sets.FirstOrDefault(x => x.Code == scryfallSetCode);
-                if (searchSet != null)
-                {
-                    ret = searchSet.FindCard(card, alt);
-                }
-            }
-            else
-            {
-                ret = setItem.setData.FindCard(card, alt);
-            }
-            if (ret != null) return ret;
-
-            foreach (var ex in setItem.extraSets)
-            {
-                ret = ex.FindCard(card, alt);
-                if (ret != null) return ret;
-            }
-
-            return ret;
-        }
-
-        private void DownloadSet(SetItem setItem, IProgress<WorkerItem> progress)
-        {
-            var i = 0;
-            var set = setItem.set; //TODO: remove this and use setItem
-            var setSize = set.Cards.Count();
-
-            foreach (var c in set.Cards)
-            {
-                i++;
-                foreach (var alt in c.PropertySets)
-                {
-                    if (_cts.IsCancellationRequested) break;
-
-                    var cardInfo = GetCardInfo(setItem, c, alt.Key);
-
-                    var workerItem = new WorkerItem();
-                    workerItem.set = setItem;
-                    workerItem.alt = alt.Key;
-                    workerItem.progress = (double)i / setSize;
-                    workerItem.card = c;
-
-                    // get local image info
-
-                    var files = FindLocalCardImages(set, c, workerItem.alt);
-
-                    if (cardInfo == null)
+                    using (var filestream = File.OpenRead(cardImageUrl))
                     {
-                        if (set.Id.ToString() != "a584b75b-266f-4378-bed5-9ffa96cd3961")
-                            MessageBox.Show(String.Format("Cannot find scryfall data for card {0}.", c.Name));
-                        progress.Report(workerItem);
-                        continue;
-                    }
-                    workerItem.local = files.Length > 0 ? UriToStream(files.First()) : null;
-
-                    if (workerItem.local != null && workerItem.local.Length == 0)  //sometimes an empty image file saves into the image database.  This makes sure it's not gonna break anything
-                        workerItem.local = null;
-
-                    var imageDownloadUrl = "";
-                    var flipCard = false;
-
-                    switch (cardInfo.Layout)
-                    {
-                        case "transform":
-                            {
-                                if (workerItem.alt == "transform")
-                                    imageDownloadUrl = xl ? cardInfo.LargeBackUrl : cardInfo.NormalBackUrl;
-                                else
-                                    imageDownloadUrl = xl ? cardInfo.LargeUrl : cardInfo.NormalUrl;
-                                break;
-                            }
-                        case "adventure":
-                        case "split":
-                            {
-                                if (workerItem.alt == "")
-                                    imageDownloadUrl = xl ? cardInfo.LargeUrl : cardInfo.NormalUrl;
-                                break;
-                            }
-                        case "flip":
-                            {
-                                if (workerItem.alt == "flip")
-                                    flipCard = true;
-                                imageDownloadUrl = xl ? cardInfo.LargeUrl : cardInfo.NormalUrl;
-                                break;
-                            }
-                        default:
-                            {
-                                imageDownloadUrl = xl ? cardInfo.LargeUrl : cardInfo.NormalUrl;
-                                break;
-                            }
-                    }
-
-                    // if the card has no web image
-                    if (string.IsNullOrEmpty(imageDownloadUrl))
-                    {
-                        progress.Report(workerItem);
-                        continue;
-                    }
-
-                    // check if the web image has a newer timestamp
-                    var webTimestamp = Convert.ToInt32(imageDownloadUrl.Split('?')[1]);
-
-                    if (workerItem.local != null)
-                    {
-                        try
-                        {
-                            using (var image = Image.FromStream(workerItem.local))
-                            {
-                                if ((image.Width > 600 && xl) || (image.Width < 500 && !xl))
-                                {
-                                    bool hires = (image.PropertyIdList.FirstOrDefault(x => x == 40094) == 0) ? false : Convert.ToBoolean(Encoding.Unicode.GetString(image.GetPropertyItem(40094).Value));
-                                    if (hires && !update)
-                                    {
-                                        progress.Report(workerItem);
-                                        continue;
-                                    }
-
-                                    int localTimestamp = (image.PropertyIdList.FirstOrDefault(x => x == 40092) == 0) ? 0 : Convert.ToInt32(Encoding.Unicode.GetString(image.GetPropertyItem(40092).Value));
-                                    if (webTimestamp <= localTimestamp)
-                                    {
-                                        progress.Report(workerItem);
-                                        continue;
-                                    }
-                                }
-                            }
-                        }
-                        catch (ArgumentException ex)
-                        {
-                            // cleanly catches cases where the image or its headers can't be loaded
-                        }
-                    }
-
-
-                    // download image
-
-                    workerItem.web = UriToStream(imageDownloadUrl);
-
-                    if (workerItem.web == null)
-                    {
-                        progress.Report(workerItem);
-                        continue;
-                    }
-
-                    var garbage = Config.Instance.Paths.GraveyardPath;
-                    if (!Directory.Exists(garbage)) Directory.CreateDirectory(garbage);
-
-                    foreach (var f in files.Select(x => new FileInfo(x)))
-                    {
-                        f.MoveTo(Path.Combine(garbage, f.Name));
-                    }
-
-                    using (var newimg = Image.FromStream(workerItem.web))
-                    {
-                        if (flipCard)
-                        {
-                            newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate180FlipNone);
-                        }
-                        else if (cardInfo.Layout == "planar")
-                        {
-                            newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate90FlipNone);
-                        }
-
-                        var commentMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
-
-                        commentMetadata.Id = 40092; // this is the comments field
-                        commentMetadata.Value = Encoding.Unicode.GetBytes(webTimestamp.ToString());
-                        commentMetadata.Len = commentMetadata.Value.Length;
-                        commentMetadata.Type = 1;
-
-                        newimg.SetPropertyItem(commentMetadata);
-
-                        var keywordsMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
-
-                        keywordsMetadata.Id = 40094; // this is the keywords field
-                        keywordsMetadata.Value = Encoding.Unicode.GetBytes(cardInfo.HiRes.ToString());
-                        keywordsMetadata.Len = keywordsMetadata.Value.Length;
-                        keywordsMetadata.Type = 1;
-
-                        newimg.SetPropertyItem(keywordsMetadata);
-
-
-                        var imageUri = String.IsNullOrWhiteSpace(workerItem.alt) ? c.ImageUri : c.ImageUri + "." + workerItem.alt;
-                        var newPath = Path.Combine(set.ImagePackUri, imageUri + ".jpg");
-                        newimg.Save(newPath, ImageFormat.Jpeg);
-                    }
-
-                    progress.Report(workerItem);
-                }
-            }
-        }
-
-        public void CountImageFiles(SetItem setItem)
-        {
-            setItem.ImageCount = 0;
-            setItem.CardCount = 0;
-
-            foreach (var card in setItem.set.Cards)
-            {
-                foreach (var alt in card.PropertySets.Values)
-                {
-                    if (!alt.Type.Contains("split") && !alt.Type.Contains("adventure"))
-                    {
-                        setItem.CardCount += 1;
-                        if (FindLocalCardImages(setItem.set, card, alt.Type).Count() > 0)
-                        {
-                            setItem.ImageCount += 1;
-                        }
+                        var bitmap = StreamToBitmapImage(filestream);
+                        LocalImageChanged(bitmap);
                     }
                 }
             }
         }
 
-        public string[] FindLocalCardImages(Set set, Card card, string alt)
-        {
+        private static HttpClient Client = new HttpClient(new HttpClientHandler() { AllowAutoRedirect = false });
 
-            var imageUri = card.ImageUri;
-            if (!String.IsNullOrWhiteSpace(alt)) imageUri = imageUri + "." + alt;
+        public static string[] FindLocalCardImages(Set set, Card card, string alt)
+        {
+            return FindLocalCardImages(set, string.IsNullOrWhiteSpace(alt) ? card.ImageUri : card.ImageUri + "." + alt);
+        }
+        public static string[] FindLocalCardImages(Set set, string imageUri)
+        {
             var files =
                 Directory.GetFiles(set.ImagePackUri, imageUri + ".*")
                     .Where(x => System.IO.Path.GetFileNameWithoutExtension(x).Equals(imageUri, StringComparison.InvariantCultureIgnoreCase))
@@ -462,72 +381,58 @@ namespace MTGImageFetcher
             return files;
         }
 
-        private MemoryStream UriToStream(string uri)
+        private BitmapImage StreamToBitmapImage(Stream stream)
         {
-            MemoryStream ms = null;
-            using (WebClient wc = new WebClient())
-            {
-                while (ms == null)
-                {
-                    try
-                    {
-                        byte[] bytes = wc.DownloadData(uri);
-                        ms = new MemoryStream(bytes);
-                    }
-                    catch (WebException e)
-                    {
-                        var ret = MessageBox.Show(String.Format("{0}.  Try again?", e.Message), "Error", MessageBoxButton.YesNo);
-                        if (ret != MessageBoxResult.Yes) return ms;
-                    }
-                }
-            }
-            return ms;
-        }
-
-        private BitmapImage StreamToBitmapImage(MemoryStream ms)
-        {
-            ms.Position = 0;
             var ret = new BitmapImage();
+            stream.Position = 0;
             ret.BeginInit();
-            ret.StreamSource = ms;
+            ret.StreamSource = stream;
             ret.CacheOption = BitmapCacheOption.OnLoad;
             ret.EndInit();
             ret.Freeze();
             return ret;
         }
 
-        private void ProgressChanged(WorkerItem workerItem)
+        private void LocalImageChanged(BitmapImage local)
         {
-            ProgressBar.Value = workerItem.progress;
-            CurrentCard = workerItem.card.PropertySets[workerItem.alt].Name;
-            if (workerItem.set != null && workerItem.local == null && workerItem.web != null)
+            if (local == null)
             {
-                workerItem.set.ImageCount += 1;
+                LocalImage.Source = null;
             }
-
-            if (workerItem.local == null && workerItem.web == null)
+            else
             {
-                return;
-            }
-
-            LocalImage.Source = null;
-            WebImage.Source = null;
-
-            if (workerItem.local != null)
-            {
-                BitmapImage local = StreamToBitmapImage(workerItem.local);
                 LocalImage.Source = local;
                 LocalDimensions.Text = local.PixelWidth.ToString() + " x " + local.PixelHeight.ToString();
             }
-            if (workerItem.web != null)
+        }
+        private void WebImageChanged(BitmapImage web)
+        {
+
+            if (web == null)
             {
-                BitmapImage web = StreamToBitmapImage(workerItem.web);
-                WebImage.Source = web;
-                if (LocalImage.Source == null)
-                {
-                    LocalImage.Source = web;
-                }
+                WebImage.Source = null;
             }
+            else
+            {
+                WebImage.Source = web;
+            }
+        }
+
+        private void ProgressChanged(double progress)
+        {
+            ProgressBar.Value = progress;
+        }
+        private void SetProgressChanged(int progress)
+        {
+            SetProgressBar.Value = progress;
+        }
+        private void CurrentCardChanged(string name)
+        {
+            CurrentCard = name;
+        }
+        private void CurrentSetChanged(string name)
+        {
+            CurrentSet = name;
         }
 
         private void WorkerCompleted()
@@ -535,10 +440,11 @@ namespace MTGImageFetcher
             CurrentCard = "";
             CurrentSet = "";
             XLImages.IsEnabled = true;
-            UpdateImages.IsEnabled = true;
+            MissingImages.IsEnabled = true;
             SetList.IsEnabled = true;
             NameRadio.IsEnabled = true;
             DateRadio.IsEnabled = true;
+            LanguageBox.IsEnabled = true;
             DownloadButton.Visibility = Visibility.Visible;
             DownloadAllButton.Visibility = Visibility.Visible;
             CancelButton.Visibility = Visibility.Collapsed;
@@ -558,10 +464,10 @@ namespace MTGImageFetcher
         {
             xl = XLImages.IsChecked ?? false;
         }
-
-        private void Update_Checked(object sender, RoutedEventArgs e)
+        private void MissingImages_Checked(object sender, RoutedEventArgs e)
         {
-            update = UpdateImages.IsChecked ?? false;
+
+            onlyMissingImages = MissingImages.IsChecked ?? false;
         }
 
         #region INotifyPropertyChanged Members
@@ -586,10 +492,22 @@ namespace MTGImageFetcher
 
         private void DateRadioClick(object sender, RoutedEventArgs e)
         {
-            setList = setList.OrderByDescending(x => x.releaseDate).ToList();
+            setList = setList.OrderByDescending(x => x.ReleaseDate).ToList();
             SetList.ItemsSource = setList;
         }
+
     }
-    
+
+
+    [Serializable]
+    public class MyException : Exception
+    {
+        public MyException() { }
+        public MyException(string message) : base(message) { }
+        public MyException(string message, Exception inner) : base(message, inner) { }
+        protected MyException(
+          SerializationInfo info,
+          StreamingContext context) : base(info, context) { }
+    }
 
 }

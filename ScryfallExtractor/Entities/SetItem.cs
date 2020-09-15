@@ -1,23 +1,31 @@
 ﻿using Octgn.DataNew.Entities;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MTGImageFetcher.Entities
 {
-    public partial class SetItem : INotifyPropertyChanged
+    public class SetItem : INotifyPropertyChanged
     {
         public Set set;
-        public DateTime releaseDate;
-        public int imageCount;
-        public int cardCount;
+        public int? imageCount;
+        public int? cardCount;
 
-        public SetInfo setData;
-        public List<SetInfo> extraSets;
+        public string Code
+        {
+            get
+            {
+                return set.ShortName;
+            }
+        }
 
+        public DateTime ReleaseDate
+        {
+            get
+            {
+                return set.ReleaseDate;
+            }
+        }
         public string Name
         {
             get
@@ -30,13 +38,11 @@ namespace MTGImageFetcher.Entities
         {
             get
             {
-                return cardCount;
-            }
-            set
-            {
-                if (cardCount == value) return;
-                cardCount = value;
-                OnPropertyChanged("CardCount");
+                if (cardCount == null)
+                {
+                    cardCount = set.Cards.SelectMany(x => x.PropertySets).Count(x => !x.Key.Contains("split") && !x.Key.Contains("adventure"));
+                }
+                return (int)cardCount;
             }
         }
 
@@ -44,7 +50,18 @@ namespace MTGImageFetcher.Entities
         {
             get
             {
-                return imageCount;
+                if (imageCount == null)
+                {
+                    var ret = 0;
+                    foreach (var card in set.Cards)
+                    {
+                        ret += card.PropertySets
+                            .Where(x => !x.Key.Contains("split") && !x.Key.Contains("adventure"))
+                            .Count(x => PluginWindow.FindLocalCardImages(set, card, x.Key).Any());
+                    }
+                    imageCount = ret;
+                }
+                return (int)imageCount;
             }
             set
             {
