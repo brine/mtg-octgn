@@ -361,5 +361,14 @@ changelog = {
         ]),
     3060103: ("3.6.1.3", "July 31 2020", [
         "Added Double Masters"
+        ]),
+    3060200: ("3.6.2.0", "September 14 2020", [
+        "Added Zendikar Rising and Commander Green",
+        "Scripting support for casting modal double-faced cards (works like adventure cards)",
+        "Removed flavor text property (at least until they can decide on a consistent formatting)",
+        "Large update to image fetcher plugin:",
+        "- should start up faster, use less CPU and RAM, and download less data",
+        "-  a checkbox to skip cards that already have an image installed",
+        "-  support for downloading images in other languages (does not affect card database properties)"
         ])
 }
