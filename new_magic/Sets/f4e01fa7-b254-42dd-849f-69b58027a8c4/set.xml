@@ -3,46 +3,54 @@
   <packaging>
     <pack name="Booster" id="301c6224-2566-44cc-929d-5eca71bb683c">
       <options>
-        <option probability="0.135135">
+        <option probability="0.101351">
           <pick qty="1" key="Rarity" value="Mythic Rare">
             <property key="Packaging" value="" />
           </pick>
-        </option>
-        <option probability="0.864865">
-          <pick qty="1" key="Rarity" value="Rare">
-            <property key="Packaging" value="" />
-          </pick>
-        </option>
-      </options>
-      <pick qty="3" key="Rarity" value="Uncommon">
-        <property key="Packaging" value="" />
-      </pick>
-      <pick qty="9" key="Rarity" value="Common">
-        <property key="Packaging" value="" />
-      </pick>
-      <options>
-        <option probability="0.05">
-          <pick qty="1" key="Rarity" value="Mythic Rare">
-            <property key="Packaging" value="DFC" />
-          </pick>
-        </option>
-        <option probability="0.2">
-          <pick qty="1" key="Rarity" value="Rare">
-            <property key="Packaging" value="DFC" />
-          </pick>
-        </option>
-        <option probability="0.75">
           <pick qty="1" key="Rarity" value="Uncommon">
             <property key="Packaging" value="DFC" />
           </pick>
+          <pick qty="2" key="Rarity" value="Uncommon">
+            <property key="Packaging" value="" />
+          </pick>
+        </option>
+        <option probability="0.033784">
+          <pick qty="1" key="Rarity" value="Mythic Rare">
+            <property key="Packaging" value="DFC" />
+          </pick>
+          <pick qty="3" key="Rarity" value="Uncommon">
+            <property key="Packaging" value="" />
+          </pick>
+        </option>
+        <option probability="0.716216">
+          <pick qty="1" key="Rarity" value="Rare">
+            <property key="Packaging" value="" />
+          </pick>
+          <pick qty="1" key="Rarity" value="Uncommon">
+            <property key="Packaging" value="DFC" />
+          </pick>
+          <pick qty="2" key="Rarity" value="Uncommon">
+            <property key="Packaging" value="" />
+          </pick>
+        </option>
+        <option probability="0.148649">
+          <pick qty="1" key="Rarity" value="Rare">
+            <property key="Packaging" value="DFC" />
+          </pick>
+          <pick qty="3" key="Rarity" value="Uncommon">
+            <property key="Packaging" value="" />
+          </pick>
         </option>
       </options>
+      <pick qty="10" key="Rarity" value="Common">
+        <property key="Packaging" value="" />
+      </pick>
       <pick qty="1" key="Rarity" value="Basic Land" />
     </pack>
     <pack name="Lands" id="6782b7b6-a10f-42a2-b503-85fd6b4e1366">
       <pick qty="unlimited" key="Rarity" value="Basic Land" />
     </pack>
-  </packaging> 
+  </packaging>
   <cards>
     <card name="Allied Assault" id="340df0d4-9848-4372-9f45-a73a8e94058a">
       <property name="Cost">
@@ -2129,7 +2137,7 @@ When Nullpriest of Oblivion enters the battlefield, if it was kicked, return tar
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Target opponent reveals their hand. You may choose a card from it with converted mana cost 3 or greater. That player discards that card.</property>
-      <property name="Artist" value="" />
+      <property name="Artist" value="Jokubas Uogintas" />
       <property name="Number" value="120" />
       <property name="Packaging" value="DFC" />
       <alternate name="Pelakka Caverns" type="modal_dfc">
@@ -2586,7 +2594,7 @@ Whenever Grotag Bug-Catcher attacks, it gets +1/+0 until end of turn for each cr
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">As an additional cost to cast this spell, sacrifice a creature.
-Kazuul's Fury deals damage equal to the sacrificed creatures power to any target.</property>
+Kazuul's Fury deals damage equal to the sacrificed creature's power to any target.</property>
       <property name="Artist" value="Karl Kopinski" />
       <property name="Number" value="146" />
       <property name="Packaging" value="DFC" />
@@ -3596,7 +3604,7 @@ Draw a card.</property>
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Skyclave Pick-Axe enters the battlefield, attach it to target creature you control.
+      <property name="Rules">When Skyclave Pick-Axe enters the battlefield, attach it to target creature you control.
 Landfall — Whenever a land enters the battlefield under your control, equipped creature gets +2/+2 until end of turn.
 Equip <s value="2">{2}</s><s value="G">{G}</s></property>
       <property name="Artist" value="Dan Scott" />
@@ -4369,7 +4377,7 @@ Whenever you cast a colorless spell, you gain 2 life.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Kicker <s value="3">{3}</s>
 If Myriad Construct was kicked, it enters the battlefield with a +1/+1 counter on it for each nonbasic land your opponents control.
-When Myriad Construct becomes the target of a spell, sacrifice it and create a number of 1/1 colourless Construct artifact creature tokens equal to its power.</property>
+When Myriad Construct becomes the target of a spell, sacrifice it and create a number of 1/1 colorless Construct artifact creature tokens equal to its power.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -4399,7 +4407,7 @@ When Myriad Construct becomes the target of a spell, sacrifice it and create a n
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When Relic Axe enters the battlefield, attach it to target creature you control.
-Equipped creature gets +1/+!. If it's a Warrior, it gets +2/+1 instead.
+Equipped creature gets +1/+1. If it's a Warrior, it gets +2/+1 instead.
 Equip <s value="2">{2}</s></property>
       <property name="Artist" value="Cristi Balanescu" />
       <property name="Number" value="248" />
@@ -4851,6 +4859,61 @@ Equip <s value="3">{3}</s> (<s value="3">{3}</s>: Attach to target creature you 
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
       <property name="Artist" value="Tianhua X" />
       <property name="Number" value="280" />
+      <property name="Flags" value="G" />
+    </card>
+    <card name="Plains" id="ae92e656-6c9d-48c3-a238-5a11c2c62ec8">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Plains" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="W">{W}</s>.)</property>
+      <property name="Artist" value="Adam Paquette" />
+      <property name="Number" value="380" />
+      <property name="Flags" value="W" />
+    </card>
+    <card name="Island" id="589a324f-4466-4d4a-8cfb-806a041d7c1f">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Island" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
+      <property name="Artist" value="Tianhua X" />
+      <property name="Number" value="381" />
+      <property name="Flags" value="U" />
+    </card>
+    <card name="Swamp" id="1967d4a8-6cc4-4a4d-9d24-93257de35e6d">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Swamp" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s>.)</property>
+      <property name="Artist" value="Adam Paquette" />
+      <property name="Number" value="382" />
+      <property name="Flags" value="B" />
+    </card>
+    <card name="Mountain" id="3c6a38dd-e8f5-420f-9576-66937c71286b">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Sam Burley" />
+      <property name="Number" value="383" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Forest" id="2b90e88b-60a3-4d1d-bb8c-14633e5005a5">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Forest" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
+      <property name="Artist" value="Adam Paquette" />
+      <property name="Number" value="384" />
       <property name="Flags" value="G" />
     </card>
     <card name="Jace, Mirror Mage" id="961bb827-f13a-417d-8284-5cd2aac3d034">
@@ -5317,7 +5380,7 @@ At the beginning of your end step, if there are cards exiled with Valakut Explor
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Finnian MacManus" />
       <property name="Number" value="305" />
       <property name="Packaging" value="Special" />
       <alternate name="Kazandu Valley" type="modal_dfc">
@@ -5395,7 +5458,7 @@ At the beginning of your end step, if there are cards exiled with Valakut Explor
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Skyclave Pick-Axe enters the battlefield, attach it to target creature you control.
+      <property name="Rules">When Skyclave Pick-Axe enters the battlefield, attach it to target creature you control.
 Landfall — Whenever a land enters the battlefield under your control, equipped creature gets +2/+2 until end of turn.
 Equip <s value="2">{2}</s><s value="G">{G}</s></property>
       <property name="Artist" value="Pascal Blanché" />
@@ -6716,7 +6779,7 @@ Whenever you cast a colorless spell, you gain 2 life.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Kicker <s value="3">{3}</s>
 If Myriad Construct was kicked, it enters the battlefield with a +1/+1 counter on it for each nonbasic land your opponents control.
-When Myriad Construct becomes the target of a spell, sacrifice it and create a number of 1/1 colourless Construct artifact creature tokens equal to its power.</property>
+When Myriad Construct becomes the target of a spell, sacrifice it and create a number of 1/1 colorless Construct artifact creature tokens equal to its power.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
