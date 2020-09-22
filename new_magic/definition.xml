@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.2.0" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
-    name="Magic the Gathering" tags="mtg" description="Magic: the Gathering"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.2.1" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    name="Magic the Gathering" tags="mtg" description="Magic: the Gathering plugin for OCTGN.&#xD;&#xD;Card images can be installed via the image downloader plugin in the OCTGN Deck Editor."
     setsurl="https://github.com/brine/mtg-octgn" gameurl="https://github.com/brine/mtg-octgn" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
   <scripts>
@@ -20,6 +20,7 @@
 	<event name="OverrideCardsMoved" action="moveEvent" />
 	<event name="OnTableLoaded" action="initializeGame" />
   </events>
+  <gameboards src="background/board.png" x="-7" y="-27" width="76" height="190" />
   <fonts>
     <font src="fonts/MPlantin_chat_symbols.ttf" size="12" target="context"/>
     <font src="fonts/MPlantin_chat_symbols.ttf" size="12" target="chat"/>
@@ -191,7 +192,7 @@
 	<size name="Plane" back="cards/planeback.jpg" front="cards/front.jpg" width="126" height="88" cornerRadius="6" backWidth="126" backHeight="88" backCornerRadius="6" />
 	<size name="Scheme" back="cards/schemeback.jpg" front="cards/front.jpg" width="88" height="126" cornerRadius="6" backWidth="88" backHeight="126" backCornerRadius="6" />
   </card>
-  <table name="Table" visibility="undefined" ordered="False" width="640" height="480" board="background/board.png" boardPosition="-7,-27,76,190" background="background/background.jpg" backgroundStyle="uniformToFill">
+  <table name="Table" visibility="undefined" ordered="False" width="640" height="480" background="background/background.jpg" backgroundStyle="uniformToFill">
     <groupaction menu="Clean-up Targets and Combat" shortcut="esc" execute="clearAll" />
     <groupaction menu="Untap All Permanents" shortcut="ctrl+U" execute="untapStep" />
     <groupaction menu="Roll Die" shortcut="ctrl+R" execute="rollDie" />
