@@ -112,8 +112,6 @@ namespace MTGImageFetcher
             DownloadAllButton.Visibility = Visibility.Collapsed;
             CancelButton.Visibility = Visibility.Visible;
 
-            selectedLanguage = ((ComboBoxItem)LanguageBox.SelectedItem).Tag.ToString();
-
             _cts = new CancellationTokenSource();
             var token = _cts.Token;
 
@@ -344,24 +342,63 @@ namespace MTGImageFetcher
                     finished.Report(true);
                 });
         }
-
         private void ClickSet(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count > 0)
-            {
-                ProgressBar.Value = 0;
-                var selectedSet = e.AddedItems[0] as SetItem;
-                var card = selectedSet.set.Cards.FirstOrDefault();
-                var cardImageUrl = FindLocalCardImages(selectedSet.set, card, card.Alternate).FirstOrDefault();
+            LoadSetPreview();
+        }
 
-                if (cardImageUrl != null)
+        private void LoadSetPreview()
+        {
+            var selectedSet = SetList.SelectedItem as SetItem;
+            if (selectedSet == null) return;
+
+            var card = selectedSet.set.Cards.FirstOrDefault();
+
+            var cardImageFilePath = FindLocalCardImages(selectedSet.set, card, card.Alternate).FirstOrDefault();
+            if (cardImageFilePath == null)
+            {
+                LocalImageChanged(null);
+            }
+            else
+            {
+                using (var filestream = File.OpenRead(cardImageFilePath))
                 {
-                    using (var filestream = File.OpenRead(cardImageUrl))
+                    var bitmap = StreamToBitmapImage(filestream);
+                    LocalImageChanged(bitmap);
+                }
+            }
+
+            var url = string.Format("https://api.scryfall.com/cards/{0}/{1}/{2}?format=image&version={3}",
+                                                                    selectedSet.set.Id.ToString() == "a584b75b-266f-4378-bed5-9ffa96cd3961" ? card.GetProperty("Flags").ToString().ToLower() : selectedSet.set.ShortName,
+                                                                    card.GetProperty("Number").ToString().TrimStart('0'),
+                                                                    selectedLanguage ?? "en",
+                                                                    xl ? "large" : "normal");
+
+            var header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, url)).Result;
+            if (header.StatusCode == HttpStatusCode.Found)
+            {
+                var webResponse = Client.GetAsync(header.Headers.Location).Result;
+
+                using (var webImageStream = webResponse.Content.ReadAsStreamAsync().Result)
+                {
+                    if (webImageStream == null)
                     {
-                        var bitmap = StreamToBitmapImage(filestream);
-                        LocalImageChanged(bitmap);
+                        // if for whatever reason the image didn't download, skip the install.
+                        WebImageChanged(null);
+                    }
+                    else
+                    {
+                        using (var ms = new MemoryStream())
+                        {
+                            webImageStream.CopyTo(ms);
+                            WebImageChanged(StreamToBitmapImage(ms));
+                        }
                     }
                 }
+            }
+            else
+            {
+                WebImageChanged(null);
             }
         }
 
@@ -463,6 +500,7 @@ namespace MTGImageFetcher
         private void XLImages_Checked(object sender, RoutedEventArgs e)
         {
             xl = XLImages.IsChecked ?? false;
+            LoadSetPreview();
         }
         private void MissingImages_Checked(object sender, RoutedEventArgs e)
         {
@@ -496,18 +534,10 @@ namespace MTGImageFetcher
             SetList.ItemsSource = setList;
         }
 
+        private void LanguageBox_Selected(object sender, SelectionChangedEventArgs e)
+        {
+            selectedLanguage = ((ComboBoxItem)LanguageBox.SelectedItem).Tag.ToString();
+            LoadSetPreview();
+        }
     }
-
-
-    [Serializable]
-    public class MyException : Exception
-    {
-        public MyException() { }
-        public MyException(string message) : base(message) { }
-        public MyException(string message, Exception inner) : base(message, inner) { }
-        protected MyException(
-          SerializationInfo info,
-          StreamingContext context) : base(info, context) { }
-    }
-
 }
