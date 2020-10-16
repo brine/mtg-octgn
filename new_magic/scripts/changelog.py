@@ -370,5 +370,8 @@ changelog = {
         "- should start up faster, use less CPU and RAM, and download less data",
         "-  a checkbox to skip cards that already have an image installed",
         "-  support for downloading images in other languages (does not affect card database properties)"
+        ]),
+    3060202: ("3.6.2.2", "October 16 2020", [
+        "Added Zendikar Rising Commander, Mythic Edition Promos, and updated Secret Lair set."
         ])
 }
