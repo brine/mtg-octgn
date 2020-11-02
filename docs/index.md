@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Magic the Gathering OCTGN Game Package
 
-You can use the [editor on GitHub](https://github.com/brine/mtg-octgn/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Thank you for your interest in the MTG game package on OCTGN.  Getting started is super easy!  Follow these steps to begin:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Install Magic: the Gathering
 
-### Markdown
+The game package can be located in OCTGN's Ganes Manager.  Scroll down until you find **Magic the Gathering**, click it, then click the green **install** button.  You should get a check mark once it's installed.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![Games Manager](/images/gamemanager.png)
 
-```markdown
-Syntax highlighted code block
+### Install Card Images
 
-# Header 1
-## Header 2
-### Header 3
+OCTGN's game packages do not come installed with all of the card images.  The MTG game package includes a convenient _deck editor plugin_ which can locate and automatically install missing card images.
 
-- Bulleted
-- List
+1. Open OCTGN's deck editor.
+2. Under the **Deck** menu, select **New** -> **Magic the Gathering**
+3. Allow OCTGN to load the MTG card database (may take a few seconds)
+4. Under the **Plugins** menu, select **Magic: the Gathering Image Downloader**
 
-1. Numbered
-2. List
+![Games Manager](/images/imagedownloader.png)
 
-**Bold** and _Italic_ and `Code` text
+5. You can choose from different configurations for your images, such as image resolution and language.  Sets can be installed one at a time, or you can click **Download all sets** to get them all at once.
 
-[Link](url) and ![Image](src)
-```
+### More information
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/brine/mtg-octgn/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+If you have any questions, please visit OCTGN's Discord server: https://discord.com/invite/Yn3Jrpj
