@@ -402,8 +402,10 @@ tokenTypes = {
     'reflection**w': ('* / * White Reflection', '3f65527f-f8b9-4160-8f29-f4511d390596'),
     'reflection32u': ('3 / 2 Blue Reflection', 'e982d992-0830-42fd-9115-c58c3d1d6035'),
     'rhino44g': ('4 / 4 Green Rhino', 'd1d7612f-a263-469b-ac68-b1b0f56c108c'), #RTR C19
+    'rock': ('Colorless Rock Equipment', 'e4dd2780-55fa-4994-90f5-360b70821f99'),
     'rogue22b': ('2 / 2 Black Rogue', '3fc1240f-2192-4f84-81f7-5cf42f0d2d6e'),
     'ruhk44r': ('4 / 4 Red Ruhk', '64abc862-a3f4-4b4f-b137-33c2508e3eef'),
+    'salamanderwarrior43u': ('4 / 3 Salamander Warrior', 'd261b805-d5ea-4e63-86c1-b02505c3f7c1'),
     'sand11c': ('1 / 1 Colorless Sand', '27f24b0d-073a-40c5-bfc2-a2d2a06554bf'),
     'sandwarrior11m': ('1 / 1 Multicolor Red Green White Sand Warrior', 'ccb8200b-95c3-432d-b2f9-b38df3b77cc5'),
     'saproling11g': ('1 / 1 Green Saproling', '080583c4-5f53-4921-a84d-d840d740e7eb'), #ALA INV DDE M12 M13 ALA RIX DOM DOM DOM C19

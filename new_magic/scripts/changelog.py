@@ -373,5 +373,9 @@ changelog = {
         ]),
     3060202: ("3.6.2.2", "October 16 2020", [
         "Added Zendikar Rising Commander, Mythic Edition Promos, and updated Secret Lair set."
+        ]),
+    3060203: ("3.6.2.3", "November 7 2020", [
+        "Added Commander Legends.",
+        "Fixed Dominaria booster packs to properly seed the legendary creature slot."
         ])
 }

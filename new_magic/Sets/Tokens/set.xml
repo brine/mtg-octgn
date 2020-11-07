@@ -440,6 +440,11 @@
                 <property name="Number" value="13" />
                 <property name="Flags" value="T2XM"/>
             </alternate>
+            <alternate name="Beast" type="11">
+                <property name="Artist" value="Jesper Ejsing" />
+                <property name="Number" value="18" />
+                <property name="Flags" value="TCMR"/>
+            </alternate>
         </card>
         <card name="Beast" id="4f864f66-b573-4b03-8c6a-90918baf8d23">
             <property name="Color" value="Green" />
@@ -909,6 +914,11 @@
                 <property name="Artist" value="Jesper Ejsing" />
                 <property name="Number" value="4" />
                 <property name="Flags" value="T2XM"/>
+            </alternate>
+            <alternate name="Cat" type="3">
+                <property name="Artist" value="Scott Chou" />
+                <property name="Number" value="15" />
+                <property name="Flags" value="TCMR"/>
             </alternate>
         </card>
         <card name="Cat Bird" id="8f8f6d1d-b0a6-43d5-81b4-64e22f3d4a8a">
@@ -1488,18 +1498,14 @@
             <property name="Number" value="6" />
             <property name="Flags" value="TM14"/>
             <alternate name="Dragon" type="1">
-                <property name="Color" value="Red" />
-                <property name="Type" value="Creature" />
-                <property name="Subtype" value="Dragon" />
-                <property name="Rarity" value="Token" />
-                <property name="Rules">Flying
-                    <s value="R">{R}</s>: This creature gets +1/+0 until end of turn.</property>
-                <property name="Power" value="2" />
-                <property name="Toughness" value="2" />
-                <property name="PT Box" value="2 / 2" />
                 <property name="Artist" value="Jack Wang" />
                 <property name="Number" value="7" />
                 <property name="Flags" value="TM15"/>
+            </alternate>
+            <alternate name="Dragon" type="2">
+                <property name="Artist" value="Lars Grant-West" />
+                <property name="Number" value="7" />
+                <property name="Flags" value="TCMR"/>
             </alternate>
         </card>
         <card name="Dragon" id="abdc289a-4783-41db-95bc-42955fef0b16">
@@ -2351,16 +2357,14 @@
             <property name="Number" value="9" />
             <property name="Flags" value="TLRW"/>
             <alternate name="Elf Warrior" type="1">
-                <property name="Color" value="Green" />
-                <property name="Type" value="Creature" />
-                <property name="Subtype" value="Elf Warrior" />
-                <property name="Rarity" value="Token" />
-                <property name="Power" value="1" />
-                <property name="Toughness" value="1" />
-                <property name="PT Box" value="1 / 1" />
                 <property name="Artist" value="William O'Connor" />
                 <property name="Number" value="5" />
                 <property name="Flags" value="TSHM"/>
+            </alternate>
+            <alternate name="Elf Warrior" type="2">
+                <property name="Artist" value="Dominick Domingo" />
+                <property name="Number" value="8" />
+                <property name="Flags" value="TCMR"/>
             </alternate>
         </card>
         <card name="Elf Warrior" id="21a00ccf-853e-4885-8802-3d119b46b03f">
@@ -3006,28 +3010,19 @@
             <property name="Number" value="6" />
             <property name="Flags" value="TSOM"/>
             <alternate name="Golem" type="1">
-                <property name="Color" value="Colorless" />
-                <property name="Type" value="Artifact Creature" />
-                <property name="Subtype" value="Golem" />
-                <property name="Rarity" value="Token" />
-                <property name="Power" value="3" />
-                <property name="Toughness" value="3" />
-                <property name="PT Box" value="3 / 3" />
                 <property name="Artist" value="Volkan Baga" />
                 <property name="Number" value="3" />
                 <property name="Flags" value="TNPH"/>
             </alternate>
             <alternate name="Golem" type="2">
-                <property name="Color" value="Colorless" />
-                <property name="Type" value="Artifact Creature" />
-                <property name="Subtype" value="Golem" />
-                <property name="Rarity" value="Token" />
-                <property name="Power" value="3" />
-                <property name="Toughness" value="3" />
-                <property name="PT Box" value="3 / 3" />
                 <property name="Artist" value="Daarken" />
                 <property name="Number" value="9" />
                 <property name="Flags" value="TM20"/>
+            </alternate>
+            <alternate name="Golem" type="3">
+                <property name="Artist" value="Volkan Baga" />
+                <property name="Number" value="9" />
+                <property name="Flags" value="TCMR"/>
             </alternate>
         </card>
         <card name="Golem" id="b18e2591-c594-425c-9111-771224086f19">
@@ -3491,12 +3486,18 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Illusion" />
             <property name="Rarity" value="Token" />
+            <property name="Rules">Flying</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="PT Box" value="1 / 1" />
             <property name="Artist" value="Véronique Meignaud" />
             <property name="Number" value="4" />
             <property name="Flags" value="TMMA"/>
+            <alternate name="Illusion" type="1">
+                <property name="Artist" value="Veronique Meignaud" />
+                <property name="Number" value="17" />
+                <property name="Flags" value="TCMR"/>
+            </alternate>
         </card>
         <card name="Illusion" id="d6069520-e625-42cb-847d-c04be219b1c6">
             <property name="Color" value="Blue" />
@@ -4149,6 +4150,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Mike Bierek" />
             <property name="Number" value="1" />
             <property name="Flags" value="TCN2"/>
+            <alternate name="The Monarch" type="1">
+                <property name="Artist" value="Volkan Baga" />
+                <property name="Number" value="14" />
+                <property name="Flags" value="TCMR"/>
+            </alternate>
         </card>
         <card name="Monk" id="5b6e6944-f114-42bc-bbea-cfff3e4f5fab">
             <property name="Color" value="White" />
@@ -4703,6 +4709,17 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
                 <property name="Flags" value="TC19"/>
             </alternate>
         </card>
+        <card name="Rock" id="e4dd2780-55fa-4994-90f5-360b70821f99">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact" />
+            <property name="Subtype" value="Equipment" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Equipped creature has "<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Rock: This creature deals 2 damage to any target.
+            Equip <s value="1">{1}</s></property>
+            <property name="Artist" value="Tomasz Jedruszek" />
+            <property name="Number" value="11" />
+            <property name="Flags" value="TCMR"/>
+        </card>
         <card name="Rogue" id="3fc1240f-2192-4f84-81f7-5cf42f0d2d6e">
             <property name="Color" value="Black" />
             <property name="Type" value="Creature" />
@@ -4729,6 +4746,18 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Edward P. Beard, Jr." />
             <property name="Number" value="7" />
             <property name="Flags" value="P03"/>
+        </card>
+        <card name="Salamander Warrior" id="d261b805-d5ea-4e63-86c1-b02505c3f7c1">
+            <property name="Color" value="Blue" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Salamander Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="4" />
+            <property name="Toughness" value="3" />
+            <property name="PT Box" value="4 / 3" />
+            <property name="Artist" value="J.P. Targete" />
+            <property name="Number" value="4" />
+            <property name="Flags" value="TCMR"/>
         </card>
         <card name="Sand" id="27f24b0d-073a-40c5-bfc2-a2d2a06554bf">
             <property name="Color" value="Colorless" />
@@ -5195,6 +5224,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
                 <property name="Artist" value="Jakub Kasper" />
                 <property name="Number" value="2" />
                 <property name="Flags" value="TM20"/>
+            </alternate>
+            <alternate name="Soldier" type="14">
+                <property name="Artist" value="Svetlin Velinov" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="TCMR"/>
             </alternate>
         </card>
         <card name="Soldier" id="d4d816a4-c805-4ae4-b633-7fd5515f5db4">
@@ -5834,6 +5868,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Véronique Meignaud" />
             <property name="Number" value="3" />
             <property name="Flags" value="TDDC"/>
+            <alternate name="Thrull" type="1">
+                <property name="Artist" value="Veronique Meignaud" />
+                <property name="Number" value="5" />
+                <property name="Flags" value="TCMR"/>
+            </alternate>
         </card>
         <card name="Thrull" id="588e17d2-4edc-44e0-af9c-e2fc31b621c4">
             <property name="Color" value="Black" />
@@ -6692,6 +6731,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
                 <property name="Artist" value="Anna Steinbauer" />
                 <property name="Number" value="9" />
                 <property name="Flags" value="TC20"/>
+            </alternate>
+            <alternate name="Zombie" type="26">
+                <property name="Artist" value="Paul Scott Canavan" />
+                <property name="Number" value="6" />
+                <property name="Flags" value="TCMR"/>
             </alternate>
         </card>
         <card name="Zombie" id="ebc67e29-00a2-4a72-806b-915fa5f9d75e">

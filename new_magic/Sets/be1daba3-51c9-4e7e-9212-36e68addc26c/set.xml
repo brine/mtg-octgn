@@ -3,20 +3,47 @@
   <packaging>
     <pack name="Booster" id="55353409-8854-4cd0-8136-2ad7560d97a6">
       <options>
-        <option probability="0.125">
-          <pick qty="1" key="Rarity" value="Mythic Rare">
+      
+        <option probability="0.25">
+          <options>
+            <option probability="0.125">
+              <pick qty="1" key="Rarity" value="Mythic Rare">
+                <property key="Packaging" value="Legendary" />
+              </pick>
+            </option>
+            <option probability="0.875">
+              <pick qty="1" key="Rarity" value="Rare">
+                <property key="Packaging" value="Legendary" />
+              </pick>
+            </option>
+          </options>
+          <pick qty="3" key="Rarity" value="Uncommon">
             <property key="Packaging" value="" />
           </pick>
         </option>
-        <option probability="0.875">
-          <pick qty="1" key="Rarity" value="Rare">
+        
+        <option probability="0.75">
+          <pick qty="1" key="Rarity" value="Uncommon">
+            <property key="Packaging" value="Legendary" />
+          </pick>
+          <options>
+            <option probability="0.125">
+              <pick qty="1" key="Rarity" value="Mythic Rare">
+                <property key="Packaging" value="" />
+              </pick>
+            </option>
+            <option probability="0.875">
+              <pick qty="1" key="Rarity" value="Rare">
+                <property key="Packaging" value="" />
+              </pick>
+            </option>
+          </options>
+          <pick qty="2" key="Rarity" value="Uncommon">
             <property key="Packaging" value="" />
           </pick>
         </option>
+        
       </options>
-      <pick qty="3" key="Rarity" value="Uncommon">
-        <property key="Packaging" value="" />
-      </pick>
       <pick qty="10" key="Rarity" value="Common">
         <property key="Packaging" value="" />
       </pick>
@@ -639,7 +666,6 @@ You, planeswalkers you control, and other creatures you control have hexproof.
       <property name="Artist" value="Victor Adame Minguez" />
       <property name="Number" value="035" />
       <property name="MultiverseId" value="442923" />
-      <property name="Packaging" value="Legendary" />
     </card>
     <card name="Teshar, Ancestor's Apostle" id="f6d115b4-51d5-4898-b56c-2729aa428018">
       <property name="Cost">
@@ -1673,7 +1699,6 @@ When Josu Vess, Lich Knight enters the battlefield, if it was kicked, create eig
       <property name="Artist" value="Tyler Jacobson" />
       <property name="Number" value="095" />
       <property name="MultiverseId" value="442983" />
-      <property name="Packaging" value="Legendary" />
     </card>
     <card name="Kazarov, Sengir Pureblood" id="2aff7077-496b-46ca-b9d7-a8c1772f9a91">
       <property name="Cost">
@@ -3418,7 +3443,6 @@ At the beginning of your upkeep, if Darigaaz is exiled with an egg counter on it
       <property name="Artist" value="Grzegorz Rutkowski" />
       <property name="Number" value="193" />
       <property name="MultiverseId" value="443081" />
-      <property name="Packaging" value="Legendary" />
     </card>
     <card name="Garna, the Bloodflame" id="ae9c1471-ae6f-4b66-9842-46f1a74e93b5">
       <property name="Cost">
@@ -3545,7 +3569,6 @@ You may pay <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value
       <property name="Artist" value="Jason Rainville" />
       <property name="Number" value="199" />
       <property name="MultiverseId" value="443087" />
-      <property name="Packaging" value="Legendary" />
     </card>
     <card name="Oath of Teferi" id="5a7fadca-0a94-4624-ab95-2c2410829824">
       <property name="Cost">
@@ -4136,6 +4159,7 @@ Whenever you cast a historic spell, untap Traxos. (Artifacts, legendaries, and S
       <property name="Artist" value="Lius Lasahido" />
       <property name="Number" value="234" />
       <property name="MultiverseId" value="443122" />
+      <property name="Packaging" value="Legendary" />
     </card>
     <card name="Urza's Tome" id="d6bead8b-a67f-4451-9d44-038f8688093f">
       <property name="Cost">
