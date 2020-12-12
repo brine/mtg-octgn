@@ -1,18 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Commander Legends" id="39de6fbf-1f11-48d0-8f04-f0407f6a0732" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="cmr" releaseDate="2020-11-11">
-   <packaging>
+<set name="Commander Legends" id="39de6fbf-1f11-48d0-8f04-f0407f6a0732" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="cmr" releaseDate="2020-11-20">
+  <packaging>
     <pack name="Booster" id="dfd529df-1cf1-4ec5-b2a9-5c3b58d88b99">
-        <options>
+      <options>
         <option probability="0.806">
           <pick qty="1" key="Packaging" value="" />
         </option>
         <option probability="0.194">
           <pick qty="1" key="Packaging" value="Commander" />
         </option>
-        </options>
-      <pick qty="2" key="Packaging" value="Commander">
-      </pick>
-        <options>
+      </options>
+      <pick qty="2" key="Packaging" value="Commander" />
+      <options>
         <option probability="0.125">
           <pick qty="1" key="Rarity" value="Mythic Rare">
             <property key="Packaging" value="" />
@@ -23,7 +22,7 @@
             <property key="Packaging" value="" />
           </pick>
         </option>
-        </options>
+      </options>
       <pick qty="3" key="Rarity" value="Uncommon">
         <property key="Packaging" value="" />
       </pick>
@@ -35,8 +34,7 @@
       <pick qty="unlimited" key="Rarity" value="Basic Land" />
     </pack>
   </packaging>
-
- <cards>
+  <cards>
     <card name="The Prismatic Piper" id="a69e6d8f-f742-4508-a83a-38ae84be228c">
       <property name="Cost">
         <s value="5">{5}</s>
@@ -138,7 +136,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Flying
-When Angel of the Dawn enters the battlefield, creatures you control get +1/+1 and gain vigilance until end of turn. (Attacking doesn't cause them to tap.)</property>
+When Angel of the Dawn enters the battlefield, creatures you control get +1/+1 and gain vigilance until end of turn.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -388,7 +386,7 @@ Enchanted permanent can't attack or block, and its activated abilities can't be 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Double strike (This creature deals both first-strike and regular combat damage.)</property>
+      <property name="Rules">Double strike</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -599,7 +597,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Search your library for an Aura or Equipment card, reveal it, and put it into your hand. Then shuffle your library.</property>
+      <property name="Rules">Search your library for an Aura or Equipment card, reveal it, put it into your hand, then shuffle your library.</property>
       <property name="Artist" value="Steve Prescott" />
       <property name="Number" value="034" />
     </card>
@@ -767,8 +765,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Flying
-Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
+      <property name="Rules">Flying, lifelink</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
@@ -800,7 +797,7 @@ Equip <s value="4">{4}</s></property>
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Destroy target creature with power 3 or greater. Scry 1.</property>
+      <property name="Rules">Destroy target creature with power 3 or greater. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)</property>
       <property name="Artist" value="Chris Rallis" />
       <property name="Number" value="046" />
     </card>
@@ -880,7 +877,7 @@ Encore <s value="7">{7}</s><s value="W">{W}</s><s value="W">{W}</s> (<s value="7
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Vigilance (Attacking doesn't cause this creature to tap.)
+      <property name="Rules">Vigilance
 Squad Captain enters the battlefield with a +1/+1 counter on it for each other creature you control.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -1071,7 +1068,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Enchant permanent (Target a permanent as you cast this. This card enters the battlefield attached to that permanent.)
+      <property name="Rules">Enchant permanent
 You control enchanted permanent.</property>
       <property name="Artist" value="Adam Rex" />
       <property name="Number" value="062" />
@@ -1122,7 +1119,7 @@ Whenever Daring Saboteur deals combat damage to a player, you may draw a card. I
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Mill a card: Add <s value="C">{C}</s>.</property>
+        <s value="T">{T}</s>, Mill a card: Add <s value="C">{C}</s>. (To mill a card, put the top card of your library into your graveyard.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1563,7 +1560,7 @@ You may have Sakashima's Protege enter the battlefield as a copy of any permanen
       <property name="Rarity" value="Rare" />
       <property name="Rules">Choose one. If you control a commander as you cast this spell, you may choose both.
 • Target opponent chooses a creature they control. You gain control of it.
-• Choose a creature you control. Each other creautre you control becomes a copy of that creature until end of turn.</property>
+• Choose a creature you control. Each other creature you control becomes a copy of that creature until end of turn.</property>
       <property name="Artist" value="Volkan Baǵa" />
       <property name="Number" value="091" />
     </card>
@@ -1668,7 +1665,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Subtype" value="Zombie Giant" />
       <property name="Rarity" value="Common" />
       <property name="Rules">As an additional cost to cast this spell, exile two creature cards from your graveyard.
-Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)</property>
+Trample</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="9" />
       <property name="PT Box" value="6 / 9" />
@@ -1720,7 +1717,7 @@ At the beginning of your postcombat main phase, you get an additional beginning 
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Flash (You may cast this spell any time you could cast an instant.)
+      <property name="Rules">Flash
 Enchant creature
 Enchanted creature gets -X/-0, where X is the number of cards in your graveyard.</property>
       <property name="Artist" value="Christopher Moeller" />
@@ -1872,7 +1869,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Target creature gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it.)
+      <property name="Rules">Target creature gains deathtouch until end of turn.
 Draw a card.</property>
       <property name="Artist" value="Winona Nelson" />
       <property name="Number" value="110" />
@@ -1887,7 +1884,7 @@ Draw a card.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Assassin" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Whenever Briarblade Adept attacks, target creature an opponent controls get -1/-1 until end of turn.
+      <property name="Rules">Whenever Briarblade Adept attacks, target creature an opponent controls gets -1/-1 until end of turn.
 Encore <s value="3">{3}</s><s value="B">{B}</s> (<s value="3">{3}</s><s value="B">{B}</s>, Exile this card from your graveyard: For each opponent, create a token copy that attacks that opponent this turn if able. They gain haste. Sacrifice them at the beginning of the next end step. Activate only as a sorcery.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
@@ -1917,7 +1914,7 @@ Encore <s value="3">{3}</s><s value="B">{B}</s> (<s value="3">{3}</s><s value="B
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Mill three cards, then you may return a creature card from your graveyard to your hand.</property>
+      <property name="Rules">Mill three cards, then you may return a creature card from your graveyard to your hand. (To mill a card, put the top card of your library into your graveyard.)</property>
       <property name="Artist" value="Magali Villeneuve" />
       <property name="Number" value="113" />
     </card>
@@ -1947,7 +1944,7 @@ At the beginning of your upkeep, each opponent loses 3 life unless they discard 
       <property name="Subtype" value="Zombie Bird" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Flying
-When Crow of Dark Tidings enters the battlefield or dies, mill two cards.</property>
+When Crow of Dark Tidings enters the battlefield or dies, mill two cards. (Put the top two cards of your library into your graveyard.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -2013,7 +2010,7 @@ At the beginning of your end step, you lose 2 life for each card in your hand.</
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Rogue" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">As long as you control an artifact, Dhund Operative gets +1/+0 and has deathtouch. (Any amount of damage it deals to a creature is enough to destroy it.)</property>
+      <property name="Rules">As long as you control an artifact, Dhund Operative gets +1/+0 and has deathtouch.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -2273,6 +2270,25 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Rules">Destroy target creature.</property>
       <property name="Artist" value="Allen Williams" />
       <property name="Number" value="134" />
+    </card>
+    <card name="Nadier, Agent of the Duskenel" id="47c5948b-b021-4d07-8003-9c11db690bc0">
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Elf Warrior" />
+      <property name="Rarity" value="Uncommon" />
+      <property name="Rules">Whenever a token you control leaves the battlefield, put a +1/+1 counter on Nadier, Agent of the Duskenel.
+When Nadier leaves the battlefield, create a number of 1/1 green Elf Warrior creature tokens equal to its power.
+Partner (You can have two commanders if both have partner.)</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="3" />
+      <property name="PT Box" value="3 / 3" />
+      <property name="Artist" value="Yongjae Choi" />
+      <property name="Number" value="135" />
     </card>
     <card name="Nadier's Nightblade" id="11fbba08-0d93-4750-9dd6-d6a2779c6cf3">
       <property name="Cost">
@@ -2589,7 +2605,7 @@ Partner</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Assassin" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
+      <property name="Rules">Deathtouch
 When Thorn of the Black Rose enters the battlefield, you become the monarch.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
@@ -2913,7 +2929,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dragon Egg" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Defender (This creature can't attack.)
+      <property name="Rules">Defender
 When Dragon Egg dies, create a 2/2 red Dragon creature token with flying and "<s value="R">{R}</s>: This creature gets +1/+0 until end of turn."</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="2" />
@@ -3008,7 +3024,7 @@ Encore <s value="5">{5}</s><s value="R">{R}</s> (<s value="5">{5}</s><s value="R
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Commander spells you cast have cascade. (Whenever you cast your commander, exile cards from the top of your library until you exile a nonland card with lesser converted mana cost. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
+      <property name="Rules">Commander spells you cast have cascade. (Whenever you cast a commander, exile cards from the top of your library until you exile a nonland card with lesser converted mana cost. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -3027,6 +3043,9 @@ Encore <s value="5">{5}</s><s value="R">{R}</s> (<s value="5">{5}</s><s value="R
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Haste
 All creatures can attack your opponents and planeswalkers your opponents control as though those creatures had haste.</property>
+      <property name="Power" value="5" />
+      <property name="Toughness" value="4" />
+      <property name="PT Box" value="5 / 4" />
       <property name="Artist" value="Wisnu Tan" />
       <property name="Number" value="180" />
     </card>
@@ -3054,7 +3073,7 @@ All creatures can attack your opponents and planeswalkers your opponents control
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin Pirate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Menace</property>
+      <property name="Rules">Menace (This creature can't be blocked except by two or more creatures.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -3126,7 +3145,7 @@ Encore <s value="3">{3}</s><s value="R">{R}</s> (<s value="3">{3}</s><s value="R
       <property name="Subtype" value="Jeska" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Jeska, Thrice Reborn enters the battlefield with a loyalty counter on it for each time you've cast a commander from the command zone this game.
-+0: Choose target creature. Until your next turn, if that creature would deal combat damage to one of your opponents, it deals triple that damage to that player instead.
+0: Choose target creature. Until your next turn, if that creature would deal combat damage to one of your opponents, it deals triple that damage to that player instead.
 −X: Jeska, Thrice Reborn deals X damage to each of up to three targets.
 Jeska, Thrice Reborn can be your commander.
 Partner (You can have two commanders if both have partner.)</property>
@@ -3348,7 +3367,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Giant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Reach (This creature can block creatures with flying.)</property>
+      <property name="Rules">Reach</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="4 / 3" />
@@ -3426,7 +3445,7 @@ When Sparktongue Dragon enters the battlefield, you may pay <s value="2">{2}</s>
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Goblin Artificer" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever a land enters the battlefield under your control, create an artifact equipment token named Rock with "Equipped creature has '<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Rock: This creature deals 2 damage to any target'" and equip <s value="1">{1}</s>.
+      <property name="Rules">Whenever a land enters the battlefield under your control, create a colorless Equipment artifact token named Rock with "Equipped creature has '<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Rock: This creature deals 2 damage to any target'" and equip <s value="1">{1}</s>.
 Partner (You can have two commanders if both have partner.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -3480,8 +3499,7 @@ When Undying Rage is put into a graveyard from the battlefield, return Undying R
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying (This creature can't be blocked except by creatures with flying or reach.)
-Haste (This creature can attack and <s value="T">{T}</s> as soon as it comes under your control.)</property>
+      <property name="Rules">Flying, haste</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -3571,8 +3589,8 @@ Enchanted creature gets +2/+2, has first strike, and can't attack you or a plane
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Snake" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Flash (You may cast this spell any time you could cast an instant.)
-Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)</property>
+      <property name="Rules">Flash
+Deathtouch</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -3639,7 +3657,7 @@ Cascade (When you cast this spell, exile cards from the top of your library unti
       <property name="CMC" value="10" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Hydra Chimera" />
+      <property name="Subtype" value="Chimera Hydra" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Cascade, cascade, cascade, cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order. Multiple instances of cascade each trigger separately.)</property>
       <property name="Power" value="10" />
@@ -3955,7 +3973,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Other Elf creatures you control get +1/+1.
+      <property name="Rules">Other Elves you control get +1/+1.
 <s value="G">{G}</s>, <s value="T">{T}</s>: Create a 1/1 green Elf Warrior creature token.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -4060,7 +4078,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Archer" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Reach (This creature can block creatures with flying.)
+      <property name="Rules">Reach
 Whenever you cast an Elf spell, you may have Lys Alana Bowmaster deal 2 damage to target creature with flying.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -4264,8 +4282,7 @@ At the beginning of your upkeep, you may move any number of +1/+1 counters from 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spider" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Vigilance (Attacking doesn't cause this creature to tap.)
-Reach (This creature can block creatures with flying.)</property>
+      <property name="Rules">Vigilance, reach</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -4302,7 +4319,7 @@ When Sifter Wurm enters the battlefield, scry 3, then reveal the top card of you
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Ape Shaman" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
+      <property name="Rules">Trample
 When Silverback Shaman dies, draw a card.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
@@ -4405,7 +4422,7 @@ When Sweet-Gum Recluse enters the battlefield, put three +1/+1 counters on each 
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Search your library for a Forest card and put that card onto the battlefield. Then shuffle your library.</property>
+      <property name="Rules">Search your library for a Forest card, put that card onto the battlefield, then shuffle your library.</property>
       <property name="Artist" value="Yeong-Hao Han" />
       <property name="Number" value="261" />
     </card>
@@ -4793,7 +4810,7 @@ Spells you cast with converted mana cost 6 or greater have cascade.</property>
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Jared Carthalion, True Heir enters the battlefield, target opponent becomes the monarch. You can't become the monarch this turn.
-If damage would be dealt to Jared Carthalion while you're the monarch, prevents that damage and put that many +1/+1 counters on it.</property>
+If damage would be dealt to Jared Carthalion while you're the monarch, prevent that damage and put that many +1/+1 counters on it.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -4812,7 +4829,7 @@ If damage would be dealt to Jared Carthalion while you're the monarch, prevents 
       <property name="Subtype" value="Human Shaman" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Whenever you sacrifice a permanent, put a +1/+1 counter on Juri, Master of the Revue.
-When Juri dies, it deals damage equal its power to any target.</property>
+When Juri dies, it deals damage equal to its power to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -4920,7 +4937,7 @@ When Nevinyrral dies, you may pay <s value="1">{1}</s>. When you do, destroy all
       <property name="Power" value="3" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="3 / 6" />
-      <property name="Artist" value="Christine Choi" />
+      <property name="Artist" value="Yongjae Choi" />
       <property name="Number" value="287" />
       <property name="Packaging" value="Commander" />
     </card>
@@ -4976,7 +4993,7 @@ Whenever you cast your first spell during each opponent's turn, look at the top 
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dwarf Artificer" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever an enchanted or equipped creature you control attacks, that creature gains double strike until end of turn</property>
+      <property name="Rules">Whenever an enchanted or equipped creature you control attacks, that creature gains double strike until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -5074,7 +5091,7 @@ Whenever Zara, Renegade Recruiter attacks, look at defending player's hand. You 
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Equipped creature gets +3/+0 and is every creature type.
-Equip <s value="3">{3}</s></property>
+Equip <s value="3">{3}</s> (<s value="3">{3}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="295" />
     </card>
@@ -5088,7 +5105,7 @@ Equip <s value="3">{3}</s></property>
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Equipped creature gets +2/+2, has flying, and is a white Angel in addition to its other colors and types.
-Equip <s value="4">{4}</s></property>
+Equip <s value="4">{4}</s> (<s value="4">{4}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Daniel Ljunggren" />
       <property name="Number" value="296" />
     </card>
@@ -5128,7 +5145,7 @@ Equip <s value="4">{4}</s></property>
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Whenever equipped creature attacks, put a +1/+1 counter on it.
-Equip <s value="2">{2}</s></property>
+Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Yeong-Hao Han" />
       <property name="Number" value="299" />
     </card>
@@ -5206,7 +5223,7 @@ Creatures of the chosen type get +1/+1.</property>
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Target player mills a card.
+        <s value="T">{T}</s>: Target player mills a card. (They put the top card of their library into their graveyard.)
 <s value="5">{5}</s>, <s value="T">{T}</s>, Sacrifice Codex Shredder: Return target card from your graveyard to your hand.</property>
       <property name="Artist" value="Jason Felix" />
       <property name="Number" value="304" />
@@ -5343,7 +5360,7 @@ Equip <s value="0">{0}</s> (<s value="0">{0}</s>: Attach to target creature you 
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Equipped creature has vigilance, trample, and haste.
-Equip <s value="1">{1}</s></property>
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Volkan Baǵa" />
       <property name="Number" value="313" />
     </card>
@@ -5358,7 +5375,7 @@ Equip <s value="1">{1}</s></property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Equipped creature gets +3/+2.
 Whenever a legendary creature enters the battlefield under your control, you may attach Hero's Blade to it.
-Equip <s value="4">{4}</s></property>
+Equip <s value="4">{4}</s> (<s value="4">{4}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Aaron Miller" />
       <property name="Number" value="314" />
     </card>
@@ -5571,7 +5588,7 @@ Remove two +1/+1 counters from Mindless Automaton: Draw a card.</property>
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Equipped creature gets +1/+1 for each creature you control.
-Equip <s value="4">{4}</s></property>
+Equip <s value="4">{4}</s> (<s value="4">{4}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Alex Horley-Orlandelli" />
       <property name="Number" value="329" />
     </card>
@@ -5704,7 +5721,7 @@ When Sandstone Oracle enters the battlefield, choose an opponent. If that player
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s>. (<s value="C">{C}</s> represents colorless mana.)
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="2">{2}</s>, <s value="T">{T}</s>: Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)</property>
       <property name="Artist" value="Jung Park" />
       <property name="Number" value="338" />
@@ -5908,7 +5925,7 @@ When Guildless Commons enters the battlefield, return a land you control to its 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Path of Ancestry enters the battlefield tapped.
-<s value="T">{T}</s>: Add one mana of any color in your commander's color identity. When that mana is spent to cast a creature spell that shares a creature type with your commander, scry 1.</property>
+<s value="T">{T}</s>: Add one mana of any color in your commander's color identity. When that mana is spent to cast a creature spell that shares a creature type with your commander, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)</property>
       <property name="Artist" value="Alayna Danner" />
       <property name="Number" value="353" />
       <property name="Flags" value="M" />
@@ -7805,7 +7822,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Equipped creature has vigilance, trample, and haste.
-Equip <s value="1">{1}</s></property>
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Volkan Baǵa" />
       <property name="Number" value="463" />
       <property name="Packaging" value="Special" />
@@ -7821,7 +7838,7 @@ Equip <s value="1">{1}</s></property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Equipped creature gets +3/+2.
 Whenever a legendary creature enters the battlefield under your control, you may attach Hero's Blade to it.
-Equip <s value="4">{4}</s></property>
+Equip <s value="4">{4}</s> (<s value="4">{4}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Aaron Miller" />
       <property name="Number" value="464" />
       <property name="Packaging" value="Special" />
@@ -8477,7 +8494,7 @@ Partner</property>
       <property name="Subtype" value="Jeska" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Jeska, Thrice Reborn enters the battlefield with a loyalty counter on it for each time you've cast a commander from the command zone this game.
-+0: Choose target creature. Until your next turn, if that creature would deal combat damage to one of your opponents, it deals triple that damage to that player instead.
+0: Choose target creature. Until your next turn, if that creature would deal combat damage to one of your opponents, it deals triple that damage to that player instead.
 −X: Jeska, Thrice Reborn deals X damage to each of up to three targets.
 Jeska, Thrice Reborn can be your commander.
 Partner (You can have two commanders if both have partner.)</property>
@@ -8832,7 +8849,7 @@ Whenever an opponent draws a card, Nekusar, the Mindrazer deals 1 damage to that
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">When you cast this spell, create X 0/1 red Kobold creature tokens named Kobolds of Kher Keep, where X is the amount of mana spent to cast Prossh.
+      <property name="Rules">When you cast this spell, create X 0/1 red Kobold creature tokens named Kobolds of Kher Keep, where X is the amount of mana spent to cast it.
 Flying
 Sacrifice another creature: Prossh, Skyraider of Kher gets +1/+0 until end of turn.</property>
       <property name="Power" value="5" />
@@ -9077,7 +9094,7 @@ At the beginning of combat on your turn, another target creature you control gai
       <property name="Power" value="6" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="6 / 5" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Jason Chan" />
       <property name="Number" value="541" />
       <property name="Packaging" value="Special" />
     </card>
@@ -9541,7 +9558,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Jesper Ejsing" />
       <property name="Number" value="564" />
       <property name="Packaging" value="Special" />
     </card>
@@ -9582,6 +9599,27 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="PT Box" value="1 / 2" />
       <property name="Artist" value="Johannes Voss" />
       <property name="Number" value="566" />
+      <property name="Faction" value="Set" />
+      <property name="Packaging" value="Special" />
+    </card>
+    <card name="Nadier, Agent of the Duskenel" id="706b078f-0355-45cd-94db-26b925777efe">
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Elf Warrior" />
+      <property name="Rarity" value="Uncommon" />
+      <property name="Rules">Whenever a token you control leaves the battlefield, put a +1/+1 counter on Nadier, Agent of the Duskenel.
+When Nadier leaves the battlefield, create a number of 1/1 green Elf Warrior creature tokens equal to its power.
+Partner (You can have two commanders if both have partner.)</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="3" />
+      <property name="PT Box" value="3 / 3" />
+      <property name="Artist" value="Yongjae Choi" />
+      <property name="Number" value="567" />
       <property name="Faction" value="Set" />
       <property name="Packaging" value="Special" />
     </card>
@@ -9755,7 +9793,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Goblin Artificer" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever a land enters the battlefield under your control, create an artifact equipment token named Rock with "Equipped creature has '<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Rock: This creature deals 2 damage to any target'" and equip <s value="1">{1}</s>.
+      <property name="Rules">Whenever a land enters the battlefield under your control, create a colorless Equipment artifact token named Rock with "Equipped creature has '<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Rock: This creature deals 2 damage to any target'" and equip <s value="1">{1}</s>.
 Partner (You can have two commanders if both have partner.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -10269,7 +10307,7 @@ Spells you cast with converted mana cost 6 or greater have cascade.</property>
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Jared Carthalion, True Heir enters the battlefield, target opponent becomes the monarch. You can't become the monarch this turn.
-If damage would be dealt to Jared Carthalion while you're the monarch, prevents that damage and put that many +1/+1 counters on it.</property>
+If damage would be dealt to Jared Carthalion while you're the monarch, prevent that damage and put that many +1/+1 counters on it.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -10289,7 +10327,7 @@ If damage would be dealt to Jared Carthalion while you're the monarch, prevents 
       <property name="Subtype" value="Human Shaman" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Whenever you sacrifice a permanent, put a +1/+1 counter on Juri, Master of the Revue.
-When Juri dies, it deals damage equal its power to any target.</property>
+When Juri dies, it deals damage equal to its power to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -10400,7 +10438,7 @@ When Nevinyrral dies, you may pay <s value="1">{1}</s>. When you do, destroy all
       <property name="Power" value="3" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="3 / 6" />
-      <property name="Artist" value="Christine Choi" />
+      <property name="Artist" value="Yongjae Choi" />
       <property name="Number" value="607" />
       <property name="Faction" value="Set" />
       <property name="Packaging" value="Special" />
@@ -10458,7 +10496,7 @@ Whenever you cast your first spell during each opponent's turn, look at the top 
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dwarf Artificer" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever an enchanted or equipped creature you control attacks, that creature gains double strike until end of turn</property>
+      <property name="Rules">Whenever an enchanted or equipped creature you control attacks, that creature gains double strike until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -11014,7 +11052,7 @@ You may have Sakashima's Protege enter the battlefield as a copy of any permanen
       <property name="Rarity" value="Rare" />
       <property name="Rules">Choose one. If you control a commander as you cast this spell, you may choose both.
 • Target opponent chooses a creature they control. You gain control of it.
-• Choose a creature you control. Each other creautre you control becomes a copy of that creature until end of turn.</property>
+• Choose a creature you control. Each other creature you control becomes a copy of that creature until end of turn.</property>
       <property name="Artist" value="Volkan Baǵa" />
       <property name="Number" value="642" />
       <property name="Packaging" value="Special" />
@@ -11410,7 +11448,7 @@ Whenever an opponent attacks you while you're the monarch, Emberwilde Captain de
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Commander spells you cast have cascade. (Whenever you cast your commander, exile cards from the top of your library until you exile a nonland card with lesser converted mana cost. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
+      <property name="Rules">Commander spells you cast have cascade. (Whenever you cast a commander, exile cards from the top of your library until you exile a nonland card with lesser converted mana cost. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -11567,7 +11605,7 @@ When Acidic Slime enters the battlefield, destroy target artifact, enchantment, 
       <property name="CMC" value="10" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Hydra Chimera" />
+      <property name="Subtype" value="Chimera Hydra" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Cascade, cascade, cascade, cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order. Multiple instances of cascade each trigger separately.)</property>
       <property name="Power" value="10" />
@@ -11786,7 +11824,7 @@ When Sweet-Gum Recluse enters the battlefield, put three +1/+1 counters on each 
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Search your library for a Forest card and put that card onto the battlefield. Then shuffle your library.</property>
+      <property name="Rules">Search your library for a Forest card, put that card onto the battlefield, then shuffle your library.</property>
       <property name="Artist" value="Yeong-Hao Han" />
       <property name="Number" value="686" />
       <property name="Packaging" value="Special" />
@@ -11962,7 +12000,7 @@ Encore <s value="12">{12}</s> (<s value="12">{12}</s>, Exile this card from your
       <property name="Power" value="9" />
       <property name="Toughness" value="9" />
       <property name="PT Box" value="9 / 9" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="697" />
       <property name="Packaging" value="Special" />
     </card>
@@ -12111,7 +12149,7 @@ Equip <s value="1">{1}</s></property>
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Path of Ancestry enters the battlefield tapped.
-<s value="T">{T}</s>: Add one mana of any color in your commander's color identity. When that mana is spent to cast a creature spell that shares a creature type with your commander, scry 1.</property>
+<s value="T">{T}</s>: Add one mana of any color in your commander's color identity. When that mana is spent to cast a creature spell that shares a creature type with your commander, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)</property>
       <property name="Artist" value="Alayna Danner" />
       <property name="Number" value="708" />
       <property name="Flags" value="M" />
