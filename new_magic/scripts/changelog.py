@@ -381,5 +381,9 @@ changelog = {
     3060204: ("3.6.2.4", "December 11 2020", [
         "Added The Prismatic Piper to the Commander Legends unlimited land booster.",
         "Added a few missing cards from the CMR set."
+        ]),
+    3060205: ("3.6.2.5", "January 20 2020", [
+        "Added Kaldheim.",
+        "Updated Secret Lair cards."
         ])
 }

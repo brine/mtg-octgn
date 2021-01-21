@@ -121,6 +121,7 @@ tokenTypes = {
     'angel44w': ('4 / 4 White Angel', '581e92be-a8b6-47b0-8051-f7d31fd77cc1'), #MPRSCG CFX ZEN ISD AVR1 AVR2 RTR SOI C20
     'angel44w2': ('4 / 4 White Angel', '55d17efa-1789-43ac-ad66-e6de8ce159ed'), #flying vigilance M19 WAR
     'angelwarrior44w': ('4 / 4 White Angel Warrior', '17837ad0-44f2-4434-ad33-f48da0db40e4'), 
+    'angelwarrior44w2': ('4 / 4 White Angel Warrior', '1ef4ab2f-0f3b-4d1a-baa2-4be9c315f599'),  #KHM
     'ape11g': ('1 / 1 Green Ape', '48c2b391-2b78-45b4-ba66-775d97dcd748'),
     'ape22g': ('2 / 2 Green Ape', '934dbdba-1bd1-40dc-8d68-227ae79dc369'),
     'ape33g': ('3 / 3 Green Ape', '1667d12a-4beb-4754-bf77-6fd1d23e12ff'),
@@ -194,6 +195,7 @@ tokenTypes = {
     'demon55b': ('5 / 5 Black Demon', '9b9aeb57-b37d-4a9e-9369-28997479f518'), #ISD AVR M20
     'demon66b': ('6 / 6 Black Demon', '98601612-a132-41ab-9f9b-9d7d085d6beb'),
     'demon**b': ('* / * Black Demon', 'd7f65953-cbe0-46ea-ad32-3646d0381c88'), #DDC CNS
+    'demonberserker23r': ('2 / 3 Red Demon Berserker', '1895046f-925c-4718-b082-13df8a470b26'),
     'deserter01w': ('0 / 1 White Deserter', '85197940-766e-4046-aa48-6d50bad3b963'),
     'devil11r': ('1 / 1 Red Devil', 'b67e87ca-29a7-4b65-b507-2aee907aad9b'), #SOI WAR
     'dinosaur11r': ('1 / 1 Red Dinosaur', '72e5555c-d6b9-4ba1-8ca3-775424a5fa1d'),
@@ -214,6 +216,7 @@ tokenTypes = {
     'drake22u': ('2/2 Blue Drake', '254765e9-be8a-4f98-93ce-15b6ee29fed5'), #M13 AKH C19
     'drake22m': ('2 / 2 Multicolor Green Blue Drake', 'fc271093-f18e-418a-bce3-527bdab948f9'),
     'dwarf11r': ('1 / 1 Red Dwarf', '6a94aefd-bdbb-4b30-9fe6-92b300ddf00c'),
+    'dwarfberserker21r': ('2 / 1 Red Dwarf Berserker', 'd4e47ce9-0df5-45de-9096-a22c07488f73'),
     'egg01g': ('0 / 1 Green Egg', '660593e6-c7f5-4937-a167-d022239e04ba'),
     'eldrazi77c': ('7 / 7 Colorless Eldrazi', '3d3278e0-c973-4aef-bcc4-721bdc61ae77'),
     'eldrazi1010c': ('10 / 10 Colorless Eldrazi', '7154d235-16b1-4c88-934e-5e91cb75340d'), #BFZ C19
@@ -271,6 +274,7 @@ tokenTypes = {
     'giantchicken44r': ('4 / 4 Red Giant Chicken', '6d20de89-3f0d-4144-9fda-9e12d2a15431'),
     'giantteddybear11c': ('1 / 1 Colorless Giant Teddy Bear', 'c005ddbe-3786-4fb4-ab8c-3d2225a70bde'),
     'giantwarrior44m': ('4 / 4 Multicolor Red Green Giant Warrior', 'a66ee237-face-4074-8e4f-15d8e627321c'),
+    'giantwizard44u': ('4 / 4 Blue Giant Wizard', '69a891c2-e7b5-4c38-962e-84ece7d6bce8'),
     'giantwarrior55w': ('5 / 5 White Giant Warrior', '73683460-63eb-444b-b418-e87ec50c1e95'),
     'gnome11c': ('1 / 1 Colorless Gnome', 'd1fa9cdb-7efa-4408-a086-009d6cc0e537'), #USG UST
     'goat01w': ('0 / 1 White Goat', '1631dd68-5afb-4ae2-8f4b-db67b0398c7a'), #EVE M13 UST ELD THB
@@ -313,10 +317,12 @@ tokenTypes = {
     'humancleric11m': ('1 / 1 White Black Human Cleric', '143a2f52-9de1-429b-abec-71cca5bbec90'),
     'humancleric21m': ('2 / 1 Red White Human Cleric', 'c8c8e57a-d67d-4ef8-a9e7-9b8e59a38565'),
     'humanrogue12m': ('1 / 2 Red White Human Rogue', '2d513c99-6c5a-4df9-b4d8-059472b01145'),
+    'humanwarrior11w': ('1 / 1 White Human Warrior', '413b76f9-6b32-4487-9e60-496376637147'),
     'humanwarrior31m': ('3 / 1 Red White Human Warrior', '78a00154-4e55-4a52-bf67-5d5fb7b6c2bc'),
     'humanwizard11u': ('1 / 1 Blue Human Wizard', 'f0cc8106-5d4c-4308-adb8-070d8e8e23d0'),
     'hydra00g': ('0 / 0 Green Hydra', 'cf2e9ee4-4159-41fe-84e9-c837df6b3994'),
     'hydra**g': ('* / * Green Hydra', 'fa61b41d-b3ab-452f-a3a8-4c68b6c6ed73'),
+    'icymanalith': ('Icy Manalith Artifact', '4b857b1b-2dec-4893-a9f8-c5a6ff9950ff'),
     'illusion02u': ('0 / 2 Blue Illusion', 'd6069520-e625-42cb-847d-c04be219b1c6'),
     'illusion**u': ('* / * Blue Illusion', 'e77e2712-b967-4c31-88b8-58281cb929e9'),
     'illusion11u': ('1 / 1 Blue Illusion', 'a7411656-5fe2-466b-98dd-5b943bb97164'), #MMA CHK
@@ -342,6 +348,7 @@ tokenTypes = {
     'knight22b': ('2 / 2 Black Knight', 'e8aa7dd3-0cde-4253-b467-a65c3f94dabb'),
     'knightally22w': ('2 / 2 White Knight Ally', 'aca5ad2e-f7c0-4ca7-a75b-41353aa21f70'),
     'koboldsofkherkeep01r': ('0 / 1 Red Kobolds of Kher Keep', 'a098e8ae-5170-4c8c-83dd-d56af7b5691e'),
+    'komascoil33u': ("3 / 3 Blue Koma's Coil", '2d0bea16-0e93-4f33-b623-5f94ea64d3a5'),
     'korally11w': ('1 / 1 White Kor Ally', 'cb7b7e55-2c2c-4c49-92b5-112284a277f8'),
     'korsoldier11w': ('1 / 1 White Kor Soldier', 'ef52a618-c81a-4959-be5c-4b33058c901e'),
     'korwarrior11w': ('1 / 1 White Kor Warrior', '78544244-0e75-4f77-bb0c-110e15ae4081'),
@@ -401,6 +408,7 @@ tokenTypes = {
     'reflection22w': ('2 / 2 White Reflection', '979d471b-2d90-462a-8fe9-5154167cd8dc'),
     'reflection**w': ('* / * White Reflection', '3f65527f-f8b9-4160-8f29-f4511d390596'),
     'reflection32u': ('3 / 2 Blue Reflection', 'e982d992-0830-42fd-9115-c58c3d1d6035'),
+    'replicatedring': ('Replicated Ring Artifact', '1f87d691-8491-4937-9b3d-15cbf42a29e4'),
     'rhino44g': ('4 / 4 Green Rhino', 'd1d7612f-a263-469b-ac68-b1b0f56c108c'), #RTR C19
     'rock': ('Colorless Rock Equipment', 'e4dd2780-55fa-4994-90f5-360b70821f99'),
     'rogue22b': ('2 / 2 Black Rogue', '3fc1240f-2192-4f84-81f7-5cf42f0d2d6e'),
@@ -417,6 +425,8 @@ tokenTypes = {
     'servo11c': ('1 / 1 Colorless Servo', 'eb2381b8-b695-499f-8dc0-bc54447848f6'), #KLD KLD KLD
     'shapeshifter11c': ('1 / 1 Colorless Shapeshifter', '714f4756-f2f2-4d0f-8325-938f20653c97'),
     'shapeshifter22c': ('2 / 2 Colorless Shapeshifter', 'f4b94def-f1be-4077-826f-f262b2edeb9e'),
+    'shapeshifter22u': ('2 / 2 Blue Shapeshifter', '68062dfc-310f-4699-9af8-a4c9d01f04b0'),
+    'shard': ('*Shard', '83d52b26-07e6-477d-81c2-ac0ced062e97'),
     'shark**u': ('* / * Blue Shark', 'ecb4ce90-0fde-49cb-8a66-116f6d497d68'),
     'sheep01g': ('0 / 1 Green Sheep', 'b17a0924-b2ec-4eec-9bba-c4ff96b9b833'), #TSP UNG
     'skeleton11b': ('1 / 1 Black Skeleton', 'ac0b1792-0f7e-47c2-b0ba-eca01badb5cd'), #ALA HML
@@ -473,6 +483,7 @@ tokenTypes = {
     'treefolkshaman25g': ('2 / 5 Green Treefolk Shaman', '640494d9-76e5-440e-88a5-c45bcc036398'), #MOR MMA
     'treefolkwarrior**g': ('* / * Green Treefolk Warrior', 'd5fc0edf-c35f-467f-b092-61993ba98d31'),
     'triskelavite11c': ('1 / 1 Colorless Triskelavite', 'fc10ee80-bee6-45da-a4c6-f55817043117'),
+    'trollwarrior44g': ('4 / 4 Green Troll Warrior', '91a97ff0-de44-4812-946e-164d7c53bb37'),
     'tuktukthereturned55c': ('5 / 5 Colorless Tuktuk The Returned', '06625711-0b80-4754-9105-6b9d8a5d7733'),
     'twin34c': ('3 / 4 Colorless Twin', 'd04b89a0-704f-464e-92ca-4a9b37d1bc48'),
     'urami55b': ('5 / 5 Black Urami', '141d6b6a-5d39-437e-9e20-30df7cab1b9a'),
@@ -516,6 +527,7 @@ tokenTypes = {
     'zombie**u': ('* / * Blue Zombie', 'bcb88192-ce2f-4288-8799-c9264b38c78f'),
     'zombie**b': ('* / * Black Zombie', '5de01d24-b85f-4ca2-8868-d0a2adec7904'),
     'zombiearmy00b': ('0 / 0 Black Zombie Army', 'cd37a3f8-a28b-418e-acd6-9c8fc0e6a233'), #WAR WAR WAR
+    'zombieberserker22b': ('2 / 2 Black Zombie Berserker', 'cfe4058e-666e-4846-88a9-b3d1d7647225'),
     'zombiehorror**b': ('* / * Black Zombie Horror', '5f80aca2-6de2-44ad-8e56-669ccd52276b'),
     'zombiegiant55b': ('5 / 5 Black Zombie Giant', '84f5b8a0-050e-4078-88e2-0f9dd6182ea0'),
     'zombieknight22b': ('2 / 2 Black Zombie Knight', '1898e08c-7a88-408e-93d3-5f939f65a5e6'),
@@ -570,6 +582,7 @@ tokenTypes = {
     'jaceemblem': ("Jace's Emblem", 'e164ba8c-dd76-4bf1-bfa9-a3fa36a2a64b'),
     'jaceemblem2': ("Jace's Emblem", '7336aabc-55ab-4041-948f-9779f5924b02'),
     'jayaemblem': ("Jaya's Emblem", '06c2a5a2-b354-4ea0-93e3-df9914e87262'),
+    'kayaemblem': ("Kaya's Emblem", '34d8e9d8-2c98-45de-a2bf-8de37c2b3929'),
     'kioraemblem': ("Kiora's Emblem", '61c58834-6efc-40fa-8ba0-aa7927e7c9bd'),
     'kioraemblem2': ("Kiora's Emblem", '735782d2-3d4a-49e6-8529-126b2a3197f0'),
     'kothemblem': ("Koth's Emblem", '38365196-9a15-4f78-a525-d01a80f94ace'),
@@ -596,6 +609,8 @@ tokenTypes = {
     'teferiemblem2': ("Teferi's Emblem", 'f874b4ad-4306-41bc-bd6f-fe8a5b1b049a'),
     'tezzeretemblem': ("Tezzeret's Emblem", '6a406eb1-7467-4e42-8ac0-c5e5cddfeb9a'),
     'tezzeretemblem2': ("Tezzeret's Emblem", 'cceaa03a-4120-496c-8d04-db4acceaf654'), #M19
+    'tibaltemblem': ("Tibalt's Emblem", 'd5718fe2-ab0d-4486-b27f-ec0bfff20c57'),
+    'tyvaremblem': ("Tyvar's Emblem", '8929b748-148f-4967-a040-e687d5a57284'),
     'venseremblem': ("Venser's Emblem", '3ec344de-90cb-480e-94be-96ff4ff774af'),
     'vivienemblem': ("Vivien's Emblem", 'df13d0c1-3223-45e2-982d-757f15592845'), #M19
     'vraskaemblem': ("Vraska's Emblem", '70fbdf56-7ac7-48b5-81c6-de5b76968bd9'),
