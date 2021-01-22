@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Kaldheim Commander" id="d532ef25-e52b-4276-941a-3a1c095544b0" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="khc" releaseDate="2020-12-17">
+<set name="Kaldheim Commander" id="d532ef25-e52b-4276-941a-3a1c095544b0" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="khc" releaseDate="2021-02-05">
   <cards>
     <card name="Lathril, Blade of the Elves" id="547888c3-a9a6-4413-b29a-6bcd8a9279bf">
       <property name="Cost">
@@ -41,6 +41,187 @@ Whenever you exile one or more cards from your hand and/or permanents from the b
       <property name="Artist" value="Kieran Yanner" />
       <property name="Number" value="002" />
     </card>
+    <card name="Cosmic Intervention" id="933c4a54-5c3a-496b-aa35-edf791155d8d">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">If a permanent you control would be put into a graveyard from the battlefield this turn, exile it instead. Return it to the battlefield under its owner's control at the beginning of the next end step.
+Foretell <s value="1">{1}</s><s value="W">{W}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
+      <property name="Artist" value="Alexander Mokhov" />
+      <property name="Number" value="003" />
+      <property name="Faction" value="Foretell" />
+    </card>
+    <card name="Hero of Bretagard" id="4458c16c-b71d-481d-863b-f2e3b1320178">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Warrior" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever you exile one or more cards from your hand and/or permanents from the battlefield, put that many +1/+1 counters on Hero of Bretagard.
+As long as Hero of Bretagard has five or more counters on it, it has flying and is an Angel in addition to its other types.
+As long as Hero of Bretagard has ten or more counters on it, it has indestructible and is a God in addition to its other types.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="1 / 1" />
+      <property name="Artist" value="Heonhwa Choe" />
+      <property name="Number" value="004" />
+    </card>
+    <card name="Stoic Farmer" id="f53f39e9-f07e-444f-8420-4545e56253e5">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Dwarf Peasant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When Stoic Farmer enters the battlefield, search your library for a basic Plains card and reveal it. If an opponent controls more lands than you, put it onto the battlefield tapped. Otherwise, put it into your hand. Then shuffle your library.
+Foretell <s value="1">{1}</s><s value="W">{W}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="3" />
+      <property name="PT Box" value="3 / 3" />
+      <property name="Artist" value="Svetlin Velinov" />
+      <property name="Number" value="005" />
+      <property name="Faction" value="Foretell" />
+    </card>
+    <card name="Sage of the Beyond" id="1f5497d0-0765-4619-a218-b6a8709810cb">
+      <property name="Cost">
+        <s value="5">{5}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="7" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Spirit Giant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Flying
+Spells you cast from anywhere other than your hand cost <s value="2">{2}</s> less to cast.
+Foretell <s value="4">{4}</s><s value="U">{U}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
+      <property name="Power" value="5" />
+      <property name="Toughness" value="5" />
+      <property name="PT Box" value="5 / 5" />
+      <property name="Artist" value="Cristi Balanescu" />
+      <property name="Number" value="006" />
+      <property name="Faction" value="Foretell" />
+    </card>
+    <card name="Spectral Deluge" id="7238c46e-6338-4aca-96f2-934c44c8cc36">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Return each creature your opponents control with toughness X or less to its owner's hand, where X is the number of Islands you control.
+Foretell <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
+      <property name="Artist" value="Kieran Yanner" />
+      <property name="Number" value="007" />
+      <property name="Faction" value="Foretell" />
+    </card>
+    <card name="Tales of the Ancestors" id="c286a74c-3714-4190-8322-84b161debe39">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Each player with fewer cards in hand than the player with the most cards in hand draws cards equal to the difference.
+Foretell <s value="1">{1}</s><s value="U">{U}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
+      <property name="Artist" value="Colin Boyer" />
+      <property name="Number" value="008" />
+      <property name="Faction" value="Foretell" />
+    </card>
+    <card name="Pact of the Serpent" id="c5b3d118-ba4b-4a93-92a2-cd763de49d29">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Choose a creature type. Target player draws X cards and loses X life, where X is the number of creature they control of the chosen type.</property>
+      <property name="Artist" value="Donato Giancola" />
+      <property name="Number" value="009" />
+    </card>
+    <card name="Ruthless Winnower" id="886ef13a-4f9d-425b-a071-6366cdb637c8">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elf Rogue" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">At the beginning of each player's upkeep, that player sacrifices a non-Elf creature.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="4" />
+      <property name="PT Box" value="4 / 4" />
+      <property name="Artist" value="Zoltan Boros" />
+      <property name="Number" value="010" />
+    </card>
+    <card name="Serpent's Soul-Jar" id="08ae371f-ce62-475f-89a2-1f8a17cf950f">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever an Elf you control dies, exile it.
+<s value="T">{T}</s>, Pay 2 life: Until end of turn, you may cast a creature spell from among cards exiled with Serpent's Soul-Jar.</property>
+      <property name="Artist" value="Dan Scott" />
+      <property name="Number" value="011" />
+    </card>
+    <card name="Bounty of Skemfar" id="3185a67e-648c-48a8-9aad-180e1ca0f4ae">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Reveal the top six cards of your library. You may put a land card from among them onto the battlefield tapped and an Elf card from among them into your hand. Put the rest on the bottom of your library in a random order.</property>
+      <property name="Artist" value="Colin Boyer" />
+      <property name="Number" value="012" />
+    </card>
+    <card name="Crown of Skemfar" id="e6297586-8953-408e-a38c-2239d45807e1">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Enchantment" />
+      <property name="Subtype" value="Aura" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Enchant creature
+Enchanted creature gets +1/+1 for each Elf you control and has reach.
+<s value="2">{2}</s><s value="G">{G}</s>: Return Bounty of Skemfar from your graveyard to your hand.</property>
+      <property name="Artist" value="Jason Felix" />
+      <property name="Number" value="013" />
+    </card>
     <card name="Wolverine Riders" id="70fd0439-294b-454c-b2af-e814b85f4590">
       <property name="Cost">
         <s value="4">{4}</s>
@@ -59,6 +240,40 @@ Whenever another Elf enters the battlefield under your control, you gain life eq
       <property name="PT Box" value="4 / 4" />
       <property name="Artist" value="Jesper Ejsing" />
       <property name="Number" value="014" />
+    </card>
+    <card name="Elderfang Venom" id="7d5bbb02-a04e-4add-ae9a-67819cffdb3a">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Black Green" />
+      <property name="Type" value="Enchantment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Attacking Elves you control have deathtouch.
+Whenever an Elf you control dies, each opponent loses 1 life and you gain 1 life.</property>
+      <property name="Artist" value="Alessandra Pisano" />
+      <property name="Number" value="015" />
+    </card>
+    <card name="Ethereal Valkyrie" id="552912bf-4085-49ad-902f-5c41540df97a">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="W">{W}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Multicolor White Blue" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Spirit Angel" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Flying
+Whenever Ethereal Valkyrie enters the battlefield or attacks, draw a card, then exile a card from your hand face down. It becomes foretold. Its foretell cost is its mana cost reduced by <s value="2">{2}</s>. (On a later turn, you may cast it for its foretell cost, even if this creature has left the battlefield.)</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="4" />
+      <property name="PT Box" value="4 / 4" />
+      <property name="Artist" value="Daarken" />
+      <property name="Number" value="016" />
     </card>
     <card name="Inspired Sphinx" id="7f58d798-9b99-45a9-9015-f689145018a8">
       <property name="Cost">
