@@ -385,5 +385,8 @@ changelog = {
     3060205: ("3.6.2.5", "January 20 2020", [
         "Added Kaldheim.",
         "Updated Secret Lair cards."
+        ]),
+    3060207: ("3.6.2.7", "January 24 2020", [
+        "Added missing Game Night expansions"
         ])
 }
