@@ -276,7 +276,7 @@ def secret(group, x = 0, y = 0):
     # this could be split into multiple askStrings
     input = askString("Set/Reveal a secret.\n\nFirst input either Set, Reveal or RevealAll.\nThen the name of the secret.\nAnd lastly it's value, or nothing to clear (if setting).\nCase insensitive, separated by spaces.\nAn example would be \"Set Carrots 9\" (without quotes)", "")
     if input != None:
-        input.lower()
+        input = input.lower()
         ss = input.split(' ')
         # each of these could be it's own function
         if len(ss) == 3 and ss[0] == "set":
@@ -304,7 +304,7 @@ def secret(group, x = 0, y = 0):
                     notify("{} has no secret".format(player.name))
 
         else:
-            whisper("Your syntax for the command \"secret\" was incorrect.")
+            whisper("Incorrect syntax for \"Set/Reveal Secret\".")
 
 #--------------------------------
 # Autoscript-Linked Card functions
