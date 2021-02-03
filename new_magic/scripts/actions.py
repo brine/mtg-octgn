@@ -271,6 +271,41 @@ def changeLog(group, x = 0, y = 0):
         elif num == -3 and count > 1: ## If the player chooses 'newer'
             count -= 1
 
+def secret(group, x = 0, y = 0):
+    mute()
+    # this could be split into multiple askStrings
+    input = askString("Set/Reveal a secret.\n\nFirst input either Set, Reveal or RevealAll.\nThen the name of the secret.\nAnd lastly it's value, or nothing to clear (if setting).\nCase insensitive, separated by spaces.\nAn example would be \"Set Carrots 9\" (without quotes)", "")
+    if input != None:
+        input.lower()
+        ss = input.split(' ')
+        # each of these could be it's own function
+        if len(ss) == 3 and ss[0] == "set":
+            if len(ss) == 3 and ss[2] != None and len(ss[2]) > 0:
+                me.setGlobalVariable("secret_{}".format(ss[1]), ss[2])
+                notify("{} set secret \"{}\"".format(me, ss[1]))
+            else:
+                me.setGlobalVariable("secret_{}".format(ss[1]), "")
+                notify("{} cleared their \"{}\" secret".format(me, ss[1]))
+
+        elif len(ss) == 2 and ss[0] == "reveal":
+            mySecret = me.getGlobalVariable("secret_{}".format(ss[1]))
+            if mySecret != None and len(mySecret) > 0:
+                notify("{} revealed secret \"{}\" as {}".format(me, ss[1], mySecret))
+            else:
+                whisper("You haven't set that secret yet.")
+
+        elif len(ss) == 2 and ss[0] == "revealall":
+            notify("Revealing all \"{}\" secrets...".format(ss[1]))
+            for player in getPlayers():
+                theirSecret = player.getGlobalVariable("secret_{}".format(ss[1]))
+                if theirSecret != None and len(theirSecret) > 0:
+                    notify("{}'s secret is {}".format(player.name, theirSecret))
+                else:
+                    notify("{} has no secret".format(player.name))
+
+        else:
+            whisper("Your syntax for the command \"secret\" was incorrect.")
+
 #--------------------------------
 # Autoscript-Linked Card functions
 #--------------------------------
