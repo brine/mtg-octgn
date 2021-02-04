@@ -388,5 +388,8 @@ changelog = {
         ]),
     3060207: ("3.6.2.7", "January 24 2020", [
         "Added missing Game Night expansions"
+        ]),
+    3060208: ("3.6.2.8", "February 4 2020", [
+        "Added a new table action to manage secret/hidden values"
         ])
 }

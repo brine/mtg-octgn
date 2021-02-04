@@ -270,6 +270,109 @@ def changeLog(group, x = 0, y = 0):
                 count += 1
         elif num == -3 and count > 1: ## If the player chooses 'newer'
             count -= 1
+    
+def decodeSecrets(val):
+    mute()
+    ret = {}
+    for secret in val.split(" ;; "):
+        if not secret: continue ## ignore if the secret string is empty
+        secretName, secretValue = secret.split(" ; ")
+        ret[secretName] = secretValue
+    return ret
+
+def encodeSecrets(secretDict):
+    mute()
+    return " ;; ".join([x[0] + " ; " + x[1] for x in secretDict.items()])
+
+def secrets(group, x = 0, y = 0):
+    mute()
+    
+    secretsList = []
+    secretsColors = []
+    mySecrets = decodeSecrets(me.getGlobalVariable("secrets"))
+    for k, v in mySecrets.items():
+        secretsList.append(k)
+        if not v: ## if the value is missing or empty
+            secretsColors.append("#666666")
+        else:
+            secretsColors.append("#000077")
+    for player in getPlayers():
+        if player != me:
+            playerSecrets = decodeSecrets(player.getGlobalVariable("secrets"))
+            for k,v in playerSecrets.items():
+                if k not in mySecrets:
+                    secretsList.append(k)
+                    secretsColors.append("#666666")
+
+    descriptiveSecrets = []
+    for secret in secretsList:
+        if secret in mySecrets: ## if the local player has this secret registered
+            if not secret: ## if the value is missing or empty
+                descriptiveSecrets.append(secret + "\n(missing value)")
+            else:  ## if there is a value
+                descriptiveSecrets.append(secret + "\nvalue: " + mySecrets[secret])
+        else: ## if the local player has not yet registered this secret
+            descriptiveSecrets.append(secret + "\n(not yet assigned)")
+    mode = askChoice("Secret messages can be recorded and later revealed.\nSelect a secret from the list below to record or reveal a secret's values:", descriptiveSecrets, secretsColors, customButtons = ["Add a new Secret"])
+    if mode == 0: return ## cancel the dialog
+    elif mode == -1: ## add new secret button
+        secretName = None
+        askStringText = "Choose a name for this secret:"
+        while secretName == None:
+            newName = askString(askStringText, "")
+            if newName == None: return ## cancels the dialog
+            if ';' in newName: ## can't use semicolon because it is used as a delimiter
+                askStringText = "ERROR: Cannot use ; key in name.\nChoose a name for this secret:"
+                continue
+            if newName.lower() in [x.lower() for x in secretsList]:
+                askStringText = "ERROR: This name is already in use.\nChoose a name for this secret:"
+                continue
+            secretName = newName
+        askStringText = "Choose a value for '{0}':".format(secretName)
+        secretValue = None
+        while secretValue == None:
+            newValue = askString(askStringText, "")
+            if newValue == None: return ## cancels the dialog
+            if ';' in newValue: ## can't use semicolon because it is used as a delimiter
+                askStringText = "ERROR: Cannot use ; key in name.\nChoose a value for '{0}':".format(secretName)
+                continue
+            secretValue = newValue
+        mySecrets[secretName] = secretValue
+        me.setGlobalVariable("secrets", encodeSecrets(mySecrets))
+        whisper("You set the '{0}' secret to '{1}'.".format(secretName, secretValue))
+    elif mode >= 1: ## Selected one of the existing secrets
+        selectedSecret = secretsList[mode - 1]
+        mode = askChoice("Choose what you would like to do with the secret '{0}':".format(selectedSecret), ["Register a Value", "Reveal my Secret", "Reveal everyone's Secret"])
+        if mode == 0: return ## cancels the dialog
+        elif mode == 1: ## register a value
+            askStringText = "Choose a value for '{0}':\n(leaving this blank will delete your existing value)".format(selectedSecret)
+            secretValue = None
+            while secretValue == None:
+                newValue = askString(askStringText, mySecrets.get(selectedSecret, ""))
+                if newValue == None: return #@ cancels the dialog
+                if ';' in newValue:  
+                    askStringText = "ERROR: Cannot use ; key in name.\nChoose a value for '{0}':\n(leaving this blank will delete your existing value)".format(selectedSecret), 
+                    continue
+                secretValue = newValue
+            if not secretValue: ## if the string was blank, remove it
+                if selectedSecret in mySecrets:
+                    del mySecrets[selectedSecret]
+                whisper("You deleted your secret value for '{0}'.".format(selectedSecret))
+            else:
+                mySecrets[selectedSecret] = secretValue
+                whisper("You set your '{0}' secret to '{1}'.".format(selectedSecret, secretValue))
+            me.setGlobalVariable("secrets", encodeSecrets(mySecrets))
+        elif mode == 2: ## reveal my secret
+            remoteCall(me, "revealSecret", [selectedSecret])
+        elif mode == 3: ## reveal everybody's secret
+            for player in getPlayers():
+                remoteCall(player, "revealSecret", [selectedSecret])
+        
+def revealSecret(secretName):
+    mute()
+    mySecrets = decodeSecrets(me.getGlobalVariable("secrets"))
+    if secretName in mySecrets:
+        notify("{0} revealed their secret '{1}' as '{2}'.".format(me, secretName, mySecrets[secretName]))
 
 #--------------------------------
 # Autoscript-Linked Card functions
