@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.2.7" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.2.8" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering plugin for OCTGN.&#xD;&#xD;Card images can be installed via the image downloader plugin in the OCTGN Deck Editor."
     setsurl="https://github.com/brine/mtg-octgn" gameurl="http://brine.github.io/mtg-octgn/" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -216,6 +216,7 @@
     <groupaction menu="Re-align Cards" execute="align" />
 	<groupaction menu="Change Automation Settings" execute="autoscriptMenu" />
     <groupaction menu="View Update Log" execute="changeLog" />
+	<groupaction menu="Manage Secrets" execute="secrets" shortcut="ctrl+shift+e"/>
     <cardaction menu="Tap/Untap or Resolve" default="True" batchExecute="batchResolve" />
     <cardaction menu="Exert (Don't Untap Next Untap Step)" shortcut="ctrl+V" execute="exert" />
     <cardaction menu="Keep Tapped During All Untap Steps" shortcut="ctrl+Shift+V" execute="doesNotUntap" />
@@ -268,6 +269,7 @@
     <counter name="General" icon="counters/general.png" />
     <counter name="Experience" icon="counters/exp.png" />
 	<globalvariable name="f6" value="False" />
+    <globalvariable name="secrets" value=""/>
     <group viewState="expanded" name="Hand" shortcut="ctrl+H" visibility="me" icon="groups/hand.png">
       <cardaction menu="Cast Spell" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
