@@ -6,7 +6,7 @@ Thank you for your interest in the MTG game package on OCTGN.  Getting started i
 
 The game package can be located in OCTGN's Ganes Manager.  Scroll down until you find **Magic the Gathering**, click it, then click the green **install** button.  You should get a check mark once it's installed.
 
-![Games Manager](/images/gamemanager.png)
+![Games Manager](images/gamemanager.png)
 
 ### Install Card Images
 
@@ -17,7 +17,7 @@ OCTGN's game packages do not come installed with all of the card images.  The MT
 3. Allow OCTGN to load the MTG card database (may take a few seconds)
 4. Under the **Plugins** menu, select **Magic: the Gathering Image Downloader**
 
-![Games Manager](/images/imagedownloader.png)
+![Games Manager](images/imagedownloader.png)
 
 5. You can choose from different configurations for your images, such as image resolution and language.  Sets can be installed one at a time, or you can click **Download all sets** to get them all at once.
 
