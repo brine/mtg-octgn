@@ -257,8 +257,8 @@
             <property name="Toughness" value="2" />
             <property name="PT Box" value="2 / 2" />
             <property name="Artist" value="Mark Tedin" />
-            <property name="Number" value="0" />
-            <property name="Flags" value="TTSP?"/>
+            <property name="Number" value="14" />
+            <property name="Flags" value="TTSR"/>
         </card>
         <card name="Avatar" id="ebfa36c6-2c4e-4a5f-9730-010e7b50bd19">
             <property name="Color" value="White" />
@@ -311,8 +311,8 @@
             <property name="Toughness" value="2" />
             <property name="PT Box" value="1 / 2" />
             <property name="Artist" value="Mark Poole" />
-            <property name="Number" value="0" />
-            <property name="Flags" value="TTSP?" />
+            <property name="Number" value="4" />
+            <property name="Flags" value="TTSR" />
         </card>
         <card name="Bear" id="1eae0d3e-08c1-4dda-99b1-a994f6827b77">
             <property name="Color" value="Green" />
@@ -1153,8 +1153,8 @@
             <property name="Toughness" value="1" />
             <property name="PT Box" value="1 / 1" />
             <property name="Artist" value="Mark Zug" />
-            <property name="Number" value="0" />
-            <property name="Flags" value="TFUT?"/>
+            <property name="Number" value="3" />
+            <property name="Flags" value="TTSR"/>
         </card>
         <card name="Clue" id="205743d2-91e7-4e35-899a-d5e1fb2d6ccc">
             <property name="Color" value="Colorless" />
@@ -2618,8 +2618,8 @@
             <property name="Toughness" value="4" />
             <property name="PT Box" value="4 / 4" />
             <property name="Artist" value="Raymond Swanland" />
-            <property name="Number" value="0" />
-            <property name="Flags" value="TFUT?"/>
+            <property name="Number" value="7" />
+            <property name="Flags" value="TTSR"/>
         </card>
         <card name="Giant" id="50c530f2-041f-4003-9cdb-606fa8830030">
             <property name="Color" value="Green" />
@@ -2833,6 +2833,11 @@
                 <property name="Artist" value="Mark Behm" />
                 <property name="Number" value="14" />
                 <property name="Flags" value="TWAR"/>
+            </alternate>
+            <alternate name="Goblin" type="18">
+                <property name="Artist" value="Thomas M. Baxa" />
+                <property name="Number" value="8" />
+                <property name="Flags" value="TTSR"/>
             </alternate>
         </card>
         <card name="Goblin" id="4605c074-94a4-4997-a313-3bff975b488b">
@@ -3129,6 +3134,11 @@
                 <property name="Artist" value="Johann Bodin" />
                 <property name="Number" value="3"/>
                 <property name="Flags" value="TM21"/>
+            </alternate>
+            <alternate name="Griffin" type="3">
+                <property name="Artist" value="Jim Nelson" />
+                <property name="Number" value="1"/>
+                <property name="Flags" value="TTSR"/>
             </alternate>
         </card>
         <card name="Hellion" id="be62bcdd-12a5-44dc-b658-d32c8cef6bba">
@@ -3684,13 +3694,13 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Insect" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Shroud</property>
+            <property name="Rules">Shroud <i>(This creature can’t be the target of spells or abilities.)</i></property>
             <property name="Power" value="6" />
             <property name="Toughness" value="1" />
             <property name="PT Box" value="6 / 1" />
             <property name="Artist" value="E.M. Gist" />
-            <property name="Number" value="0" />
-            <property name="Flags" value="TPLC?"/>
+            <property name="Number" value="11" />
+            <property name="Flags" value="TTSR"/>
         </card>
         <card name="Insect" id="33429717-ab69-4696-81f2-b1548ad218b5">
             <property name="Color" value="Multicolor Black Green" />
@@ -3877,13 +3887,14 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Knight" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Flanking, protection from white, haste</property>
+            <property name="Rules">Protection from white, haste
+			Flanking <i>(Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)</i></property>
             <property name="Power" value="2" />
             <property name="Toughness" value="2" />
             <property name="PT Box" value="2 / 2" />
             <property name="Artist" value="William O'Connor" />
-            <property name="Number" value="0" />
-            <property name="Flags" value="TPLC?"/>
+            <property name="Number" value="5" />
+            <property name="Flags" value="TTSR"/>
         </card>
         <card name="Knight Ally" id="aca5ad2e-f7c0-4ca7-a75b-41353aa21f70">
             <property name="Color" value="White" />
@@ -3908,6 +3919,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Parente" />
             <property name="Number" value="10" />
             <property name="Flags" value="TA25"/>
+            <alternate name="Kobolds of Kher Keep" type="1">
+                <property name="Artist" value="Parente" />
+                <property name="Number" value="9" />
+                <property name="Flags" value="TTSR"/>
+            </alternate>
         </card>
         <card name="Koma's Coil" id="2d0bea16-0e93-4f33-b623-5f94ea64d3a5">
             <property name="Color" value="Blue" />
@@ -4049,13 +4065,13 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Subtype" value="Elf Druid" />
             <property name="Rarity" value="Token" />
             <property name="Rules">
-                <s value="T">{T}</s>: Add <s value="G">{G}</s> to your mana pool.</property>
+                <s value="T">{T}</s>: Add <s value="G">{G}</s>.</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="PT Box" value="1 / 1" />
             <property name="Artist" value="Kev Walker" />
-            <property name="Number" value="0" />
-            <property name="Flags" value="TFUT?"/>
+            <property name="Number" value="12" />
+            <property name="Flags" value="TTSR"/>
         </card>
         <card name="Maggot" id="a0ec1195-c5e8-411e-a01e-a3aa1b8ad259">
             <property name="Color" value="Black" />
@@ -4143,9 +4159,9 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="PT Box" value="1 / 1" />
-            <property name="Artist" value="L.A. Williams" />
-            <property name="Number" value="0" />
-            <property name="Flags" value="TFUT?"/>
+            <property name="Artist" value="Carl Critchlow" />
+            <property name="Number" value="15" />
+            <property name="Flags" value="TTSR"/>
         </card>
         <card name="Minion" id="a0b95860-4a75-429e-a759-e8d68f7c9abb">
             <property name="Color" value="Black" />
@@ -4908,6 +4924,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
                 <property name="Number" value="19" />
                 <property name="Flags" value="TC19"/>
             </alternate>
+            <alternate name="Saproling" type="11">
+                <property name="Artist" value="Warren Mahy" />
+                <property name="Number" value="13" />
+                <property name="Flags" value="TTSR"/>
+            </alternate>
         </card>
         <card name="Saproling" id="f10998f6-b463-40a0-92f0-3a5cb09143ae">
             <property name="Color" value="Green" />
@@ -5317,6 +5338,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
                 <property name="Number" value="2" />
                 <property name="Flags" value="TCMR"/>
             </alternate>
+            <alternate name="Soldier" type="15">
+                <property name="Artist" value="Alex Horley-Orlandelli" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="TTSR"/>
+            </alternate>
         </card>
         <card name="Soldier" id="d4d816a4-c805-4ae4-b633-7fd5515f5db4">
             <property name="Color" value="White" />
@@ -5481,6 +5507,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Lars Grant-West" />
             <property name="Number" value="7" />
             <property name="Flags" value="TMMA"/>
+            <alternate name="Spider" type="1">
+                <property name="Artist" value="Lars Grant-West" />
+                <property name="Number" value="6" />
+                <property name="Flags" value="TTSR"/>
+            </alternate>
         </card>
         <card name="Spider" id="e48bb912-1d32-42c1-9e5c-59a4f30c9c25">
             <property name="Color" value="Green" />

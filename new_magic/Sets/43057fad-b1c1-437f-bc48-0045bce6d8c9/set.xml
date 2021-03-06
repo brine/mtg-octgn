@@ -20,8 +20,18 @@
       <pick qty="9" key="Rarity" value="Common">
         <property key="Packaging" value="" />
       </pick>
-      <pick qty="1" key="Packaging" value="Snow">
-      </pick>
+      <options>
+        <option probability="0.5833">
+          <pick qty="1" key="Packaging" value="Snow">
+            <property key="Type" value="Basic Snow Land" />
+          </pick>
+        </option>
+        <option probability="0.4167">
+          <pick qty="1" key="Packaging" value="Snow">
+            <property key="Type" value="Snow Land" />
+          </pick>
+        </option>
+      </options>
     </pack>
     <pack name="Lands" id="6dd0fd38-3c49-49d3-b13d-04c30ead0f28">
       <pick qty="unlimited" key="Rarity" value="Basic Land" />
@@ -387,7 +397,7 @@ Creatures you control of the chosen type get +1/+1.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying, vigilance
 Snow lands your opponents control enter the battlefield tapped.
-Noncreature spells your opponents cast with converted mana cost 4 or more cost <s value="2">{2}</s> more to cast.</property>
+Noncreature spells your opponents cast with converted mana cost 4 or greater cost <s value="2">{2}</s> more to cast.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -401,7 +411,7 @@ Noncreature spells your opponents cast with converted mana cost 4 or more cost <
         <property name="Color" value="White" />
         <property name="Type" value="Legendary Artifact" />
         <property name="Rules">If a source an opponent controls would deal damage to you or a permanent you control, prevent 1 of that damage.
-Whenever you or a permanent you control becomes the target of a spell or ability an opponent controls, counter that spell or ability unless its controller pays <s value="1">{1}</s>.</property>
+Whenever you or another permanent you control becomes the target of a spell or ability an opponent controls, counter that spell or ability unless its controller pays <s value="1">{1}</s>.</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
         <property name="PT Box" value="" />
@@ -719,7 +729,7 @@ Foretell <s value="2">{2}</s><s value="W">{W}</s> (During your turn, you may pay
       <property name="Subtype" value="God" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Alrund gets +1/+1 for each card in your hand and each foretold card you own in exile.
-At the beginning of your end step, choose a card type, then reveal the top two cards of your library. Put all cards of the chosen type into your hand and the rest on the bottom of your library in any order.</property>
+At the beginning of your end step, choose a card type, then reveal the top two cards of your library. Put all cards of the chosen type revealed this way into your hand and the rest on the bottom of your library in any order.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -818,7 +828,7 @@ Foretell <s value="1">{1}</s><s value="U">{U}</s> (During your turn, you may pay
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="2">{2}</s>: Target snow land you control becomes a 4/4 Elemental creature with haste and hexproof until end of turn. It's still a land. (A creature with hexproof can't be the target of spells or abilities your opponents control.)</property>
+        <s value="2">{2}</s>: Target snow land you control becomes a 4/4 Elemental creature with hexproof and haste until end of turn. It's still a land. (A creature with hexproof can't be the target of spells or abilities your opponents control.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -899,7 +909,7 @@ When Brinebarrow Intruder enters the battlefield, target creature an opponent co
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="God" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of your upkeep, you may exile Cosima. If you do, it gains "Whenever a land enters the battlefield under your control, if Cosima is exiled, you may put a voyage counter on it. If you don't, return Cosima to the battlefield with X +1/+1 counters on it and draw X cards, where X is the number of voyage counters on it.</property>
+      <property name="Rules">At the beginning of your upkeep, you may exile Cosima. If you do, it gains "Whenever a land enters the battlefield under your control, if Cosima is exiled, you may put a voyage counter on it. If you don't, return Cosima to the battlefield with X +1/+1 counters on it and draw X cards, where X is the number of voyage counters on it."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
@@ -968,10 +978,11 @@ Foretell <s value="2">{2}</s><s value="U">{U}</s> (During your turn, you may pay
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Return target nonland permanent to its owners's hand.
+      <property name="Rules">Return target nonland permanent to its owner's hand.
 Foretell <s value="U">{U}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
       <property name="Artist" value="Denman Rooke" />
       <property name="Number" value="053" />
+      <property name="Faction" value="Foretell" />
     </card>
     <card name="Disdainful Stroke" id="7691ac89-f8ba-493e-aa11-5674a783dffb">
       <property name="Cost">
@@ -1096,7 +1107,7 @@ As long as you control a Giant, you may cast Glimpse the Cosmos from your gravey
       <property name="Color" value="Blue" />
       <property name="Type" value="Snow Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Scry X, where is the amount of <s value="S">{S}</s> spent to cast this spell, then draw three cards. (<s value="S">{S}</s> is mana from a snow source.)</property>
+      <property name="Rules">Scry X, where X is the amount of <s value="S">{S}</s> spent to cast this spell, then draw three cards. (<s value="S">{S}</s> is mana from a snow source.)</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="061" />
     </card>
@@ -1232,7 +1243,7 @@ Flying
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Choose target nonlegendary creature. The next time one or more creatures or planeswalkers enter the battlefield this turn, they enter as copies of the chosen creature instead.
+      <property name="Rules">Choose target nonlegendary creature. The next time one or more creatures or planeswalkers enter the battlefield this turn, they enter as copies of the chosen creature.
 Foretell <s value="U">{U}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
       <property name="Artist" value="YW Tang" />
       <property name="Number" value="069" />
@@ -1691,7 +1702,7 @@ Boast — <s value="1">{1}</s><s value="B">{B}</s>, Sacrifice a creature: Each o
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="1">{1}</s>
-        <s value="S">{S}</s>: Grim Draugr gets +1/+0 and gains menace until end of turn. (It can't be blocked except by two or more creatures.)</property>
+        <s value="S">{S}</s>: Grim Draugr gets +1/+0 and gains menace until end of turn. (It can't be blocked except by two or more creatures. <s value="S">{S}</s> can be paid with one mana from a snow source.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -1726,7 +1737,7 @@ Boast — <s value="1">{1}</s><s value="B">{B}</s>, Sacrifice a creature: Each o
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Choose a creature type. Return up to two creature cards of the chosen type from your graveyard to the battlefield. If this spell was foretold, return all creature cards of the chosen type from your graveyard to the battlefield instead.
+      <property name="Rules">Choose a creature type. Return up to two creature cards of that type from your graveyard to the battlefield. If this spell was foretold, return all creature cards of that type from your graveyard to the battlefield instead.
 Foretell <s value="5">{5}</s><s value="B">{B}</s><s value="B">{B}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
       <property name="Artist" value="Ryan Yee" />
       <property name="Number" value="098" />
@@ -1761,7 +1772,7 @@ Foretell <s value="5">{5}</s><s value="B">{B}</s><s value="B">{B}</s> (During yo
       <property name="Rarity" value="Common" />
       <property name="Rules">Flash
 When Jarl of the Forsaken enters the battlefield, destroy target creature or planeswalker an opponent controls that was dealt damage this turn.
-Foretell <s value="1">{1}</s><s value="B">{B}</s> (During your turn, you may pay and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
+Foretell <s value="1">{1}</s><s value="B">{B}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -1779,7 +1790,7 @@ Foretell <s value="1">{1}</s><s value="B">{B}</s> (During your turn, you may pay
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie Berserker" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Karfell Kennel-Master enters the battlefield, up to two target creatures each get +1/+0 and gain indestructible until end of turn. (Damage and effects that say "destroy" don't destroy it.)</property>
+      <property name="Rules">When Karfell Kennel-Master enters the battlefield, up to two target creatures each get +1/+0 and gain indestructible until end of turn. (Damage and effects that say "destroy" don't destroy them.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -1963,7 +1974,7 @@ Foretell <s value="1">{1}</s><s value="B">{B}</s> (During your turn, you may pay
       <property name="Subtype" value="God" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
-Whenever an opponent sacrifices a nontoken permanent or discards a permanent card, you may put that card onto the battlefield under your control from their graveyard.</property>
+Whenever an opponent sacrifices a nontoken permanent or discards a permanent card, you may put that card from a graveyard onto the battlefield under your control.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="4 / 5" />
@@ -2576,7 +2587,7 @@ Foretell <s value="2">{2}</s><s value="R">{R}</s><s value="R">{R}</s></property>
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Create X 2/1 red Dwarf creature tokens, where X is the number of Vehicles you control plus the number of Equipment you control. For each of those tokens, you may attach an Equipment you control to it.</property>
+      <property name="Rules">Create X 2/1 red Dwarf Berserker creature tokens, where X is the number of Vehicles you control plus the number of Equipment you control. For each of those tokens, you may attach an Equipment you control to it.</property>
       <property name="Artist" value="Izzy" />
       <property name="Number" value="146" />
     </card>
@@ -2689,7 +2700,7 @@ Squash deals 6 damage to target creature or planeswalker.</property>
       <property name="Subtype" value="God" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Trample
-Whenever a creature or planeswalker an opponent controls is dealt excess noncombat damage, Toralf, God of Fury deals damage equal to the excess to any target other than that permanent.</property>
+Whenever a creature or planeswalker an opponent controls is dealt excess noncombat damage, Toralf deals damage equal to the excess to any target other than that permanent.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="5 / 4" />
@@ -2736,7 +2747,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Color" value="Red" />
       <property name="Type" value="Snow Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Tundra Fumarole deals 4 damage to target creature or planeswalker. Add <s value="C">{C}</s> for each <s value="S">{S}</s> spent to cast this spell. Until end of turn, you don't lose this mana as steps and phases end. (<s value="S">{S}</s> is one mana from a snow source.)</property>
+      <property name="Rules">Tundra Fumarole deals 4 damage to target creature or planeswalker. Add <s value="C">{C}</s> for each <s value="S">{S}</s> spent to cast this spell. Until end of turn, you don't lose this mana as steps and phases end. (<s value="S">{S}</s> is mana from a snow source.)</property>
       <property name="Artist" value="Simon Dominic" />
       <property name="Number" value="156" />
     </card>
@@ -2820,7 +2831,7 @@ Foretell <s value="2">{2}</s><s value="G">{G}</s><s value="G">{G}</s> (During yo
       <property name="Color" value="Green" />
       <property name="Type" value="Snow Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Distribute X +1/+1 counters among any number of creatures you control, where X is the amount of <s value="S">{S}</s> spent to cast this spell. Then draw a card for each creature you control with power 4 or greater. (<s value="S">{S}</s> is mana from a snow source.)</property>
+      <property name="Rules">Distribute X +1/+1 counters among any number of creatures you control, where X is the amount of <s value="S">{S}</s> spent to cast this spell. Then draw a card for each creature you control with power 4 or greater.</property>
       <property name="Artist" value="Mila Pesic" />
       <property name="Number" value="161" />
     </card>
@@ -2846,7 +2857,7 @@ Foretell <s value="2">{2}</s><s value="G">{G}</s><s value="G">{G}</s> (During yo
       <property name="Type" value="Snow Creature" />
       <property name="Subtype" value="Elf Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever you cast a creature spell, if <s value="S">{S}</s> of any of that spell's color was spent to cast it, that creature enters the battlefield with an additional +1/+1 counter on it. (<s value="S">{S}</s> is mana from a snow source.)</property>
+      <property name="Rules">Whenever you cast a creature spell, if <s value="S">{S}</s> of any of that spell's colors was spent to cast it, that creature enters the battlefield with an additional +1/+1 counter on it. (<s value="S">{S}</s> is mana from a snow source.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -2908,7 +2919,7 @@ Equip <s value="3">{3}</s></property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever one or more other Elves enters the battlefield under your control, create a 1/1 green Elf Warrior creature token. This ability triggers only once each turn.
+      <property name="Rules">Whenever one or more other Elves enter the battlefield under your control, create a 1/1 green Elf Warrior creature token. This ability triggers only once each turn.
 <s value="5">{5}</s><s value="G">{G}</s><s value="G">{G}</s>: Elves you control get +2/+2 and gain deathtouch until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -3161,7 +3172,7 @@ When Guardian Gladewalker enters the battlefield, put a +1/+1 counter on target 
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Until end of tun, target creature gets +1/+1 for each creature you control and gains trample. It must be blocked this turn if able.</property>
+      <property name="Rules">Until end of turn, target creature gets +1/+1 for each creature you control and gains trample. It must be blocked this turn if able.</property>
       <property name="Artist" value="Lorenzo Mastroianni" />
       <property name="Number" value="180" />
     </card>
@@ -3176,7 +3187,7 @@ When Guardian Gladewalker enters the battlefield, put a +1/+1 counter on target 
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="God" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As long as you control three or more legendary creatures, Kolvori, God of Kinship gets +4/+2 and has vigilance.
+      <property name="Rules">As long as you control three or more legendary creatures, Kolvori gets +4/+2 and has vigilance.
 <s value="1">{1}</s><s value="G">{G}</s>, <s value="T">{T}</s>: Look at the top six cards of your library. You may reveal a legendary creature card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
@@ -3260,7 +3271,7 @@ When Masked Vandal enters the battlefield, you may exile a creature card from yo
       <property name="Subtype" value="Troll Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample
-When Old-Growth Troll dies, if it was a creature, return it to the battlefield. It's an Aura enchantment with enchant Forest you control and "Enchanted Forest has '<s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s>' and '<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this land: Create a 4/4 green Troll Warrior creature token with trample.'"</property>
+When Old-Growth Troll dies, if it was a creature, return it to the battlefield. It's an Aura enchantment with enchant Forest you control and "Enchanted Forest has '<s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s>' and '<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this land: Create a tapped 4/4 green Troll Warrior creature token with trample.'"</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -3575,7 +3586,7 @@ III — Return target creature card from your graveyard to the battlefield with 
       <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
 I — Create a 1/1 white Human Warrior creature token.
 II — Create a 1/1 green Elf Warrior creature token.
-III — Choose any number of artifact tokens and/or creature tokens you control with different names. For each of them, create a token thats a copy of it.</property>
+III — Choose any number of artifact tokens and/or creature tokens you control with different names. For each of them, create a token that's a copy of it.</property>
       <property name="Artist" value="Igor Kieryluk" />
       <property name="Number" value="203" />
     </card>
@@ -3647,7 +3658,7 @@ III — Creatures you control gain deathtouch until end of turn.</property>
       <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
 I — Create a 2/3 red Demon Berserker creature token with menace.
 II — Whenever a Berserker attacks this turn, you draw a card and you lose 1 life.
-III — Add <s value="R">{R}</s> for each Berserker you control. Until end of turn, you don't lose this mana as steps or phases end.</property>
+III — Add <s value="R">{R}</s> for each Berserker you control. Until end of turn, you don't lose this mana as steps and phases end.</property>
       <property name="Artist" value="Livia Prima" />
       <property name="Number" value="207" />
     </card>
@@ -3865,7 +3876,7 @@ III — Return target creature card from your graveyard to the battlefield. Put 
       <property name="Subtype" value="Saga" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
-I — Each player mills four cards. You may exile up to one creature or planeswalker card from each graveyard.
+I — Each player mills four cards. Then you may exile a creature or planeswalker card from each graveyard.
 II, III — Until end of turn, you may cast spells from among cards exiled with King Narfi's Betrayal, and you may spend mana as though it were mana of any color to cast those spells.</property>
       <property name="Artist" value="Chase Stone" />
       <property name="Number" value="219" />
@@ -4315,7 +4326,7 @@ At the beginning of your upkeep, put a night counter on Replicating Ring. Then i
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When Runed Crown enters the battlefield, you may search your library, hand, and/or graveyard for a Rune card and put it onto the battlefield attached to Runed Crown. If you search your library this way, shuffle it.
-Equipped Creature gets +1/+1.
+Equipped creature gets +1/+1.
 Equip <s value="2">{2}</s></property>
       <property name="Artist" value="Randy Gallegos" />
       <property name="Number" value="245" />
@@ -4383,7 +4394,7 @@ Arctic Treeline enters the battlefield tapped.</property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Axgard Armory enters the battlefield tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s>.
-<s value="1">{1}</s><s value="R">{R}</s><s value="R">{R}</s><s value="W">{W}</s>, <s value="T">{T}</s>: Sacrifice Axgard Armory: Search your library for an Aura card and/or Equipment card, reveal them, put them into your hand, then shuffle your library.</property>
+<s value="1">{1}</s><s value="R">{R}</s><s value="R">{R}</s><s value="W">{W}</s>, <s value="T">{T}</s>, Sacrifice Axgard Armory: Search your library for an Aura card and/or an Equipment card, reveal them, put them into your hand, then shuffle your library.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="250" />
       <property name="Flags" value="RW" />
@@ -4594,7 +4605,7 @@ Ice Tunnel enters the battlefield tapped.</property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Port of Karfell enters the battlefield tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s>.
-<s value="3">{3}</s><s value="U">{U}</s><s value="B">{B}</s><s value="B">{B}</s>, <s value="T">{T}</s>, Sacrifice Port of Karfell: Mill four cards, then return a creature card from your graveyard to the battlefield tapped. (To mill a card,put the top card of your library into your graveyard.)</property>
+<s value="3">{3}</s><s value="U">{U}</s><s value="B">{B}</s><s value="B">{B}</s>, <s value="T">{T}</s>, Sacrifice Port of Karfell: Mill four cards, then return a creature card from your graveyard to the battlefield tapped. (To mill a card, put the top card of your library into your graveyard.)</property>
       <property name="Artist" value="Mauricio Calle" />
       <property name="Number" value="265" />
       <property name="Flags" value="UB" />
@@ -4605,7 +4616,7 @@ Ice Tunnel enters the battlefield tapped.</property>
       <property name="Type" value="Snow Land" />
       <property name="Subtype" value="Forest Island" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>)
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.)
 Rimewood Falls enters the battlefield tapped.</property>
       <property name="Artist" value="Piotr Dura" />
       <property name="Number" value="266" />
@@ -5089,7 +5100,7 @@ As long as you control six or more lands, lands you control have "<s value="T">{
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Create a 4/4 white Angel Warrior creature token with flying and vigilance. If this spell was foretold, create X of those tokens instead.
 Foretell <s value="X">{X}</s><s value="X">{X}</s><s value="W">{W}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
-      <property name="Artist" value="" />
+      <property name="Artist" value="Rudy Siswanto" />
       <property name="Number" value="294" />
       <property name="Packaging" value="Special" />
     </card>
@@ -5119,7 +5130,7 @@ Foretell <s value="4">{4}</s><s value="U">{U}</s><s value="U">{U}</s> (During yo
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Choose a creature type. Return up to two creature cards of the chosen type from your graveyard to the battlefield. If this spell was foretold, return all creature cards of the chosen type from your graveyard to the battlefield instead.
+      <property name="Rules">Choose a creature type. Return up to two creature cards of that type from your graveyard to the battlefield. If this spell was foretold, return all creature cards of that type from your graveyard to the battlefield instead.
 Foretell <s value="5">{5}</s><s value="B">{B}</s><s value="B">{B}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
       <property name="Artist" value="Randy Vargas" />
       <property name="Number" value="296" />
@@ -5142,7 +5153,7 @@ Foretell <s value="2">{2}</s><s value="R">{R}</s><s value="R">{R}</s></property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="5 / 4" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Randy Vargas" />
       <property name="Number" value="297" />
       <property name="Packaging" value="Special" />
     </card>
@@ -5214,7 +5225,7 @@ Equip <s value="1">{1}</s><s value="W">{W}</s></property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying, vigilance
 Snow lands your opponents control enter the battlefield tapped.
-Noncreature spells your opponents cast with converted mana cost 4 or more cost <s value="2">{2}</s> more to cast.</property>
+Noncreature spells your opponents cast with converted mana cost 4 or greater cost <s value="2">{2}</s> more to cast.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
@@ -5229,7 +5240,7 @@ Noncreature spells your opponents cast with converted mana cost 4 or more cost <
         <property name="Color" value="White" />
         <property name="Type" value="Legendary Artifact" />
         <property name="Rules">If a source an opponent controls would deal damage to you or a permanent you control, prevent 1 of that damage.
-Whenever you or a permanent you control becomes the target of a spell or ability an opponent controls, counter that spell or ability unless its controller pays <s value="1">{1}</s>.</property>
+Whenever you or another permanent you control becomes the target of a spell or ability an opponent controls, counter that spell or ability unless its controller pays <s value="1">{1}</s>.</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
         <property name="PT Box" value="" />
@@ -5268,7 +5279,7 @@ When Sigrid, God-Favored enters the battlefield, exile up to one target attackin
       <property name="Subtype" value="God" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Alrund gets +1/+1 for each card in your hand and each foretold card you own in exile.
-At the beginning of your end step, choose a card type, then reveal the top two cards of your library. Put all cards of the chosen type into your hand and the rest on the bottom of your library in any order.</property>
+At the beginning of your end step, choose a card type, then reveal the top two cards of your library. Put all cards of the chosen type revealed this way into your hand and the rest on the bottom of your library in any order.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -5300,7 +5311,7 @@ Whenever Hakka, Whispering Raven deals combat damage to a player, return it to i
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="God" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of your upkeep, you may exile Cosima. If you do, it gains "Whenever a land enters the battlefield under your control, if Cosima is exiled, you may put a voyage counter on it. If you don't, return Cosima to the battlefield with X +1/+1 counters on it and draw X cards, where X is the number of voyage counters on it.</property>
+      <property name="Rules">At the beginning of your upkeep, you may exile Cosima. If you do, it gains "Whenever a land enters the battlefield under your control, if Cosima is exiled, you may put a voyage counter on it. If you don't, return Cosima to the battlefield with X +1/+1 counters on it and draw X cards, where X is the number of voyage counters on it."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="2 / 4" />
@@ -5404,7 +5415,7 @@ At the beginning of your upkeep, exile two cards from your graveyard. If you can
       <property name="Subtype" value="God" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
-Whenever an opponent sacrifices a nontoken permanent or discards a permanent card, you may put that card onto the battlefield under your control from their graveyard.</property>
+Whenever an opponent sacrifices a nontoken permanent or discards a permanent card, you may put that card from a graveyard onto the battlefield under your control.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="4 / 5" />
@@ -5563,7 +5574,7 @@ Sacrifice five Treasures: Search your library for an artifact or Dragon card, pu
       <property name="Subtype" value="God" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Trample
-Whenever a creature or planeswalker an opponent controls is dealt excess noncombat damage, Toralf, God of Fury deals damage equal to the excess to any target other than that permanent.</property>
+Whenever a creature or planeswalker an opponent controls is dealt excess noncombat damage, Toralf deals damage equal to the excess to any target other than that permanent.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="5 / 4" />
@@ -5704,7 +5715,7 @@ Whenever a creature you control with deathtouch deals combat damage to a player,
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="God" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As long as you control three or more legendary creatures, Kolvori, God of Kinship gets +4/+2 and has vigilance.
+      <property name="Rules">As long as you control three or more legendary creatures, Kolvori gets +4/+2 and has vigilance.
 <s value="1">{1}</s><s value="G">{G}</s>, <s value="T">{T}</s>: Look at the top six cards of your library. You may reveal a legendary creature card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
@@ -6216,7 +6227,7 @@ Foretell <s value="2">{2}</s><s value="U">{U}</s> (During your turn, you may pay
       <property name="Color" value="Blue" />
       <property name="Type" value="Snow Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Scry X, where is the amount of <s value="S">{S}</s> spent to cast this spell, then draw three cards. (<s value="S">{S}</s> is mana from a snow source.)</property>
+      <property name="Rules">Scry X, where X is the amount of <s value="S">{S}</s> spent to cast this spell, then draw three cards. (<s value="S">{S}</s> is mana from a snow source.)</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="344" />
       <property name="Packaging" value="Special" />
@@ -6251,7 +6262,7 @@ Return three snow lands you control to their owner's hand: Return Icebreaker Kra
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Choose target nonlegendary creature. The next time one or more creatures or planeswalkers enter the battlefield this turn, they enter as copies of the chosen creature instead.
+      <property name="Rules">Choose target nonlegendary creature. The next time one or more creatures or planeswalkers enter the battlefield this turn, they enter as copies of the chosen creature.
 Foretell <s value="U">{U}</s> (During your turn, you may pay <s value="2">{2}</s> and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)</property>
       <property name="Artist" value="YW Tang" />
       <property name="Number" value="346" />
@@ -6487,7 +6498,7 @@ Treasures you control have "<s value="T">{T}</s>, Sacrifice this artifact: Add t
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Create X 2/1 red Dwarf creature tokens, where X is the number of Vehicles you control plus the number of Equipment you control. For each of those tokens, you may attach an Equipment you control to it.</property>
+      <property name="Rules">Create X 2/1 red Dwarf Berserker creature tokens, where X is the number of Vehicles you control plus the number of Equipment you control. For each of those tokens, you may attach an Equipment you control to it.</property>
       <property name="Artist" value="Izzy" />
       <property name="Number" value="359" />
       <property name="Packaging" value="Special" />
@@ -6516,7 +6527,7 @@ Treasures you control have "<s value="T">{T}</s>, Sacrifice this artifact: Add t
       <property name="Color" value="Red" />
       <property name="Type" value="Snow Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Tundra Fumarole deals 4 damage to target creature or planeswalker. Add <s value="C">{C}</s> for each <s value="S">{S}</s> spent to cast this spell. Until end of turn, you don't lose this mana as steps and phases end. (<s value="S">{S}</s> is one mana from a snow source.)</property>
+      <property name="Rules">Tundra Fumarole deals 4 damage to target creature or planeswalker. Add <s value="C">{C}</s> for each <s value="S">{S}</s> spent to cast this spell. Until end of turn, you don't lose this mana as steps and phases end. (<s value="S">{S}</s> is mana from a snow source.)</property>
       <property name="Artist" value="Simon Dominic" />
       <property name="Number" value="361" />
       <property name="Packaging" value="Special" />
@@ -6530,7 +6541,7 @@ Treasures you control have "<s value="T">{T}</s>, Sacrifice this artifact: Add t
       <property name="Color" value="Green" />
       <property name="Type" value="Snow Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Distribute X +1/+1 counters among any number of creatures you control, where X is the amount of <s value="S">{S}</s> spent to cast this spell. Then draw a card for each creature you control with power 4 or greater. (<s value="S">{S}</s> is mana from a snow source.)</property>
+      <property name="Rules">Distribute X +1/+1 counters among any number of creatures you control, where X is the amount of <s value="S">{S}</s> spent to cast this spell. Then draw a card for each creature you control with power 4 or greater.</property>
       <property name="Artist" value="Mila Pesic" />
       <property name="Number" value="362" />
       <property name="Packaging" value="Special" />
@@ -6545,7 +6556,7 @@ Treasures you control have "<s value="T">{T}</s>, Sacrifice this artifact: Add t
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever one or more other Elves enters the battlefield under your control, create a 1/1 green Elf Warrior creature token. This ability triggers only once each turn.
+      <property name="Rules">Whenever one or more other Elves enter the battlefield under your control, create a 1/1 green Elf Warrior creature token. This ability triggers only once each turn.
 <s value="5">{5}</s><s value="G">{G}</s><s value="G">{G}</s>: Elves you control get +2/+2 and gain deathtouch until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -6580,7 +6591,7 @@ Treasures you control have "<s value="T">{T}</s>, Sacrifice this artifact: Add t
       <property name="Subtype" value="Troll Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample
-When Old-Growth Troll dies, if it was a creature, return it to the battlefield. It's an Aura enchantment with enchant Forest you control and "Enchanted Forest has '<s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s>' and '<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this land: Create a 4/4 green Troll Warrior creature token with trample.'"</property>
+When Old-Growth Troll dies, if it was a creature, return it to the battlefield. It's an Aura enchantment with enchant Forest you control and "Enchanted Forest has '<s value="T">{T}</s>: Add <s value="G">{G}</s><s value="G">{G}</s>' and '<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this land: Create a tapped 4/4 green Troll Warrior creature token with trample.'"</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -6871,7 +6882,7 @@ Pay 3 life: Return Cleaving Reaper from your graveyard to your hand. Activate th
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-Whenever another Angel enters the battlefield under your control, put a +1/+1 counter on Youthful Valyrie.</property>
+Whenever another Angel enters the battlefield under your control, put a +1/+1 counter on Youthful Valkyrie.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -7061,7 +7072,7 @@ Whenever another creature named Gladewalker Ritualist enters the battlefield und
       <property name="Color" value="Multicolor White Black" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Rampage of the Valkyries enters the battlefield, create a 4/4 white Angel token with flying and vigilance.
+      <property name="Rules">When Rampage of the Valkyries enters the battlefield, create a 4/4 white Angel creature token with flying and vigilance.
 Whenever an Angel you control dies, each other player sacrifices a creature.</property>
       <property name="Artist" value="Billy Christian" />
       <property name="Number" value="393" />
