@@ -391,5 +391,8 @@ changelog = {
         ]),
     3060208: ("3.6.2.8", "February 4 2020", [
         "Added a new table action to manage secret/hidden values"
+        ]),
+    3060210: ("3.6.2.10", "February 4 2020", [
+        "Added Strixhaven (tokens and japanese masterpiece not yet available)"
         ])
 }
