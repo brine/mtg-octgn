@@ -132,6 +132,7 @@ tokenTypes = {
     'assemblyworker22c': ('2 / 2 Colorless Assembly Worker', '6c4d590f-a3c8-4d94-b113-a586c471c2a2'),
     'avatar**w': ('* / * White Avatar', 'ebfa36c6-2c4e-4a5f-9730-010e7b50bd19'),
     'avatar44w': ('4 / 4 White Avatar', '00348a3e-c739-4a07-a31b-efaff054329d'), #M19
+    'avatar36m': ('3 / 6 Multicolor Black Red Avatar', 'd850424b-f0f4-4d40-80fd-d72023ad372e'),
     'bat11b': ('1 / 1 Black Bat', '24b07ba5-680d-4646-af54-a9c50410eef0'), #M19
     'bat12b': ('1 / 2 Black Bat', '11645243-4e84-4759-9f9b-1b33809204c1'),
     'bear22g': ('2 / 2 Green Bear', '1eae0d3e-08c1-4dda-99b1-a994f6827b77'), #MPRODY MPRONS C15 ELD
@@ -219,7 +220,7 @@ tokenTypes = {
     'dwarfberserker21r': ('2 / 1 Red Dwarf Berserker', 'd4e47ce9-0df5-45de-9096-a22c07488f73'),
     'egg01g': ('0 / 1 Green Egg', '660593e6-c7f5-4937-a167-d022239e04ba'),
     'eldrazi77c': ('7 / 7 Colorless Eldrazi', '3d3278e0-c973-4aef-bcc4-721bdc61ae77'),
-    'eldrazi1010c': ('10 / 10 Colorless Eldrazi', '7154d235-16b1-4c88-934e-5e91cb75340d'), #BFZ C19
+    'eldrazi1010c': ('10 / 10 Colorless Eldrazi', 'c289905c-9d77-4716-92b7-5cb88e4ef728'), #BFZ C19
     'scion11c': ('1 / 1 Colorless Eldrazi Scion', '7154d235-16b1-4c88-934e-5e91cb75340d'),
     'spawn01c': ('0 / 1 Colorless Eldrazi Spawn', 'cd04254c-b9ba-47d4-a21e-47845832bd09'),
     'eldrazihorror32c': ('3 / 2 Colorless Eldrazi Horror', '80a30ec1-8fec-4f15-9ce7-1dfe90bf48c8'),
@@ -242,6 +243,7 @@ tokenTypes = {
     'elemental53g': ('5 / 3 Green Elemental', 'cb75cd77-2074-4ee7-a4d5-5f71976472b7'),
     'elemental77g': ('7 / 7 Green Elemental', 'f3149eb3-d8e2-4142-9306-504cf938719f'),
     'elemental**g': ('* / * Green Elemental', '46cf4187-fa7b-407d-bdf1-e8a63d45d1be'), #C18 OGW
+    'elemental44m': ('4 / 4 Multicolor Blue Red Elemental', '3acd4738-ef7e-4ab1-930c-7e6bd5f7a3d9'),
     'elemental55m': ('5 / 5 Multicolor Black Red Elemental', 'dd6b1a3e-4055-4d94-96a1-3f9628058fad'),
     'elemental55m2': ('5 / 5 Multicolor Blue Red Elemental', '3b8d25a0-4cb0-4f24-86b8-925e89d263f6'),
     'elemental55m3': ('5 / 5 Multicolor Red Green Elemental', '557faf98-cdc8-4e8e-b029-ae91257bb633'),
@@ -266,7 +268,9 @@ tokenTypes = {
     'festeringgoblin11b': ('1 / 1 Black Festering Goblin', 'a6f85e01-85ac-4413-aef2-619f99da6850'),
     'fish22u': ('2/2 Blue Fish', '7bff0b5a-ba88-42ed-a583-f30e484da989'),
     'food': ('Colorless Food', 'd6459e6b-e94e-475a-ab73-5342e26dddb7'), #ELD ELD ELD ELD
+    'fractal00m': ('0/0 Multicolor Green Blue Fractal', 'e9f059e6-5cf8-4ba0-b51a-7fe9c75e0304'),
     'froglizard33g': ('3/3 Green Frog Lizard', 'a890864d-6d00-4c5e-a173-bd01f0737739'),
+    'fungusbeast44g': ('4/4 Green Fungus Beast', 'c7a6e6e2-a26e-46e0-8aaf-9a08c489a011'),
     'gargoyle34c': ('3 / 4 Colorless Gargoyle', '8f503f4d-23af-45c5-b561-915dff48838e'), #M10 C19
     'germ00b': ('0 / 0 Black Germ', '8507707c-ef57-4fbc-8d06-b1d031c94eed'),
     'giant44r': ('4 / 4 Red Giant', 'b64361c6-1271-4592-aef1-fae6f37e0449'),
@@ -292,6 +296,9 @@ tokenTypes = {
     'goldmeadowharrier11w': ('1 / 1 White Goldmeadow Harrier', 'd6cdd78a-81a3-40b4-87b5-dfa7781b7294'),
     'golem33c': ('3 / 3 Colorless Golem', 'e0566739-f080-448c-b79e-68c55265dfe1'), #SOM NPH M20
     'golem33c2': ('3 / 3 Colorless Golem', 'b18e2591-c594-425c-9111-771224086f19'), #enchantment artifact
+    'golem33c3': ('3 / 3 Colorless Golem', '8c4bfa13-2d5b-40c0-86d5-330e812efcf2'), #flying
+    'golem33c4': ('3 / 3 Colorless Golem', '7b046b0f-d105-48e4-932f-3b68010a625d'), #trample
+    'golem33c5': ('3 / 3 Colorless Golem', '5e20d726-b74b-4597-969c-9ab30760d55c'), #vigilance
     'golem44c': ('4 / 4 Colorless Golem', 'a7820eb9-6d7f-4bc4-b421-4e4420642fb7'), 
     'golem99c': ('9 / 9 Colorless Golem', 'b61b969e-73a6-4646-be13-8b0d98b10743'),
     'graveborn31m': ('3 / 1 Multicolor Black Red Graveborn', '9c2731ac-5832-45cd-87ef-e5be6c8f4b3b'),
@@ -328,6 +335,7 @@ tokenTypes = {
     'illusion11u': ('1 / 1 Blue Illusion', 'a7411656-5fe2-466b-98dd-5b943bb97164'), #MMA CHK
     'illusion22u': ('2 / 2 Blue Illusion', 'fdd96bcf-75cc-477d-981a-b65e336623f5'),
     'illusion22u2': ('2 / 2 Blue Illusion', 'bb023250-dfde-4141-809d-930d5a85928c'), #XLN
+    'inkling21m': ('2 / 1 Multcolor White Black Inkling', '4495f827-3ec4-492f-9482-2e55b384573a'),
     'insect01b': ('0 / 1 Black Insect', '3fab8819-3c34-4652-8797-25debdd7c322'),
     'insect11b': ('1 / 1 Black Insect', '8363d27d-c64b-4f54-8377-b7612c29cbbd'),
     'insect11g': ('1 / 1 Green Insect', '6cd95e82-f30e-4a06-8d9b-ed11d1c08ad0'), #M10 MPRONS SOI CN2
@@ -391,6 +399,7 @@ tokenTypes = {
     'pegasus11w': ('1 / 1 White Pegasus', '5d4c9390-eb5c-4aa2-be96-60023f56811e'), #UNG C14 C19
     'pegasus22w': ('2 / 2 White Pegasus', '11d7a818-b292-4776-90ec-e56ebb31cdc0'),
     'pentavite11c': ('1 / 1 Colorless Pentavite', '40236e71-a22d-430a-a152-c33132c6bfae'),
+    'pest11m': ('1 / 1 Multicolor Black Green Pest', '8835958a-a49c-4ff9-9727-bc557def3c1e'),
     'pest01c': ('0 / 1 Colorless Pest', 'b211942a-dac7-4202-8039-4caa1ea567e6'),
     'pincher22c': ('2 / 2 Colorless Pincher', '8c3f12b5-b145-4b8b-98bc-ed2cbeeb54a6'),
     'pirate11r': ('1 / 1 Red Pirate', 'b5a34e3d-a71f-40de-b134-1e53a7ef2caf'),
@@ -457,6 +466,7 @@ tokenTypes = {
     'spirit11w': ('1 / 1 White Spirit', 'aeabe1d8-67ac-4a87-a0d0-e642c2914843'), #SHA MPRPLS DDC ISD AVR CNS M15 KTK FRF M20
     'spirit11u': ('1/1 Blue Spirit', '61f7504f-a29d-4f88-8a2d-58706bf08360'),
     'spirit11m': ('1 / 1 Multicolor White Black Spirit', '55353de2-1086-4174-8904-b57db68708fd'), #EVE GTC RNA
+    'spirit32m': ('3 / 2 Multicolor Red White Spirit', '88483e99-039a-4c6c-bef3-83caad221201'), #EVE GTC RNA
     'spirit**m': ('* / * Multicolor White Black Spirit', '077636e0-3abe-441c-848e-19aed15a0eb3'),
     'spirit11c': ('1 / 1 Colorless Spirit', 'c30cf64a-475d-4fa4-bfeb-8d7d65afc42f'), #CHK EMA
     'spirit11c': ('2 / 2 Colorless Spirit', '7446e671-1183-484d-b99b-5f95c5f9a8c9'),
@@ -590,6 +600,7 @@ tokenTypes = {
     'lilianaemblem2': ("Liliana's Emblem", '2066641c-49f9-40a0-b93d-a0f02164efb0'), #defiant necromancer
     'lilianaemblem3': ("Liliana's Emblem", '7e989d06-4bf4-4182-b65d-df391de89763'), #Last Hope
     'lilianaemblem4': ("Liliana's Emblem", '81ff7d79-2cca-4b01-830b-875f6ecb8b10'), #waker of the dead
+    'lukkaemblem': ("Lukka's Emblem", 'e84884b1-0a90-4ee3-af66-4879ae1580b9'),
     'muyanlingemblem': ("Mu Yanling's Emblem", 'b171c993-4248-439e-8ef2-5d1b6dfeb757'),
     'narsetemblem': ("Narset's Emblem", '5ed2ac04-ea4f-4746-bbe0-25ccb6e953cf'),
     'narsetemblem2': ("Narset's Emblem", 'bc143a46-8fa1-448d-bdda-579e1b0ef4d0'), #ancient way
@@ -599,6 +610,7 @@ tokenTypes = {
     'obnixilisemblem2': ("Ob Nixilis's Emblem", '86423661-6c13-4c19-a169-6a248cc4b9d9'), #reignited BFZ C19
     'ralemblem': ("Ral's Emblem", '88beb471-6382-40c3-afb7-efea583a3631'),
     'rowanemblem': ("Rowan's Emblem", '7b0e1f85-3593-4e0e-aead-6faf94a2714a'),
+    'rowanemblem2': ("Rowan's Emblem", '086fd079-55c3-4283-9034-a9a85b3b6324'), #scholar of sparks
     'sarkhanemblem': ("Sarkhan's Emblem", '307fb3a2-010c-4e8e-883e-768dd3804db4'),
     'serraemblem': ("Serra's Emblem", '68b1bcf4-54f7-4194-a088-47bdcad86007'),
     'sorinemblem': ("Sorin's Emblem", 'b916e959-5a1d-4903-850a-95544f6ae566'),
