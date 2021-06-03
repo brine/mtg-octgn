@@ -193,6 +193,7 @@ tokenTypes = {
     'construct44c': ('4 / 4 Colorless Construct', '2a8e879e-ddea-43b7-95eb-95cac810ea95'), 
     'construct**c': ('* / * Colorless Construct', 'c93bea45-2e84-441f-ada8-b6970ad23ffb'), #KLD KLD UST
     'copy': ('Copy', '2736e3d3-a2b6-4af6-a377-f7517da33a75'), 
+    'crab03u': ('0 / 3 Blue Crab', 'b4aeebe7-825d-4bc6-a7ea-f3aa5692aead'), 
     'demon55b': ('5 / 5 Black Demon', '9b9aeb57-b37d-4a9e-9369-28997479f518'), #ISD AVR M20
     'demon66b': ('6 / 6 Black Demon', '98601612-a132-41ab-9f9b-9d7d085d6beb'),
     'demon**b': ('* / * Black Demon', 'd7f65953-cbe0-46ea-ad32-3646d0381c88'), #DDC CNS
@@ -300,6 +301,7 @@ tokenTypes = {
     'golem33c4': ('3 / 3 Colorless Golem', '7b046b0f-d105-48e4-932f-3b68010a625d'), #trample
     'golem33c5': ('3 / 3 Colorless Golem', '5e20d726-b74b-4597-969c-9ab30760d55c'), #vigilance
     'golem44c': ('4 / 4 Colorless Golem', 'a7820eb9-6d7f-4bc4-b421-4e4420642fb7'), 
+    'golem44m': ('4 / 4 Red White Golem', '2cadb241-cdac-4dd3-9584-168805a13bc7'), 
     'golem99c': ('9 / 9 Colorless Golem', 'b61b969e-73a6-4646-be13-8b0d98b10743'),
     'graveborn31m': ('3 / 1 Multicolor Black Red Graveborn', '9c2731ac-5832-45cd-87ef-e5be6c8f4b3b'),
     'gremlin22r': ('2 / 2 Red Gremlin', 'd71b2470-a814-49d1-a1d1-36fa7527032f'),
@@ -568,6 +570,8 @@ tokenTypes = {
     'sinuousstriker': ("Sinuous Striker", 'c3d9c340-f00e-4eb2-870e-da508b29626d'),
     'steadfastsentinel': ("Steadfast Sentinel", 'c6b9325b-eef3-48b8-9492-b4770987f31d'),
     'sunscourgechampion': ("Sunscourge Champion", 'cf6cfea9-13a0-421c-b1de-4c26ffd798c2'),
+    'timelessdragon': ("Timeless Dragon", '2231237f-3cc7-4057-9680-4d995c0d0e83'),
+    'timelesswitness': ("Timeless Witness", '17954ab3-f2f9-41a9-bae9-6f1d302feab2'),
     
     'ajaniemblem': ("Ajani's Emblem", '78832bbe-cba2-4008-a3ad-c729d22ae44b'),
     'ajaniemblem2': ("Ajani's Emblem", '3a030473-dcb7-48d9-b310-5b27a02311fe'), #M19
