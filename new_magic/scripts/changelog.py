@@ -382,17 +382,22 @@ changelog = {
         "Added The Prismatic Piper to the Commander Legends unlimited land booster.",
         "Added a few missing cards from the CMR set."
         ]),
-    3060205: ("3.6.2.5", "January 20 2020", [
+    3060205: ("3.6.2.5", "January 20 2021", [
         "Added Kaldheim.",
         "Updated Secret Lair cards."
         ]),
-    3060207: ("3.6.2.7", "January 24 2020", [
+    3060207: ("3.6.2.7", "January 24 2021", [
         "Added missing Game Night expansions"
         ]),
-    3060208: ("3.6.2.8", "February 4 2020", [
+    3060208: ("3.6.2.8", "February 4 2021", [
         "Added a new table action to manage secret/hidden values"
         ]),
-    3060210: ("3.6.2.10", "February 4 2020", [
+    3060210: ("3.6.2.10", "April 4 2021", [
         "Added Strixhaven (tokens and japanese masterpiece not yet available)"
+        ]),
+    3060212: ("3.6.2.12", "June 3 2021", [
+        "Added Strixhaven Alt-Art Mystical Archives",
+        "Updated Secret Lair sets",
+        "Added Modern Horizons 2"
         ])
 }
