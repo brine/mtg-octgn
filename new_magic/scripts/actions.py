@@ -968,18 +968,28 @@ def tolibraryposition(card, x = 0, y = 0):
 
 def libraryBottomAllShuffle(cards, x = 0, y = 0):
     mute()
-    count = 0
-    emergencyStop = len(cards) + 4 ## just in case something causes an infinite while loop
-    while len(cards) > 0:
-        emergencyStop -= 1
-        if emergencyStop == 0:
-            break
-        index = rnd(0, len(cards) - 1)
-        card = cards.pop(index)
-        if card.controller == me:
-            card.moveToBottom(card.owner.piles['Library'])
-            count += 1
-    notify("{} shuffles {} selected cards to the bottom of their Library.".format(me, count))
+    libraryCount = len(me.Library)
+    myPlanesSchemes = me.piles['Planes/Schemes']
+
+    # Temporarily move library to the top of Planes/Schemes. It doesn't matter if cards are put in a reverse order,
+    # because if they are, the order will be reversed again when putting them back.
+    for card in me.Library:
+        card.moveTo(myPlanesSchemes)
+
+    # Move chosen cards to library, then shuffle.
+    movedCardCount = 0
+    for card in cards:
+        # Not touching cards we don't own is probably the best option.
+        if card.owner == me:
+            card.moveTo(me.Library)
+            movedCardCount += 1
+    shuffle(me.Library, silence = True)
+
+    # Move the library cards from Planes/Schemes to the top of library.
+    for card in myPlanesSchemes.top(libraryCount):
+        card.moveTo(me.Library)
+
+    notify("{} shuffles {} selected cards to the bottom of their Library.".format(me, movedCardCount))
 
 def tohand(card, x = 0, y = 0):
     mute()
