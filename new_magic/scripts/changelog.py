@@ -399,5 +399,8 @@ changelog = {
         "Added Strixhaven Alt-Art Mystical Archives",
         "Updated Secret Lair sets",
         "Added Modern Horizons 2"
+        ]),
+    3060213: ("3.6.2.13", "July 12 2021", [
+        "Added Adventures in the Forgotten Realms"
         ])
 }
