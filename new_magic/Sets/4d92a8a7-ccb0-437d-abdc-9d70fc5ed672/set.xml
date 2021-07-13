@@ -454,7 +454,7 @@ Whenever Ink-Eyes, Servant of Oni deals combat damage to a player, you may put t
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
-      <property name="Artist" value="Jenn Ravenna Tran" />
+      <property name="Artist" value="Ravenna Tran" />
       <property name="Number" value="034" />
     </card>
     <card name="Pack Rat" id="f3864bc8-f86e-4c41-b454-e19d1939147b">
@@ -632,7 +632,7 @@ Activated abilities of sources with the chosen name can't be activated unless th
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="1">{1}</s>: Inkmoth Nexus becomes a 1/1 Blinkmoth artifact creature with flying and infect until end of turn. It's still a land. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</property>
+<s value="1">{1}</s>: Inkmoth Nexus becomes a 1/1 Phyrexian Blinkmoth artifact creature with flying and infect until end of turn. It's still a land. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)</property>
       <property name="Artist" value="Joshua Howard" />
       <property name="Number" value="045" />
       <property name="Flags" value="C" />
@@ -2245,6 +2245,85 @@ Whenever an opponent draws a card, you may draw two cards.</property>
       <property name="Artist" value="Eric Wilkerson" />
       <property name="Number" value="167" />
     </card>
+    <card name="Balance" id="a8619034-173c-4950-a0b4-1ae1dcfd0bc5">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="173" />
+    </card>
+    <card name="Brainstorm" id="84e0da5b-0916-4dd6-99a2-a58e9d83bb26">
+      <property name="Cost">
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Draw three cards, then put two cards from your hand on top of your library in any order.</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="174" />
+    </card>
+    <card name="Counterspell" id="5932f2dc-3bb6-4f5e-8e8d-c62e7413ac0a">
+      <property name="Cost">
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Counter target spell.</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="175" />
+    </card>
+    <card name="Birds of Paradise" id="0003aa31-d42e-4972-9fb9-086aefe29a2c">
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Bird" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Flying
+<s value="T">{T}</s>: Add one mana of any color.</property>
+      <property name="Power" value="0" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="0 / 1" />
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="176" />
+    </card>
+    <card name="Howling Mine" id="3a509149-9864-4622-8122-21a723defaa8">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">At the beginning of each player's draw step, if Howling Mine is untapped, that player draws an additional card.</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="177" />
+    </card>
+    <card name="Wasteland" id="bd53f7e3-f76a-440b-8c84-994d378bda97">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>, Sacrifice Wasteland: Destroy target nonbasic land.</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="178" />
+      <property name="Flags" value="C" />
+    </card>
     <card name="Wrath of God" id="caff117f-844b-4d11-a104-930d7f238114">
       <property name="Cost">
         <s value="2">{2}</s>
@@ -2311,6 +2390,97 @@ When you cycle Decree of Pain, all creatures get -2/-2 until end of turn.</prope
       <property name="Rules">Search your library for a Forest card, put that card onto the battlefield, then shuffle.</property>
       <property name="Artist" value="Jeff Soto" />
       <property name="Number" value="189" />
+    </card>
+    <card name="Soul-Scar Mage" id="bb58d181-500f-4698-a2ba-e378e5335676">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Wizard" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Prowess
+If a source you control would deal noncombat damage to a creature an opponent controls, put that many -1/-1 counters on that creature instead.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="2" />
+      <property name="PT Box" value="1 / 2" />
+      <property name="Artist" value="Fiona Staples" />
+      <property name="Number" value="190" />
+    </card>
+    <card name="Dryad of the Ilysian Grove" id="22e22287-21c5-4733-a527-b176fbf3725d">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Enchantment Creature" />
+      <property name="Subtype" value="Nymph Dryad" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">You may play an additional land on each of your turns.
+Lands you control are every basic land type in addition to their other types.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="4" />
+      <property name="PT Box" value="2 / 4" />
+      <property name="Artist" value="Fiona Staples" />
+      <property name="Number" value="191" />
+    </card>
+    <card name="Sakura-Tribe Elder" id="0b064748-515a-4234-ad00-8a735d7aa385">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Snake Shaman" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Sacrifice Sakura-Tribe Elder: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="1 / 1" />
+      <property name="Artist" value="Fiona Staples" />
+      <property name="Number" value="192" />
+    </card>
+    <card name="Spell Queller" id="cf1320b1-3eac-4c5a-9f75-6fdff3cc2639">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor White Blue" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Spirit" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Flash
+Flying
+When Spell Queller enters the battlefield, exile target spell with mana value 4 or less.
+When Spell Queller leaves the battlefield, the exiled card's owner may cast that card without paying its mana cost.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="3" />
+      <property name="PT Box" value="2 / 3" />
+      <property name="Artist" value="Fiona Staples" />
+      <property name="Number" value="193" />
+    </card>
+    <card name="Metallic Mimic" id="23caa9ce-057a-40f6-a9fe-073c60b69fc2">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact Creature" />
+      <property name="Subtype" value="Shapeshifter" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">As Metallic Mimic enters the battlefield, choose a creature type.
+Metallic Mimic is the chosen type in addition to its other types.
+Each other creature you control of the chosen type enters the battlefield with an additional +1/+1 counter on it.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="2 / 1" />
+      <property name="Artist" value="Fiona Staples" />
+      <property name="Number" value="194" />
     </card>
     <card name="Chatter of the Squirrel" id="a320d7e7-aa1e-4c00-9b45-525352393e00">
       <property name="Cost">
@@ -2967,6 +3137,359 @@ Fire Covenant deals X damage divided as you choose among any number of target cr
       <property name="Rules">Destroy all artifacts and enchantments. You gain 2 life for each permanent destroyed this way.</property>
       <property name="Artist" value="Minttu Hynninen" />
       <property name="Number" value="273" />
+    </card>
+    <card name="Mesa Enchantress" id="bd5335eb-e81f-46c5-a9e8-011f0c962b41">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Druid" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever you cast an enchantment spell, you may draw a card.</property>
+      <property name="Power" value="0" />
+      <property name="Toughness" value="2" />
+      <property name="PT Box" value="0 / 2" />
+      <property name="Artist" value="Jen Bartel" />
+      <property name="Number" value="282" />
+    </card>
+    <card name="Archaeomancer" id="552bb59c-085f-4caf-8430-ba6e2888ea6d">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Wizard" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When Archaeomancer enters the battlefield, return target instant or sorcery card from your graveyard to your hand.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="2" />
+      <property name="PT Box" value="1 / 2" />
+      <property name="Artist" value="Jen Bartel" />
+      <property name="Number" value="283" />
+    </card>
+    <card name="Bloom Tender" id="35dbe45e-16df-4ebb-a76a-df24124de23b">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elf Druid" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: For each color among permanents you control, add one mana of that color.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="1 / 1" />
+      <property name="Artist" value="Jen Bartel" />
+      <property name="Number" value="284" />
+    </card>
+    <card name="Meteor Golem" id="c4565ed0-36a1-4d36-987e-cae10e36830f">
+      <property name="Cost">
+        <s value="7">{7}</s>
+      </property>
+      <property name="CMC" value="7" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact Creature" />
+      <property name="Subtype" value="Golem" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When Meteor Golem enters the battlefield, destroy target nonland permanent an opponent controls.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="3" />
+      <property name="PT Box" value="3 / 3" />
+      <property name="Artist" value="Jen Bartel" />
+      <property name="Number" value="285" />
+    </card>
+    <card name="Azorius Signet" id="e7e4da73-2faa-4992-8f61-e668ce82ba17">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="U">{U}</s>.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="286" />
+    </card>
+    <card name="Dimir Signet" id="35148573-7788-4023-a63c-4a09f48273c1">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="U">{U}</s><s value="B">{B}</s>.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="287" />
+    </card>
+    <card name="Gruul Signet" id="0310bb0e-bd22-470e-8711-4e15aec86578">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="R">{R}</s><s value="G">{G}</s>.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="288" />
+    </card>
+    <card name="Rakdos Signet" id="086f1ee3-d83b-410b-b51f-ad4be841ac59">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="B">{B}</s><s value="R">{R}</s>.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="289" />
+    </card>
+    <card name="Selesnya Signet" id="4fcfd873-da1f-4f0b-a41d-54f383ec1724">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="G">{G}</s><s value="W">{W}</s>.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="290" />
+    </card>
+    <card name="Boros Signet" id="10d4532d-f948-4eb3-b855-592080e171e5">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="R">{R}</s><s value="W">{W}</s>.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="291" />
+    </card>
+    <card name="Golgari Signet" id="f04c0ba5-a83a-40a9-919a-0bda0fef3b4f">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="B">{B}</s><s value="G">{G}</s>.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="292" />
+    </card>
+    <card name="Izzet Signet" id="ab29ff99-b246-49e8-bb77-c7906b502232">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="U">{U}</s><s value="R">{R}</s>.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="293" />
+    </card>
+    <card name="Orzhov Signet" id="7072b7b7-7ca1-4106-a9b2-49cde7c47faa">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="B">{B}</s>.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="294" />
+    </card>
+    <card name="Simic Signet" id="b58e931a-d4dd-4705-ae31-89c0aecbf192">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="G">{G}</s><s value="U">{U}</s>.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="295" />
+    </card>
+    <card name="Mother of Runes" id="8bdb0349-a759-473e-a192-7ca85ef8e515">
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Cleric" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Target creature you control gains protection from the color of your choice until end of turn.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="1 / 1" />
+      <property name="Artist" value="Ejiwa &quot;Edge&quot; Ebenebe" />
+      <property name="Number" value="296" />
+    </card>
+    <card name="Mother of Runes" id="f527010e-d382-4bd5-8de6-0e3898b80deb">
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Cleric" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Target creature you control gains protection from the color of your choice until end of turn.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="1 / 1" />
+      <property name="Artist" value="Rebecca Guay" />
+      <property name="Number" value="297" />
+    </card>
+    <card name="Mother of Runes" id="a6a96d0b-5c8f-4563-92a0-a2c9e595100b">
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Cleric" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Target creature you control gains protection from the color of your choice until end of turn.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="1 / 1" />
+      <property name="Artist" value="Eliette Mitchell" />
+      <property name="Number" value="298" />
+    </card>
+    <card name="Mother of Runes" id="e69db7d6-80fd-4832-b9f4-47eb4aab54e6">
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Cleric" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Target creature you control gains protection from the color of your choice until end of turn.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="PT Box" value="1 / 1" />
+      <property name="Artist" value="Livia Prima" />
+      <property name="Number" value="299" />
+    </card>
+    <card name="Unbreakable Formation" id="07af73d7-5d8e-4c64-91f0-1ecc35b57024">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Creatures you control gain indestructible until end of turn.
+Addendum — If you cast this spell during your main phase, put a +1/+1 counter on each of those creatures and they gain vigilance until end of turn.</property>
+      <property name="Artist" value="Tyler Walpole" />
+      <property name="Number" value="310" />
+    </card>
+    <card name="Whir of Invention" id="460aebc5-6150-4927-8d92-72bad788be42">
+      <property name="Cost">
+        <s value="X">{X}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for <s value="1">{1}</s>.)
+Search your library for an artifact card with mana value X or less, put it onto the battlefield, then shuffle.</property>
+      <property name="Artist" value="Tyler Walpole" />
+      <property name="Number" value="311" />
+    </card>
+    <card name="Hero's Downfall" id="ed96b05d-b2ca-4c8f-969b-cac9b4562fab">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Destroy target creature or planeswalker.</property>
+      <property name="Artist" value="Tyler Walpole" />
+      <property name="Number" value="312" />
+    </card>
+    <card name="Impact Tremors" id="ba1ebfa2-7e23-48a3-a9bc-59a24a2c1ed7">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Enchantment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever a creature enters the battlefield under your control, Impact Tremors deals 1 damage to each opponent.</property>
+      <property name="Artist" value="Tyler Walpole" />
+      <property name="Number" value="313" />
+    </card>
+    <card name="Primal Vigor" id="1611b15e-3d33-4fc5-89c7-5bfd6b380cef">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Enchantment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">If one or more tokens would be created, twice that many of those tokens are created instead.
+If one or more +1/+1 counters would be put on a creature, twice that many +1/+1 counters are put on that creature instead.</property>
+      <property name="Artist" value="Tyler Walpole" />
+      <property name="Number" value="314" />
+    </card>
+    <card name="Commander's Sphere" id="0ad783ed-69b9-48b5-9610-4fa4d8f9a6e6">
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add one mana of any color in your commander's color identity.
+Sacrifice Commander's Sphere: Draw a card.</property>
+      <property name="Artist" value="Tyler Walpole" />
+      <property name="Number" value="315" />
     </card>
     <card name="Karn, the Great Creator" id="25c0968c-1377-447b-bede-5a2482d4cd2b">
       <property name="Cost">
@@ -3626,6 +4149,17 @@ Prevent all damage that would be dealt to Gideon Blackblade during your turn.
       <property name="Number" value="539" />
       <property name="Flags" value="B" />
     </card>
+    <card name="Island" id="b9b62f53-0fde-488b-bdac-986a870ff6cb">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Island" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
+      <property name="Artist" value="Piotr Dura" />
+      <property name="Number" value="551" />
+      <property name="Flags" value="U" />
+    </card>
     <card name="Island" id="cff1e8ef-4856-46c0-a72c-83a8b4d34238">
       <property name="CMC" value="0" />
       <property name="Color" value="Colorless" />
@@ -3729,6 +4263,82 @@ Whenever equipped creature attacks, defending player sacrifices a creature. If t
 Equip <s value="4">{4}</s></property>
       <property name="Artist" value="Jason Felix" />
       <property name="Number" value="581" />
+    </card>
+    <card name="Brainstorm" id="04872b4a-8231-494e-8a6e-596c66797011">
+      <property name="Cost">
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Draw three cards, then put two cards from your hand on top of your library in any order.</property>
+      <property name="Artist" value="Mark Poole" />
+      <property name="Number" value="582" />
+    </card>
+    <card name="Arcane Signet" id="2ac9fdee-ad50-486a-9fde-4aba6848a6c6">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add one mana of any color in your commander's color identity.</property>
+      <property name="Artist" value="Dan Frazier" />
+      <property name="Number" value="589" />
+    </card>
+    <card name="Island" id="b487e4c0-1135-46f4-807d-cab3f1743132">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Island" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
+      <property name="Artist" value="Piotr Dura" />
+      <property name="Number" value="592" />
+      <property name="Flags" value="U" />
+    </card>
+    <card name="Crash Through" id="13556e56-24bf-4149-a61f-80850cfc0523">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Creatures you control gain trample until end of turn. (A creature with trample can deal excess combat damage to the player or planeswalker it's attacking.)
+Draw a card.</property>
+      <property name="Artist" value="Tyler Walpole" />
+      <property name="Number" value="594" />
+    </card>
+    <card name="Eldrazi Monument" id="72a63ff8-97ae-4ba2-a62b-4be10892a7a2">
+      <property name="Cost">
+        <s value="5">{5}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Creatures you control get +1/+1 and have flying and indestructible.
+At the beginning of your upkeep, sacrifice a creature. If you can't, sacrifice Eldrazi Monument.</property>
+      <property name="Artist" value="Cosmin Podar" />
+      <property name="Number" value="603" />
+    </card>
+    <card name="Swiftfoot Boots" id="47803242-f744-445b-b645-e6e72b741589">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Subtype" value="Equipment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Equipped creature has hexproof and haste.
+Equip <s value="1">{1}</s></property>
+      <property name="Artist" value="Cosmin Podar" />
+      <property name="Number" value="606" />
     </card>
   </cards>
 </set>

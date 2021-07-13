@@ -45,7 +45,7 @@ You may spend white mana as though it were mana of any color. You may spend othe
       <property name="Subtype" value="Kirin Spirit" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever you cast a Spirit or Arcane spell, destroy all permanents with that spell's converted mana cost.</property>
+Whenever you cast a Spirit or Arcane spell, destroy all permanents with that spell's mana value.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -165,7 +165,7 @@ Morph <s value="1">{1}</s><s value="W">{W}</s> (You may cast this card face down
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)
-Creatures can't attack you or a planeswalker you control unless their controller pays <s value="PW">{W/P}</s> for each of those creatures.</property>
+Creatures can't attack you or planeswalkers you control unless their controller pays <s value="PW">{W/P}</s> for each of those creatures.</property>
       <property name="Artist" value="James Paick" />
       <property name="Number" value="010" />
       <property name="Faction" value="Phyrexian" />
@@ -180,8 +180,8 @@ Creatures can't attack you or a planeswalker you control unless their controller
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Return up to three target creature cards with converted mana cost 1 or less from your graveyard to the battlefield.
-Forecast — <s value="5">{5}</s><s value="W">{W}</s>, Reveal Proclamation of Rebirth from your hand: Return target creature card with converted mana cost 1 or less from your graveyard to the battlefield. (Activate this ability only during your upkeep and only once each turn.)</property>
+      <property name="Rules">Return up to three target creature cards with mana value 1 or less from your graveyard to the battlefield.
+Forecast — <s value="5">{5}</s><s value="W">{W}</s>, Reveal Proclamation of Rebirth from your hand: Return target creature card with mana value 1 or less from your graveyard to the battlefield. (Activate only during your upkeep and only once each turn.)</property>
       <property name="Artist" value="William Simpson" />
       <property name="Number" value="011" />
       <property name="Faction" value="Azorius" />
@@ -345,7 +345,7 @@ Protection from black (This creature can't be blocked, targeted, dealt damage, o
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Human Rogue" />
+      <property name="Subtype" value="Phyrexian Human Rogue" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)
 Blighted Agent can't be blocked.</property>
@@ -507,7 +507,7 @@ Flying
       <property name="Color" value="Blue" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of your upkeep, you may exchange control of target nonland permanent you control and target nonland permanent an opponent controls with an equal or lesser converted mana cost.</property>
+      <property name="Rules">At the beginning of your upkeep, you may exchange control of target nonland permanent you control and target nonland permanent an opponent controls with an equal or lesser mana value.</property>
       <property name="Artist" value="Scott Altmann" />
       <property name="Number" value="029" />
       <property name="Packaging" value="Special" />
@@ -575,7 +575,7 @@ If a player would draw a card, they reveal it instead. Then any other player may
       <property name="Rarity" value="Rare" />
       <property name="Rules">You may pay <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s> rather than pay this spell's mana cost.
 Trample
-At the beginning of your upkeep, you may pay 2 life. If you do, search your library for a card, then shuffle your library and put that card on top of it.</property>
+At the beginning of your upkeep, you may pay 2 life. If you do, search your library for a card, then shuffle and put that card on top.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
@@ -866,7 +866,7 @@ Draw a card at the beginning of the next turn's upkeep.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Flamekin Harbinger enters the battlefield, you may search your library for an Elemental card, reveal it, then shuffle your library and put that card on top of it.</property>
+      <property name="Rules">When Flamekin Harbinger enters the battlefield, you may search your library for an Elemental card, reveal it, then shuffle and put that card on top.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1116,7 +1116,7 @@ Creatures your opponents control lose hexproof and can't have or gain hexproof.<
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Search your library for up to X basic land cards, where X is the number of lands you control, and put them onto the battlefield tapped. Then shuffle your library.</property>
+      <property name="Rules">Search your library for up to X basic land cards, where X is the number of lands you control, put them onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="064" />
       <property name="Packaging" value="Special" />
@@ -1385,9 +1385,9 @@ While you're searching your library, you may cast Panglacial Wurm from your libr
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Faerie" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flash (You may cast this spell any time you could cast an instant.)
+      <property name="Rules">Flash
 Flying, protection from blue
-Return a Forest you control to its owner's hand: Untap target creature. Activate this ability only once each turn.</property>
+Return a Forest you control to its owner's hand: Untap target creature. Activate only once each turn.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -1500,7 +1500,7 @@ Other Spirit creatures you control get +1/+1 and have hexproof. (They can't be t
       <property name="Color" value="Multicolor Green White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">You may choose a multicolored card you own from outside the game, reveal that card, and put it into your hand. Exile Glittering Wish.</property>
+      <property name="Rules">You may reveal a multicolored card you own from outside the game and put it into your hand. Exile Glittering Wish.</property>
       <property name="Artist" value="John Donahue" />
       <property name="Number" value="085" />
       <property name="Packaging" value="Special" />
@@ -1589,7 +1589,7 @@ Other Dragon creatures you control have haste.</property>
       <property name="Type" value="Legendary Planeswalker" />
       <property name="Subtype" value="Sarkhan" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">0: Reveal the top card of your library and put it into your hand. Sarkhan the Mad deals damage to himself equal to that card's converted mana cost.
+      <property name="Rules">0: Reveal the top card of your library and put it into your hand. Sarkhan the Mad deals damage to himself equal to that card's mana value.
 −2: Target creature's controller sacrifices it, then that player creates a 5/5 red Dragon creature token with flying.
 −4: Each Dragon creature you control deals damage equal to its power to target player or planeswalker.</property>
       <property name="PT Box" value="7" />
@@ -1820,7 +1820,7 @@ Whenever a creature enters the battlefield, you may untap Blasting Station.</pro
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Target player mills a card.
+        <s value="T">{T}</s>: Target player mills a card. (They put the top card of their library into their graveyard.)
 <s value="5">{5}</s>, <s value="T">{T}</s>, Sacrifice Codex Shredder: Return target card from your graveyard to your hand.</property>
       <property name="Artist" value="Jason Felix" />
       <property name="Number" value="100" />
@@ -1882,7 +1882,7 @@ Whenever a player casts a spell from their hand, that player exiles it. If the p
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Players play with the top card of their libraries revealed.
-<s value="T">{T}</s>, Sacrifice Lantern of Insight: Target player shuffles their library.</property>
+<s value="T">{T}</s>, Sacrifice Lantern of Insight: Target player shuffles.</property>
       <property name="Artist" value="Tim Hildebrandt" />
       <property name="Number" value="104" />
       <property name="Packaging" value="Special" />
@@ -1993,7 +1993,7 @@ Whenever a player casts a spell from their hand, that player exiles it. If the p
       <property name="Type" value="Legendary Artifact Creature" />
       <property name="Subtype" value="Scarecrow" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">(<s value="2W">{2/W}</s> can be paid with any two mana or with <s value="W">{W}</s>. This card's converted mana cost is 10.)
+      <property name="Rules">(<s value="2W">{2/W}</s> can be paid with any two mana or with <s value="W">{W}</s>. This card's mana value is 10.)
 Other Scarecrow creatures you control get +1/+1.
 Whenever another Scarecrow enters the battlefield under your control, destroy target permanent.</property>
       <property name="Power" value="6" />
@@ -2012,7 +2012,7 @@ Whenever another Scarecrow enters the battlefield under your control, destroy ta
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="1">{1}</s>, <s value="T">{T}</s>: End the turn. Activate this ability only during your turn. (Exile all spells and abilities from the stack. Discard down to your maximum hand size. Damage wears off, and "this turn" and "until end of turn" effects end.)</property>
+        <s value="1">{1}</s>, <s value="T">{T}</s>: End the turn. Activate only during your turn. (Exile all spells and abilities from the stack. Discard down to your maximum hand size. Damage wears off, and "this turn" and "until end of turn" effects end.)</property>
       <property name="Artist" value="Vincent Proce" />
       <property name="Number" value="112" />
       <property name="Packaging" value="Special" />

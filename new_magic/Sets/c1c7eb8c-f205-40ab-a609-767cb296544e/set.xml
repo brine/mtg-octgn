@@ -40,9 +40,9 @@
           </pick>
         </option>
       </options>
-	</pack>
-</packaging>
- <cards>
+    </pack>
+  </packaging>
+  <cards>
     <card name="Abiding Grace" id="db113c47-c403-4c7f-9fa9-212c977df8d1">
       <property name="Cost">
         <s value="2">{2}</s>
@@ -55,7 +55,7 @@
       <property name="Rules">At the beginning of your end step, choose one —
 • You gain 1 life.
 • Return target creature card with mana value 1 from your graveyard to the battlefield.</property>
-      <property name="Artist" value="Jenn Ravenna Tran" />
+      <property name="Artist" value="Ravenna Tran" />
       <property name="Number" value="001" />
     </card>
     <card name="Arcbound Javelineer" id="fe4a2cb0-4129-451e-a946-a21ea646cc28">
@@ -120,7 +120,7 @@ Modular 1 (This creature enters the battlefield with a +1/+1 counter on it. When
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Barbed Spike enters the battlefield, create a 1/1 colorless Thopter artifact creature token with flying and attach Barbed Spike to it.
+      <property name="Rules">When Barbed Spike enters the battlefield, create a 1/1 colorless Thopter artifact creature token with flying, then attach Barbed Spike to it.
 Equipped creature gets +1/+0.
 Equip <s value="2">{2}</s></property>
       <property name="Artist" value="James Paick" />
@@ -251,7 +251,7 @@ When Disciple of the Sun enters the battlefield, return target permanent card wi
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="1">{1}</s>
-        <s value="W">{W}</s>, Exile Fairgrounds Patrol from your graveyard: Create a 1/1 colorless Thopter creature token with flying. Activate only as a sorcery.</property>
+        <s value="W">{W}</s>, Exile Fairgrounds Patrol from your graveyard: Create a 1/1 colorless Thopter artifact creature token with flying. Activate only as a sorcery.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -407,7 +407,7 @@ Lens Flare deals 5 damage to target attacking or blocking creature.</property>
       <property name="Type" value="Enchantment Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever you gain life, you may put that many +1/+1 counters on each creature you control. You may do this only once each turn.</property>
+      <property name="Rules">Whenever you gain life, you may put that many +1/+1 counters on each creature you control. Do this only once each turn.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="4 / 6" />
@@ -425,7 +425,7 @@ Lens Flare deals 5 damage to target attacking or blocking creature.</property>
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Out of Time enters the battlefield, untap all creatures, then phase them out until Out of Time leaves the battlefield. Put a time counter on Out of Time for each creature phased out this way.
-Vanishing (At the beginning of your upkeep, remove a time counter from this creature. When the last is removed, sacrifice it.)</property>
+Vanishing (At the beginning of your upkeep, remove a time counter from this enchantment. When the last is removed, sacrifice it.)</property>
       <property name="Artist" value="Tobias Kwan" />
       <property name="Number" value="023" />
     </card>
@@ -439,7 +439,7 @@ Vanishing (At the beginning of your upkeep, remove a time counter from this crea
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Exile target tapped creature.
-Forecast—<s value="2">{2}</s><s value="W">{W}</s>, Reveal Piercing Rays from your hand: Tap target untapped creature. (Activate only during your upkeep and only once each turn.)</property>
+Forecast — <s value="2">{2}</s><s value="W">{W}</s>, Reveal Piercing Rays from your hand: Tap target untapped creature. (Activate this ability only during your upkeep and only once each turn.)</property>
       <property name="Artist" value="Bryan Sola" />
       <property name="Number" value="024" />
     </card>
@@ -461,7 +461,7 @@ Forecast—<s value="2">{2}</s><s value="W">{W}</s>, Reveal Piercing Rays from y
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Suspend 2—<s value="1">{1}</s><s value="W">{W}</s> (Rather than cast this card from your hand, you may pay <s value="1">{1}</s><s value="W">{W}</s> and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
+      <property name="Rules">Suspend 2—<s value="1">{1}</s><s value="W">{W}</s> (Rather than cast this card from your hand, pay <s value="1">{1}</s><s value="W">{W}</s> and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
 Return all enchantment cards from your graveyard to the battlefield. (Auras with nothing to enchant remain in your graveyard.)</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="026" />
@@ -477,7 +477,7 @@ Return all enchantment cards from your graveyard to the battlefield. (Auras with
       <property name="Subtype" value="Human Cleric" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Protection from black and from red
-When Sanctifier en-Vec enters the battlefield, exile all cards that are black and red from all graveyards.
+When Sanctifier en-Vec enters the battlefield, exile all cards that are black or red from all graveyards.
 If a black or red permanent, spell, or card not on the battlefield would be put into a graveyard, exile it instead.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -762,7 +762,7 @@ Filigree Attendant's power is equal to the number of artifacts you control.</pro
       <property name="Rarity" value="Common" />
       <property name="Rules">Flying
 When Foul Watcher enters the battlefield, surveil 1. (Look at the top card of your library. You may put that card into your graveyard.)
-Delirium — Foul Watcher gets +1/+0 as long as there are four more card types among cards in your graveyard.</property>
+Delirium — Foul Watcher gets +1/+0 as long as there are four or more card types among cards in your graveyard.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="1 / 2" />
@@ -822,7 +822,7 @@ Investigate. (Create a colorless Clue artifact token with "<s value="2">{2}</s>,
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Suspend 3—<s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> (Rather than cast this card from your hand, you may pay <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
+      <property name="Rules">Suspend 3—<s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> (Rather than cast this card from your hand, pay <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
 Search target opponent's library for a creature card and put that card onto the battlefield under your control. Then that player shuffles.</property>
       <property name="Artist" value="Franz Vohwinkel" />
       <property name="Number" value="047" />
@@ -902,7 +902,7 @@ Basic landcycling <s value="1">{1}</s><s value="U">{U}</s> (<s value="1">{1}</s>
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Delve (Each card you exile from your graveyard while casting this spell pays for <s value="1">{1}</s>.)
 Flying
-Murktide Regent enters the battlefield with a +1/+1 counter on it for each instant or sorcery card exiled with it.
+Murktide Regent enters the battlefield with a +1/+1 counter on it for each instant and sorcery card exiled with it.
 Whenever an instant or sorcery card leaves your graveyard, put a +1/+1 counter on Murktide Regent.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -1034,7 +1034,7 @@ Overload <s value="4">{4}</s><s value="U">{U}</s><s value="U">{U}</s> (You may c
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Return target instant or sorcery card from your graveyard to your hand.
 //
-Tap up to two target creatures. They don't untap during their controllers' next untap step.</property>
+Tap up to two target creatures. Those creatures don't untap during their controller's next untap step.</property>
       <property name="Artist" value="Dallas Williams" />
       <property name="Number" value="060" />
       <alternate name="Said" type="splitA">
@@ -1059,7 +1059,7 @@ Tap up to two target creatures. They don't untap during their controllers' next 
         <property name="Color" value="Blue" />
         <property name="Type" value="Instant" />
         <property name="Rarity" value="Uncommon" />
-        <property name="Rules">Tap up to two target creatures. They don't untap during their controllers' next untap step.</property>
+        <property name="Rules">Tap up to two target creatures. Those creatures don't untap during their controller's next untap step.</property>
         <property name="Artist" value="Dallas Williams" />
         <property name="Number" value="060" />
       </alternate>
@@ -1125,7 +1125,7 @@ When Specimen Collector dies, create a token that's a copy of target token you c
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
-      <property name="Artist" value="Jenn Ravenna Tran" />
+      <property name="Artist" value="Ravenna Tran" />
       <property name="Number" value="064" />
     </card>
     <card name="Steelfin Whale" id="7e7ca8b6-d7e0-4af2-a578-bf45a8731c19">
@@ -1190,7 +1190,7 @@ Evoke—Exile a blue card from your hand.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Exile target creature and put two time counters on it. If it doesn't have suspend, it gains suspend. (At the beginning of its owner's upkeep, remove a time counter from that card. When the last is removed, the player plays it without paying its mana cost. If it's a creature, it has haste.)</property>
+      <property name="Rules">Exile target creature and put two time counters on it. If it doesn't have suspend, it gains suspend. (At the beginning of its owner's upkeep, they remove a time counter. When the last is removed, they play it without paying its mana cost. If it's a creature, it has haste.)</property>
       <property name="Artist" value="Lake Hurwitz" />
       <property name="Number" value="068" />
     </card>
@@ -1360,7 +1360,7 @@ Overload <s value="4">{4}</s><s value="B">{B}</s><s value="B">{B}</s> (You may c
       <property name="Subtype" value="Human Warlock" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Discard a card: Cabal Initiate gains lifelink until end of turn.
-Threshold — Cabal Initiate get +1/+2 as long as seven or more cards are in your graveyard.</property>
+Threshold — Cabal Initiate gets +1/+2 as long as seven or more cards are in your graveyard.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -1759,7 +1759,7 @@ Tizerus Charger escapes with your choice of a +1/+1 counter or a flying counter 
       <property name="Rules">Kicker <s value="B">{B}</s><s value="B">{B}</s> (You may pay an additional <s value="B">{B}</s><s value="B">{B}</s> as you cast this spell.)
 Protection from white
 Whenever an opponent discards a card, put a +1/+1 counter on Tourach, Dread Cantor.
-When Tourach enters the battelfield, if it was kicked, target opponent discards two cards at random.</property>
+When Tourach enters the battlefield, if it was kicked, target opponent discards two cards at random.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -1906,7 +1906,7 @@ Basic landcycling <s value="1">{1}</s><s value="B">{B}</s> (<s value="1">{1}</s>
       <property name="Subtype" value="Cat" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Modular 4 (This creature enters the battlefield with four +1/+1 counters on it. When it dies, you may put its +1/+1 counters on target artifact creature.)
-Riot (This creature enters the battlefield with your choice of a +1/+1 counter or haste.)</property>
+Riot (This creature enters the battlefield with your choice of an additional +1/+1 counter or haste.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="0" />
       <property name="PT Box" value="0 / 0" />
@@ -2541,7 +2541,7 @@ Delirium — Unholy Heat deals 6 damage instead if there are four or more card t
       <property name="Subtype" value="Ooze" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Storm (When you cast this spell, copy it for each spell cast before it this turn. Copies become tokens.)
-Aeve, Progenitor Ooze isn't legendary as long as it's a token.
+Aeve, Progenitor Ooze isn't legendary if it's a token.
 Aeve enters the battlefield with a +1/+1 counter on it for each other Ooze you control.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -2610,7 +2610,7 @@ If one or more tokens would be created under your control, those tokens plus tha
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Create a 1/1 green Squirrel creature token.
-Storm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)</property>
+Storm (When you cast this spell, copy it for each spell cast before it this turn.)</property>
       <property name="Artist" value="Milivoj Ćeran" />
       <property name="Number" value="152" />
     </card>
@@ -2910,7 +2910,7 @@ Basic landcycling <s value="1">{1}</s><s value="G">{G}</s> (<s value="1">{1}</s>
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="T">{T}</s>: Add one mana of any color.
-Suspend 2—<s value="G">{G}</s> (Rather than cast this card from your hand, pay <s value="G">{G}</s> and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</property>
+Suspend 2—<s value="G">{G}</s> (Rather than cast this card from your hand, you may pay <s value="G">{G}</s> and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost. It has haste.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="1 / 3" />
@@ -3075,7 +3075,7 @@ Eternalize <s value="5">{5}</s><s value="G">{G}</s><s value="G">{G}</s> (<s valu
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Scout" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Landfall — Whenever a land enters the battelfield under your control, create a Food token or a Treasure token. (Food is an artifact with "<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: You gain 3 life." Treasure is an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
+      <property name="Rules">Landfall — Whenever a land enters the battlefield under your control, create a Food token or a Treasure token. (Food is an artifact with "<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: You gain 3 life." Treasure is an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -3223,7 +3223,7 @@ Whenever Breathless Knight or another creature enters the battlefield under your
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant creature
 Enchanted creature can't attack or block.
-When Captured by Lagacs enters the battlefield, support 2. (Put a +1/+1 counter on each of up to two other target creatures.)</property>
+When Captured by Lagacs enters the battlefield, support 2. (Put a +1/+1 counter on each of up to two target creatures.)</property>
       <property name="Artist" value="Andrew Mar" />
       <property name="Number" value="188" />
     </card>
@@ -3239,7 +3239,7 @@ When Captured by Lagacs enters the battlefield, support 2. (Put a +1/+1 counter 
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever Carth the Lion enters the battlefield or a planeswalker you control dies, look at the top seven cards of your library. You may reveal a planeswalker card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.
-Planeswalkers' loyalty abilities you activate cost an additional {+1} to activate.</property>
+Planeswalkers' loyalty abilities you activate cost an additional [+1] to activate.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
@@ -3345,7 +3345,7 @@ Jump-start (You may cast this card from your graveyard by discarding a card in a
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Affinity for artifacts (This spell costs <s value="1">{1}</s> less to cast for each artifact you control.)
 Flying
-Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
+Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card with lesser mana value. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -3421,7 +3421,7 @@ Whenever you cast a multicolored spell, create a 4/4 red and white Golem artifac
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Protection from permanents with corruption counters on them
 +1: Each opponent loses 2 life and you gain 2 life. Put a corruption counter on up to one other target creature or planeswalker.
-−3: Gain control of target creature or planeswalker until end of tun. Untap it and put a corruption counter on it. It gains haste until end of turn.
+−3: Gain control of target creature or planeswalker until end of turn. Untap it and put a corruption counter on it. It gains haste until end of turn.
 −7: Gain control of each permanent with a corruption counter on it.</property>
       <property name="PT Box" value="4" />
       <property name="Artist" value="Ekaterina Burmak" />
@@ -3793,11 +3793,11 @@ Evoke <s value="G">{G}</s><s value="U">{U}</s> (You may cast this spell for its 
       <property name="Subtype" value="Efreet" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Yusri, Fortune's Flame attacks, choose a number between 1 and 5. Flip that many coins. For each flip you win, draw a card. For each flip you lose, Yursi deals 2 damage to you. If you won five flips this way, you may cast spells from your hand this turn without paying their mana costs.</property>
+Whenever Yusri, Fortune's Flame attacks, choose a number between 1 and 5. Flip that many coins. For each flip you win, draw a card. For each flip you lose, Yusri deals 2 damage to you. If you won five flips this way, you may cast spells from your hand this turn without paying their mana costs.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
-      <property name="Artist" value="Svetlin Velinov" />
+      <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="218" />
     </card>
     <card name="Academy Manufactor" id="90744c2c-6dd7-4623-8cbf-b138b83ee88f">
@@ -3825,7 +3825,7 @@ Whenever Yusri, Fortune's Flame attacks, choose a number between 1 and 5. Flip t
       <property name="Type" value="Tribal Artifact" />
       <property name="Subtype" value="Lhurgoyf" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever a creature you control attacks alone, it gets +X/+X until end of turn, where X is the number of card types among cards in all graveyard.
+      <property name="Rules">Whenever a creature you control attacks alone, it gets +X/+X until end of turn, where X is the number of card types among cards in all graveyards.
 Lhurgoyf creatures you control have trample.</property>
       <property name="Artist" value="Yeong-Hao Han" />
       <property name="Number" value="220" />
@@ -3871,7 +3871,7 @@ When Bottle Golems dies, you gain life equal to its power.</property>
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="2">{2}</s>,<s value="T">{T}</s>, Sacrifice Brainstone: Draw three cards, then put two cards from your hand on top of your library in any order.</property>
+        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Brainstone: Draw three cards, then put two cards from your hand on top of your library in any order.</property>
       <property name="Artist" value="Drew Tucker" />
       <property name="Number" value="223" />
     </card>
@@ -3885,7 +3885,7 @@ When Bottle Golems dies, you gain life equal to its power.</property>
       <property name="Subtype" value="Vehicle" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Imprint — As Dermotaxi enters the battlefield, exile a creature card from a graveyard.
-Tap two untapped creatures you control: Until end of turn, Dermotaxi becomes a copy of the imprinted card, except it's a Vehicle artifact in addition to its other types.</property>
+Tap two untapped creatures you control: Until end of turn, Dermotaxi becomes a copy of the exiled card, except it's a Vehicle artifact in addition to its other types.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="0" />
       <property name="PT Box" value="0 / 0" />
@@ -3962,7 +3962,7 @@ Equip <s value="7">{7}</s></property>
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Monoskelion enters the battlefield with a +1/+1 counter on it.
-<s value="1">{1}</s>, Remove a +1/+1 counter from Monoskelion: Monoskelion deals 1 damage to any target.</property>
+<s value="1">{1}</s>, Remove a +1/+1 counter from Monoskelion: It deals 1 damage to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -4074,7 +4074,7 @@ Artifact landcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Suspend 3—<s value="1">{1}</s> (Rather than cast this card from your hand, you may pay <s value="1">{1}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
+      <property name="Rules">Suspend 3—<s value="1">{1}</s> (Rather than cast this card from your hand, pay <s value="1">{1}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
 <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>.</property>
       <property name="Artist" value="Volkan Baǵa" />
       <property name="Number" value="236" />
@@ -4582,7 +4582,7 @@ As long as Wonder is in your graveyard and you control an Island, creatures you 
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Minion" />
+      <property name="Subtype" value="Phyrexian Minion" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
 Echo <s value="2">{2}</s><s value="B">{B}</s> (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)
@@ -4655,7 +4655,7 @@ When Bone Shredder enters the battlefield, destroy target nonartifact, nonblack 
       <property name="CMC" value="5" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Imp" />
+      <property name="Subtype" value="Phyrexian Imp" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
 Discard a card: Add <s value="B">{B}</s>.</property>
@@ -4809,7 +4809,7 @@ Storm (When you cast this spell, copy it for each spell cast before it this turn
       <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Elf" />
+      <property name="Subtype" value="Elf Ranger" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Return a Forest you control to its owner's hand: Untap target creature. Activate only once each turn.</property>
       <property name="Power" value="1" />
@@ -4917,7 +4917,6 @@ Tap target permanent.
 Draw a card.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="290" />
-      <property name="Faction" value="Set" />
       <property name="Packaging" value="reprint" />
       <alternate name="Fire" type="splitA">
         <property name="Cost">
@@ -4931,6 +4930,7 @@ Draw a card.</property>
         <property name="Rules">Fire deals 2 damage divided as you choose among one or two targets.</property>
         <property name="Artist" value="Dan Scott" />
         <property name="Number" value="290" />
+        <property name="Faction" value="Set" />
       </alternate>
       <alternate name="Ice" type="splitB">
         <property name="Cost">
@@ -4994,7 +4994,7 @@ Whenever you tap a land for mana, add one mana of any type that land produced.</
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Other enchantments you control have shroud. (They can't be the targets of spells or abilities.)
-<s value="1">{1}</s>, Sacrifice Sterling Grove: Search your library for an enchantment card, reveal it, then shuffle and put the card on top.</property>
+<s value="1">{1}</s>, Sacrifice Sterling Grove: Search your library for an enchantment card, reveal it, then shuffle and put that card on top.</property>
       <property name="Artist" value="Seb McKinnon" />
       <property name="Number" value="293" />
       <property name="Faction" value="Set" />
@@ -5059,7 +5059,7 @@ Sacrifice an artifact: Put a +1/+1 counter on target creature.</property>
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>, Mill a card: Add <s value="C">{C}</s>.</property>
+        <s value="T">{T}</s>, Mill a card: Add <s value="C">{C}</s>. (To mill a card, put the top card of your library into your graveyard.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="0 / 1" />
@@ -5092,7 +5092,7 @@ Sacrifice an artifact: Put a +1/+1 counter on target creature.</property>
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Gnome" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Discard a card: Regenerate Patchwork Gnomes.</property>
+      <property name="Rules">Discard a card: Regenerate Patchwork Gnomes. (The next time this creature would be destroyed, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -5125,8 +5125,8 @@ Sacrifice an artifact: Put a +1/+1 counter on target creature.</property>
       <property name="Artist" value="Don Hazeltine" />
       <property name="Number" value="301" />
       <property name="Faction" value="Set" />
-      <property name="Packaging" value="reprint" />
       <property name="Flags" value="B" />
+      <property name="Packaging" value="reprint" />
     </card>
     <card name="Mishra's Factory" id="9e5d6972-3f64-486c-a325-7351b910dafe">
       <property name="CMC" value="0" />
@@ -5140,8 +5140,8 @@ Sacrifice an artifact: Put a +1/+1 counter on target creature.</property>
       <property name="Artist" value="Scott Chou" />
       <property name="Number" value="302" />
       <property name="Faction" value="Set" />
-      <property name="Packaging" value="reprint" />
       <property name="Flags" value="C" />
+      <property name="Packaging" value="reprint" />
     </card>
     <card name="Riptide Laboratory" id="25a9cb87-e572-4885-8561-1d4b158ec7e4">
       <property name="CMC" value="0" />
@@ -5154,8 +5154,8 @@ Sacrifice an artifact: Put a +1/+1 counter on target creature.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="303" />
       <property name="Faction" value="Set" />
-      <property name="Packaging" value="reprint" />
       <property name="Flags" value="U" />
+      <property name="Packaging" value="reprint" />
     </card>
     <card name="Plains" id="d5aa2449-6b74-4319-858f-caa9282da5c1">
       <property name="CMC" value="0" />
@@ -5301,7 +5301,7 @@ Sacrifice an artifact: Put a +1/+1 counter on target creature.</property>
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Protection from permanents with corruption counters on them
 +1: Each opponent loses 2 life and you gain 2 life. Put a corruption counter on up to one other target creature or planeswalker.
-−3: Gain control of target creature or planeswalker until end of tun. Untap it and put a corruption counter on it. It gains haste until end of turn.
+−3: Gain control of target creature or planeswalker until end of turn. Untap it and put a corruption counter on it. It gains haste until end of turn.
 −7: Gain control of each permanent with a corruption counter on it.</property>
       <property name="PT Box" value="4" />
       <property name="Artist" value="Aleksi Briclot" />
@@ -5358,7 +5358,7 @@ Evoke—Exile a white card from your hand.</property>
       <property name="CMC" value="2" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
-      <property name="Rarity" value="Uncommon" />
+      <property name="Rarity" value="Rare" />
       <property name="Rules">Counter target spell.</property>
       <property name="Artist" value="Ryan Yee" />
       <property name="Number" value="308" />
@@ -5441,7 +5441,7 @@ Evoke—Exile a black card from your hand.</property>
       <property name="Rules">Kicker <s value="B">{B}</s><s value="B">{B}</s> (You may pay an additional <s value="B">{B}</s><s value="B">{B}</s> as you cast this spell.)
 Protection from white
 Whenever an opponent discards a card, put a +1/+1 counter on Tourach, Dread Cantor.
-When Tourach enters the battelfield, if it was kicked, target opponent discards two cards at random.</property>
+When Tourach enters the battlefield, if it was kicked, target opponent discards two cards at random.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -5621,7 +5621,7 @@ Whenever you tap a land for mana, add one mana of any type that land produced.</
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
-      <property name="Artist" value="Izzy" />
+      <property name="Artist" value="Mila Pesic" />
       <property name="Number" value="321" />
       <property name="Packaging" value="Special" />
     </card>
@@ -5691,7 +5691,7 @@ Equip <s value="2">{2}</s></property>
       <property name="CMC" value="0" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
-      <property name="Rarity" value="Uncommon" />
+      <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="1">{1}</s>: Mishra's Factory becomes a 2/2 Assembly-Worker artifact creature until end of turn. It's still a land.
@@ -5772,7 +5772,7 @@ Lens Flare deals 5 damage to target attacking or blocking creature.</property>
       <property name="Type" value="Enchantment Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever you gain life, you may put that many +1/+1 counters on each creature you control. You may do this only once each turn.</property>
+      <property name="Rules">Whenever you gain life, you may put that many +1/+1 counters on each creature you control. Do this only once each turn.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="4 / 6" />
@@ -5881,7 +5881,7 @@ When you cycle Fractured Sanity, each opponent mills four cards.</property>
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Delve (Each card you exile from your graveyard while casting this spell pays for <s value="1">{1}</s>.)
 Flying
-Murktide Regent enters the battlefield with a +1/+1 counter on it for each instant or sorcery card exiled with it.
+Murktide Regent enters the battlefield with a +1/+1 counter on it for each instant and sorcery card exiled with it.
 Whenever an instant or sorcery card leaves your graveyard, put a +1/+1 counter on Murktide Regent.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -6371,7 +6371,7 @@ Each other creature you control without a +1/+1 counter on it has outlast <s val
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Affinity for artifacts (This spell costs <s value="1">{1}</s> less to cast for each artifact you control.)
 Flying
-Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
+Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card with lesser mana value. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -6435,7 +6435,7 @@ Whenever you cast a multicolored spell, create a 4/4 red and white Golem artifac
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Protection from permanents with corruption counters on them
 +1: Each opponent loses 2 life and you gain 2 life. Put a corruption counter on up to one other target creature or planeswalker.
-−3: Gain control of target creature or planeswalker until end of tun. Untap it and put a corruption counter on it. It gains haste until end of turn.
+−3: Gain control of target creature or planeswalker until end of turn. Untap it and put a corruption counter on it. It gains haste until end of turn.
 −7: Gain control of each permanent with a corruption counter on it.</property>
       <property name="PT Box" value="4" />
       <property name="Artist" value="Ekaterina Burmak" />
@@ -6665,7 +6665,7 @@ Ruin deals damage to target creature equal to the number of lands you control.</
       <property name="Subtype" value="Vehicle" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Imprint — As Dermotaxi enters the battlefield, exile a creature card from a graveyard.
-Tap two untapped creatures you control: Until end of turn, Dermotaxi becomes a copy of the imprinted card, except it's a Vehicle artifact in addition to its other types.</property>
+Tap two untapped creatures you control: Until end of turn, Dermotaxi becomes a copy of the exiled card, except it's a Vehicle artifact in addition to its other types.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="0" />
       <property name="PT Box" value="0 / 0" />
@@ -6748,7 +6748,7 @@ III — Search your library for an artifact card with mana cost <s value="0">{0}
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Out of Time enters the battlefield, untap all creatures, then phase them out until Out of Time leaves the battlefield. Put a time counter on Out of Time for each creature phased out this way.
-Vanishing (At the beginning of your upkeep, remove a time counter from this creature. When the last is removed, sacrifice it.)</property>
+Vanishing (At the beginning of your upkeep, remove a time counter from this enchantment. When the last is removed, sacrifice it.)</property>
       <property name="Artist" value="Tobias Kwan" />
       <property name="Number" value="383" />
       <property name="Packaging" value="Special" />
@@ -6763,7 +6763,7 @@ Vanishing (At the beginning of your upkeep, remove a time counter from this crea
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Converge — Exile target nonland permanent if its mana value is less than or equal to the number of colors of mana spent to cast this spell.</property>
-      <property name="Artist" value="" />
+      <property name="Artist" value="John Stanko" />
       <property name="Number" value="384" />
       <property name="Packaging" value="Special" />
     </card>
@@ -6772,7 +6772,7 @@ Vanishing (At the beginning of your upkeep, remove a time counter from this crea
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Suspend 2—<s value="1">{1}</s><s value="W">{W}</s> (Rather than cast this card from your hand, you may pay <s value="1">{1}</s><s value="W">{W}</s> and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
+      <property name="Rules">Suspend 2—<s value="1">{1}</s><s value="W">{W}</s> (Rather than cast this card from your hand, pay <s value="1">{1}</s><s value="W">{W}</s> and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
 Return all enchantment cards from your graveyard to the battlefield. (Auras with nothing to enchant remain in your graveyard.)</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="385" />
@@ -6789,7 +6789,7 @@ Return all enchantment cards from your graveyard to the battlefield. (Auras with
       <property name="Subtype" value="Human Cleric" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Protection from black and from red
-When Sanctifier en-Vec enters the battlefield, exile all cards that are black and red from all graveyards.
+When Sanctifier en-Vec enters the battlefield, exile all cards that are black or red from all graveyards.
 If a black or red permanent, spell, or card not on the battlefield would be put into a graveyard, exile it instead.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -6857,7 +6857,7 @@ Discard a card: Switch Aeromoeba's power and toughness until end of turn.</prope
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Suspend 3—<s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> (Rather than cast this card from your hand, you may pay <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
+      <property name="Rules">Suspend 3—<s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> (Rather than cast this card from your hand, pay <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
 Search target opponent's library for a creature card and put that card onto the battlefield under your control. Then that player shuffles.</property>
       <property name="Artist" value="Franz Vohwinkel" />
       <property name="Number" value="390" />
@@ -7062,7 +7062,7 @@ Search your library for a card, put that card into your hand, then shuffle.</pro
       <property name="Rules">Kicker <s value="B">{B}</s><s value="B">{B}</s> (You may pay an additional <s value="B">{B}</s><s value="B">{B}</s> as you cast this spell.)
 Protection from white
 Whenever an opponent discards a card, put a +1/+1 counter on Tourach, Dread Cantor.
-When Tourach enters the battelfield, if it was kicked, target opponent discards two cards at random.</property>
+When Tourach enters the battlefield, if it was kicked, target opponent discards two cards at random.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -7120,7 +7120,7 @@ Madness <s value="0">{0}</s> (If you discard this card, discard it into exile. W
       <property name="Rarity" value="Rare" />
       <property name="Rules">Reveal cards from the top of your library until you reveal a nonland card. Put the revealed cards on the bottom of your library in a random order. When you reveal a nonland card this way, Calibrated Blast deals damage equal to that card's mana value to any target.
 Flashback <s value="3">{3}</s><s value="R">{R}</s><s value="R">{R}</s> (You may cast this card from your graveyard for its flashback cost. Then exile it.)</property>
-      <property name="Artist" value="" />
+      <property name="Artist" value="Evan Shipard" />
       <property name="Number" value="405" />
       <property name="Packaging" value="Special" />
     </card>
@@ -7135,7 +7135,7 @@ Flashback <s value="3">{3}</s><s value="R">{R}</s><s value="R">{R}</s> (You may 
       <property name="Rarity" value="Common" />
       <property name="Rules">Exile the top card of your library. During your next turn, you may play that card.
 Storm (When you cast this spell, copy it for each spell cast before it this turn.)</property>
-      <property name="Artist" value="Lucas Graciano" />
+      <property name="Artist" value="Lucas Staniec" />
       <property name="Number" value="406" />
       <property name="Packaging" value="Special" />
     </card>
@@ -7146,7 +7146,7 @@ Storm (When you cast this spell, copy it for each spell cast before it this turn
       <property name="Rarity" value="Rare" />
       <property name="Rules">Suspend 3—<s value="R">{R}</s><s value="R">{R}</s>
 Shuffle all permanents you own into your library, then reveal that many cards from the top of your library. Put all non-Aura permanent cards revealed this way onto the battlefield, then do the same for Aura cards, then put the rest on the bottom of your library in a random order.</property>
-      <property name="Artist" value="" />
+      <property name="Artist" value="Jokubas Uogintas" />
       <property name="Number" value="407" />
       <property name="Packaging" value="Special" />
     </card>
@@ -7178,7 +7178,7 @@ Mine Collapse deals 5 damage to target creature or planeswalker.</property>
       <property name="Subtype" value="Ooze" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Storm (When you cast this spell, copy it for each spell cast before it this turn. Copies become tokens.)
-Aeve, Progenitor Ooze isn't legendary as long as it's a token.
+Aeve, Progenitor Ooze isn't legendary if it's a token.
 Aeve enters the battlefield with a +1/+1 counter on it for each other Ooze you control.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -7217,7 +7217,7 @@ If one or more tokens would be created under your control, those tokens plus tha
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Create a 1/1 green Squirrel creature token.
-Storm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)</property>
+Storm (When you cast this spell, copy it for each spell cast before it this turn.)</property>
       <property name="Artist" value="Milivoj Ćeran" />
       <property name="Number" value="411" />
       <property name="Packaging" value="Special" />
@@ -7283,7 +7283,7 @@ If a card would be put into your graveyard from anywhere this turn, exile that c
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Ilse Gort" />
       <property name="Number" value="415" />
       <property name="Packaging" value="Special" />
     </card>
@@ -7335,7 +7335,7 @@ Sacrifice two Foods: Target creature deals 6 damage to itself.</property>
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever Carth the Lion enters the battlefield or a planeswalker you control dies, look at the top seven cards of your library. You may reveal a planeswalker card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.
-Planeswalkers' loyalty abilities you activate cost an additional {+1} to activate.</property>
+Planeswalkers' loyalty abilities you activate cost an additional [+1] to activate.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
@@ -7493,8 +7493,8 @@ Whenever Territorial Kavu attacks, choose one —
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="2">{2}</s>,<s value="T">{T}</s>, Sacrifice Brainstone: Draw three cards, then put two cards from your hand on top of your library in any order.</property>
-      <property name="Artist" value="" />
+        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Brainstone: Draw three cards, then put two cards from your hand on top of your library in any order.</property>
+      <property name="Artist" value="Drew Tucker" />
       <property name="Number" value="426" />
       <property name="Packaging" value="Special" />
     </card>
@@ -7512,7 +7512,7 @@ Whenever Territorial Kavu attacks, choose one —
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="427" />
       <property name="Packaging" value="Special" />
     </card>
@@ -7541,7 +7541,7 @@ Whenever Territorial Kavu attacks, choose one —
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Monoskelion enters the battlefield with a +1/+1 counter on it.
-<s value="1">{1}</s>, Remove a +1/+1 counter from Monoskelion: Monoskelion deals 1 damage to any target.</property>
+<s value="1">{1}</s>, Remove a +1/+1 counter from Monoskelion: It deals 1 damage to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -7563,7 +7563,7 @@ Whenever Territorial Kavu attacks, choose one —
       <property name="Power" value="0" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="0 / 2" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Raoul Vitale" />
       <property name="Number" value="430" />
       <property name="Packaging" value="Special" />
     </card>
@@ -7591,7 +7591,7 @@ Each creature you control has vigilance if it's white, hexproof if it's blue, li
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Suspend 3—<s value="1">{1}</s> (Rather than cast this card from your hand, you may pay <s value="1">{1}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
+      <property name="Rules">Suspend 3—<s value="1">{1}</s> (Rather than cast this card from your hand, pay <s value="1">{1}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
 <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>.</property>
       <property name="Artist" value="Volkan Baǵa" />
       <property name="Number" value="432" />
@@ -7723,7 +7723,7 @@ Equip <s value="2">{2}</s></property>
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Out of Time enters the battlefield, untap all creatures, then phase them out until Out of Time leaves the battlefield. Put a time counter on Out of Time for each creature phased out this way.
-Vanishing (At the beginning of your upkeep, remove a time counter from this creature. When the last is removed, sacrifice it.)</property>
+Vanishing (At the beginning of your upkeep, remove a time counter from this enchantment. When the last is removed, sacrifice it.)</property>
       <property name="Artist" value="Tobias Kwan" />
       <property name="Number" value="442" />
       <property name="Packaging" value="Special" />
@@ -7733,7 +7733,7 @@ Vanishing (At the beginning of your upkeep, remove a time counter from this crea
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Suspend 2—<s value="1">{1}</s><s value="W">{W}</s> (Rather than cast this card from your hand, you may pay <s value="1">{1}</s><s value="W">{W}</s> and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
+      <property name="Rules">Suspend 2—<s value="1">{1}</s><s value="W">{W}</s> (Rather than cast this card from your hand, pay <s value="1">{1}</s><s value="W">{W}</s> and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
 Return all enchantment cards from your graveyard to the battlefield. (Auras with nothing to enchant remain in your graveyard.)</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="443" />
@@ -7750,7 +7750,7 @@ Return all enchantment cards from your graveyard to the battlefield. (Auras with
       <property name="Subtype" value="Human Cleric" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Protection from black and from red
-When Sanctifier en-Vec enters the battlefield, exile all cards that are black and red from all graveyards.
+When Sanctifier en-Vec enters the battlefield, exile all cards that are black or red from all graveyards.
 If a black or red permanent, spell, or card not on the battlefield would be put into a graveyard, exile it instead.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -7785,7 +7785,7 @@ Eternalize <s value="2">{2}</s><s value="W">{W}</s><s value="W">{W}</s> (<s valu
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Suspend 3—<s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> (Rather than cast this card from your hand, you may pay <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
+      <property name="Rules">Suspend 3—<s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> (Rather than cast this card from your hand, pay <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
 Search target opponent's library for a creature card and put that card onto the battlefield under your control. Then that player shuffles.</property>
       <property name="Artist" value="Franz Vohwinkel" />
       <property name="Number" value="446" />
@@ -7817,7 +7817,7 @@ Search target opponent's library for a creature card and put that card onto the 
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Exile target creature and put two time counters on it. If it doesn't have suspend, it gains suspend. (At the beginning of its owner's upkeep, remove a time counter from that card. When the last is removed, the player plays it without paying its mana cost. If it's a creature, it has haste.)</property>
+      <property name="Rules">Exile target creature and put two time counters on it. If it doesn't have suspend, it gains suspend. (At the beginning of its owner's upkeep, they remove a time counter. When the last is removed, they play it without paying its mana cost. If it's a creature, it has haste.)</property>
       <property name="Artist" value="Lake Hurwitz" />
       <property name="Number" value="448" />
       <property name="Packaging" value="Special" />
@@ -7997,7 +7997,7 @@ Shuffle all permanents you own into your library, then reveal that many cards fr
       <property name="Subtype" value="Ooze" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Storm (When you cast this spell, copy it for each spell cast before it this turn. Copies become tokens.)
-Aeve, Progenitor Ooze isn't legendary as long as it's a token.
+Aeve, Progenitor Ooze isn't legendary if it's a token.
 Aeve enters the battlefield with a +1/+1 counter on it for each other Ooze you control.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -8081,7 +8081,7 @@ Sacrifice two Foods: Target creature deals 6 damage to itself.</property>
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever Carth the Lion enters the battlefield or a planeswalker you control dies, look at the top seven cards of your library. You may reveal a planeswalker card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.
-Planeswalkers' loyalty abilities you activate cost an additional {+1} to activate.</property>
+Planeswalkers' loyalty abilities you activate cost an additional [+1] to activate.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="3 / 5" />
@@ -8167,11 +8167,11 @@ Whenever Territorial Kavu attacks, choose one —
       <property name="Subtype" value="Efreet" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Yusri, Fortune's Flame attacks, choose a number between 1 and 5. Flip that many coins. For each flip you win, draw a card. For each flip you lose, Yursi deals 2 damage to you. If you won five flips this way, you may cast spells from your hand this turn without paying their mana costs.</property>
+Whenever Yusri, Fortune's Flame attacks, choose a number between 1 and 5. Flip that many coins. For each flip you win, draw a card. For each flip you lose, Yusri deals 2 damage to you. If you won five flips this way, you may cast spells from your hand this turn without paying their mana costs.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />
-      <property name="Artist" value="Svetlin Velinov" />
+      <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="468" />
       <property name="Packaging" value="Special" />
     </card>
@@ -8231,7 +8231,7 @@ Equip <s value="2">{2}</s></property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Suspend 3—<s value="1">{1}</s> (Rather than cast this card from your hand, you may pay <s value="1">{1}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
+      <property name="Rules">Suspend 3—<s value="1">{1}</s> (Rather than cast this card from your hand, pay <s value="1">{1}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
 <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>.</property>
       <property name="Artist" value="Volkan Baǵa" />
       <property name="Number" value="472" />
@@ -8374,7 +8374,7 @@ Noncreature spells with mana value equal to the chosen number can't be cast.</pr
       <property name="Subtype" value="Efreet" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Yusri, Fortune's Flame attacks, choose a number between 1 and 5. Flip that many coins. For each flip you win, draw a card. For each flip you lose, Yursi deals 2 damage to you. If you won five flips this way, you may cast spells from your hand this turn without paying their mana costs.</property>
+Whenever Yusri, Fortune's Flame attacks, choose a number between 1 and 5. Flip that many coins. For each flip you win, draw a card. For each flip you lose, Yusri deals 2 damage to you. If you won five flips this way, you may cast spells from your hand this turn without paying their mana costs.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="2 / 3" />

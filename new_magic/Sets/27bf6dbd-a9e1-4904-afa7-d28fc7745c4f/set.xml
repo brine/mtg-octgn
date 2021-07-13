@@ -155,7 +155,7 @@ Whenever one or more artifact creatures you control attack, Alibou, Ancient Witn
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Vigilance
 <s value="1">{1}</s>, Sacrifice an artifact: Target creature you control gets +2/+0 until end of turn.
-<s value="X">{X}</s>, <s value="T">{T}</s>, Exile an artifact with mana value X from your graveyard: Create two tokens that are copies of the exiled card. Activate only as a sorcery.</property>
+<s value="X">{X}</s>, <s value="T">{T}</s>, Exile an artifact card with mana value X from your graveyard: Create two tokens that are copies of the exiled card. Activate only as a sorcery.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -386,7 +386,7 @@ Each creature with one or more counters on it can't attack you or planeswalkers 
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Each player puts a vow counter on a creature they control and sacrifices the rest. Each of those creatures can't attack you for as long as it has a vow counter on it.</property>
+      <property name="Rules">Each player puts a vow counter on a creature they control and sacrifices the rest. Each of those creatures can't attack you or planeswalkers you control for as long as it has a vow counter on it.</property>
       <property name="Artist" value="Sara Winters" />
       <property name="Number" value="021" />
     </card>
@@ -490,7 +490,7 @@ Whenever Dazzling Sphinx deals combat damage to a player, that player exiles car
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Draw two cards. Exile Inspiring Refrain with three time counters on it.
-Suspend 3—<s value="2">{2}</s><s value="U">{U}</s> (Rather than cast this card from your hand, pay <s value="2">{2}</s><s value="U">{U}</s> and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</property>
+Suspend 3—<s value="2">{2}</s><s value="U">{U}</s> (Rather than cast this card from your hand, you may pay <s value="2">{2}</s><s value="U">{U}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</property>
       <property name="Artist" value="Izzy" />
       <property name="Number" value="027" />
     </card>
@@ -504,7 +504,7 @@ Suspend 3—<s value="2">{2}</s><s value="U">{U}</s> (Rather than cast this card
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Exile the top X cards of your library. You may cast an instant or sorcery spell with mana value X or less from among them without paying its mana cost. Then put the exiled instant or sorcery cards that weren't cast this way into your hand and the rest on the bottom of your library in a random order.</property>
+      <property name="Rules">Exile the top X cards of your library. You may cast an instant or sorcery spell with mana value X or less from among them without paying its mana cost. Then put the exiled instant and sorcery cards that weren't cast this way into your hand and the rest on the bottom of your library in a random order.</property>
       <property name="Artist" value="Kieran Yanner" />
       <property name="Number" value="028" />
     </card>
@@ -521,7 +521,7 @@ Suspend 3—<s value="2">{2}</s><s value="U">{U}</s> (Rather than cast this card
       <property name="Rarity" value="Rare" />
       <property name="Rules">This spell costs <s value="8">{8}</s> less to cast if you have eight or more instant and/or sorcery cards in your graveyard.
 Ward <s value="8">{8}</s>
-Magecraft — Whenever you cast an instant or sorcery spell, target creature has base power and toughness 8/8 until end of turn.</property>
+Magecraft — Whenever you cast or copy an instant or sorcery spell, target creature has base power and toughness 8/8 until end of turn.</property>
       <property name="Power" value="8" />
       <property name="Toughness" value="8" />
       <property name="PT Box" value="8 / 8" />
@@ -795,7 +795,7 @@ At the beginning of your end step, if you gained life this turn, you may pay X l
       <property name="Subtype" value="Vampire Warlock" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
-Whenever you gain life, you pay <s value="B">{B}</s>. If you do, return target creature card from your graveyard to your hand.</property>
+Whenever you gain life, you may pay <s value="B">{B}</s>. If you do, return target creature card from your graveyard to your hand.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -909,7 +909,7 @@ Inferno Project enters the battlefield with X +1/+1 counters on it, where X is t
       <property name="Rarity" value="Rare" />
       <property name="Rules">Haste
 Whenever Laelia, the Blade Reforged attacks, exile the top card of your library. You may play that card this turn.
-Whenever you exile one or more cards from your library and/or your graveyard, put a +1/+1 counter on Laelia.</property>
+Whenever one or more cards are put into exile from your library and/or your graveyard, put a +1/+1 counter on Laelia.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -980,7 +980,7 @@ Suspend 3—<s value="1">{1}</s><s value="R">{R}</s> (Rather than cast this card
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
 When Ruin Grinder dies, each player may discard their hand and draw seven cards.
-Mountaincycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Mountain card. Reveal it, put it into your hand, then shuffle.)</property>
+Mountaincycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Mountain card, reveal it, put it into your hand, then shuffle.)</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="7 / 4" />
@@ -1098,7 +1098,7 @@ Return target card from your graveyard to your hand. You gain life equal to that
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Paradox Zone enters the battlefield with a growth counter on it.
-At the beginning of your end step, double the number of growth counters on Paradox Zone. Then create a 0/0 blue and green Fractal creature token. Put X +1/+1 counters on it, where X is the number of growth counters on Paradox Zone.</property>
+At the beginning of your end step, double the number of growth counters on Paradox Zone. Then create a 0/0 green and blue Fractal creature token. Put X +1/+1 counters on it, where X is the number of growth counters on Paradox Zone.</property>
       <property name="Artist" value="Ryan Yee" />
       <property name="Number" value="064" />
       <property name="Faction" value="Quandrix" />
@@ -1407,7 +1407,7 @@ When Angel of Serenity leaves the battlefield, return the exiled cards to their 
       <property name="Subtype" value="Pegasus" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-When Boreas Charger leaves the battlefield, choose an opponent who controls more lands than you. Search your library for a number of Plains cards equal to the difference and reveal them. Put one of them onto the battlefield tapped and the rest into your hand. Then shuffle your library.</property>
+When Boreas Charger leaves the battlefield, choose an opponent who controls more lands than you. Search your library for a number of Plains cards equal to the difference, reveal those cards, put one of them onto the battlefield tapped and the rest into your hand, then shuffle.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -1580,7 +1580,7 @@ When Hunted Lammasu enters the battlefield, target opponent creates a 4/4 black 
       <property name="Subtype" value="Human Knight" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">First strike
-When Knight of the White Orchid enters the battlefield, if an opponent controls more lands than you, you may search your library for a Plains card, put it onto the battlefield, then shuffle your library.</property>
+When Knight of the White Orchid enters the battlefield, if an opponent controls more lands than you, you may search your library for a Plains card, put it onto the battlefield, then shuffle.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1626,7 +1626,7 @@ Whenever enchanted creature attacks, each other creature that's attacking one of
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat Scout" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Oreskos Explorer enters the battlefield, search your library for up to X Plains cards, where X is the number of players who control more lands than you. Reveal those cards, put them into your hand, then shuffle your library.</property>
+      <property name="Rules">When Oreskos Explorer enters the battlefield, search your library for up to X Plains cards, where X is the number of players who control more lands than you. Reveal those cards, put them into your hand, then shuffle.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -1643,7 +1643,7 @@ Whenever enchanted creature attacks, each other creature that's attacking one of
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Advisor" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">At the beginning of your upkeep, each player may put two +1/+1 counters on a creature they control. If a player does, creatures that player controls can't attack you or a planeswalker you control until your next turn.</property>
+      <property name="Rules">At the beginning of your upkeep, each player may put two +1/+1 counters on a creature they control. If a player does, creatures that player controls can't attack you or planeswalkers you control until your next turn.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="1 / 4" />
@@ -1740,7 +1740,7 @@ Whenever damage that would be dealt to you is prevented, put that many +1/+1 cou
       <property name="Subtype" value="Cat Archer" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Stalking Leonin enters the battlefield, secretly choose an opponent.
-Reveal the player you chose: Exile target creature that's attacking you if it's controlled by the chosen player. Activate this ability only once.</property>
+Reveal the player you chose: Exile target creature that's attacking you if it's controlled by the chosen player. Activate only once.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -1759,7 +1759,7 @@ Reveal the player you chose: Exile target creature that's attacking you if it's 
       <property name="Subtype" value="Giant" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Vigilance
-Whenever Sun Titan enters the battlefield or attacks, you may return target permanent card with converted mana cost 3 or less from your graveyard to the battlefield.</property>
+Whenever Sun Titan enters the battlefield or attacks, you may return target permanent card with mana value 3 or less from your graveyard to the battlefield.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="6 / 6" />
@@ -1824,7 +1824,7 @@ Whenever an opponent casts a spell, put a +1/+1 counter on Sunscorch Regent and 
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Enchant creature
-Enchanted creature gets +2/+2, has vigilance, and can't attack you or a planeswalker you control.</property>
+Enchanted creature gets +2/+2, has vigilance, and can't attack you or planeswalkers you control.</property>
       <property name="Artist" value="Wayne Reynolds" />
       <property name="Number" value="110" />
     </card>
@@ -1999,7 +1999,7 @@ When Diluvian Primordial enters the battlefield, for each opponent, you may cast
       <property name="Subtype" value="Avatar" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">As Living Lore enters the battlefield, exile an instant or sorcery card from your graveyard.
-Living Lore's power and toughness are each equal to the exiled card's converted mana cost.
+Living Lore's power and toughness are each equal to the exiled card's mana value.
 Whenever Living Lore deals combat damage, you may sacrifice it. If you do, you may cast the exiled card without paying its mana cost.</property>
       <property name="Power" value="*" />
       <property name="Toughness" value="*" />
@@ -2017,8 +2017,8 @@ Whenever Living Lore deals combat damage, you may sacrifice it. If you do, you m
       <property name="Color" value="Blue" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever you cast an instant or sorcery spell, create an X/X colorless Construct artifact creature token, where X is that spell's converted mana cost.
-<s value="3">{3}</s><s value="U">{U}</s><s value="U">{U}</s>, Exile Metallurgic Summonings: Return all instant and sorcery cards from your graveyard to your hand. Activate this ability only if you control six or more artifacts.</property>
+      <property name="Rules">Whenever you cast an instant or sorcery spell, create an X/X colorless Construct artifact creature token, where X is that spell's mana value.
+<s value="3">{3}</s><s value="U">{U}</s><s value="U">{U}</s>, Exile Metallurgic Summonings: Return all instant and sorcery cards from your graveyard to your hand. Activate only if you control six or more artifacts.</property>
       <property name="Artist" value="Kieran Yanner" />
       <property name="Number" value="122" />
     </card>
@@ -2032,7 +2032,7 @@ Whenever Living Lore deals combat damage, you may sacrifice it. If you do, you m
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Shuffle your library. Then exile the top card of your library. Until end of turn, you may play that card without paying its mana cost. (If it has X in its mana cost, X is 0.)
+      <property name="Rules">Shuffle your library. Then exile the top card of your library. Until end of turn, you may play that card without paying its mana cost.
 Storm (When you cast this spell, copy it for each spell cast before it this turn.)</property>
       <property name="Artist" value="Anthony Francisco" />
       <property name="Number" value="123" />
@@ -2065,7 +2065,7 @@ Other Wizards you control get +1/+1.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Look at the top three cards of your library, then put them back in any order. You may shuffle your library.
+      <property name="Rules">Look at the top three cards of your library, then put them back in any order. You may shuffle.
 Draw a card.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="125" />
@@ -2168,7 +2168,7 @@ Create a token that's a copy of target creature. If this spell was kicked, creat
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Counter target spell.
-Basic landcycling <s value="1">{1}</s><s value="U">{U}</s> (<s value="1">{1}</s><s value="U">{U}</s>, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)</property>
+Basic landcycling <s value="1">{1}</s><s value="U">{U}</s> (<s value="1">{1}</s><s value="U">{U}</s>, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)</property>
       <property name="Artist" value="Cyril Van Der Haegen" />
       <property name="Number" value="132" />
     </card>
@@ -2357,7 +2357,7 @@ Whenever you gain life, target opponent loses that much life.</property>
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Destroy target creature or enchantment an opponent controls. You lose life equal to that permanent's converted mana cost.</property>
+      <property name="Rules">Destroy target creature or enchantment an opponent controls. You lose life equal to that permanent's mana value.</property>
       <property name="Artist" value="Andrey Kuzinskiy" />
       <property name="Number" value="144" />
     </card>
@@ -2369,7 +2369,7 @@ Whenever you gain life, target opponent loses that much life.</property>
       <property name="CMC" value="4" />
       <property name="Color" value="Black" />
       <property name="Type" value="Enchantment" />
-      <property name="Rarity" value="Rare" />
+      <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="B">{B}</s>, Pay 2 life: Draw a card.</property>
       <property name="Artist" value="Izzy" />
@@ -2660,7 +2660,7 @@ Whenever you cast an instant or sorcery spell, Charmbreaker Devils gets +4/+0 un
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">First strike
-When Combustible Gearhulk enters the battlefield, target opponent may have you draw three cards. If the player doesn't, you mill three cards, then Combustible Gearhulk deals damage to that player equal to the total converted mana cost of those cards.</property>
+When Combustible Gearhulk enters the battlefield, target opponent may have you draw three cards. If the player doesn't, you mill three cards, then Combustible Gearhulk deals damage to that player equal to the total mana value of those cards.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="PT Box" value="6 / 6" />
@@ -2715,7 +2715,7 @@ When Dualcaster Mage enters the battlefield, copy target instant or sorcery spel
       <property name="Subtype" value="Cyclops Shaman" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample
-Whenever you cast an instant or sorcery spell, Erratic Cyclops gets +X/+0 until end of turn, where X is that spell's converted mana cost.</property>
+Whenever you cast an instant or sorcery spell, Erratic Cyclops gets +X/+0 until end of turn, where X is that spell's mana value.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="8" />
       <property name="PT Box" value="0 / 8" />
@@ -2783,7 +2783,7 @@ Flashback <s value="2">{2}</s><s value="R">{R}</s> (You may cast this card from 
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Fiery Fall deals 5 damage to target creature.
-Basic landcycling <s value="1">{1}</s><s value="R">{R}</s> (<s value="1">{1}</s><s value="R">{R}</s>, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.)</property>
+Basic landcycling <s value="1">{1}</s><s value="R">{R}</s> (<s value="1">{1}</s><s value="R">{R}</s>, Discard this card: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.)</property>
       <property name="Artist" value="Daarken" />
       <property name="Number" value="170" />
     </card>
@@ -2838,7 +2838,7 @@ At the beginning of your upkeep, if you control twenty or more artifacts, you wi
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-<s value="3">{3}</s><s value="R">{R}</s>: Destroy target artifact. Hoard-Smelter Dragon gets +X/+0 until end of turn, where X is that artifact's converted mana cost.</property>
+<s value="3">{3}</s><s value="R">{R}</s>: Destroy target artifact. Hoard-Smelter Dragon gets +X/+0 until end of turn, where X is that artifact's mana value.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
@@ -2856,7 +2856,7 @@ At the beginning of your upkeep, if you control twenty or more artifacts, you wi
       <property name="Subtype" value="Human Rogue" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Draw two cards. Target opponent gains control of Humble Defector. Activate this ability only during your turn.</property>
+        <s value="T">{T}</s>: Draw two cards. Target opponent gains control of Humble Defector. Activate only during your turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="2 / 1" />
@@ -2954,7 +2954,7 @@ At the beginning of your upkeep, if you control twenty or more artifacts, you wi
       <property name="Color" value="Red" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever you cast a spell from your hand, reveal the top X cards of your library, where X is that spell's converted mana cost. You may cast a spell with converted mana cost X or less from among cards revealed this way without paying its mana cost. Put the rest on the bottom of your library in a random order.</property>
+      <property name="Rules">Whenever you cast a spell from your hand, reveal the top X cards of your library, where X is that spell's mana value. You may cast a spell with mana value X or less from among cards revealed this way without paying its mana cost. Put the rest on the bottom of your library in a random order.</property>
       <property name="Artist" value="Christine Choi" />
       <property name="Number" value="180" />
     </card>
@@ -2986,7 +2986,7 @@ Artifact creatures you control have haste. (They can attack and <s value="T">{T}
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Return target instant or sorcery card from your graveyard to your hand. Volcanic Vision deals damage equal to that card's converted mana cost to each creature your opponents control. Exile Volcanic Vision.</property>
+      <property name="Rules">Return target instant or sorcery card from your graveyard to your hand. Volcanic Vision deals damage equal to that card's mana value to each creature your opponents control. Exile Volcanic Vision.</property>
       <property name="Artist" value="Liiga Smilshkalne" />
       <property name="Number" value="182" />
     </card>
@@ -3068,7 +3068,7 @@ Channel — <s value="X">{X}</s><s value="G">{G}</s><s value="G">{G}</s>, Discar
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Search your library for up to two basic land cards, reveal those cards, and put one onto the battlefield tapped and the other into your hand. Then shuffle your library.</property>
+      <property name="Rules">Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.</property>
       <property name="Artist" value="Anthony Palumbo" />
       <property name="Number" value="187" />
     </card>
@@ -3083,7 +3083,7 @@ Channel — <s value="X">{X}</s><s value="G">{G}</s><s value="G">{G}</s>, Discar
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">For each creature your opponents control, create a 4/4 green Beast creature token. Each of those Beasts fights a different one of those creatures.</property>
+      <property name="Rules">For each creature your opponents control, create a 4/4 green Phyrexian Beast creature token. Each of those Beasts fights a different one of those creatures.</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="188" />
     </card>
@@ -3253,7 +3253,7 @@ LEVEL 6+
       <property name="Type" value="Sorcery" />
       <property name="Subtype" value="Arcane" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Search your library for up to two basic land cards, reveal those cards, and put one onto the battlefield tapped and the other into your hand. Then shuffle your library.</property>
+      <property name="Rules">Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="197" />
     </card>
@@ -3299,7 +3299,7 @@ Whenever a player casts a spell, put a +1/+1 counter on Managorger Hydra.</prope
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for <s value="1">{1}</s> or one mana of that creature's color.)
-Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle your library.</property>
+Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="200" />
     </card>
@@ -3312,7 +3312,7 @@ Search your library for up to two basic land cards, put them onto the battlefiel
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Search your library for up to three basic land cards, put them onto the battlefield tapped, then shuffle your library. You gain 7 life.</property>
+      <property name="Rules">Search your library for up to three basic land cards, put them onto the battlefield tapped, then shuffle. You gain 7 life.</property>
       <property name="Artist" value="Lius Lasahido" />
       <property name="Number" value="201" />
     </card>
@@ -3357,7 +3357,7 @@ Landfall — Whenever a land enters the battlefield under your control, you may 
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.</property>
+      <property name="Rules">Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="204" />
     </card>
@@ -3558,7 +3558,7 @@ At the beginning of your upkeep, put target creature card from a graveyard onto 
       <property name="Color" value="Multicolor Blue Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Exile the top X cards of your library. You may cast instant and sorcery spells with converted mana cost X or less from among them without paying their mana costs. Then put all cards exiled this way that weren't cast into your graveyard.</property>
+      <property name="Rules">Exile the top X cards of your library. You may cast instant and sorcery spells with mana value X or less from among them without paying their mana costs. Then put all cards exiled this way that weren't cast into your graveyard.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="216" />
     </card>
@@ -3573,7 +3573,7 @@ At the beginning of your upkeep, put target creature card from a graveyard onto 
       <property name="Color" value="Multicolor Black Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Destroy each nonland permanent with converted mana cost X or less.</property>
+      <property name="Rules">Destroy each nonland permanent with mana value X or less.</property>
       <property name="Artist" value="Nils Hamm" />
       <property name="Number" value="217" />
     </card>
@@ -3900,7 +3900,7 @@ If you would draw a card except the first one you draw in each of your draw step
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Equipped creature gets +2/+0 and is goaded. (It attacks each combat if able and attacks a player other than you if able.)
-<s value="1">{1}</s>: Attach Bloodthirsty Blade to target creature an opponent controls. Activate this ability only any time you could cast a sorcery.</property>
+<s value="1">{1}</s>: Attach Bloodthirsty Blade to target creature an opponent controls. Activate only as a sorcery.</property>
       <property name="Artist" value="Jason Kang" />
       <property name="Number" value="235" />
     </card>
@@ -3928,7 +3928,7 @@ If you would draw a card except the first one you draw in each of your draw step
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample
-<s value="3">{3}</s><s value="R">{R}</s>, Sacrifice an artifact: Bosh, Iron Golem deals damage equal to the sacrificed artifact's converted mana cost to any target.</property>
+<s value="3">{3}</s><s value="R">{R}</s>, Sacrifice an artifact: Bosh, Iron Golem deals damage equal to the sacrificed artifact's mana value to any target.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="7" />
       <property name="PT Box" value="6 / 7" />
@@ -3945,7 +3945,7 @@ If you would draw a card except the first one you draw in each of your draw step
       <property name="Subtype" value="Elk" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="3">{3}</s>, Sacrifice Burnished Hart: Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle your library.</property>
+        <s value="3">{3}</s>, Sacrifice Burnished Hart: Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -4058,7 +4058,7 @@ As long as a card exiled with Duplicant is a creature card, Duplicant has the po
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Draw a card. Activate this ability only if you created a token this turn.
+        <s value="T">{T}</s>: Draw a card. Activate only if you created a token this turn.
 <s value="8">{8}</s>, <s value="T">{T}</s>, Sacrifice Idol of Oblivion: Create a 10/10 colorless Eldrazi creature token.</property>
       <property name="Artist" value="Piotr Dura" />
       <property name="Number" value="246" />
@@ -4142,7 +4142,7 @@ Equip <s value="3">{3}</s></property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Mycosynth Wellspring enters the battlefield or is put into a graveyard from the battlefield, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.</property>
+      <property name="Rules">When Mycosynth Wellspring enters the battlefield or is put into a graveyard from the battlefield, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle.</property>
       <property name="Artist" value="David Rapoza" />
       <property name="Number" value="252" />
     </card>
@@ -4213,7 +4213,7 @@ Whenever a player casts a spell of the chosen color, you may gain 1 life.
       <property name="Subtype" value="Thopter" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Flying
-When Pilgrim's Eye enters the battlefield, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle your library.</property>
+When Pilgrim's Eye enters the battlefield, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="PT Box" value="1 / 1" />
@@ -4255,7 +4255,7 @@ When Pilgrim's Eye enters the battlefield, you may search your library for a bas
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Scrap Trawler or another artifact you control is put into a graveyard from the battlefield, return to your hand target artifact card in your graveyard with lesser converted mana cost.</property>
+      <property name="Rules">Whenever Scrap Trawler or another artifact you control is put into a graveyard from the battlefield, return to your hand target artifact card in your graveyard with lesser mana value.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="3 / 2" />
@@ -4309,7 +4309,7 @@ When Pilgrim's Eye enters the battlefield, you may search your library for a bas
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Solemn Simulacrum enters the battlefield, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle your library.
+      <property name="Rules">When Solemn Simulacrum enters the battlefield, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
 When Solemn Simulacrum dies, you may draw a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -4341,7 +4341,7 @@ When Solemn Simulacrum dies, you may draw a card.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
 <s value="2">{2}</s>: Steel Hellkite gets +1/+0 until end of turn.
-<s value="X">{X}</s>: Destroy each nonland permanent with converted mana cost X whose controller was dealt combat damage by Steel Hellkite this turn. Activate this ability only once each turn.</property>
+<s value="X">{X}</s>: Destroy each nonland permanent with mana value X whose controller was dealt combat damage by Steel Hellkite this turn. Activate only once each turn.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="PT Box" value="5 / 5" />
@@ -4525,7 +4525,7 @@ Cycling <s value="B">{B}</s> (<s value="B">{B}</s>, Discard this card: Draw a ca
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="3">{3}</s><s value="G">{G}</s>, <s value="T">{T}</s>, Sacrifice Blighted Woodland: Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle your library.</property>
+<s value="3">{3}</s><s value="G">{G}</s>, <s value="T">{T}</s>, Sacrifice Blighted Woodland: Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Jason Felix" />
       <property name="Number" value="280" />
       <property name="Flags" value="G" />
@@ -4737,7 +4737,7 @@ Graft 1 (This land enters the battlefield with a +1/+1 counter on it. Whenever a
       <property name="CMC" value="0" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Uncommon" />
       <property name="Rules">Lonely Sandbar enters the battlefield tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s>.
 Cycling <s value="U">{U}</s> (<s value="U">{U}</s>, Discard this card: Draw a card.)</property>
@@ -4813,7 +4813,7 @@ Cycling <s value="U">{U}</s> (<s value="U">{U}</s>, Discard this card: Draw a ca
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Myriad Landscape enters the battlefield tapped.
 <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Myriad Landscape: Search your library for up to two basic land cards that share a land type, put them onto the battlefield tapped, then shuffle your library.</property>
+<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Myriad Landscape: Search your library for up to two basic land cards that share a land type, put them onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="304" />
       <property name="Flags" value="C" />
@@ -4920,7 +4920,7 @@ When Orzhov Basilica enters the battlefield, return a land you control to its ow
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)
 Sapseep Forest enters the battlefield tapped.
-<s value="G">{G}</s>, <s value="T">{T}</s>: You gain 1 life. Activate this ability only if you control two or more green permanents.</property>
+<s value="G">{G}</s>, <s value="T">{T}</s>: You gain 1 life. Activate only if you control two or more green permanents.</property>
       <property name="Artist" value="Aleksi Briclot" />
       <property name="Number" value="313" />
       <property name="Flags" value="G" />
@@ -4942,7 +4942,7 @@ Sapseep Forest enters the battlefield tapped.
       <property name="CMC" value="0" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Uncommon" />
       <property name="Rules">Secluded Steppe enters the battlefield tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s>.
 Cycling <s value="W">{W}</s> (<s value="W">{W}</s>, Discard this card: Draw a card.)</property>
@@ -5005,7 +5005,7 @@ When Simic Growth Chamber enters the battlefield, return a land you control to i
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>. Activate this ability only if you control a Swamp.</property>
+<s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>. Activate only if you control a Swamp.</property>
       <property name="Artist" value="Don Hazeltine" />
       <property name="Number" value="320" />
       <property name="Flags" value="WB" />
@@ -5017,7 +5017,7 @@ When Simic Growth Chamber enters the battlefield, return a land you control to i
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>. Activate this ability only if you control a Swamp.</property>
+<s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>. Activate only if you control a Swamp.</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="321" />
       <property name="Flags" value="BG" />
@@ -5076,7 +5076,7 @@ When Temple of Silence enters the battlefield, scry 1.
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>. Activate this ability only if you control five or more lands.</property>
+        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>. Activate only if you control five or more lands.</property>
       <property name="Artist" value="James Zapata" />
       <property name="Number" value="326" />
       <property name="Flags" value="C" />
@@ -5244,7 +5244,7 @@ Whenever one or more artifact creatures you control attack, Alibou, Ancient Witn
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Vigilance
 <s value="1">{1}</s>, Sacrifice an artifact: Target creature you control gets +2/+0 until end of turn.
-<s value="X">{X}</s>, <s value="T">{T}</s>, Exile an artifact with mana value X from your graveyard: Create two tokens that are copies of the exiled card. Activate only as a sorcery.</property>
+<s value="X">{X}</s>, <s value="T">{T}</s>, Exile an artifact card with mana value X from your graveyard: Create two tokens that are copies of the exiled card. Activate only as a sorcery.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="4 / 4" />
@@ -5475,7 +5475,7 @@ Each creature with one or more counters on it can't attack you or planeswalkers 
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Each player puts a vow counter on a creature they control and sacrifices the rest. Each of those creatures can't attack you for as long as it has a vow counter on it.</property>
+      <property name="Rules">Each player puts a vow counter on a creature they control and sacrifices the rest. Each of those creatures can't attack you or planeswalkers you control for as long as it has a vow counter on it.</property>
       <property name="Artist" value="Sara Winters" />
       <property name="Number" value="348" />
     </card>
@@ -5579,7 +5579,7 @@ Whenever Dazzling Sphinx deals combat damage to a player, that player exiles car
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Draw two cards. Exile Inspiring Refrain with three time counters on it.
-Suspend 3—<s value="2">{2}</s><s value="U">{U}</s> (Rather than cast this card from your hand, pay <s value="2">{2}</s><s value="U">{U}</s> and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</property>
+Suspend 3—<s value="2">{2}</s><s value="U">{U}</s> (Rather than cast this card from your hand, you may pay <s value="2">{2}</s><s value="U">{U}</s> and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)</property>
       <property name="Artist" value="Izzy" />
       <property name="Number" value="354" />
     </card>
@@ -5593,7 +5593,7 @@ Suspend 3—<s value="2">{2}</s><s value="U">{U}</s> (Rather than cast this card
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Exile the top X cards of your library. You may cast an instant or sorcery spell with mana value X or less from among them without paying its mana cost. Then put the exiled instant or sorcery cards that weren't cast this way into your hand and the rest on the bottom of your library in a random order.</property>
+      <property name="Rules">Exile the top X cards of your library. You may cast an instant or sorcery spell with mana value X or less from among them without paying its mana cost. Then put the exiled instant and sorcery cards that weren't cast this way into your hand and the rest on the bottom of your library in a random order.</property>
       <property name="Artist" value="Kieran Yanner" />
       <property name="Number" value="355" />
     </card>
@@ -5610,7 +5610,7 @@ Suspend 3—<s value="2">{2}</s><s value="U">{U}</s> (Rather than cast this card
       <property name="Rarity" value="Rare" />
       <property name="Rules">This spell costs <s value="8">{8}</s> less to cast if you have eight or more instant and/or sorcery cards in your graveyard.
 Ward <s value="8">{8}</s>
-Magecraft — Whenever you cast an instant or sorcery spell, target creature has base power and toughness 8/8 until end of turn.</property>
+Magecraft — Whenever you cast or copy an instant or sorcery spell, target creature has base power and toughness 8/8 until end of turn.</property>
       <property name="Power" value="8" />
       <property name="Toughness" value="8" />
       <property name="PT Box" value="8 / 8" />
@@ -5884,7 +5884,7 @@ At the beginning of your end step, if you gained life this turn, you may pay X l
       <property name="Subtype" value="Vampire Warlock" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
-Whenever you gain life, you pay <s value="B">{B}</s>. If you do, return target creature card from your graveyard to your hand.</property>
+Whenever you gain life, you may pay <s value="B">{B}</s>. If you do, return target creature card from your graveyard to your hand.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="PT Box" value="3 / 3" />
@@ -5998,7 +5998,7 @@ Inferno Project enters the battlefield with X +1/+1 counters on it, where X is t
       <property name="Rarity" value="Rare" />
       <property name="Rules">Haste
 Whenever Laelia, the Blade Reforged attacks, exile the top card of your library. You may play that card this turn.
-Whenever you exile one or more cards from your library and/or your graveyard, put a +1/+1 counter on Laelia.</property>
+Whenever one or more cards are put into exile from your library and/or your graveyard, put a +1/+1 counter on Laelia.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="PT Box" value="2 / 2" />
@@ -6069,7 +6069,7 @@ Suspend 3—<s value="1">{1}</s><s value="R">{R}</s> (Rather than cast this card
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
 When Ruin Grinder dies, each player may discard their hand and draw seven cards.
-Mountaincycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Mountain card. Reveal it, put it into your hand, then shuffle.)</property>
+Mountaincycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Mountain card, reveal it, put it into your hand, then shuffle.)</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="4" />
       <property name="PT Box" value="7 / 4" />
@@ -6187,7 +6187,7 @@ Return target card from your graveyard to your hand. You gain life equal to that
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Paradox Zone enters the battlefield with a growth counter on it.
-At the beginning of your end step, double the number of growth counters on Paradox Zone. Then create a 0/0 blue and green Fractal creature token. Put X +1/+1 counters on it, where X is the number of growth counters on Paradox Zone.</property>
+At the beginning of your end step, double the number of growth counters on Paradox Zone. Then create a 0/0 green and blue Fractal creature token. Put X +1/+1 counters on it, where X is the number of growth counters on Paradox Zone.</property>
       <property name="Artist" value="Ryan Yee" />
       <property name="Number" value="391" />
       <property name="Faction" value="Quandrix" />
