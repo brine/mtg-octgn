@@ -982,17 +982,14 @@ def tolibraryposition(card, x = 0, y = 0):
 
 def libraryBottomAllShuffle(cards, x = 0, y = 0):
     mute()
-    count = 0
-    emergencyStop = len(cards) + 4 ## just in case something causes an infinite while loop
-    while len(cards) > 0:
-        emergencyStop -= 1
-        if emergencyStop == 0:
-            break
-        index = rnd(0, len(cards) - 1)
-        card = cards.pop(index)
-        if card.controller == me:
-            card.moveToBottom(card.owner.piles['Library'])
-            count += 1
+    count = len(cards)
+    rng = Random()
+    for i in range(count - 1, 0, -1):
+        ## shuffle pile using fisher-yates algorithm
+        j = rng.Next(0, i + 1)
+        cards[i], cards[j] = cards[j], cards[i]
+    for card in cards:
+        card.moveToBottom(card.owner.piles['Library'])
     notify("{} shuffles {} selected cards to the bottom of their Library.".format(me, count))
 
 def tohand(card, x = 0, y = 0):

@@ -406,5 +406,8 @@ changelog = {
         "(Use the 'activate ability' card action to choose a room to venture into)",
         "Removed PT Box and MultiverseId card properties, added a new Loyalty property",
         "Updated all rules text, including the Phyrexian creature type errata"
+        ]),
+    3060214: ("3.6.2.14", "July 13 2021", [
+        "Improved the 'shuffle cards to bottom of library' table action to not reveal the order the cards appear"
         ])
 }
