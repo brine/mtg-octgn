@@ -219,6 +219,16 @@
 			<link block="rarity"><property name="Rarity" /></link>
 			<link block="type" separator=" --  "><property name="Type" /><property name="Subtype" /></link>
 			<link block="rules"><property name="Rules" /></link>
+			<conditional>
+				<switch property="Type">
+					<case contains="Creature">
+						<link block="ptbox" separator=" / "><property name="Power" /><property name="Toughness" /></link>
+					</case>
+					<case contains="Planeswalker">
+						<link block="ptbox"><property name="Loyalty" /></link>
+					</case>
+				</switch>
+			</conditional>
 			<link block="ptbox"><property name="PT Box" /></link>
 		</textblocks>
 	</template>
