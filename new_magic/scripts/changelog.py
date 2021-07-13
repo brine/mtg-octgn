@@ -401,6 +401,10 @@ changelog = {
         "Added Modern Horizons 2"
         ]),
     3060213: ("3.6.2.13", "July 12 2021", [
-        "Added Adventures in the Forgotten Realms"
+        "Added Adventures in the Forgotten Realms",
+        "New table group action (underneath the 'create a token...' action to create dungeon tokens",
+        "(Use the 'activate ability' card action to choose a room to venture into)",
+        "Removed PT Box and MultiverseId card properties, added a new Loyalty property",
+        "Updated all rules text, including the Phyrexian creature type errata"
         ])
 }

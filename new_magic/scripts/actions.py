@@ -374,6 +374,15 @@ def revealSecret(secretName):
     if secretName in mySecrets:
         notify("{0} revealed their secret '{1}' as '{2}'.".format(me, secretName, mySecrets[secretName]))
 
+
+def createDungeon(group, x = 0, y = 0):
+    mute()
+    guid, quantity = askCard({"Type":"Dungeon"}, "And")
+    if quantity == 0:
+        return
+    token = table.create(guid, x, y, 1)
+    notify("{} creates the dungeon {}".format(me, token))
+
 #--------------------------------
 # Autoscript-Linked Card functions
 #--------------------------------
@@ -705,7 +714,11 @@ def activate(card, x = 0, y = 0):
     if autoscriptCheck():
         stackData = autoTrigger(card, 'acti')
         if stackData != "BREAK":
-            notify("{} activates {}'s ability #{}{}.".format(me, card, stackData['acti'][0], stackData['text']))
+            if card.Type == "Dungeon":
+                roomName = stackData['acti'][1].split(" — ")[0]
+                notify("{} ventures into {}'s {}{}.".format(me, card, roomName, stackData['text']))
+            else:
+                notify("{} activates {}'s ability #{}{}.".format(me, card, stackData['acti'][0], stackData['text']))
     else:
         notify("{} uses {}'s ability.".format(me, card))
 
