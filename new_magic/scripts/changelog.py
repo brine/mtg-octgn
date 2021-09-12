@@ -409,5 +409,8 @@ changelog = {
         ]),
     3060214: ("3.6.2.14", "July 13 2021", [
         "Improved the 'shuffle cards to bottom of library' table action to not reveal the order the cards appear"
+        ]),
+    3060215: ("3.6.2.15", "September 11 2021", [
+        "Added Innistrad Midnight Hunt (tokens coming soon)"
         ])
 }

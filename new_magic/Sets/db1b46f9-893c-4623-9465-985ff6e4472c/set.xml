@@ -5,11 +5,11 @@
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="G">{G}</s>
-        <s value="U">{U}</s>
         <s value="W">{W}</s>
+        <s value="U">{U}</s>
       </property>
       <property name="CMC" value="4" />
-      <property name="Color" value="Multicolor Green Blue White" />
+      <property name="Color" value="Multicolor Green White Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elf Knight" />
       <property name="Rarity" value="Mythic Rare" />
@@ -51,7 +51,7 @@ Pact Boon — Whenever you play a card from exile, create a Treasure token.</pro
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever one or more creature cards are put into your graveyard from anywhere, venture into the dungeon. This ability triggers only once each turn. (Enter the first room or advance to the next room.)
+      <property name="Rules">Whenever one or more creature cards are put into your graveyard from anywhere, venture into the dungeon. This ability triggers only once each turn. (To venture into the dungeon, enter the first room or advance to the next room.)
 Create Undead — Whenever you complete a dungeon, return target creature card from your graveyard to the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
@@ -70,7 +70,7 @@ Create Undead — Whenever you complete a dungeon, return target creature card f
       <property name="Subtype" value="Dragon Barbarian" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Enrage — Whenever Vrondiss, Rage of Ancients is dealt damage, you may create a 5/4 red and green Dragon Spirit creature token with "When this creature deals damage, sacrifice it."
-Whenever you roll one or more dice, you may have Vrondiss, Rage of Ancients deal 1 damage to itself.</property>
+Whenever you roll one or more dice, you may have Vrondiss deal 1 damage to itself.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Svetlin Velinov" />
@@ -136,7 +136,7 @@ Whenever Immovable Rod becomes untapped, venture into the dungeon.
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Enchant creature you control
-When Mantle of the Ancients enters the battlefield, return any number of target Aura and/or Equipment cards from your graveyard to the battlefield attached to enchanted creature.
+When Mantle of the Ancients enters the battlefield, return any number of target Aura and/or Equipment cards that could be attached to enchanted creature from your graveyard to the battlefield attached to enchanted creature.
 Enchanted creature gets +1/+1 for each Aura and Equipment attached to it.</property>
       <property name="Artist" value="Denman Rooke" />
       <property name="Number" value="008" />
@@ -146,7 +146,7 @@ Enchanted creature gets +1/+1 for each Aura and Equipment attached to it.</prope
         <s value="5">{5}</s>
         <s value="W">{W}</s>
       </property>
-      <property name="CMC" value="5" />
+      <property name="CMC" value="6" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
@@ -169,7 +169,7 @@ Whenever Radiant Solar or another nontoken creature enters the battlefield under
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Roll a d20 and add the number of creature cards in your graveyard that were put there from the battlefield this turn.
-1-14 | Return all creature cards in your graveyard that were put there from the battlefield this turn to your hand.
+1—14 | Return all creature cards in your graveyard that were put there from the battlefield this turn to your hand.
 15+ | Return those cards from your graveyard to the battlefield.</property>
       <property name="Artist" value="Caio Monteiro" />
       <property name="Number" value="010" />
@@ -185,7 +185,7 @@ Whenever Radiant Solar or another nontoken creature enters the battlefield under
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Equipped creature gets +0/+3.
-Astral Projection — <s value="1">{1}</s><s value="W">{W}</s>: Equipped creature phases out. (Treat it and anything attached to it as though they don't exist until until its controller's next turn.)
+Astral Projection — <s value="1">{1}</s><s value="W">{W}</s>: Equipped creature phases out. (Treat it and anything attached to it as though they don't exist until its controller's next turn.)
 Equip <s value="1">{1}</s></property>
       <property name="Artist" value="Olena Richards" />
       <property name="Number" value="011" />
@@ -214,7 +214,7 @@ Whenever you sacrifice a Clue, venture into the dungeon. (Enter the first room o
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Roll two d6 and choose on result. Destroy each creature with power greater than or equal to that result. Then create a number of 2/2 white Knight creature tokens with vigilance equal to the other result.</property>
+      <property name="Rules">Roll two d6 and choose one result. Destroy each creature with power greater than or equal to that result. Then create a number of 2/2 white Knight creature tokens with vigilance equal to the other result.</property>
       <property name="Artist" value="Antonio José Manzanedo" />
       <property name="Number" value="013" />
     </card>
@@ -244,7 +244,7 @@ Whenever you sacrifice a Clue, venture into the dungeon. (Enter the first room o
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Roll a d20 and add the number of cards in your hand.
-1-14 | Draw X cards.
+1—14 | Draw X cards.
 15+ | Scry X, then draw X cards.</property>
       <property name="Artist" value="Lie Setiawan" />
       <property name="Number" value="015" />
@@ -293,7 +293,7 @@ Perfect Illumination — Whenever you roll a die's highest natural result, draw 
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flash
 When Phantom Steed enters the battlefield, exile another target creature you control until Phantom Steed leaves the battlefield.
-Whenever Phantom Steed attacks, create a tapped and attacking token that's a copy of the exiled creature, except it's an Illusion in addition to its other types. Sacrifice that token at end of combat.</property>
+Whenever Phantom Steed attacks, create a tapped and attacking token that's a copy of the exiled card, except it's an Illusion in addition to its other types. Sacrifice that token at end of combat.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Brian Valeza" />
@@ -353,8 +353,8 @@ Equip <s value="1">{1}</s></property>
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Each player sacrifices a nontoken creature. Roll a d20 and add the toughness of the creature you sacrificed this way.
-1-14 | Return a creature card put into a graveyard this way to the battlefield under your control.
-15+ | Return up to two creature cards put into a graveyard this way to the battlefield under your control</property>
+1—14 | Return a creature card put into a graveyard this way to the battlefield under your control.
+15+ | Return up to two creature cards put into graveyards this way to the battlefield under your control.</property>
       <property name="Artist" value="Randy Vargas" />
       <property name="Number" value="022" />
     </card>
@@ -466,8 +466,8 @@ Equip <s value="3">{3}</s></property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Cast this spell only before combat or during combat before blockers are declared.
 Roll two d20 and ignore the lower roll.
-1-14 | Choose any number of creatures. They block this turn if able.
-15-20 | You choose which creatures block this turn and how those creatures block.</property>
+1—14 | Choose any number of creatures. They block this turn if able.
+15—20 | You choose which creatures block this turn and how those creatures block.</property>
       <property name="Artist" value="Caio Monteiro" />
       <property name="Number" value="029" />
     </card>
@@ -518,7 +518,7 @@ Equip <s value="2">{2}</s><s value="R">{R}</s></property>
       <property name="Subtype" value="Aura Curse" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Enchant player
-Whenever enchanted player casts a noncreature spell, roll a d6. Maddening Hex deals damage to that player equal to the result. Then attaching Maddening Hex to another one of your opponents chosen at random.</property>
+Whenever enchanted player casts a noncreature spell, roll a d6. Maddening Hex deals damage to that player equal to the result. Then attach Maddening Hex to another one of your opponents chosen at random.</property>
       <property name="Artist" value="Bryan Sola" />
       <property name="Number" value="032" />
     </card>
@@ -561,8 +561,8 @@ During each player's turn, that player may play a land or cast a spell from amon
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spirit Dragon" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Flyingh
-When Vengeful Ancestor enters the battlefield or attacks, goad target creature. (Until your next turn, that creature attacks each combat if able and attacks a player other than you if able.)
+      <property name="Rules">Flying
+Whenever Vengeful Ancestor enters the battlefield or attacks, goad target creature. (Until your next turn, that creature attacks each combat if able and attacks a player other than you if able.)
 Whenever a goaded creature attacks, it deals 1 damage to its controller.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
@@ -579,7 +579,7 @@ Whenever a goaded creature attacks, it deals 1 damage to its controller.</proper
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Orc Shaman" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">The first spell you cast from exile each turn has cascade. (When you cast your first spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
+      <property name="Rules">The first spell you cast from exile each turn has cascade. (When you cast your first spell from exile, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Aaron J. Riley" />
@@ -611,7 +611,7 @@ Whenever a goaded creature attacks, it deals 1 damage to its controller.</proper
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Equipped creature has base power and toughness 10/10.
-Equip <s value="10">{10}</s>. This ability costs <s value="X">{X}</s> less to activate where X is the power of the creature it targets.</property>
+Equip <s value="10">{10}</s>. This ability costs <s value="X">{X}</s> less to activate, where X is the power of the creature it targets.</property>
       <property name="Artist" value="Viko Menezes" />
       <property name="Number" value="038" />
     </card>
@@ -644,7 +644,7 @@ Equip <s value="10">{10}</s>. This ability costs <s value="X">{X}</s> less to ac
       <property name="Rules">Flash
 Enchant creature
 Enchanted creature gets +3/+3.
-Enchanted creature's controller may have it assign combat damage as though it weren't blocked.</property>
+Enchanted creature's controller may have it assign its combat damage as though it weren't blocked.</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="040" />
     </card>
@@ -679,7 +679,7 @@ Ward <s value="4">{4}</s> (Whenever this creature becomes the target of a spell 
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Choose up to two target permanent cards in your graveyard. Roll a d20 and add the total mana value of those cards.
-1-14 | Return those cards to your hand.
+1—14 | Return those cards to your hand.
 15+ | Return those cards to your hand. You gain life equal to their total mana value.</property>
       <property name="Artist" value="Lie Setiawan" />
       <property name="Number" value="042" />
@@ -773,7 +773,7 @@ Rebound (If you cast this spell from your hand, exile it as it resolves. At the 
       <property name="Color" value="Multicolor Black Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Exile target creature. Until the end of your next turn, you my cast that card and you may spend mana as though it were mana of any color to cast that spell.</property>
+      <property name="Rules">Exile target creature. Until the end of your next turn, you may cast that card and you may spend mana as though it were mana of any color to cast that spell.</property>
       <property name="Artist" value="Olena Richards" />
       <property name="Number" value="048" />
     </card>
@@ -961,8 +961,8 @@ Berserk — When Clay Golem becomes monstrous, destroy target permanent.</proper
       <property name="Rules">
         <s value="T">{T}</s>, Remove a component counter from Component Pouch: Add two mana of different colors.
 <s value="T">{T}</s>: Roll a d20.
-1-9 | Put a component counter on Component Pouch.
-10-20 | Put two component counters on Component Pouch.</property>
+1—9 | Put a component counter on Component Pouch.
+10—20 | Put two component counters on Component Pouch.</property>
       <property name="Artist" value="Chris Seaman" />
       <property name="Number" value="059" />
     </card>
@@ -1003,7 +1003,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="5">{5}</s>, <s value="T">{T}</s>, Exile Underdark Rift: Roll a d10. Put a target artifact, creature, or planeswalker into its owner's library just beneath the top X cards of that library, where X is the result. Activate only as a sorcery.</property>
+<s value="5">{5}</s>, <s value="T">{T}</s>, Exile Underdark Rift: Roll a d10. Put target artifact, creature, or planeswalker into its owner's library just beneath the top X cards of that library, where X is the result. Activate only as a sorcery.</property>
       <property name="Artist" value="Chris Ostrowski" />
       <property name="Number" value="062" />
       <property name="Flags" value="C" />
@@ -1477,7 +1477,7 @@ Whenever another creature dies, you may draw a card. If you do, discard a card.<
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
 Discard a card: Prognostic Sphinx gains hexproof until end of turn. Tap it.
-Whenever Prognostic Sphinx attacks, scry 3. (Look at the top three cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)</property>
+Whenever Prognostic Sphinx attacks, scry 3.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Steve Prescott" />
@@ -2229,7 +2229,7 @@ Draw a card.</property>
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dragon" />
-      <property name="Rarity" value="Rare" />
+      <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Flying
 Whenever Scourge of Valkas or another Dragon enters the battlefield under your control, it deals X damage to any target, where X is the number of Dragons you control.
 <s value="R">{R}</s>: Scourge of Valkas gets +1/+0 until end of turn.</property>
@@ -2772,7 +2772,7 @@ Ferocious — You gain 4 life for each creature you control with power 4 or grea
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
-      <property name="Rarity" value="Uncommon" />
+      <property name="Rarity" value="Common" />
       <property name="Rules">Enchant Forest
 As Utopia Sprawl enters the battlefield, choose a color.
 Whenever enchanted Forest is tapped for mana, its controller adds an additional one mana of the chosen color.</property>
@@ -3323,7 +3323,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="CMC" value="2" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
-      <property name="Rarity" value="Uncommon" />
+      <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="R">{R}</s><s value="G">{G}</s>.</property>
       <property name="Artist" value="Efrem Palacios" />
@@ -4199,7 +4199,7 @@ Whenever Immovable Rod becomes untapped, venture into the dungeon.
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Enchant creature you control
-When Mantle of the Ancients enters the battlefield, return any number of target Aura and/or Equipment cards from your graveyard to the battlefield attached to enchanted creature.
+When Mantle of the Ancients enters the battlefield, return any number of target Aura and/or Equipment cards that could be attached to enchanted creature from your graveyard to the battlefield attached to enchanted creature.
 Enchanted creature gets +1/+1 for each Aura and Equipment attached to it.</property>
       <property name="Artist" value="Denman Rooke" />
       <property name="Number" value="277" />
@@ -4209,7 +4209,7 @@ Enchanted creature gets +1/+1 for each Aura and Equipment attached to it.</prope
         <s value="5">{5}</s>
         <s value="W">{W}</s>
       </property>
-      <property name="CMC" value="5" />
+      <property name="CMC" value="6" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
@@ -4232,7 +4232,7 @@ Whenever Radiant Solar or another nontoken creature enters the battlefield under
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Roll a d20 and add the number of creature cards in your graveyard that were put there from the battlefield this turn.
-1-14 | Return all creature cards in your graveyard that were put there from the battlefield this turn to your hand.
+1—14 | Return all creature cards in your graveyard that were put there from the battlefield this turn to your hand.
 15+ | Return those cards from your graveyard to the battlefield.</property>
       <property name="Artist" value="Caio Monteiro" />
       <property name="Number" value="279" />
@@ -4248,7 +4248,7 @@ Whenever Radiant Solar or another nontoken creature enters the battlefield under
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Equipped creature gets +0/+3.
-Astral Projection — <s value="1">{1}</s><s value="W">{W}</s>: Equipped creature phases out. (Treat it and anything attached to it as though they don't exist until until its controller's next turn.)
+Astral Projection — <s value="1">{1}</s><s value="W">{W}</s>: Equipped creature phases out. (Treat it and anything attached to it as though they don't exist until its controller's next turn.)
 Equip <s value="1">{1}</s></property>
       <property name="Artist" value="Olena Richards" />
       <property name="Number" value="280" />
@@ -4277,7 +4277,7 @@ Whenever you sacrifice a Clue, venture into the dungeon. (Enter the first room o
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Roll two d6 and choose on result. Destroy each creature with power greater than or equal to that result. Then create a number of 2/2 white Knight creature tokens with vigilance equal to the other result.</property>
+      <property name="Rules">Roll two d6 and choose one result. Destroy each creature with power greater than or equal to that result. Then create a number of 2/2 white Knight creature tokens with vigilance equal to the other result.</property>
       <property name="Artist" value="Antonio José Manzanedo" />
       <property name="Number" value="282" />
     </card>
@@ -4307,7 +4307,7 @@ Whenever you sacrifice a Clue, venture into the dungeon. (Enter the first room o
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Roll a d20 and add the number of cards in your hand.
-1-14 | Draw X cards.
+1—14 | Draw X cards.
 15+ | Scry X, then draw X cards.</property>
       <property name="Artist" value="Lie Setiawan" />
       <property name="Number" value="284" />
@@ -4356,7 +4356,7 @@ Perfect Illumination — Whenever you roll a die's highest natural result, draw 
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flash
 When Phantom Steed enters the battlefield, exile another target creature you control until Phantom Steed leaves the battlefield.
-Whenever Phantom Steed attacks, create a tapped and attacking token that's a copy of the exiled creature, except it's an Illusion in addition to its other types. Sacrifice that token at end of combat.</property>
+Whenever Phantom Steed attacks, create a tapped and attacking token that's a copy of the exiled card, except it's an Illusion in addition to its other types. Sacrifice that token at end of combat.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Brian Valeza" />
@@ -4416,8 +4416,8 @@ Equip <s value="1">{1}</s></property>
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Each player sacrifices a nontoken creature. Roll a d20 and add the toughness of the creature you sacrificed this way.
-1-14 | Return a creature card put into a graveyard this way to the battlefield under your control.
-15+ | Return up to two creature cards put into a graveyard this way to the battlefield under your control</property>
+1—14 | Return a creature card put into a graveyard this way to the battlefield under your control.
+15+ | Return up to two creature cards put into graveyards this way to the battlefield under your control.</property>
       <property name="Artist" value="Randy Vargas" />
       <property name="Number" value="291" />
     </card>
@@ -4529,8 +4529,8 @@ Equip <s value="3">{3}</s></property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Cast this spell only before combat or during combat before blockers are declared.
 Roll two d20 and ignore the lower roll.
-1-14 | Choose any number of creatures. They block this turn if able.
-15-20 | You choose which creatures block this turn and how those creatures block.</property>
+1—14 | Choose any number of creatures. They block this turn if able.
+15—20 | You choose which creatures block this turn and how those creatures block.</property>
       <property name="Artist" value="Caio Monteiro" />
       <property name="Number" value="298" />
     </card>
@@ -4581,7 +4581,7 @@ Equip <s value="2">{2}</s><s value="R">{R}</s></property>
       <property name="Subtype" value="Aura Curse" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Enchant player
-Whenever enchanted player casts a noncreature spell, roll a d6. Maddening Hex deals damage to that player equal to the result. Then attaching Maddening Hex to another one of your opponents chosen at random.</property>
+Whenever enchanted player casts a noncreature spell, roll a d6. Maddening Hex deals damage to that player equal to the result. Then attach Maddening Hex to another one of your opponents chosen at random.</property>
       <property name="Artist" value="Bryan Sola" />
       <property name="Number" value="301" />
     </card>
@@ -4624,8 +4624,8 @@ During each player's turn, that player may play a land or cast a spell from amon
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spirit Dragon" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Flyingh
-When Vengeful Ancestor enters the battlefield or attacks, goad target creature. (Until your next turn, that creature attacks each combat if able and attacks a player other than you if able.)
+      <property name="Rules">Flying
+Whenever Vengeful Ancestor enters the battlefield or attacks, goad target creature. (Until your next turn, that creature attacks each combat if able and attacks a player other than you if able.)
 Whenever a goaded creature attacks, it deals 1 damage to its controller.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
@@ -4642,7 +4642,7 @@ Whenever a goaded creature attacks, it deals 1 damage to its controller.</proper
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Orc Shaman" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">The first spell you cast from exile each turn has cascade. (When you cast your first spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
+      <property name="Rules">The first spell you cast from exile each turn has cascade. (When you cast your first spell from exile, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Aaron J. Riley" />
@@ -4674,7 +4674,7 @@ Whenever a goaded creature attacks, it deals 1 damage to its controller.</proper
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Equipped creature has base power and toughness 10/10.
-Equip <s value="10">{10}</s>. This ability costs <s value="X">{X}</s> less to activate where X is the power of the creature it targets.</property>
+Equip <s value="10">{10}</s>. This ability costs <s value="X">{X}</s> less to activate, where X is the power of the creature it targets.</property>
       <property name="Artist" value="Viko Menezes" />
       <property name="Number" value="307" />
     </card>
@@ -4707,7 +4707,7 @@ Equip <s value="10">{10}</s>. This ability costs <s value="X">{X}</s> less to ac
       <property name="Rules">Flash
 Enchant creature
 Enchanted creature gets +3/+3.
-Enchanted creature's controller may have it assign combat damage as though it weren't blocked.</property>
+Enchanted creature's controller may have it assign its combat damage as though it weren't blocked.</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="309" />
     </card>
@@ -4742,7 +4742,7 @@ Ward <s value="4">{4}</s> (Whenever this creature becomes the target of a spell 
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Choose up to two target permanent cards in your graveyard. Roll a d20 and add the total mana value of those cards.
-1-14 | Return those cards to your hand.
+1—14 | Return those cards to your hand.
 15+ | Return those cards to your hand. You gain life equal to their total mana value.</property>
       <property name="Artist" value="Lie Setiawan" />
       <property name="Number" value="311" />
@@ -4830,11 +4830,11 @@ Rebound (If you cast this spell from your hand, exile it as it resolves. At the 
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="G">{G}</s>
-        <s value="U">{U}</s>
         <s value="W">{W}</s>
+        <s value="U">{U}</s>
       </property>
       <property name="CMC" value="4" />
-      <property name="Color" value="Multicolor Green Blue White" />
+      <property name="Color" value="Multicolor Green White Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elf Knight" />
       <property name="Rarity" value="Mythic Rare" />
@@ -4856,7 +4856,7 @@ You may cast Aura and Equipment spells from the top of your library. When you ca
       <property name="Color" value="Multicolor Black Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Exile target creature. Until the end of your next turn, you my cast that card and you may spend mana as though it were mana of any color to cast that spell.</property>
+      <property name="Rules">Exile target creature. Until the end of your next turn, you may cast that card and you may spend mana as though it were mana of any color to cast that spell.</property>
       <property name="Artist" value="Olena Richards" />
       <property name="Number" value="318" />
     </card>
@@ -4906,11 +4906,11 @@ Whenever Klauth, Unrivaled Ancient attacks, add X mana in any combination of col
       <property name="CMC" value="3" />
       <property name="Color" value="Multicolor Red Green" />
       <property name="Type" value="Instant" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Rare" />
       <property name="Rules">Choose one. If you control a commander as you cast this spell, you may choose both.
 • Breathe Flame — Klauth's Will deals X damage to each creature without flying.
 • Smash Relics — Destroy up to X target artifacts and/or enchantments.</property>
-      <property name="Artist" value="" />
+      <property name="Artist" value="Olivier Bernard" />
       <property name="Number" value="321" />
     </card>
     <card name="Midnight Pathlighter" id="35f06354-f2ea-48c3-bcbc-b5555f83787e">
@@ -4993,7 +4993,7 @@ Pact Boon — Whenever you play a card from exile, create a Treasure token.</pro
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever one or more creature cards are put into your graveyard from anywhere, venture into the dungeon. This ability triggers only once each turn. (Enter the first room or advance to the next room.)
+      <property name="Rules">Whenever one or more creature cards are put into your graveyard from anywhere, venture into the dungeon. This ability triggers only once each turn. (To venture into the dungeon, enter the first room or advance to the next room.)
 Create Undead — Whenever you complete a dungeon, return target creature card from your graveyard to the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
@@ -5034,7 +5034,7 @@ Whenever Storvald enters the battlefield or attacks, choose one or both —
       <property name="Subtype" value="Dragon Barbarian" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Enrage — Whenever Vrondiss, Rage of Ancients is dealt damage, you may create a 5/4 red and green Dragon Spirit creature token with "When this creature deals damage, sacrifice it."
-Whenever you roll one or more dice, you may have Vrondiss, Rage of Ancients deal 1 damage to itself.</property>
+Whenever you roll one or more dice, you may have Vrondiss deal 1 damage to itself.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Svetlin Velinov" />
