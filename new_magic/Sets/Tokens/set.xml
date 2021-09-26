@@ -297,6 +297,11 @@
             <property name="Artist" value="Wayne Reynolds" />
             <property name="Number" value="7" />
             <property name="Flags" value="TM19"/>
+            <alternate name="Bat" type="1">
+                <property name="Artist" value="Jodie Muir" />
+                <property name="Number" value="4" />
+                <property name="Flags" value="TMID" />
+            </alternate>
         </card>
         <card name="Bat" id="11645243-4e84-4759-9f9b-1b33809204c1">
             <property name="Color" value="Black" />
@@ -484,6 +489,11 @@
                 <property name="Number" value="9" />
                 <property name="Flags" value="TMH2"/>
             </alternate>
+            <alternate name="Beast" type="5">
+                <property name="Artist" value="Piotr Foksowicz" />
+                <property name="Number" value="8" />
+                <property name="Flags" value="TMID" />
+            </alternate>
         </card>
         <card name="Beast" id="87c369dd-05f6-43e9-add3-fd031bd76b7b">
             <property name="Color" value="Multicolor Red Green" />
@@ -583,6 +593,19 @@
                 <property name="Number" value="2" />
                 <property name="Flags" value="TM21"/>
             </alternate>
+        </card>
+        <card name="Bird" id="337fe1b7-952d-4974-96df-d5a53c9e17f8">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Bird" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying
+			This creature can block only creatures with flying.</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Josu Hernaiz" />
+            <property name="Number" value="3" />
+            <property name="Flags" value="TMID"/>
         </card>
         <card name="Bird" id="7caad070-0517-4a14-b866-92917ae0af9d">
             <property name="Color" value="White" />
@@ -1180,6 +1203,11 @@
                 <property name="Number" value="16" />
                 <property name="Flags" value="TAFC"/>
             </alternate>
+            <alternate name="Clue" type="10">
+                <property name="Artist" value="Campbell White" />
+                <property name="Number" value="16" />
+                <property name="Flags" value="TMID"/>
+            </alternate>
         </card>
         <card name="Construct" id="e7ef7715-68bd-4aa5-872f-72405170d522">
             <property name="Color" value="Colorless" />
@@ -1404,6 +1432,11 @@
                 <property name="Artist" value="Josh Hass" />
                 <property name="Number" value="11" />
                 <property name="Flags" value="TAFR"/>
+            </alternate>
+            <alternate name="Devil" type="3">
+                <property name="Artist" value="Campbell White" />
+                <property name="Number" value="6" />
+                <property name="Flags" value="TMID"/>
             </alternate>
         </card>
         <card name="Dinosaur" id="72e5555c-d6b9-4ba1-8ca3-775424a5fa1d">
@@ -1768,7 +1801,7 @@
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Eldrazi Scion" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Sacrifice this creature: Add <s value="C">{C}</s> to your mana pool.</property>
+            <property name="Rules">Sacrifice this creature: Add <s value="C">{C}</s>.</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="Izzy" />
@@ -1820,7 +1853,7 @@
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Eldrazi Spawn" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Sacrifice this creature: Add <s value="C">{C}</s> to your mana pool.</property>
+            <property name="Rules">Sacrifice this creature: Add <s value="C">{C}</s>.</property>
             <property name="Power" value="0" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="Aleksi Briclot" />
@@ -2068,6 +2101,19 @@
             <property name="Artist" value="Jung Park" />
             <property name="Number" value="2" />
             <property name="Flags" value="TROE"/>
+        </card>
+        <card name="Elemental" id="734016c0-cd4a-47bb-97ab-10149435b259">
+            <property name="Color" value="Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Elemental" />
+            <property name="Rarity" value="Token" />
+			<property name="Rules">Trample
+			This creature’s power and toughness are each equal to the number of instant and sorcery cards in your graveyard plus the number of cards with flashback you own in exile.</property>
+            <property name="Power" value="*" />
+            <property name="Toughness" value="*" />
+            <property name="Artist" value="Deruchenko Alexander" />
+            <property name="Number" value="7" />
+            <property name="Flags" value="TMID"/>
         </card>
         <card name="Elemental" id="ca1dbff6-ef8e-40f1-b2e0-3a5a4d907de4">
             <property name="Color" value="Green" />
@@ -3408,6 +3454,11 @@
                 <property name="Number" value="4" />
                 <property name="Flags" value="TC20" />
             </alternate>
+            <alternate name="Human" type="7">
+                <property name="Artist" value="Kari Christensen" />
+                <property name="Number" value="1" />
+                <property name="Flags" value="TMID" />
+            </alternate>
         </card>
         <card name="Human" id="f05acb33-16f2-41a4-acb5-dad4e6659b90">
             <property name="Color" value="Red" />
@@ -3758,6 +3809,17 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Adrian Smith" />
             <property name="Number" value="4" />
             <property name="Flags" value="TSOM"/>
+        </card>
+        <card name="Insect" id="cfd7aa65-17a7-4c45-8abe-b380e528d789">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Insect" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Nicholas Gregory" />
+            <property name="Number" value="9" />
+            <property name="Flags" value="TMID"/>
         </card>
         <card name="Insect" id="7e482343-9720-4a11-a3e2-baa89713e26c">
             <property name="Color" value="Green" />
@@ -4434,6 +4496,18 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Nils Hamm" />
             <property name="Number" value="8" />
             <property name="Flags" value="TSOI"/>
+        </card>
+        <card name="Ooze" id="b7eae58e-3056-4872-8012-f9685ed4887e">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Ooze" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">This creature’s power is equal to the number of card types among cards in your graveyard and its toughness is equal to that number plus 1.</property>
+            <property name="Power" value="*" />
+            <property name="Toughness" value="*+1" />
+            <property name="Artist" value="Izzy" />
+            <property name="Number" value="10" />
+            <property name="Flags" value="TMID"/>
         </card>
         <card name="Ooze" id="cae92cb4-5917-473a-932b-f6db91a6eebf">
             <property name="Color" value="Green" />
@@ -5536,6 +5610,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
                 <property name="Number" value="10" />
                 <property name="Flags" value="TTHB"/>
             </alternate>
+            <alternate name="Spider" type="4">
+                <property name="Artist" value="Slawomir Maniak" />
+                <property name="Number" value="11" />
+                <property name="Flags" value="TMID"/>
+            </alternate>
         </card>
         <card name="Spider" id="f99bdf70-8d00-46a2-9534-f720715f0138">
             <property name="Color" value="Green" />
@@ -5625,6 +5704,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
                 <property name="Artist" value="Anastasia Ovchinnikova" />
                 <property name="Number" value="4" />
                 <property name="Flags" value="TKHM"/>
+            </alternate>
+            <alternate name="Spirit" type="12">
+                <property name="Artist" value="Kim Sokol" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="TMID"/>
             </alternate>
         </card>
         <card name="Spirit" id="716114fc-cac6-43cc-a94e-17dd9e272b71">
@@ -6076,6 +6160,19 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Number" value="25" />
             <property name="Flags" value="TC14"/>
         </card>
+        <card name="Treefolk" id="a29daa23-1f5e-4a0e-86fd-5ba31305aae3">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Treefolk" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Reach
+			This creature’s power and toughness are each equal to the number of lands you control.</property>
+            <property name="Power" value="*" />
+            <property name="Toughness" value="*" />
+            <property name="Artist" value="Yeong-Hao Han" />
+            <property name="Number" value="12" />
+            <property name="Flags" value="TMID"/>
+        </card>
         <card name="Treefolk Shaman" id="640494d9-76e5-440e-88a5-c45bcc036398">
             <property name="Color" value="Green" />
             <property name="Type" value="Creature" />
@@ -6248,6 +6345,18 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Kekai Kotaki" />
             <property name="Number" value="6" />
             <property name="Flags" value="TZEN"/>
+        </card>
+        <card name="Vampire" id="7bd2e57b-e959-4f31-8dc7-79c86c0bb019">
+            <property name="Color" value="Multicolor Black Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Vampire" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Trample, lifelink, haste</property>
+            <property name="Power" value="3" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Bastien L. Deharme" />
+            <property name="Number" value="14" />
+            <property name="Flags" value="TMID"/>
         </card>
         <card name="Vampire Knight" id="6c337ac0-00de-4f6b-b48e-ee0d5a8d157f">
             <property name="Color" value="Black" />
@@ -6573,6 +6682,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
                 <property name="Number" value="19" />
                 <property name="Flags" value="T2XM"/>
             </alternate>
+            <alternate name="Wolf" type="12">
+                <property name="Artist" value="Andrea Radeck" />
+                <property name="Number" value="13" />
+                <property name="Flags" value="TMID"/>
+            </alternate>
         </card>
         <card name="Wolf" id="3beed264-ae1d-46b7-8693-348fddaeb057">
             <property name="Color" value="Multicolor Black Green" />
@@ -6855,6 +6969,18 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
                 <property name="Flags" value="TAFR"/>
             </alternate>
         </card>
+        <card name="Zombie" id="e587fbd6-f0fa-4918-83d8-9eb8091bd0be">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Zombie" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Decayed <i>(This creature can’t block. When it attacks, sacrifice it at end of combat.)</i></property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Sam White" />
+            <property name="Number" value="5" />
+            <property name="Flags" value="TMID"/>
+        </card>
         <card name="Zombie" id="ebc67e29-00a2-4a72-806b-915fa5f9d75e">
             <property name="Color" value="Black" />
             <property name="Type" value="Enchantment Creature" />
@@ -6876,6 +7002,23 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Dave Kendall" />
             <property name="Number" value="11" />
             <property name="Flags" value="TC14"/>
+            <alternate name="Zombie" type="1">
+                <property name="Artist" value="Dave Kendall" />
+                <property name="Number" value="4" />
+                <property name="Flags" value="TMIC"/>
+            </alternate>
+        </card>
+        <card name="Zombie" id="b88226b6-f9c7-436f-bc7e-07d901cc54db">
+            <property name="Color" value="Multicolor Blue Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Zombie" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Menace <i>(This creature can’t be blocked except by two or more creatures.)</i></property>
+            <property name="Power" value="*" />
+            <property name="Toughness" value="*" />
+            <property name="Artist" value="Ravenna Tran" />
+            <property name="Number" value="15" />
+            <property name="Flags" value="TMID"/>
         </card>
         <card name="Zombie" id="5de01d24-b85f-4ca2-8868-d0a2adec7904">
             <property name="Color" value="Black" />
@@ -6992,6 +7135,24 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Volkan Baga" />
             <property name="Number" value="16" />
             <property name="Flags" value="TMMA"/>
+        </card>
+        <card name="Day" id="dc01f0cc-657c-4b95-8844-ae8fc135f896">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">(If it becomes day or night or if a daybound permanent enters the battlefield, track day/night for the rest of the game.)
+			As it becomes day, transform all nightbound permanents.
+			If a player casts no spells during their own turn, it becomes night next turn.</property>
+            <property name="Artist" value="Johan Grenier" />
+            <property name="Number" value="19" />
+            <property name="Flags" value="TMID"/>
+			<alternate name="Night" type="transform">
+				<property name="Rules">As it becomes night, transform all daybound permanents.
+				Permanents enter the battlefield nightbound.
+				If a player casts at least two spells during their own turn, it becomes day next turn.</property>
+				<property name="Number" value="19" />
+				<property name="Flags" value="TMID"/>
+			</alternate>
         </card>
         <card name="Koth's Emblem" id="38365196-9a15-4f78-a525-d01a80f94ace">
             <property name="Color" value="Colorless" />
@@ -7197,6 +7358,17 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Tyler Jacobson" />
             <property name="Number" value="34" />
             <property name="Flags" value="TC14"/>
+        </card>
+        <card name="Teferi's Emblem" id="39eb353f-5d4d-4ecd-9a5a-90a12bdf1be4">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Subtype" value="Teferi, Who Slows the Sunset" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Untap all permanents you control during each opponent’s untap step.
+			You draw a card during each opponent’s draw step.</property>
+            <property name="Artist" value="Heonhwa Choe" />
+            <property name="Number" value="17" />
+            <property name="Flags" value="TMID"/>
         </card>
         <card name="Ob Nixilis's Emblem" id="1622a22a-a22a-4a47-8969-eef8632bde23">
             <property name="Color" value="Colorless" />
@@ -7495,6 +7667,16 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Chase Stone" />
             <property name="Number" value="21" />
             <property name="Flags" value="TMH1"/>
+        </card>
+        <card name="Wrenn's Emblem" id="04e23d4d-8871-422c-bccd-cb1b5bd18b0b">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Subtype" value="Wrenn and Seven" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">You have no maximum hand size.</property>
+            <property name="Artist" value="Heonhwa Choe" />
+            <property name="Number" value="18" />
+            <property name="Flags" value="TMID"/>
         </card>
         <card name="Mu Yanling's Emblem" id="b171c993-4248-439e-8ef2-5d1b6dfeb757">
             <property name="Color" value="Colorless" />

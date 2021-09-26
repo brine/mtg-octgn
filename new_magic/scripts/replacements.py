@@ -149,6 +149,7 @@ tokenTypes = {
     'beast66c': ('6 / 6 Colorless Beast', '964d7d12-9627-4785-96f2-2ed371d7f51c'),
     'bird11w': ('1 / 1 White Bird', 'c57d9dfe-6733-44d9-8789-7e1c5792ce5b'), #ZEN JUD CSP RTR DGM BNG C16 C20
     'bird11u': ('1 / 1 Blue Bird', 'a36eccd9-be44-4145-b56c-f5e2ef7921f9'), #EVE MPRINV
+    'bird11u2': ('1 / 1 Blue Bird', '337fe1b7-952d-4974-96df-d5a53c9e17f8'), #only block flyers
     'bird11m': ('1 / 1 Multicolor White Blue Bird', '79655e70-589f-4523-99e8-37b9ca6a19c3'),
     'bird22u': ('2 / 2 Blue Bird', '39eb9a4b-ebd3-44f3-ad68-94d8fb1f37f0'),
     'bird22u2': ('2 / 2 Blue Bird', '3aab274b-f3e8-48f5-89f3-5886d7ff06cd'), #enchantment
@@ -242,6 +243,7 @@ tokenTypes = {
     'elemental71r': ('7 / 1 Red Elemental', '012da310-cd39-443f-915d-758f4bf9584a'),
     'elemental*1r': ('* / 1 Red Elemental', 'aa4f02ae-b4df-45e0-bb5e-db8f443799b0'),
     'elemental**r': ('* / * Red Elemental', '2492104c-bea7-4c69-a244-b9fc9885c6aa'),
+    'elemental**r2': ('* / * Red Elemental', '734016c0-cd4a-47bb-97ab-10149435b259'),
     'elemental22g': ('2 / 2 Green Elemental', 'ca1dbff6-ef8e-40f1-b2e0-3a5a4d907de4'),
     'elemental44g': ('4 / 4 Green Elemental', '3c1f93e6-dbd6-4ab8-9a7a-17ffe15a21a1'),
     'elemental53g': ('5 / 3 Green Elemental', 'cb75cd77-2074-4ee7-a4d5-5f71976472b7'),
@@ -350,6 +352,7 @@ tokenTypes = {
     'insect11g': ('1 / 1 Green Insect', '6cd95e82-f30e-4a06-8d9b-ed11d1c08ad0'), #M10 MPRONS SOI CN2
     'insect11g2': ('1 / 1 Green Insect', '3d2cc7f1-889e-44e6-adb5-9aaa1cf99e76'), #infect
     'insect11g3': ('1/1 Green Insect', '2bce1692-5bba-4c10-8e72-2f8c7107bca0'), #(flying deathtouch) M15 C20
+    'insect33g': ('3 / 3 Green Insect', 'cfd7aa65-17a7-4c45-8abe-b380e528d789'),
     'insect61g': ('6 / 1 Green Insect', '7e482343-9720-4a11-a3e2-baa89713e26c'),
     'insect11m': ('1 / 1 Multicolor Blue Red Insect', '5674320b-b499-459c-a8ca-4c9e3b398940'),
     'insect11m2': ('1 / 1 Multicolor Black Green Insect', '8a2cb2ab-314b-4430-a151-d5bd343f361f'),
@@ -403,6 +406,7 @@ tokenTypes = {
     'ooze22g2': ('2 / 2 Green Ooze', '4dd796ff-f543-440b-9c56-a5396c0b199a'), #RNA
     'ooze33g': ('3 / 3 Green Ooze', '9946764e-e901-46b2-8dd8-ae0ea89f9097'),
     'ooze**g': ('* / * Green Ooze', 'cae92cb4-5917-473a-932b-f6db91a6eebf'), #ALA ROE ISD RTR
+    'ooze**g2': ('* / * + 1 Green Ooze', 'b7eae58e-3056-4872-8012-f9685ed4887e'),
     'ox24w': ('2 / 4 White Ox', 'f2a9ff64-f9e9-48cf-ab85-91ab686c0ba7'), #M19
     'orb**u': ('* / * Blue Orb', '6ea11e66-4e5d-46ed-a6bb-473faa6fc8bc'),
     'pegasus11w': ('1 / 1 White Pegasus', '5d4c9390-eb5c-4aa2-be96-60023f56811e'), #UNG C14 C19
@@ -502,6 +506,7 @@ tokenTypes = {
     'tombspawn22b': ('2 / 2 Black Tombspawn', '5da0e2e6-b8b5-49b6-994f-c4835e8ef0f9'),
     'treasure': ('Treasure', '75b3fb90-b278-4634-bafc-29cee2468ae0'), #XLN XLN XLN XLN RNA M20
     'treefolk**g': ('* / * Green Treefolk', '4d654a81-324b-4f57-bf9b-65c372e0e424'),
+    'treefolk**g2': ('* / * Green Treefolk', 'a29daa23-1f5e-4a0e-86fd-5ba31305aae3'),
     'treefolkshaman25g': ('2 / 5 Green Treefolk Shaman', '640494d9-76e5-440e-88a5-c45bcc036398'), #MOR MMA
     'treefolkwarrior**g': ('* / * Green Treefolk Warrior', 'd5fc0edf-c35f-467f-b092-61993ba98d31'),
     'triskelavite11c': ('1 / 1 Colorless Triskelavite', 'fc10ee80-bee6-45da-a4c6-f55817043117'),
@@ -514,6 +519,7 @@ tokenTypes = {
     'vampire11b': ('1 / 1 Black Vampire', '9fba15b2-c215-4ed7-9659-d24e981b8d15'), #DKA
     'vampire22b': ('2 / 2 Black Vampire', '866e540a-db70-40f3-892a-2f7070f60742'),
     'vampire**b': ('* / * Black Vampire', 'baa92925-d00e-46fa-85b3-a80313f4eab5'),
+    'vampire31m': ('3 / 1 Multicolor Black Red Vampire', '7bd2e57b-e959-4f31-8dc7-79c86c0bb019'),
     'vampireknight11b': ('1 / 1 Black Vampire Knight', '6c337ac0-00de-4f6b-b48e-ee0d5a8d157f'),
     'vecna88b': ('8 / 8 Black Vecna', 'eade7890-d1a5-43dc-9ed8-152a2ed61e1e'),
     'voja22m': ('2 / 2 Multicolor Green White Voja', '776e6adf-b4a0-47a6-9fcf-85fb60b566c1'),
@@ -547,8 +553,10 @@ tokenTypes = {
     'wurm**g': ('* / * Green Wurm', '6c6cf231-531b-4273-a6e5-383c476ec1c7'),
     'zombie22b': ('2 / 2 Black Zombie', '456dd3a8-4c4c-400f-8902-94b731473fb4'), #ALA UNG MPRODY M11 MBS M12 ISD ISD ISD M15 KTK DTK OGW SOI EMN EMN M20 EMN CN2 AKH M19 RNA WAR M20 C19 THB C20
     'zombie22b2': ('2 / 2 Black Zombie', 'ebc67e29-00a2-4a72-806b-915fa5f9d75e'), #enchantment
+    'zombie22b3': ('2 / 2 Black Zombie', 'e587fbd6-f0fa-4918-83d8-9eb8091bd0be'), #decayed
     'zombie**u': ('* / * Blue Zombie', 'bcb88192-ce2f-4288-8799-c9264b38c78f'),
     'zombie**b': ('* / * Black Zombie', '5de01d24-b85f-4ca2-8868-d0a2adec7904'),
+    'zombie**m': ('* / * Multicolor Blue Black Zombie', 'b88226b6-f9c7-436f-bc7e-07d901cc54db'),
     'zombiearmy00b': ('0 / 0 Black Zombie Army', 'cd37a3f8-a28b-418e-acd6-9c8fc0e6a233'), #WAR WAR WAR
     'zombieberserker22b': ('2 / 2 Black Zombie Berserker', 'cfe4058e-666e-4846-88a9-b3d1d7647225'),
     'zombiehorror**b': ('* / * Black Zombie Horror', '5f80aca2-6de2-44ad-8e56-669ccd52276b'),
@@ -586,7 +594,8 @@ tokenTypes = {
     
     'dungeonofthemadmage': ("Dungeon of the Mad Mage", '498aa2b7-075e-4f39-9f61-f4180e42760d'),    
     'lostmineofphandelver': ("Lost Mine of Phandelver", '39c8e409-9a3f-411f-b394-9ab732d6a143'),    
-    'tombofannihilation': ("Tomb of Annihilation", 'dcca4c88-39a4-496f-af98-7fea07256c4d'),    
+    'tombofannihilation': ("Tomb of Annihilation", 'dcca4c88-39a4-496f-af98-7fea07256c4d'),
+    'daynight': ("Day // Night State", 'dc01f0cc-657c-4b95-8844-ae8fc135f896'),
     
     'ajaniemblem': ("Ajani's Emblem", '78832bbe-cba2-4008-a3ad-c729d22ae44b'),
     'ajaniemblem2': ("Ajani's Emblem", '3a030473-dcb7-48d9-b310-5b27a02311fe'), #M19
@@ -641,6 +650,7 @@ tokenTypes = {
     'tamiyoemblem2': ("Tamiyo's Emblem", '3c7ea890-96c6-47d2-b221-21c8278f2af4'), #Field Researcher
     'teferiemblem': ("Teferi's Emblem", '4863a0dc-9d01-49c1-a906-34730019eaef'),
     'teferiemblem2': ("Teferi's Emblem", 'f874b4ad-4306-41bc-bd6f-fe8a5b1b049a'),
+    'teferiemblem3': ("Teferi's Emblem", '39eb353f-5d4d-4ecd-9a5a-90a12bdf1be4'),
     'tezzeretemblem': ("Tezzeret's Emblem", '6a406eb1-7467-4e42-8ac0-c5e5cddfeb9a'),
     'tezzeretemblem2': ("Tezzeret's Emblem", 'cceaa03a-4120-496c-8d04-db4acceaf654'), #M19
     'tibaltemblem': ("Tibalt's Emblem", 'd5718fe2-ab0d-4486-b27f-ec0bfff20c57'),
@@ -650,5 +660,6 @@ tokenTypes = {
     'vraskaemblem': ("Vraska's Emblem", '70fbdf56-7ac7-48b5-81c6-de5b76968bd9'),
     'willemblem': ("Will's Emblem", '12bacd5f-089b-4247-8f33-863363d88b14'),
     'wrennemblem': ("Wrenn's Emblem", '61c1257b-7ac1-4c5a-9c42-885909ca65b9'),
+    'wrennemblem2': ("Wrenn's Emblem", '04e23d4d-8871-422c-bccd-cb1b5bd18b0b'),
     'zarielemblem': ("Zariel's Emblem", '441cfbc8-3796-40be-854f-f0dba852fc43')
 }

@@ -412,5 +412,8 @@ changelog = {
         ]),
     3060215: ("3.6.2.15", "September 11 2021", [
         "Added Innistrad Midnight Hunt (tokens coming soon)"
+        ]),
+    3060217: ("3.6.2.17", "September 25 2021", [
+        "Added Innistrad Midnight Hunt tokens, and fixed the booster algorithm for the draft set"
         ])
 }
