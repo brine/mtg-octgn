@@ -415,5 +415,8 @@ changelog = {
         ]),
     3060217: ("3.6.2.17", "September 25 2021", [
         "Added Innistrad Midnight Hunt tokens, and fixed the booster algorithm for the draft set"
+        ]),
+    3060218: ("3.6.2.18", "November 6 2021", [
+        "Added Crimson Vow + Commander, updated secret lairs"
         ])
 }
