@@ -441,7 +441,7 @@ def takeFromLibraryTopXShuffleRest(_group = None, _x = None, _y = None, count = 
 
     if shouldReveal:
         for c in dlg.list:
-            me.Library[c.index].isFaceUp = True ## c.isFaceUp doesn't work for cards in piles.
+            c.isFaceUp = True
         cardInfo = ', '.join("{}".format(c) for c in dlg.list)
     else:
         cardInfo = "{} card(s)".format(len(dlg.list))
