@@ -418,5 +418,8 @@ changelog = {
         ]),
     3060218: ("3.6.2.18", "November 6 2021", [
         "Added Crimson Vow + Commander, updated secret lairs"
+        ]),
+    3060220: ("3.6.2.20", "February 6 2022", [
+        "Added Kamigawa Neon Dynasty (full commander decks and tokens coming soon)"
         ])
 }
