@@ -421,5 +421,10 @@ changelog = {
         ]),
     3060220: ("3.6.2.20", "February 6 2022", [
         "Added Kamigawa Neon Dynasty (full commander decks and tokens coming soon)"
+        ]),
+    3060221: ("3.6.2.22", "March 26 2022", [
+        "Added GRN/RNA Guild Kits, updated secret lair sets",
+        "Unique JPN and Phyrexian language cards (i.e. mystical archives) added to sets",
+        "Some cleanup to older sets",
         ])
 }
