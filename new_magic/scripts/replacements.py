@@ -169,6 +169,7 @@ tokenTypes = {
     'caribou01w': ('0 / 1 White Caribou', '8b08856a-f460-4aca-b58f-15b14d4d87da'),
     'carnivore31r': ('3 / 1 Red Carnivore', 'de037a79-c519-4818-a3d4-425740f4683e'), #TMP EMA
     'cat11w': ('1 / 1 White Cat', 'dab18b2f-06a0-4ce2-8e8f-5090c397fe03'), #AKH M19 SLD SLD IKO
+    'cat11w2': ('1 / 1 White Cat', 'dab18b2f-06a0-4ce2-8e8f-5090c397fe03'),
     'catbird11w': ('1 / 1 White Cat Bird', '8f8f6d1d-b0a6-43d5-81b4-64e22f3d4a8a'),
     'cat11g': ('1 / 1 Green Cat', 'a6ae9b2c-b938-4cf4-8e3d-f55417a6a125'),
     'cat22g': ('2 / 2 Green Cat', 'b29e04d1-ae33-42cd-9749-1dea5c054a07'),
@@ -201,6 +202,7 @@ tokenTypes = {
     'construct**c': ('* / * Colorless Construct', 'c93bea45-2e84-441f-ada8-b6970ad23ffb'), #KLD KLD UST
     'copy': ('Copy', '2736e3d3-a2b6-4af6-a377-f7517da33a75'), 
     'crab03u': ('0 / 3 Blue Crab', 'b4aeebe7-825d-4bc6-a7ea-f3aa5692aead'), 
+    'demon33b': ('3 / 3 Black Demon', '09dc67fa-ca4d-45d5-b3a9-4af8b8287d4b'),
     'demon55b': ('5 / 5 Black Demon', '9b9aeb57-b37d-4a9e-9369-28997479f518'), #ISD AVR M20
     'demon66b': ('6 / 6 Black Demon', '98601612-a132-41ab-9f9b-9d7d085d6beb'),
     'demon**b': ('* / * Black Demon', 'd7f65953-cbe0-46ea-ad32-3646d0381c88'), #DDC CNS
@@ -330,7 +332,8 @@ tokenTypes = {
     'homunculus01u': ('0 / 1 Blue Homunculus', '813ee2b1-8b8f-4e9b-81d7-c6709a7664df'),
     'homunculus22u': ('2 / 2 Blue Homunculus', 'be838ce5-fbd6-46f5-b9c9-eaf7154fbda9'),
     'hornet11c': ('1 / 1 Colorless Hornet', '7b4f4c7b-ef2d-49f3-88f7-652f46cecabe'), #DDE STH
-    'horror33b': ('3 / 34 Black Horror', '150c2fe5-4068-45c1-95d9-f71dc30d368d'),
+    'horror11b': ('1 / 1 Black Horror', '692f6559-fb42-408a-b282-b14c35ea7173'),
+    'horror33b': ('3 / 3 Black Horror', '150c2fe5-4068-45c1-95d9-f71dc30d368d'),
     'horror44b': ('4 / 4 Black Horror', 'a0e12aaf-2667-4410-acf6-326647c2944d'),
     'horror11m': ('1/1 Multicolor Blue Black Horror', '1e601ccc-eb1d-4a0f-a626-08c741c8b1a3'),
     'horror**b': ('* / * Colorless Horror', '1c035033-b343-4050-a0f5-c15ed57760e8'),
@@ -358,6 +361,7 @@ tokenTypes = {
     'illusion11u2': ('1 / 1 Blue Illusion', '5b92ef55-f32b-498f-b240-6edca759e58d'),
     'illusion22u': ('2 / 2 Blue Illusion', 'fdd96bcf-75cc-477d-981a-b65e336623f5'),
     'illusion22u2': ('2 / 2 Blue Illusion', 'bb023250-dfde-4141-809d-930d5a85928c'), #XLN
+    'initiative': ('The Initiative', 'd486ec95-8c29-42d8-b614-2fab8734ee83'),
     'inkling21m': ('2 / 1 Multcolor White Black Inkling', '4495f827-3ec4-492f-9482-2e55b384573a'),
     'insect01b': ('0 / 1 Black Insect', '3fab8819-3c34-4652-8797-25debdd7c322'),
     'insect11b': ('1 / 1 Black Insect', '8363d27d-c64b-4f54-8377-b7612c29cbbd'),
@@ -424,13 +428,15 @@ tokenTypes = {
     'ooze**g': ('* / * Green Ooze', 'cae92cb4-5917-473a-932b-f6db91a6eebf'), #ALA ROE ISD RTR
     'ooze**g2': ('* / * + 1 Green Ooze', 'b7eae58e-3056-4872-8012-f9685ed4887e'),
     'ox24w': ('2 / 4 White Ox', 'f2a9ff64-f9e9-48cf-ab85-91ab686c0ba7'), #M19
+    'ox44g': ('4 / 4 Green Ox', '8a991516-f82d-494a-834d-e9a784e37fcd'),
     'orb**u': ('* / * Blue Orb', '6ea11e66-4e5d-46ed-a6bb-473faa6fc8bc'),
     'pegasus11w': ('1 / 1 White Pegasus', '5d4c9390-eb5c-4aa2-be96-60023f56811e'), #UNG C14 C19
     'pegasus22w': ('2 / 2 White Pegasus', '11d7a818-b292-4776-90ec-e56ebb31cdc0'),
     'pentavite11c': ('1 / 1 Colorless Pentavite', '40236e71-a22d-430a-a152-c33132c6bfae'),
     'pest11m': ('1 / 1 Multicolor Black Green Pest', '8835958a-a49c-4ff9-9727-bc557def3c1e'),
     'pest01c': ('0 / 1 Colorless Pest', 'b211942a-dac7-4202-8039-4caa1ea567e6'),
-    'pilot': ('1 / 1 White Pilot', 'bd9d1718-c2d4-4cfe-b391-1a0fa8ed2a24'),
+    'phyrexianbeast44g': ('4 / 4 Green Phyrexian Beast', '0723ab2c-5024-490a-be3e-4fc499c57f0c'),
+    'pilot11w': ('1 / 1 White Pilot', 'bd9d1718-c2d4-4cfe-b391-1a0fa8ed2a24'),
     'pincher22c': ('2 / 2 Colorless Pincher', '8c3f12b5-b145-4b8b-98bc-ed2cbeeb54a6'),
     'pirate11r': ('1 / 1 Red Pirate', 'b5a34e3d-a71f-40de-b134-1e53a7ef2caf'),
     'pirate22b': ('2 / 2 Black Pirate', '5917b038-6193-45b8-84be-e1bb4d392fc5'),
@@ -440,6 +446,7 @@ tokenTypes = {
     'plantwall01g': ('0 / 1 Green Plant Wall', 'abd17205-ffda-4661-b3c3-33ba67ae76a7'),
     'poisonsnake11c': ('1 / 1 Colorless Poison Snake', '9bc647b5-8bc8-42f9-ab88-31b0c24fd01b'),
     'prism01c': ('0 / 1 Colorless Prism', '0525220c-be68-4bdb-92bb-e253a4257969'),
+    'rabit11w': ('1 / 1 White Rabbit', '8d45d7d7-2062-4e79-850d-cb1318215aa2'),
     'rabidsheep22g': ('2 / 2 Green Rabid Sheep', '5220e649-b0d3-4914-9933-dab2bf6cf31c'),
     'ragavan21r': ('2 / 1 Red Ragavan', 'ce93ec40-7f40-4aef-b8e0-63839f17c58a'),
     'rat11b': ('1 / 1 Black Rat', 'a8dad087-5e23-4368-8654-d77415d4cd9d'), #SHA CHK RTR ELD
@@ -469,12 +476,14 @@ tokenTypes = {
     'shapeshifter11c': ('1 / 1 Colorless Shapeshifter', '714f4756-f2f2-4d0f-8325-938f20653c97'),
     'shapeshifter22c': ('2 / 2 Colorless Shapeshifter', 'f4b94def-f1be-4077-826f-f262b2edeb9e'),
     'shapeshifter22u': ('2 / 2 Blue Shapeshifter', '68062dfc-310f-4699-9af8-a4c9d01f04b0'),
+    'shapeshifter32c': ('3 / 2 Colorless Shapeshifter', '55d74dc0-5f38-4096-ad00-b367fc08156f'),
     'shard': ('*Shard', '83d52b26-07e6-477d-81c2-ac0ced062e97'),
     'shark**u': ('* / * Blue Shark', 'ecb4ce90-0fde-49cb-8a66-116f6d497d68'),
     'sheep01g': ('0 / 1 Green Sheep', 'b17a0924-b2ec-4eec-9bba-c4ff96b9b833'), #TSP UNG
     'shrine': ('Shrine', '3d4bcbc6-0d72-45e5-a030-f18af6ba0725'),
     'skeleton11b': ('1 / 1 Black Skeleton', 'ac0b1792-0f7e-47c2-b0ba-eca01badb5cd'), #ALA HML
     'skeleton11b2': ('1 / 1 Black Skeleton', '02517e82-4cbe-4004-8b50-42fc9de89a53'),
+    'skeleton41b': ('4 / 1 Black Skeleton', '71dace64-2ee4-4bb4-80a8-f3f0d2b04baf'),
     'sliver11c': ('1 / 1 Colorless Sliver', '2ead35a2-d474-4866-9bb2-c099c3d40922'), #MPRLGN LEAGUEM14 M15
     'slug11b': ('1 / 1 Black Slug', '92299a32-3af7-4e03-ab84-890bd3650ae7'),
     'smokeblessing': ('Red Smoke Blessing', 'bd714891-3a75-4d2c-ba93-0da4f15112b6'),
@@ -557,6 +566,7 @@ tokenTypes = {
     'vecna88b': ('8 / 8 Black Vecna', 'eade7890-d1a5-43dc-9ed8-152a2ed61e1e'),
     'voja22m': ('2 / 2 Multicolor Green White Voja', '776e6adf-b4a0-47a6-9fcf-85fb60b566c1'),
     'vojafriendtoelves33m': ('3 / 3 Multicolor Green White Voja, Friend to Elves', 'eda41bb9-70cf-4a6b-afb2-4e8cca9e911f'),
+    'volosjournal': ("Colorless Voja's Journal", '657ff8e6-b420-4f1d-a41f-8c25b9a1f5d5'),
     'wall02c': ('0 / 2 Colorless Wall', '4a094bd3-6330-4e63-bdde-9ee04beb07df'),
     'wall03w': ('0 / 3 White Wall', '5c1be2e3-3a18-4465-8cf6-fbaef34d8fd3'),
     'wall55u': ('5 / 5 Blue Wall', '4d8efc05-4746-4e69-8d09-e64416bdbe08'), #EMA
@@ -630,6 +640,7 @@ tokenTypes = {
     'dungeonofthemadmage': ("Dungeon of the Mad Mage", '498aa2b7-075e-4f39-9f61-f4180e42760d'),    
     'lostmineofphandelver': ("Lost Mine of Phandelver", '39c8e409-9a3f-411f-b394-9ab732d6a143'),    
     'tombofannihilation': ("Tomb of Annihilation", 'dcca4c88-39a4-496f-af98-7fea07256c4d'),
+    'theundercity': ("The Undercity", 'c43cca71-1f25-43ab-b760-7003478b0c11'),
     'daynight': ("Day // Night State", 'dc01f0cc-657c-4b95-8844-ae8fc135f896'),
     
     'ajaniemblem': ("Ajani's Emblem", '78832bbe-cba2-4008-a3ad-c729d22ae44b'),
