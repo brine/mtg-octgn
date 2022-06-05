@@ -31,7 +31,7 @@ The first instant or sorcery spell you cast each turn has casualty 2. (As you ca
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Devil Rogue" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Each creature you cast with mana value 4 or greater has blitz. The blitz cost is equal to its mana cost. (You may choose to cast that spell for its blitz cost. If you do, it gains haste and "When this creature dies, draw a card." Sacrifice it at the beginning of the next end step.)
+      <property name="Rules">Each creature spell you cast with mana value 4 or greater has blitz. The blitz cost is equal to its mana cost. (You may choose to cast that spell for its blitz cost. If you do, it gains haste and "When this creature dies, draw a card." Sacrifice it at the beginning of the next end step.)
 Blitz costs you pay cost <s value="1">{1}</s> less for each time you've cast your commander from the command zone this game.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -82,16 +82,16 @@ At the beginning of combat on each player's turn, you may tap two untapped creat
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="G">{G}</s>
-        <s value="U">{U}</s>
         <s value="W">{W}</s>
+        <s value="U">{U}</s>
       </property>
       <property name="CMC" value="4" />
-      <property name="Color" value="Multicolor Green Blue White" />
+      <property name="Color" value="Multicolor Green White Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Rhino Soldier" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">When Perrie enters the battlefield, put a shield counter on target creature. (If it would be dealt damage or destroyed, remove a shield counter from it instead.)
-Whenever Perrie attacks, target creature you control gains trample and gets +X/+X, where X is the number of different kinds of counters among permanents you control.</property>
+Whenever Perrie attacks, target creature you control gains trample and gets +X/+X until end of turn, where X is the number of different kinds of counters among permanents you control.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Joshua Raphael" />
@@ -320,7 +320,7 @@ Choose a kind of counter on a creature you control. Put a counter of that kind o
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Rhino Druid" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of your upkeep, each opponent choses money, friends, or secrets. For each player who chose money, you and that player each create a Treasure token. For each player who chose friends, you and that player each create a 1/1 green and white Citizen creature token. For each player who chose secrets, you and that player each draw a card.</property>
+      <property name="Rules">At the beginning of your upkeep, each opponent chooses money, friends, or secrets. For each player who chose money, you and that player each create a Treasure token. For each player who chose friends, you and that player each create a 1/1 green and white Citizen creature token. For each player who chose secrets, you and that player each draw a card.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Milivoj Ćeran" />
@@ -444,7 +444,7 @@ At the beginning of combat on your turn, you may have Cephalid Facetaker become 
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Casualty 3 (As you cast this spell, you may sacrifice a creature with power 3 or greater. When you do, copy this spell and you may choose new targets for the copy.)
+      <property name="Rules">Casualty 3 (As you cast this spell, you may sacrifice a creature with power 3 or greater. When you do, copy this spell and you may choose a new target for the copy.)
 Exile target instant or sorcery card from an opponent's graveyard. Copy that card. You may cast the copy without paying its mana cost.</property>
       <property name="Artist" value="Durion" />
       <property name="Number" value="026" />
@@ -510,7 +510,7 @@ Equip <s value="2">{2}</s></property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Sinister Concierge dies, you may exile it and put three time counters on it. If you do, exile up to one target creature and put three time counters on it. Each card exiled this way that doesn't have suspend gains suspend. (For each card with suspend, its owner ermoves a time counter from it at the beginning of their upkeep. When the last is removed, they cast it without paying its mana cost. Those creature spells have haste.)</property>
+      <property name="Rules">When Sinister Concierge dies, you may exile it and put three time counters on it. If you do, exile up to one target creature and put three time counters on it. Each card exiled this way that doesn't have suspend gains suspend. (For each card with suspend, its owner removes a time counter from it at the beginning of their upkeep. When the last is removed, they cast it without paying its mana cost. Those creature spells have haste.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Tomas Duchek" />
@@ -712,7 +712,7 @@ Cipher (Then you may exile this spell card encoded on a creature you control. Wh
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Casualty 2 (As you cast this spell, you may sacrifice a creature with power 2 or greater. When you do, copy this spell and you may choose new targets for the copy.)
+      <property name="Rules">Casualty 2 (As you cast this spell, you may sacrifice a creature with power 2 or greater. When you do, copy this spell.)
 Each opponent exiles the top card of their library. You may cast spells from among those cards this turn. If you cast a spell this way, pay life equal to that spell's mana value rather than pay its mana cost.</property>
       <property name="Artist" value="Helge C. Balzer" />
       <property name="Number" value="043" />
@@ -727,7 +727,7 @@ Each opponent exiles the top card of their library. You may cast spells from amo
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Casualty 2 (As you cast this spell, you may sacrifice a creature with power 2 or greater. When you do, copy this spell and you may choose new targets for the copy.)
+      <property name="Rules">Casualty 2 (As you cast this spell, you may sacrifice a creature with power 2 or greater. When you do, copy this spell and you may choose a new target for the copy.)
 The owner of target nonenchantment permanent shuffles it into their library, then exiles the top card of their library. If it's a land card, they put it onto the battlefield. Otherwise, they may cast it without paying its mana cost.</property>
       <property name="Artist" value="Igor Grechanyi" />
       <property name="Number" value="044" />
@@ -1100,7 +1100,7 @@ At the beginning of the next main phase this turn, draw a card for each player w
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Clue" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Agent's Toolkit enters the battlefield with a +1/+1 counter, a flying counter, a deathtouch counter, and a shield counter on it. (If that creature would be dealt damage or destroyed, remove a shield counter from it instead.)
+      <property name="Rules">Agent's Toolkit enters the battlefield with a +1/+1 counter, a flying counter, a deathtouch counter, and a shield counter on it. (If it would be dealt damage or destroyed, remove a shield counter from it instead.)
 Whenever a creature enters the battlefield under your control, you may move a counter from Agent's Toolkit onto that creature.
 <s value="2">{2}</s>, Sacrifice Agent's Toolkit: Draw a card.</property>
       <property name="Artist" value="Olena Richards" />
@@ -1138,7 +1138,7 @@ Whenever Bess attacks, each other creature you control with base power and tough
       <property name="Rarity" value="Rare" />
       <property name="Rules">Choose three. You may choose the same mode more than once.
 • Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)
-• Target creature phases out. (Treat it and anything attached to it as though they don't exist until your next turn.)
+• Target creature phases out. (Treat it and anything attached to it as though they don't exist until its controller's next turn.)
 • Counter target activated or triggered ability.</property>
       <property name="Artist" value="Brian Valeza" />
       <property name="Number" value="068" />
@@ -1158,7 +1158,7 @@ Whenever Bess attacks, each other creature you control with base power and tough
       <property name="Rules">Choose three. You may choose the same mode more than once.
 • Create a token that's a copy of target creature you control. It gains haste. Sacrifice it at the beginning of the next end step.
 • Exile target artifact or enchantment.
-• Creatures target player controls gets +1/+1 and gain first strike until end of turn.</property>
+• Creatures target player controls get +1/+1 and gain first strike until end of turn.</property>
       <property name="Artist" value="Jake Murray" />
       <property name="Number" value="069" />
       <property name="Faction" value="Cabaretti" />
@@ -1540,7 +1540,7 @@ Assassins, Mercenaries, and Rogues you control have deathtouch and "Whenever thi
       <property name="Rarity" value="Rare" />
       <property name="Rules">Haste
 <s value="T">{T}</s>: Target opponent creates X Treasure tokens, where X is the number of Treasure tokens you created this turn.
-Whenever an opponent casts a spell or activates an ability, if mana from a Treasure was spent to cast or activate it, put a +1/+1 counter on target creature, then draw a card.</property>
+Whenever an opponent casts a spell or activates an ability, if mana from a Treasure was spent to cast it or activate it, put a +1/+1 counter on target creature, then draw a card.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="José Parodi" />
@@ -1701,7 +1701,7 @@ The first instant or sorcery spell you cast each turn has casualty 2. (As you ca
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Devil Rogue" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Each creature you cast with mana value 4 or greater has blitz. The blitz cost is equal to its mana cost. (You may choose to cast that spell for its blitz cost. If you do, it gains haste and "When this creature dies, draw a card." Sacrifice it at the beginning of the next end step.)
+      <property name="Rules">Each creature spell you cast with mana value 4 or greater has blitz. The blitz cost is equal to its mana cost. (You may choose to cast that spell for its blitz cost. If you do, it gains haste and "When this creature dies, draw a card." Sacrifice it at the beginning of the next end step.)
 Blitz costs you pay cost <s value="1">{1}</s> less for each time you've cast your commander from the command zone this game.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -1792,16 +1792,16 @@ Whenever you copy a spell, up to one target opponent may also copy that spell. T
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="G">{G}</s>
-        <s value="U">{U}</s>
         <s value="W">{W}</s>
+        <s value="U">{U}</s>
       </property>
       <property name="CMC" value="4" />
-      <property name="Color" value="Multicolor Green Blue White" />
+      <property name="Color" value="Multicolor Green White Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Rhino Soldier" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">When Perrie enters the battlefield, put a shield counter on target creature. (If it would be dealt damage or destroyed, remove a shield counter from it instead.)
-Whenever Perrie attacks, target creature you control gains trample and gets +X/+X, where X is the number of different kinds of counters among permanents you control.</property>
+Whenever Perrie attacks, target creature you control gains trample and gets +X/+X until end of turn, where X is the number of different kinds of counters among permanents you control.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Joshua Raphael" />
@@ -1863,7 +1863,7 @@ While voting, you may vote an additional time. (The votes can be for different c
       <property name="Rarity" value="Rare" />
       <property name="Rules">Haste
 <s value="T">{T}</s>: Target opponent creates X Treasure tokens, where X is the number of Treasure tokens you created this turn.
-Whenever an opponent casts a spell or activates an ability, if mana from a Treasure was spent to cast or activate it, put a +1/+1 counter on target creature, then draw a card.</property>
+Whenever an opponent casts a spell or activates an ability, if mana from a Treasure was spent to cast it or activate it, put a +1/+1 counter on target creature, then draw a card.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="José Parodi" />
@@ -2003,7 +2003,7 @@ Choose a kind of counter on a creature you control. Put a counter of that kind o
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Rhino Druid" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of your upkeep, each opponent choses money, friends, or secrets. For each player who chose money, you and that player each create a Treasure token. For each player who chose friends, you and that player each create a 1/1 green and white Citizen creature token. For each player who chose secrets, you and that player each draw a card.</property>
+      <property name="Rules">At the beginning of your upkeep, each opponent chooses money, friends, or secrets. For each player who chose money, you and that player each create a Treasure token. For each player who chose friends, you and that player each create a 1/1 green and white Citizen creature token. For each player who chose secrets, you and that player each draw a card.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Milivoj Ćeran" />
@@ -2126,7 +2126,7 @@ At the beginning of combat on your turn, you may have Cephalid Facetaker become 
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Casualty 3 (As you cast this spell, you may sacrifice a creature with power 3 or greater. When you do, copy this spell and you may choose new targets for the copy.)
+      <property name="Rules">Casualty 3 (As you cast this spell, you may sacrifice a creature with power 3 or greater. When you do, copy this spell and you may choose a new target for the copy.)
 Exile target instant or sorcery card from an opponent's graveyard. Copy that card. You may cast the copy without paying its mana cost.</property>
       <property name="Artist" value="Durion" />
       <property name="Number" value="127" />
@@ -2192,7 +2192,7 @@ Equip <s value="2">{2}</s></property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Sinister Concierge dies, you may exile it and put three time counters on it. If you do, exile up to one target creature and put three time counters on it. Each card exiled this way that doesn't have suspend gains suspend. (For each card with suspend, its owner ermoves a time counter from it at the beginning of their upkeep. When the last is removed, they cast it without paying its mana cost. Those creature spells have haste.)</property>
+      <property name="Rules">When Sinister Concierge dies, you may exile it and put three time counters on it. If you do, exile up to one target creature and put three time counters on it. Each card exiled this way that doesn't have suspend gains suspend. (For each card with suspend, its owner removes a time counter from it at the beginning of their upkeep. When the last is removed, they cast it without paying its mana cost. Those creature spells have haste.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Tomas Duchek" />
@@ -2394,7 +2394,7 @@ Cipher (Then you may exile this spell card encoded on a creature you control. Wh
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Casualty 2 (As you cast this spell, you may sacrifice a creature with power 2 or greater. When you do, copy this spell and you may choose new targets for the copy.)
+      <property name="Rules">Casualty 2 (As you cast this spell, you may sacrifice a creature with power 2 or greater. When you do, copy this spell.)
 Each opponent exiles the top card of their library. You may cast spells from among those cards this turn. If you cast a spell this way, pay life equal to that spell's mana value rather than pay its mana cost.</property>
       <property name="Artist" value="Helge C. Balzer" />
       <property name="Number" value="144" />
@@ -2409,7 +2409,7 @@ Each opponent exiles the top card of their library. You may cast spells from amo
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Casualty 2 (As you cast this spell, you may sacrifice a creature with power 2 or greater. When you do, copy this spell and you may choose new targets for the copy.)
+      <property name="Rules">Casualty 2 (As you cast this spell, you may sacrifice a creature with power 2 or greater. When you do, copy this spell and you may choose a new target for the copy.)
 The owner of target nonenchantment permanent shuffles it into their library, then exiles the top card of their library. If it's a land card, they put it onto the battlefield. Otherwise, they may cast it without paying its mana cost.</property>
       <property name="Artist" value="Igor Grechanyi" />
       <property name="Number" value="145" />
@@ -2736,7 +2736,7 @@ At the beginning of the next main phase this turn, draw a card for each player w
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Clue" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Agent's Toolkit enters the battlefield with a +1/+1 counter, a flying counter, a deathtouch counter, and a shield counter on it. (If that creature would be dealt damage or destroyed, remove a shield counter from it instead.)
+      <property name="Rules">Agent's Toolkit enters the battlefield with a +1/+1 counter, a flying counter, a deathtouch counter, and a shield counter on it. (If it would be dealt damage or destroyed, remove a shield counter from it instead.)
 Whenever a creature enters the battlefield under your control, you may move a counter from Agent's Toolkit onto that creature.
 <s value="2">{2}</s>, Sacrifice Agent's Toolkit: Draw a card.</property>
       <property name="Artist" value="Olena Richards" />
@@ -2773,7 +2773,7 @@ Whenever Bess attacks, each other creature you control with base power and tough
       <property name="Rarity" value="Rare" />
       <property name="Rules">Choose three. You may choose the same mode more than once.
 • Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)
-• Target creature phases out. (Treat it and anything attached to it as though they don't exist until your next turn.)
+• Target creature phases out. (Treat it and anything attached to it as though they don't exist until its controller's next turn.)
 • Counter target activated or triggered ability.</property>
       <property name="Artist" value="Brian Valeza" />
       <property name="Number" value="168" />
@@ -2793,7 +2793,7 @@ Whenever Bess attacks, each other creature you control with base power and tough
       <property name="Rules">Choose three. You may choose the same mode more than once.
 • Create a token that's a copy of target creature you control. It gains haste. Sacrifice it at the beginning of the next end step.
 • Exile target artifact or enchantment.
-• Creatures target player controls gets +1/+1 and gain first strike until end of turn.</property>
+• Creatures target player controls get +1/+1 and gain first strike until end of turn.</property>
       <property name="Artist" value="Jake Murray" />
       <property name="Number" value="169" />
     </card>
@@ -3099,7 +3099,7 @@ The first instant or sorcery spell you cast each turn has casualty 2. (As you ca
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Devil Rogue" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Each creature you cast with mana value 4 or greater has blitz. The blitz cost is equal to its mana cost. (You may choose to cast that spell for its blitz cost. If you do, it gains haste and "When this creature dies, draw a card." Sacrifice it at the beginning of the next end step.)
+      <property name="Rules">Each creature spell you cast with mana value 4 or greater has blitz. The blitz cost is equal to its mana cost. (You may choose to cast that spell for its blitz cost. If you do, it gains haste and "When this creature dies, draw a card." Sacrifice it at the beginning of the next end step.)
 Blitz costs you pay cost <s value="1">{1}</s> less for each time you've cast your commander from the command zone this game.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -3150,16 +3150,16 @@ At the beginning of combat on each player's turn, you may tap two untapped creat
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="G">{G}</s>
-        <s value="U">{U}</s>
         <s value="W">{W}</s>
+        <s value="U">{U}</s>
       </property>
       <property name="CMC" value="4" />
-      <property name="Color" value="Multicolor Green Blue White" />
+      <property name="Color" value="Multicolor Green White Blue" />
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Rhino Soldier" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">When Perrie enters the battlefield, put a shield counter on target creature. (If it would be dealt damage or destroyed, remove a shield counter from it instead.)
-Whenever Perrie attacks, target creature you control gains trample and gets +X/+X, where X is the number of different kinds of counters among permanents you control.</property>
+Whenever Perrie attacks, target creature you control gains trample and gets +X/+X until end of turn, where X is the number of different kinds of counters among permanents you control.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Joshua Raphael" />
@@ -4693,7 +4693,7 @@ Whenever another creature enters the battlefield under your control, put a +1/+1
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
-      <property name="Rarity" value="Uncommon" />
+      <property name="Rarity" value="Common" />
       <property name="Rules">Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.</property>
       <property name="Artist" value="Anthony Palumbo" />
       <property name="Number" value="285" />
@@ -6000,8 +6000,8 @@ Sacrifice Commander's Sphere: Draw a card.</property>
       <property name="CMC" value="0" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
-      <property name="Rarity" value="Common" />
-      <property name="Rules">Multikicker <s value="2">{2}</s>
+      <property name="Rarity" value="Uncommon" />
+      <property name="Rules">Multikicker <s value="2">{2}</s> (You may pay an additional <s value="2">{2}</s> any number of times as you cast this spell.)
 Everflowing Chalice enters the battlefield with a charge counter on it for each time it was kicked.
 <s value="T">{T}</s>: Add <s value="C">{C}</s> for each charge counter on Everflowing Chalice.</property>
       <property name="Artist" value="Steve Argyle" />
@@ -6041,7 +6041,7 @@ Everflowing Chalice enters the battlefield with a charge counter on it for each 
       <property name="CMC" value="2" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
-      <property name="Rarity" value="Uncommon" />
+      <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="1">{1}</s>, <s value="T">{T}</s>: Add <s value="U">{U}</s><s value="R">{R}</s>.</property>
       <property name="Artist" value="Raoul Vitale" />
