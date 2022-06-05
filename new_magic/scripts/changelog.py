@@ -430,7 +430,8 @@ changelog = {
     3060224: ("3.6.2.24", "April 29 2022", [
         "New Capenna update"
         ]),
-    3060225: ("3.6.2.25", "June 4 2022", [
-        "Commander Legends 2 update"
+    3060226: ("3.6.2.26", "June 4 2022", [
+        "Commander Legends 2 update",
+        "Removed duplicate token arts.  You will need to re-download the Tokens set images to update the correct arts."
         ])
 }

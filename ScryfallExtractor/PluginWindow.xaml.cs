@@ -189,6 +189,7 @@ namespace MTGImageFetcher
                                 var localImagePath = files.FirstOrDefault();
 
                                 string imageLanguage = null;
+                                string imageId = null;
                                 int imageTimeStamp = 0;
                                 int imageWidth = 0;
                                 if (localImagePath == null)
@@ -211,6 +212,7 @@ namespace MTGImageFetcher
                                             using (var image = Image.FromStream(filestream))
                                             {
                                                 imageLanguage = Encoding.Unicode.GetString(image.PropertyItems.FirstOrDefault(x => x.Id == 40094)?.Value);
+                                                imageId = Encoding.Unicode.GetString(image.PropertyItems.FirstOrDefault(x => x.Id == 40095)?.Value);
                                                 imageTimeStamp = Convert.ToInt32(Encoding.Unicode.GetString(image.PropertyItems.FirstOrDefault(x => x.Id == 40092)?.Value));
                                                 imageWidth = image.Width;
                                             }
@@ -262,6 +264,7 @@ namespace MTGImageFetcher
                                 }
                                 var webImageUrl = header.Headers.Location;
                                 var webTimestamp = Convert.ToInt32(webImageUrl.Query.TrimStart('?'));
+                                var webId = webImageUrl.Segments.Last().Split('.')[0];
 
                                 // figure out if we should be downloading and updating this card image
 
@@ -269,7 +272,8 @@ namespace MTGImageFetcher
                                     && imageWidth != 0
                                     && imageWidth > 600 == xl
                                     && imageLanguage.Equals(webImageLanguage,StringComparison.InvariantCultureIgnoreCase)
-                                    && imageTimeStamp >= webTimestamp)
+                                    && imageTimeStamp >= webTimestamp
+                                    && imageId.Equals(webId, StringComparison.CurrentCultureIgnoreCase))
                                 {
                                     webImageUpdater.Report(null);
                                     continue;
@@ -318,6 +322,14 @@ namespace MTGImageFetcher
                                         keywordsMetadata.Len = keywordsMetadata.Value.Length;
                                         keywordsMetadata.Type = 1;
                                         newimg.SetPropertyItem(keywordsMetadata);
+
+                                        //subject metadata stores scryfall's GUID to ensure the correct card 
+                                        var subjectMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
+                                        subjectMetadata.Id = 40095; // this is the Subject field
+                                        subjectMetadata.Value = Encoding.Unicode.GetBytes(webId);
+                                        subjectMetadata.Len = subjectMetadata.Value.Length;
+                                        subjectMetadata.Type = 1;
+                                        newimg.SetPropertyItem(subjectMetadata);
 
                                         var garbage = Config.Instance.Paths.GraveyardPath;
                                         if (!Directory.Exists(garbage)) Directory.CreateDirectory(garbage);
