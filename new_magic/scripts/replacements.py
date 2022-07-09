@@ -169,7 +169,7 @@ tokenTypes = {
     'caribou01w': ('0 / 1 White Caribou', '8b08856a-f460-4aca-b58f-15b14d4d87da'),
     'carnivore31r': ('3 / 1 Red Carnivore', 'de037a79-c519-4818-a3d4-425740f4683e'), #TMP EMA
     'cat11w': ('1 / 1 White Cat', 'dab18b2f-06a0-4ce2-8e8f-5090c397fe03'), #AKH M19 SLD SLD IKO
-    'cat11w2': ('1 / 1 White Cat', 'dab18b2f-06a0-4ce2-8e8f-5090c397fe03'),
+    'cat11w2': ('1 / 1 White Cat', 'bceee392-3d41-4b79-809e-61d53617abc1'),
     'catbird11w': ('1 / 1 White Cat Bird', '8f8f6d1d-b0a6-43d5-81b4-64e22f3d4a8a'),
     'cat11g': ('1 / 1 Green Cat', 'a6ae9b2c-b938-4cf4-8e3d-f55417a6a125'),
     'cat22g': ('2 / 2 Green Cat', 'b29e04d1-ae33-42cd-9749-1dea5c054a07'),
