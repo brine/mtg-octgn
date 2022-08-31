@@ -133,6 +133,7 @@ tokenTypes = {
     'avatar**w': ('* / * White Avatar', 'ebfa36c6-2c4e-4a5f-9730-010e7b50bd19'),
     'avatar44w': ('4 / 4 White Avatar', '00348a3e-c739-4a07-a31b-efaff054329d'), #M19
     'avatar36m': ('3 / 6 Multicolor Black Red Avatar', 'd850424b-f0f4-4d40-80fd-d72023ad372e'),
+    'badger33g': ('3 / 3 Green Badger', 'a83aae27-1e00-4e1b-9751-e13ed510db66'),
     'bat11b': ('1 / 1 Black Bat', '24b07ba5-680d-4646-af54-a9c50410eef0'), #M19
     'bat12b': ('1 / 2 Black Bat', '11645243-4e84-4759-9f9b-1b33809204c1'),
     'bear22g': ('2 / 2 Green Bear', '1eae0d3e-08c1-4dda-99b1-a994f6827b77'), #MPRODY MPRONS C15 ELD
@@ -150,6 +151,7 @@ tokenTypes = {
     'bird11w': ('1 / 1 White Bird', 'c57d9dfe-6733-44d9-8789-7e1c5792ce5b'), #ZEN JUD CSP RTR DGM BNG C16 C20
     'bird11u': ('1 / 1 Blue Bird', 'a36eccd9-be44-4145-b56c-f5e2ef7921f9'), #EVE MPRINV
     'bird11u2': ('1 / 1 Blue Bird', '337fe1b7-952d-4974-96df-d5a53c9e17f8'), #only block flyers
+    'bird11b': ('1 / 1 Black Bird', '738840b2-b08b-46de-8b39-3f2df8ecbfa1'),
     'bird11m': ('1 / 1 Multicolor White Blue Bird', '79655e70-589f-4523-99e8-37b9ca6a19c3'),
     'bird22u': ('2 / 2 Blue Bird', '39eb9a4b-ebd3-44f3-ad68-94d8fb1f37f0'),
     'bird22u2': ('2 / 2 Blue Bird', '3aab274b-f3e8-48f5-89f3-5886d7ff06cd'), #enchantment
@@ -242,9 +244,10 @@ tokenTypes = {
     'elemental44w': ('4 / 4 White Elemental', '401c9416-4b6b-477c-9bef-6fce5a9d4e84'), #LRW C20
     'elemental10u': ('1/ 0 Blue Elemental', 'e9969757-cb36-4ff2-b8da-048c5d4934b9'),
     'elemental22u': ('2 / 2 Blue Elemental', 'f31761bf-3bad-4b26-83e3-53a7435c2c02'),
-    'elemental01r': ('0/ 1 Red Elemental', 'bd0bf1d7-2e66-41fd-ae9a-ea86b939e7c9'),
-    'elemental11r': ('1/ 1 Red Elemental', '4a280f46-c63d-4522-99cd-49e4c2093b95'), #M20 M14 RIX M20
-    'elemental11r2': ('1/ 1 Red Elemental', '9cf39bf6-7508-4243-b05a-7fcbc9adc800'), #haste
+    'elemental01r': ('0 / 1 Red Elemental', 'bd0bf1d7-2e66-41fd-ae9a-ea86b939e7c9'),
+    'elemental11r': ('1 / 1 Red Elemental', '4a280f46-c63d-4522-99cd-49e4c2093b95'), #M20 M14 RIX M20
+    'elemental11r2': ('1 / 1 Red Elemental', '9cf39bf6-7508-4243-b05a-7fcbc9adc800'), #haste
+    'elemental21r': ('2 / 1 Red Elemental', '906d8532-2d5e-49d9-ac29-13b2d742c0b5'), #CFX DIS OGW C20
     'elemental31r': ('3 / 1 Red Elemental', '283f82f8-e3ee-4191-852a-60e2312d8e32'), #CFX DIS OGW C20
     'elemental31r2': ('3 / 1 Red Elemental', '5086e801-b0f5-4ac0-9442-6f2e8312c647'), #haste
     'elemental31r3': ('3 / 1 Red Elemental', '0340630b-f7bd-4f77-a983-8ac93b61e30e'), #enchantment
@@ -365,6 +368,7 @@ tokenTypes = {
     'inkling21m': ('2 / 1 Multcolor White Black Inkling', '4495f827-3ec4-492f-9482-2e55b384573a'),
     'insect01b': ('0 / 1 Black Insect', '3fab8819-3c34-4652-8797-25debdd7c322'),
     'insect11b': ('1 / 1 Black Insect', '8363d27d-c64b-4f54-8377-b7612c29cbbd'),
+    'insect11b2': ('1 / 1 Black Insect', '2cbb2741-d231-47b9-bc23-efa0dbd43346'), #flying
     'insect11g': ('1 / 1 Green Insect', '6cd95e82-f30e-4a06-8d9b-ed11d1c08ad0'), #M10 MPRONS SOI CN2
     'insect11g2': ('1 / 1 Green Insect', '3d2cc7f1-889e-44e6-adb5-9aaa1cf99e76'), #infect
     'insect11g3': ('1/1 Green Insect', '2bce1692-5bba-4c10-8e72-2f8c7107bca0'), #(flying deathtouch) M15 C20
@@ -381,7 +385,8 @@ tokenTypes = {
     'knight11w': ('1 / 1 White Knight', 'b02c687e-33ad-4821-a005-d93b5d38263a'),
     'knight22w': ('2 / 2 White Knight', '7a0b7656-54d0-4e4a-9022-a9a7df1757a9'),
     'knight22w2': ('2 / 2 White Knight', 'e8941a96-238c-467e-abf5-a6cced61ce30'), #first strike
-    'knight22w3': ('2/2 White Knight', '92f8cd16-807c-4301-8dfa-166bb37b0f52'), #vigilance RTR LEAGUERTR DOM DOM ELD
+    'knight22w3': ('2 / 2 White Knight', '92f8cd16-807c-4301-8dfa-166bb37b0f52'), #vigilance RTR LEAGUERTR DOM DOM ELD
+    'knight22w4': ('2 / 2 White Knight', 'ca422c14-4918-46a3-a88e-52453f2626b3'), #protection from red
     'knight22b': ('2 / 2 Black Knight', 'e8aa7dd3-0cde-4253-b467-a65c3f94dabb'),
     'knightally22w': ('2 / 2 White Knight Ally', 'aca5ad2e-f7c0-4ca7-a75b-41353aa21f70'),
     'koboldsofkherkeep01r': ('0 / 1 Red Kobolds of Kher Keep', 'a098e8ae-5170-4c8c-83dd-d56af7b5691e'),
@@ -411,6 +416,7 @@ tokenTypes = {
     'minotaur23r': ('2 / 3 Red Minotaur', '38a6d20a-ca14-459a-9484-f93d693714c0'),
     'monarch': ('The Monarch', '2b8d6bc4-b81b-40a0-93fb-5081fcb1990d'),
     'monk11w': ('1 / 1 White Monk', '5b6e6944-f114-42bc-bbea-cfff3e4f5fab'),
+    'monk11r': ('1 / 1 Red Monk', '039afd18-072e-4ffb-80d3-00f7ff300303'),
     'mouse11w': ('1 / 1 White Mouse', 'cebe03d3-79dd-4b41-895b-d7087603b385'),
     'myr11c': ('1 / 1 Colorless Myr', '16003e42-3ff7-478d-8f8c-2b5af4847da0'), #SOM NPH
     'myr21u': ('2 / 1 Blue Myr', '039bc09e-f7fe-40df-98e1-f6faea3620a6'),
@@ -427,6 +433,7 @@ tokenTypes = {
     'ooze33g': ('3 / 3 Green Ooze', '9946764e-e901-46b2-8dd8-ae0ea89f9097'),
     'ooze**g': ('* / * Green Ooze', 'cae92cb4-5917-473a-932b-f6db91a6eebf'), #ALA ROE ISD RTR
     'ooze**g2': ('* / * + 1 Green Ooze', 'b7eae58e-3056-4872-8012-f9685ed4887e'),
+    'ornithopter01c': ('0 / 1 Colorless Ornithopter', 'bc78018e-2139-4ad1-ba42-f15b9afcc38b'),
     'ox24w': ('2 / 4 White Ox', 'f2a9ff64-f9e9-48cf-ab85-91ab686c0ba7'), #M19
     'ox44g': ('4 / 4 Green Ox', '8a991516-f82d-494a-834d-e9a784e37fcd'),
     'orb**u': ('* / * Blue Orb', '6ea11e66-4e5d-46ed-a6bb-473faa6fc8bc'),
@@ -436,6 +443,8 @@ tokenTypes = {
     'pest11m': ('1 / 1 Multicolor Black Green Pest', '8835958a-a49c-4ff9-9727-bc557def3c1e'),
     'pest01c': ('0 / 1 Colorless Pest', 'b211942a-dac7-4202-8039-4caa1ea567e6'),
     'phyrexianbeast44g': ('4 / 4 Green Phyrexian Beast', '0723ab2c-5024-490a-be3e-4fc499c57f0c'),
+    'phyrexian22b': ('2 / 2 Black Phyrexian', '5d9ae2f3-aba4-451e-9201-a7b8e28542aa'),
+    'phyrexiangolem33c': ('3 / 3 Colorless Phyrexian Colem', '37a1b9bc-942a-4425-ab9f-2491b0409d87'),
     'pilot11w': ('1 / 1 White Pilot', 'bd9d1718-c2d4-4cfe-b391-1a0fa8ed2a24'),
     'pincher22c': ('2 / 2 Colorless Pincher', '8c3f12b5-b145-4b8b-98bc-ed2cbeeb54a6'),
     'pirate11r': ('1 / 1 Red Pirate', 'b5a34e3d-a71f-40de-b134-1e53a7ef2caf'),
@@ -445,6 +454,7 @@ tokenTypes = {
     'plant11g': ('1 / 1 Green Plant', 'c0c17814-c90f-4e8c-8e25-2667ac7069d9'), #BFZ C19
     'plantwall01g': ('0 / 1 Green Plant Wall', 'abd17205-ffda-4661-b3c3-33ba67ae76a7'),
     'poisonsnake11c': ('1 / 1 Colorless Poison Snake', '9bc647b5-8bc8-42f9-ab88-31b0c24fd01b'),
+    'powerstone': ('Colorless Powerstone', 'c93bd99e-4eae-45aa-8c4c-2a0263e7d312'),
     'prism01c': ('0 / 1 Colorless Prism', '0525220c-be68-4bdb-92bb-e253a4257969'),
     'rabit11w': ('1 / 1 White Rabbit', '8d45d7d7-2062-4e79-850d-cb1318215aa2'),
     'rabidsheep22g': ('2 / 2 Green Rabid Sheep', '5220e649-b0d3-4914-9933-dab2bf6cf31c'),
@@ -591,6 +601,7 @@ tokenTypes = {
     'worm11m': ('1 / 1 Multicolor Black Green Worm', 'fd6aa5b4-3be4-4826-91af-48ad8472216a'),
     'wurm33c': ('3 / 3 Colorless Wurm', '7876a3ed-19ab-41fb-8d41-d2e82aea5d96'), #deathtouch
     'wurm33c2': ('3 / 3 Colorless Wurm', '1659c37d-5fa6-43e4-8fe7-19bef8d6964d'), #lifelink
+    'wurm44g': ('4 / 4 Green Wurm', '3a712adb-5665-4b34-a465-5e70344dc412'),
     'wurm55g': ('5 / 5 Green Wurm', '4dbe0826-ad0c-48b9-a775-efb8105c5a20'),
     'wurm55g2': ('5 / 5 Green Wurm', '43a11901-34eb-4c58-ba16-ed4779f7f7d0'),
     'wurm66g': ('6 / 6 Green Wurm', '4e259c1c-f66a-444a-9c08-6e6bdc42db23'), #M12 MPRODY C19
@@ -645,6 +656,7 @@ tokenTypes = {
     
     'ajaniemblem': ("Ajani's Emblem", '78832bbe-cba2-4008-a3ad-c729d22ae44b'),
     'ajaniemblem2': ("Ajani's Emblem", '3a030473-dcb7-48d9-b310-5b27a02311fe'), #M19
+    'ajaniemblem3': ("Ajani's Emblem", '9adc8c66-c877-40f3-b85a-d04f92460ea3'), #DMU
     'arlinnemblem': ("Arlinn's Emblem", '97e17684-2b18-404a-94e7-1de39b25318c'),
     'basriemblem': ("Basri's Emblem", '850fb1f8-c878-4378-b2b5-f27e723fc2ee'),
     'chandraemblem': ("Chandra's Emblem", '823e47a0-bf03-4d45-a4b2-5f02ba949e40'),
@@ -668,6 +680,7 @@ tokenTypes = {
     'jaceemblem': ("Jace's Emblem", 'e164ba8c-dd76-4bf1-bfa9-a3fa36a2a64b'),
     'jaceemblem2': ("Jace's Emblem", '7336aabc-55ab-4041-948f-9779f5924b02'),
     'jayaemblem': ("Jaya's Emblem", '06c2a5a2-b354-4ea0-93e3-df9914e87262'),
+    'jayaemblem2': ("Jaya's Emblem", '836572d1-0037-4a9e-b2e7-37c394baf168'),
     'kaitoemblem': ("Kaito's Emblem", '28d93b0a-0816-47f3-ba22-670163dc4e1d'),
     'kayaemblem': ("Kaya's Emblem", '34d8e9d8-2c98-45de-a2bf-8de37c2b3929'),
     'kioraemblem': ("Kiora's Emblem", '61c58834-6efc-40fa-8ba0-aa7927e7c9bd'),
