@@ -433,5 +433,8 @@ changelog = {
     3060226: ("3.6.2.26", "June 4 2022", [
         "Commander Legends 2 update",
         "Removed duplicate token arts.  You will need to re-download the Tokens set images to update the correct arts."
+        ]),
+    3060228: ("3.6.2.28", "September 4 2022", [
+        "Dominaria United added"
         ])
 }
