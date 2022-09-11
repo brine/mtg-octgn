@@ -104,7 +104,7 @@
             <property name="Toughness" value="4" />
             <property name="Artist" value="Winona Nelson" />
             <property name="Number" value="1" />
-            <property name="Flags" value="TDMC"/>
+            <property name="Flags" value="TDMU"/>
             <alternate name="Angel" type="1">
                 <property name="Artist" value="Volkan Baga" />
                 <property name="Number" value="2" />
@@ -278,7 +278,7 @@
             <property name="Toughness" value="3" />
             <property name="Artist" value="Tuan Duong Chu" />
             <property name="Number" value="15" />
-            <property name="Flags" value="TDMC"/>
+            <property name="Flags" value="TDMU"/>
         </card>
         <card name="Bat" id="24b07ba5-680d-4646-af54-a9c50410eef0">
             <property name="Color" value="Black" />
@@ -992,9 +992,9 @@
             <property name="Rules">Forestwalk</property>
             <property name="Power" value="2" />
             <property name="Toughness" value="2" />
-            <property name="Artist" value="Michael Suttin" />
+            <property name="Artist" value="Michael Sutfin" />
             <property name="Number" value="17" />
-            <property name="Flags" value="TDMC"/>
+            <property name="Flags" value="TDMU"/>
         </card>
         <card name="Centaur" id="94d83f81-fd3c-4efc-bec1-4fc127219991">
             <property name="Color" value="Green" />
@@ -1328,6 +1328,19 @@
             <property name="Artist" value="Yeong-Hao Han" />
             <property name="Number" value="2" />
             <property name="Flags" value="TMH2"/>
+        </card>
+        <card name="Crow" id="d9b085a5-c6ab-4fe6-aab2-bc5d4ea6d9b9">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Crab" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying
+			This creature can't block.</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Allen Douglas" />
+            <property name="Number" value="6" />
+            <property name="Flags" value="TDMU"/>
         </card>
         <card name="Demon" id="09dc67fa-ca4d-45d5-b3a9-4af8b8287d4b">
             <property name="Color" value="Black" />
@@ -3154,6 +3167,11 @@
                 <property name="Number" value="3"/>
                 <property name="Flags" value="TM21"/>
             </alternate>
+            <alternate name="Griffin" type="3">
+                <property name="Artist" value="John Tedrick" />
+                <property name="Number" value="1"/>
+                <property name="Flags" value="TDMC"/>
+            </alternate>
         </card>
         <card name="Guenhwyvar" id="02c32551-b9dd-495f-97eb-6ef7bc6af2d2">
             <property name="Color" value="Green" />
@@ -3693,7 +3711,7 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Toughness" value="1" />
             <property name="Artist" value="Mila Pesic" />
             <property name="Number" value="7" />
-            <property name="Flags" value="TDMC"/>
+            <property name="Flags" value="TDMU"/>
         </card>
         <card name="Insect" id="6cd95e82-f30e-4a06-8d9b-ed11d1c08ad0">
             <property name="Color" value="Green" />
@@ -3840,6 +3858,19 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Number" value="0" />
             <property name="Flags" value="TAPC?"/>
         </card>
+        <card name="Kavu" id="1873e32b-ac06-4b41-8c00-3e291b3d48d6">
+            <property name="Color" value="Multicolor White Blue Black Red Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Kavu" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">This creature is all colors.
+			Trample</property>
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Victor Adame Minguez" />
+            <property name="Number" value="12" />
+            <property name="Flags" value="TDMC"/>
+        </card>
         <card name="Kelp" id="d04cffca-c29f-4381-9854-eb6c362cd56e">
             <property name="Color" value="Blue" />
             <property name="Type" value="Creature" />
@@ -3925,7 +3956,7 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Toughness" value="2" />
             <property name="Artist" value="Matt Stewart" />
             <property name="Number" value="3" />
-            <property name="Flags" value="TDMC"/>
+            <property name="Flags" value="TDMU"/>
         </card>
         <card name="Knight" id="92f8cd16-807c-4301-8dfa-166bb37b0f52">
             <property name="Color" value="White" />
@@ -4191,7 +4222,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <alternate name="Merfolk" type="1">
                 <property name="Artist" value="PINDURSKI" />
                 <property name="Number" value="5" />
-                <property name="Flags" value="TDMC"/>
+                <property name="Flags" value="TDMU"/>
             </alternate>
         </card>
         <card name="Merfolk" id="1335cf81-7066-4344-8e4f-11ccc2c178fd">
@@ -4305,7 +4336,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Monk" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Prowess</property>
+            <property name="Rules">Prowess <i>(Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)</i></property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="Irina Nordsol" />
@@ -4776,7 +4807,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Subtype" value="Powerstone" />
             <property name="Rarity" value="Token" />
             <property name="Rules"><s value="T">{T}</s>: Add <s value="C">{C}</s>. This mana can't be spent to cast a nonartifact spell.</property>
-            <property name="Artist" value="David Aeden Nash" />
+            <property name="Artist" value="David Auden Nash" />
             <property name="Number" value="23" />
             <property name="Flags" value="TDMU"/>
         </card>
@@ -4821,8 +4852,8 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Power" value="2" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="Daniel Lunggren" />
-            <property name="Number" value="2" />
-            <property name="Flags" value="TAER"/>
+            <property name="Number" value="6" />
+            <property name="Flags" value="TDMC"/>
         </card>
         <card name="Rat" id="a8dad087-5e23-4368-8654-d77415d4cd9d">
             <property name="Color" value="Black" />
@@ -5028,7 +5059,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Toughness" value="1" />
             <property name="Artist" value="Piotr Foksowicz" />
             <property name="Number" value="20" />
-            <property name="Flags" value="TDMC"/>
+            <property name="Flags" value="TDMU"/>
         </card>
         <card name="Saproling" id="080583c4-5f53-4921-a84d-d840d740e7eb">
             <property name="Color" value="Green" />
@@ -6073,7 +6104,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <alternate name="Stangg Twin" type="1">
                 <property name="Artist" value="Randy Vargas" />
                 <property name="Number" value="21" />
-                <property name="Flags" value="TDMC"/>
+                <property name="Flags" value="TDMU"/>
             </alternate>
         </card>
         <card name="Starfish" id="3dec9b57-5934-462e-8a16-84fc56464cf5">
@@ -6703,8 +6734,8 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="Magali Villeneuve" />
-            <property name="Number" value="17" />
-            <property name="Flags" value="TAKH"/>
+            <property name="Number" value="4" />
+            <property name="Flags" value="TDMC"/>
         </card>
         <card name="Warrior" id="260555f7-890f-42af-b54b-bded98e9abc9">
             <property name="Color" value="Red" />
@@ -6952,9 +6983,9 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Rarity" value="Token" />
             <property name="Power" value="4" />
             <property name="Toughness" value="4" />
-            <property name="Artist" value="Andrew Mab" />
+            <property name="Artist" value="Andrew Mar" />
             <property name="Number" value="19" />
-            <property name="Flags" value="TDMC"/>
+            <property name="Flags" value="TDMU"/>
         </card>
         <card name="Wurm" id="5e914c05-f6a8-46f3-bd58-e32c83c386a7">
             <property name="Color" value="Black" />
@@ -7174,7 +7205,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <alternate name="Zombie" type="25">
                 <property name="Artist" value="Antonio Jose Manzanedo" />
                 <property name="Number" value="9" />
-                <property name="Flags" value="TDMC"/>
+                <property name="Flags" value="TDMU"/>
             </alternate>
         </card>
         <card name="Zombie" id="e587fbd6-f0fa-4918-83d8-9eb8091bd0be">
@@ -7304,7 +7335,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Toughness" value="2" />
             <property name="Artist" value="Even Amundsen" />
             <property name="Number" value="5" />
-            <property name="Flags" value="TDOM"/>
+            <property name="Flags" value="TDMC"/>
         </card>
         <card name="Zombie Wizard" id="7c543985-82bc-4173-8d6c-3a901f65c4bf">
             <property name="Color" value="Multicolor Blue Black" />

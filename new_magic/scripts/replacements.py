@@ -204,6 +204,7 @@ tokenTypes = {
     'construct**c': ('* / * Colorless Construct', 'c93bea45-2e84-441f-ada8-b6970ad23ffb'), #KLD KLD UST
     'copy': ('Copy', '2736e3d3-a2b6-4af6-a377-f7517da33a75'), 
     'crab03u': ('0 / 3 Blue Crab', 'b4aeebe7-825d-4bc6-a7ea-f3aa5692aead'), 
+    'crow11b': ('1 / 1 Black Crow', 'd9b085a5-c6ab-4fe6-aab2-bc5d4ea6d9b9'), 
     'demon33b': ('3 / 3 Black Demon', '09dc67fa-ca4d-45d5-b3a9-4af8b8287d4b'),
     'demon55b': ('5 / 5 Black Demon', '9b9aeb57-b37d-4a9e-9369-28997479f518'), #ISD AVR M20
     'demon66b': ('6 / 6 Black Demon', '98601612-a132-41ab-9f9b-9d7d085d6beb'),
@@ -379,6 +380,7 @@ tokenTypes = {
     'kaldra44c': ('4 / 4 Colorless Kaldra', '24c9642f-666e-43b3-aaae-d676b94b20ec'),
     'karoxbladewing44r': ('4 / 4 Red Karox Bladewing', '91ca92a6-573f-4396-a114-e5dbab88fe5f'),
     'kavu33b': ('3 / 3 Black Kavu', '7f4f8367-da77-43e5-bf24-ea9326e6aa2a'),
+    'kavu33m': ('3 / 3 White Blue Black Red Green Kavu', '1873e32b-ac06-4b41-8c00-3e291b3d48d6'),
     'keimi33m': ('3 / 3 Black Green Keimi', '37eac0be-d96d-43a0-aee7-6b7a4b5ffc27'),
     'kelp01u': ('0 / 1 Blue Kelp', 'd04cffca-c29f-4381-9854-eb6c362cd56e'),
     'kithkinsoldier11w': ('1 / 1 White Kithkin Soldier', '90605de0-ce75-4a8c-a941-d1feefee7e09'), #LRW SHA
