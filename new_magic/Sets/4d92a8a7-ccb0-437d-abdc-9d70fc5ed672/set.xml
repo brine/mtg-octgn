@@ -5443,6 +5443,17 @@ Whenever a player wins a coin flip, double Okaun's power and toughness until end
       <property name="Number" value="391" />
       <property name="Flags" value="W" />
     </card>
+    <card name="Island" id="3352b213-4ebc-4b4c-ae75-f256fbb33d95">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Island" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s>.)</property>
+      <property name="Artist" value="Jeanne D'Angelo" />
+      <property name="Number" value="392" />
+      <property name="Flags" value="U" />
+    </card>
     <card name="Tamiyo, the Moon Sage" id="5284b87f-d249-43c2-a198-dd03e961bedb">
       <property name="Cost">
         <s value="3">{3}</s>
@@ -8565,6 +8576,22 @@ All Slivers have protection from the chosen color.</property>
       <property name="Artist" value="Jeff Miracola" />
       <property name="Number" value="652" />
     </card>
+    <card name="Predatory Sliver" id="06206a5b-ea4b-4b15-b61f-e0543077d4fb">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Sliver" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Sliver creatures you control get +1/+1.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Mathias Kollros" />
+      <property name="Number" value="654" />
+    </card>
     <card name="Tempered Sliver" id="88b074f3-13fc-44df-84e1-e557b045fb4f">
       <property name="Cost">
         <s value="2">{2}</s>
@@ -8787,6 +8814,31 @@ All Slivers have protection from the chosen color.</property>
       <property name="Artist" value="Jason Rainville" />
       <property name="Number" value="675" />
     </card>
+    <card name="Pyrite Spellbomb" id="6ac01b7b-7f0c-44ce-a183-28b52dd09833">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="R">{R}</s>, Sacrifice Pyrite Spellbomb: It deals 2 damage to any target.
+<s value="1">{1}</s>, Sacrifice Pyrite Spellbomb: Draw a card.</property>
+      <property name="Artist" value="Alexandre Leoni" />
+      <property name="Number" value="676" />
+    </card>
+    <card name="Command Tower" id="5e97d936-c3dc-42ae-a028-4a183d13ccc8">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add one mana of any color in your commander's color identity.</property>
+      <property name="Artist" value="Kevin Gnutzmans" />
+      <property name="Number" value="677" />
+      <property name="Flags" value="M" />
+    </card>
     <card name="Torbran, Thane of Red Fell" id="4438562b-d5af-473d-a6c9-1bc0076341f7">
       <property name="Cost">
         <s value="1">{1}</s>
@@ -8816,6 +8868,22 @@ All Slivers have protection from the chosen color.</property>
       <property name="Artist" value="Sidharth Chaturvedi" />
       <property name="Number" value="679" />
       <property name="Flags" value="C" />
+    </card>
+    <card name="Shadowborn Apostle" id="c29c6d37-785b-4d3a-9e7d-7963710538b1">
+      <property name="Cost">
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Cleric" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">A deck can have any number of cards named Shadowborn Apostle.
+<s value="B">{B}</s>, Sacrifice six creatures named Shadowborn Apostle: Search your library for a Demon creature card, put it onto the battlefield, then shuffle.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Jakub Rebelka" />
+      <property name="Number" value="683" />
     </card>
     <card name="Shadowborn Apostle" id="a78bc53e-7106-489f-8818-adef7200e2f8">
       <property name="Cost">
@@ -8955,6 +9023,85 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
       <property name="Toughness" value="*" />
       <property name="Artist" value="Richard Kane Ferguson" />
       <property name="Number" value="698" />
+    </card>
+    <card name="Olivia, Mobilized for War" id="a890887b-38ed-4794-99d1-f1a574428d2b">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor Black Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Vampire Knight" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Flying
+Whenever another creature enters the battlefield under your control, you may discard a card. If you do, put a +1/+1 counter on that creature, it gains haste until end of turn, and it becomes a Vampire in addition to its other types.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="3" />
+      <property name="Artist" value="Livia Prima" />
+      <property name="Number" value="699" />
+    </card>
+    <card name="Huntmaster of the Fells" id="b3e861d2-d0a6-4a00-a4e1-4e10f038309a">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Red Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Werewolf" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever this creature enters the battlefield or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.
+At the beginning of each upkeep, if no spells were cast last turn, transform Huntmaster of the Fells.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Chris Rahn" />
+      <property name="Number" value="700" />
+      <alternate name="Ravager of the Fells" type="transform">
+        <property name="Cost" />
+        <property name="Color" value="Multicolor Green Red" />
+        <property name="Type" value="Creature" />
+        <property name="Subtype" value="Werewolf" />
+        <property name="Rules">Trample
+Whenever this creature transforms into Ravager of the Fells, it deals 2 damage to target opponent or planeswalker and 2 damage to up to one target creature that player or that planeswalker's controller controls.
+At the beginning of each upkeep, if a player cast two or more spells last turn, transform Ravager of the Fells.</property>
+        <property name="Power" value="4" />
+        <property name="Toughness" value="4" />
+      </alternate>
+    </card>
+    <card name="Elspeth, Knight-Errant" id="41f40636-6899-4ea8-adda-9b60bcde18a0">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Elspeth" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">+1: Create a 1/1 white Soldier creature token.
++1: Target creature gets +3/+3 and gains flying until end of turn.
+−8: You get an emblem with "Artifacts, creatures, enchantments, and lands you control have indestructible."</property>
+      <property name="Loyalty" value="4" />
+      <property name="Artist" value="Volkan Baǵa" />
+      <property name="Number" value="701" />
+    </card>
+    <card name="Dragon's Hoard" id="7f29c3b1-58b9-4a7b-8874-3db705cc96f5">
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever a Dragon enters the battlefield under your control, put a gold counter on Dragon's Hoard.
+<s value="T">{T}</s>, Remove a gold counter from Dragon's Hoard: Draw a card.
+<s value="T">{T}</s>: Add one mana of any color.</property>
+      <property name="Artist" value="Pedro Potier" />
+      <property name="Number" value="709" />
     </card>
     <card name="Diabolic Tutor" id="8c6150f2-cc6c-405d-9812-bbbc524ce450">
       <property name="Cost">
@@ -9920,6 +10067,94 @@ Whenever equipped creature deals combat damage to a player, put a +1/+1 counter 
 Equip <s value="2">{2}</s></property>
       <property name="Artist" value="Nils Hamm" />
       <property name="Number" value="1096" />
+    </card>
+    <card name="Elspeth, Sun's Champion" id="97f8d1ca-bc82-453a-b237-ef75ce027b8f">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Elspeth" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">+1: Create three 1/1 white Soldier creature tokens.
+−3: Destroy all creatures with power 4 or greater.
+−7: You get an emblem with "Creatures you control get +2/+2 and have flying."</property>
+      <property name="Loyalty" value="4" />
+      <property name="Artist" value="Uta Natsume" />
+      <property name="Number" value="1140" />
+    </card>
+    <card name="Narset, Parter of Veils" id="000db964-719d-4532-9225-35658565b35d">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Narset" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Each opponent can't draw more than one card each turn.
+−2: Look at the top four cards of your library. You may reveal a noncreature, nonland card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.</property>
+      <property name="Loyalty" value="5" />
+      <property name="Artist" value="Uta Natsume" />
+      <property name="Number" value="1141" />
+    </card>
+    <card name="Garruk Wildspeaker" id="fbbd5627-2f55-4101-981b-49f5f45db578">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Garruk" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">+1: Untap two target lands.
+−1: Create a 3/3 green Beast creature token.
+−4: Creatures you control get +3/+3 and gain trample until end of turn.</property>
+      <property name="Loyalty" value="3" />
+      <property name="Artist" value="Uta Natsume" />
+      <property name="Number" value="1142" />
+    </card>
+    <card name="Saheeli, Sublime Artificer" id="5662d0a5-3222-4ab9-9e15-f06477730b75">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="UR">{U/R}</s>
+        <s value="UR">{U/R}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Hybrid Blue Red" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Saheeli" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever you cast a noncreature spell, create a 1/1 colorless Servo artifact creature token.
+−2: Target artifact you control becomes a copy of another target artifact or creature you control until end of turn, except it's an artifact in addition to its other types.</property>
+      <property name="Loyalty" value="5" />
+      <property name="Artist" value="Uta Natsume" />
+      <property name="Number" value="1143" />
+    </card>
+    <card name="Sarkhan Vol" id="1df8d25e-e519-4197-aa8e-ec596cb2a2d8">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Red Green" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Sarkhan" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">+1: Creatures you control get +1/+1 and gain haste until end of turn.
+−2: Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
+−6: Create five 4/4 red Dragon creature tokens with flying.</property>
+      <property name="Loyalty" value="4" />
+      <property name="Artist" value="Uta Natsume" />
+      <property name="Number" value="1144" />
     </card>
     <card name="Garruk, Caller of Beasts" id="aab08460-3043-4de7-b8ae-92f238318844">
       <property name="Cost">
