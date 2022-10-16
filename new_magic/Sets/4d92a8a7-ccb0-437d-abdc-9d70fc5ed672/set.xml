@@ -6771,7 +6771,7 @@ Other non-Human creatures you control get +1/+1 and have undying. (When a creatu
       <property name="CMC" value="4" />
       <property name="Color" value="Green" />
       <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Elf" />
+      <property name="Subtype" value="Elf Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">First strike
 <s value="T">{T}</s>: Destroy target artifact if its mana value is equal to the amount of unspent mana you have.</property>
@@ -10033,7 +10033,7 @@ Whenever you cast a spell, if it's the second creature spell you cast this turn,
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Scout" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever a land enters the battlefield under your control, investigate. (Create a Clue token. It's an artifact with "<s value="2">{2}</s>, Sacrifice this artifact: Draw a card.")
+      <property name="Rules">Landfall — Whenever a land enters the battlefield under your control, investigate. (Create a Clue token. It's an artifact with "<s value="2">{2}</s>, Sacrifice this artifact: Draw a card.")
 Whenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
@@ -10067,6 +10067,59 @@ Whenever equipped creature deals combat damage to a player, put a +1/+1 counter 
 Equip <s value="2">{2}</s></property>
       <property name="Artist" value="Nils Hamm" />
       <property name="Number" value="1096" />
+    </card>
+    <card name="Azami, Lady of Scrolls" id="d974a337-3139-43ff-a368-6f3d10f53646">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Wizard" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Tap an untapped Wizard you control: Draw a card.</property>
+      <property name="Power" value="0" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Jack Hughes" />
+      <property name="Number" value="1106" />
+    </card>
+    <card name="Liliana of the Dark Realms" id="1bc8751d-0eb6-46fd-88a6-7dd5255a1077">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Liliana" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">+1: Search your library for a Swamp card, reveal it, put it into your hand, then shuffle.
+−3: Target creature gets +X/+X or -X/-X until end of turn, where X is the number of Swamps you control.
+−6: You get an emblem with "Swamps you control have '<s value="T">{T}</s>: Add <s value="B">{B}</s><s value="B">{B}</s><s value="B">{B}</s><s value="B">{B}</s>.'"</property>
+      <property name="Loyalty" value="3" />
+      <property name="Artist" value="Jack Hughes" />
+      <property name="Number" value="1107" />
+    </card>
+    <card name="Adaptive Automaton" id="2f038672-d03c-4349-9261-1b76ae4594c6">
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact Creature" />
+      <property name="Subtype" value="Construct" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">As Adaptive Automaton enters the battlefield, choose a creature type.
+Adaptive Automaton is the chosen type in addition to its other types.
+Other creatures you control of the chosen type get +1/+1.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Jack Hughes" />
+      <property name="Number" value="1109" />
     </card>
     <card name="Elspeth, Sun's Champion" id="97f8d1ca-bc82-453a-b237-ef75ce027b8f">
       <property name="Cost">
@@ -10155,6 +10208,38 @@ Equip <s value="2">{2}</s></property>
       <property name="Loyalty" value="4" />
       <property name="Artist" value="Uta Natsume" />
       <property name="Number" value="1144" />
+    </card>
+    <card name="K'rrik, Son of Yawgmoth" id="a995fd27-b4c9-4620-b759-4755101e1534">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="PB">{B/P}</s>
+        <s value="PB">{B/P}</s>
+        <s value="PB">{B/P}</s>
+      </property>
+      <property name="CMC" value="7" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Phyrexian Horror Minion" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">(<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)
+Lifelink
+For each <s value="B">{B}</s> in a cost, you may pay 2 life rather than pay that mana.
+Whenever you cast a black spell, put a +1/+1 counter on K'rrik, Son of Yawgmoth.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Darren Tan" />
+      <property name="Number" value="1186" />
+    </card>
+    <card name="Forest" id="2fafd821-5bb3-4083-bf3b-ecc4cf6c7468">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Forest" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
+      <property name="Artist" value="Drew Tucker &amp; Post Malone" />
+      <property name="Number" value="1194" />
+      <property name="Flags" value="G" />
     </card>
     <card name="Garruk, Caller of Beasts" id="aab08460-3043-4de7-b8ae-92f238318844">
       <property name="Cost">
