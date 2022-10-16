@@ -134,6 +134,7 @@ tokenTypes = {
     'avatar44w': ('4 / 4 White Avatar', '00348a3e-c739-4a07-a31b-efaff054329d'), #M19
     'avatar36m': ('3 / 6 Multicolor Black Red Avatar', 'd850424b-f0f4-4d40-80fd-d72023ad372e'),
     'badger33g': ('3 / 3 Green Badger', 'a83aae27-1e00-4e1b-9751-e13ed510db66'),
+    'balloon11r': ('1 / 1 Red Balloon', '995db9d5-de24-4029-bf46-f644729a627c'),
     'bat11b': ('1 / 1 Black Bat', '24b07ba5-680d-4646-af54-a9c50410eef0'), #M19
     'bat12b': ('1 / 2 Black Bat', '11645243-4e84-4759-9f9b-1b33809204c1'),
     'bear22g': ('2 / 2 Green Bear', '1eae0d3e-08c1-4dda-99b1-a994f6827b77'), #MPRODY MPRONS C15 ELD
@@ -178,6 +179,7 @@ tokenTypes = {
     'cat22g2': ('2 / 2 Green Cat', 'ec8820fa-c686-45ee-ae32-f544286debba'), #haste
     'cat21b': ('2 / 1 Black Cat', 'f78c5859-a94a-4463-8a5c-7a21232eed5c'),
     'cat22w': ('2 / 2 White Cat', '685e225d-53c4-41eb-808a-95b8fcac28a7'), #SOM M13
+    'cat22w2': ('2 / 2 White Cat', '58a54870-fd1b-456c-8332-b70024b3c665'),
     'catdragon33m': ('3 / 3 Multicolor Black Red Green Cat Dragon', '2cece589-5f13-4603-8c3c-0b737638071a'),
     'catsoldier11w': ('1 / 1 White Cat Soldier', 'aa5d018c-51a6-4859-bdf8-a3f15fcdfe36'),
     'catbeast22w': ('2 / 2 White Cat Beast', '1dc455e8-8438-468d-99d5-15dfcf778f07'),
@@ -194,6 +196,7 @@ tokenTypes = {
     'cleric11m': ('1/1 Multicolor White Black Cleric', 'b6e9b1c2-b6c5-4697-88fa-6b59702ffc22'),
     'cleric21w': ('2/1 White Cleric', '068c78c0-2432-428c-8316-13b7b353d9ad'),
     'cloudsprite11u': ('1 / 1 Blue Cloud Sprite', '7499185a-6b3e-4d96-a2c3-947dd0f11629'),
+    'clownrobot11c': ('1 / 1 Colorless Clown Robot', 'b53ec691-4e14-4363-aea0-0c27eb619e47'),
     'clue': ('Clue Artifact', '205743d2-91e7-4e35-899a-d5e1fb2d6ccc'), #SOI SOI SOI SOI SOI SOI
     'construct00c': ('0 / 0 Colorless Construct', 'e7ef7715-68bd-4aa5-872f-72405170d522'),
     'construct11c': ('1 / 1 Colorless Construct', '52b1111f-daf3-4a0d-8d75-e012c7ca3526'),
@@ -202,6 +205,7 @@ tokenTypes = {
     'construct612c': ('6 / 12 Colorless Construct', '35e3799c-dd78-46e1-999b-f9f6abf2fdf9'),
     'construct44c': ('4 / 4 Colorless Construct', '2a8e879e-ddea-43b7-95eb-95cac810ea95'), 
     'construct**c': ('* / * Colorless Construct', 'c93bea45-2e84-441f-ada8-b6970ad23ffb'), #KLD KLD UST
+    'contortionist44u': ('4 / 4 Blue Contortionist', '3e265554-98eb-48f7-96d7-ac6fbd4417d1'), #KLD KLD UST
     'copy': ('Copy', '2736e3d3-a2b6-4af6-a377-f7517da33a75'), 
     'crab03u': ('0 / 3 Blue Crab', 'b4aeebe7-825d-4bc6-a7ea-f3aa5692aead'), 
     'crow11b': ('1 / 1 Black Crow', 'd9b085a5-c6ab-4fe6-aab2-bc5d4ea6d9b9'), 
@@ -548,6 +552,7 @@ tokenTypes = {
     'stormcrow12u': ('1 / 2 Blue Storm Crow', '511492b0-a8da-472c-a3a2-70ea5689acc9'),
     'survivor11r': ('1 / 1 Red Survivor', '4ba76ae2-388e-4a9b-b712-c9d5cd2feff5'),
     'tamiyosjournal': ('Tamiyo''s Journal', '875e7e0b-90e0-4a98-9c8b-186c25515c13'),
+    'teddybear22c': ('2 / 2 Colorless Teddy Bear', '7fb059c7-a0c4-4c0e-b890-eb1d5100db81'),
     'tentacle11u': ('1 / 1 Blue Tentacle', '185200f2-08df-44b0-bde4-272f1ed73b45'),
     'tetravite11c': ('1 / 1 Colorless Tetravite', '64b62223-0bbc-4f2d-9597-2f6e9ddf0c1f'),
     'theatropal44b': ('4 / 4 Black The Atropal', '60f9a7ad-f272-44e6-9ae2-a29640d51302'),
@@ -617,6 +622,7 @@ tokenTypes = {
     'zombie**m': ('* / * Multicolor Blue Black Zombie', 'b88226b6-f9c7-436f-bc7e-07d901cc54db'),
     'zombiearmy00b': ('0 / 0 Black Zombie Army', 'cd37a3f8-a28b-418e-acd6-9c8fc0e6a233'), #WAR WAR WAR
     'zombieberserker22b': ('2 / 2 Black Zombie Berserker', 'cfe4058e-666e-4846-88a9-b3d1d7647225'),
+    'zombieemployee22b': ('2 / 2 Black Zombie Employee', '97a7b636-859e-4a75-9be8-e95f54743b32'),
     'zombiehorror**b': ('* / * Black Zombie Horror', '5f80aca2-6de2-44ad-8e56-669ccd52276b'),
     'zombiegiant55b': ('5 / 5 Black Zombie Giant', '84f5b8a0-050e-4078-88e2-0f9dd6182ea0'),
     'zombieknight22b': ('2 / 2 Black Zombie Knight', '1898e08c-7a88-408e-93d3-5f939f65a5e6'),

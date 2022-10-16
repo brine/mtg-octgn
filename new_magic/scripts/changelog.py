@@ -436,5 +436,8 @@ changelog = {
         ]),
     3060228: ("3.6.2.28", "September 4 2022", [
         "Dominaria United added"
+        ]),
+    3060230: ("3.6.2.30", "October 13 2022", [
+        "Added W40K, 30th Anniversry, Unfinity"
         ])
 }
