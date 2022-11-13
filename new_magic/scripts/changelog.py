@@ -439,5 +439,8 @@ changelog = {
         ]),
     3060230: ("3.6.2.30", "October 13 2022", [
         "Added W40K, 30th Anniversry, Unfinity"
+        ]),
+    3060231: ("3.6.2.31", "November 12 2022", [
+        "Added Brothers War, some missing promos and tokens"
         ])
 }

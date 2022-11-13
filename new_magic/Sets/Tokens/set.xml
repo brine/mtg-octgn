@@ -353,6 +353,11 @@
                 <property name="Number" value="13" />
                 <property name="Flags" value="TKHM" />
             </alternate>
+            <alternate name="Bear" type="5">
+                <property name="Artist" value="Alexandre Honore" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="TBRO" />
+            </alternate>
         </card>
         <card name="Bear" id="5bedae6c-9574-4b52-b538-1336330b0e3e">
             <property name="Color" value="Green" />
@@ -1232,6 +1237,11 @@
                 <property name="Number" value="348" />
                 <property name="Flags" value="SLD"/>
             </alternate>
+            <alternate name="Clue" type="11">
+                <property name="Artist" value="Mirko Failoni" />
+                <property name="Number" value="21" />
+                <property name="Flags" value="T40K"/>
+            </alternate>
         </card>
         <card name="Construct" id="e7ef7715-68bd-4aa5-872f-72405170d522">
             <property name="Color" value="Colorless" />
@@ -1253,6 +1263,11 @@
                 <property name="Artist" value="Mark Behm" />
                 <property name="Number" value="16" />
                 <property name="Flags" value="TMH2"/>
+            </alternate>
+            <alternate name="Construct" type="3">
+                <property name="Artist" value="Scott Murphy" />
+                <property name="Number" value="5" />
+                <property name="Flags" value="TBRO"/>
             </alternate>
         </card>
         <card name="Construct" id="8941be34-f9d7-41f0-9749-400de2399c54">
@@ -1315,6 +1330,17 @@
             <property name="Artist" value="Craig J Spearing" />
             <property name="Number" value="6" />
             <property name="Flags" value="TNEO"/>
+        </card>
+        <card name="Construct" id="2f5e598f-b782-45f8-9c20-3f81fc03b655">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Construct" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Deruchenko Alexander" />
+            <property name="Number" value="4" />
+            <property name="Flags" value="TBRO"/>
         </card>
         <card name="Construct" id="35e3799c-dd78-46e1-999b-f9f6abf2fdf9">
             <property name="Color" value="Colorless" />
@@ -2640,6 +2666,18 @@
                 <property name="Flags" value="TUNF" />
             </alternate>
         </card>
+        <card name="Forest Dryad" id="25845c50-fb84-4290-9ac8-553a73765cb1">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Land Creature" />
+            <property name="Subtype" value="Forest Dryad" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules"><i>(This creature is affected by summoning sickness, and it has "<s value="T">{T}</s>: Add <s value="G">{G}</s>.")</i></property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Donato Giancola" />
+            <property name="Number" value="3" />
+            <property name="Flags" value="TBRO"/>
+        </card>
         <card name="Fractal" id="e9f059e6-5cf8-4ba0-b51a-7fe9c75e0304">
             <property name="Color" value="Multicolor Green Blue" />
             <property name="Type" value="Creature" />
@@ -3110,6 +3148,17 @@
                 <property name="Flags" value="TM20"/>
             </alternate>
         </card>
+        <card name="Golem" id="22b63d54-3ce3-470c-a4fc-2b7c7c98fffc">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Golem" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="*" />
+            <property name="Toughness" value="*" />
+            <property name="Artist" value="Olivier Bernard" />
+            <property name="Number" value="6" />
+            <property name="Flags" value="TBRO"/>
+        </card>
         <card name="Golem" id="8c4bfa13-2d5b-40c0-86d5-330e812efcf2">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Artifact Creature" />
@@ -3382,7 +3431,7 @@
             <property name="Number" value="15" />
             <property name="Flags" value="TC14"/>
         </card>
-        <card name="Horror" id="ae7470fa-052f-4daa-b44a-ec3949a67845">
+        <card name="Phyrexian Horror" id="ae7470fa-052f-4daa-b44a-ec3949a67845">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Artifact Creature" />
             <property name="Subtype" value="Horror" />
@@ -3390,8 +3439,8 @@
             <property name="Power" value="*" />
             <property name="Toughness" value="*" />
             <property name="Artist" value="Scott Chou" />
-			<property name="Number" value="23" />
-			<property name="Flags" value="TC19"/>
+			<property name="Number" value="11" />
+			<property name="Flags" value="TBRC"/>
         </card>
         <card name="Horse" id="ca3bd733-9569-44c0-9d59-888d98ef7bf9">
             <property name="Color" value="White" />
@@ -4365,6 +4414,18 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Number" value="3" />
             <property name="Flags" value="TJOU"/>
         </card>
+        <card name="Mishra's Warform" id="5d6bec32-8817-41e4-b9b5-94c8983cb177">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Construct" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules"><i>(This token has the abilities and other types of the copied artifact.)</i></property>
+            <property name="Power" value="4" />
+            <property name="Toughness" value="4" />
+            <property name="Artist" value="Tyler Walpole" />
+            <property name="Number" value="9" />
+            <property name="Flags" value="TBRC"/>
+        </card>
         <card name="The Monarch" id="2b8d6bc4-b81b-40a0-93fb-5081fcb1990d">
             <property name="Color" value="Colorless" />
             <property name="Type" value="" />
@@ -4437,7 +4498,7 @@ Flying, vigilance, trample, lifelink, haste</property>
                 <property name="Flags" value="TNPH"/>
             </alternate>
         </card>
-        <card name="Myr" id="039bc09e-f7fe-40df-98e1-f6faea3620a6">
+        <card name="Phyrexian Myr" id="039bc09e-f7fe-40df-98e1-f6faea3620a6">
             <property name="Color" value="Blue" />
             <property name="Type" value="Artifact Creature" />
             <property name="Subtype" value="Myr" />
@@ -4445,8 +4506,8 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Power" value="2" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="Daarken" />
-			<property name="Number" value="7" />
-			<property name="Flags" value="T2XM"/>
+			<property name="Number" value="5" />
+			<property name="Flags" value="TBRC"/>
         </card>
         <card name="Nightmare" id="aa5e4fd3-9785-49bb-80f4-733a4730708a">
             <property name="Color" value="Multicolor Blue Black Nightmare" />
@@ -4872,6 +4933,11 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Artist" value="David Auden Nash" />
             <property name="Number" value="23" />
             <property name="Flags" value="TDMU"/>
+            <alternate name="Powerstone" type="1">
+                <property name="Artist" value="Karl Kopinski" />
+                <property name="Number" value="7" />
+                <property name="Flags" value="TBRO"/>
+            </alternate>
         </card>
         <card name="Prism" id="0525220c-be68-4bdb-92bb-e253a4257969">
             <property name="Color" value="Colorless" />
@@ -4928,7 +4994,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Number" value="3" />
             <property name="Flags" value="TSHM"/>
             <alternate name="Rat" type="1">
-                    <property name="Artist" value="Nils Hamm" />
+                <property name="Artist" value="Nils Hamm" />
                 <property name="Number" value="2" />
                 <property name="Flags" value="TGTC"/>
             </alternate>
@@ -5224,6 +5290,14 @@ Flying, vigilance, trample, lifelink, haste</property>
 			<property name="Number" value="46" />
 			<property name="Flags" value="TCLB"/>
         </card>
+        <card name="Scrap" id="d6a8bff8-6aad-4d6e-a18c-18066784fb7b">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact" />
+            <property name="Rarity" value="Token" />
+            <property name="Artist" value="Drew Tucker" />
+            <property name="Number" value="12" />
+            <property name="Flags" value="TBRC"/>
+        </card>
         <card name="Sculpture" id="50578a18-c989-4a5b-b755-bc340bb0d765">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Artifact Creature" />
@@ -5331,7 +5405,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Type" value="Enchantment" />
             <property name="Subtype" value="Shard" />
             <property name="Rarity" value="Token" />
-            <property name="Rules"><s value="G">{2}</s>, Sacrifice this enchantment: Scry 1, then draw a card.</property>
+            <property name="Rules"><s value="2">{2}</s>, Sacrifice this enchantment: Scry 1, then draw a card.</property>
             <property name="Artist" value="Aaron Miller" />
             <property name="Number" value="1" />
             <property name="Flags" value="TKHM"/>
@@ -5617,6 +5691,21 @@ Flying, vigilance, trample, lifelink, haste</property>
                 <property name="Number" value="4" />
                 <property name="Flags" value="TDMU"/>
             </alternate>
+            <alternate name="Soldier" type="15">
+                <property name="Artist" value="LiXin Yin" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="T40K"/>
+            </alternate>
+            <alternate name="Soldier" type="16">
+                <property name="Artist" value="LiXin Yin" />
+                <property name="Number" value="3" />
+                <property name="Flags" value="T40K"/>
+            </alternate>
+            <alternate name="Soldier" type="17">
+                <property name="Artist" value="LiXin Yin" />
+                <property name="Number" value="4" />
+                <property name="Flags" value="T40K"/>
+            </alternate>
         </card>
         <card name="Soldier" id="d4d816a4-c805-4ae4-b633-7fd5515f5db4">
             <property name="Color" value="White" />
@@ -5675,6 +5764,22 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Artist" value="Johann Bodin" />
             <property name="Number" value="7" />
             <property name="Flags" value="TTHS"/>
+        </card>
+        <card name="Soldier" id="f5b5adad-5eed-4134-a5f6-c6f9bd080f67">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Soldier" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Gabor Szikszai" />
+            <property name="Number" value="8" />
+            <property name="Flags" value="TBRO"/>
+            <alternate name="Soldier" type="1">
+				<property name="Artist" value="Kev Walker" />
+                <property name="Number" value="9" />
+                <property name="Flags" value="TBRO"/>
+            </alternate>
         </card>
         <card name="Soldier" id="fe57dd41-0ad7-4570-b1cb-fe2a4218bcb4">
             <property name="Color" value="Multicolor Red White" />
@@ -5955,6 +6060,19 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Artist" value="Dan Scott" />
             <property name="Number" value="4" />
             <property name="Flags" value="TAVR"/>
+        </card>
+        <card name="Spirit" id="d9dedaf6-7910-4197-adac-8287c673b4bf">
+            <property name="Color" value="Blue" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Spirit" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Vigilance
+Whenever you draw a card, put a +1/+1 counter on this creature.</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Tony Foti" />
+            <property name="Number" value="1" />
+            <property name="Flags" value="TBRO"/>
         </card>
         <card name="Spirit" id="2d0170ba-72ef-4172-9971-a38325015d2f">
             <property name="Color" value="Red" />
@@ -6329,6 +6447,11 @@ Flying, vigilance, trample, lifelink, haste</property>
                 <property name="Artist" value="Johan Grenier" />
                 <property name="Number" value="12" />
                 <property name="Flags" value="TNEC"/>
+            </alternate>
+            <alternate name="Thopter" type="8">
+                <property name="Artist" value="Samuel Perin" />
+                <property name="Number" value="10" />
+                <property name="Flags" value="TBRO"/>
             </alternate>
         </card>
         <card name="Thrull" id="20e4653d-f948-46e4-9851-9a1a547d2889">
@@ -7324,6 +7447,17 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Number" value="6" />
             <property name="Flags" value="TBNG"/>
         </card>
+        <card name="Zombie" id="4258d9ca-2b98-4b79-866d-6330ed397910">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Zombie" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Kieran Yanner" />
+			<property name="Number" value="11" />
+			<property name="Flags" value="TBRO"/>
+        </card>
         <card name="Zombie" id="bcb88192-ce2f-4288-8799-c9264b38c78f">
             <property name="Color" value="Blue" />
             <property name="Type" value="Creature" />
@@ -8206,6 +8340,17 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Number" value="18" />
             <property name="Flags" value="TNEO"/>
         </card>
+        <card name="Saheeli's Emblem" id="5e17f597-a343-4e1e-989f-36cf1a6fdcd1">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Subtype" value="Saheeli, Filigree Master" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Artifact creatures you control get +1/+1.
+Artifact spells you cast cost <s value="1">{1}</s>: less to cast.</property>
+            <property name="Artist" value="Aurore Folny" />
+            <property name="Number" value="12" />
+            <property name="Flags" value="TBRO"/>
+        </card>
         <card name="Angel of Sanctions" id="c9642934-ba2e-4927-b60c-997348c007ed">
             <property name="Color" value="White" />
             <property name="Type" value="Creature" />
@@ -8587,6 +8732,258 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Artist" value="Deruchenko Alexander" />
             <property name="Number" value="5" />
             <property name="Flags" value="TMH2"/>
+        </card>
+		
+		
+        <card name="Astartes Warrior" id="0a6bb9c8-1bb5-4eff-8289-fffd11ae6707">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Astartes Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Vigilance</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Dmitriy Mironov" />
+            <property name="Number" value="1" />
+            <property name="Flags" value="T40K"/>
+        </card>
+		
+        <card name="Space Marine Devastator" id="b5615cf5-217b-4f2d-9ade-07202ac4121e">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Astartes Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">When Space Marine Devastator enters the battlefield, destroy up to one target artifact or enchantment.</property>
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Dmitriy Mironov" />
+            <property name="Number" value="5" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Ultramarines Honour Guard" id="6257356b-8dbb-41ff-9fd2-d42ac0ee134b">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Astartes Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Other creatures you control get +1/+1.</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Jake Murray" />
+            <property name="Number" value="6" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Zephyrim" id="26b27892-ca5f-4b84-8909-4f89f37c9d8a">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Human Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying, vigilance</property>
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Jon Neimeister" />
+            <property name="Number" value="7" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Sicarian Infiltrator" id="4509ea54-5d93-4b5f-b7e4-20fedecf3f12">
+            <property name="Color" value="Blue" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Human Soldier" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">When Sicarian Infiltrator enters the battlefield, draw a card.</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Xavier Ribeiro" />
+            <property name="Number" value="8" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Tyrano Gargoyle" id="5d0d5aae-3947-4a1a-a583-6e1b621b6cf2">
+            <property name="Color" value="Blue" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Tyranid Gargoyle" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="David Astruga" />
+            <property name="Number" value="9" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Vanguard Suppressor" id="13406ae4-bb93-4360-9744-f341bcd79f38">
+            <property name="Color" value="Blue" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Astartes Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying
+Whenever Vanguard Suppressor deals combat damage to a player, draw a card.</property>
+            <property name="Power" value="3" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Fajareka Setiawan" />
+            <property name="Number" value="10" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Arco-Flagellant" id="c9abe3e0-29f9-42d1-9ffc-6a0b3c672114">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Human" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Arco-Flagellant can’t block.
+Pay 3 life: Arco-Flagellant gains indestructible until end of turn.</property>
+            <property name="Power" value="3" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Xavier Ribeiro" />
+            <property name="Number" value="11" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Astartes Warrior" id="8f438766-708f-44cc-a3b6-bf43c73000ff">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Astartes Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Menace</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Helge C. Balzer" />
+            <property name="Number" value="12" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Cherubael" id="22a8e32a-5d09-46c7-870a-20936dd187d6">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Legendary Creature" />
+            <property name="Subtype" value="Demon" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying</property>
+            <property name="Power" value="4" />
+            <property name="Toughness" value="4" />
+            <property name="Artist" value="Irina Nordsol" />
+            <property name="Number" value="13" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Necron Warrior" id="761c034e-0243-4765-94a5-fc2961a6b423">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Necron Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Games Workshop" />
+            <property name="Number" value="14" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Plaguebearer of Nurgle" id="79a6c347-5b88-45d3-b8e3-e7273f1b388c">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Demon" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Games Workshop" />
+            <property name="Number" value="15" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Spawn" id="fea163ac-c8d3-405e-b72b-83f0670ff87b">
+            <property name="Color" value="Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Spawn" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Oleg Bulakh" />
+            <property name="Number" value="16" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Tyranid" id="607155dc-1cd1-4c35-a11f-12ec8ee06af2">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Tyranid" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Slawomir Maniak" />
+            <property name="Number" value="17" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Tyranid" id="606f0815-0581-4a02-94f4-12ee8eb36d7d">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Tyranid" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="5" />
+            <property name="Toughness" value="5" />
+            <property name="Artist" value="Antonio José Manzanedo" />
+            <property name="Number" value="18" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Tyranid Warrior" id="e984d9b8-a9f9-428e-bf32-e76c87d398f0">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Tyranid Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Trample</property>
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Sergio Cosmai" />
+            <property name="Number" value="19" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Blue Horror" id="49baccef-4cd6-4db9-982d-a69b3ecc9a29">
+            <property name="Color" value="Multicolor Blue Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Demon Horror" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Whenever you cast an instant or sorcery spell, this creature deals 1 damage to any target.</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Andrey Nyarl" />
+            <property name="Number" value="20" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Insect" id="7f934d91-8313-4345-85a8-dcf84b4c3cab">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Insect" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Bartek Fedyczak" />
+            <property name="Number" value="22" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Robot" id="3ce51609-1262-45ed-ba8c-55cdd135f276">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Robot" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">This creature can’t block.</property>
+            <property name="Power" value="4" />
+            <property name="Toughness" value="4" />
+            <property name="Artist" value="Philip Helliwell" />
+            <property name="Number" value="23" />
+            <property name="Flags" value="T40K"/>
+        </card>
+        <card name="Laserbeak" id="810aabc0-d582-43f5-a28e-e4105d56866f">
+            <property name="Color" value="Blue" />
+            <property name="Type" value="Legendary Artifact Creature" />
+            <property name="Subtype" value="Robot" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying, hexproof</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="VOLTA Creation" />
+            <property name="Number" value="1" />
+            <property name="Flags" value="TBOT"/>
+        </card>
+        <card name="Ravage" id="ef2eef22-695d-4783-8b4f-fde274a92900">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Legendary Artifact Creature" />
+            <property name="Subtype" value="Robot" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Menace, deathtouch</property>
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="VOLTA Creation" />
+            <property name="Number" value="2" />
+            <property name="Flags" value="TBOT"/>
         </card>
     </cards>
 </set>
