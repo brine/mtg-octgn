@@ -251,8 +251,11 @@
       <cardaction menu="Add Other Counter..." shortcut="ctrl+0" batchExecute="addMarker" />
       <cardaction menu="Mark as Commander" shortcut="ctrl+shift+c" execute="commanderToggle" />
     </cardactions>
-    <cardaction menu="Auto-Create Token" shortcut="ctrl+shift+T" execute="autoCreateToken" />
-    <cardaction menu="Swap Token Art" execute="nextTokenArt" />
+	<cardactions menu="Auto-Token..." >
+		<cardaction menu="Auto-Create Token" shortcut="ctrl+shift+T" execute="autoFindToken" />
+		<cardaction menu="Manually Assign Token" execute="manualAssignToken" />
+		<cardaction menu="Swap Token Art" execute="nextTokenArt" />
+	</cardactions>
     <cardaction menu="Align Card" batchExecute="alignCard" />
     <cardaction menu="Check Card Rulings (on Gatherer)" execute="rulings" />
     <cardaction menu="Submit Tags" execute="submitTags" />

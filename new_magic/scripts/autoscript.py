@@ -1,3 +1,6 @@
+import clr
+clr.AddReference('System.Web.Extensions')
+from System.Web.Script.Serialization import JavaScriptSerializer
 
 def clearCache(group, x = 0, y = 0):
     if confirm("Reset the Autoscript Tag cache?"):
@@ -1063,26 +1066,151 @@ def remoteAlign(cards):  ## Remote alignment function for the stack
 #Smart Token/Markers
 ############################
 
-def autoCreateToken(card, x = 0, y = 0):
-    mute()
-    text = ""
-    tokens = getTags(card, 'autotoken')
-    if tokens != None:
-        for token in tokens:
-            x += 10*(-1 if y < 0 else 1)
-            y += 10*(-1 if y < 0 else 1)
-            tokencard = tokenArtSelector(token)
-            tokencard.moveToTable(x ,y)
-            text += "{}/{} {} {}, ".format(tokencard.Power, tokencard.Toughness, tokencard.Color, tokencard.Name)
-        if autoscriptCheck():
-            cardalign()
-        notify("{} creates {}.".format(me, text[0:-2]))
+CardColors = {"G": "Green", "R": "Red", "W": "White", "U": "Blue", "B": "Black"}
 
+def getStoredTokenData():
+    mute()
+    ret = {}
+    ## repair the string-safe stored token data in the game settings
+    tokendata = JavaScriptSerializer().DeserializeObject(getSetting("savedTokens", "{}"))
+    for kvpair in tokendata:
+        ret[kvpair.Key] = [id for id in kvpair.Value]
+    return ret
+    
+def autoFindToken(card, x = 0, y = 0):
+    mute()
+    savedTokens = getStoredTokenData()
+    if card.name in savedTokens:
+        tokenIds = savedTokens[card.name]
+    else:
+        ## check to see if the rules text mentions tokens
+        if "token" and "create" not in card.Rules.lower():
+            whisper("{}'s rules text does not mention creating a token.".format(card))
+            return
+        data = readWebUrl("https://api.scryfall.com/cards/" + card.model)
+        if (data == None):
+            return
+        json = dict(JavaScriptSerializer().DeserializeObject(data))
+        if "all_parts" not in json:
+            whisper("{}'s data does not include token references.".format(card))
+            return
+        parts = [p for p in json["all_parts"]
+                    if p["object"] == "related_card" 
+                    and p["component"] == "token" 
+                    and p["name"] != "Copy" 
+                    ]
+        if len(parts) == 0:
+            whisper("{}'s data does not include token references.".format(card))
+            return
+        tokenIds = []
+        for part in parts:
+            tokenData = readWebUrl(part["uri"])
+            if (tokenData != None):
+                tokenJson = dict(JavaScriptSerializer().DeserializeObject(tokenData))
+                query = { }
+                query["Rarity"] = "token"
+                query["Name"] = tokenJson["name"]
+                if "power" in tokenJson:
+                    query["Power"] = tokenJson["power"]
+                if "toughness" in tokenJson:
+                    query["Toughness"] = tokenJson["toughness"]               
+                if "colors" in tokenJson:
+                    jsonColors = tokenJson["colors"]
+                    colors = []
+                    if len(jsonColors) == 0:
+                        colors.append("Colorless")
+                    else:
+                        if len(jsonColors) > 1:
+                            color.append("Multicolor")
+                        for color in jsonColors:
+                            colors.append(CardColors[color])                
+                    query["Color"] = " ".join(colors)
+                
+                typeline = tokenJson["type_line"].split(" — ")
+                query["Type"] = typeline[0].replace("Token ", "").replace("Token", "")
+                if len(typeline) > 1:
+                    query["Subtype"] = typeline[1]
+                
+                if "oracle_text" in tokenJson:
+                    if tokenJson["oracle_text"] == "":
+                        query["Rules"] = None
+                    else:
+                        query["Rules"] = tokenJson["oracle_text"]
+                
+                results = queryCard(query, True)
+                ## complex rules text may not be parsed correctly, check to see if the token is already unique by ignoring the rules text completely.  
+                if len(results) == 0:
+                    del query["Rules"]
+                    results = queryCard(query, True)
+                ## no tokens found, either there's a typo in the token set data or the token doesn't exist.
+                if len(results) == 0:
+                    whisper("Cannot identify a token for {}.".format(card))
+                ## complex rules text may not be parsed correctly, check keywords instead.
+                if len(results) > 1:
+                    if "keywords" in tokenJson:
+                        keywords = tokenJson["keywords"]
+                        for keyword in keywords:
+                            query["Rules"] = keyword
+                            keywordResult = queryCard(query, False)
+                            results = set(results).intersection(keywordResult)
+                ## if the script was able to identify a single token
+                if len(results) == 1:
+                    results = results[0]
+                    tokenIds.append(results)
+                ## if there's still multiple possible tokens, have the player manually choose one
+                else:
+                    (results, count) = askCard({"Model": results}, "or", "Multiple possible tokens found!.")
+                    if results != None:
+                        tokenIds.append(results)
+                
+        savedTokens[card.name] = tokenIds
+        setSetting("savedTokens", str(savedTokens))
+    tokencount = 0
+    for id in tokenIds:
+        token = table.create(id, x + 10*tokencount, y + 10*tokencount, 1)
+        tokencount += 1
+        notify("{}'s {} created a {} token.".format(me, card, token))
+        
+def manualAssignToken(card, x = 0, y = 0):
+    mute()
+    choices = []
+    qty = askInteger("How many different tokens does {} make?\nEnter 0 to reset the card's tokens.\n\n{}".format(card.name, card.Rules), 1)
+    if qty == None or qty < 0: return
+    while len(choices) < qty:
+        (choice, dummy) = askCard({"Rarity": "token"}, "and", "Assign token #{} for {}".format(len(choices) + 1, card.name))
+        if choice == None:
+            return
+        choices.append(choice)
+    savedTokens = getStoredTokenData()
+    if len(choices) == 0:
+        if card.name in savedTokens:
+            del savedTokens[card.name]
+    else:
+        savedTokens[card.name] = choices
+    setSetting("savedTokens", str(savedTokens))
+        
+    
+def readWebUrl(url, timeout = 5000):
+    mute()
+    (data, code) = webRead(url, timeout)
+    if code == 200:
+        return data
+    else:
+        whisper("ERROR: Could not read URL (error code {})".format(code))
+
+def getStoredTokenArts():
+    mute()
+    ret = {}
+    ## repair the string-safe stored token data in the game settings
+    tokendata = JavaScriptSerializer().DeserializeObject(getSetting("tokenArts", "{}"))
+    for kvpair in tokendata:
+        ret[kvpair.Key] = kvpair.Value
+    return ret
+    
 def tokenArtSelector(tokenName):
     mute()
     token = table.create(tokenTypes[tokenName][1], 0, 0, 1, persist = False)
-    artDict = getSetting('tokenArts', convertToString({}))
-    artDict = eval(artDict)
+    artDict = getStoredTokenArts()
     if token.model in artDict:
         token.alternate = artDict[token.model]
     return token
@@ -1101,10 +1229,9 @@ def nextTokenArt(card, x = 0, y = 0):
     if not artIndex in artList:
         artIndex = ''
     card.alternate = artIndex
-    artDict = getSetting('tokenArts', convertToString({}))
-    artDict = eval(artDict)
+    artDict = getStoredTokenArts()
     artDict[card.model] = artIndex
-    setSetting('tokenArts', convertToString(artDict))
+    setSetting('tokenArts', str(artDict))
 
 def autoAddMarker(card, x = 0, y = 0):
     mute()
