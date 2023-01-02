@@ -58,6 +58,17 @@
     <marker src="Markers/m1m0.png" id="m1m0" name=" -1/-0 counter" />
     <marker src="Markers/m2m1.png" id="m2m1" name=" -2/-1 counter" />
     <marker src="Markers/m2m2.png" id="m2m2" name=" -2/-2 counter" />
+	
+    <marker src="Markers/p1p1.png" id="+1/+1" name=" +1/+1 counter" />
+    <marker src="Markers/m1m1.png" id="-1/-1" name=" -1/-1 counter" />
+    <marker src="Markers/p1p0.png" id="+1/+0" name=" +1/+0 counter" />
+    <marker src="Markers/p0p1.png" id="+0/+1" name=" +0/+1 counter" />
+    <marker src="Markers/p1p2.png" id="+1/+2" name=" +1/+2 counter" />
+    <marker src="Markers/p2p2.png" id="+2/+2" name=" +2/+2 counter" />
+    <marker src="Markers/m0m2.png" id="-0/-2" name=" -0/-2 counter" />
+    <marker src="Markers/m1m0.png" id="-1/-0" name=" -1/-0 counter" />
+    <marker src="Markers/m2m1.png" id="-2/-1" name=" -2/-1 counter" />
+    <marker src="Markers/m2m2.png" id="-2/-2" name=" -2/-2 counter" />
 
     <marker src="Markers/monstrous.png" id="monstrous" name="monstrous indicator" />
     <marker src="Markers/renowned.png" id="renowned" name="renown indicator" />
@@ -239,17 +250,16 @@
     <cardaction menu="Move to Hand" shortcut="ctrl+H" execute="tohand" />
     <cardaction menu="Clear Card" shortcut="esc" execute="clear" />
     <cardactions menu="Add/Remove Counters...">
-      <cardaction menu="Auto-Add Counter" shortcut="ctrl+1" execute="autoAddMarker" />
-      <cardaction menu="Add +1/+1 Counter" shortcut="ctrl+2" execute="addPlusOneMarker" />
-      <cardaction menu="Add -1/-1 Counter" shortcut="ctrl+3" execute="addMinusOneMarker" />
-      <cardaction menu="Add Charge Counter" shortcut="ctrl+4" execute="addChargeMarker" />
-      <cardaction menu="Add Smart-Counter" shortcut="ctrl+shift+1" execute="smartMarker" />
-      <cardaction menu="Auto-Remove Counter" shortcut="backspace" execute="autoRemoveMarker" />
-      <cardaction menu="Remove +1/+1 Counter" shortcut="ctrl+shift+2" execute="removePlusOneMarker" />
-      <cardaction menu="Remove -1/-1 Counter" shortcut="ctrl+shift+3" execute="removeMinusOneMarker" />
-      <cardaction menu="Remove Charge Counter" shortcut="ctrl+shift+4" execute="removeChargeMarker" />
-      <cardaction menu="Add Other Counter..." shortcut="ctrl+0" batchExecute="addMarker" />
-      <cardaction menu="Mark as Commander" shortcut="ctrl+shift+c" execute="commanderToggle" />
+		<cardaction menu="Auto-Add Counter" shortcut="ctrl+1" execute="autoAddMarker" />
+		<cardaction menu="Manually Assign Counters" shortcut="ctrl+shift+1" execute="manualAssignMarker" />
+		<cardaction menu="Smart-Copy Counter" shortcut="ctrl+2" execute="smartCopyMarker" />
+		<cardaction menu="Smart-Paste Counter" shortcut="ctrl+shift+2" execute="smartPasteMarker" />
+		<separator />
+		<cardaction menu="Add +1/+1 Counter" shortcut="ctrl+3" execute="addPlusOneMarker" />
+		<cardaction menu="Add -1/-1 Counter" shortcut="ctrl+shift+3" execute="addMinusOneMarker" />
+		<cardaction menu="Add Charge Counter" shortcut="ctrl+4" execute="addChargeMarker" />
+		<cardaction menu="Add Other Counter..." shortcut="ctrl+0" batchExecute="addMarker" />
+		<cardaction menu="Mark as Commander" shortcut="ctrl+shift+c" execute="commanderToggle" />
     </cardactions>
 	<cardactions menu="Auto-Token..." >
 		<cardaction menu="Auto-Create Token" shortcut="ctrl+shift+T" execute="autoFindToken" />
@@ -258,7 +268,6 @@
 	</cardactions>
     <cardaction menu="Align Card" batchExecute="alignCard" />
     <cardaction menu="Check Card Rulings (on Gatherer)" execute="rulings" />
-    <cardaction menu="Submit Tags" execute="submitTags" />
   </table>
   <player summary="L{#Life}|P{#Poison}|H{#Hand}|C{#General}">
     <counter name="Life" icon="counters/life.png" default="20" />

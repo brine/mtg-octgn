@@ -1068,7 +1068,7 @@ def remoteAlign(cards):  ## Remote alignment function for the stack
 
 CardColors = {"G": "Green", "R": "Red", "W": "White", "U": "Blue", "B": "Black"}
 
-def getStoredTokenData():
+def getSavedTokenData():
     mute()
     ret = {}
     ## repair the string-safe stored token data in the game settings
@@ -1079,7 +1079,7 @@ def getStoredTokenData():
     
 def autoFindToken(card, x = 0, y = 0):
     mute()
-    savedTokens = getStoredTokenData()
+    savedTokens = getSavedTokenData()
     if card.name in savedTokens:
         tokenIds = savedTokens[card.name]
     else:
@@ -1181,7 +1181,7 @@ def manualAssignToken(card, x = 0, y = 0):
         if choice == None:
             return
         choices.append(choice)
-    savedTokens = getStoredTokenData()
+    savedTokens = getSavedTokenData()
     if len(choices) == 0:
         if card.name in savedTokens:
             del savedTokens[card.name]
@@ -1198,7 +1198,7 @@ def readWebUrl(url, timeout = 5000):
     else:
         whisper("ERROR: Could not read URL (error code {})".format(code))
 
-def getStoredTokenArts():
+def getSavedTokenArts():
     mute()
     ret = {}
     ## repair the string-safe stored token data in the game settings
@@ -1210,7 +1210,7 @@ def getStoredTokenArts():
 def tokenArtSelector(tokenName):
     mute()
     token = table.create(tokenTypes[tokenName][1], 0, 0, 1, persist = False)
-    artDict = getStoredTokenArts()
+    artDict = getSavedTokenArts()
     if token.model in artDict:
         token.alternate = artDict[token.model]
     return token
@@ -1229,46 +1229,123 @@ def nextTokenArt(card, x = 0, y = 0):
     if not artIndex in artList:
         artIndex = ''
     card.alternate = artIndex
-    artDict = getStoredTokenArts()
+    artDict = getSavedTokenArts()
     artDict[card.model] = artIndex
     setSetting('tokenArts', str(artDict))
 
+def getSavedMarkerData():
+    mute()
+    ret = {}
+    ## repair the string-safe stored token data in the game settings
+    data = JavaScriptSerializer().DeserializeObject(getSetting("savedMarkers", "{}"))
+    for kvpair in data:
+        ret[kvpair.Key] = [id for id in kvpair.Value]
+    return ret
+
+def findMarkers(card):
+    mute()
+    savedMarkers = getSavedMarkerData()
+    if card.name in savedMarkers:
+        markers = savedMarkers[card.name]
+    else:
+        markers = []
+        rules = [line.lower() for line in card.rules.splitlines()]
+        for line in rules:
+            idxs = [n for n in xrange(len(line)) 
+                if line.find(" counter on", n) == n
+                or line.find(" counter among", n) == n
+                or line.find(" counter and", n) == n
+                or line.find(" counters on", n) == n
+                or line.find(" counters among", n) == n
+                or line.find(" counters and", n) == n
+                ]
+            if len(idxs) == 0: continue
+            for index in idxs:
+                text = line[:index]
+                if any(keyword in text for keyword in ['put', 'distribute', 'with']):
+                    marker = text.split(" ")[-1]
+                    if marker not in markers:
+                        markers.append(marker)
+    return markers
+
 def autoAddMarker(card, x = 0, y = 0):
     mute()
-    text = ""
-    markers = getTags(card, 'automarker')
-    if markers != None:
-        for marker in markers:
-            addmarker = counters[marker]
-            if marker == "m1m1" and counters["p1p1"] in card.markers:
-                card.markers[counters["p1p1"]] -= 1
-            elif marker == "p1p1" and counters["m1m1"] in card.markers:
-                card.markers[counters["m1m1"]] -= 1
+    markers = findMarkers(card)
+    if len(markers) == 0:
+        ## no markers were found
+        return
+    elif len(markers) > 1:
+        ## todo: handle multiple possible markers
+        colors = ["#666666" for v in markers]
+        while (True):
+            choice = askChoice("Multiple possible counters detected, please choose the counters to add.\n\n(Tip: If there are incorrect counters, then select the correct ones and click 'Save Choices' to ignore those options in the future.", markers, colors, ["Save Choices and Continue", "Continue Without Saving"])
+            if choice == 0: return
+            elif choice > 0:
+                if colors[choice - 1] == "#666666":
+                    colors[choice - 1] = "#8888FF"
+                else:
+                    colors[choice - 1] = "#666666"
             else:
-                card.markers[addmarker] += 1
-            text += "one {}, ".format(addmarker[0])
-        notify("{} adds {} to {}.".format(me, text[0:-2], card))
+                ret = []
+                for i in range(len(colors)):
+                    if colors[i] == "#8888FF":
+                        ret.append(markers[i])
+                markers = ret
+                if choice == -1:
+                    savedMarkers = getSavedMarkerData()
+                    savedMarkers[card.name] = markers
+                    setSetting("savedMarkers", str(savedMarkers))
+                break
+    for selectedMarker in markers:
+        card.markers[(selectedMarker + " counter" , selectedMarker)] += 1
+        notify("{} adds a {} counter to {}.".format(me, selectedMarker, card))
 
-def autoRemoveMarker(card, x = 0, y = 0, marker = None):
+def manualAssignMarker(card, x = 0, y = 0):
     mute()
-    autoMarkerList = getTags(card, 'automarker') ## check for autoMarkers first
-    if autoMarkerList != None: ## getTags returns None if there's no autoMarkers
-        for autoMarker in autoMarkerList: ## Since a card may have multiple markers mentioned in its rules text, getTags returns all markers as a List, so we must loop them
-            if autoMarker in counters:
-                autoMarker = counters[autoMarker]
-                if autoMarker in card.markers:
-                    marker = autoMarker
-    smartMarker = getGlobalVariable("smartmarker") ## check for smartMarkers next (higher priority)
-    if smartMarker in counters:
-        smartMarker = counters[smartMarker]
-        if smartMarker in card.markers:
-            marker = smartMarker
-    if len(card.markers) == 1: #@ if there's only one marker on the card, it's obvious which one to remove
-        for m in card.markers:
-            marker = m
-    if marker != None: ## It'll be None if none of the previous attempts were able to identify a marker
-        card.markers[marker] -= 1
-        notify("{} removes 1 {} counter from {}.".format(me, marker[0], card))
+    savedMarkers = getSavedMarkerData()
+    markers = findMarkers(card)
+    while (True):
+        choice = askChoice("Assign all possible counters for {}.  Click on a counter label to remove it.\n\n{}.".format(card.Name, card.Rules), markers, customButtons = ["New Counter...", "Reset Card", "Confirm and Save"])
+        if choice == 0:
+            return
+        elif choice > 0:
+            del markers[choice - 1]
+        elif choice == -1:
+            newMarker = askString("Enter the name of the counter", "+1/+1")
+            markers.append(newMarker)
+            continue
+        else:
+            if choice == -2:
+                if card.name in savedMarkers:
+                    del savedMarkers[card.name]
+                    whisper("Reset saved counter data for {}".format(card))
+            else:
+                savedMarkers[card.name] = markers
+                for m in markers:
+                    whisper("Registered {} counters for {}.".format(m, card.name))
+            setSetting("savedMarkers", str(savedMarkers))
+            break
+
+def smartCopyMarker(card, x = 0, y = 0):
+    mute()
+    markers = findMarkers(card)
+    if len(markers) == 0: return
+    marker = markers[0]
+    if len(markers) > 1:
+        markerClipboard = getGlobalVariable("smartmarker")
+        if markerClipboard in markers:
+            n = markers.index(markerClipboard) + 1
+            marker = markers[n % len(markers)]
+    whisper("Copied {} counter to clipboard".format(marker))
+    setGlobalVariable("smartmarker", marker)
+    
+def smartPasteMarker(card, x = 0, y = 0):
+    mute()
+    markerClipboard = getGlobalVariable("smartmarker")
+    if markerClipboard != "":
+        card.markers[(markerClipboard + " counter", markerClipboard)] += 1
+        notify("{} adds one {} counter to {}.".format(me, markerClipboard, card))
+            
 
 def smartMarker(card, x = 0, y = 0):
     mute()
