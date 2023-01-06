@@ -61,6 +61,8 @@ def debugWhisper(text, timer):
 
 def getTags(card, key = None):
     mute()
+    return None
+    #skips the rest of this old code
     timer = time.clock()
     global savedtags, offlinedisable
     cardname = card.Name
