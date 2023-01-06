@@ -1345,21 +1345,3 @@ def smartPasteMarker(card, x = 0, y = 0):
     if markerClipboard != "":
         card.markers[(markerClipboard + " counter", markerClipboard)] += 1
         notify("{} adds one {} counter to {}.".format(me, markerClipboard, card))
-            
-
-def smartMarker(card, x = 0, y = 0):
-    mute()
-    marker = getGlobalVariable("smartmarker")
-    if marker == "":
-        whisper("No counters available")
-        return
-    if marker == "m1m1" and counters["p1p1"] in card.markers:
-        card.markers[counters["p1p1"]] -= 1
-        notify("{} adds one -1/-1 counter to {}.".format(me, card))
-    elif marker == "p1p1" and counters["m1m1"] in card.markers:
-        card.markers[counters["m1m1"]] -= 1
-        notify("{} adds one -1/-1 counter to {}.".format(me, card))
-    else:
-        addmarker = counters[marker]
-        card.markers[addmarker] += 1
-        notify("{} adds one {} to {}.".format(me, addmarker[0], card))
