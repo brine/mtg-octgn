@@ -442,5 +442,18 @@ changelog = {
         ]),
     3060231: ("3.6.2.31", "November 12 2022", [
         "Added Brothers War, some missing promos and tokens"
+        ]),
+    3060300: ("3.6.3.0", "Jan 7 2023", [
+        "Disabled autoscript tag web queries.  Cards no longer have individual automation scripting",
+        "New submenu for cards in table for auto-token and auto-counter features",
+        "'Auto-Create Token' (ctrl+shift+T) now recognizes tokens referenced in card text",
+        "'Manually-Assign Token' card action lets you override specific tokens to a card (in the event the auto-create action malfunctions",
+        "'Auto-Add Counter' (ctrl+1) now recognizes counters referenced in card text",
+        "'Manually-Assign Counters' (ctrl+shift+1) card action lets you override specific counters to a card (if the auto-add fails)",
+        "'Smart-Copy Counter' (ctrl+2),  will copy the card's counter data into the clipboard (previously used in the 'smart counter' automation code",
+        "'Add Smart Counter' (ctrl+shift+1) changed to 'Smart-Paste Counter' (ctrl+shift+2)",
+        "Removed the 'remove counter' actions as they can be removed by simply dragging counters off the card.",
+        "'Add +1+1 counter' hotkey changed to ctrl+3",
+        "'Add -1-1 counter' hotkey changed to ctrl+shift+3"
         ])
 }

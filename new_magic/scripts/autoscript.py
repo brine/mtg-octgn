@@ -1,3 +1,5 @@
+#coding: utf-8
+
 import clr
 clr.AddReference('System.Web.Extensions')
 from System.Web.Script.Serialization import JavaScriptSerializer
@@ -1128,7 +1130,7 @@ def autoFindToken(card, x = 0, y = 0):
                             colors.append(CardColors[color])                
                     query["Color"] = " ".join(colors)
                 
-                typeline = tokenJson["type_line"].split(" — ")
+                typeline = tokenJson["type_line"].split(' — ')
                 query["Type"] = typeline[0].replace("Token ", "").replace("Token", "")
                 if len(typeline) > 1:
                     query["Subtype"] = typeline[1]
