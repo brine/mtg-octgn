@@ -1125,7 +1125,7 @@ def autoFindToken(card, x = 0, y = 0):
                         colors.append("Colorless")
                     else:
                         if len(jsonColors) > 1:
-                            color.append("Multicolor")
+                            colors.append("Multicolor")
                         for color in jsonColors:
                             colors.append(CardColors[color])                
                     query["Color"] = " ".join(colors)
@@ -1144,7 +1144,8 @@ def autoFindToken(card, x = 0, y = 0):
                 results = queryCard(query, True)
                 ## complex rules text may not be parsed correctly, check to see if the token is already unique by ignoring the rules text completely.  
                 if len(results) == 0:
-                    del query["Rules"]
+                    if "Rules" in query:
+                        del query["Rules"]
                     results = queryCard(query, True)
                 ## no tokens found, either there's a typo in the token set data or the token doesn't exist.
                 if len(results) == 0:

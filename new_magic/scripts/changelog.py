@@ -455,5 +455,8 @@ changelog = {
         "Removed the 'remove counter' actions as they can be removed by simply dragging counters off the card.",
         "'Add +1+1 counter' hotkey changed to ctrl+3",
         "'Add -1-1 counter' hotkey changed to ctrl+shift+3"
+        ]),
+    3060301: ("3.6.3.1", "Jan 8 2023", [
+        "Fixed some bugs with the auto-create token code"
         ])
 }
