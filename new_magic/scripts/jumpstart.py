@@ -6983,7 +6983,7 @@
   ]
 }
 
-jumpstart2022Decks = {
+Jumpstart2022Decks = {
   "Blink1": [
     {
       "id": "dfb4aab6-144d-437d-8936-7220a27aae13",

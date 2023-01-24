@@ -1163,18 +1163,27 @@ def commandAll(group, x = 0, y = 0):
 #-------------------------------------------------------------
 
 def loadJumpstart(group, x = 0, y = 0):
-    mute()
+    mute()    
     if len(group) > 0:
         if not confirm("WARNING: You are about to load a Jumpstart deck into a library that already contains cards.\r\nContinue?"): return
-    deck1 = JumpstartDecks.keys()[rnd(0,120)]
-    for card in JumpstartDecks[deck1]:
-        group.create(card["id"], card["count"])
-    deck2 = JumpstartDecks.keys()[rnd(0,120)]
-    for card in JumpstartDecks[deck2]:
-        group.create(card["id"], card["count"])
+    deck = []
+    for n in [1, 2]:
+        choice = askChoice("Choose a Jumpstart set for pack #{}".format(n), ["Jumpstart", "Jumpstart 2022", "Random"])
+        if choice == 0 or choice == None:
+            return
+        if choice == 3:
+            choice = rnd(1,2)
+        if choice == 1:
+            contents = JumpstartDecks.keys()[rnd(0,120)]
+            for card in JumpstartDecks[contents]:
+                deck.append(card)
+        if choice == 2:
+            contents = Jumpstart2022Decks.keys()[rnd(0,120)]
+            for card in Jumpstart2022Decks[contents]:
+                deck.append(card)
+    for c in deck:
+        group.create(c["id"], c["count"])
     notify("{} loaded a Jumpstart Deck".format(me))
-
-
 
 def shuffle(group, x = 0, y = 0, silence = False):
     mute()

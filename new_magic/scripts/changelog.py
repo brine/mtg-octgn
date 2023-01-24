@@ -458,5 +458,9 @@ changelog = {
         ]),
     3060301: ("3.6.3.1", "Jan 8 2023", [
         "Fixed some bugs with the auto-create token code"
+        ]),
+    3060302: ("3.6.3.2", "Jan 23 2023", [
+        "Added Jumpstart 2022",
+        "Load Jumpstart Deck action now includes Jumpstart 2022 decks"
         ])
 }
