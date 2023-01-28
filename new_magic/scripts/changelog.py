@@ -462,6 +462,7 @@ changelog = {
     3060302: ("3.6.3.2", "Jan 23 2023", [
         "Added Jumpstart 2022",
         "Load Jumpstart Deck action now includes Jumpstart 2022 decks",
+        "Added Dominaria Remastered",
         "Added All Will Be One"
         ])
 }
