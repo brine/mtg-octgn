@@ -1,149 +1,320 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <set name="March of the Machine" id="392f7315-dc53-40a3-a2cc-5482dbd498b3" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="mom" releaseDate="2023-04-21">
-   <packaging>
-    <pack name="Booster (in-progress)" id="d7951bcb-d583-43ce-9424-f33951b2fea6">
-	  <options>
-        <option probability="0.6">
+  <packaging>
+    <pack name="Draft Booster" id="d7951bcb-d583-43ce-9424-f33951b2fea6">
+      <options>
+        <option probability="0.681">
           <pick qty="1" key="Rarity" value="Uncommon">
             <property key="Packaging" value="masterpiece" />
           </pick>
         </option>
-        <option probability="0.27">
+        <option probability="0.255">
           <pick qty="1" key="Rarity" value="Rare">
             <property key="Packaging" value="masterpiece" />
           </pick>
         </option>
-        <option probability="0.07">
+        <option probability="0.064">
           <pick qty="1" key="Rarity" value="Mythic Rare">
             <property key="Packaging" value="masterpiece" />
           </pick>
         </option>
       </options>
-	
-	  <options>
-        <option probability="0.6">
+      <options>
+        <option probability="0.193">
+          <options>
+            <option probability="0.815">
+              <pick qty="1" key="Rarity" value="Rare">
+                <property key="Packaging" value="Battle" />
+              </pick>
+            </option>
+            <option probability="0.185">
+              <pick qty="1" key="Rarity" value="Mythic Rare">
+                <property key="Packaging" value="Battle" />
+              </pick>
+            </option>
+          </options>
+          <options>
+            <option probability="0.8">
+              <pick qty="1" key="Rarity" value="Common">
+                <property key="Packaging" value="DFC" />
+              </pick>
+            </option>
+            <option probability="0.2">
+              <pick qty="1" key="Rarity" value="Uncommon">
+                <property key="Packaging" value="DFC" />
+              </pick>
+            </option>
+          </options>
+          <pick qty="3" key="Rarity" value="Uncommon">
+            <property key="Packaging" value="" />
+          </pick>
+        </option>
+        <option probability="0.107">
           <pick qty="1" key="Rarity" value="Uncommon">
+            <property key="Packaging" value="Battle" />
+          </pick>
+          <options>
+            <option probability="0.667">
+              <pick qty="1" key="Rarity" value="Rare">
+                <property key="Packaging" value="DFC" />
+              </pick>
+            </option>
+            <option probability="0.333">
+              <pick qty="1" key="Rarity" value="Mythic Rare">
+                <property key="Packaging" value="DFC" />
+              </pick>
+            </option>
+          </options>
+          <pick qty="3" key="Rarity" value="Uncommon">
             <property key="Packaging" value="" />
-            <property key="Type" value="Battle" />
           </pick>
         </option>
-        <option probability="0.27">
-          <pick qty="1" key="Rarity" value="Rare">
-            <property key="Packaging" value="" />
-            <property key="Type" value="Battle" />
+        <option probability="0.7">
+          <pick qty="1" key="Rarity" value="Uncommon">
+            <property key="Packaging" value="Battle" />
           </pick>
-        </option>
-        <option probability="0.07">
-          <pick qty="1" key="Rarity" value="Mythic Rare">
+          <options>
+            <option probability="0.8">
+              <pick qty="1" key="Rarity" value="Common">
+                <property key="Packaging" value="DFC" />
+              </pick>
+            </option>
+            <option probability="0.2">
+              <pick qty="1" key="Rarity" value="Uncommon">
+                <property key="Packaging" value="DFC" />
+              </pick>
+            </option>
+          </options>
+          <options>
+            <option probability="0.898">
+              <pick qty="1" key="Rarity" value="Rare">
+                <property key="Packaging" value="" />
+              </pick>
+            </option>
+            <option probability="0.102">
+              <pick qty="1" key="Rarity" value="Mythic Rare">
+                <property key="Packaging" value="" />
+              </pick>
+            </option>
+          </options>
+          <pick qty="2" key="Rarity" value="Uncommon">
             <property key="Packaging" value="" />
-            <property key="Type" value="Battle" />
           </pick>
         </option>
       </options>
-	
+      <pick qty="8" key="Rarity" value="Common">
+        <property key="Packaging" value="" />
+      </pick>
       <options>
-        <option probability="0.125">
-          <pick qty="1" key="Rarity" value="Mythic Rare">
-            <property key="Packaging" value="" />
-          </pick>
+        <option probability="0.5">
+          <pick qty="1" key="Packaging" value="Land" />
         </option>
-        <option probability="0.875">
-          <pick qty="1" key="Rarity" value="Rare">
+        <option probability="0.5">
+          <pick qty="1" key="Rarity" value="Basic Land">
             <property key="Packaging" value="" />
           </pick>
         </option>
       </options>
-      <pick qty="3" key="Rarity" value="Uncommon">
-        <property key="Packaging" value="" />
-      </pick>
-      <options>
-        <option probability="0.667">
-      <pick qty="10" key="Rarity" value="Common">
-        <property key="Packaging" value="" />
-      </pick>
-	  </option></options>
-	  
-      <options>
-        <option probability="0.333">
-      <pick qty="9" key="Rarity" value="Common">
-        <property key="Packaging" value="" />
-      </pick>
       <pick qty="1" key="Rarity" value="Basic Land">
         <property key="Packaging" value="" />
       </pick>
-	  </option></options>
-	  
-      <pick qty="1" key="Rarity" value="Basic Land">
-        <property key="Packaging" value="" />
-      </pick>
-
-      <include id="278d7781-ddfe-4bcb-94bd-3c155030dfdc" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="42496543-db8c-4053-aaf5-8e96948bafb9" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="0ee0719c-07d0-419a-b6ed-fc3bf982e4d3" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="5ed8b9c5-8b09-40a0-ae08-bc7a7a391256" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="427cf253-71c1-40cf-bdc3-eeb0431ae37f" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="cb7eb35d-2684-40f7-b678-0d9a180c955a" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="9716a5ff-f1ed-4285-a0a7-68114eeb1ba7" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="47eb1fa4-a332-4618-a400-c082719f7d5f" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="766a0ac7-2051-46f6-a5e5-32fd65b09553" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="386b9f57-b75c-4431-9abe-a5cec2a35340" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="77fd8de3-bd4a-473d-b1ed-05305ab15d75" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="469beb59-1e57-474e-9dcf-9c13957cbfdd" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="e915b51b-761c-432e-9565-f3aca2ca33f7" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="25f16054-64fc-436f-b926-4abcfedf42b3" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="d6716f24-6b25-4a64-bb52-b6eec7f91180" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="dc2234cd-0a1c-4dca-b94b-0dd927bb32e2" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="ee0d41b3-42ce-4645-96c9-baab109033ef" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="aff4fb74-8fb8-4d58-ac1b-be3de156411a" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="e07104c8-3af9-44ff-8f24-ce420333e05b" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="2ab5252d-e6b2-43ae-ac35-75f32082486c" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="fc898fec-4cc6-4587-b556-c5a8d38ccbd0" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="e5483306-885c-44e1-84ce-b6e2124a6ecc" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="0533d7e4-6b5b-4e2e-8407-279fe438c676" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="bc26c152-b1d4-4afe-90fb-fddd6c1e67e9" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="8994524c-b9ff-4ca0-9ff0-2d074911bfe6" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="837e18d9-a5a6-4a0c-a604-9374d5b0dea4" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="a5f3fddf-a82e-4297-8ee5-458981700d9e" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="1998356b-4eb3-43a7-8534-10eb212c7f2a" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="bdcd2ec9-a8e7-46b3-8d79-eb15d6e95a3c" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="606715cc-c0b8-466a-90a0-719cba1968d6" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="0a0d2ebd-99ba-4968-a79e-68288626bed1" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="2fa20406-86ce-48a1-876d-c434cfca2237" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="bd0d5a0c-5dec-439c-b037-9d17dda5ead3" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="e023d642-1784-4e7e-b5de-dc9943f0099e" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="1e7c2afb-e04e-4012-b8a2-7a7273b52136" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="9a833fa7-5934-4c04-be42-e215a61f450e" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="8d07b9f4-7a92-41ee-bdd8-2c8dbe247ac5" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="703b9b74-e1f3-4218-b504-07bba71187c8" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="90e0031e-de69-41e7-aef9-78ed1d4b3361" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="46f485c6-a2b2-4da3-8804-b2b816eba344" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="2c0056d5-4d23-4c0c-bbfb-c091cc3fb9ae" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="9cbe6748-8ef1-4697-8b7b-72c5ea5b34c5" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="ab58b800-2caa-4b0b-9548-9c43e97bc213" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="51b8d3a9-2b2b-4b14-8886-459cd83ae4e6" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="0a1b14a8-c194-49d3-ab6c-1db377b69495" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="c94cd726-8d67-4510-ad56-3ead1931214b" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="e9c296d0-ad8d-4139-97c4-e36c4af3d3c9" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="814cd870-a4da-4987-a69b-5ba6cee136c1" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="cf9bf8c4-f977-449b-8d16-539060b40777" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="fb721716-1027-4c2c-a156-30fb6a939e82" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="4b32771b-d89f-46b1-8c70-95a4f058ef05" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="08d24f3f-bff1-4424-a029-3221c4e395b3" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="cf0d7769-d98e-4cf2-900e-11dc74142c0d" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="4a0116c9-ee0f-435a-a599-96cc04a994b3" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="ca9bdaae-55f4-4e90-b6b5-28eb1cec198b" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="651c3dd6-e1a8-4a65-a200-f86d308570ac" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="d44478d2-20eb-4dba-8008-687a293444f5" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="8eaeb2b7-ad2d-4e00-b37a-06963ae41bb2" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="40c00370-0160-48a9-87ac-07a3b2bbd459" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="eb90aae8-34c7-484c-80da-626393917720" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="3c48a7da-0d01-439f-8cfb-22af30cffbba" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="81826ef6-02ea-411b-ac08-8ac5e459daa1" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="e56ba25b-1803-4e1a-b7cf-c2c873159010" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="572f03c2-cd20-4e09-90a4-13bd291c5478" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-      <include id="5fe75365-7f6d-4faf-9f55-0ba83821836a" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a"> <property name="Packaging" value="masterpiece" /></include>
-	  </pack>
-	  </packaging>
+      <include id="278d7781-ddfe-4bcb-94bd-3c155030dfdc" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="42496543-db8c-4053-aaf5-8e96948bafb9" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="0ee0719c-07d0-419a-b6ed-fc3bf982e4d3" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="5ed8b9c5-8b09-40a0-ae08-bc7a7a391256" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="427cf253-71c1-40cf-bdc3-eeb0431ae37f" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="cb7eb35d-2684-40f7-b678-0d9a180c955a" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="9716a5ff-f1ed-4285-a0a7-68114eeb1ba7" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="47eb1fa4-a332-4618-a400-c082719f7d5f" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="766a0ac7-2051-46f6-a5e5-32fd65b09553" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="386b9f57-b75c-4431-9abe-a5cec2a35340" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="77fd8de3-bd4a-473d-b1ed-05305ab15d75" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="469beb59-1e57-474e-9dcf-9c13957cbfdd" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="e915b51b-761c-432e-9565-f3aca2ca33f7" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="25f16054-64fc-436f-b926-4abcfedf42b3" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="d6716f24-6b25-4a64-bb52-b6eec7f91180" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="dc2234cd-0a1c-4dca-b94b-0dd927bb32e2" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="ee0d41b3-42ce-4645-96c9-baab109033ef" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="aff4fb74-8fb8-4d58-ac1b-be3de156411a" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="e07104c8-3af9-44ff-8f24-ce420333e05b" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="2ab5252d-e6b2-43ae-ac35-75f32082486c" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="fc898fec-4cc6-4587-b556-c5a8d38ccbd0" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="e5483306-885c-44e1-84ce-b6e2124a6ecc" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="0533d7e4-6b5b-4e2e-8407-279fe438c676" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="bc26c152-b1d4-4afe-90fb-fddd6c1e67e9" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="8994524c-b9ff-4ca0-9ff0-2d074911bfe6" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="837e18d9-a5a6-4a0c-a604-9374d5b0dea4" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="a5f3fddf-a82e-4297-8ee5-458981700d9e" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="1998356b-4eb3-43a7-8534-10eb212c7f2a" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="bdcd2ec9-a8e7-46b3-8d79-eb15d6e95a3c" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="606715cc-c0b8-466a-90a0-719cba1968d6" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="0a0d2ebd-99ba-4968-a79e-68288626bed1" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="2fa20406-86ce-48a1-876d-c434cfca2237" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="bd0d5a0c-5dec-439c-b037-9d17dda5ead3" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="e023d642-1784-4e7e-b5de-dc9943f0099e" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="1e7c2afb-e04e-4012-b8a2-7a7273b52136" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="9a833fa7-5934-4c04-be42-e215a61f450e" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="8d07b9f4-7a92-41ee-bdd8-2c8dbe247ac5" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="703b9b74-e1f3-4218-b504-07bba71187c8" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="90e0031e-de69-41e7-aef9-78ed1d4b3361" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="46f485c6-a2b2-4da3-8804-b2b816eba344" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="2c0056d5-4d23-4c0c-bbfb-c091cc3fb9ae" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="9cbe6748-8ef1-4697-8b7b-72c5ea5b34c5" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="ab58b800-2caa-4b0b-9548-9c43e97bc213" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="51b8d3a9-2b2b-4b14-8886-459cd83ae4e6" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="0a1b14a8-c194-49d3-ab6c-1db377b69495" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="c94cd726-8d67-4510-ad56-3ead1931214b" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="e9c296d0-ad8d-4139-97c4-e36c4af3d3c9" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="814cd870-a4da-4987-a69b-5ba6cee136c1" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="cf9bf8c4-f977-449b-8d16-539060b40777" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="fb721716-1027-4c2c-a156-30fb6a939e82" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="4b32771b-d89f-46b1-8c70-95a4f058ef05" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="08d24f3f-bff1-4424-a029-3221c4e395b3" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="cf0d7769-d98e-4cf2-900e-11dc74142c0d" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="4a0116c9-ee0f-435a-a599-96cc04a994b3" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="ca9bdaae-55f4-4e90-b6b5-28eb1cec198b" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="651c3dd6-e1a8-4a65-a200-f86d308570ac" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="d44478d2-20eb-4dba-8008-687a293444f5" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="8eaeb2b7-ad2d-4e00-b37a-06963ae41bb2" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="40c00370-0160-48a9-87ac-07a3b2bbd459" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="eb90aae8-34c7-484c-80da-626393917720" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="3c48a7da-0d01-439f-8cfb-22af30cffbba" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="81826ef6-02ea-411b-ac08-8ac5e459daa1" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="e56ba25b-1803-4e1a-b7cf-c2c873159010" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="572f03c2-cd20-4e09-90a4-13bd291c5478" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+      <include id="5fe75365-7f6d-4faf-9f55-0ba83821836a" set="a3f8daea-b24e-4e5c-a4d9-ec8910e9078a">
+        <property name="Packaging" value="masterpiece" />
+      </include>
+    </pack>
+  </packaging>
   <cards>
     <card name="Invasion of Ravnica" id="73f8fc4f-2f36-4932-8d04-3c2651c116dc">
       <property name="Cost">
@@ -158,6 +329,7 @@
 When Invasion of Ravnica enters the battlefield, exile target nonland permanent an opponent controls that isn't exactly two colors.</property>
       <property name="Artist" value="Leon Tukker" />
       <property name="Number" value="001" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Guildpact Paragon" type="transform">
         <property name="Cost" />
         <property name="Color" value="Colorless" />
@@ -193,7 +365,7 @@ Target creature gets +2/+2 and gains flying until end of turn.</property>
       <property name="Subtype" value="Phyrexian Samurai" />
       <property name="Rarity" value="Common" />
       <property name="Rules">When Alabaster Host Intercessor enters the battlefield, exile target creature an opponent controls until Alabaster Host Intercessor leaves the battlefield.
-Plainscycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffe.)</property>
+Plainscycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffle.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Konstantin Porubov" />
@@ -347,6 +519,7 @@ Whenever a source an opponent controls deals damage to you or a permanent you co
       <property name="Toughness" value="5" />
       <property name="Artist" value="Magali Villeneuve" />
       <property name="Number" value="012" />
+      <property name="Packaging" value="DFC" />
       <alternate name="The Argent Etchings" type="transform">
         <property name="Cost" />
         <property name="Color" value="White" />
@@ -381,7 +554,7 @@ III — Destroy all other permanents except for artifacts, lands, and Phyrexians
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Scout" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Backup 1 (When this creature enters the battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following abilities until end of turn.)
+      <property name="Rules">Backup 1 (When this creature enters the battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
 When this creature dies, put its counters on target creature you control.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="1" />
@@ -398,8 +571,7 @@ When this creature dies, put its counters on target creature you control.</prope
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dwarf Pilot" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Backup 1 (When this creature enters the
-battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
+      <property name="Rules">Backup 1 (When this creature enters the battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
 Flying</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
@@ -440,6 +612,7 @@ When Guardian of Ghirapur enters the battlefield, exile up to one other target c
       <property name="Toughness" value="4" />
       <property name="Artist" value="Victor Adame Minguez" />
       <property name="Number" value="017" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Heliod, the Warped Eclipse" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Blue White" />
@@ -495,6 +668,7 @@ Spells you cast cost <s value="1">{1}</s> less to cast for each card your oppone
 When Invasion of Belenon enters the battlefield, create a 2/2 white and blue Knight creature token with vigilance.</property>
       <property name="Artist" value="Antonio José Manzanedo" />
       <property name="Number" value="020" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Belenon War Anthem" type="transform">
         <property name="Cost" />
         <property name="Color" value="White" />
@@ -516,6 +690,7 @@ When Invasion of Belenon enters the battlefield, create a 2/2 white and blue Kni
 When Invasion of Dominaria enters the battlefield, you gain 4 life and draw a card.</property>
       <property name="Artist" value="Denys Tsiperko" />
       <property name="Number" value="021" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Serra Faithkeeper" type="transform">
         <property name="Cost" />
         <property name="Color" value="White" />
@@ -540,6 +715,7 @@ When Invasion of Dominaria enters the battlefield, you gain 4 life and draw a ca
 When Invasion of Gobakhan enters the battlefield, look at target opponent's hand. You may exile a nonland card from it. For as long as that card remains exiled, its owner may play it. A spell cast this way costs <s value="2">{2}</s> more to cast.</property>
       <property name="Artist" value="Andreas Zafiratos" />
       <property name="Number" value="022" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Lightshield Array" type="transform">
         <property name="Cost" />
         <property name="Color" value="White" />
@@ -562,6 +738,7 @@ Sacrifice Lightshield Array: Creatures you control gain hexproof and indestructi
 When Invasion of Theros enters the battlefield, search your library for an Aura, God, or Demigod card, reveal it, put it into your hand, then shuffle.</property>
       <property name="Artist" value="Johan Grenier" />
       <property name="Number" value="023" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Ephara, Ever-Sheltering" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Blue White" />
@@ -713,7 +890,7 @@ Non-Phyrexian creatures enter the battlefield tapped.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Phyrexian Cat Cleric" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Progenitor Exarch enters the battlefield, incubate 3 X times. (To incubate 3, create an Incubator token with three +1/+1 counters on it and <s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)
+      <property name="Rules">When Progenitor Exarch enters the battlefield, incubate 3 X times. (To incubate 3, create an Incubator token with three +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)
 <s value="T">{T}</s>: Transform target Incubator token you control.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
@@ -780,6 +957,7 @@ When Seal from Existence enters the battlefield, exile target nonland permanent 
       <property name="Toughness" value="2" />
       <property name="Artist" value="Aaron J. Riley" />
       <property name="Number" value="036" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Seraph of New Phyrexia" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black White" />
@@ -801,8 +979,7 @@ Whenever Seraph of New Phyrexia attacks, you may sacrifice another creature or a
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Knight" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Backup 1 (When this creature enters the
-battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
+      <property name="Rules">Backup 1 (When this creature enters the battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
 Vigilance</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -821,11 +998,12 @@ Vigilance</property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="5">{5}</s>
-        <s value="PR">{R/P}</s>: Transform Sun-Blessed Guardian. Activate only as a sorcery. (<s value="PR">{R/P}</s> be paid with either <s value="2">{2}</s> or 2 life.)</property>
+        <s value="PR">{R/P}</s>: Transform Sun-Blessed Guardian. Activate only as a sorcery. (<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Brian Valeza" />
       <property name="Number" value="038" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Furnace-Blessed Conqueror" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Red White" />
@@ -861,7 +1039,7 @@ Vigilance</property>
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Exile all creatures. Incubate X, where X is the number of creatures exiled this way. (Create an Incubator token with X +1/+ 1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
+      <property name="Rules">Exile all creatures. Incubate X, where X is the number of creatures exiled this way. (Create an Incubator token with X +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
       <property name="Artist" value="Kasia 'Kafis' Zielińska" />
       <property name="Number" value="040" />
     </card>
@@ -909,6 +1087,7 @@ Vigilance</property>
       <property name="Toughness" value="2" />
       <property name="Artist" value="Denys Tsiperko" />
       <property name="Number" value="043" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Burnished Dunestomper" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Green White" />
@@ -1008,11 +1187,12 @@ Enchanted creature gets +2/+2 and has flying.</property>
       <property name="Subtype" value="Weird" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Defender
-<s value="3">{3}</s><s value="PR">{R/P}</s>: Transform Captive Weird. Activate only as a sorcery. (<s value="PR">{R/P}</s> can be paid with <s value="R">{R}</s> or 2 life.)</property>
+<s value="3">{3}</s><s value="PR">{R/P}</s>: Transform Captive Weird. Activate only as a sorcery. (<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Manuel Castañón" />
       <property name="Number" value="049" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Compleated Conjurer" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Red Blue" />
@@ -1049,7 +1229,7 @@ Enchanted creature gets +2/+2 and has flying.</property>
       <property name="Subtype" value="Phyrexian Shark" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever you cast a noncreature spell, incubate X, where X is that spell's mana value. (Create an Incubator token with X +1/+ 1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
+Whenever you cast a noncreature spell, incubate X, where X is that spell's mana value. (Create an Incubator token with X +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Donato Giancola" />
@@ -1141,8 +1321,7 @@ As long as an opponent has eight or more cards in their graveyard, Expedition Lo
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Incubate 3. (Create an Incubator token
-with three +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)
+      <property name="Rules">Incubate 3. (Create an Incubator token with three +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)
 Draw a card.</property>
       <property name="Artist" value="Cristi Balanescu" />
       <property name="Number" value="057" />
@@ -1214,6 +1393,7 @@ Whenever an opponent draws their second card each turn, you draw a card.
 When Invasion of Arcavios enters the battlefield, search your library, graveyard, and/or outside the game for an instant or sorcery card you own, reveal it, and put it into your hand. If you search your library this way, shuffle.</property>
       <property name="Artist" value="Dmitry Burmak" />
       <property name="Number" value="061" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Invocation of the Founders" type="transform">
         <property name="Cost" />
         <property name="Color" value="Blue" />
@@ -1235,6 +1415,7 @@ When Invasion of Arcavios enters the battlefield, search your library, graveyard
 When Invasion of Kamigawa enters the battlefield, tap target artifact or creature an opponent controls and put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)</property>
       <property name="Artist" value="Kekai Kotaki" />
       <property name="Number" value="062" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Rooftop Saboteurs" type="transform">
         <property name="Cost" />
         <property name="Color" value="Blue" />
@@ -1260,12 +1441,13 @@ Whenever Rooftop Saboteurs deals combat damage to a player or battle, draw a car
 When Invasion of Segovia enters the battlefield, create two 1/1 blue Kraken creature tokens with trample.</property>
       <property name="Artist" value="Edgar Sánchez Hidalgo" />
       <property name="Number" value="063" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Caetus, Sea Tyrant of Segovia" type="transform">
         <property name="Cost" />
         <property name="Color" value="Blue" />
         <property name="Type" value="Legendary Creature" />
         <property name="Subtype" value="Serpent" />
-        <property name="Rules">Noncreature spells you cast have convoke. (Your creatures can help cast those spells. Each creature you tap while casting a noncreature spell pays for 1 or one mana of that creature's color.)
+        <property name="Rules">Noncreature spells you cast have convoke. (Your creatures can help cast those spells. Each creature you tap while casting a noncreature spell pays for <s value="1">{1}</s> or one mana of that creature's color.)
 At the beginning of your end step, untap up to four target creatures.</property>
         <property name="Power" value="3" />
         <property name="Toughness" value="3" />
@@ -1285,12 +1467,13 @@ At the beginning of your end step, untap up to four target creatures.</property>
 When Invasion of Vryn enters the battlefield, draw three cards, then discard a card.</property>
       <property name="Artist" value="Leon Tukker" />
       <property name="Number" value="064" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Overloaded Mage-Ring" type="transform">
         <property name="Cost" />
         <property name="Color" value="Blue" />
         <property name="Type" value="Artifact" />
         <property name="Rules">
-          <s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Overloaded Mage-Ring: Copy target spell you control. (A copy of a permanent spell becomes a token.)</property>
+          <s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Overloaded Mage-Ring: Copy target spell you control. You may choose new targets for the copy. (A copy of a permanent spell becomes a token.)</property>
       </alternate>
     </card>
     <card name="Jin-Gitaxias" id="41c83142-b948-4ee5-a486-41306d2bb411">
@@ -1311,12 +1494,13 @@ Whenever you cast a noncreature spell with mana value 3 or greater, draw a card.
       <property name="Toughness" value="5" />
       <property name="Artist" value="Ekaterina Burmak" />
       <property name="Number" value="065" />
+      <property name="Packaging" value="DFC" />
       <alternate name="The Great Synthesis" type="transform">
         <property name="Cost" />
         <property name="Color" value="Blue" />
         <property name="Type" value="Enchantment" />
         <property name="Subtype" value="Saga" />
-        <property name="Rules">(As this saga enters and after your draw step, add a lore counter.)
+        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
 I — Draw cards equal to the number of cards in your hand. You have no maximum hand size for as long as you control The Great Synthesis.
 II — Return all non-Phyrexian creatures to their owners' hands.
 III — You may cast any number of spells from your hand without paying their mana costs. Exile The Great Synthesis, then return it to the battlefield (front face up).</property>
@@ -1432,6 +1616,7 @@ As long as you control a transformed permanent, Oculus Whelp has "When Oculus Wh
       <property name="Toughness" value="1" />
       <property name="Artist" value="Andrew Mar" />
       <property name="Number" value="072" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Order of the Alabaster Host" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Blue White" />
@@ -1487,11 +1672,12 @@ When Preening Champion enters the battlefield, create a 1/1 blue and red Element
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever you cast a legendary spell, untap Rona, Herald of Invasion.
 <s value="T">{T}</s>: Draw a card, then discard a card.
-<s value="5">{5}</s><s value="PB">{B/P}</s>: Transform Rona. Activate only as a sorcery. (<s value="PB">{B/P}</s> can be paid with <s value="B">{B}</s> or 2 life.)</property>
+<s value="5">{5}</s><s value="PB">{B/P}</s>: Transform Rona. Activate only as a sorcery. (<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Victor Adame Minguez" />
       <property name="Number" value="075" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Rona, Tolarian Obliterator" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black Blue" />
@@ -1514,8 +1700,7 @@ Whenever a source deals damage to Rona, Tolarian Obliterator, that source's cont
       <property name="Subtype" value="Moonfolk Ninja" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Flash
-Backup 1 (When this creature enters the
-battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
+Backup 1 (When this creature enters the battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
 Hexproof</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="1" />
@@ -1555,6 +1740,7 @@ Choose one. If an opponent has eight or more cards in their graveyard, you may c
       <property name="Toughness" value="1" />
       <property name="Artist" value="Michal Ivan" />
       <property name="Number" value="078" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Skyclave Invader" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Green Blue" />
@@ -1721,13 +1907,13 @@ Draw a card.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Rogue" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">
-        <s value="4">{4}</s>
-        <s value="PU">{U/P}</s>: Transform Aetherblade Agent. Activate only as a sorcery. (<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)</property>
+      <property name="Rules">Deathtouch
+<s value="4">{4}</s><s value="PU">{U/P}</s>: Transform Aetherblade Agent. Activate only as a sorcery. (<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Alexander Mokhov" />
       <property name="Number" value="088" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Gitaxian Mindstinger" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black Blue" />
@@ -1771,11 +1957,12 @@ Whenever this creature deals combat damage to a player or battle, return target 
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="T">{T}</s>, Sacrifice another creature or artifact: Ayara, Widow of the Realm deals X damage to target opponent or battle and you gain X life, where X is the sacrificed permanent's mana value.
-<s value="5">{5}</s><s value="PR">{R/P}</s>: Transform Ayara. Activate only as a sorcery. (<s value="PR">{R/P}</s> can be paid with <s value="R">{R}</s> or 2 life.)</property>
+<s value="5">{5}</s><s value="PR">{R/P}</s>: Transform Ayara. Activate only as a sorcery. (<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Anna Podedworna" />
       <property name="Number" value="090" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Ayara, Furnace Queen" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black Red" />
@@ -1799,7 +1986,7 @@ Whenever this creature deals combat damage to a player or battle, return target 
       <property name="Rules">Flash
 When Bladed Battle-Fan enters the battlefield, attach it to target creature you control. That creature gains indestructible until end of turn.
 Equipped creature gets +1/+0.
-Equip <s value="1">{1}</s> (<s value="1">{1}</s> : Attach to target creature you control. Equip only as a sorcery.)</property>
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Colin Boyer" />
       <property name="Number" value="091" />
     </card>
@@ -1820,6 +2007,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s> : Attach to target creature you
       <property name="Toughness" value="2" />
       <property name="Artist" value="Marta Nael" />
       <property name="Number" value="092" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Blightsower Thallid" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black Green" />
@@ -1902,8 +2090,7 @@ Target creature gets -3/-3 until end of turn.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Aetherborn Vampire" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Backup 1 (When this creature enters the
-battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
+      <property name="Rules">Backup 1 (When this creature enters the battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
 Lifelink</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -2165,8 +2352,9 @@ Spells you cast from exile have convoke.</property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">(As a Siege enters, choose an opponent to protect it. You and others can attack it. When it's defeated, exile it, then cast it transformed.)
 When Invasion of Eldraine enters the battlefield, target opponent discards two cards.</property>
-      <property name="Artist" value="" />
+      <property name="Artist" value="Cristi Balanescu" />
       <property name="Number" value="113" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Prickle Faeries" type="transform">
         <property name="Cost" />
         <property name="Color" value="Black" />
@@ -2195,6 +2383,7 @@ When Invasion of Fiora enters the battlefield, choose one or both —
 • Destroy all nonlegendary creatures.</property>
       <property name="Artist" value="Joshua Raphael" />
       <property name="Number" value="114" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Marchesa, Resolute Monarch" type="transform">
         <property name="Cost" />
         <property name="Color" value="Black" />
@@ -2223,6 +2412,7 @@ Flash
 When Invasion of Innistrad enters the battlefield, target creature an opponent controls gets -13/-13 until end of turn.</property>
       <property name="Artist" value="Alexey Kruglov" />
       <property name="Number" value="115" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Deluge of the Dead" type="transform">
         <property name="Cost" />
         <property name="Color" value="Black" />
@@ -2245,6 +2435,7 @@ When Invasion of Innistrad enters the battlefield, target creature an opponent c
 When Invasion of Ulgrotha enters the battlefield, it deals 3 damage to any other target and you gain 3 life.</property>
       <property name="Artist" value="Viko Menezes" />
       <property name="Number" value="116" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Grandmother Ravi Sengir" type="transform">
         <property name="Cost" />
         <property name="Color" value="Black" />
@@ -2266,7 +2457,7 @@ Whenever a creature an opponent controls dies, put a +1/+1 counter on Grandmothe
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Exile target creature. Incubate 3. (Create an Incubator token with three +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact. It transforms into a 0/0 Phyrexian artifact creature.)</property>
+      <property name="Rules">Exile target creature. Incubate 3. (Create an Incubator token with three +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
       <property name="Artist" value="Artur Nakhodkin" />
       <property name="Number" value="117" />
     </card>
@@ -2294,19 +2485,20 @@ Draw a card.</property>
       <property name="Subtype" value="Rat Samurai" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Menace
-When Nezumi Freewheeler enters the battlefield, each player mills three cards. (To mill a card, put the top card of your library into your graveyard.)
+When Nezumi Freewheeler enters the battlefield, each player mills three cards. (To mill three cards, a player puts the top three cards of their library into their graveyard.)
 <s value="5">{5}</s><s value="PW">{W/P}</s>: Transform Nezumi Freewheeler. Activate only as a sorcery. (<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Artur Nakhodkin" />
       <property name="Number" value="119" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Hideous Fleshwheeler" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black White" />
         <property name="Type" value="Creature" />
         <property name="Subtype" value="Phyrexian Rat" />
         <property name="Rules">Menace (This creature can't be blocked except by two or more creatures.)
-When this creature transforms into Hideous FleshwheelerHideous Fleshwheeler, put target permanent card with mana value 2 or less from a graveyard onto the battlefield under your control.</property>
+When this creature transforms into Hideous Fleshwheeler, put target permanent card with mana value 2 or less from a graveyard onto the battlefield under your control.</property>
         <property name="Power" value="4" />
         <property name="Toughness" value="5" />
       </alternate>
@@ -2354,8 +2546,7 @@ When this creature transforms into Hideous FleshwheelerHideous Fleshwheeler, put
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for <s value="1">{1}</s> or one mana of that creature's color.)
-Destroy target creature or planeswalker.
-Surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)</property>
+Destroy target creature or planeswalker. Surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)</property>
       <property name="Artist" value="Javier Charro" />
       <property name="Number" value="122" />
     </card>
@@ -2407,6 +2598,7 @@ When Sheoldred enters the battlefield, each opponent sacrifices a nontoken creat
       <property name="Toughness" value="5" />
       <property name="Artist" value="Ryan Pancoast" />
       <property name="Number" value="125" />
+      <property name="Packaging" value="DFC" />
       <alternate name="The True Scriptures" type="transform">
         <property name="Cost" />
         <property name="Color" value="Black" />
@@ -2536,7 +2728,7 @@ Whenever an instant or sorcery spell you control deals damage to an opponent or 
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for 1 or one mana of that creature's color.)
+      <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for <s value="1">{1}</s> or one mana of that creature's color.)
 Up to two target creatures each get +2/+0 and gain haste until end of turn.</property>
       <property name="Artist" value="Slawomir Maniak" />
       <property name="Number" value="133" />
@@ -2606,6 +2798,7 @@ When Etali, Primal Conqueror enters the battlefield, each player exiles cards fr
       <property name="Toughness" value="7" />
       <property name="Artist" value="Ryan Pancoast" />
       <property name="Number" value="137" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Etali, Primal Sickness" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Green Red" />
@@ -2627,7 +2820,7 @@ Whenever Etali, Primal Sickness deals combat damage to a player, they get that m
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dwarf Berserker" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Backup 1 (When this creature enters the battlefield, put a + 1/+ 1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
+      <property name="Rules">Backup 1 (When this creature enters the battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
 Double strike</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
@@ -2647,7 +2840,7 @@ Double strike</property>
       <property name="Rules">
         <s value="1">{1}</s>
         <s value="R">{R}</s>: Furnace Gremlin gets +1/+0 until end of turn.
-When Furnace Gremlin dies, incubate X, where X is Furnace Gremlin's power. (Create an Incubator token with X +1/+1 counters on it and "2: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
+When Furnace Gremlin dies, incubate X, where X is its power. (Create an Incubator token with X +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Tuan Duong Chu" />
@@ -2693,7 +2886,7 @@ Mountaincycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: S
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dwarf Pilot" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Backup 1 (When this creature enters the battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following abilities until end of turn.)
+      <property name="Rules">Backup 1 (When this creature enters the battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
 Whenever this creature becomes tapped, you may discard a card. If you do, draw a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
@@ -2711,11 +2904,12 @@ Whenever this creature becomes tapped, you may discard a card. If you do, draw a
       <property name="Subtype" value="Human Artificer" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Haste
-<s value="3">{3}</s><s value="PW">{W/P}</s>: Transform Harried Artisan. Activate only as a sorcery. (<s value="PW">{W/P}</s> can be paid with <s value="W">{W}</s> or 2 life.)</property>
+<s value="3">{3}</s><s value="PW">{W/P}</s>: Transform Harried Artisan. Activate only as a sorcery. (<s value="PW">{W/P}</s> can be paid with either <s value="W">{W}</s> or 2 life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Caio Monteiro" />
       <property name="Number" value="143" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Phyrexian Skyflayer" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Red White" />
@@ -2755,6 +2949,7 @@ Whenever this creature becomes tapped, you may discard a card. If you do, draw a
 When Invasion of Kaldheim enters the battlefield, exile all cards from your hand, then draw that many cards. Until the end of your next turn, you may play cards exiled this way.</property>
       <property name="Artist" value="Bryan Sola" />
       <property name="Number" value="145" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Pyre of the World Tree" type="transform">
         <property name="Cost" />
         <property name="Color" value="Red" />
@@ -2778,6 +2973,7 @@ Whenever you discard a land card, exile the top card of your library. You may pl
 When Invasion of Karsus enters the battlefield, it deals 3 damage to each creature and each planeswalker.</property>
       <property name="Artist" value="Zoltan Boros" />
       <property name="Number" value="146" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Refraction Elemental" type="transform">
         <property name="Cost" />
         <property name="Color" value="Red" />
@@ -2803,6 +2999,7 @@ Whenever you cast a spell, Refraction Elemental deals 2 damage to each opponent.
 When Invasion of Mercadia enters the battlefield, you may discard a card. If you do, draw two cards.</property>
       <property name="Artist" value="Cristi Balanescu" />
       <property name="Number" value="147" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Kyren Flamewright" type="transform">
         <property name="Cost" />
         <property name="Color" value="Red" />
@@ -2829,6 +3026,7 @@ When Invasion of Mercadia enters the battlefield, you may discard a card. If you
 When Invasion of Regatha enters the battlefield, it deals 4 damage to another target battle or opponent and 1 damage to up to one target creature.</property>
       <property name="Artist" value="Daarken" />
       <property name="Number" value="148" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Disciples of the Inferno" type="transform">
         <property name="Cost" />
         <property name="Color" value="Red" />
@@ -2854,6 +3052,7 @@ If a noncreature source you control would deal damage to a creature, battle, or 
 When Invasion of Tarkir enters the battlefield, reveal any number of Dragon cards from your hand. When you do, Invasion of Tarkir deals X plus 2 damage to any other target, where X is the number of cards revealed this way. (X can be 0.)</property>
       <property name="Artist" value="Darren Tan" />
       <property name="Number" value="149" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Defiant Thundermaw" type="transform">
         <property name="Cost" />
         <property name="Color" value="Red" />
@@ -2899,6 +3098,7 @@ Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until e
       <property name="Toughness" value="2" />
       <property name="Artist" value="Artur Nakhodkin" />
       <property name="Number" value="151" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Gitaxian Spellstalker" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Red Blue" />
@@ -2933,8 +3133,7 @@ Lithomantic Barrage deals 1 damage to target creature or planeswalker. It deals 
       <property name="Subtype" value="Vehicle" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Haste
-When Marauding Dreadship enters the battlefield, incubate 2. (Create an Incubator token with two +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a
-0/0 Plyrexian artifact creature.)
+When Marauding Dreadship enters the battlefield, incubate 2. (Create an Incubator token with two +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)
 Crew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="1" />
@@ -3005,6 +3204,7 @@ Equip <s value="3">{3}</s> (<s value="3">{3}</s>: Attach to target creature you 
       <property name="Toughness" value="1" />
       <property name="Artist" value="Francis Tneh" />
       <property name="Number" value="157" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Glistening Goremonger" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black Red" />
@@ -3038,9 +3238,9 @@ Equip <s value="3">{3}</s> (<s value="3">{3}</s>: Attach to target creature you 
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for 1 or one mana of that creature's color.)
+      <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for <s value="1">{1}</s> or one mana of that creature's color.)
 Equipped creature gets +3/+1 and has trample.
-Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Anach to target creature you control. Equip only as a sorcery.)</property>
+Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Jason A. Engle" />
       <property name="Number" value="159" />
     </card>
@@ -3073,8 +3273,7 @@ Whenever Rampaging Raptor deals combat damage to an opponent, it deals that much
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin Rogue" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Backup 1 (When this creature enters the
-battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
+      <property name="Rules">Backup 1 (When this creature enters the battlefield, put a +1/+1 counter on target creature. If that's another creature, it gains the following ability until end of turn.)
 First strike</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
@@ -3211,6 +3410,7 @@ Whenever you cast an instant or sorcery spell, Urabrask deals 1 damage to target
       <property name="Toughness" value="4" />
       <property name="Artist" value="Campbell White" />
       <property name="Number" value="169" />
+      <property name="Packaging" value="DFC" />
       <alternate name="The Great Work" type="transform">
         <property name="Cost" />
         <property name="Color" value="Red" />
@@ -3219,7 +3419,7 @@ Whenever you cast an instant or sorcery spell, Urabrask deals 1 damage to target
         <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
 I — The Great Work deals 3 damage to target opponent and each creature they control.
 II — Create three Treasure tokens.
-III — Until end of turn, you may cast instant or sorcery spells from any graveyard. If a spell cast this way would be put into a graveyard, exile it instead. Exile The Great Work then return it to the battlefield (front face up).</property>
+III — Until end of turn, you may cast instant and sorcery spells from any graveyard. If a spell cast this way would be put into a graveyard, exile it instead. Exile The Great Work, then return it to the battlefield (front face up).</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
       </alternate>
@@ -3281,7 +3481,7 @@ Whenever War-Trained Slasher attacks a battle, double its power until end of tur
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Exile the top two cards of your library. Until the end of your next turn, you may play those cards.</property>
-      <property name="Artist" value="" />
+      <property name="Artist" value="Viko Menezes" />
       <property name="Number" value="173" />
     </card>
     <card name="Ancient Imperiosaur" id="687d3261-dfbf-4c49-986f-20117b7ab5e7">
@@ -3361,6 +3561,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional on
       <property name="Toughness" value="5" />
       <property name="Artist" value="Jokubas Uogintas" />
       <property name="Number" value="178" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Plated Kilnbeast" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Green Red" />
@@ -3509,7 +3710,7 @@ Whenever this creature deals combat damage to a player or battle, look at that m
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Incubate X twice, where X is the number of lands you control. (To incubate X, create an incubator token with X +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
+      <property name="Rules">Incubate X twice, where X is the number of lands you control. (To incubate X, create an Incubator token with X +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
       <property name="Artist" value="Chris Ostrowski" />
       <property name="Number" value="187" />
     </card>
@@ -3528,8 +3729,9 @@ Whenever this creature deals combat damage to a player or battle, look at that m
         <s value="PU">{U/P}</s>: Transform Gnottvold Hermit. Activate only as a sorcery. (<s value="PU">{U/P}</s> can be paid with either <s value="U">{U}</s> or 2 life.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Artur Nakhodkin" />
       <property name="Number" value="188" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Chrome Host Hulk" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Green Blue" />
@@ -3556,6 +3758,7 @@ Whenever this creature deals combat damage to a player or battle, look at that m
       <property name="Toughness" value="3" />
       <property name="Artist" value="Sergey Glushakov" />
       <property name="Number" value="189" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Malady Invoker" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black Green" />
@@ -3581,6 +3784,7 @@ Whenever this creature deals combat damage to a player or battle, look at that m
 When Invasion of Ikoria enters the battlefield, search your library and/or graveyard for a non-Human creature card with mana value X or less and put it onto the battlefield. If you search your library this way, shuffle.</property>
       <property name="Artist" value="Antonio José Manzanedo" />
       <property name="Number" value="190" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Zilortha, Apex of Ikoria" type="transform">
         <property name="Cost" />
         <property name="Color" value="Green" />
@@ -3606,6 +3810,7 @@ For each non-Human creature you control, you may have that creature assign its c
 When Invasion of Ixalan enters the battlefield, look at the top five cards of your library. You may reveal a permanent card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.</property>
       <property name="Artist" value="Viktor Titov" />
       <property name="Number" value="191" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Belligerent Regisaur" type="transform">
         <property name="Cost" />
         <property name="Color" value="Green" />
@@ -3631,6 +3836,7 @@ Whenever you cast a spell, Belligerent Regisaur gains indestructible until end o
 When Invasion of Muraganda enters the battlefield, put a +1/+1 counter on target creature you control. Then that creature fights up to one target creature you don't control.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="192" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Primordial Plasm" type="transform">
         <property name="Cost" />
         <property name="Color" value="Green" />
@@ -3656,6 +3862,7 @@ When Invasion of Muraganda enters the battlefield, put a +1/+1 counter on target
 When Invasion of Shandalar enters the battlefield, return up to three target permanent cards from your graveyard to your hand.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="193" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Leyline Surge" type="transform">
         <property name="Cost" />
         <property name="Color" value="Green" />
@@ -3677,6 +3884,7 @@ When Invasion of Shandalar enters the battlefield, return up to three target per
 When Invasion of Zendikar enters the battlefield, search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Diego Gisbert" />
       <property name="Number" value="194" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Awakened Skyclave" type="transform">
         <property name="Cost" />
         <property name="Color" value="Green" />
@@ -3788,6 +3996,7 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Toughness" value="5" />
       <property name="Artist" value="David Auden Nash" />
       <property name="Number" value="200" />
+      <property name="Packaging" value="DFC" />
       <alternate name="Polukranos, Engine of Ruin" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Green White" />
@@ -3892,7 +4101,7 @@ Deathtouch</property>
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Distribute four +1/+1 counter among up to four target creatures you control. Creatures you control gain vigilance and trample until end of turn.</property>
+      <property name="Rules">Distribute four +1/+1 counters among up to four target creatures you control. Creatures you control gain vigilance and trample until end of turn.</property>
       <property name="Artist" value="Jason Rainville" />
       <property name="Number" value="206" />
     </card>
@@ -4004,15 +4213,16 @@ When Vorinclex enters the battlefield, search your library for up to two Forest 
       <property name="Toughness" value="6" />
       <property name="Artist" value="Daarken" />
       <property name="Number" value="213" />
+      <property name="Packaging" value="DFC" />
       <alternate name="The Grand Evolution" type="transform">
         <property name="Cost" />
         <property name="Color" value="Green" />
         <property name="Type" value="Enchantment" />
         <property name="Subtype" value="Saga" />
-        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
+        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
 I — Mill ten cards. Put up to two creature cards from among the milled cards onto the battlefield.
 II — Distribute seven +1/+1 counters among any number of target creatures you control.
-III — Until end of turn, creatures you control gain "<s value="1">{1}</s>: This creature fights target creature you don't control." Exile The Grand Evolution then, return it to the battlefield (front face up).</property>
+III — Until end of turn, creatures you control gain "<s value="1">{1}</s>: This creature fights target creature you don't control." Exile The Grand Evolution, then return it to the battlefield (front face up).</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
       </alternate>
@@ -4153,7 +4363,7 @@ Whenever one or more +1/+1 counters are put on another permanent you control, if
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human God" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As long as you have one or fewer cards in hand, Dieru and Hazoret has vigilance and haste.
+      <property name="Rules">As long as you have one or fewer cards in hand, Djeru and Hazoret has vigilance and haste.
 Whenever Djeru and Hazoret attacks, look at the top six cards of your library. You may exile a legendary creature card from among them. Put the rest on the bottom of your library in a random order. Until end of turn, you may cast the exiled card without paying its mana cost.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
@@ -4291,7 +4501,7 @@ When Halo Forager enters the battlefield, you may pay <s value="X">{X}</s>. When
       <property name="Subtype" value="Ogre Demon Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-When Hidetsugu and Kari enters the battlefield, draw three cards, then put two cards from your hand on top of your library in any order.
+When Hidetsugu and Kairi enters the battlefield, draw three cards, then put two cards from your hand on top of your library in any order.
 When Hidetsugu and Kairi dies, exile the top card of your library. Target opponent loses life equal to its mana value. If it's an instant or sorcery card, you may cast it without paying its mana cost.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
@@ -4310,7 +4520,7 @@ When Hidetsugu and Kairi dies, exile the top card of your library. Target oppone
       <property name="Subtype" value="Human God" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Creatures you control have vigilance and "<s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a creature spell."
-Whenever you cast a creature spell, if 3 or more mana from creatures was spent to cast it, draw a card.</property>
+Whenever you cast a creature spell, if three or more mana from creatures was spent to cast it, draw a card.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Wayne Reynolds" />
@@ -4332,12 +4542,13 @@ Whenever you cast a creature spell, if 3 or more mana from creatures was spent t
       <property name="Rules">When Invasion of Alara enters the battlefield, exile cards from the top of your library until you exile two nonland cards with mana value 4 or less. You may cast one of those two cards without paying its mana cost. Put one of them into your hand. Then put the other cards exiled this way on the bottom of your library in a random order.</property>
       <property name="Artist" value="Mathias Kollros" />
       <property name="Number" value="230" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Awaken the Maelstrom" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black Green Red Blue White" />
         <property name="Type" value="Sorcery" />
         <property name="Rules">Awaken the Maelstrom is all colors.
-Target player draws two cards. You may put an artifact card from your hand onto the battlefield. Create a token that's a copy of target permanent you control. Distribute three +1/+1 counters among one, two, or three creatures you control. Destroy target permanent an opponent controls.</property>
+Target player draws two cards. You may put an artifact card from your hand onto the battlefield. Create a token that's a copy of a permanent you control. Distribute three +1/+1 counters among one, two, or three creatures you control. Destroy target permanent an opponent controls.</property>
       </alternate>
     </card>
     <card name="Invasion of Amonkhet" id="981f091a-17f8-412e-9752-69070ebed4ea">
@@ -4352,15 +4563,16 @@ Target player draws two cards. You may put an artifact card from your hand onto 
       <property name="Subtype" value="Siege" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">(As a Siege enters, choose an opponent to protect it. You and others can attack it. When it's defeated, exile it, then cast it transformed.)
-When Invasion of Amonkhet enters the battlefield, each player mills three cards, then each opponent discards a card and you draw a card. (To mill three cards, a plaver buts the top three cards of their library into their graveyard.)</property>
+When Invasion of Amonkhet enters the battlefield, each player mills three cards, then each opponent discards a card and you draw a card. (To mill three cards, a player puts the top three cards of their library into their graveyard.)</property>
       <property name="Artist" value="Jokubas Uogintas" />
       <property name="Number" value="231" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Lazotep Convert" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black Blue" />
         <property name="Type" value="Creature" />
         <property name="Subtype" value="Zombie" />
-        <property name="Rules">You may have Lazotep Convert enter the battlefield as a copy of any creature card in a graveyard, except it's a 4/4 black Zombie in addition to its other types.</property>
+        <property name="Rules">You may have Lazotep Convert enter the battlefield as a copy of any creature card in a graveyard, except it's a 4/4 black Zombie in addition to its other colors and types.</property>
         <property name="Power" value="4" />
         <property name="Toughness" value="4" />
       </alternate>
@@ -4379,6 +4591,7 @@ When Invasion of Amonkhet enters the battlefield, each player mills three cards,
 When Invasion of Azgol enters the battlefield, target player sacrifices a creature or planeswalker and loses 1 life.</property>
       <property name="Artist" value="Joshua Raphael" />
       <property name="Number" value="232" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Ashen Reaper" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black Red" />
@@ -4404,6 +4617,7 @@ At the beginning of your end step, put a +1/+1 counter on Ashen Reaper if a perm
 When Invasion of Ergamon enters the battlefield, create a Treasure token. Then you may discard a card. If you do, draw a card.</property>
       <property name="Artist" value="Manuel Castañón" />
       <property name="Number" value="233" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Truga Cliffcharger" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Green Red" />
@@ -4429,6 +4643,7 @@ When Truga Cliffcharger enters the battlefield, you may discard a card. If you d
 When Invasion of Kaladesh enters the battlefield, create a 1/1 colorless Thopter artifact creature token with flying.</property>
       <property name="Artist" value="Leon Tukker" />
       <property name="Number" value="234" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Aetherwing, Golden-Scale Flagship" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Red Blue" />
@@ -4456,6 +4671,7 @@ Crew 1 (Tap any number of creatures you control with total power 1 or more: This
 When Invasion of Kylem enters the battlefield, up to two target creatures each get +2/+0 and gain vigilance and haste until end of turn.</property>
       <property name="Artist" value="Johann Bodin" />
       <property name="Number" value="235" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Valor's Reach Tag Team" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Red White" />
@@ -4478,6 +4694,7 @@ When Invasion of Kylem enters the battlefield, up to two target creatures each g
 When Invasion of Lorwyn enters the battlefield, destroy target non-Elf creature an opponent controls with power X or less, where X is the number of lands you control.</property>
       <property name="Artist" value="Dan Scott" />
       <property name="Number" value="236" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Winnowing Forces" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black Green" />
@@ -4503,6 +4720,7 @@ When Invasion of Lorwyn enters the battlefield, destroy target non-Elf creature 
 When Invasion of Moag enters the battlefield, put a +1/+1 counter on each creature you control.</property>
       <property name="Artist" value="Filip Burburan" />
       <property name="Number" value="237" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Bloomwielder Dryads" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Green White" />
@@ -4528,6 +4746,7 @@ At the beginning of your end step, put a +1/+1 counter on target creature you co
 When Invasion of New Capenna enters the battlefield, you may sacrifice an artifact or creature. When you do, exile target artifact or creature an opponent controls.</property>
       <property name="Artist" value="Diego Gisbert" />
       <property name="Number" value="238" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Holy Frazzle-Cannon" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black White" />
@@ -4552,6 +4771,7 @@ Equip <s value="1">{1}</s></property>
 When Invasion of New Phyrexia enters the battlefield, create X 2/2 white and blue Knight creature tokens with vigilance.</property>
       <property name="Artist" value="Chris Rallis" />
       <property name="Number" value="239" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Teferi Akosa of Zhalfir" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Blue White" />
@@ -4559,7 +4779,7 @@ When Invasion of New Phyrexia enters the battlefield, create X 2/2 white and blu
         <property name="Subtype" value="Teferi" />
         <property name="Rules">+1: Draw two cards. Then discard two cards unless you discard a creature card.
 −2: You get an emblem with "Knights you control get +1/+0 and have ward <s value="1">{1}</s>."
-−3: Tap X creatures you control. When you do, shuffle target nonland permanent an opponent controls with mana value X or less into its owner's library.</property>
+−3: Tap X untapped creatures you control. When you do, shuffle target nonland permanent an opponent controls with mana value X or less into its owner's library.</property>
         <property name="Loyalty" value="4" />
       </alternate>
     </card>
@@ -4577,6 +4797,7 @@ When Invasion of New Phyrexia enters the battlefield, create X 2/2 white and blu
 When Invasion of Pyrulea enters the battlefield, scry 3, then reveal the top card of your library. If it's a land or double-faced card, draw a card.</property>
       <property name="Artist" value="Nicholas Gregory" />
       <property name="Number" value="240" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Gargantuan Slabhorn" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Green Blue" />
@@ -4603,6 +4824,7 @@ Other transformed permanents you control have trample and ward <s value="2">{2}<
 When Invasion of Tolvada enters the battlefield, return target nonbattle permanent card from your graveyard to the battlefield.</property>
       <property name="Artist" value="Henry Peters" />
       <property name="Number" value="241" />
+      <property name="Packaging" value="Battle" />
       <alternate name="The Broken Sky" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Black White" />
@@ -4626,6 +4848,7 @@ At the beginning of your end step, create a 1/1 white and black Spirit creature 
 When Invasion of Xerex enters the battlefield, return up to one target creature to its owner's hand.</property>
       <property name="Artist" value="Fajareka Setiawan" />
       <property name="Number" value="242" />
+      <property name="Packaging" value="Battle" />
       <alternate name="Vertex Paladin" type="transform">
         <property name="Cost" />
         <property name="Color" value="Multicolor Blue White" />
@@ -4992,11 +5215,11 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Phyrexian Construct" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">
-        <s value="2">{2}</s>, <s value="T">{T}</s>: Put target card from a graveyard on the bottom of its owner's library.</property>
+      <property name="Rules">Reach
+<s value="2">{2}</s>, <s value="T">{T}</s>: Put target card from a graveyard on the bottom of its owner's library.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
-      <property name="Artist" value="Daniel Romanovsky" />
+      <property name="Artist" value="Andreas Zafiratos" />
       <property name="Number" value="262" />
     </card>
     <card name="Realmbreaker, the Invasion Tree" id="7b608134-cfc3-48bf-92d8-35d732fcde54">
@@ -5068,6 +5291,7 @@ When Bloodfell Caves enters the battlefield, you gain 1 life.
       <property name="Artist" value="Jorge Jacinto" />
       <property name="Number" value="267" />
       <property name="Flags" value="BR" />
+      <property name="Packaging" value="Land" />
     </card>
     <card name="Blossoming Sands" id="e34684d6-2935-4776-9a86-b603ad8cf624">
       <property name="CMC" value="0" />
@@ -5080,6 +5304,7 @@ When Blossoming Sands enters the battlefield, you gain 1 life.
       <property name="Artist" value="Robin Olausson" />
       <property name="Number" value="268" />
       <property name="Flags" value="GW" />
+      <property name="Packaging" value="Land" />
     </card>
     <card name="Dismal Backwater" id="33cd4f63-3484-4cee-8603-1f89cabee6c3">
       <property name="CMC" value="0" />
@@ -5092,6 +5317,7 @@ When Dismal Backwater enters the battlefield, you gain 1 life.
       <property name="Artist" value="Chris Ostrowski" />
       <property name="Number" value="269" />
       <property name="Flags" value="UB" />
+      <property name="Packaging" value="Land" />
     </card>
     <card name="Jungle Hollow" id="b6ed20a4-bc8a-44b1-b9b7-c82518c287b8">
       <property name="CMC" value="0" />
@@ -5104,6 +5330,7 @@ When Jungle Hollow enters the battlefield, you gain 1 life.
       <property name="Artist" value="Thomas Stoop" />
       <property name="Number" value="270" />
       <property name="Flags" value="BG" />
+      <property name="Packaging" value="Land" />
     </card>
     <card name="Rugged Highlands" id="3aeef1b1-a351-47ce-a686-a0eb0a35a894">
       <property name="CMC" value="0" />
@@ -5116,6 +5343,7 @@ When Rugged Highlands enters the battlefield, you gain 1 life.
       <property name="Artist" value="Thomas Stoop" />
       <property name="Number" value="271" />
       <property name="Flags" value="RG" />
+      <property name="Packaging" value="Land" />
     </card>
     <card name="Scoured Barrens" id="66aefbfc-3f67-443d-8ec4-cc9beafb64ee">
       <property name="CMC" value="0" />
@@ -5128,6 +5356,7 @@ When Scoured Barrens enters the battlefield, you gain 1 life.
       <property name="Artist" value="Robin Olausson" />
       <property name="Number" value="272" />
       <property name="Flags" value="WB" />
+      <property name="Packaging" value="Land" />
     </card>
     <card name="Swiftwater Cliffs" id="957efc4e-c2a9-46a2-b9e3-20dc419ffd05">
       <property name="CMC" value="0" />
@@ -5140,6 +5369,7 @@ When Swiftwater Cliffs enters the battlefield, you gain 1 life.
       <property name="Artist" value="Julian Kok Joon Wen" />
       <property name="Number" value="273" />
       <property name="Flags" value="UR" />
+      <property name="Packaging" value="Land" />
     </card>
     <card name="Thornwood Falls" id="f1b753e2-6e53-4ed1-9be4-66f8eb005a11">
       <property name="CMC" value="0" />
@@ -5152,6 +5382,7 @@ When Thornwood Falls enters the battlefield, you gain 1 life.
       <property name="Artist" value="Roman Kuteynikov" />
       <property name="Number" value="274" />
       <property name="Flags" value="GU" />
+      <property name="Packaging" value="Land" />
     </card>
     <card name="Tranquil Cove" id="3799dcb2-7cd7-4d28-b9af-249e3ebe3d3b">
       <property name="CMC" value="0" />
@@ -5164,6 +5395,7 @@ When Tranquil Cove enters the battlefield, you gain 1 life.
       <property name="Artist" value="Chris Ostrowski" />
       <property name="Number" value="275" />
       <property name="Flags" value="WU" />
+      <property name="Packaging" value="Land" />
     </card>
     <card name="Wind-Scarred Crag" id="7f2642cd-e3cc-4aab-8c00-4987284509b3">
       <property name="CMC" value="0" />
@@ -5176,6 +5408,7 @@ When Wind-Scarred Crag enters the battlefield, you gain 1 life.
       <property name="Artist" value="Roman Kuteynikov" />
       <property name="Number" value="276" />
       <property name="Flags" value="RW" />
+      <property name="Packaging" value="Land" />
     </card>
     <card name="Plains" id="00bf269d-aca3-494c-8777-de90ae903af2">
       <property name="CMC" value="0" />
@@ -5427,7 +5660,7 @@ Whenever you cast a noncreature spell with mana value 3 or greater, draw a card.
         <property name="Color" value="Blue" />
         <property name="Type" value="Enchantment" />
         <property name="Subtype" value="Saga" />
-        <property name="Rules">(As this saga enters and after your draw step, add a lore counter.)
+        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
 I — Draw cards equal to the number of cards in your hand. You have no maximum hand size for as long as you control The Great Synthesis.
 II — Return all non-Phyrexian creatures to their owners' hands.
 III — You may cast any number of spells from your hand without paying their mana costs. Exile The Great Synthesis, then return it to the battlefield (front face up).</property>
@@ -5447,7 +5680,7 @@ III — You may cast any number of spells from your hand without paying their ma
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever you cast a legendary spell, untap Rona, Herald of Invasion.
 <s value="T">{T}</s>: Draw a card, then discard a card.
-<s value="5">{5}</s><s value="PB">{B/P}</s>: Transform Rona. Activate only as a sorcery. (<s value="PB">{B/P}</s> can be paid with <s value="B">{B}</s> or 2 life.)</property>
+<s value="5">{5}</s><s value="PB">{B/P}</s>: Transform Rona. Activate only as a sorcery. (<s value="PB">{B/P}</s> can be paid with either <s value="B">{B}</s> or 2 life.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Daniel Lieske" />
@@ -5477,7 +5710,7 @@ Whenever a source deals damage to Rona, Tolarian Obliterator, that source's cont
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="T">{T}</s>, Sacrifice another creature or artifact: Ayara, Widow of the Realm deals X damage to target opponent or battle and you gain X life, where X is the sacrificed permanent's mana value.
-<s value="5">{5}</s><s value="PR">{R/P}</s>: Transform Ayara. Activate only as a sorcery. (<s value="PR">{R/P}</s> can be paid with <s value="R">{R}</s> or 2 life.)</property>
+<s value="5">{5}</s><s value="PR">{R/P}</s>: Transform Ayara. Activate only as a sorcery. (<s value="PR">{R/P}</s> can be paid with either <s value="R">{R}</s> or 2 life.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Josu Hernaiz" />
@@ -5509,7 +5742,7 @@ When Sheoldred enters the battlefield, each opponent sacrifices a nontoken creat
 <s value="4">{4}</s><s value="B">{B}</s>: Exile Sheoldred, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery and only if an opponent has eight or more cards in their graveyard.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Dominik Mayer" />
       <property name="Number" value="297" />
       <property name="Packaging" value="Special" />
       <alternate name="The True Scriptures" type="transform">
@@ -5571,7 +5804,7 @@ Whenever you cast an instant or sorcery spell, Urabrask deals 1 damage to target
 <s value="R">{R}</s>: Exile Urabrask, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery and only if you've cast three or more instant and/or sorcery spells this turn.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Kekai Kotaki" />
       <property name="Number" value="299" />
       <property name="Packaging" value="Special" />
       <alternate name="The Great Work" type="transform">
@@ -5582,7 +5815,7 @@ Whenever you cast an instant or sorcery spell, Urabrask deals 1 damage to target
         <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
 I — The Great Work deals 3 damage to target opponent and each creature they control.
 II — Create three Treasure tokens.
-III — Until end of turn, you may cast instant or sorcery spells from any graveyard. If a spell cast this way would be put into a graveyard, exile it instead. Exile The Great Work then return it to the battlefield (front face up).</property>
+III — Until end of turn, you may cast instant and sorcery spells from any graveyard. If a spell cast this way would be put into a graveyard, exile it instead. Exile The Great Work, then return it to the battlefield (front face up).</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
       </alternate>
@@ -5640,10 +5873,10 @@ When Vorinclex enters the battlefield, search your library for up to two Forest 
         <property name="Color" value="Green" />
         <property name="Type" value="Enchantment" />
         <property name="Subtype" value="Saga" />
-        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
+        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
 I — Mill ten cards. Put up to two creature cards from among the milled cards onto the battlefield.
 II — Distribute seven +1/+1 counters among any number of target creatures you control.
-III — Until end of turn, creatures you control gain "<s value="1">{1}</s>: This creature fights target creature you don't control." Exile The Grand Evolution then, return it to the battlefield (front face up).</property>
+III — Until end of turn, creatures you control gain "<s value="1">{1}</s>: This creature fights target creature you don't control." Exile The Grand Evolution, then return it to the battlefield (front face up).</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
       </alternate>
@@ -5699,7 +5932,7 @@ Whenever you cast your first instant or sorcery spell each turn, you may cast a 
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human God" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As long as you have one or fewer cards in hand, Dieru and Hazoret has vigilance and haste.
+      <property name="Rules">As long as you have one or fewer cards in hand, Djeru and Hazoret has vigilance and haste.
 Whenever Djeru and Hazoret attacks, look at the top six cards of your library. You may exile a legendary creature card from among them. Put the rest on the bottom of your library in a random order. Until end of turn, you may cast the exiled card without paying its mana cost.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
@@ -5806,7 +6039,7 @@ Whenever you attack, choose one —
       <property name="Subtype" value="Ogre Demon Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-When Hidetsugu and Kari enters the battlefield, draw three cards, then put two cards from your hand on top of your library in any order.
+When Hidetsugu and Kairi enters the battlefield, draw three cards, then put two cards from your hand on top of your library in any order.
 When Hidetsugu and Kairi dies, exile the top card of your library. Target opponent loses life equal to its mana value. If it's an instant or sorcery card, you may cast it without paying its mana cost.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
@@ -5826,7 +6059,7 @@ When Hidetsugu and Kairi dies, exile the top card of your library. Target oppone
       <property name="Subtype" value="Human God" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Creatures you control have vigilance and "<s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a creature spell."
-Whenever you cast a creature spell, if 3 or more mana from creatures was spent to cast it, draw a card.</property>
+Whenever you cast a creature spell, if three or more mana from creatures was spent to cast it, draw a card.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Matt Stikker" />
@@ -6259,7 +6492,7 @@ Whenever Terror of Towashi attacks, you may pay <s value="3">{3}</s><s value="B"
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dwarf Artificer" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever one or more +1/+1 counters are put on Axgard Artisan for the first time each turn, create a Treasure token. (it's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
+      <property name="Rules">Whenever one or more +1/+1 counters are put on Axgard Artisan for the first time each turn, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Quintin Gleim" />
@@ -6298,7 +6531,7 @@ Trample</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="1">{1}</s>
-        <s value="R">{R}</s>, <s value="T">{T}</s>: Create a token that's a copy of another target creature you control. it gains haste. Sacrifice it at the beginning of the next end step. Activate only as a sorcery.
+        <s value="R">{R}</s>, <s value="T">{T}</s>: Create a token that's a copy of another target creature you control. It gains haste. Sacrifice it at the beginning of the next end step. Activate only as a sorcery.
 <s value="6">{6}</s><s value="R">{R}</s><s value="R">{R}</s><s value="R">{R}</s>, <s value="T">{T}</s>: Create five tokens that are copies of another target creature you control. They gain haste. Sacrifice them at the beginning of the next end step. Activate only as a sorcery.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -6361,6 +6594,38 @@ Whenever another nontoken creature enters the battlefield under your control, pu
       <property name="Number" value="337" />
       <property name="Packaging" value="Special" />
     </card>
+    <card name="Elesh Norn" id="40307bcf-199c-4487-bfab-cb5fb841dee8">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Phyrexian Praetor" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Vigilance
+Whenever a source an opponent controls deals damage to you or a permanent you control, that source's controller loses 2 life unless they pay <s value="1">{1}</s>.
+<s value="2">{2}</s><s value="W">{W}</s>, Sacrifice three other creatures: Exile Elesh Norn, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Ryan Pancoast" />
+      <property name="Number" value="338" />
+      <property name="Packaging" value="Special" />
+      <alternate name="The Argent Etchings" type="transform">
+        <property name="Cost" />
+        <property name="Color" value="White" />
+        <property name="Type" value="Enchantment" />
+        <property name="Subtype" value="Saga" />
+        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
+I — Incubate 2 five times, then transform all Incubator tokens you control.
+II — Creatures you control get +1/+1 and gain double strike until end of turn.
+III — Destroy all other permanents except for artifacts, lands, and Phyrexians. Exile The Argent Etchings, then return it to the battlefield (front face up).</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
+    </card>
     <card name="Jin-Gitaxias" id="e4a4a53e-58cb-4c4a-8396-590e41227ef8">
       <property name="Cost">
         <s value="3">{3}</s>
@@ -6385,10 +6650,106 @@ Whenever you cast a noncreature spell with mana value 3 or greater, draw a card.
         <property name="Color" value="Blue" />
         <property name="Type" value="Enchantment" />
         <property name="Subtype" value="Saga" />
-        <property name="Rules">(As this saga enters and after your draw step, add a lore counter.)
+        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
 I — Draw cards equal to the number of cards in your hand. You have no maximum hand size for as long as you control The Great Synthesis.
 II — Return all non-Phyrexian creatures to their owners' hands.
 III — You may cast any number of spells from your hand without paying their mana costs. Exile The Great Synthesis, then return it to the battlefield (front face up).</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
+    </card>
+    <card name="Sheoldred" id="c9063b1d-573a-4979-8cb3-4afe4eee66d2">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Phyrexian Praetor" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Menace
+When Sheoldred enters the battlefield, each opponent sacrifices a nontoken creature or planeswalker.
+<s value="4">{4}</s><s value="B">{B}</s>: Exile Sheoldred, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery and only if an opponent has eight or more cards in their graveyard.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Camille Alquier" />
+      <property name="Number" value="340" />
+      <property name="Packaging" value="Special" />
+      <alternate name="The True Scriptures" type="transform">
+        <property name="Cost" />
+        <property name="Color" value="Black" />
+        <property name="Type" value="Enchantment" />
+        <property name="Subtype" value="Saga" />
+        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
+I — For each opponent, destroy up to one target creature or planeswalker that player controls.
+II — Each opponent discards three cards, then mills three cards.
+III — Put all creature cards from all graveyards onto the battlefield under your control. Exile The True Scriptures, then return it to the battlefield (front face up).</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
+    </card>
+    <card name="Urabrask" id="b12e031a-3a1a-4544-973b-e4e5b0518db9">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Phyrexian Praetor" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">First strike
+Whenever you cast an instant or sorcery spell, Urabrask deals 1 damage to target opponent. Add <s value="R">{R}</s>.
+<s value="R">{R}</s>: Exile Urabrask, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery and only if you've cast three or more instant and/or sorcery spells this turn.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="José Parodi" />
+      <property name="Number" value="341" />
+      <property name="Packaging" value="Special" />
+      <alternate name="The Great Work" type="transform">
+        <property name="Cost" />
+        <property name="Color" value="Red" />
+        <property name="Type" value="Enchantment" />
+        <property name="Subtype" value="Saga" />
+        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
+I — The Great Work deals 3 damage to target opponent and each creature they control.
+II — Create three Treasure tokens.
+III — Until end of turn, you may cast instant and sorcery spells from any graveyard. If a spell cast this way would be put into a graveyard, exile it instead. Exile The Great Work, then return it to the battlefield (front face up).</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
+    </card>
+    <card name="Vorinclex" id="c462bdf7-9181-4e52-8bcc-d7d5fa49af1c">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Phyrexian Praetor" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Trample, reach
+When Vorinclex enters the battlefield, search your library for up to two Forest cards, reveal them, put them into your hand, then shuffle.
+<s value="6">{6}</s><s value="G">{G}</s><s value="G">{G}</s>: Exile Vorinclex, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery.</property>
+      <property name="Power" value="6" />
+      <property name="Toughness" value="6" />
+      <property name="Artist" value="Joseph Weston" />
+      <property name="Number" value="342" />
+      <property name="Packaging" value="Special" />
+      <alternate name="The Grand Evolution" type="transform">
+        <property name="Cost" />
+        <property name="Color" value="Green" />
+        <property name="Type" value="Enchantment" />
+        <property name="Subtype" value="Saga" />
+        <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
+I — Mill ten cards. Put up to two creature cards from among the milled cards onto the battlefield.
+II — Distribute seven +1/+1 counters among any number of target creatures you control.
+III — Until end of turn, creatures you control gain "<s value="1">{1}</s>: This creature fights target creature you don't control." Exile The Grand Evolution, then return it to the battlefield (front face up).</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
       </alternate>
@@ -6495,7 +6856,7 @@ Whenever you cast a noncreature spell, create a 1/1 white Monk creature token wi
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Phyrexian Cat Cleric" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Progenitor Exarch enters the battlefield, incubate 3 X times. (To incubate 3, create an Incubator token with three +1/+1 counters on it and <s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)
+      <property name="Rules">When Progenitor Exarch enters the battlefield, incubate 3 X times. (To incubate 3, create an Incubator token with three +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)
 <s value="T">{T}</s>: Transform target Incubator token you control.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
@@ -6513,7 +6874,7 @@ Whenever you cast a noncreature spell, create a 1/1 white Monk creature token wi
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Exile all creatures. Incubate X, where X is the number of creatures exiled this way. (Create an Incubator token with X +1/+ 1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
+      <property name="Rules">Exile all creatures. Incubate X, where X is the number of creatures exiled this way. (Create an Incubator token with X +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
       <property name="Artist" value="Kasia 'Kafis' Zielińska" />
       <property name="Number" value="349" />
       <property name="Packaging" value="Special" />
@@ -6529,7 +6890,7 @@ Whenever you cast a noncreature spell, create a 1/1 white Monk creature token wi
       <property name="Subtype" value="Phyrexian Shark" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever you cast a noncreature spell, incubate X, where X is that spell's mana value. (Create an Incubator token with X +1/+ 1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
+Whenever you cast a noncreature spell, incubate X, where X is that spell's mana value. (Create an Incubator token with X +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Donato Giancola" />
@@ -6732,8 +7093,7 @@ Spells you cast from exile have convoke.</property>
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for <s value="1">{1}</s> or one mana of that creature's color.)
-Destroy target creature or planeswalker.
-Surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)</property>
+Destroy target creature or planeswalker. Surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)</property>
       <property name="Artist" value="Javier Charro" />
       <property name="Number" value="361" />
       <property name="Packaging" value="Special" />
@@ -6910,7 +7270,7 @@ Whenever this creature deals combat damage to a player or battle, look at that m
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Incubate X twice, where X is the number of lands you control. (To incubate X, create an incubator token with X +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
+      <property name="Rules">Incubate X twice, where X is the number of lands you control. (To incubate X, create an Incubator token with X +1/+1 counters on it and "<s value="2">{2}</s>: Transform this artifact." It transforms into a 0/0 Phyrexian artifact creature.)</property>
       <property name="Artist" value="Chris Ostrowski" />
       <property name="Number" value="371" />
       <property name="Packaging" value="Special" />
@@ -7047,7 +7407,7 @@ Whenever Terror of Towashi attacks, you may pay <s value="3">{3}</s><s value="B"
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="1">{1}</s>
-        <s value="R">{R}</s>, <s value="T">{T}</s>: Create a token that's a copy of another target creature you control. it gains haste. Sacrifice it at the beginning of the next end step. Activate only as a sorcery.
+        <s value="R">{R}</s>, <s value="T">{T}</s>: Create a token that's a copy of another target creature you control. It gains haste. Sacrifice it at the beginning of the next end step. Activate only as a sorcery.
 <s value="6">{6}</s><s value="R">{R}</s><s value="R">{R}</s><s value="R">{R}</s>, <s value="T">{T}</s>: Create five tokens that are copies of another target creature you control. They gain haste. Sacrifice them at the beginning of the next end step. Activate only as a sorcery.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
