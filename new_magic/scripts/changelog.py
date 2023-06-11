@@ -467,5 +467,8 @@ changelog = {
         ]),
     3060303: ("3.6.3.3", "April 17 2023", [
         "Added March of Machine"
+        ]),
+    3060305: ("3.6.3.5", "June 11 2023", [
+        "Added LOTR sets"
         ])
 }
