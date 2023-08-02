@@ -470,5 +470,8 @@ changelog = {
         ]),
     3060305: ("3.6.3.5", "June 11 2023", [
         "Added LOTR sets"
+        ]),
+    3060306: ("3.6.3.6", "August 2 2023", [
+        "Added CMM set"
         ])
 }
