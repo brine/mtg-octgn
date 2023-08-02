@@ -144,7 +144,7 @@ Activated abilities of Foods you control cost <s value="1">{1}</s> less to activ
       <property name="Subtype" value="Avatar Wizard" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Whenever you cast a noncreature spell, amass Orcs X, where X is that spell's mana value. (Put X +1/+1 counters on an Army you control. It's also an Orc. If you don't control an Army, create a 0/0 black Orc Army creature token first.)
-Goblins and Orcs you control have ward 2.</property>
+Goblins and Orcs you control have ward <s value="2">{2}</s>.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Leonardo Borazio" />
@@ -190,7 +190,8 @@ At the beginning of combat on each opponent's turn, if you're the monarch, that 
       </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
-      <property name="Type" value="Artifact Equipment" />
+      <property name="Type" value="Artifact" />
+      <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Field-Tested Frying Pan enters the battlefield, create a Food token, then create a 1/1 white Halfling creature token and attach Field-Tested Frying Pan to it.
 Equipped creature has "Whenever you gain life, this creature gets +X/+X until end of turn, where X is the amount of life you gained."
@@ -238,7 +239,8 @@ Equip <s value="2">{2}</s></property>
       </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
-      <property name="Type" value="Creature Spirit Soldier" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Spirit Soldier" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying, ward <s value="3">{3}</s>
 When Grey Host Reinforcements enters the battlefield, exile target player's graveyard. Put a number of +1/+1 counters on Grey Host Reinforcements equal to the number of creature cards exiled this way.</property>
@@ -255,10 +257,11 @@ When Grey Host Reinforcements enters the battlefield, exile target player's grav
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Bird Noble" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
 Whenever Gwaihir attacks, target attacking creature gains flying until end of turn.
-At the beginning of each end step, if you gained 3 or more life this turn, create a 3/3 white Bird creature token with flying and "Whenever this creature acks, target attacking creature gains flying until end of turn."</property>
+At the beginning of each end step, if you gained 3 or more life this turn, create a 3/3 white Bird creature token with flying and "Whenever this creature attacks, target attacking creature gains flying until end of turn."</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Jesper Ejsing" />
@@ -271,7 +274,8 @@ At the beginning of each end step, if you gained 3 or more life this turn, creat
       </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
-      <property name="Type" value="Creature Human Soldier" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">First strike
 Whenever Lossarnach Captain or another Human enters the battlefield under your control, tap target creature an opponent controls.
@@ -327,8 +331,7 @@ At the beginning of the monarch's end step, that player draws a card.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="2">{2}</s>
-        <s value="U">{U}</s>: Target Goblin, Orc, or Pirate can't
-be blocked this turn.
+        <s value="U">{U}</s>: Target Goblin, Orc, or Pirate can't be blocked this turn.
 Whenever Corsairs of Umbar deals combat damage to a player, amass Orcs 3. (Put three +1/+1 counters on an Army you control. It's also an Orc. If you don't control an Army, create a 0/0 black Orc Army creature token first.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -469,7 +472,8 @@ At the beginning of your end step, each opponent dealt combat damage this game b
       </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
-      <property name="Type" value="Creature Halfling Citizen" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Halfling Citizen" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
 Whenever one or more creatures you control deal combat damage to a player, create a Food token.
@@ -519,7 +523,8 @@ When Rapacious Guest leaves the battlefield, target opponent loses life equal to
       </property>
       <property name="CMC" value="9" />
       <property name="Color" value="Red" />
-      <property name="Type" value="Creature Dragon" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">This spell costs <s value="X">{X}</s> less to cast, where X is the greatest number of artifacts an opponent controls.
 Flying, trample, haste
@@ -573,7 +578,8 @@ Whenever Orcish Siegemaster attacks, it gets +X/+0 until end of turn, where X is
       </property>
       <property name="CMC" value="7" />
       <property name="Color" value="Red" />
-      <property name="Type" value="Creature Elephant" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elephant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample
 Cycling <s value="X">{X}</s><s value="2">{2}</s><s value="R">{R}</s> (<s value="X">{X}</s><s value="2">{2}</s><s value="R">{R}</s>, Discard this card: Draw a card.)
@@ -706,7 +712,8 @@ Whenever Mirkwood Elk enters the battlefield or attacks, return target Elf card 
       </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
-      <property name="Type" value="Creature Horse" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Horse" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample, haste
 Whenever Motivated Pony attacks, attacking creatures get +1/+1 until end of turn. If a Food entered the battlefield under your control this turn, untap those creatures and they get an additional +2/+2 until end of turn.</property>
@@ -722,7 +729,8 @@ Whenever Motivated Pony attacks, attacking creatures get +1/+1 until end of turn
       </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
-      <property name="Type" value="Creature Boar" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Boar" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever you gain life, put that many ribbon counters on Prize Pig. Then if there are three or more ribbon counters on Prize Pig, remove those counters and untap it.
 <s value="T">{T}</s>: Add one mana of any color.</property>
@@ -790,7 +798,7 @@ When you cycle The Balrog of Moria, create two Treasure tokens.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Halfling Citizen" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Affinity for Food (This spell costs 1 less to cast for each Food you control.)
+      <property name="Rules">Affinity for Food (This spell costs <s value="1">{1}</s> less to cast for each Food you control.)
 Trample
 Banquet Guests enters the battlefield with twice X +1/+1 counters on it.
 <s value="2">{2}</s>, Sacrifice a Food: Banquet Guests gains indestructible until end of turn.</property>
@@ -934,7 +942,7 @@ At the beginning of your end step, if you're the monarch, create two 1/1 white H
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Halfling Peasant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Farmer Cotton enters the battlefield, create X 1/1 white Halfling creature tokens and X Food tokens. (They're artifacts with "2, , Sacrifice this artifact: You gain 3 life.")</property>
+      <property name="Rules">When Farmer Cotton enters the battlefield, create X 1/1 white Halfling creature tokens and X Food tokens. (They're artifacts with "<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: You gain 3 life.")</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Tomas Duchek" />
@@ -986,8 +994,8 @@ Whenever Gríma deals combat damage to a player, that player exiles cards from t
       <property name="Subtype" value="Saga" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after IV.)
-I, II, III— Create a 3/3 black Wraith creature token with menace. The Ring tempts you.
-IV— For each opponent, gain control of up to one target creature that player controls until end of turn. Untap those creatures. They gain haste until end of turn. The Ring tempts you.</property>
+I, II, III — Create a 3/3 black Wraith creature token with menace. The Ring tempts you.
+IV — For each opponent, gain control of up to one target creature that player controls until end of turn. Untap those creatures. They gain haste until end of turn. The Ring tempts you.</property>
       <property name="Artist" value="Daarken" />
       <property name="Number" value="058" />
     </card>
@@ -1091,9 +1099,9 @@ Whenever a player attacks, if they aren't attacking you, that player chooses an 
       <property name="Subtype" value="Saga" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
-I— Create two 1/1 white Human Soldier creature tokens.
-II— Create two 2/2 red Human Knight creature tokens with trample and haste.
-III— Put an indestructible counter on up to one target Human. You become the monarch.</property>
+I — Create two 1/1 white Human Soldier creature tokens.
+II — Create two 2/2 red Human Knight creature tokens with trample and haste.
+III — Put an indestructible counter on up to one target Human. You become the monarch.</property>
       <property name="Artist" value="Randy Gallegos" />
       <property name="Number" value="064" />
     </card>
@@ -1107,7 +1115,7 @@ III— Put an indestructible counter on up to one target Human. You become the m
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Halfling Advisor" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Partner with Merry, Warden of Isengard (When this creature enters the battlefield, target player may put Merry into their hand from their library, then shuffle)
+      <property name="Rules">Partner with Merry, Warden of Isengard (When this creature enters the battlefield, target player may put Merry into their hand from their library, then shuffle.)
 <s value="1">{1}</s>, <s value="T">{T}</s>: Create a Food token.
 <s value="T">{T}</s>, Sacrifice four Foods: Other creatures you control get +3/+3 and gain haste until end of turn. Activate only as a sorcery.</property>
       <property name="Power" value="2" />
@@ -1180,9 +1188,9 @@ Dash <s value="4">{4}</s><s value="R">{R}</s><s value="W">{W}</s> (You may cast 
       <property name="Subtype" value="Saga" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
-I— Scry 2, then draw two cards.
-II— Create a Treasure token and a 2/2 blue Bird creature token with flying.
-III— Put a flying counter on each creature you control without flying.</property>
+I — Scry 2, then draw two cards.
+II — Create a Treasure token and a 2/2 blue Bird creature token with flying.
+III — Put a flying counter on each creature you control without flying.</property>
       <property name="Artist" value="Torgeir Fjereide" />
       <property name="Number" value="069" />
     </card>
@@ -1197,7 +1205,7 @@ III— Put a flying counter on each creature you control without flying.</proper
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Amass Orcs X. Mill X cards. You may cast an instant or sorcery spell with mana value X or less from among them without paying its mana cost. (To amass Orcs X, put X +1/+1 counters on an Army you control. It's also an Orc. If you don't control an Army, create a 0/0 black Orc Army creature token first.)
-Flashback— <s value="3">{3}</s><s value="U">{U}</s><s value="R">{R}</s>, Exile X cards from your graveyard.</property>
+Flashback—<s value="3">{3}</s><s value="U">{U}</s><s value="R">{R}</s>, Exile X cards from your graveyard.</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="070" />
     </card>
@@ -1237,7 +1245,8 @@ Flashback— <s value="3">{3}</s><s value="U">{U}</s><s value="R">{R}</s>, Exile
       </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Green White" />
-      <property name="Type" value="Legendary Creature Treefolk" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Treefolk" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample, ward <s value="2">{2}</s>
 When Treebeard, Gracious Host enters the battlefield, create two Food tokens.
@@ -1328,15 +1337,12 @@ Equip <s value="5">{5}</s></property>
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add two mana in any combination of <s value="U">{U}</s>, <s value="B">{B}</s> and/or <s value="R">{R}</s>.
+        <s value="T">{T}</s>: Add two mana in any combination of <s value="U">{U}</s>, <s value="B">{B}</s>, and/or <s value="R">{R}</s>.
 <s value="3">{3}</s>, <s value="T">{T}</s>: Draw two cards, then discard a card.</property>
       <property name="Artist" value="Anton Solovianchyk" />
       <property name="Number" value="079" />
     </card>
     <card name="The Black Gate" id="46418186-c215-47c4-9d0a-d15a1d8ca613">
-      <property name="Cost">
-        <s value="0">{0}</s>
-      </property>
       <property name="CMC" value="0" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Legendary Land" />
@@ -1347,7 +1353,7 @@ Equip <s value="5">{5}</s></property>
 <s value="1">{1}</s><s value="B">{B}</s>, <s value="T">{T}</s>: Choose a player with the most life or tied for most life. Target creature can't be blocked by creatures that player controls this turn.</property>
       <property name="Artist" value="Marc Simonetti" />
       <property name="Number" value="080" />
-      <property name="Flags" value="C" />
+      <property name="Flags" value="B" />
     </card>
     <card name="Éowyn, Shieldmaiden" id="083c8d0a-87df-4472-9616-67d57cb05d83">
       <property name="Cost">
@@ -1422,6 +1428,26 @@ Whenever a commander an opponent controls dies, the Ring tempts you.</property>
       <property name="Toughness" value="9" />
       <property name="Artist" value="Alex Brock" />
       <property name="Number" value="084" />
+    </card>
+    <card name="Aragorn, King of Gondor" id="e8254ddc-2fdf-4920-8843-919e15782195">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="R">{R}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Blue Red White" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Noble" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Vigilance, lifelink
+When Aragorn, King of Gondor enters the battlefield, you become the monarch.
+Whenever Aragorn attacks, up to one target creature can't block this turn. If you're the monarch, creatures can't block this turn.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Yongjae Choi" />
+      <property name="Number" value="085" />
     </card>
     <card name="Éowyn, Shieldmaiden" id="159a4857-711b-4365-8813-1f56ea8f5291">
       <property name="Cost">
@@ -1526,7 +1552,7 @@ Activated abilities of Foods you control cost <s value="1">{1}</s> less to activ
       <property name="Subtype" value="Avatar Wizard" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Whenever you cast a noncreature spell, amass Orcs X, where X is that spell's mana value. (Put X +1/+1 counters on an Army you control. It's also an Orc. If you don't control an Army, create a 0/0 black Orc Army creature token first.)
-Goblins and Orcs you control have ward 2.</property>
+Goblins and Orcs you control have ward <s value="2">{2}</s>.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Leonardo Borazio" />
@@ -1592,7 +1618,8 @@ At the beginning of combat on each opponent's turn, if you're the monarch, that 
       </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
-      <property name="Type" value="Artifact Equipment" />
+      <property name="Type" value="Artifact" />
+      <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Field-Tested Frying Pan enters the battlefield, create a Food token, then create a 1/1 white Halfling creature token and attach Field-Tested Frying Pan to it.
 Equipped creature has "Whenever you gain life, this creature gets +X/+X until end of turn, where X is the amount of life you gained."
@@ -1640,7 +1667,8 @@ Equip <s value="2">{2}</s></property>
       </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
-      <property name="Type" value="Creature Spirit Soldier" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Spirit Soldier" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying, ward <s value="3">{3}</s>
 When Grey Host Reinforcements enters the battlefield, exile target player's graveyard. Put a number of +1/+1 counters on Grey Host Reinforcements equal to the number of creature cards exiled this way.</property>
@@ -1657,10 +1685,11 @@ When Grey Host Reinforcements enters the battlefield, exile target player's grav
       <property name="CMC" value="5" />
       <property name="Color" value="White" />
       <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Bird Noble" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
 Whenever Gwaihir attacks, target attacking creature gains flying until end of turn.
-At the beginning of each end step, if you gained 3 or more life this turn, create a 3/3 white Bird creature token with flying and "Whenever this creature acks, target attacking creature gains flying until end of turn."</property>
+At the beginning of each end step, if you gained 3 or more life this turn, create a 3/3 white Bird creature token with flying and "Whenever this creature attacks, target attacking creature gains flying until end of turn."</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Jesper Ejsing" />
@@ -1673,7 +1702,8 @@ At the beginning of each end step, if you gained 3 or more life this turn, creat
       </property>
       <property name="CMC" value="4" />
       <property name="Color" value="White" />
-      <property name="Type" value="Creature Human Soldier" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">First strike
 Whenever Lossarnach Captain or another Human enters the battlefield under your control, tap target creature an opponent controls.
@@ -1712,8 +1742,7 @@ At the beginning of the monarch's end step, that player draws a card.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="2">{2}</s>
-        <s value="U">{U}</s>: Target Goblin, Orc, or Pirate can't
-be blocked this turn.
+        <s value="U">{U}</s>: Target Goblin, Orc, or Pirate can't be blocked this turn.
 Whenever Corsairs of Umbar deals combat damage to a player, amass Orcs 3. (Put three +1/+1 counters on an Army you control. It's also an Orc. If you don't control an Army, create a 0/0 black Orc Army creature token first.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -1811,6 +1840,42 @@ Islandcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Sea
       <property name="Artist" value="Tatiana Kirgetova" />
       <property name="Number" value="108" />
     </card>
+    <card name="Gollum, Obsessed Stalker" id="3caf4ecb-0473-4aab-b57f-f7662eea16b6">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Halfling Horror" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Skulk (This creature can't be blocked by creatures with greater power.)
+At the beginning of your end step, each opponent dealt combat damage this game by a creature named Gollum, Obsessed Stalker loses life equal to the amount of life you gained this turn.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="John Di Giovanni" />
+      <property name="Number" value="109" />
+    </card>
+    <card name="Lobelia, Defender of Bag End" id="5fc6bd3c-eef0-4255-870a-fd48067e9891">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Halfling Citizen" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When Lobelia enters the battlefield, look at the top card of each opponent's library and exile those cards face down.
+<s value="T">{T}</s>, Sacrifice an artifact: Choose one —
+• Until end of turn, you may play a card exiled with Lobelia without paying its mana cost.
+• Each opponent loses 2 life and you gain 2 life.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Caroline Gariba" />
+      <property name="Number" value="110" />
+    </card>
     <card name="Rapacious Guest" id="ea0c8ff8-9d4d-4c17-a5ed-3e1ab9f3d849">
       <property name="Cost">
         <s value="2">{2}</s>
@@ -1818,7 +1883,8 @@ Islandcycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Sea
       </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Black" />
-      <property name="Type" value="Creature Halfling Citizen" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Halfling Citizen" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
 Whenever one or more creatures you control deal combat damage to a player, create a Food token.
@@ -1868,7 +1934,8 @@ When Rapacious Guest leaves the battlefield, target opponent loses life equal to
       </property>
       <property name="CMC" value="9" />
       <property name="Color" value="Red" />
-      <property name="Type" value="Creature Dragon" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">This spell costs <s value="X">{X}</s> less to cast, where X is the greatest number of artifacts an opponent controls.
 Flying, trample, haste
@@ -1922,7 +1989,8 @@ Whenever Orcish Siegemaster attacks, it gets +X/+0 until end of turn, where X is
       </property>
       <property name="CMC" value="7" />
       <property name="Color" value="Red" />
-      <property name="Type" value="Creature Elephant" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elephant" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample
 Cycling <s value="X">{X}</s><s value="2">{2}</s><s value="R">{R}</s> (<s value="X">{X}</s><s value="2">{2}</s><s value="R">{R}</s>, Discard this card: Draw a card.)
@@ -2055,7 +2123,8 @@ Whenever Mirkwood Elk enters the battlefield or attacks, return target Elf card 
       </property>
       <property name="CMC" value="5" />
       <property name="Color" value="Green" />
-      <property name="Type" value="Creature Horse" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Horse" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample, haste
 Whenever Motivated Pony attacks, attacking creatures get +1/+1 until end of turn. If a Food entered the battlefield under your control this turn, untap those creatures and they get an additional +2/+2 until end of turn.</property>
@@ -2071,7 +2140,8 @@ Whenever Motivated Pony attacks, attacking creatures get +1/+1 until end of turn
       </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Green" />
-      <property name="Type" value="Creature Boar" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Boar" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever you gain life, put that many ribbon counters on Prize Pig. Then if there are three or more ribbon counters on Prize Pig, remove those counters and untap it.
 <s value="T">{T}</s>: Add one mana of any color.</property>
@@ -2139,7 +2209,7 @@ When you cycle The Balrog of Moria, create two Treasure tokens.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Halfling Citizen" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Affinity for Food (This spell costs 1 less to cast for each Food you control.)
+      <property name="Rules">Affinity for Food (This spell costs <s value="1">{1}</s> less to cast for each Food you control.)
 Trample
 Banquet Guests enters the battlefield with twice X +1/+1 counters on it.
 <s value="2">{2}</s>, Sacrifice a Food: Banquet Guests gains indestructible until end of turn.</property>
@@ -2283,7 +2353,7 @@ At the beginning of your end step, if you're the monarch, create two 1/1 white H
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Halfling Peasant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Farmer Cotton enters the battlefield, create X 1/1 white Halfling creature tokens and X Food tokens. (They're artifacts with "2, , Sacrifice this artifact: You gain 3 life.")</property>
+      <property name="Rules">When Farmer Cotton enters the battlefield, create X 1/1 white Halfling creature tokens and X Food tokens. (They're artifacts with "<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: You gain 3 life.")</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Tomas Duchek" />
@@ -2420,7 +2490,7 @@ Whenever a player attacks, if they aren't attacking you, that player chooses an 
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Halfling Advisor" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Partner with Merry, Warden of Isengard (When this creature enters the battlefield, target player may put Merry into their hand from their library, then shuffle)
+      <property name="Rules">Partner with Merry, Warden of Isengard (When this creature enters the battlefield, target player may put Merry into their hand from their library, then shuffle.)
 <s value="1">{1}</s>, <s value="T">{T}</s>: Create a Food token.
 <s value="T">{T}</s>, Sacrifice four Foods: Other creatures you control get +3/+3 and gain haste until end of turn. Activate only as a sorcery.</property>
       <property name="Power" value="2" />
@@ -2492,7 +2562,7 @@ Dash <s value="4">{4}</s><s value="R">{R}</s><s value="W">{W}</s> (You may cast 
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Amass Orcs X. Mill X cards. You may cast an instant or sorcery spell with mana value X or less from among them without paying its mana cost. (To amass Orcs X, put X +1/+1 counters on an Army you control. It's also an Orc. If you don't control an Army, create a 0/0 black Orc Army creature token first.)
-Flashback— <s value="3">{3}</s><s value="U">{U}</s><s value="R">{R}</s>, Exile X cards from your graveyard.</property>
+Flashback—<s value="3">{3}</s><s value="U">{U}</s><s value="R">{R}</s>, Exile X cards from your graveyard.</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="150" />
     </card>
@@ -2532,7 +2602,8 @@ Flashback— <s value="3">{3}</s><s value="U">{U}</s><s value="R">{R}</s>, Exile
       </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Green White" />
-      <property name="Type" value="Legendary Creature Treefolk" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Treefolk" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample, ward <s value="2">{2}</s>
 When Treebeard, Gracious Host enters the battlefield, create two Food tokens.
@@ -2623,15 +2694,12 @@ Equip <s value="5">{5}</s></property>
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="T">{T}</s>: Add two mana in any combination of <s value="U">{U}</s>, <s value="B">{B}</s> and/or <s value="R">{R}</s>.
+        <s value="T">{T}</s>: Add two mana in any combination of <s value="U">{U}</s>, <s value="B">{B}</s>, and/or <s value="R">{R}</s>.
 <s value="3">{3}</s>, <s value="T">{T}</s>: Draw two cards, then discard a card.</property>
       <property name="Artist" value="Anton Solovianchyk" />
       <property name="Number" value="159" />
     </card>
     <card name="The Black Gate" id="d6f6dca3-c618-4916-b93c-17c83ac3af0b">
-      <property name="Cost">
-        <s value="0">{0}</s>
-      </property>
       <property name="CMC" value="0" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Legendary Land" />
@@ -2642,7 +2710,7 @@ Equip <s value="5">{5}</s></property>
 <s value="1">{1}</s><s value="B">{B}</s>, <s value="T">{T}</s>: Choose a player with the most life or tied for most life. Target creature can't be blocked by creatures that player controls this turn.</property>
       <property name="Artist" value="Marc Simonetti" />
       <property name="Number" value="160" />
-      <property name="Flags" value="C" />
+      <property name="Flags" value="B" />
     </card>
     <card name="Banishing Light" id="961b1464-928e-41b9-bc73-c47df94e0e8e">
       <property name="Cost">
@@ -2728,7 +2796,7 @@ As long as Dearly Departed is in your graveyard, each Human creature you control
       <property name="CMC" value="9" />
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery // Sorcery" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Rare" />
       <property name="Rules">Destroy all creatures with power 3 or greater.
 //
 Aftermath (Cast this spell only from your graveyard. Then exile it.)
@@ -2744,7 +2812,7 @@ Return all creature cards with power 2 or less from your graveyard to your hand.
         <property name="CMC" value="4" />
         <property name="Color" value="White" />
         <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Common" />
+        <property name="Rarity" value="Rare" />
         <property name="Rules">Destroy all creatures with power 3 or greater.</property>
         <property name="Artist" value="Samuele Bandini" />
         <property name="Number" value="166" />
@@ -2758,7 +2826,7 @@ Return all creature cards with power 2 or less from your graveyard to your hand.
         <property name="CMC" value="5" />
         <property name="Color" value="White" />
         <property name="Type" value="Sorcery" />
-        <property name="Rarity" value="Common" />
+        <property name="Rarity" value="Rare" />
         <property name="Rules">Aftermath (Cast this spell only from your graveyard. Then exile it.)
 Return all creature cards with power 2 or less from your graveyard to your hand.</property>
         <property name="Artist" value="Samuele Bandini" />
@@ -2913,7 +2981,7 @@ When Palace Jailer enters the battlefield, exile target creature an opponent con
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
-      <property name="Rarity" value="Common" />
+      <property name="Rarity" value="Rare" />
       <property name="Rules">Flash
 When Selfless Squire enters the battlefield, prevent all damage that would be dealt to you this turn.
 Whenever damage that would be dealt to you is prevented, put that many +1/+1 counters on Selfless Squire.</property>
@@ -2949,17 +3017,19 @@ If an opponent has more cards in hand than you, draw a card.</property>
       <property name="Artist" value="Christina Kraus" />
       <property name="Number" value="178" />
     </card>
-    <card name="Swords to Plowshares" id="c6563536-2751-4b09-8e28-23438eb32533">
+    <card name="Unbreakable Formation" id="d5da52b2-cc09-49ac-8091-737f23a77165">
       <property name="Cost">
+        <s value="2">{2}</s>
         <s value="W">{W}</s>
       </property>
-      <property name="CMC" value="1" />
+      <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
-      <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Exile target creature. Its controller gains life equal to its power.</property>
-      <property name="Artist" value="Christina Kraus" />
-      <property name="Number" value="178" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Creatures you control gain indestructible until end of turn.
+Addendum — If you cast this spell during your main phase, put a +1/+1 counter on each of those creatures and they gain vigilance until end of turn.</property>
+      <property name="Artist" value="Ben Wootten" />
+      <property name="Number" value="179" />
     </card>
     <card name="Verge Rangers" id="8f00f2a0-33a6-475b-9f50-2c4e26efadd8">
       <property name="Cost">
@@ -3207,7 +3277,7 @@ Draw a card.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Scry 2, then draw a card. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)</property>
+      <property name="Rules">Scry 2, then draw a card. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)</property>
       <property name="Artist" value="Arthur Yuan" />
       <property name="Number" value="196" />
     </card>
@@ -3771,8 +3841,8 @@ When Zealous Conscripts enters the battlefield, gain control of target permanent
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Creatures you control have hexproof. (They can't be the targets of spells or abilities your opponents control.)
-<s value="1">{1}</s><s value="G">{G}</s>: Regenerate target creature.</property>
+      <property name="Rules">Creatures you control have hexproof.
+<s value="1">{1}</s><s value="G">{G}</s>: Regenerate target creature. (The next time it would be destroyed, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Artist" value="Torgeir Fjereide" />
       <property name="Number" value="233" />
     </card>
@@ -3914,7 +3984,7 @@ When Zealous Conscripts enters the battlefield, gain control of target permanent
       <property name="Rules">Whenever another creature enters the battlefield, you gain 1 life.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Wangjie Li" />
       <property name="Number" value="242" />
     </card>
     <card name="Farhaven Elf" id="c187b12a-391b-41fb-9728-053909f69f66">
@@ -4037,7 +4107,7 @@ When Great Oak Guardian enters the battlefield, creatures target player controls
       <property name="Subtype" value="Insect" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
+Deathtouch
 When Hornet Queen enters the battlefield, create four 1/1 green Insect creature tokens with flying and deathtouch.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -4321,7 +4391,7 @@ Persist (When this creature dies, if it had no -1/-1 counters on it, return it t
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Hostage Taker enters the battlefield, exile another target creature or artifact until Hostage Taker leaves the battlefield. You may cast that card for as long as it remains exiled, and you may spend mana as though it were mana of any type to cast that spell.</property>
+      <property name="Rules">When Hostage Taker enters the battlefield, exile another target creature or artifact until Hostage Taker leaves the battlefield. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast it.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Torgeir Fjereide" />
@@ -4849,7 +4919,7 @@ Canopy Vista enters the battlefield tapped unless you control two or more basic 
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Field of Ruin: Destroy target nonbasic land an opponent controls. Each player searches their library for a basic land card, puts it onto the battlefield, then shuffles.</property>
-      <property name="Artist" value="" />
+      <property name="Artist" value="Shahab Alizadeh" />
       <property name="Number" value="308" />
       <property name="Flags" value="C" />
     </card>
@@ -5685,6 +5755,18 @@ Whenever a nontoken creature enters the battlefield under your control, put a +1
       <property name="Artist" value="Jeremy Paillotin" />
       <property name="Number" value="378" />
     </card>
+    <card name="Cloudstone Curio" id="7e17b533-d45a-44a1-aa56-eaf18ff4bb71">
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever a nonartifact permanent enters the battlefield under your control, you may return another permanent you control that shares a permanent type with it to its owner's hand.</property>
+      <property name="Artist" value="Erikas Perl" />
+      <property name="Number" value="379" />
+    </card>
     <card name="Ensnaring Bridge" id="dc50f081-bc81-4872-bfd9-d41e64b33bcb">
       <property name="Cost">
         <s value="3">{3}</s>
@@ -5697,6 +5779,308 @@ Whenever a nontoken creature enters the battlefield under your control, put a +1
       <property name="Artist" value="Stephen Stark" />
       <property name="Number" value="380" />
     </card>
+    <card name="The Ozolith" id="7d9df3ce-25f9-426c-a113-6aea53ddf619">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Artifact" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever a creature you control leaves the battlefield, if it had counters on it, put those counters on The Ozolith.
+At the beginning of combat on your turn, if The Ozolith has counters on it, you may move all counters from The Ozolith onto target creature.</property>
+      <property name="Artist" value="Calder Moore" />
+      <property name="Number" value="381" />
+    </card>
+    <card name="Rings of Brighthearth" id="851f0e08-2c39-4ce9-a181-e106ca9e5fc1">
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever you activate an ability, if it isn't a mana ability, you may pay <s value="2">{2}</s>. If you do, copy that ability. You may choose new targets for the copy.</property>
+      <property name="Artist" value="Jonas De Ro" />
+      <property name="Number" value="382" />
+    </card>
+    <card name="Shadowspear" id="b1a74aab-dcf2-426d-9cc5-9ef771d8227a">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Artifact" />
+      <property name="Subtype" value="Equipment" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Equipped creature gets +1/+1 and has trample and lifelink.
+<s value="1">{1}</s>: Permanents your opponents control lose hexproof and indestructible until end of turn.
+Equip <s value="2">{2}</s></property>
+      <property name="Artist" value="Campbell White" />
+      <property name="Number" value="383" />
+    </card>
+    <card name="Sword of Hearth and Home" id="a6bd1a8c-fe2a-4a28-a709-6b57336fa2cd">
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Subtype" value="Equipment" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Equipped creature gets +2/+2 and has protection from green and from white.
+Whenever equipped creature deals combat damage to a player, exile up to one target creature you own, then search your library for a basic land card. Put both cards onto the battlefield under your control, then shuffle.
+Equip <s value="2">{2}</s></property>
+      <property name="Artist" value="Randy Gallegos" />
+      <property name="Number" value="384" />
+    </card>
+    <card name="Sword of the Animist" id="fa1ada9a-eacd-42e9-9f6b-fb8b968af859">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Artifact" />
+      <property name="Subtype" value="Equipment" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Equipped creature gets +1/+1.
+Whenever equipped creature attacks, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle.
+Equip <s value="2">{2}</s></property>
+      <property name="Artist" value="Pavel Kolomeyets" />
+      <property name="Number" value="385" />
+    </card>
+    <card name="Thorn of Amethyst" id="2e697bd7-53a3-4703-b7f4-ac680436967f">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Noncreature spells cost <s value="1">{1}</s> more to cast.</property>
+      <property name="Artist" value="Igor Krstic" />
+      <property name="Number" value="386" />
+    </card>
+    <card name="Ancient Tomb" id="339dde25-a080-4aae-993f-261847398767">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>. Ancient Tomb deals 2 damage to you.</property>
+      <property name="Artist" value="Anastasia Balakchina" />
+      <property name="Number" value="387" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Bojuka Bog" id="bd77173d-1399-49e7-b0c8-696c7c2c01e0">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Bojuka Bog enters the battlefield tapped.
+When Bojuka Bog enters the battlefield, exile target player's graveyard.
+<s value="T">{T}</s>: Add <s value="B">{B}</s>.</property>
+      <property name="Artist" value="Calder Moore" />
+      <property name="Number" value="388" />
+      <property name="Flags" value="B" />
+    </card>
+    <card name="Boseiju, Who Shelters All" id="841802b9-adc5-455e-8a8c-2d34c2766d54">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Boseiju, Who Shelters All enters the battlefield tapped.
+<s value="T">{T}</s>, Pay 2 life: Add <s value="C">{C}</s>. If that mana is spent on an instant or sorcery spell, that spell can't be countered.</property>
+      <property name="Artist" value="Jeremy Paillotin" />
+      <property name="Number" value="389" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Cabal Coffers" id="cce035f4-5ba4-4e9d-ab26-d5d0290de74d">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="2">{2}</s>, <s value="T">{T}</s>: Add <s value="B">{B}</s> for each Swamp you control.</property>
+      <property name="Artist" value="Sean Vo" />
+      <property name="Number" value="390" />
+      <property name="Flags" value="B" />
+    </card>
+    <card name="Castle Ardenvale" id="d64a3ece-0da3-4228-af98-d8b06bdbe187">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Castle Ardenvale enters the battlefield tapped unless you control a Plains.
+<s value="T">{T}</s>: Add <s value="W">{W}</s>.
+<s value="2">{2}</s><s value="W">{W}</s><s value="W">{W}</s>, <s value="T">{T}</s>: Create a 1/1 white Human creature token.</property>
+      <property name="Artist" value="Jeremy Paillotin" />
+      <property name="Number" value="391" />
+      <property name="Flags" value="W" />
+    </card>
+    <card name="Cavern of Souls" id="ce15f400-9428-46dc-bdde-ee80ee8fcab0">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">As Cavern of Souls enters the battlefield, choose a creature type.
+<s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type, and that spell can't be countered.</property>
+      <property name="Artist" value="Logan Feliciano" />
+      <property name="Number" value="392" />
+      <property name="Flags" value="M" />
+    </card>
+    <card name="Deserted Temple" id="18876bcb-5c79-402b-879d-1f7c195f55e6">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="1">{1}</s>, <s value="T">{T}</s>: Untap target land.</property>
+      <property name="Artist" value="Calder Moore" />
+      <property name="Number" value="393" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Gemstone Caverns" id="302603c5-ced4-4ad9-801f-be5eb75096cd">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">If Gemstone Caverns is in your opening hand and you're not the starting player, you may begin the game with Gemstone Caverns on the battlefield with a luck counter on it. If you do, exile a card from your hand.
+<s value="T">{T}</s>: Add <s value="C">{C}</s>. If Gemstone Caverns has a luck counter on it, instead add one mana of any color.</property>
+      <property name="Artist" value="Jonas De Ro" />
+      <property name="Number" value="394" />
+      <property name="Flags" value="M" />
+    </card>
+    <card name="Homeward Path" id="7cd5ad2b-9df3-4dad-b926-16c0634bb303">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>: Each player gains control of all creatures they own.</property>
+      <property name="Artist" value="Erikas Perl" />
+      <property name="Number" value="395" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Horizon Canopy" id="08864c71-df77-4e9c-8088-f48e744352f6">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>, Pay 1 life: Add <s value="G">{G}</s> or <s value="W">{W}</s>.
+<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Horizon Canopy: Draw a card.</property>
+      <property name="Artist" value="Randy Gallegos" />
+      <property name="Number" value="396" />
+      <property name="Flags" value="GW" />
+    </card>
+    <card name="Karakas" id="0e7511b8-9af9-4cc8-a01c-8e71af2cf5dc">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="W">{W}</s>.
+<s value="T">{T}</s>: Return target legendary creature to its owner's hand.</property>
+      <property name="Artist" value="Stephen Stark" />
+      <property name="Number" value="397" />
+      <property name="Flags" value="W" />
+    </card>
+    <card name="Kor Haven" id="8afc20a5-635d-4cc4-bce9-b6c2cd970ae5">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="1">{1}</s><s value="W">{W}</s>, <s value="T">{T}</s>: Prevent all combat damage that would be dealt by target attacking creature this turn.</property>
+      <property name="Artist" value="Erikas Perl" />
+      <property name="Number" value="398" />
+      <property name="Flags" value="W" />
+    </card>
+    <card name="Minamo, School at Water's Edge" id="b1acad39-e3e3-4b44-b7f9-59ab1b293bd7">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="U">{U}</s>.
+<s value="U">{U}</s>, <s value="T">{T}</s>: Untap target legendary permanent.</property>
+      <property name="Artist" value="Stephen Stark" />
+      <property name="Number" value="399" />
+      <property name="Flags" value="U" />
+    </card>
+    <card name="Mouth of Ronom" id="bc9d792b-cc1b-48d0-935e-f418005ab59e">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Snow Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="4">{4}</s><s value="S">{S}</s>, <s value="T">{T}</s>, Sacrifice Mouth of Ronom: It deals 4 damage to target creature. (<s value="S">{S}</s> can be paid with one mana from a snow source.)</property>
+      <property name="Artist" value="Marina Ortega Lorente" />
+      <property name="Number" value="400" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Oboro, Palace in the Clouds" id="84065219-b902-41fa-9a5a-7312e5103b78">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="U">{U}</s>.
+<s value="1">{1}</s>: Return Oboro, Palace in the Clouds to its owner's hand.</property>
+      <property name="Artist" value="Jonas De Ro" />
+      <property name="Number" value="401" />
+      <property name="Flags" value="U" />
+    </card>
+    <card name="Pillar of the Paruns" id="c739bac5-0fa1-4ae9-9eea-611aa3f0fbd5">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a multicolored spell.</property>
+      <property name="Artist" value="Randy Gallegos" />
+      <property name="Number" value="402" />
+      <property name="Flags" value="M" />
+    </card>
+    <card name="Reflecting Pool" id="0bd6e6aa-c0b2-4ab1-9165-6cba8b93da13">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add one mana of any type that a land you control could produce.</property>
+      <property name="Artist" value="Marco Gorlei" />
+      <property name="Number" value="403" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Shinka, the Bloodsoaked Keep" id="ebb868c6-56c9-4d15-be22-bb46cc96269a">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="R">{R}</s>.
+<s value="R">{R}</s>, <s value="T">{T}</s>: Target legendary creature gains first strike until end of turn.</property>
+      <property name="Artist" value="Logan Feliciano" />
+      <property name="Number" value="404" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Urborg, Tomb of Yawgmoth" id="cc4be3ef-547e-41bb-855f-9c779f434919">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Each land is a Swamp in addition to its other land types.</property>
+      <property name="Artist" value="Erikas Perl" />
+      <property name="Number" value="405" />
+      <property name="Flags" value="C" />
+    </card>
     <card name="Wasteland" id="438e7c5f-087a-4326-b263-09847420ce41">
       <property name="CMC" value="0" />
       <property name="Color" value="Colorless" />
@@ -5707,6 +6091,16 @@ Whenever a nontoken creature enters the battlefield under your control, put a +1
 <s value="T">{T}</s>, Sacrifice Wasteland: Destroy target nonbasic land.</property>
       <property name="Artist" value="Hristo D. Chukov" />
       <property name="Number" value="406" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Yavimaya, Cradle of Growth" id="940f07ab-f30d-4a40-bf3d-d2c05b49c305">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Land" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Each land is a Forest in addition to its other land types.</property>
+      <property name="Artist" value="Erikas Perl" />
+      <property name="Number" value="407" />
       <property name="Flags" value="C" />
     </card>
     <card name="Sol Ring" id="7a8db21f-722b-4a07-985b-8d25a0b0006a">

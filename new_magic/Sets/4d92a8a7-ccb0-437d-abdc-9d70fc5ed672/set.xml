@@ -2501,7 +2501,7 @@ Whenever an opponent draws a card, you may draw two cards.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Scry 2, then draw a card. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)</property>
+      <property name="Rules">Scry 2, then draw a card. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)</property>
       <property name="Artist" value="Alexis Ziritt" />
       <property name="Number" value="186" />
     </card>
@@ -5626,7 +5626,7 @@ Whenever enchanted creature deals damage to an opponent, you may draw a card.</p
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Destroy target artifact you don't control.
-Overload <s value="4">{4}</s><s value="R">{R}</s> (You may cast this spell for its overload cost. If you do, change its text by replacing all instances of "target" with "each.")</property>
+Overload <s value="4">{4}</s><s value="R">{R}</s> (You may cast this spell for its overload cost. If you do, change "target" in its text to "each.")</property>
       <property name="Artist" value="Kawasumi" />
       <property name="Number" value="404" />
     </card>
@@ -6732,7 +6732,7 @@ Destroy target artifact or enchantment.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">This spell can't be countered.
 Counter target spell you don't control.
-Overload <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s><s value="R">{R}</s> (You may cast this spell for its overload cost. If you do, change its text by replacing all instances of "target" with "each.")</property>
+Overload <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s><s value="R">{R}</s> (You may cast this spell for its overload cost. If you do, change "target" in its text to "each.")</property>
       <property name="Artist" value="Riot Games" />
       <property name="Number" value="482" />
     </card>
@@ -7500,7 +7500,7 @@ Prevent all damage that would be dealt to Gideon Blackblade during your turn.
       <property name="Subtype" value="Angrath" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Creatures you control have menace.
-−2: Amass 2. (Put two +1/+1 counters on an Army you control. If you don't control one, create a 0/0 black Zombie Army creature token first.)</property>
+−2: Amass Zombies 2. (Put two +1/+1 counters on an Army you control. It's also a Zombie. If you don't control an Army, create a 0/0 black Zombie Army creature token first.)</property>
       <property name="Loyalty" value="5" />
       <property name="Artist" value="Slawomir Maniak" />
       <property name="Number" value="527" />
@@ -11763,7 +11763,7 @@ Equip <s value="2">{2}</s></property>
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">You may look at the top card of your library any time.
 You may cast creature spells from the top of your library.
-You may spend mana as though it were mana of any type to cast creature spells.</property>
+You can spend mana of any type to cast creature spells.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Omar Rayyan" />
@@ -14179,6 +14179,74 @@ Transmute <s value="1">{1}</s><s value="U">{U}</s><s value="U">{U}</s> (<s value
       <property name="Artist" value="Rebecca Guay" />
       <property name="Number" value="1254" />
     </card>
+    <card name="Flamekin Harbinger" id="0420119f-a25b-44c7-b82f-51d05dfd94c5">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elemental Shaman" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When Flamekin Harbinger enters the battlefield, you may search your library for an Elemental card, reveal it, then shuffle and put that card on top.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Yu Maeda" />
+      <property name="Number" value="1255" />
+    </card>
+    <card name="Omnath, Locus of Rage" id="a8b75fc9-7045-4a87-b459-8d32f6c5402c">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="7" />
+      <property name="Color" value="Multicolor Red Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Elemental" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Landfall — Whenever a land enters the battlefield under your control, create a 5/5 red and green Elemental creature token.
+Whenever Omnath, Locus of Rage or another Elemental you control dies, Omnath deals 3 damage to any target.</property>
+      <property name="Power" value="5" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Yu Maeda" />
+      <property name="Number" value="1256" />
+    </card>
+    <card name="Risen Reef" id="9b88f895-b5d6-47ea-a69c-eb4e5d65e401">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor Green Blue" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elemental" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever Risen Reef or another Elemental enters the battlefield under your control, look at the top card of your library. If it's a land card, you may put it onto the battlefield tapped. If you don't put the card onto the battlefield, put it into your hand.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Yu Maeda" />
+      <property name="Number" value="1257" />
+    </card>
+    <card name="Voice of Resurgence" id="a1dacda4-ed81-4daf-8718-cc59bffd95fc">
+      <property name="Cost">
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Multicolor Green White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elemental" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever an opponent casts a spell during your turn or when Voice of Resurgence dies, create a green and white Elemental creature token with "This creature's power and toughness are each equal to the number of creatures you control."</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Yu Maeda" />
+      <property name="Number" value="1258" />
+    </card>
     <card name="Wheel and Deal" id="f0ba709f-e9eb-4cf0-ab68-d1aa88eeaf07">
       <property name="Cost">
         <s value="3">{3}</s>
@@ -14715,6 +14783,483 @@ Whenever an Angel enters the battlefield under your control, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="C">{C}</s>.</property>
       <property name="Artist" value="Alayna Danner" />
       <property name="Number" value="1292" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Slip On the Ring" id="6d4eccc6-26a3-48d3-bb15-522ba51327e0">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Exile target creature you own, then return it to the battlefield under your control. The Ring tempts you.</property>
+      <property name="Artist" value="Bakshi Productions" />
+      <property name="Number" value="1293" />
+    </card>
+    <card name="Gandalf, Friend of the Shire" id="d745f592-8d4d-46f4-b631-c014da1ab3a9">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Avatar Wizard" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Flash
+You may cast sorcery spells as though they had flash.
+Whenever the Ring tempts you, if you chose a creature other than Gandalf, Friend of the Shire as your Ring-bearer, draw a card.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Bakshi Productions" />
+      <property name="Number" value="1294" />
+    </card>
+    <card name="Mirror of Galadriel" id="f6d04970-12c7-460f-a7bc-beb97b161246">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="5">{5}</s>, <s value="T">{T}</s>: Scry 1, then draw a card. This ability costs <s value="1">{1}</s> less to activate for each legendary creature you control.</property>
+      <property name="Artist" value="Bakshi Productions" />
+      <property name="Number" value="1295" />
+    </card>
+    <card name="Shire Terrace" id="5233144a-9e88-44a2-9ea9-88ecc116bcd6">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Shire Terrace: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+      <property name="Artist" value="Bakshi Productions" />
+      <property name="Number" value="1296" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Syr Konrad, the Grim" id="f8b49030-55fe-4bf4-a2b9-c78f36e2d425">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Knight" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever another creature dies, or a creature card is put into a graveyard from anywhere other than the battlefield, or a creature card leaves your graveyard, Syr Konrad, the Grim deals 1 damage to each opponent.
+<s value="1">{1}</s><s value="B">{B}</s>: Each player mills a card.</property>
+      <property name="Power" value="5" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Mark Riddick" />
+      <property name="Number" value="1297" />
+    </card>
+    <card name="Underworld Dreams" id="a549b913-556a-4aeb-899e-438ff6874f56">
+      <property name="Cost">
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Enchantment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever an opponent draws a card, Underworld Dreams deals 1 damage to that player.</property>
+      <property name="Artist" value="Mark Riddick" />
+      <property name="Number" value="1298" />
+    </card>
+    <card name="Waste Not" id="f4fc8e83-471a-4d75-9703-d8f3998a705a">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Enchantment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever an opponent discards a creature card, create a 2/2 black Zombie creature token.
+Whenever an opponent discards a land card, add <s value="B">{B}</s><s value="B">{B}</s>.
+Whenever an opponent discards a noncreature, nonland card, draw a card.</property>
+      <property name="Artist" value="Mark Riddick" />
+      <property name="Number" value="1299" />
+    </card>
+    <card name="Wheel of Misfortune" id="ff9d0f64-2bc2-42da-a2f3-f56235c2bf54">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Each player secretly chooses a number 0 or greater, then all players reveal those numbers simultaneously and determine the highest and lowest numbers revealed this way. Wheel of Misfortune deals damage equal to the highest number to each player who chose that number. Each player who didn't choose the lowest number discards their hand, then draws seven cards.</property>
+      <property name="Artist" value="Mark Riddick" />
+      <property name="Number" value="1300" />
+    </card>
+    <card name="Nekusar, the Mindrazer" id="674e1b0f-c2e5-4b75-817d-19ab5f734139">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Multicolor Blue Black Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Zombie Wizard" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">At the beginning of each player's draw step, that player draws an additional card.
+Whenever an opponent draws a card, Nekusar, the Mindrazer deals 1 damage to that player.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Mark Riddick" />
+      <property name="Number" value="1301" />
+    </card>
+    <card name="Nemesis of Reason" id="26affcc7-e64a-4dc0-8f01-432288161f9d">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Multicolor Blue Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Leviathan Horror" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever Nemesis of Reason attacks, defending player mills ten cards.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="7" />
+      <property name="Artist" value="Ryan Alexander Lee" />
+      <property name="Number" value="1302" />
+    </card>
+    <card name="Gaea's Blessing" id="f16df786-c2ed-49c5-a5f2-73f5daf34ca9">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Target player shuffles up to three target cards from their graveyard into their library.
+Draw a card.
+When Gaea's Blessing is put into your graveyard from your library, shuffle your graveyard into your library.</property>
+      <property name="Artist" value="Ryan Alexander Lee" />
+      <property name="Number" value="1303" />
+    </card>
+    <card name="Twilight Prophet" id="c1ec13cf-e164-4222-90b1-af3e92e03b2e">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Vampire Cleric" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Flying
+Ascend (If you control ten or more permanents, you get the city's blessing for the rest of the game.)
+At the beginning of your upkeep, if you have the city's blessing, reveal the top card of your library and put it into your hand. Each opponent loses X life and you gain X life, where X is that card's mana value.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Ryan Alexander Lee" />
+      <property name="Number" value="1304" />
+    </card>
+    <card name="Worldspine Wurm" id="ada90827-f11b-495b-8962-66dd6345b454">
+      <property name="Cost">
+        <s value="8">{8}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="11" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Wurm" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Trample
+When Worldspine Wurm dies, create three 5/5 green Wurm creature tokens with trample.
+When Worldspine Wurm is put into a graveyard from anywhere, shuffle it into its owner's library.</property>
+      <property name="Power" value="15" />
+      <property name="Toughness" value="15" />
+      <property name="Artist" value="Ryan Alexander Lee" />
+      <property name="Number" value="1305" />
+    </card>
+    <card name="Goblin Lackey" id="16cd79f1-88dd-40a0-b348-6eb6757e3b13">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Goblin" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever Goblin Lackey deals damage to a player, you may put a Goblin permanent card from your hand onto the battlefield.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Wizard of Barge" />
+      <property name="Number" value="1311" />
+    </card>
+    <card name="Goblin Matron" id="a8f56067-4b86-4788-8fd7-648c9041dbd4">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Goblin" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When Goblin Matron enters the battlefield, you may search your library for a Goblin card, reveal that card, put it into your hand, then shuffle.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Wizard of Barge" />
+      <property name="Number" value="1312" />
+    </card>
+    <card name="Goblin Recruiter" id="6efb3b4c-ac12-406c-8517-9fccefdd1544">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Goblin" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When Goblin Recruiter enters the battlefield, search your library for any number of Goblin cards, reveal them, then shuffle and put those cards on top in any order.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Wizard of Barge" />
+      <property name="Number" value="1313" />
+    </card>
+    <card name="Muxus, Goblin Grandee" id="d2f8035b-c776-4213-a5e2-e6c7c3f5961f">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Goblin Noble" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When Muxus, Goblin Grandee enters the battlefield, reveal the top six cards of your library. Put all Goblin creature cards with mana value 5 or less from among them onto the battlefield and the rest on the bottom of your library in a random order.
+Whenever Muxus attacks, it gets +1/+1 until end of turn for each other Goblin you control.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Wizard of Barge" />
+      <property name="Number" value="1314" />
+    </card>
+    <card name="Shattergang Brothers" id="3f909489-4567-4886-9191-05119b338cfd">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Black Red Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Goblin Artificer" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>, Sacrifice a creature: Each other player sacrifices a creature.
+<s value="2">{2}</s><s value="R">{R}</s>, Sacrifice an artifact: Each other player sacrifices an artifact.
+<s value="2">{2}</s><s value="G">{G}</s>, Sacrifice an enchantment: Each other player sacrifices an enchantment.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="3" />
+      <property name="Artist" value="Wizard of Barge" />
+      <property name="Number" value="1315" />
+    </card>
+    <card name="Mountain" id="b373adfa-ebc2-4060-8ff3-d1f0eca03c02">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Darrell Riche" />
+      <property name="Number" value="1358" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Mountain" id="e16f6a52-67d6-4215-9f3f-3b0a17dd8889">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Victor Adame Minguez" />
+      <property name="Number" value="1359" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Mountain" id="34410953-113a-45ae-89d4-2ce39f75c3c6">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Mark Zug" />
+      <property name="Number" value="1360" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Mountain" id="6651e0fd-50ca-449e-84f1-ebb07fb305f5">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Warren Mahy" />
+      <property name="Number" value="1361" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Mountain" id="54278194-fc8b-4208-a3ca-e655fddca2df">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Larry MacDougall" />
+      <property name="Number" value="1362" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Mountain" id="a0627111-1390-43cb-84e7-d6c0e46c02ea">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Omar Rayyan" />
+      <property name="Number" value="1363" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Mountain" id="ffbd0396-2e7b-4b87-9504-953bd35e4fea">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Martina Pilcerova" />
+      <property name="Number" value="1364" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Mountain" id="7b150a6d-a33d-456a-a2b0-286e43bc636e">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Fred Fields" />
+      <property name="Number" value="1365" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Mountain" id="ba88d76e-d71f-43ea-a272-5dc8b5928c6b">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Ron Spears" />
+      <property name="Number" value="1366" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Mountain" id="46ad38f6-ca2a-41a4-96cf-f41a41d54a37">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Mountain" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)</property>
+      <property name="Artist" value="Erica Williams" />
+      <property name="Number" value="1367" />
+      <property name="Flags" value="R" />
+    </card>
+    <card name="Bottomless Pit" id="a7fd9517-a063-4c42-8e1c-c298b314b798">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Enchantment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">At the beginning of each player's upkeep, that player discards a card at random.</property>
+      <property name="Artist" value="Ryan Quickfall" />
+      <property name="Number" value="1404" />
+    </card>
+    <card name="Necrogen Mists" id="14309ac9-5e75-4ac8-9f17-a256decd52e9">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Enchantment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">At the beginning of each player's upkeep, that player discards a card.</property>
+      <property name="Artist" value="Ryan Quickfall" />
+      <property name="Number" value="1405" />
+    </card>
+    <card name="Reassembling Skeleton" id="bea44c06-900d-41b8-88fa-c1bede6ce757">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Skeleton Warrior" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>: Return Reassembling Skeleton from your graveyard to the battlefield tapped.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Ryan Quickfall" />
+      <property name="Number" value="1406" />
+    </card>
+    <card name="Tinybones, Trinket Thief" id="f3edb27c-4faa-464a-9bb1-fbe17013c022">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Skeleton Rogue" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">At the beginning of each end step, if an opponent discarded a card this turn, you draw a card and you lose 1 life.
+<s value="4">{4}</s><s value="B">{B}</s><s value="B">{B}</s>: Each opponent with no cards in hand loses 10 life.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Ryan Quickfall" />
+      <property name="Number" value="1407" />
+    </card>
+    <card name="Geier Reach Sanitarium" id="8d80ec47-0e47-49e3-9c43-1c126d8523e1">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="2">{2}</s>, <s value="T">{T}</s>: Each player draws a card, then discards a card.</property>
+      <property name="Artist" value="Ryan Quickfall" />
+      <property name="Number" value="1408" />
       <property name="Flags" value="C" />
     </card>
     <card name="Jace, the Mind Sculptor" id="9d20e671-9b41-4591-b1ef-2a297411beb7">
