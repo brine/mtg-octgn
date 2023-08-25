@@ -473,5 +473,8 @@ changelog = {
         ]),
     3060306: ("3.6.3.6", "August 2 2023", [
         "Added CMM set"
+        ]),
+    3060307: ("3.6.3.7", "August 25 2023", [
+        "Added WOE set"
         ])
 }
