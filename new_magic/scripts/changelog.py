@@ -480,5 +480,8 @@ changelog = {
     3060308: ("3.6.3.8", "October 8 2023", [
         "Added WHO set",
         "updated all sets"
+        ]),
+    3060309: ("3.6.3.9", "October 9 2023", [
+        "Removed duplicate cards from database -- serialized and surge foil variants previously had card entries in the card database, even though they're identical to existing cards."
         ])
 }
