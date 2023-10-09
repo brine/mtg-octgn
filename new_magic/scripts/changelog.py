@@ -476,5 +476,8 @@ changelog = {
         ]),
     3060307: ("3.6.3.7", "August 25 2023", [
         "Added WOE set"
+        ]),
+    3060308: ("3.6.3.8", "October 8 2023", [
+        "Added WHO set"
         ])
 }
