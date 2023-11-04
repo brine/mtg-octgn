@@ -113,7 +113,12 @@
             <alternate name="Angel" type="2">
                 <property name="Artist" value="Grezegorz Rutkowski" />
                 <property name="Number" value="3" />
-                <property name="Flags" value="T2x2"/>
+                <property name="Flags" value="T2X2"/>
+            </alternate>
+            <alternate name="Angel" type="3">
+                <property name="Artist" value="Zoltan Boros" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="TLCI"/>
             </alternate>
         </card>
         <card name="Angel Warrior" id="17837ad0-44f2-4434-ad33-f48da0db40e4">
@@ -331,6 +336,11 @@
                 <property name="Artist" value="Jodie Muir" />
                 <property name="Number" value="4" />
                 <property name="Flags" value="TMID" />
+            </alternate>
+            <alternate name="Bat" type="2">
+                <property name="Artist" value="Steven Russell Black" />
+                <property name="Number" value="6" />
+                <property name="Flags" value="TLCI" />
             </alternate>
         </card>
         <card name="Bat" id="11645243-4e84-4759-9f9b-1b33809204c1">
@@ -1176,6 +1186,11 @@ Whenever this creature attacks, target attacking creature gains flying until end
             <property name="Artist" value="Yeong-Hao Han" />
             <property name="Number" value="6" />
             <property name="Flags" value="TRIX"/>
+			<alternate name="City's Blessing" type="1">
+				<property name="Artist" value="Alfven Ato" />
+                <property name="Number" value="17" />
+                <property name="Flags" value="TLCC"/>
+            </alternate>
         </card>
         <card name="Cleric" id="068c78c0-2432-428c-8316-13b7b353d9ad">
             <property name="Color" value="White" />
@@ -1641,6 +1656,28 @@ Whenever this creature attacks, target attacking creature gains flying until end
             <property name="Number" value="8" />
             <property name="Flags" value="TIKO"/>
         </card>
+        <card name="Dinosaur" id="0d4bcd4e-fc3f-4299-8aeb-936c9be57796">
+            <property name="Color" value="Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Dinosaur" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="3" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Francisco Miyara" />
+            <property name="Number" value="9" />
+            <property name="Flags" value="TLCI"/>
+        </card>
+        <card name="Dinosaur" id="9eb082ce-5099-4e04-ad74-111898906205">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Dinosaur" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Loic Canavaggia" />
+            <property name="Number" value="10" />
+            <property name="Flags" value="TLCI"/>
+        </card>
         <card name="Dinosaur" id="4be59cad-2733-4d3d-891a-4026c6da28c8">
             <property name="Color" value="Green" />
             <property name="Type" value="Creature" />
@@ -1650,8 +1687,18 @@ Whenever this creature attacks, target attacking creature gains flying until end
             <property name="Power" value="3" />
             <property name="Toughness" value="3" />
             <property name="Artist" value="Filip Burburan" />
-            <property name="Number" value="5" />
-            <property name="Flags" value="TXLN"/>
+            <property name="Number" value="3" />
+            <property name="Flags" value="TGN2"/>
+            <alternate name="Dinosaur" type="1">
+                <property name="Artist" value="Jaroslav Kosmina" />
+                <property name="Number" value="1" />
+                <property name="Flags" value="TREX"/>
+            </alternate>
+            <alternate name="Dinosaur" type="2">
+                <property name="Artist" value="Kitt Lapena" />
+                <property name="Number" value="10" />
+                <property name="Flags" value="TLCC"/>
+            </alternate>
         </card>
         <card name="Dinosaur" id="0bc36bba-f5d9-47c3-9782-b47505cc0d5f">
             <property name="Color" value="Green" />
@@ -1686,6 +1733,17 @@ Whenever this creature attacks, target attacking creature gains flying until end
             <property name="Artist" value="Brian Valeza" />
             <property name="Number" value="16" />
             <property name="Flags" value="TC20"/>
+        </card>
+        <card name="Dinosaur Egg" id="a62c520d-fb0c-4a95-be4e-3161b130dadd">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Dinosaur Egg" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="0" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Muhammad Firdaus" />
+            <property name="Number" value="11" />
+            <property name="Flags" value="TLCI"/>
         </card>
         <card name="Djinn" id="38bb8262-3ab3-4ad4-a0b1-4bb8f806ee3d">
             <property name="Color" value="Colorless" />
@@ -2939,8 +2997,20 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Power" value="3" />
             <property name="Toughness" value="3" />
             <property name="Artist" value="Jack Wang" />
-			<property name="Number" value="14" />
-			<property name="Flags" value="TC21" />
+			<property name="Number" value="13" />
+			<property name="Flags" value="TLCC" />
+        </card>
+        <card name="Fungus" id="5921f092-c86e-4513-9e61-c2ccc02492e8">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Fungus" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">This creature can't block.</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Domenico Cava" />
+            <property name="Number" value="7" />
+            <property name="Flags" value="TLCI"/>
         </card>
         <card name="Fungus Beast" id="c7a6e6e2-a26e-46e0-8aaf-9a08c489a011">
             <property name="Color" value="Green" />
@@ -2953,6 +3023,17 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Artist" value="Adam Paquette" />
             <property name="Number" value="15" />
             <property name="Flags" value="TC21"/>
+        </card>
+        <card name="Fungus Dinosaur" id="024b65ef-5f3f-4987-a0dc-841dc868b58a">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Dinosaur Fungus" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="*" />
+            <property name="Toughness" value="*" />
+            <property name="Artist" value="Dave Kendall" />
+            <property name="Number" value="12" />
+            <property name="Flags" value="TLCI"/>
         </card>
         <card name="Gargoyle" id="8f503f4d-23af-45c5-b561-915dff48838e">
             <property name="Color" value="Colorless" />
@@ -3054,6 +3135,23 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Artist" value="Dmitry Burmak" />
             <property name="Number" value="20" />
             <property name="Flags" value="TUST"/>
+            <alternate name="Gnome" type="1">
+                <property name="Artist" value="Racrufi" />
+                <property name="Number" value="16" />
+                <property name="Flags" value="TLCI"/>
+            </alternate>
+        </card>
+        <card name="Gnome Soldier" id="4b65a71d-f06e-467c-b82c-18d27fcf0bf2">
+            <property name="Color" value="White" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Gnome Soldier" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">This creature’s power and toughness are each equal to the number of artifacts and/or creatures you control.</property>
+            <property name="Power" value="*" />
+            <property name="Toughness" value="*" />
+            <property name="Artist" value="Steve Ellis" />
+            <property name="Number" value="3" />
+            <property name="Flags" value="TLCI"/>
         </card>
         <card name="Goat" id="1631dd68-5afb-4ae2-8f4b-db67b0398c7a">
             <property name="Color" value="White" />
@@ -3480,6 +3578,17 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Artist" value="Matt Stewart" />
             <property name="Number" value="12" />
             <property name="Flags" value="TMH2"/>
+        </card>
+        <card name="Golem" id="b9b7ba3b-39bb-457c-ada5-d042e41713df">
+            <property name="Color" value="Multicolor White Blue" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Golem" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="4" />
+            <property name="Toughness" value="4" />
+            <property name="Artist" value="Racrufi" />
+            <property name="Number" value="13" />
+            <property name="Flags" value="TLCI"/>
         </card>
         <card name="Golem" id="b61b969e-73a6-4646-be13-8b0d98b10743">
             <property name="Color" value="Colorless" />
@@ -4637,6 +4746,16 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Number" value="0" />
             <property name="Flags" value="TMIR?"/>
         </card>
+        <card name="Map" id="73d7b895-1eb0-4e12-b271-4c36783f3adb">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact" />
+            <property name="Subtype" value="Map" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules"><s value="1">{1}</s><s value="T">{T}</s>, Sacrifice this artifact: Target creature you control explores. Activate only as a sorcery. <i>(Reveal the top card of your library. Put that card into your hand if it’s a land. Otherwise, put a +1/+1 counter on that creature, then put the card back or put it into your graveyard.)</i></property>
+            <property name="Artist" value="Francesca Baerald" />
+            <property name="Number" value="17" />
+            <property name="Flags" value="TLCI"/>
+        </card>
         <card name="Marit Lage" id="267758b2-4102-4182-a2aa-4a8907b05289">
             <property name="Color" value="Black" />
             <property name="Type" value="Legendary Creature" />
@@ -4705,6 +4824,11 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Artist" value="Randy Gallegos" />
             <property name="Number" value="3" />
             <property name="Flags" value="TXLN"/>
+            <alternate name="Merfolk" type="1">
+                <property name="Artist" value="Julio Reyna" />
+                <property name="Number" value="5" />
+                <property name="Flags" value="TLCI"/>
+            </alternate>
         </card>
         <card name="Merfolk Wizard" id="b53c1420-67a4-41b7-8d04-3461cdb65e36">
             <property name="Color" value="Blue" />
@@ -4796,8 +4920,8 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Flags" value="TCN2"/>
             <alternate name="The Monarch" type="1">
                 <property name="Artist" value="Volkan Baga" />
-                <property name="Number" value="14" />
-                <property name="Flags" value="TCMR"/>
+                <property name="Number" value="18" />
+                <property name="Flags" value="TLCC"/>
             </alternate>
             <alternate name="The Monarch" type="2">
                 <property name="Artist" value="Audrey Benjaminsen" />
@@ -5439,8 +5563,8 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Power" value="2" />
             <property name="Toughness" value="2" />
             <property name="Artist" value="Matt Stewart" />
-            <property name="Number" value="4" />
-            <property name="Flags" value="TXLN"/>
+            <property name="Number" value="5" />
+            <property name="Flags" value="TLCC"/>
         </card>
         <card name="Plant" id="de2367b7-77b3-4d7c-89f7-98532b46b9e8">
             <property name="Color" value="Green" />
@@ -5973,7 +6097,7 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Shapeshifter" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Changeling (This token is every creature type.)</property>
+            <property name="Rules">Changeling <i>(This token is every creature type.)</i></property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="Franz Wohwinkel" />
@@ -6020,6 +6144,11 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Artist" value="Igor Grechanyi" />
             <property name="Number" value="24" />
             <property name="Flags" value="TCLB"/>
+            <alternate name="Shapeshifter" type="1">
+                <property name="Artist" value="Ryan Vale" />
+                <property name="Number" value="1" />
+                <property name="Flags" value="TLCC"/>
+            </alternate>
         </card>
         <card name="Shard" id="83d52b26-07e6-477d-81c2-ac0ced062e97">
             <property name="Color" value="Colorless" />
@@ -6109,6 +6238,17 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Artist" value="David Astruga" />
             <property name="Number" value="8" />
             <property name="Flags" value="TCLB"/>
+        </card>
+        <card name="Skeleton Pirate" id="480b5a7d-839b-4563-9979-6506efc86671">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Skeleton Pirate" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Izzy" />
+            <property name="Number" value="8" />
+            <property name="Flags" value="TLCI"/>
         </card>
         <card name="Sliver" id="2ead35a2-d474-4866-9bb2-c099c3d40922">
             <property name="Color" value="Colorless" />
@@ -6854,6 +6994,11 @@ Whenever you draw a card, put a +1/+1 counter on this creature.</property>
                 <property name="Number" value="13" />
                 <property name="Flags" value="TMOM"/>
             </alternate>
+            <alternate name="Spirit" type="2">
+                <property name="Artist" value="Milivoi Ceran" />
+                <property name="Number" value="14" />
+                <property name="Flags" value="TLCI"/>
+            </alternate>
         </card>
         <card name="Spirit" id="c30cf64a-475d-4fa4-bfeb-8d7d65afc42f">
             <property name="Color" value="Colorless" />
@@ -7350,6 +7495,16 @@ Whenever you draw a card, put a +1/+1 counter on this creature.</property>
                 <property name="Number" value="31" />
                 <property name="Flags" value="TWHO"/>
             </alternate>
+            <alternate name="Treasure" type="29">
+                <property name="Artist" value="Wero Galleo" />
+                <property name="Number" value="18" />
+                <property name="Flags" value="TLCI"/>
+            </alternate>
+            <alternate name="Treasure" type="30">
+                <property name="Artist" value="Victor Sales" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="TREX"/>
+            </alternate>
         </card>
         <card name="Treefolk" id="4d654a81-324b-4f57-bf9b-65c372e0e424">
             <property name="Color" value="Green" />
@@ -7483,6 +7638,11 @@ Whenever you draw a card, put a +1/+1 counter on this creature.</property>
                 <property name="Number" value="3" />
                 <property name="Flags" value="TMOM"/>
             </alternate>
+			<alternate name="Vampire" type="2">
+				<property name="Artist" value="Bruno Biazotto" />
+                <property name="Number" value="4" />
+                <property name="Flags" value="TLCI"/>
+            </alternate>
         </card>
         <card name="Vampire" id="e502f2f1-ebdd-42ab-8682-ef243a2aa44d">
             <property name="Color" value="Black" />
@@ -7506,6 +7666,11 @@ Whenever you draw a card, put a +1/+1 counter on this creature.</property>
             <property name="Artist" value="Peter Mohrbacher" />
             <property name="Number" value="2" />
             <property name="Flags" value="TDKA"/>
+			<alternate name="Vampire" type="1">
+				<property name="Artist" value="Lake Hurwitz" />
+                <property name="Number" value="6" />
+                <property name="Flags" value="TLCC"/>
+            </alternate>
         </card>
         <card name="Vampire" id="5fc6e862-08cc-4473-9099-0464315b42fb">
             <property name="Color" value="Black" />
@@ -7577,6 +7742,18 @@ Whenever you draw a card, put a +1/+1 counter on this creature.</property>
             <property name="Artist" value="Bastien L. Deharme" />
             <property name="Number" value="14" />
             <property name="Flags" value="TMID"/>
+        </card>
+        <card name="Vampire Demon" id="5eefb167-e065-4de9-8d48-6e578eb4b73f">
+            <property name="Color" value="Multicolor White Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Vampire Demon" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Lifelink</property>
+            <property name="Power" value="4" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Nino Vecia" />
+            <property name="Number" value="15" />
+            <property name="Flags" value="TLCI"/>
         </card>
         <card name="Vampire Knight" id="6c337ac0-00de-4f6b-b48e-ee0d5a8d157f">
             <property name="Color" value="Black" />
@@ -8483,8 +8660,8 @@ Whenever you draw a card, put a +1/+1 counter on this creature.</property>
             <property name="Rarity" value="Token" />
             <property name="Rules">Creatures you control get +1/+0.</property>
             <property name="Artist" value="Michael Komarck" />
-            <property name="Number" value="3" />
-            <property name="Flags" value="TDKA"/>
+            <property name="Number" value="16" />
+            <property name="Flags" value="TLCC"/>
         </card>
         <card name="Tamiyo's Emblem" id="638f93d1-0c9d-45b5-a0c3-487d4590a7a3">
             <property name="Color" value="Colorless" />

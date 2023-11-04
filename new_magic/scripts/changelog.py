@@ -483,5 +483,9 @@ changelog = {
         ]),
     3060309: ("3.6.3.9", "October 9 2023", [
         "Removed duplicate cards from database -- serialized and surge foil variants previously had card entries in the card database, even though they're identical to existing cards."
+        ]),
+    3060310: ("3.6.3.10", "November 4 2023", [
+        "Lands will now have a higher priority in the alignment script.  Artifact and Enchantment lands should now sort into the lands row.",
+        "Added LCI sets"
         ])
 }
