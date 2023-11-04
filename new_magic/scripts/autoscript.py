@@ -985,14 +985,14 @@ def cardalign(force = False):
                     index = 4
                 elif "Emblem" in card.Type:
                     index = 5
+                elif "Land" in card.Type:
+                    index = 3
                 elif "Creature" in card.Type:
                     index = 0
                 elif "Artifact" in card.Type:
                     index = 1
                 elif "Enchantment" in card.Type:
                     index = 2
-                elif "Land" in card.Type:
-                    index = 3
                 else:
                     index = 7
                 cardorder[index].append(dictname + "0")
