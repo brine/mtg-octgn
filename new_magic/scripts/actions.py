@@ -414,6 +414,44 @@ def scry(group = me.Library, x = 0, y = 0, count = None):
     notify("{} scryed for {}, {} on top, {} on bottom.".format(me, count, len(dlg.list), len(dlg.bottomList)))
     group.visibility = "none"
 
+def takeFromLibraryTopXShuffleRest(_group = None, _x = None, _y = None, count = None):
+    """Allows a player to take card(s) from the top X cards of their library and shuffles the rest to the bottom.
+    The taken cards are put into player's hand and can be automatically revealed to opponents, if desired."""
+    mute()
+    if count == None:
+        count = askInteger("Take from how many top cards?", 5)
+    if count == None or count == 0:
+        return
+    dlg = cardDlg(list=[], bottomList=me.Library.top(count))
+    dlg.title = "Take card(s) from top {}, shuffle rest to bottom".format(count)
+    dlg.label = "To hand"
+    dlg.bottomLabel = "To the bottom of library in a random order"
+    dlg.text = "Select card(s) to put into your hand. The rest will be put on the bottom of your library in a random order." \
+               "You'll be asked if you want to reveal selected cards."
+    if dlg.show() is None:
+        notify("{} has cancelled taking cards from top {} of their library.".format(me, count))
+        return
+
+    if len(dlg.list) > 0:
+        shouldReveal = confirm("Do you want to reveal taken cards to all your opponents?")
+    else:
+        shouldReveal = False
+    if shouldReveal is None:
+        shouldReveal = False ## If user closes the window, we treat it as if they said "don't reveal".
+
+    if shouldReveal:
+        for c in dlg.list:
+            c.isFaceUp = True
+        cardInfo = ', '.join("{}".format(c) for c in dlg.list)
+    else:
+        cardInfo = "{} card(s)".format(len(dlg.list))
+    notify("{} puts {} from top {} of their library to hand and the rest to the bottom of library in a random order.".format(me, cardInfo, count))
+    ## We notify after turning cards face up but before moving them because cards are turned face down again when moved.
+
+    for c in dlg.list:
+        c.moveTo(me.Hand)
+    libraryBottomAllShuffle(cards=dlg.bottomList, verbose=False)
+
 def play(card, x = 0, y = 0):
     mute()
     text = ''
@@ -980,7 +1018,7 @@ def tolibraryposition(card, x = 0, y = 0):
         notify("{} moves {} from {} to Library ({} from top).".format(me, card, fromText, pos))
         card.moveTo(card.owner.Library, pos)
 
-def libraryBottomAllShuffle(cards, x = 0, y = 0):
+def libraryBottomAllShuffle(cards, x = 0, y = 0, verbose = True):
     mute()
     count = len(cards)
     rng = Random()
@@ -990,7 +1028,8 @@ def libraryBottomAllShuffle(cards, x = 0, y = 0):
         cards[i], cards[j] = cards[j], cards[i]
     for card in cards:
         card.moveToBottom(card.owner.piles['Library'])
-    notify("{} shuffles {} selected cards to the bottom of their Library.".format(me, count))
+    if verbose:
+        notify("{} shuffles {} selected cards to the bottom of their Library.".format(me, count))
 
 def tohand(card, x = 0, y = 0):
     mute()
