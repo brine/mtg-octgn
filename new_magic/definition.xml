@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.3.10" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.3.11" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering plugin for OCTGN.&#xD;&#xD;Card images can be installed via the image downloader plugin in the OCTGN Deck Editor."
     setsurl="https://github.com/brine/mtg-octgn" gameurl="http://brine.github.io/mtg-octgn/" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -47,7 +47,7 @@
     <marker src="Markers/fade.png" id="fade" name="fade counter" />
     <marker src="Markers/magnet.png" id="magnet" name="magnet counter" />
     <marker src="Markers/brick.png" id="brick" name="brick counter" />
-    
+
     <marker src="Markers/p1p1.png" id="p1p1" name=" +1/+1 counter" />
     <marker src="Markers/m1m1.png" id="m1m1" name=" -1/-1 counter" />
     <marker src="Markers/p1p0.png" id="p1p0" name=" +1/+0 counter" />
@@ -58,7 +58,7 @@
     <marker src="Markers/m1m0.png" id="m1m0" name=" -1/-0 counter" />
     <marker src="Markers/m2m1.png" id="m2m1" name=" -2/-1 counter" />
     <marker src="Markers/m2m2.png" id="m2m2" name=" -2/-2 counter" />
-	
+
     <marker src="Markers/p1p1.png" id="+1/+1" name=" +1/+1 counter" />
     <marker src="Markers/m1m1.png" id="-1/-1" name=" -1/-1 counter" />
     <marker src="Markers/p1p0.png" id="+1/+0" name=" +1/+0 counter" />
@@ -362,11 +362,11 @@
       </groupactions>
       <cardaction menu="Cast Card" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
-      <cardaction menu="Discard Card" shortcut="del" execute="discard" /> 
+      <cardaction menu="Discard Card" shortcut="del" execute="discard" />
       <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+f" execute="morph" />
       <cardaction menu="Manifest Card" execute="manifest" />
-      <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" /> 
-      <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />      
+      <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" />
+      <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
     </group>
     <group name="Sideboard" visibility="me" icon="groups/sideboard.png" viewState="collapsed">
       <groupaction menu="Shuffle" execute="shuffle" />

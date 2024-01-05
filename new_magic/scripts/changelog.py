@@ -487,5 +487,8 @@ changelog = {
     3060310: ("3.6.3.10", "November 4 2023", [
         "Lands will now have a higher priority in the alignment script.  Artifact and Enchantment lands should now sort into the lands row.",
         "Added LCI sets"
+        ]),
+    3060311: ("3.6.3.11", "January 5 2024", [
+        "Added RVR set"
         ])
 }
