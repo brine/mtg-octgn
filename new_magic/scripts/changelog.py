@@ -490,5 +490,8 @@ changelog = {
         ]),
     3060311: ("3.6.3.11", "January 5 2024", [
         "Added RVR set"
+        ]),
+    3060312: ("3.6.3.12", "February 2 2024", [
+        "Added MKM set"
         ])
 }
