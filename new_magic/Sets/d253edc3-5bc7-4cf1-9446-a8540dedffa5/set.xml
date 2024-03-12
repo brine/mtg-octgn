@@ -238,7 +238,7 @@ Craft with four or more red instant and/or sorcery cards <s value="3">{3}</s><s 
       <property name="Subtype" value="Gnome" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever Tetzin or another double-faced artifact enters the battlefield under your control, mill three cards. You may put an artifact card from among them into your hand.
-Craft with six artifacts <s value="4">{4}</s> (<s value="4">{4}</s>, Exile this artifact, Exile the six from among other permanents you control and/or cards from your graveyard: Return this card transformed under its owner's control.)</property>
+Craft with six artifacts <s value="4">{4}</s> (<s value="4">{4}</s>, Exile this artifact, Exile the six from among other permanents you control and/or cards from your graveyard: Return this card transformed under its owner's control. Craft only as a sorcery.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Kekai Kotaki" />
@@ -591,7 +591,7 @@ Whenever Hakbal of the Surging Soul attacks, you may put a land card from your h
       <property name="Subtype" value="Gnome" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever Tetzin or another double-faced artifact enters the battlefield under your control, mill three cards. You may put an artifact card from among them into your hand.
-Craft with six artifacts <s value="4">{4}</s> (<s value="4">{4}</s>, Exile this artifact, Exile the six from among other permanents you control and/or cards from your graveyard: Return this card transformed under its owner's control.)</property>
+Craft with six artifacts <s value="4">{4}</s> (<s value="4">{4}</s>, Exile this artifact, Exile the six from among other permanents you control and/or cards from your graveyard: Return this card transformed under its owner's control. Craft only as a sorcery.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Kekai Kotaki" />
@@ -1962,7 +1962,7 @@ Everflowing Chalice enters the battlefield with a charge counter on it for each 
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">You may pay <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s> rather than pay the mana cost for spells that you cast.</property>
+      <property name="Rules">You may pay <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s> rather than pay the mana cost for spells you cast.</property>
       <property name="Artist" value="J.P. Targete" />
       <property name="Number" value="113" />
     </card>
@@ -2140,7 +2140,7 @@ Whenever Hakbal of the Surging Soul attacks, you may put a land card from your h
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Choose one. If you control a commander as you cast this spell, you may choose both.
+      <property name="Rules">Choose one. If you control a commander as you cast this spell, you may choose both instead.
 • Creatures you control gain flying, vigilance, and double strike until end of turn.
 • Creatures you control gain lifelink, indestructible, and protection from all colors until end of turn.</property>
       <property name="Artist" value="Antonio José Manzanedo" />
@@ -3432,7 +3432,7 @@ Gain control of target creature. Change the text of that creature by replacing a
       <property name="Subtype" value="Vampire Rogue" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying, deathtouch, lifelink
-Nighthawk Scavenger's power is equal to 1 plus the number of card types among cards in your opponents' graveyards. (Cards in graveyards have only the characteristics of their front face.)</property>
+Nighthawk Scavenger's power is equal to 1 plus the number of card types among cards in your opponents' graveyards.</property>
       <property name="Power" value="1+*" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Heonhwa Choe" />
@@ -3871,7 +3871,7 @@ Whenever another creature enters the battlefield under your control, Marauding R
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Orc Pirate" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever Port Razer deals combat damage to a player, untap each creature you control. After this combat phase, there is an additional combat phase.
+      <property name="Rules">Whenever Port Razer deals combat damage to a player, untap each creature you control. After this phase, there is an additional combat phase.
 Port Razer can't attack a player it has already attacked this turn.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -4074,8 +4074,8 @@ Draw a card.</property>
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Draw a card for each creature you control with a +1/+1 counter on it. Those creatures gain indestructible until end of turn.</property>
-      <property name="Artist" value="Dan Scott" />
+      <property name="Rules">Draw a card for each creature you control with a +1/+1 counter on it. Those creatures gain indestructible until end of turn. (Damage and effects that say "destroy" don't destroy them.)</property>
+      <property name="Artist" value="Dan Murayama Scott" />
       <property name="Number" value="244" />
     </card>
     <card name="Kodama's Reach" id="29fc8594-931f-4cf6-95b8-9b589d6cbcf9">
@@ -4490,7 +4490,7 @@ When Elenda dies, create X 1/1 white Vampire creature tokens with lifelink, wher
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">As Etchings of the Chosen enters the battlefield, choose a creature type.
 Creatures you control of the chosen type get +1/+1.
-<s value="1">{1}</s>, Sacrifice a creature of the chosen type: Target creature you control gains indestructible until end of turn.</property>
+<s value="1">{1}</s>, Sacrifice a creature of the chosen type: Target creature you control gains indestructible until end of turn. (Damage and effects that say "destroy" don't destroy it.)</property>
       <property name="Artist" value="Chuck Lukacs" />
       <property name="Number" value="269" />
     </card>
@@ -4518,7 +4518,7 @@ Creatures you control of the chosen type get +1/+1.
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Hostage Taker enters the battlefield, exile another target creature or artifact until Hostage Taker leaves the battlefield. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast it.</property>
+      <property name="Rules">When Hostage Taker enters the battlefield, exile another target creature or artifact until Hostage Taker leaves the battlefield. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Wayne Reynolds" />
@@ -5015,7 +5015,7 @@ Each creature you control with a +1/+1 counter on it has trample.</property>
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="T">{T}</s>: Add one mana of any color in your commander's color identity.</property>
-      <property name="Artist" value="Dan Scott" />
+      <property name="Artist" value="Dan Murayama Scott" />
       <property name="Number" value="299" />
     </card>
     <card name="Blade of the Bloodchief" id="34e7bebf-1844-476c-a947-978393908fa2">
@@ -5274,7 +5274,7 @@ Whenever you cast a creature spell of the chosen type, draw a card.</property>
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="G">{G}</s><s value="U">{U}</s>, <s value="T">{T}</s>: You may cast spells this turn as though they had flash.</property>
-      <property name="Artist" value="Dan Scott" />
+      <property name="Artist" value="Dan Murayama Scott" />
       <property name="Number" value="318" />
       <property name="Flags" value="GU" />
     </card>
@@ -5642,7 +5642,7 @@ When Orzhov Basilica enters the battlefield, return a land you control to its ow
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">As Secluded Courtyard enters the battlefield, choose a creature type.
 <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type or activate an ability of a creature or creature card of the chosen type.</property>
+<s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type or activate an ability of a creature source of the chosen type.</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="350" />
       <property name="Flags" value="M" />
@@ -5759,7 +5759,7 @@ When Temple of Silence enters the battlefield, scry 1.
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="T">{T}</s>, Sacrifice Terramorphic Expanse: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
-      <property name="Artist" value="Dan Scott" />
+      <property name="Artist" value="Dan Murayama Scott" />
       <property name="Number" value="360" />
       <property name="Flags" value="C" />
     </card>
