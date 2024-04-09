@@ -3480,7 +3480,7 @@ Draw a card.</property>
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Path of Ancestry enters the battlefield tapped.
-<s value="T">{T}</s>: Add one mana of any color in your commander's color identity. When that mana is spent to cast a creature spell that shares a creature type with your commander, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)</property>
+<s value="T">{T}</s>: Add one mana of any color in your commander's color identity. When that mana is spent to cast a creature spell that shares a creature type with your commander, scry 1. (Look at the top card of your library. You may put that card on the bottom.)</property>
       <property name="Artist" value="Julio Reyna" />
       <property name="Number" value="250" />
       <property name="Flags" value="M" />
@@ -10803,6 +10803,23 @@ Whenever you cast a green spell, you may untap Nettle Sentinel.</property>
       <property name="Artist" value="Kev Walker" />
       <property name="Number" value="773" />
     </card>
+    <card name="Paradise Druid" id="07425bc6-eb70-4b2b-a9e1-e56b098a0f22">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elf Druid" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Paradise Druid has hexproof as long as it's untapped. (It can't be the target of spells or abilities your opponents control.)
+<s value="T">{T}</s>: Add one mana of any color.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Nils Hamm" />
+      <property name="Number" value="775" />
+    </card>
     <card name="Sylvan Ranger" id="70664ccf-07c6-470b-bfcf-e95442e86aa5">
       <property name="Cost">
         <s value="1">{1}</s>
@@ -10818,6 +10835,23 @@ Whenever you cast a green spell, you may untap Nettle Sentinel.</property>
       <property name="Toughness" value="1" />
       <property name="Artist" value="Ciruelo" />
       <property name="Number" value="779" />
+    </card>
+    <card name="Timberwatch Elf" id="a513bd7e-b843-4bec-a50f-9f014cc86503">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elf" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Target creature gets +X/+X until end of turn, where X is the number of Elves on the battlefield.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Dave Dorman" />
+      <property name="Number" value="780" />
     </card>
     <card name="Wellwisher" id="6cda011d-da71-4836-9795-f12a23041aad">
       <property name="Cost">
@@ -10927,6 +10961,25 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Toughness" value="1" />
       <property name="Artist" value="Fiona Hsieh" />
       <property name="Number" value="794" />
+    </card>
+    <card name="Discord, Lord of Disharmony" id="c474c0f1-08c7-4183-b024-297a11594a96">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Black Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Chimera" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Flying
+At the beginning of your end step, choose a random nonland Magic card name. Until your next end step, you may cast a copy of a spell with that name, and mana of any type can be spent to cast it. If you cast a spell this way, copy this ability if Discord is on the battlefield.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Narendra Bintara Adi" />
+      <property name="Number" value="798" />
+      <property name="Faction" value="Cutiemark" />
     </card>
     <card name="Coveted Jewel" id="0b7726e1-f121-4283-9c54-66509f332f39">
       <property name="Cost">
@@ -17692,7 +17745,7 @@ Whenever a spell or ability you control counters a spell, you may draw a card. I
 <s value="2">{2}</s><s value="B">{B}</s>, Discard a card: Create a token that's a copy of Pack Rat.</property>
       <property name="Power" value="*" />
       <property name="Toughness" value="*" />
-      <property name="Artist" value="Nestor Ossandon Leal" />
+      <property name="Artist" value="Néstor Ossandón Leal" />
       <property name="Number" value="1448" />
     </card>
     <card name="Fynn, the Fangbearer" id="0fb05d34-05cb-4536-b7e6-2d526dc30a9f">
@@ -19525,6 +19578,86 @@ The first nonartifact spell you cast each turn has improvise. (Your artifacts ca
       <property name="Artist" value="Kieran Yanner" />
       <property name="Number" value="1584" />
     </card>
+    <card name="Swords to Plowshares" id="87ae26b5-bb60-4138-ab08-740e45455373">
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Exile target creature. Its controller gains life equal to its power.</property>
+      <property name="Artist" value="Phoebe Wahl" />
+      <property name="Number" value="1627" />
+    </card>
+    <card name="Faerie Artisans" id="fe8f7a42-b41e-4065-878a-1f350fd0766a">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Faerie Artificer" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Flying
+Whenever a nontoken creature enters the battlefield under an opponent's control, create a token that's a copy of that creature except it's an artifact in addition to its other types. Then exile all other tokens created with Faerie Artisans.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Phoebe Wahl" />
+      <property name="Number" value="1628" />
+    </card>
+    <card name="Dockside Chef" id="697fcd59-1ad7-439f-8307-abe92c457b05">
+      <property name="Cost">
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Enchantment Creature" />
+      <property name="Subtype" value="Human Citizen" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>, Sacrifice an artifact or creature: Draw a card.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Phoebe Wahl" />
+      <property name="Number" value="1629" />
+    </card>
+    <card name="Alela, Artful Provocateur" id="b40f7528-5162-4454-afa8-9ecb912d7ec7">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="W">{W}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor White Blue Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Faerie Warlock" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Flying, deathtouch, lifelink
+Other creatures you control with flying get +1/+0.
+Whenever you cast an artifact or enchantment spell, create a 1/1 blue Faerie creature token with flying.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="3" />
+      <property name="Artist" value="Phoebe Wahl" />
+      <property name="Number" value="1630" />
+    </card>
+    <card name="Door of Destinies" id="8d102a60-383c-45f1-ab1b-be0ab9b87332">
+      <property name="Cost">
+        <s value="4">{4}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">As Door of Destinies enters the battlefield, choose a creature type.
+Whenever you cast a spell of the chosen type, put a charge counter on Door of Destinies.
+Creatures you control of the chosen type get +1/+1 for each charge counter on Door of Destinies.</property>
+      <property name="Artist" value="Phoebe Wahl" />
+      <property name="Number" value="1631" />
+    </card>
     <card name="Steelshaper's Gift" id="a602f394-2bfa-4383-b1aa-2715cc36683d">
       <property name="Cost">
         <s value="W">{W}</s>
@@ -19601,6 +19734,115 @@ The first nonartifact spell you cast each turn has improvise. (Your artifacts ca
       <property name="Rules">Lightning Bolt deals 3 damage to any target.</property>
       <property name="Artist" value="Desmuncubic" />
       <property name="Number" value="1638" />
+    </card>
+    <card name="Inalla, Archmage Ritualist" id="5887d320-2c65-4295-bd6e-9e49eb1bc2e6">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="U">{U}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Multicolor Blue Black Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Wizard" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Eminence — Whenever another nontoken Wizard enters the battlefield under your control, if Inalla, Archmage Ritualist is in the command zone or on the battlefield, you may pay <s value="1">{1}</s>. If you do, create a token that's a copy of that Wizard. The token gains haste. Exile it at the beginning of the next end step.
+Tap five untapped Wizards you control: Target player loses 7 life.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Rovina Cai" />
+      <property name="Number" value="1639" />
+    </card>
+    <card name="Aether Vial" id="f6151f39-966e-4af6-a20a-d761781abed9">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">At the beginning of your upkeep, you may put a charge counter on Aether Vial.
+<s value="T">{T}</s>: You may put a creature card with mana value equal to the number of charge counters on Aether Vial from your hand onto the battlefield.</property>
+      <property name="Artist" value="Rovina Cai" />
+      <property name="Number" value="1640" />
+    </card>
+    <card name="Arcane Signet" id="ed972e99-c563-4da7-a60a-895949d5f032">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add one mana of any color in your commander's color identity.</property>
+      <property name="Artist" value="Rovina Cai" />
+      <property name="Number" value="1641" />
+    </card>
+    <card name="Sword of the Animist" id="285e4f85-c54b-4dda-9b59-fca7a2626671">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Artifact" />
+      <property name="Subtype" value="Equipment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Equipped creature gets +1/+1.
+Whenever equipped creature attacks, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle.
+Equip <s value="2">{2}</s></property>
+      <property name="Artist" value="Rovina Cai" />
+      <property name="Number" value="1642" />
+    </card>
+    <card name="Gravebreaker Lamia" id="814dd29f-439b-4e0b-94a8-b57a1f9ef251">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Enchantment Creature" />
+      <property name="Subtype" value="Snake Lamia" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Lifelink
+When Gravebreaker Lamia enters the battlefield, search your library for a card, put it into your graveyard, then shuffle.
+Spells you cast from your graveyard cost <s value="1">{1}</s> less to cast.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Laura Plansker" />
+      <property name="Number" value="1643" />
+    </card>
+    <card name="Aura Shards" id="a956ab72-6abd-48f5-863d-7f8b39caf8fd">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor Green White" />
+      <property name="Type" value="Enchantment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever a creature enters the battlefield under your control, you may destroy target artifact or enchantment.</property>
+      <property name="Artist" value="Laura Plansker" />
+      <property name="Number" value="1644" />
+    </card>
+    <card name="Fiend Artisan" id="681a8036-7eea-4408-887b-a4efcee46124">
+      <property name="Cost">
+        <s value="BG">{B/G}</s>
+        <s value="BG">{B/G}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Hybrid Black Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Nightmare" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Fiend Artisan gets +1/+1 for each creature card in your graveyard.
+<s value="X">{X}</s><s value="BG">{B/G}</s>, <s value="T">{T}</s>, Sacrifice another creature: Search your library for a creature card with mana value X or less, put it onto the battlefield, then shuffle. Activate only as a sorcery.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Laura Plansker" />
+      <property name="Number" value="1645" />
     </card>
     <card name="Teferi's Protection" id="b7210c3a-bbd3-4f3a-933b-a5618a4f7a52">
       <property name="Cost">
