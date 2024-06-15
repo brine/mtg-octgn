@@ -499,5 +499,9 @@ changelog = {
         ]),
     3060314: ("3.6.3.14", "April 8 2024", [
         "Added OTJ and supplemental sets"
+        ]),
+    3060316: ("3.6.3.16", "June 15 2024", [
+        "Added MH3",
+        "Updated oracle text with card type changes"
         ])
 }
