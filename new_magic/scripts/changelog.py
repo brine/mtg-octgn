@@ -503,5 +503,8 @@ changelog = {
     3060316: ("3.6.3.16", "June 15 2024", [
         "Added MH3",
         "Updated oracle text with card type changes"
+        ]),
+    3060317: ("3.6.3.17", "July 1 2024", [
+        "Added ACR"
         ])
 }
