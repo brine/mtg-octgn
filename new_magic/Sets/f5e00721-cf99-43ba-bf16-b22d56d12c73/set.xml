@@ -942,7 +942,7 @@ Deathtouch</property>
       <property name="Color" value="Red" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">If you would get one or more <s value="E">{E}</s>, you get twice that many <s value="E">{E}</s> instead.
+      <property name="Rules">If you would get one or more <s value="E">{E}</s> (energy counters), you get twice that many <s value="E">{E}</s> instead.
 <s value="T">{T}</s>: You get <s value="E">{E}</s>, then you may pay one or more <s value="E">{E}</s>. If you do, create an X/X black Aetherborn creature token, where X is the amount of <s value="E">{E}</s> paid this way.</property>
       <property name="Artist" value="Daniel Ljunggren" />
       <property name="Number" value="054" />
@@ -1612,7 +1612,7 @@ Whenever Barrowgoyf deals combat damage to a player, you may mill that many card
       <property name="Color" value="Red" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">If you would get one or more <s value="E">{E}</s>, you get twice that many <s value="E">{E}</s> instead.
+      <property name="Rules">If you would get one or more <s value="E">{E}</s> (energy counters), you get twice that many <s value="E">{E}</s> instead.
 <s value="T">{T}</s>: You get <s value="E">{E}</s>, then you may pay one or more <s value="E">{E}</s>. If you do, create an X/X black Aetherborn creature token, where X is the amount of <s value="E">{E}</s> paid this way.</property>
       <property name="Artist" value="Daniel Ljunggren" />
       <property name="Number" value="106" />
@@ -1653,24 +1653,6 @@ Crew 1</property>
       <property name="Toughness" value="5" />
       <property name="Artist" value="Gaboleps" />
       <property name="Number" value="108" />
-    </card>
-    <card name="Hideous Taskmaster" id="03df465f-6bec-4051-aa29-6368b75e5158">
-      <property name="Cost">
-        <s value="6">{6}</s>
-        <s value="R">{R}</s>
-      </property>
-      <property name="CMC" value="7" />
-      <property name="Color" value="Red" />
-      <property name="Type" value="Creature" />
-      <property name="Subtype" value="Eldrazi" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">Devoid
-When you cast this spell, for each opponent, gain control of up to one target creature that player controls until end of turn. Untap those creatures. They gain trample, haste, and annihilator 1 until end of turn.
-Trample, haste, annihilator 1</property>
-      <property name="Power" value="7" />
-      <property name="Toughness" value="2" />
-      <property name="Artist" value="Helge C. Balzer" />
-      <property name="Number" value="109" />
     </card>
     <card name="Overclocked Electromancer" id="c32967d4-0ed0-492b-b94f-3b13ea9bf909">
       <property name="Cost">
@@ -2219,6 +2201,146 @@ Whenever you cast an Eldrazi spell, you may pay <s value="C">{C}</s><s value="C"
       <property name="Toughness" value="5" />
       <property name="Artist" value="Cosmin Podar" />
       <property name="Number" value="143" />
+    </card>
+    <card name="Disa the Restless" id="0f2044b5-86e6-462d-a9a9-b90bc6ce8219">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Multicolor Black Red Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Scout" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever a Lhurgoyf permanent card is put into your graveyard from anywhere other than the battlefield, put it onto the battlefield.
+Whenever one or more creatures you control deal combat damage to a player, create a Tarmogoyf token.</property>
+      <property name="Power" value="5" />
+      <property name="Toughness" value="6" />
+      <property name="Artist" value="Jana Schirmer" />
+      <property name="Number" value="144" />
+    </card>
+    <card name="Omo, Queen of Vesuva" id="a5e466c8-9fc9-47ca-aeae-93aaa80a4df5">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="GU">{G/U}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Hybrid Green Blue" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Shapeshifter Noble" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever Omo, Queen of Vesuva enters the battlefield or attacks, put an everything counter on each of up to one target land and up to one target creature.
+Each land with an everything counter on it is every land type in addition to its other types.
+Each nonland creature with an everything counter on it is every creature type.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Alex Brock" />
+      <property name="Number" value="145" />
+    </card>
+    <card name="Satya, Aetherflux Genius" id="9c891e38-b8c6-4e54-9226-95104bcb78f9">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="R">{R}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Blue Red White" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Artificer" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Menace, haste
+Whenever Satya, Aetherflux Genius attacks, create a tapped and attacking token that's a copy of up to one other target nontoken creature you control. You get <s value="E">{E}</s><s value="E">{E}</s> (two energy counters). At the beginning of the next end step, sacrifice that token unless you pay an amount of <s value="E">{E}</s> equal to its mana value.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Aaron Miller" />
+      <property name="Number" value="146" />
+    </card>
+    <card name="Ulalek, Fused Atrocity" id="3c8d8b30-d935-4919-8693-8629a6847e47">
+      <property name="Cost">{C/W}{C/U}{C/B}{C/R}{C/G}</property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Multicolor White Blue Black Red Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Eldrazi" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Devoid (This card has no color.)
+Whenever you cast an Eldrazi spell, you may pay <s value="C">{C}</s><s value="C">{C}</s>. If you do, copy all spells you control, then copy all other activated and triggered abilities you control. You may choose new targets for the copies. (Mana abilities can't be copied.)</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Alex Konstad" />
+      <property name="Number" value="147" />
+    </card>
+    <card name="Disa the Restless" id="1330b6a4-4064-4fca-90d7-6dfc0ca1c772">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Multicolor Black Red Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Scout" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever a Lhurgoyf permanent card is put into your graveyard from anywhere other than the battlefield, put it onto the battlefield.
+Whenever one or more creatures you control deal combat damage to a player, create a Tarmogoyf token.</property>
+      <property name="Power" value="5" />
+      <property name="Toughness" value="6" />
+      <property name="Artist" value="Jana Schirmer" />
+      <property name="Number" value="148" />
+    </card>
+    <card name="Omo, Queen of Vesuva" id="5be300b8-af07-4f90-91ce-888b14dd9be0">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="GU">{G/U}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Hybrid Green Blue" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Shapeshifter Noble" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever Omo, Queen of Vesuva enters the battlefield or attacks, put an everything counter on each of up to one target land and up to one target creature.
+Each land with an everything counter on it is every land type in addition to its other types.
+Each nonland creature with an everything counter on it is every creature type.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Alex Brock" />
+      <property name="Number" value="149" />
+    </card>
+    <card name="Satya, Aetherflux Genius" id="4f4bc218-e9c4-4e35-b4e0-bb5d2c6e1f2c">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="R">{R}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Blue Red White" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Artificer" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Menace, haste
+Whenever Satya, Aetherflux Genius attacks, create a tapped and attacking token that's a copy of up to one other target nontoken creature you control. You get <s value="E">{E}</s><s value="E">{E}</s> (two energy counters). At the beginning of the next end step, sacrifice that token unless you pay an amount of <s value="E">{E}</s> equal to its mana value.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Aaron Miller" />
+      <property name="Number" value="150" />
+    </card>
+    <card name="Ulalek, Fused Atrocity" id="7a816daf-3244-420f-a10d-b31ebf04f12a">
+      <property name="Cost">{C/W}{C/U}{C/B}{C/R}{C/G}</property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Multicolor White Blue Black Red Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Eldrazi" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Devoid (This card has no color.)
+Whenever you cast an Eldrazi spell, you may pay <s value="C">{C}</s><s value="C">{C}</s>. If you do, copy all spells you control, then copy all other activated and triggered abilities you control. You may choose new targets for the copies. (Mana abilities can't be copied.)</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Alex Konstad" />
+      <property name="Number" value="151" />
     </card>
     <card name="All Is Dust" id="600518f5-4598-436d-9513-3d32adfc93f9">
       <property name="Cost">

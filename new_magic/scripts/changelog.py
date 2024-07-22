@@ -506,5 +506,8 @@ changelog = {
         ]),
     3060317: ("3.6.3.17", "July 1 2024", [
         "Added ACR"
+        ]),
+    3060318: ("3.6.3.18", "July 22 2024", [
+        "Added Bloomburrow"
         ])
 }
