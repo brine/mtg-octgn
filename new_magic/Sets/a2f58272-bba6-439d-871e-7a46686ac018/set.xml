@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <set name="Bloomburrow" id="a2f58272-bba6-439d-871e-7a46686ac018" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="blb" releaseDate="2024-08-02">
   <packaging>
-    <pack name="Play Booster" id="00690c2c-dc86-4e27-ba4c-1e6d08796f42">
+    <pack name="Play Booster" id="61b53c96-4c8b-4f83-9433-3297aedbb79d">
       <options>
         <option probability="0.985">
           <pick qty="7" key="Rarity" value="Common">
@@ -50,18 +50,18 @@
           </options>
         </option>
       </options>
-	  <options>
-		<option probability="0.1428">
-		  <pick qty="1" key="Rarity" value="Mythic Rare">
-			<property key="Packaging" value="" />
-		  </pick>
-		</option>
-		<option probability="0.8572">
-		  <pick qty="1" key="Rarity" value="Rare">
-			<property key="Packaging" value="" />
-		  </pick>
-		</option>
-	  </options>
+      <options>
+        <option probability="0.1428">
+          <pick qty="1" key="Rarity" value="Mythic Rare">
+            <property key="Packaging" value="" />
+          </pick>
+        </option>
+        <option probability="0.8572">
+          <pick qty="1" key="Rarity" value="Rare">
+            <property key="Packaging" value="" />
+          </pick>
+        </option>
+      </options>
       <options>
         <option probability="0.7">
           <pick qty="1" key="Rarity" value="Common">
@@ -88,8 +88,6 @@
           </options>
         </option>
       </options>
-
- 
       <pick qty="1" key="Rarity" value="Basic Land">
         <property key="Packaging" value="" />
       </pick>
@@ -124,7 +122,7 @@
         <property name="Packaging" value="List" />
       </include>
     </pack>
-    <pack name="Lands" id="a61601d2-f34f-4721-8db1-26cd4d05f8ee">
+    <pack name="Lands" id="ed0181a0-ed41-45b5-8120-ca329c3be403">
       <pick qty="unlimited" key="Rarity" value="Basic Land" />
     </pack>
   </packaging>
@@ -138,7 +136,7 @@
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Banishing Light enters the battlefield, exile target nonland permanent an opponent controls until Banishing Light leaves the battlefield.</property>
+      <property name="Rules">When Banishing Light enters, exile target nonland permanent an opponent controls until Banishing Light leaves the battlefield.</property>
       <property name="Artist" value="Zoltan Boros" />
       <property name="Number" value="001" />
     </card>
@@ -1114,7 +1112,7 @@ Threshold — As long as seven or more cards are in your graveyard, creatures yo
       <property name="Subtype" value="Bird Bard" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-You may have Mockingbird enter the battlefield as a copy of any creature on the battlefield with mana value less than or equal to the mana spent to cast Mockingbird, except it is a Bird in addition to its other types and has flying.</property>
+You may have Mockingbird enter as a copy of any creature on the battlefield with mana value less than or equal to the amount of mana spent to cast Mockingbird, except it's a Bird in addition to its other types and it has flying.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Aurore Folny" />
@@ -2377,7 +2375,7 @@ Whenever a player casts their second spell each turn, Hearthborn Battler deals 2
       <property name="Subtype" value="Lizard Mercenary" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever you attack with one or more Lizards, Hired Claw deals 1 damage to target opponent.
-<s value="1">{1}</s><s value="R">{R}</s>: Put a +1/+1 counter on Hired Claw. Activate this ability only if an opponent has lost life this turn and only once each turn.</property>
+<s value="1">{1}</s><s value="R">{R}</s>: Put a +1/+1 counter on Hired Claw. Activate only if an opponent lost life this turn and only once each turn.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Quintin Gleim" />
@@ -2583,7 +2581,7 @@ Target player draws two cards. If the gift was promised, target creature you con
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Lizard Warlock" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Offspring <s value="2">{2}</s> (You may pay an additional <s value="2">{2}</s> as you cast this spell. If do, when this creature enters, create a 1/1 token copy of it.)
+      <property name="Rules">Offspring <s value="2">{2}</s> (You may pay an additional <s value="2">{2}</s> as you cast this spell. If you do, when this creature enters, create a 1/1 token copy of it.)
 When this creature dies, it deals 1 damage to target player.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
@@ -3243,7 +3241,7 @@ When Stickytongue Sentinel enters, return up to one other target permanent you c
       <property name="Cost">
         <s value="G">{G}</s>
       </property>
-      <property name="CMC" value="2" />
+      <property name="CMC" value="1" />
       <property name="Color" value="Green" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
@@ -4352,8 +4350,7 @@ Tap two untapped tokens you control: Tangle Tumbler becomes an artifact creature
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Uncharted Haven enters the battlefield tapped.
-As Uncharted Haven enters the battlefield, choose a color.
+      <property name="Rules">Uncharted Haven enters tapped. As it enters, choose a color.
 <s value="T">{T}</s>: Add one mana of the chosen color.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="261" />
@@ -5017,7 +5014,7 @@ Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until e
       <property name="Subtype" value="Bird Bard" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-You may have Mockingbird enter the battlefield as a copy of any creature on the battlefield with mana value less than or equal to the mana spent to cast Mockingbird, except it is a Bird in addition to its other types and has flying.</property>
+You may have Mockingbird enter as a copy of any creature on the battlefield with mana value less than or equal to the amount of mana spent to cast Mockingbird, except it's a Bird in addition to its other types and it has flying.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Mariah Tekulve" />
@@ -5224,7 +5221,7 @@ If a card or token would be put into your graveyard from anywhere, exile it inst
       <property name="Subtype" value="Lizard Mercenary" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Whenever you attack with one or more Lizards, Hired Claw deals 1 damage to target opponent.
-<s value="1">{1}</s><s value="R">{R}</s>: Put a +1/+1 counter on Hired Claw. Activate this ability only if an opponent has lost life this turn and only once each turn.</property>
+<s value="1">{1}</s><s value="R">{R}</s>: Put a +1/+1 counter on Hired Claw. Activate only if an opponent lost life this turn and only once each turn.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Ellie Livingston" />
@@ -6433,7 +6430,7 @@ When this creature enters, look at the top four cards of your library. You may r
       <property name="Subtype" value="Angel Soldier" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever another creature with power 2 or less enters the battlefield under your control, put two +1/+1 counters on that creature.</property>
+Whenever another creature you control with power 2 or less enters, put two +1/+1 counters on that creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Joshua Raphael" />
@@ -6452,7 +6449,7 @@ Whenever another creature with power 2 or less enters the battlefield under your
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant creature
-When Charmed Sleep enters the battlefield, tap enchanted creature.
+When Charmed Sleep enters, tap enchanted creature.
 Enchanted creature doesn't untap during its controller's untap step.</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="388" />
@@ -6516,7 +6513,7 @@ Enchanted creature doesn't untap during its controller's untap step.</property>
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Enchant creature
-When Colossification enters the battlefield, tap enchanted creature.
+When Colossification enters, tap enchanted creature.
 Enchanted creature gets +20/+20.</property>
       <property name="Artist" value="Johan Grenier" />
       <property name="Number" value="392" />
@@ -6569,8 +6566,8 @@ Equip <s value="3">{3}</s></property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Blossoming Sands enters the battlefield tapped.
-When Blossoming Sands enters the battlefield, you gain 1 life.
+      <property name="Rules">Blossoming Sands enters tapped.
+When Blossoming Sands enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="396" />
@@ -6582,8 +6579,8 @@ When Blossoming Sands enters the battlefield, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Swiftwater Cliffs enters the battlefield tapped.
-When Swiftwater Cliffs enters the battlefield, you gain 1 life.
+      <property name="Rules">Swiftwater Cliffs enters tapped.
+When Swiftwater Cliffs enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="397" />

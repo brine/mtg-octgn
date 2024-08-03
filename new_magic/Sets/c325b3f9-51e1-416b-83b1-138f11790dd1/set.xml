@@ -125,7 +125,7 @@ Search your library for a creature card with mana value X or less, where X is 2 
       <property name="Subtype" value="Elder Dragon" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Flying, deathtouch
-When Dragonlord Silumgar enters the battlefield, gain control of target creature or planeswalker for as long as you control Dragonlord Silumgar.</property>
+When Dragonlord Silumgar enters, gain control of target creature or planeswalker for as long as you control Dragonlord Silumgar.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="WolfSkullJack" />
@@ -199,8 +199,8 @@ Draw a card.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Valakut, the Molten Pinnacle enters the battlefield tapped.
-Whenever a Mountain enters the battlefield under your control, if you control at least five other Mountains, you may have Valakut, the Molten Pinnacle deal 3 damage to any target.
+      <property name="Rules">Valakut, the Molten Pinnacle enters tapped.
+Whenever a Mountain you control enters, if you control at least five other Mountains, you may have Valakut, the Molten Pinnacle deal 3 damage to any target.
 <s value="T">{T}</s>: Add <s value="R">{R}</s>.</property>
       <property name="Artist" value="Graham Yarrington" />
       <property name="Number" value="014" />
@@ -248,7 +248,7 @@ Whenever a Mountain enters the battlefield under your control, if you control at
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Delve (Each card you exile from your graveyard while casting this spell pays for <s value="1">{1}</s>.)
 Flying
-Murktide Regent enters the battlefield with a +1/+1 counter on it for each instant and sorcery card exiled with it.
+Murktide Regent enters with a +1/+1 counter on it for each instant and sorcery card exiled with it.
 Whenever an instant or sorcery card leaves your graveyard, put a +1/+1 counter on Murktide Regent.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -292,6 +292,18 @@ Draw a card.</property>
       <property name="Artist" value="Heiko Mueller" />
       <property name="Number" value="020" />
     </card>
+    <card name="Lightning Bolt" id="074d2360-3ded-412d-90b5-2b8ab209fe47">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Lightning Bolt deals 3 damage to any target.</property>
+      <property name="Artist" value="Toru Terada" />
+      <property name="Number" value="021" />
+    </card>
     <card name="Springleaf Drum" id="193ece2d-f7fa-4e9c-a991-6f8116f63673">
       <property name="Cost">
         <s value="1">{1}</s>
@@ -332,7 +344,7 @@ Whenever Goblin Guide attacks, defending player reveals the top card of their li
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Shaman" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">When Seasoned Pyromancer enters the battlefield, discard two cards, then draw two cards. For each nonland card discarded this way, create a 1/1 red Elemental creature token.
+      <property name="Rules">When Seasoned Pyromancer enters, discard two cards, then draw two cards. For each nonland card discarded this way, create a 1/1 red Elemental creature token.
 <s value="3">{3}</s><s value="R">{R}</s><s value="R">{R}</s>, Exile Seasoned Pyromancer from your graveyard: Create two 1/1 red Elemental creature tokens.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
