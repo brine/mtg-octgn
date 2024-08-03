@@ -509,5 +509,11 @@ changelog = {
         ]),
     3060318: ("3.6.3.18", "July 22 2024", [
         "Added Bloomburrow"
+        ]),
+    3060319: ("3.6.3.19", "August 3 2024", [
+        "Fixed bugs when a card is attached to a card controlled by an opponent",
+        "fixed Bloomburrow packs having duplicate GUIDs",
+        "updated oracle text with new card text templating",
+        "fixed image downloader being unable to locate online images"
         ])
 }

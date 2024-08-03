@@ -69,7 +69,8 @@ namespace MTGImageFetcher
         {
             this.InitializeComponent();
             this.DataContext = this;
-
+            Client = new HttpClient(new HttpClientHandler() { AllowAutoRedirect = false });
+            Client.DefaultRequestHeaders.Add("User-Agent", "OCTGN MTG image downloader plugin");
             setList = new List<SetItem>();
             SetList.ItemsSource = setList;
 
@@ -414,7 +415,7 @@ namespace MTGImageFetcher
             }
         }
 
-        private static HttpClient Client = new HttpClient(new HttpClientHandler() { AllowAutoRedirect = false });
+        private static HttpClient Client;
 
         public static string[] FindLocalCardImages(Set set, Card card, string alt)
         {
