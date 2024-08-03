@@ -549,7 +549,7 @@ def autoclone(card, stackData, tag):
     else:
         return ", cloned {} times".format(qty)
 
-def autoattach(card, targetcard):
+def autoattach(attachment, targetcard):
     mute()
     if isStack(targetcard):
         whisper("WARNING: Cannot attach to cards on the stack.")
@@ -558,18 +558,21 @@ def autoattach(card, targetcard):
     if targetcard._id in cattach:  ## Catch cases where you try to attach to another attachment
         whisper("WARNING: Cannot attach to other attachments.")
         return ""
-    if card._id in dict([(v, k) for k, v in cattach.iteritems()]):  ## Catch cases where the attachment has its own attachments
-        whisper("WARNING: Cannot attach cards with attachments to other cards. Detach all cards from {} first.".format(card))
+    if attachment._id in dict([(v, k) for k, v in cattach.iteritems()]):  ## Catch cases where the attachment has its own attachments
+        whisper("WARNING: Cannot attach cards with attachments to other cards. Detach all cards from {} first.".format(attachment))
         return ""
-    if targetcard._id in cattach and cattach[targetcard._id] == card._id:  ## This may be unnecessary code
+    if targetcard._id in cattach and cattach[targetcard._id] == attachment._id:  ## This may be unnecessary code
         del cattach[targetcard._id]
-    cattach[card._id] = targetcard._id
+    cattach[attachment._id] = targetcard._id
     targetcard.target(False)
     setGlobalVariable('cattach', str(cattach))
+    attachments = [Card(k) for k, v in cattach.items() if v == targetcard._id]
     if targetcard.controller != me:  ## Pass control of the attachment to the player who controls the target card.
-        card.controller = targetcard.controller
-        remoteCall(targetcard.controller, 'alignAttachments', [targetcard])
-    return "attaches {} to {}".format(card, targetcard)
+        attachment.controller = targetcard.controller
+        remoteCall(targetcard.controller, 'alignAttachments', [targetcard, attachments])
+    else:
+        alignAttachments(targetcard, attachments)
+    return "attaches {} to {}".format(attachment, targetcard)
 
 def autodetach(card):
     mute()
@@ -815,6 +818,7 @@ def attach(card, x = 0, y = 0):
         target = [cards for cards in table if cards.targetedBy]
         if len(target) == 0 or (len(target) == 1 and card in target):
             text = autodetach(card)
+            cardalign()
         elif len(target) == 1:
             text = autoattach(card, target[0])
         else:
@@ -823,7 +827,6 @@ def attach(card, x = 0, y = 0):
         if text == "":
             return
         notify("{} {}.".format(me, text))
-        cardalign()
     else:
         whisper("Autoscripts must be enabled to use this feature")
 
