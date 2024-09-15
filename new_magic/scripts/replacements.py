@@ -97,6 +97,9 @@ counters = {
     'brick': ('Brick counter', 'brick'), ###
     'exert': ('Exert Indicator', 'exert'), ###
     'manifest': ('Manifest Indicator', 'manifest'), ###
+    'foretell': ('Foretell Indicator', 'foretell'), ###
+    'disguise': ('Disguise Indicator', 'disguise'), ###
+    'plot': ('Plot Indicator', 'plot'), ###
     'adventure': ('Adventure Indicator', 'adventure')
 
 }

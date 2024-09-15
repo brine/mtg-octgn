@@ -515,5 +515,11 @@ changelog = {
         "fixed Bloomburrow packs having duplicate GUIDs",
         "updated oracle text with new card text templating",
         "fixed image downloader being unable to locate online images"
+        ]),
+    3060320: ("3.6.3.20", "September 15 2024", [
+        "Added DSK",
+        "Fixed MH3 play boosters",
+        "Added markers for plot, disguise, and foretell states",
+        "Added a card action submenu 'cast face-down...' in all piles, which groups together the morph, manifest, disguise, plot, and foretell actions"
         ])
 }
