@@ -759,7 +759,7 @@ def manifest(card, x = 0, y = 0):
         else:
             notify("{} manifests the card {} from the top of their {}.".format(me, card.index, card.group.name))
     else:
-        notify("{} manifests {} from their {}.".format(me, card, card.group.name)
+        notify("{} manifests {} from their {}.".format(me, card, card.group.name))
     card.moveToTable(defaultX, defaultY, True)
     card.markers[counters['manifest']] = 1
     card.peek()
@@ -773,7 +773,7 @@ def plot(card, x = 0, y = 0):
         else:
             notify("{} plots the card {} from the top of their {}.".format(me, card.index, card.group.name))
     else:
-        notify("{} plots {} from their {}.".format(me, card, card.group.name)
+        notify("{} plots {} from their {}.".format(me, card, card.group.name))
     card.moveToTable(defaultX, defaultY, True)
     card.markers[counters['plot']] = 1
     card.peek()
@@ -787,7 +787,7 @@ def disguise(card, x = 0, y = 0):
         else:
             notify("{} cloaks the card {} from the top of their {}.".format(me, card.index, card.group.name))
     else:
-        notify("{} cloaks {} from their {}.".format(me, card, card.group.name)
+        notify("{} cloaks {} from their {}.".format(me, card, card.group.name))
     card.moveToTable(defaultX, defaultY, True)
     card.markers[counters['disguise']] = 1
     card.peek()
@@ -801,7 +801,7 @@ def foretell(card, x = 0, y = 0):
         else:
             notify("{} foretells the card {} from the top of their {}.".format(me, card.index, card.group.name))
     else:
-        notify("{} foretells {} from their {}.".format(me, card, card.group.name)
+        notify("{} foretells {} from their {}.".format(me, card, card.group.name))
     card.moveToTable(defaultX, defaultY, True)
     card.markers[counters['foretell']] = 1
     card.peek()
