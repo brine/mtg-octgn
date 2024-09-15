@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.3.19" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
+    id="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" version="3.6.3.20" octgnVersion="3.1.0.32" scriptVersion="3.1.0.2"
     name="Magic the Gathering" tags="mtg" description="Magic: the Gathering plugin for OCTGN.&#xD;&#xD;Card images can be installed via the image downloader plugin in the OCTGN Deck Editor."
     setsurl="https://github.com/brine/mtg-octgn" gameurl="http://brine.github.io/mtg-octgn/" authors="brine"
     markersize="12" iconurl="https://raw.githubusercontent.com/brine/mtg-octgn/master/new_magic/art/logo.jpg" >
@@ -77,6 +77,9 @@
     <marker src="Markers/exerted.png" id="exert" name="exerted indicator" />
     <marker src="Markers/morph.png" id="morph" name="morph indicator" />
     <marker src="Markers/manifest.png" id="manifest" name="manifest indicator" />
+    <marker src="Markers/foretell.png" id="foretell" name="foretell indicator" />
+    <marker src="Markers/plot.png" id="plot" name="plot indicator" />
+    <marker src="Markers/disguise.png" id="disguise" name="disguise indicator" />
     <marker src="Markers/suspend.png" id="suspend" name="suspended indicator" />
 
     <marker src="Markers/commander.png" id="commander" name="Commander Not-In-Play indicator" />
@@ -239,7 +242,7 @@
     <cardaction menu="Attach to Targeted Card" shortcut="ctrl+Q" execute="attach" />
     <cardaction menu="Morph/Transform/Flip Card" shortcut="ctrl+F" execute="transform" />
     <cardaction menu="Turn Face-Up/Down" shortcut="ctrl+shift+F" execute="flip" />
-    <cardaction menu="Manifest Card" execute="manifest" />
+    <cardaction menu="Manifest Card" execute="manifestfrombattlefield" />
     <cardaction menu="Clone Card" shortcut="ctrl+C" batchExecute="clone" />
     <cardaction menu="Destroy Card" shortcut="del" batchExecute="batchDestroy" />
     <cardaction menu="Exile Card" shortcut="ctrl+E" batchExecute="batchExile" />
@@ -285,7 +288,13 @@
     <globalvariable name="secrets" value=""/>
     <group viewState="expanded" name="Hand" shortcut="ctrl+H" visibility="me" icon="groups/hand.png">
       <cardaction menu="Cast Spell" default="True" shortcut="ctrl+c" execute="play" />
-      <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
+	  <cardactions menu="Cast Face-Down...">
+		  <cardaction menu="With Morph" shortcut="ctrl+shift+F" execute="morph" />
+		  <cardaction menu="With Manifest" execute="manifest" />
+		  <cardaction menu="With Plot" execute="plot" />
+		  <cardaction menu="With Disguise" execute="disguise" />
+		  <cardaction menu="With Foretell" execute="foretell" />
+	  </cardactions>
       <cardaction menu="Suspend Card" execute="suspend" />
       <cardaction menu="Discard Card" shortcut="del" execute="discard" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
@@ -317,8 +326,13 @@
         <groupaction menu="Owner's Sideboard" execute="sideboardAll" />
       </groupactions>
       <cardaction menu="Cast Card" shortcut="ctrl+C" execute="play" />
-      <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+F" execute="morph" />
-      <cardaction menu="Manifest Card" execute="manifest" />
+	  <cardactions menu="Cast Face-Down...">
+		  <cardaction menu="With Morph" shortcut="ctrl+shift+F" execute="morph" />
+		  <cardaction menu="With Manifest" execute="manifest" />
+		  <cardaction menu="With Plot" execute="plot" />
+		  <cardaction menu="With Disguise" execute="disguise" />
+		  <cardaction menu="With Foretell" execute="foretell" />
+	  </cardactions>
       <cardaction menu="Discard Card" shortcut="del" execute="discard" />
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Move Card to Hand" default="True" shortcut="ctrl+H" execute="tohand" />
@@ -341,9 +355,14 @@
       <cardaction menu="Exile Card" shortcut="ctrl+E" execute="exile" />
       <cardaction menu="Cast Card" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Cast Card (Flashback)" shortcut="ctrl+F" execute="flashback" />
-      <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+shift+F" execute="morph" />
+	  <cardactions menu="Cast Face-Down...">
+		  <cardaction menu="With Morph" shortcut="ctrl+shift+F" execute="morph" />
+		  <cardaction menu="With Manifest" execute="manifest" />
+		  <cardaction menu="With Plot" execute="plot" />
+		  <cardaction menu="With Disguise" execute="disguise" />
+		  <cardaction menu="With Foretell" execute="foretell" />
+	  </cardactions>
       <cardaction menu="Use Activated Ability" shortcut="ctrl+Z" execute="activate" />
-      <cardaction menu="Manifest Card" execute="manifest" />
       <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" />
       <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
       <cardaction menu="Submit Tags" execute="submitTags" />
@@ -363,8 +382,13 @@
       <cardaction menu="Cast Card" default="True" shortcut="ctrl+c" execute="play" />
       <cardaction menu="Move Card to Hand" shortcut="ctrl+H" execute="tohand" />
       <cardaction menu="Discard Card" shortcut="del" execute="discard" />
-      <cardaction menu="Cast Face-Down (Morph)" shortcut="ctrl+f" execute="morph" />
-      <cardaction menu="Manifest Card" execute="manifest" />
+	  <cardactions menu="Cast Face-Down...">
+		  <cardaction menu="With Morph" shortcut="ctrl+shift+F" execute="morph" />
+		  <cardaction menu="With Manifest" execute="manifest" />
+		  <cardaction menu="With Plot" execute="plot" />
+		  <cardaction menu="With Disguise" execute="disguise" />
+		  <cardaction menu="With Foretell" execute="foretell" />
+	  </cardactions>
       <cardaction menu="Move Card to Library" shortcut="ctrl+Y" execute="tolibrary" />
       <cardaction menu="Move to X Position in Library" shortcut="ctrl+shift+Y" execute="tolibraryposition" />
     </group>

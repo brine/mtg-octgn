@@ -736,7 +736,7 @@ def morph(card, x = 0, y = 0):
         card.peek()
     cardalign()
 
-def manifest(card, x = 0, y = 0):
+def manifestfrombattlefield(card, x = 0, y = 0):
     mute()
     if card.group == table:
         notify("{} manifests {} from the battlefield.".format(me, card))
@@ -748,6 +748,62 @@ def manifest(card, x = 0, y = 0):
             notify("{} manifests the card {} from the top of their {}.".format(me, card.index, card.group.name))
     card.moveToTable(defaultX, defaultY, True)
     card.markers[counters['manifest']] = 1
+    card.peek()
+    cardalign()
+
+def manifest(card, x = 0, y = 0):
+    mute()
+    if card.group == me.Library:
+        if card.index == 0:
+            notify("{} manifests the top card of their {}.".format(me, card.group.name))
+        else:
+            notify("{} manifests the card {} from the top of their {}.".format(me, card.index, card.group.name))
+    else:
+        notify("{} manifests {} from their {}.".format(me, card, card.group.name)
+    card.moveToTable(defaultX, defaultY, True)
+    card.markers[counters['manifest']] = 1
+    card.peek()
+    cardalign()
+
+def plot(card, x = 0, y = 0):
+    mute()
+    if card.group == me.Library:
+        if card.index == 0:
+            notify("{} plots the top card of their {}.".format(me, card.group.name))
+        else:
+            notify("{} plots the card {} from the top of their {}.".format(me, card.index, card.group.name))
+    else:
+        notify("{} plots {} from their {}.".format(me, card, card.group.name)
+    card.moveToTable(defaultX, defaultY, True)
+    card.markers[counters['plot']] = 1
+    card.peek()
+    cardalign()
+    
+def disguise(card, x = 0, y = 0):
+    mute()
+    if card.group == me.Library:
+        if card.index == 0:
+            notify("{} cloaks the top card of their {}.".format(me, card.group.name))
+        else:
+            notify("{} cloaks the card {} from the top of their {}.".format(me, card.index, card.group.name))
+    else:
+        notify("{} cloaks {} from their {}.".format(me, card, card.group.name)
+    card.moveToTable(defaultX, defaultY, True)
+    card.markers[counters['disguise']] = 1
+    card.peek()
+    cardalign()
+
+def foretell(card, x = 0, y = 0):
+    mute()
+    if card.group == me.Library:
+        if card.index == 0:
+            notify("{} foretells the top card of their {}.".format(me, card.group.name))
+        else:
+            notify("{} foretells the card {} from the top of their {}.".format(me, card.index, card.group.name))
+    else:
+        notify("{} foretells {} from their {}.".format(me, card, card.group.name)
+    card.moveToTable(defaultX, defaultY, True)
+    card.markers[counters['foretell']] = 1
     card.peek()
     cardalign()
 
