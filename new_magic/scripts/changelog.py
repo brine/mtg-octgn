@@ -521,5 +521,8 @@ changelog = {
         "Fixed MH3 play boosters",
         "Added markers for plot, disguise, and foretell states",
         "Added a card action submenu 'cast face-down...' in all piles, which groups together the morph, manifest, disguise, plot, and foretell actions"
+        ]),
+    3060321: ("3.6.3.21", "November 1 2024", [
+        "Added Foundations set"
         ])
 }
