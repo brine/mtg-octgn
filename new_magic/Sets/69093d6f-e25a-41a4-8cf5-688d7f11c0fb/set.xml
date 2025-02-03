@@ -1218,7 +1218,7 @@ At the beginning of your upkeep, sacrifice a creature.</property>
       <property name="Subtype" value="Human Assassin" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Deathtouch
-Heroic — Whenever you cast a spell that targets Agent of the Fates, each opponent sacrifices a creature.</property>
+Heroic — Whenever you cast a spell that targets Agent of the Fates, each opponent sacrifices a creature of their choice.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Matt Stewart" />
@@ -1766,7 +1766,7 @@ Enchanted creature gets -1/-1, and its activated abilities can't be activated.</
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Heroic — Whenever you cast a spell that targets Akroan Crusader, create a 1/1 red Soldier creature token with haste.</property>
+      <property name="Rules">Heroic — Whenever you cast a spell that targets Akroan Crusader, create a 1/1 red Soldier creature token with haste. (It can attack and <s value="T">{T}</s> as soon as it comes under your control.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Johann Bodin" />
@@ -1840,7 +1840,7 @@ Enchanted creature gets -1/-1, and its activated abilities can't be activated.</
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Up to two target creatures each get +1/+0 and gain first strike until end of turn.</property>
+      <property name="Rules">Up to two target creatures each get +1/+0 and gain first strike until end of turn. (They deal combat damage before creatures without first strike.)</property>
       <property name="Artist" value="John Severin Brassell" />
       <property name="Number" value="116" />
     </card>
@@ -1904,7 +1904,7 @@ Enchanted creature has "<s value="R">{R}</s>: This creature gets +1/+0 until end
         <s value="5">{5}</s>
         <s value="R">{R}</s>
         <s value="R">{R}</s>: Monstrosity 3. (If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)
-When Ember Swallower becomes monstrous, each player sacrifices three lands.</property>
+When Ember Swallower becomes monstrous, each player sacrifices three lands of their choice.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Slawomir Maniak" />
@@ -2712,8 +2712,8 @@ Enchanted land is every basic land type in addition to its other types.</propert
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Enchant creature
-Whenever enchanted creature attacks, put a +1/+1 counter on it. Then if it has three or more +1/+1 counters on it, sacrifice Ordeal of Nylea.
-When you sacrifice Ordeal of Nylea, search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.</property>
+Whenever enchanted creature attacks, put a +1/+1 counter on it. Then if it has three or more +1/+1 counters on it, sacrifice this Aura.
+When you sacrifice this Aura, search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="David Palumbo" />
       <property name="Number" value="170" />
     </card>
@@ -3437,7 +3437,7 @@ First strike (This creature deals combat damage before creatures without first s
       <property name="Subtype" value="Elk" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="3">{3}</s>, Sacrifice Burnished Hart: Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.</property>
+        <s value="3">{3}</s>, Sacrifice this creature: Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Yeong-Hao Han" />
@@ -3590,8 +3590,8 @@ Equip <s value="1">{1}</s></property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Abandon enters tapped.
-When Temple of Abandon enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Mike Bierek" />
       <property name="Number" value="224" />
@@ -3602,8 +3602,8 @@ When Temple of Abandon enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Deceit enters tapped.
-When Temple of Deceit enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Raymond Swanland" />
       <property name="Number" value="225" />
@@ -3614,8 +3614,8 @@ When Temple of Deceit enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Mystery enters tapped.
-When Temple of Mystery enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="226" />
@@ -3626,8 +3626,8 @@ When Temple of Mystery enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Silence enters tapped.
-When Temple of Silence enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Karl Kopinski" />
       <property name="Number" value="227" />
@@ -3638,8 +3638,8 @@ When Temple of Silence enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Triumph enters tapped.
-When Temple of Triumph enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Jason Felix" />
       <property name="Number" value="228" />

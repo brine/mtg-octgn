@@ -912,7 +912,7 @@ III — Put two +1/+1 counters on each creature you control that's a Zombie or M
       <property name="Subtype" value="Human Mercenary" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Squad <s value="2">{2}</s> (As an additional cost to cast this spell, you may pay <s value="2">{2}</s> any number of times. When this creature enters, create that many tokens that are copies of it.)
-When Wasteland Raider enters, each player sacrifices a creature.</property>
+When Wasteland Raider enters, each player sacrifices a creature of their choice.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Yigit Koroglu" />
@@ -1848,7 +1848,7 @@ Sacrifice five Treasures: Gain control of target creature for as long as you con
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Decimate — When Legate Lanius enters, each opponent sacrifices a tenth of the creatures they control, rounded up.
+      <property name="Rules">Decimate — When Legate Lanius enters, each opponent sacrifices a tenth of the creatures they control of their choice, rounded up.
 Whenever an opponent sacrifices a creature, put a +1/+1 counter on Legate Lanius.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -2671,7 +2671,7 @@ Metalcraft — If you control three or more artifacts, exile that creature.</pro
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target player sacrifices an attacking creature. You create X 1/1 white Soldier creature tokens, where X is that creature's toughness.</property>
+      <property name="Rules">Target player sacrifices an attacking creature of their choice. You create X 1/1 white Soldier creature tokens, where X is that creature's toughness.</property>
       <property name="Artist" value="Nicholas Gregory" />
       <property name="Number" value="160" />
     </card>
@@ -3697,8 +3697,8 @@ If you would get one or more counters, you get that many plus one of each of tho
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Equipped creature has deathtouch and lifelink.
-Equip <s value="2">{2}</s></property>
+      <property name="Rules">Equipped creature has deathtouch and lifelink. (Any amount of damage it deals to a creature is enough to destroy it. Damage dealt by this creature also causes you to gain that much life.)
+Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Artur Treffner" />
       <property name="Number" value="225" />
     </card>
@@ -3906,8 +3906,8 @@ Equip <s value="1">{1}</s></property>
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Solemn Simulacrum enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
-When Solemn Simulacrum dies, you may draw a card.</property>
+      <property name="Rules">When this creature enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
+When this creature dies, you may draw a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Kamila Szutenberg" />
@@ -3938,8 +3938,8 @@ When Solemn Simulacrum dies, you may draw a card.</property>
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control.)
-Equip <s value="1">{1}</s></property>
+      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and <s value="T">{T}</s> no matter when it came under your control.)
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Zezhou Chen" />
       <property name="Number" value="242" />
     </card>
@@ -4203,7 +4203,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Anthony Devine" />
       <property name="Number" value="263" />
       <property name="Flags" value="C" />
@@ -4658,8 +4658,8 @@ Sunken Hollow enters tapped unless you control two or more basic lands.</propert
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Abandon enters tapped.
-When Temple of Abandon enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Arthur Yuan" />
       <property name="Number" value="302" />
@@ -4670,8 +4670,8 @@ When Temple of Abandon enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Deceit enters tapped.
-When Temple of Deceit enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Pascal Quidault" />
       <property name="Number" value="303" />
@@ -4682,8 +4682,8 @@ When Temple of Deceit enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Enlightenment enters tapped.
-When Temple of Enlightenment enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Arthur Yuan" />
       <property name="Number" value="304" />
@@ -4694,8 +4694,8 @@ When Temple of Enlightenment enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Epiphany enters tapped.
-When Temple of Epiphany enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Eddie Mendoza" />
       <property name="Number" value="305" />
@@ -4706,8 +4706,8 @@ When Temple of Epiphany enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Malady enters tapped.
-When Temple of Malady enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Alexander Forssberg" />
       <property name="Number" value="306" />
@@ -4718,8 +4718,8 @@ When Temple of Malady enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Malice enters tapped.
-When Temple of Malice enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Arthur Yuan" />
       <property name="Number" value="307" />
@@ -4730,8 +4730,8 @@ When Temple of Malice enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Mystery enters tapped.
-When Temple of Mystery enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Alexander Forssberg" />
       <property name="Number" value="308" />
@@ -4742,8 +4742,8 @@ When Temple of Mystery enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Plenty enters tapped.
-When Temple of Plenty enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Jeremy Paillotin" />
       <property name="Number" value="309" />
@@ -4754,8 +4754,8 @@ When Temple of Plenty enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Silence enters tapped.
-When Temple of Silence enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Nino Is" />
       <property name="Number" value="310" />
@@ -4777,8 +4777,8 @@ When Temple of Silence enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Triumph enters tapped.
-When Temple of Triumph enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Josu Hernaiz" />
       <property name="Number" value="312" />
@@ -5900,7 +5900,7 @@ Undying (When this creature dies, if it had no +1/+1 counters on it, return it t
       <property name="Subtype" value="Human Mercenary" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Squad <s value="2">{2}</s> (As an additional cost to cast this spell, you may pay <s value="2">{2}</s> any number of times. When this creature enters, create that many tokens that are copies of it.)
-When Wasteland Raider enters, each player sacrifices a creature.</property>
+When Wasteland Raider enters, each player sacrifices a creature of their choice.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Yigit Koroglu" />
@@ -6989,7 +6989,7 @@ When Captain of the Watch enters, create three 1/1 white Soldier creature tokens
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target player sacrifices an attacking creature. You create X 1/1 white Soldier creature tokens, where X is that creature's toughness.</property>
+      <property name="Rules">Target player sacrifices an attacking creature of their choice. You create X 1/1 white Soldier creature tokens, where X is that creature's toughness.</property>
       <property name="Artist" value="Nicholas Gregory" />
       <property name="Number" value="449" />
     </card>
@@ -7446,8 +7446,8 @@ Whenever you sacrifice a Clue, put a +1/+1 counter on Tireless Tracker.</propert
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Equipped creature has deathtouch and lifelink.
-Equip <s value="2">{2}</s></property>
+      <property name="Rules">Equipped creature has deathtouch and lifelink. (Any amount of damage it deals to a creature is enough to destroy it. Damage dealt by this creature also causes you to gain that much life.)
+Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Artur Treffner" />
       <property name="Number" value="480" />
     </card>
@@ -7529,8 +7529,8 @@ You may cast artifact spells and colorless spells from the top of your library.
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Solemn Simulacrum enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
-When Solemn Simulacrum dies, you may draw a card.</property>
+      <property name="Rules">When this creature enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
+When this creature dies, you may draw a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Kamila Szutenberg" />
@@ -7884,8 +7884,8 @@ Sunken Hollow enters tapped unless you control two or more basic lands.</propert
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Abandon enters tapped.
-When Temple of Abandon enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Arthur Yuan" />
       <property name="Number" value="516" />
@@ -7896,8 +7896,8 @@ When Temple of Abandon enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Deceit enters tapped.
-When Temple of Deceit enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Pascal Quidault" />
       <property name="Number" value="517" />
@@ -7908,8 +7908,8 @@ When Temple of Deceit enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Enlightenment enters tapped.
-When Temple of Enlightenment enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Arthur Yuan" />
       <property name="Number" value="518" />
@@ -7920,8 +7920,8 @@ When Temple of Enlightenment enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Epiphany enters tapped.
-When Temple of Epiphany enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Eddie Mendoza" />
       <property name="Number" value="519" />
@@ -7932,8 +7932,8 @@ When Temple of Epiphany enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Malady enters tapped.
-When Temple of Malady enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Alexander Forssberg" />
       <property name="Number" value="520" />
@@ -7944,8 +7944,8 @@ When Temple of Malady enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Malice enters tapped.
-When Temple of Malice enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Arthur Yuan" />
       <property name="Number" value="521" />
@@ -7956,8 +7956,8 @@ When Temple of Malice enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Mystery enters tapped.
-When Temple of Mystery enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Alexander Forssberg" />
       <property name="Number" value="522" />
@@ -7968,8 +7968,8 @@ When Temple of Mystery enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Plenty enters tapped.
-When Temple of Plenty enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Jeremy Paillotin" />
       <property name="Number" value="523" />
@@ -7980,8 +7980,8 @@ When Temple of Plenty enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Silence enters tapped.
-When Temple of Silence enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Nino Is" />
       <property name="Number" value="524" />
@@ -7992,8 +7992,8 @@ When Temple of Silence enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Triumph enters tapped.
-When Temple of Triumph enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Josu Hernaiz" />
       <property name="Number" value="525" />

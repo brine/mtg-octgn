@@ -1252,7 +1252,7 @@ Cycling <s value="3">{3}</s> (<s value="3">{3}</s>, Discard this card: Draw a ca
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-When Angel of Finality enters, exile target player's graveyard.</property>
+When this creature enters, exile target player's graveyard.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Howard Lyon" />
@@ -1283,7 +1283,7 @@ Cycling <s value="2">{2}</s><s value="W">{W}</s> (<s value="2">{2}</s><s value="
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Cleric" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Banisher Priest enters, exile target creature an opponent controls until Banisher Priest leaves the battlefield. (That creature returns under its owner's control.)</property>
+      <property name="Rules">When Banisher Priest enters, exile target creature an opponent controls until Banisher Priest leaves the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Willian Murai" />
@@ -2311,7 +2311,9 @@ Flashback <s value="3">{3}</s><s value="W">{W}</s> (You may cast this card from 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying, deathtouch, lifelink</property>
+      <property name="Rules">Flying
+Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
+Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Jason Chan" />
@@ -2490,7 +2492,7 @@ When Dualcaster Mage enters, copy target instant or sorcery spell. You may choos
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elder Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Etali, Primal Storm attacks, exile the top card of each player's library, then you may cast any number of spells from among those cards without paying their mana costs.</property>
+      <property name="Rules">Whenever Etali attacks, exile the top card of each player's library, then you may cast any number of spells from among those cards without paying their mana costs.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Raymond Swanland" />
@@ -2525,7 +2527,7 @@ Creatures your opponents control attack each combat if able.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Menace
+      <property name="Rules">Menace (This creature can't be blocked except by two or more creatures.)
 When Goblin Dark-Dwellers enters, you may cast target instant or sorcery card with mana value 3 or less from your graveyard without paying its mana cost. If that spell would be put into your graveyard, exile it instead.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -2857,8 +2859,8 @@ Search your library for up to two basic land cards, put them onto the battlefiel
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Hydra" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Heroes' Bane enters with four +1/+1 counters on it.
-<s value="2">{2}</s><s value="G">{G}</s><s value="G">{G}</s>: Put X +1/+1 counters on Heroes' Bane, where X is its power.</property>
+      <property name="Rules">This creature enters with four +1/+1 counters on it.
+<s value="2">{2}</s><s value="G">{G}</s><s value="G">{G}</s>: Put X +1/+1 counters on this creature, where X is its power.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="0" />
       <property name="Artist" value="Raymond Swanland" />
@@ -3016,9 +3018,9 @@ Whenever you cast a creature spell, you may pay <s value="G">{G}</s><s value="G"
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Ooze" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Indestructible
-Whenever Predator Ooze attacks, put a +1/+1 counter on it.
-Whenever a creature dealt damage by Predator Ooze this turn dies, put a +1/+1 counter on Predator Ooze.</property>
+      <property name="Rules">Indestructible (Damage and effects that say "destroy" don't destroy this creature.)
+Whenever this creature attacks, put a +1/+1 counter on it.
+Whenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Ryan Yee" />
@@ -3034,7 +3036,7 @@ Whenever a creature dealt damage by Predator Ooze this turn dies, put a +1/+1 co
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Reclamation Sage enters, you may destroy target artifact or enchantment.</property>
+      <property name="Rules">When this creature enters, you may destroy target artifact or enchantment.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Christopher Moeller" />
@@ -3146,7 +3148,7 @@ Choose target creature, then choose another target creature for each time this s
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Each opponent sacrifices an artifact or enchantment.</property>
+      <property name="Rules">Each opponent sacrifices an artifact or enchantment of their choice.</property>
       <property name="Artist" value="Hideaki Takamura" />
       <property name="Number" value="193" />
     </card>
@@ -3823,7 +3825,7 @@ At the beginning of your upkeep, mill two cards. (Put the top two cards of your 
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-Whenever Trygon Predator deals combat damage to a player, you may destroy target artifact or enchantment that player controls.</property>
+Whenever this creature deals combat damage to a player, you may destroy target artifact or enchantment that player controls.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Jack Wang" />
@@ -4122,8 +4124,8 @@ Equip <s value="1">{1}</s></property>
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Solemn Simulacrum enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
-When Solemn Simulacrum dies, you may draw a card.</property>
+      <property name="Rules">When this creature enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
+When this creature dies, you may draw a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Donato Giancola" />
@@ -4138,8 +4140,8 @@ When Solemn Simulacrum dies, you may draw a card.</property>
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control.)
-Equip <s value="1">{1}</s></property>
+      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and <s value="T">{T}</s> no matter when it came under your control.)
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="254" />
     </card>

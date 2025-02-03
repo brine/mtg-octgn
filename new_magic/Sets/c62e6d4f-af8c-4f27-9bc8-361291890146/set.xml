@@ -43,7 +43,7 @@ At the beginning of your upkeep, you may exile target artifact or enchantment. I
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever you gain life, put a +1/+1 counter on Ajani's Pridemate.</property>
+      <property name="Rules">Whenever you gain life, put a +1/+1 counter on this creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Svetlin Velinov" />
@@ -60,7 +60,7 @@ At the beginning of your upkeep, you may exile target artifact or enchantment. I
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-When Angel of Finality enters, exile target player's graveyard.</property>
+When this creature enters, exile target player's graveyard.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Howard Lyon" />
@@ -706,8 +706,9 @@ LEVEL 4+
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Defender, flying
-Prevent all combat damage that would be dealt to and dealt by Fog Bank.</property>
+      <property name="Rules">Defender (This creature can't attack.)
+Flying
+Prevent all combat damage that would be dealt to and dealt by this creature.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Howard Lyon" />
@@ -1551,7 +1552,9 @@ All creatures get -X/-X until end of turn.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying, deathtouch, lifelink</property>
+      <property name="Rules">Flying
+Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
+Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Jason Chan" />
@@ -1784,7 +1787,7 @@ Whenever a creature dies, untap Goblin Sharpshooter.
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever you cast an instant or sorcery spell, Guttersnipe deals 2 damage to each opponent.</property>
+      <property name="Rules">Whenever you cast an instant or sorcery spell, this creature deals 2 damage to each opponent.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Steve Prescott" />
@@ -2181,7 +2184,7 @@ Landfall — Whenever a land you control enters, you may put a +1/+1 counter on 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Landfall — Whenever a land you control enters, Baloth Woodcrasher gets +4/+4 and gains trample until end of turn.</property>
+      <property name="Rules">Landfall — Whenever a land you control enters, Baloth Woodcrasher gets +4/+4 and gains trample until end of turn. (It can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Zoltan Boros &amp; Gabor Szikszai" />
@@ -2926,7 +2929,7 @@ Whenever Charnelhoard Wurm deals damage to an opponent, you may return target ca
       <property name="Color" value="Multicolor Blue Black Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target opponent sacrifices a creature, discards three cards, then loses 5 life. You return a creature card from your graveyard to your hand, draw three cards, then gain 5 life.</property>
+      <property name="Rules">Target opponent sacrifices a creature of their choice, discards three cards, then loses 5 life. You return a creature card from your graveyard to your hand, draw three cards, then gain 5 life.</property>
       <property name="Artist" value="Todd Lockwood" />
       <property name="Number" value="182" />
     </card>
@@ -3621,7 +3624,7 @@ Untap target creature you don't control and gain control of it. It gains haste u
       <property name="Subtype" value="Zombie Assassin" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Haste
-Whenever Thraximundar attacks, defending player sacrifices a creature.
+Whenever Thraximundar attacks, defending player sacrifices a creature of their choice.
 Whenever a player sacrifices a creature, you may put a +1/+1 counter on Thraximundar.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
@@ -4241,8 +4244,8 @@ At the beginning of each upkeep, you may remove a charge counter from Sun Drople
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control.)
-Equip <s value="1">{1}</s></property>
+      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and <s value="T">{T}</s> no matter when it came under your control.)
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="263" />
     </card>
@@ -4395,7 +4398,7 @@ When Azorius Chancery enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Azorius Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Drew Baker" />
       <property name="Number" value="275" />
@@ -4455,7 +4458,7 @@ When Boros Garrison enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Boros Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="280" />
@@ -4501,7 +4504,7 @@ When Boros Garrison enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Dimir Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="284" />
@@ -4537,7 +4540,7 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="287" />
       <property name="Flags" value="C" />
@@ -4572,7 +4575,7 @@ Cycling <s value="R">{R}</s> (<s value="R">{R}</s>, Discard this card: Draw a ca
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Golgari Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="290" />
@@ -4620,7 +4623,7 @@ When Golgari Rot Farm enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Gruul Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Randy Gallegos" />
       <property name="Number" value="294" />
@@ -4656,7 +4659,7 @@ When Izzet Boilerworks enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Izzet Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="297" />
@@ -4837,7 +4840,7 @@ When Orzhov Basilica enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Orzhov Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="312" />
@@ -4861,7 +4864,7 @@ When Rakdos Carnarium enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Rakdos Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="314" />
@@ -4944,7 +4947,7 @@ When Sejiri Refuge enters, you gain 1 life.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Selesnya Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="321" />
@@ -4968,7 +4971,7 @@ When Selesnya Sanctuary enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Simic Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="323" />

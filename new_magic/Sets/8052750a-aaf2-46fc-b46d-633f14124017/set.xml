@@ -1596,7 +1596,7 @@ Flashback <s value="3">{3}</s><s value="R">{R}</s><s value="R">{R}</s> (You may 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Warrior" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Double strike
+      <property name="Rules">Double strike (This creature deals both first-strike and regular combat damage.)
 Whenever Markov Blademaster deals combat damage to a player, put a +1/+1 counter on it.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
@@ -1613,7 +1613,7 @@ Whenever Markov Blademaster deals combat damage to a player, put a +1/+1 counter
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Haste
+      <property name="Rules">Haste (This creature can attack and <s value="T">{T}</s> as soon as it comes under your control.)
 When Markov Warlord enters, up to two target creatures can't block this turn.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -2056,9 +2056,9 @@ At the beginning of each upkeep, if a player cast two or more spells last turn, 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Ooze" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Indestructible
-Whenever Predator Ooze attacks, put a +1/+1 counter on it.
-Whenever a creature dealt damage by Predator Ooze this turn dies, put a +1/+1 counter on Predator Ooze.</property>
+      <property name="Rules">Indestructible (Damage and effects that say "destroy" don't destroy this creature.)
+Whenever this creature attacks, put a +1/+1 counter on it.
+Whenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Ryan Yee" />
@@ -2301,7 +2301,9 @@ Other Spirit creatures you control get +1/+1 and have hexproof. (They can't be t
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spirit" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Flying, double strike, lifelink
+      <property name="Rules">Flying
+Double strike (This creature deals both first-strike and regular combat damage.)
+Lifelink (Damage dealt by this creature also causes you to gain that much life.)
 Whenever you gain life, draw a card.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
@@ -2608,7 +2610,7 @@ Equip <s value="5">{5}</s></property>
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="155" />
       <property name="Flags" value="C" />

@@ -529,7 +529,8 @@ When Roc Egg dies, create a 3/3 white Bird creature token with flying.</property
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying, vigilance</property>
+      <property name="Rules">Flying
+Vigilance (Attacking doesn't cause this creature to tap.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Greg Staples" />
@@ -1334,7 +1335,7 @@ When enchanted permanent becomes tapped, destroy it.</property>
       <property name="Color" value="Black" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of each player's upkeep, that player sacrifices a non-Zombie creature.
+      <property name="Rules">At the beginning of each player's upkeep, that player sacrifices a non-Zombie creature of their choice.
 At the beginning of the end step, if no creatures are on the battlefield, sacrifice Call to the Grave.</property>
       <property name="Artist" value="Daarken" />
       <property name="Number" value="085" />
@@ -1624,7 +1625,7 @@ Whenever Grave Titan enters or attacks, create two 2/2 black Zombie creature tok
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="1">{1}</s>
-        <s value="B">{B}</s>: Return Reassembling Skeleton from your graveyard to the battlefield tapped.</property>
+        <s value="B">{B}</s>: Return this card from your graveyard to the battlefield tapped.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Austin Hsu" />
@@ -1660,7 +1661,7 @@ Whenever Grave Titan enters or attacks, create two 2/2 black Zombie creature tok
       <property name="Subtype" value="Demon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-When Rune-Scarred Demon enters, search your library for a card, put it into your hand, then shuffle.</property>
+When this creature enters, search your library for a card, put it into your hand, then shuffle.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Michael Komarck" />
@@ -1693,7 +1694,7 @@ Whenever a creature dealt damage by Sengir Vampire this turn dies, put a +1/+1 c
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Each player loses 1 life, discards a card, sacrifices a creature, then sacrifices a land.</property>
+      <property name="Rules">Each player loses 1 life, discards a card, sacrifices a creature of their choice, then sacrifices a land of their choice.</property>
       <property name="Artist" value="Ryan Pancoast" />
       <property name="Number" value="108" />
     </card>
@@ -2634,7 +2635,7 @@ Trample (This creature can deal excess combat damage to the player or planeswalk
       <property name="Subtype" value="Troll" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="G">{G}</s>: Regenerate Cudgel Troll. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)</property>
+        <s value="G">{G}</s>: Regenerate Cudgel Troll. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Jesper Ejsing" />
@@ -2906,7 +2907,7 @@ Islandwalk (This creature can't be blocked as long as defending player controls 
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Creatures you control get +3/+3 and gain trample until end of turn.</property>
+      <property name="Rules">Creatures you control get +3/+3 and gain trample until end of turn. (Each of those creatures can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Artist" value="Carl Critchlow" />
       <property name="Number" value="186" />
     </card>
@@ -3107,7 +3108,7 @@ When Stingerfling Spider enters, you may destroy target creature with flying.</p
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant creature
-Enchanted creature gets +2/+2 and has "<s value="1">{1}</s><s value="G">{G}</s>: Regenerate this creature." (The next time the creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)</property>
+Enchanted creature gets +2/+2 and has "<s value="1">{1}</s><s value="G">{G}</s>: Regenerate this creature." (The next time the creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="199" />
     </card>
@@ -3135,8 +3136,8 @@ Enchanted creature gets +2/+2 and has "<s value="1">{1}</s><s value="G">{G}</s>:
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Adaptive Automaton enters, choose a creature type.
-Adaptive Automaton is the chosen type in addition to its other types.
+      <property name="Rules">As this creature enters, choose a creature type.
+This creature is the chosen type in addition to its other types.
 Other creatures you control of the chosen type get +1/+1.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -3354,8 +3355,8 @@ Equip <s value="3">{3}</s> (<s value="3">{3}</s>: Attach to target creature you 
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Solemn Simulacrum enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
-When Solemn Simulacrum dies, you may draw a card.</property>
+      <property name="Rules">When this creature enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
+When this creature dies, you may draw a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Dan Murayama Scott" />
@@ -3383,8 +3384,8 @@ When Solemn Simulacrum dies, you may draw a card.</property>
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control.)
-Equip <s value="1">{1}</s></property>
+      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and <s value="T">{T}</s> no matter when it came under your control.)
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="219" />
     </card>

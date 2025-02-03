@@ -500,7 +500,7 @@ When Legion Angel enters, you may reveal a card you own named Legion Angel from 
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Maul of the Skyclaves enters, attach it to target creature you control.
-Equipped creature gets +2/+2 and has flying and first strike.
+Equipped creature gets +2/+2 and has flying and first strike.(It deals combat damage before creatures without first strike.)
 Equip <s value="2">{2}</s><s value="W">{W}</s><s value="W">{W}</s></property>
       <property name="Artist" value="Joseph Meehan" />
       <property name="Number" value="027" />
@@ -1683,7 +1683,7 @@ Destroy target creature or planeswalker.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Cleric" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Demon's Disciple enters, each player sacrifices a creature or planeswalker.</property>
+      <property name="Rules">When Demon's Disciple enters, each player sacrifices a creature or planeswalker of their choice.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Kieran Yanner" />
@@ -1749,7 +1749,7 @@ Whenever Drana, the Last Bloodchief attacks, defending player chooses a nonlegen
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Rogue" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Expedition Skulker has deathtouch as long as you control another Rogue.</property>
+      <property name="Rules">Expedition Skulker has deathtouch as long as you control another Rogue. (Any amount of damage it deals to a creature is enough to destroy it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Mathias Kollros" />
@@ -2034,9 +2034,10 @@ When Nimana Skydancer enters, target opponent mills two cards. (They put the top
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Cleric" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Kicker <s value="3">{3}</s><s value="B">{B}</s>
-Menace, lifelink
-When Nullpriest of Oblivion enters, if it was kicked, return target creature card from your graveyard to the battlefield.</property>
+      <property name="Rules">Kicker <s value="3">{3}</s><s value="B">{B}</s> (You may pay an additional <s value="3">{3}</s><s value="B">{B}</s> as you cast this spell.)
+Lifelink
+Menace (This creature can't be blocked except by two or more creatures.)
+When this creature enters, if it was kicked, return target creature card from your graveyard to the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Yongjae Choi" />
@@ -2873,7 +2874,7 @@ Landfall — Whenever a land you control enters, Skyclave Geopede gets +2/+2 unt
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Lizard" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Landfall — Whenever a land you control enters, Spitfire Lagac deals 1 damage to each opponent.</property>
+      <property name="Rules">Landfall — Whenever a land you control enters, this creature deals 1 damage to each opponent.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Antonio José Manzanedo" />
@@ -3046,9 +3047,9 @@ Whenever Wayward Guide-Beast deals combat damage to a player, return a land you 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Reach
+      <property name="Rules">Reach (This creature can block creatures with flying.)
 You may play lands from your graveyard.
-If a land entering causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.</property>
+If a land entering the battlefield causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="7" />
       <property name="Artist" value="Grzegorz Rutkowski" />
@@ -3170,8 +3171,8 @@ If Cragplate Baloth was kicked, it enters with four +1/+1 counters on it.</prope
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Kicker <s value="2">{2}</s><s value="G">{G}</s> (You may pay an additional <s value="2">{2}</s><s value="G">{G}</s> as you cast this spell.)
-If Gnarlid Colony was kicked, it enters with two +1/+1 counters on it.
-Each creature you control with a +1/+1 counter on it has trample.</property>
+If this creature was kicked, it enters with two +1/+1 counters on it.
+Each creature you control with a +1/+1 counter on it has trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Izzy" />
@@ -3280,7 +3281,7 @@ Choose one. If this spell was kicked, choose any number instead.
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Trample
+      <property name="Rules">Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
 When Kazandu Stomper enters, return up to two lands you control to their owner's hand.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="5" />
@@ -3484,7 +3485,7 @@ Draw a card.</property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When Skyclave Pick-Axe enters, attach it to target creature you control.
 Landfall — Whenever a land you control enters, equipped creature gets +2/+2 until end of turn.
-Equip <s value="2">{2}</s><s value="G">{G}</s></property>
+Equip <s value="2">{2}</s><s value="G">{G}</s> (<s value="2">{2}</s><s value="G">{G}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Dan Murayama Scott" />
       <property name="Number" value="204" />
     </card>
@@ -3637,7 +3638,7 @@ When Taunting Arbormage enters, if it was kicked, all creatures able to block ta
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Trample
+      <property name="Rules">Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
 Landfall — Whenever a land you control enters, put a +1/+1 counter on Territorial Scythecat.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
@@ -4254,7 +4255,7 @@ When Myriad Construct becomes the target of a spell, sacrifice it and create a n
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When Relic Axe enters, attach it to target creature you control.
 Equipped creature gets +1/+1. If it's a Warrior, it gets +2/+1 instead.
-Equip <s value="2">{2}</s></property>
+Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Cristi Balanescu" />
       <property name="Number" value="248" />
     </card>
@@ -4480,7 +4481,7 @@ Equip <s value="3">{3}</s> (<s value="3">{3}</s>: Attach to target creature you 
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="4">{4}</s>: Put two +1/+1 counters on Crawling Barrens. Then you may have it become a 0/0 Elemental creature until end of turn. It's still a land.</property>
+<s value="4">{4}</s>: Put two +1/+1 counters on this land. Then you may have it become a 0/0 Elemental creature until end of turn. It's still a land.</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="262" />
       <property name="Flags" value="C" />
@@ -5100,7 +5101,7 @@ Landfall — Whenever a land you control enters, Skyclave Geopede gets +2/+2 unt
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Lizard" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Landfall — Whenever a land you control enters, Spitfire Lagac deals 1 damage to each opponent.</property>
+      <property name="Rules">Landfall — Whenever a land you control enters, this creature deals 1 damage to each opponent.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Dominik Mayer" />
@@ -5229,7 +5230,7 @@ At the beginning of your end step, if there are cards exiled with Valakut Explor
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When Skyclave Pick-Axe enters, attach it to target creature you control.
 Landfall — Whenever a land you control enters, equipped creature gets +2/+2 until end of turn.
-Equip <s value="2">{2}</s><s value="G">{G}</s></property>
+Equip <s value="2">{2}</s><s value="G">{G}</s> (<s value="2">{2}</s><s value="G">{G}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Pascal Blanché" />
       <property name="Number" value="309" />
       <property name="Packaging" value="Special" />
@@ -5244,7 +5245,7 @@ Equip <s value="2">{2}</s><s value="G">{G}</s></property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Trample
+      <property name="Rules">Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
 Landfall — Whenever a land you control enters, put a +1/+1 counter on Territorial Scythecat.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
@@ -5437,7 +5438,7 @@ When Legion Angel enters, you may reveal a card you own named Legion Angel from 
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Maul of the Skyclaves enters, attach it to target creature you control.
-Equipped creature gets +2/+2 and has flying and first strike.
+Equipped creature gets +2/+2 and has flying and first strike.(It deals combat damage before creatures without first strike.)
 Equip <s value="2">{2}</s><s value="W">{W}</s><s value="W">{W}</s></property>
       <property name="Artist" value="Joseph Meehan" />
       <property name="Number" value="320" />
@@ -5861,9 +5862,10 @@ Nighthawk Scavenger's power is equal to 1 plus the number of card types among ca
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Cleric" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Kicker <s value="3">{3}</s><s value="B">{B}</s>
-Menace, lifelink
-When Nullpriest of Oblivion enters, if it was kicked, return target creature card from your graveyard to the battlefield.</property>
+      <property name="Rules">Kicker <s value="3">{3}</s><s value="B">{B}</s> (You may pay an additional <s value="3">{3}</s><s value="B">{B}</s> as you cast this spell.)
+Lifelink
+Menace (This creature can't be blocked except by two or more creatures.)
+When this creature enters, if it was kicked, return target creature card from your graveyard to the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Yongjae Choi" />
@@ -6139,9 +6141,9 @@ Whenever Wayward Guide-Beast deals combat damage to a player, return a land you 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Reach
+      <property name="Rules">Reach (This creature can block creatures with flying.)
 You may play lands from your graveyard.
-If a land entering causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.</property>
+If a land entering the battlefield causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="7" />
       <property name="Artist" value="Grzegorz Rutkowski" />
@@ -6532,7 +6534,7 @@ When Skyclave Relic enters, if it was kicked, create two tapped tokens that are 
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="4">{4}</s>: Put two +1/+1 counters on Crawling Barrens. Then you may have it become a 0/0 Elemental creature until end of turn. It's still a land.</property>
+<s value="4">{4}</s>: Put two +1/+1 counters on this land. Then you may have it become a 0/0 Elemental creature until end of turn. It's still a land.</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="378" />
       <property name="Flags" value="C" />

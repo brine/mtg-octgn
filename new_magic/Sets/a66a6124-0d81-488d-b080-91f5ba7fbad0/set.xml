@@ -607,7 +607,8 @@ At the beginning of your upkeep, you may return target creature card from your g
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Flying, vigilance</property>
+      <property name="Rules">Flying
+Vigilance (Attacking doesn't cause this creature to tap.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Greg Staples" />
@@ -625,7 +626,7 @@ At the beginning of your upkeep, you may return target creature card from your g
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Enchant creature
-Enchanted creature gets +2/+2 and has flying and vigilance.</property>
+Enchanted creature gets +2/+2 and has flying and vigilance. (Attacking doesn't cause it to tap.)</property>
       <property name="Artist" value="Zoltan Boros &amp; Gabor Szikszai" />
       <property name="Number" value="040" />
     </card>
@@ -1043,7 +1044,7 @@ Creatures can't attack you unless their controller pays <s value="2">{2}</s> for
       <property name="Rarity" value="Rare" />
       <property name="Rules">
         <s value="T">{T}</s>: Draw three cards.
-<s value="2">{2}</s><s value="U">{U}</s><s value="U">{U}</s>: Return Arcanis the Omnipotent to its owner's hand.</property>
+<s value="2">{2}</s><s value="U">{U}</s><s value="U">{U}</s>: Return Arcanis to its owner's hand.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Justin Sweet" />
@@ -1818,7 +1819,7 @@ Whenever Thieving Magpie deals damage to an opponent, draw a card.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">End the turn. (Exile all spells and abilities from the stack, including this card. The player whose turn it is discards down to their maximum hand size. Damage wears off, and "this turn" and "until end of turn" effects end.)</property>
+      <property name="Rules">End the turn. (Exile all spells and abilities, including this spell. The player whose turn it is discards down to their maximum hand size. Damage heals and "this turn" and "until end of turn" effects end.)</property>
       <property name="Artist" value="Scott M. Fischer" />
       <property name="Number" value="117" />
     </card>
@@ -2052,7 +2053,7 @@ Whenever enchanted creature attacks or blocks, its controller loses 3 life.</pro
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Target opponent sacrifices a creature.</property>
+      <property name="Rules">Target opponent sacrifices a creature of their choice.</property>
       <property name="Artist" value="Michael Sutfin" />
       <property name="Number" value="133" />
     </card>
@@ -2138,7 +2139,7 @@ Whenever enchanted creature attacks or blocks, its controller loses 3 life.</pro
       <property name="Subtype" value="Skeleton" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="B">{B}</s>: Regenerate Drudge Skeletons. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)</property>
+        <s value="B">{B}</s>: Regenerate Drudge Skeletons. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Jim Nelson" />
@@ -2214,7 +2215,7 @@ Enchanted creature has fear. (It can't be blocked except by artifact creatures a
       <property name="Color" value="Black" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever a creature you control dies, each other player sacrifices a creature.</property>
+      <property name="Rules">Whenever a creature you control dies, each other player sacrifices a creature of their choice.</property>
       <property name="Artist" value="Puddnhead" />
       <property name="Number" value="144" />
     </card>
@@ -2489,7 +2490,7 @@ At the beginning of your upkeep, sacrifice a creature other than Lord of the Pit
       <property name="Subtype" value="Lhurgoyf" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Mortivore's power and toughness are each equal to the number of creature cards in all graveyards.
-<s value="B">{B}</s>: Regenerate Mortivore. (The next time this creature would be destroyed, instead tap it, remove it from combat, and heal all damage on it.)</property>
+<s value="B">{B}</s>: Regenerate Mortivore. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Power" value="*" />
       <property name="Toughness" value="*" />
       <property name="Artist" value="Anthony S. Waters" />
@@ -3556,8 +3557,8 @@ When a spell or ability an opponent controls causes you to discard Guerrilla Tac
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Flying (This creature can't be blocked except by creatures with flying or reach.)
-<s value="R">{R}</s>: Shivan Dragon gets +1/+0 until end of turn.</property>
+      <property name="Rules">Flying
+<s value="R">{R}</s>: This creature gets +1/+0 until end of turn.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Donato Giancola" />
@@ -4393,7 +4394,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Creatures you control get +3/+3 and gain trample until end of turn.</property>
+      <property name="Rules">Creatures you control get +3/+3 and gain trample until end of turn. (Each of those creatures can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Artist" value="Carl Critchlow" />
       <property name="Number" value="284" />
     </card>
@@ -4479,7 +4480,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)
-<s value="G">{G}</s>: Regenerate enchanted creature. (The next time that creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)</property>
+<s value="G">{G}</s>: Regenerate enchanted creature. (The next time that creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Artist" value="Jeremy Jarvis" />
       <property name="Number" value="290" />
     </card>
@@ -4495,7 +4496,7 @@ Whenever enchanted land is tapped for mana, its controller adds an additional <s
       <property name="Subtype" value="Rhino Beast" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">You may have Rhox assign its combat damage as though it weren't blocked.
-<s value="2">{2}</s><s value="G">{G}</s>: Regenerate Rhox. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)</property>
+<s value="2">{2}</s><s value="G">{G}</s>: Regenerate Rhox. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Mark Zug" />
@@ -5038,8 +5039,8 @@ Colossus of Sardia doesn't untap during your untap step.
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Juggernaut" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Juggernaut attacks each combat if able.
-Juggernaut can't be blocked by Walls.</property>
+      <property name="Rules">This creature attacks each combat if able.
+This creature can't be blocked by Walls.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Arnie Swekel" />
@@ -5438,7 +5439,7 @@ Equip <s value="2">{2}</s></property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Spawning Pool enters tapped.
 <s value="T">{T}</s>: Add <s value="B">{B}</s>.
-<s value="1">{1}</s><s value="B">{B}</s>: Spawning Pool becomes a 1/1 black Skeleton creature with "<s value="B">{B}</s>: Regenerate this creature" until end of turn. It's still a land. (If it regenerates, the next time it would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)</property>
+<s value="1">{1}</s><s value="B">{B}</s>: Spawning Pool becomes a 1/1 black Skeleton creature with "<s value="B">{B}</s>: Regenerate this creature" until end of turn. It's still a land. (If it regenerates, the next time it would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Artist" value="Nils Hamm" />
       <property name="Number" value="358" />
       <property name="Flags" value="B" />

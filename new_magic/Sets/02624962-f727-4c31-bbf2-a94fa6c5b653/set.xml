@@ -841,7 +841,7 @@ Miracle <s value="1">{1}</s><s value="U">{U}</s> (You may cast this card for its
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Flash
+      <property name="Rules">Flash (You may cast this spell any time you could cast an instant.)
 When Venser, Shaper Savant enters, return target spell or permanent to its owner's hand.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -1015,7 +1015,7 @@ Unearth <s value="3">{3}</s><s value="B">{B}</s> (<s value="3">{3}</s><s value="
       <property name="Subtype" value="Demon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-At the beginning of each combat, any opponent may sacrifice a creature. If a player does, tap Desecration Demon and put a +1/+1 counter on it.</property>
+At the beginning of each combat, any opponent may sacrifice a creature of their choice. If a player does, tap this creature and put a +1/+1 counter on it.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Jason Chan" />
@@ -1348,7 +1348,9 @@ Flashback <s value="3">{3}</s><s value="W">{W}</s> (You may cast this card from 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying, deathtouch, lifelink</property>
+      <property name="Rules">Flying
+Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
+Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Jason Chan" />
@@ -2070,7 +2072,7 @@ When Penumbra Spider dies, create a 2/4 black Spider creature token with reach.<
       <property name="Subtype" value="Ooze" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">
-        <s value="G">{G}</s>: Exile target card from a graveyard. If it was a creature card, put a +1/+1 counter on Scavenging Ooze and you gain 1 life.</property>
+        <s value="G">{G}</s>: Exile target card from a graveyard. If it was a creature card, put a +1/+1 counter on this creature and you gain 1 life.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Austin Hsu" />
@@ -2450,7 +2452,7 @@ When Broodmate Dragon enters, create a 4/4 red Dragon creature token with flying
       <property name="Color" value="Multicolor Blue Black Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target opponent sacrifices a creature, discards three cards, then loses 5 life. You return a creature card from your graveyard to your hand, draw three cards, then gain 5 life.</property>
+      <property name="Rules">Target opponent sacrifices a creature of their choice, discards three cards, then loses 5 life. You return a creature card from your graveyard to your hand, draw three cards, then gain 5 life.</property>
       <property name="Artist" value="Todd Lockwood" />
       <property name="Number" value="158" />
     </card>
@@ -3103,7 +3105,7 @@ Overload <s value="3">{3}</s><s value="U">{U}</s><s value="R">{R}</s> (You may c
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Enchant creature
-Enchanted creature gets +2/+2 and has trample and lifelink. (Damage dealt by a creature with lifelink also causes its controller to gain that much life.)</property>
+Enchanted creature gets +2/+2 and has trample and lifelink. (Damage dealt by the creature also causes its controller to gain that much life.)</property>
       <property name="Artist" value="Mike Bierek" />
       <property name="Number" value="197" />
     </card>
@@ -3403,8 +3405,8 @@ Each red or green instant or sorcery spell you cast has conspire. (As you cast t
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Equipped creature has deathtouch and lifelink.
-Equip <s value="2">{2}</s></property>
+      <property name="Rules">Equipped creature has deathtouch and lifelink. (Any amount of damage it deals to a creature is enough to destroy it. Damage dealt by this creature also causes you to gain that much life.)
+Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="216" />
     </card>
@@ -3578,7 +3580,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Azorius Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Drew Baker" />
       <property name="Number" value="230" />
@@ -3590,7 +3592,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Boros Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="231" />
@@ -3625,7 +3627,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Dimir Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="234" />
@@ -3637,7 +3639,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Golgari Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="235" />
@@ -3649,7 +3651,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Gruul Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Randy Gallegos" />
       <property name="Number" value="236" />
@@ -3661,7 +3663,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Izzet Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="237" />
@@ -3706,7 +3708,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Orzhov Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="241" />
@@ -3718,7 +3720,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Rakdos Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="242" />
@@ -3763,7 +3765,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Selesnya Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="246" />
@@ -3787,7 +3789,7 @@ Players can't cast spells from graveyards or libraries.</property>
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Simic Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="248" />

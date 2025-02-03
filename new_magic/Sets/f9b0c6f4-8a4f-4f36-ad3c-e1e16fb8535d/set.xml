@@ -494,7 +494,8 @@ If you would gain life, you gain twice that much life instead.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying, vigilance</property>
+      <property name="Rules">Flying
+Vigilance (Attacking doesn't cause this creature to tap.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Greg Staples" />
@@ -529,7 +530,7 @@ When Serra Avatar is put into a graveyard from anywhere, shuffle it into its own
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">You can't cast this spell during your first, second, or third turns of the game.
+      <property name="Rules">You can't cast Serra Avenger during your first, second, or third turns of the game.
 Flying, vigilance</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -825,8 +826,9 @@ Flying</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Defender, flying
-Prevent all combat damage that would be dealt to and dealt by Fog Bank.</property>
+      <property name="Rules">Defender (This creature can't attack.)
+Flying
+Prevent all combat damage that would be dealt to and dealt by this creature.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Howard Lyon" />
@@ -1429,7 +1431,7 @@ Exalted (Whenever a creature you control attacks alone, that creature gets +1/+1
       <property name="Subtype" value="Skeleton" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Exalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)
-<s value="3">{3}</s><s value="B">{B}</s>: Regenerate Duty-Bound Dead. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)</property>
+<s value="3">{3}</s><s value="B">{B}</s>: Regenerate Duty-Bound Dead. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Johannes Voss" />
@@ -1603,7 +1605,7 @@ Enchanted creature gets +2/+2 and has lifelink.</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
 Exalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)
-Whenever Nefarox, Overlord of Grixis attacks alone, defending player sacrifices a creature.</property>
+Whenever Nefarox, Overlord of Grixis attacks alone, defending player sacrifices a creature of their choice.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Aleksi Briclot" />
@@ -1743,7 +1745,9 @@ Whenever Shimian Specter deals combat damage to a player, that player reveals th
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying, deathtouch, lifelink</property>
+      <property name="Rules">Flying
+Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
+Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Jason Chan" />
@@ -1974,7 +1978,7 @@ Whenever a Swamp you control enters, you may return Veilborn Ghoul from your gra
       <property name="Subtype" value="Lizard" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Crimson Muckwader gets +1/+1 as long as you control a Swamp.
-<s value="2">{2}</s><s value="B">{B}</s>: Regenerate Crimson Muckwader. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)</property>
+<s value="2">{2}</s><s value="B">{B}</s>: Regenerate Crimson Muckwader. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Steven Belledin" />
@@ -2129,7 +2133,7 @@ Whenever a Swamp you control enters, you may return Veilborn Ghoul from your gra
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Target creature gets +1/+0 and gains first strike until end of turn.</property>
+      <property name="Rules">Target creature gets +1/+0 and gains first strike until end of turn. (It deals combat damage before creatures without first strike.)</property>
       <property name="Artist" value="Wayne Reynolds" />
       <property name="Number" value="137" />
     </card>
@@ -3084,7 +3088,7 @@ You may cast green creature spells as though they had flash.</property>
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">+3: Destroy target noncreature permanent.
 −2: Gain control of target creature.
-−9: Nicol Bolas, Planeswalker deals 7 damage to target player or planeswalker. That player or that planeswalker's controller discards seven cards, then sacrifices seven permanents.</property>
+−9: Nicol Bolas, Planeswalker deals 7 damage to target player or planeswalker. That player or that planeswalker's controller discards seven cards, then sacrifices seven permanents of their choice.</property>
       <property name="Loyalty" value="5" />
       <property name="Artist" value="D. Alexander Gregory" />
       <property name="Number" value="199" />
@@ -3308,7 +3312,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="2">{2}</s>: Regenerate equipped creature. (The next time that creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)
+        <s value="2">{2}</s>: Regenerate equipped creature. (The next time that creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)
 At the beginning of your upkeep, put a +1/+1 counter on equipped creature if it's black.
 Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Erica Yang" />
@@ -3427,7 +3431,7 @@ Exalted (Whenever a creature you control attacks alone, that creature gets +1/+1
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="224" />
       <property name="Flags" value="C" />

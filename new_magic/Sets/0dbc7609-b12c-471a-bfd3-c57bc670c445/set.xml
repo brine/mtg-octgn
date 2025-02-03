@@ -427,7 +427,7 @@ Landfall — Whenever a land you control enters, you may have target creature bl
       <property name="Subtype" value="Elf Shaman" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="8">{8}</s>: Target creature gets +5/+5 and gains trample until end of turn.</property>
+        <s value="8">{8}</s>: Target creature gets +5/+5 and gains trample until end of turn. (It can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Erica Yang" />
@@ -497,7 +497,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="031" />
       <property name="Flags" value="C" />
@@ -629,7 +629,7 @@ When Turntimber Grove enters, target creature gets +1/+1 until end of turn.
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When you cast this spell, you may return target creature card from your graveyard to the battlefield.
-Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents.)</property>
+Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)</property>
       <property name="Power" value="10" />
       <property name="Toughness" value="9" />
       <property name="Artist" value="Jason Felix" />
@@ -644,7 +644,7 @@ Annihilator 2 (Whenever this creature attacks, defending player sacrifices two p
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents.)
+      <property name="Rules">Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)
 Whenever an opponent sacrifices a nontoken permanent, put that card onto the battlefield under your control.</property>
       <property name="Power" value="11" />
       <property name="Toughness" value="11" />
@@ -660,7 +660,7 @@ Whenever an opponent sacrifices a nontoken permanent, put that card onto the bat
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents.)
+      <property name="Rules">Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)
 Ulamog's Crusher attacks each combat if able.</property>
       <property name="Power" value="8" />
       <property name="Toughness" value="8" />
@@ -712,7 +712,7 @@ Ulamog's Crusher attacks each combat if able.</property>
       <property name="Subtype" value="Vampire Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Butcher of Malakir or another creature you control dies, each opponent sacrifices a creature.</property>
+Whenever Butcher of Malakir or another creature you control dies, each opponent sacrifices a creature of their choice.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Jason Chan" />
@@ -882,7 +882,9 @@ Creatures target player controls get -1/-1 until end of turn. If this spell was 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying, deathtouch, lifelink</property>
+      <property name="Rules">Flying
+Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
+Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Jason Chan" />

@@ -188,7 +188,7 @@ Enchanted creature gets +1/+1 for each enchantment you control and has first str
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Double strike</property>
+      <property name="Rules">Double strike (This creature deals both first-strike and regular combat damage.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="David Rapoza" />
@@ -995,7 +995,7 @@ When Dark Revenant dies, put it on top of its owner's library.</property>
       <property name="Subtype" value="Demon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-At the beginning of each combat, any opponent may sacrifice a creature. If a player does, tap Desecration Demon and put a +1/+1 counter on it.</property>
+At the beginning of each combat, any opponent may sacrifice a creature of their choice. If a player does, tap this creature and put a +1/+1 counter on it.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Jason Chan" />
@@ -1215,7 +1215,7 @@ Scavenge <s value="2">{2}</s><s value="B">{B}</s> (<s value="2">{2}</s><s value=
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Horror" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Slum Reaper enters, each player sacrifices a creature.</property>
+      <property name="Rules">When Slum Reaper enters, each player sacrifices a creature of their choice.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Karl Kopinski" />
@@ -1549,7 +1549,7 @@ Overload <s value="1">{1}</s><s value="R">{R}</s> (You may cast this spell for i
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever you cast an instant or sorcery spell, Guttersnipe deals 2 damage to each opponent.</property>
+      <property name="Rules">Whenever you cast an instant or sorcery spell, this creature deals 2 damage to each opponent.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Steve Prescott" />
@@ -1842,7 +1842,7 @@ Overload <s value="4">{4}</s><s value="R">{R}</s> (You may cast this spell for i
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Vigilance</property>
+      <property name="Rules">Vigilance (Attacking doesn't cause this creature to tap.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Raoul Vitale" />
@@ -3023,7 +3023,7 @@ Whenever Rakdos Ringleader deals combat damage to a player, that player discards
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Demon" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">You can't cast this spell unless an opponent lost life this turn.
+      <property name="Rules">You can't cast Rakdos, Lord of Riots unless an opponent lost life this turn.
 Flying, trample
 Creature spells you cast cost <s value="1">{1}</s> less to cast for each 1 life your opponents have lost this turn.</property>
       <property name="Power" value="6" />
@@ -3493,7 +3493,8 @@ Cryptborn Horror enters with X +1/+1 counters on it, where X is the total life l
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dryad Soldier" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">If an instant or sorcery card would be put into a graveyard from anywhere, exile it instead.</property>
+      <property name="Rules">(<s value="GW">{G/W}</s> can be paid with either <s value="G">{G}</s> or <s value="W">{W}</s>.)
+If an instant or sorcery card would be put into a graveyard from anywhere, exile it instead.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Terese Nielsen" />
@@ -3846,7 +3847,7 @@ When Volatile Rig dies, flip a coin. If you lose the flip, it deals 4 damage to 
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Azorius Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Drew Baker" />
       <property name="Number" value="237" />
@@ -3872,7 +3873,7 @@ As Blood Crypt enters, you may pay 2 life. If you don't, it enters tapped.</prop
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Golgari Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="239" />
@@ -3911,7 +3912,7 @@ As Hallowed Fountain enters, you may pay 2 life. If you don't, it enters tapped.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Izzet Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="242" />
@@ -3937,7 +3938,7 @@ As Overgrown Tomb enters, you may pay 2 life. If you don't, it enters tapped.</p
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Rakdos Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="244" />
@@ -3962,7 +3963,7 @@ As Overgrown Tomb enters, you may pay 2 life. If you don't, it enters tapped.</p
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Selesnya Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="246" />

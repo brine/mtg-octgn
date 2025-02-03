@@ -644,7 +644,7 @@ Flying</property>
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Council's dilemma — Starting with you, each player votes for death or taxes. Each opponent sacrifices a creature for each death vote and discards a card for each taxes vote.</property>
+      <property name="Rules">Council's dilemma — Starting with you, each player votes for death or taxes. Each opponent sacrifices a creature of their choice for each death vote and discards a card for each taxes vote.</property>
       <property name="Artist" value="Lake Hurwitz" />
       <property name="Number" value="040" />
     </card>
@@ -660,7 +660,7 @@ Flying</property>
       <property name="Subtype" value="Zombie Cleric" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When Custodi Lich enters, you become the monarch.
-Whenever you become the monarch, target player sacrifices a creature.</property>
+Whenever you become the monarch, target player sacrifices a creature of their choice.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Bastien L. Deharme" />
@@ -2132,7 +2132,7 @@ When Blood-Toll Harpy enters, each player loses 1 life.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Driver of the Dead dies, return target creature card with mana value 2 or less from your graveyard to the battlefield.</property>
+      <property name="Rules">When this creature dies, return target creature card with mana value 2 or less from your graveyard to the battlefield.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="James Ryman" />
@@ -2177,7 +2177,7 @@ When Blood-Toll Harpy enters, each player loses 1 life.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Fleshbag Marauder enters, each player sacrifices a creature.</property>
+      <property name="Rules">When Fleshbag Marauder enters, each player sacrifices a creature of their choice.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Mark Zug" />
@@ -2213,7 +2213,7 @@ Whenever Guul Draz Specter deals combat damage to a player, that player discards
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Demon" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Deathtouch
+      <property name="Rules">Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
 Whenever another nontoken creature dies, you may draw a card.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
@@ -2448,7 +2448,7 @@ Whenever you cast an instant or sorcery spell, Charmbreaker Devils gets +4/+0 un
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Up to two target creatures each get +1/+0 and gain first strike until end of turn.</property>
+      <property name="Rules">Up to two target creatures each get +1/+0 and gain first strike until end of turn. (They deal combat damage before creatures without first strike.)</property>
       <property name="Artist" value="John Severin Brassell" />
       <property name="Number" value="154" />
     </card>
@@ -2554,7 +2554,7 @@ Basic landcycling <s value="1">{1}</s><s value="R">{R}</s> (<s value="1">{1}</s>
       <property name="Color" value="Red" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">If a creature you control would deal damage to a permanent or player, it deals double that damage to that permanent or player instead.</property>
+      <property name="Rules">If a creature you control would deal damage to a permanent or player, it deals double that damage instead.</property>
       <property name="Artist" value="Christopher Moeller" />
       <property name="Number" value="161" />
     </card>
@@ -2568,7 +2568,7 @@ Basic landcycling <s value="1">{1}</s><s value="R">{R}</s> (<s value="1">{1}</s>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever you cast an instant or sorcery spell, Guttersnipe deals 2 damage to each opponent.</property>
+      <property name="Rules">Whenever you cast an instant or sorcery spell, this creature deals 2 damage to each opponent.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Steve Prescott" />
@@ -2798,7 +2798,7 @@ Target creature gains trample and gets +X/+0 until end of turn, where X is its p
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Vigilance</property>
+      <property name="Rules">Vigilance (Attacking doesn't cause this creature to tap.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Raoul Vitale" />
@@ -2974,7 +2974,7 @@ Whenever Netcaster Spider blocks a creature with flying, Netcaster Spider gets +
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Creatures you control get +3/+3 and gain trample until end of turn.</property>
+      <property name="Rules">Creatures you control get +3/+3 and gain trample until end of turn. (Each of those creatures can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Artist" value="Carl Critchlow" />
       <property name="Number" value="189" />
     </card>
@@ -3417,7 +3417,7 @@ Whenever you draw a card, each opponent loses 1 life.</property>
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="218" />
       <property name="Flags" value="C" />

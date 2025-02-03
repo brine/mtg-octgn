@@ -270,7 +270,7 @@ At the beginning of each combat, tap up to one target creature.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Attacking Vampires you control have deathtouch and lifelink.
+      <property name="Rules">Attacking Vampires you control have deathtouch and lifelink. (Any amount of damage they deal to a creature is enough to destroy it. Damage dealt by those creatures also causes their controller to gain that much life.)
 Whenever a Vampire you control dies, you may pay 2 life. If you do, draw a card.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
@@ -888,7 +888,7 @@ At the beginning of each combat, tap up to one target creature.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Attacking Vampires you control have deathtouch and lifelink.
+      <property name="Rules">Attacking Vampires you control have deathtouch and lifelink. (Any amount of damage they deal to a creature is enough to destroy it. Damage dealt by those creatures also causes their controller to gain that much life.)
 Whenever a Vampire you control dies, you may pay 2 life. If you do, draw a card.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
@@ -1903,7 +1903,7 @@ Other Spirits you control get +1/+1.</property>
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Vampire Shaman" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of your upkeep, each player sacrifices a non-Vampire creature.</property>
+      <property name="Rules">At the beginning of your upkeep, each player sacrifices a non-Vampire creature of their choice.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Dan Murayama Scott" />
@@ -1991,7 +1991,7 @@ When Bloodtracker leaves the battlefield, draw a card for each +1/+1 counter on 
       <property name="Subtype" value="Vampire Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Butcher of Malakir or another creature you control dies, each opponent sacrifices a creature.</property>
+Whenever Butcher of Malakir or another creature you control dies, each opponent sacrifices a creature of their choice.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Jason Chan" />
@@ -2270,7 +2270,9 @@ Enchanted land has "<s value="T">{T}</s>, Pay 1 life: Draw a card."</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying, deathtouch, lifelink</property>
+      <property name="Rules">Flying
+Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
+Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Jason Chan" />
@@ -2714,8 +2716,8 @@ Sacrifice Commander's Sphere: Draw a card.</property>
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control.)
-Equip <s value="1">{1}</s></property>
+      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and <s value="T">{T}</s> no matter when it came under your control.)
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="169" />
     </card>
@@ -2899,8 +2901,8 @@ Smoldering Marsh enters tapped unless you control two or more basic lands.</prop
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Enlightenment enters tapped.
-When Temple of Enlightenment enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Piotr Dura" />
       <property name="Number" value="185" />
@@ -2911,8 +2913,8 @@ When Temple of Enlightenment enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Malice enters tapped.
-When Temple of Malice enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="186" />

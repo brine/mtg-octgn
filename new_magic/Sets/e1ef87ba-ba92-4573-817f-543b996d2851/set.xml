@@ -557,7 +557,7 @@ Whenever Planar Ally attacks, venture into the dungeon. (Enter the first room or
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Equipped creature gets +3/+3 and has ward <s value="1">{1}</s>. (Whenever equipped creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays <s value="1">{1}</s>.)
-Equip <s value="3">{3}</s>. This ability costs <s value="1">{1}</s> less to activate for each other Equipment you control.</property>
+Equip <s value="3">{3}</s>. This ability costs <s value="1">{1}</s> less to activate for each other Equipment you control. (<s value="3">{3}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Martina Pilcerova" />
       <property name="Number" value="032" />
     </card>
@@ -1124,7 +1124,7 @@ Grant an Advantage — If you would roll one or more dice, instead roll that man
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Choose target creature an opponent controls, then roll a d20.
 1—9 | Return it to its owner's hand.
-10—19 | Its owner puts it on the top or bottom of their library.
+10—19 | Its owner puts it on their choice of the top or bottom of their library.
 20 | Gain control of it until the end of your next turn.</property>
       <property name="Artist" value="Brian Valeza" />
       <property name="Number" value="067" />
@@ -1440,7 +1440,7 @@ Whenever Yuan-Ti Malison deals combat damage to a player, venture into the dunge
       <property name="Subtype" value="Zombie Wizard" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">When Acererak the Archlich enters, if you haven't completed Tomb of Annihilation, return Acererak the Archlich to its owner's hand and venture into the dungeon.
-Whenever Acererak the Archlich attacks, for each opponent, you create a 2/2 black Zombie creature token unless that player sacrifices a creature.</property>
+Whenever Acererak the Archlich attacks, for each opponent, you create a 2/2 black Zombie creature token unless that player sacrifices a creature of their choice.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Andrey Kuzinskiy" />
@@ -1477,7 +1477,7 @@ Whenever Acererak the Archlich attacks, for each opponent, you create a 2/2 blac
       <property name="Subtype" value="Beholder" />
       <property name="Rarity" value="Common" />
       <property name="Rules">When Baleful Beholder enters, choose one —
-• Antimagic Cone — Each opponent sacrifices an enchantment.
+• Antimagic Cone — Each opponent sacrifices an enchantment of their choice.
 • Fear Ray — Creatures you control gain menace until end of turn. (A creature with menace can't be blocked except by two or more creatures.)</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="5" />
@@ -1950,8 +1950,8 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Subtype" value="Zombie" />
       <property name="Rarity" value="Common" />
       <property name="Rules">When Shambling Ghast dies, choose one —
-• Brave the Stench — Target creature an opponent controls gets -1/-1 until end of turn.
-• Search the Body — Create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
+• Target creature an opponent controls gets -1/-1 until end of turn.
+• Create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Dave Kendall" />
@@ -2014,7 +2014,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Vampire Spawn enters, each opponent loses 2 life and you gain 2 life.</property>
+      <property name="Rules">When this creature enters, each opponent loses 2 life and you gain 2 life.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Alex Brock" />
@@ -2170,7 +2170,7 @@ Creatures you control have haste.</property>
       <property name="Rules">
         <s value="1">{1}</s>
         <s value="R">{R}</s>: Goblins you control get +1/+0 and gain haste until end of turn.
-Pack tactics — Whenever Battle Cry Goblin attacks, if you attacked with creatures with total power 6 or greater this combat, create a 1/1 red Goblin creature token that's tapped and attacking.</property>
+Whenever Battle Cry Goblin attacks, if you attacked with creatures with total power 6 or greater this combat, create a 1/1 red Goblin creature token that's tapped and attacking.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="April Prime" />
@@ -2313,9 +2313,9 @@ Equip <s value="4">{4}</s> (<s value="4">{4}</s>: Attach to target creature you 
       <property name="Subtype" value="Elemental" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Siege Monster — When Earth-Cult Elemental enters, roll a d20.
-1—9 | Each player sacrifices a permanent.
-10—19 | Each opponent sacrifices a permanent.
-20 | Each opponent sacrifices two permanents.</property>
+1—9 | Each player sacrifices a permanent of their choice.
+10—19 | Each opponent sacrifices a permanent of their choice.
+20 | Each opponent sacrifices two permanents of their choice.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Aaron Miller" />
@@ -4207,7 +4207,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Muhammad Firdaus" />
       <property name="Number" value="256" />
       <property name="Flags" value="C" />
@@ -5053,7 +5053,7 @@ Grant an Advantage — If you would roll one or more dice, instead roll that man
       <property name="Subtype" value="Beholder" />
       <property name="Rarity" value="Common" />
       <property name="Rules">When Baleful Beholder enters, choose one —
-• Antimagic Cone — Each opponent sacrifices an enchantment.
+• Antimagic Cone — Each opponent sacrifices an enchantment of their choice.
 • Fear Ray — Creatures you control gain menace until end of turn. (A creature with menace can't be blocked except by two or more creatures.)</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="5" />
@@ -5805,7 +5805,7 @@ Iron Golem attacks or blocks each combat if able.</property>
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Brian Snõddy" />
       <property name="Number" value="353" />
       <property name="Flags" value="C" />
@@ -6111,7 +6111,7 @@ Whenever Yuan-Ti Malison deals combat damage to a player, venture into the dunge
       <property name="Subtype" value="Zombie Wizard" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">When Acererak the Archlich enters, if you haven't completed Tomb of Annihilation, return Acererak the Archlich to its owner's hand and venture into the dungeon.
-Whenever Acererak the Archlich attacks, for each opponent, you create a 2/2 black Zombie creature token unless that player sacrifices a creature.</property>
+Whenever Acererak the Archlich attacks, for each opponent, you create a 2/2 black Zombie creature token unless that player sacrifices a creature of their choice.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Andrey Kuzinskiy" />

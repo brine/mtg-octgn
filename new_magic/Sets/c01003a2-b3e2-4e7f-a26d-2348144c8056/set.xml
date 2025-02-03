@@ -182,7 +182,7 @@ Trample, hexproof</property>
       <property name="Subtype" value="Elder Dinosaur" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">This spell costs <s value="X">{X}</s> less to cast, where X is the total power of creatures you control.
-Trample</property>
+Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="12" />
       <property name="Toughness" value="12" />
       <property name="Artist" value="Joshua Raphael" />
@@ -793,7 +793,7 @@ Evoke—Exile a white card from your hand.</property>
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Flash
 Flying
-When Subtlety enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library.
+When Subtlety enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on their choice of the top or bottom of their library.
 Evoke—Exile a blue card from your hand.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -891,7 +891,7 @@ Evoke—Exile a white card from your hand.</property>
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Flash
 Flying
-When Subtlety enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on the top or bottom of their library.
+When Subtlety enters, choose up to one target creature spell or planeswalker spell. Its owner puts it on their choice of the top or bottom of their library.
 Evoke—Exile a blue card from your hand.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -1100,7 +1100,7 @@ Equip <s value="2">{2}</s></property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">As Secluded Courtyard enters, choose a creature type.
+      <property name="Rules">As this land enters, choose a creature type.
 <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type or activate an ability of a creature source of the chosen type.</property>
       <property name="Artist" value="Dan Murayama Scott" />
@@ -1318,7 +1318,7 @@ Equip <s value="3">{3}</s></property>
       <property name="Subtype" value="Goblin Warrior" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Kicker <s value="R">{R}</s> (You may pay an additional <s value="R">{R}</s> as you cast this spell.)
-When Goblin Bushwhacker enters, if it was kicked, creatures you control get +1/+0 and gain haste until end of turn.</property>
+When this creature enters, if it was kicked, creatures you control get +1/+0 and gain haste until end of turn.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Dominik Mayer" />
@@ -1351,7 +1351,7 @@ When Goblin Bushwhacker enters, if it was kicked, creatures you control get +1/+
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Druid" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Paradise Druid has hexproof as long as it's untapped. (It can't be the target of spells or abilities your opponents control.)
+      <property name="Rules">This creature has hexproof as long as it's untapped. (It can't be the target of spells or abilities your opponents control.)
 <s value="T">{T}</s>: Add one mana of any color.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
@@ -1394,12 +1394,332 @@ When Goblin Bushwhacker enters, if it was kicked, creatures you control get +1/+
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Nightmare" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Fiend Artisan gets +1/+1 for each creature card in your graveyard.
+      <property name="Rules">This creature gets +1/+1 for each creature card in your graveyard.
 <s value="X">{X}</s><s value="BG">{B/G}</s>, <s value="T">{T}</s>, Sacrifice another creature: Search your library for a creature card with mana value X or less, put it onto the battlefield, then shuffle. Activate only as a sorcery.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Carl Critchlow" />
       <property name="Number" value="083" />
+    </card>
+    <card name="Cavalier of Dawn" id="0d650ea3-2e80-4bcf-b800-7f2063d2acd9">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elemental Knight" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Vigilance
+When Cavalier of Dawn enters, destroy up to one target nonland permanent. Its controller creates a 3/3 colorless Golem artifact creature token.
+When Cavalier of Dawn dies, return target artifact or enchantment card from your graveyard to your hand.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="6" />
+      <property name="Artist" value="Femke Hiemstra" />
+      <property name="Number" value="084" />
+    </card>
+    <card name="Thoughtcast" id="0f9a3f71-d03c-4f32-bd9d-95a1d91c2ff5">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Affinity for artifacts (This spell costs <s value="1">{1}</s> less to cast for each artifact you control.)
+Draw two cards.</property>
+      <property name="Artist" value="Lucie Louxor" />
+      <property name="Number" value="085" />
+    </card>
+    <card name="Whir of Invention" id="371090f6-9114-4bb1-890e-8270ad6619ae">
+      <property name="Cost">
+        <s value="X">{X}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for <s value="1">{1}</s>.)
+Search your library for an artifact card with mana value X or less, put it onto the battlefield, then shuffle.</property>
+      <property name="Artist" value="Brian Chippendale" />
+      <property name="Number" value="086" />
+    </card>
+    <card name="Bone Miser" id="2dd78806-621a-4f9f-936c-527ec9659667">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Zombie Wizard" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever you discard a creature card, create a 2/2 black Zombie creature token.
+Whenever you discard a land card, add <s value="B">{B}</s><s value="B">{B}</s>.
+Whenever you discard a noncreature, nonland card, draw a card.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Jay Howell" />
+      <property name="Number" value="087" />
+    </card>
+    <card name="Lord of the Undead" id="ffd745cc-330e-4476-b4f2-fcb3d202826f">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Zombie" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Other Zombie creatures get +1/+1.
+<s value="1">{1}</s><s value="B">{B}</s>, <s value="T">{T}</s>: Return target Zombie card from your graveyard to your hand.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Skinner" />
+      <property name="Number" value="088" />
+    </card>
+    <card name="Chandra's Ignition" id="d6c144f5-37ec-41d7-8acd-6e7b94f12701">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Target creature you control deals damage equal to its power to each other creature and each opponent.</property>
+      <property name="Artist" value="Tsubonari" />
+      <property name="Number" value="089" />
+    </card>
+    <card name="Galvanic Blast" id="eb93617a-539f-4448-bb4a-ea281a3fc340">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Galvanic Blast deals 2 damage to any target.
+Metalcraft — Galvanic Blast deals 4 damage instead if you control three or more artifacts.</property>
+      <property name="Artist" value="Laura Plansker" />
+      <property name="Number" value="090" />
+    </card>
+    <card name="Pathbreaker Ibex" id="b5118bab-a940-4549-8173-a467bc38193e">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Goat" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever Pathbreaker Ibex attacks, creatures you control gain trample and get +X/+X until end of turn, where X is the greatest power among creatures you control.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="3" />
+      <property name="Artist" value="Rocodrilo" />
+      <property name="Number" value="091" />
+    </card>
+    <card name="Chrome Mox" id="da3b705c-a5c9-4e65-9a5e-31b7dc734623">
+      <property name="Cost">
+        <s value="0">{0}</s>
+      </property>
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Imprint — When Chrome Mox enters, you may exile a nonartifact, nonland card from your hand.
+<s value="T">{T}</s>: Add one mana of any of the exiled card's colors.</property>
+      <property name="Artist" value="Princess Hidir" />
+      <property name="Number" value="092" />
+    </card>
+    <card name="Skysovereign, Consul Flagship" id="2624efae-9d40-4123-9c10-00f566545fe0">
+      <property name="Cost">
+        <s value="5">{5}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Artifact" />
+      <property name="Subtype" value="Vehicle" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Flying
+Whenever Skysovereign, Consul Flagship enters or attacks, it deals 3 damage to target creature or planeswalker an opponent controls.
+Crew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)</property>
+      <property name="Power" value="6" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Imiri Sakabashira" />
+      <property name="Number" value="093" />
+    </card>
+    <card name="Cavalier of Dawn" id="aea6ac4a-9e4a-4360-b87b-637a621aef1a">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elemental Knight" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Vigilance
+When Cavalier of Dawn enters, destroy up to one target nonland permanent. Its controller creates a 3/3 colorless Golem artifact creature token.
+When Cavalier of Dawn dies, return target artifact or enchantment card from your graveyard to your hand.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="6" />
+      <property name="Artist" value="Femke Hiemstra" />
+      <property name="Number" value="094" />
+    </card>
+    <card name="Thoughtcast" id="fc22d52e-0abf-4d35-b2f0-98642518b9e0">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Affinity for artifacts (This spell costs <s value="1">{1}</s> less to cast for each artifact you control.)
+Draw two cards.</property>
+      <property name="Artist" value="Lucie Louxor" />
+      <property name="Number" value="095" />
+    </card>
+    <card name="Whir of Invention" id="16086247-1878-4e21-b2ba-da4aac84c02b">
+      <property name="Cost">
+        <s value="X">{X}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for <s value="1">{1}</s>.)
+Search your library for an artifact card with mana value X or less, put it onto the battlefield, then shuffle.</property>
+      <property name="Artist" value="Brian Chippendale" />
+      <property name="Number" value="096" />
+    </card>
+    <card name="Bone Miser" id="76dd0716-2aa0-4d57-8ead-3e48cbdf5ea9">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Zombie Wizard" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever you discard a creature card, create a 2/2 black Zombie creature token.
+Whenever you discard a land card, add <s value="B">{B}</s><s value="B">{B}</s>.
+Whenever you discard a noncreature, nonland card, draw a card.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Jay Howell" />
+      <property name="Number" value="097" />
+    </card>
+    <card name="Lord of the Undead" id="026f006b-0ecc-4cb4-acb1-1c4fa3cbdfe3">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Zombie" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Other Zombie creatures get +1/+1.
+<s value="1">{1}</s><s value="B">{B}</s>, <s value="T">{T}</s>: Return target Zombie card from your graveyard to your hand.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Skinner" />
+      <property name="Number" value="098" />
+    </card>
+    <card name="Chandra's Ignition" id="74e7ffa3-150d-406d-bbda-a9ff06074054">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Target creature you control deals damage equal to its power to each other creature and each opponent.</property>
+      <property name="Artist" value="Tsubonari" />
+      <property name="Number" value="099" />
+    </card>
+    <card name="Galvanic Blast" id="0b0b9b51-e2ca-4c02-9a13-de9959b174d2">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Galvanic Blast deals 2 damage to any target.
+Metalcraft — Galvanic Blast deals 4 damage instead if you control three or more artifacts.</property>
+      <property name="Artist" value="Laura Plansker" />
+      <property name="Number" value="100" />
+    </card>
+    <card name="Pathbreaker Ibex" id="f5c839b9-612e-4482-ac47-dd3578c9e25f">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Goat" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Whenever Pathbreaker Ibex attacks, creatures you control gain trample and get +X/+X until end of turn, where X is the greatest power among creatures you control.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="3" />
+      <property name="Artist" value="Rocodrilo" />
+      <property name="Number" value="101" />
+    </card>
+    <card name="Chrome Mox" id="e8cbf26a-ee33-4272-a71b-61def9c342aa">
+      <property name="Cost">
+        <s value="0">{0}</s>
+      </property>
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Imprint — When Chrome Mox enters, you may exile a nonartifact, nonland card from your hand.
+<s value="T">{T}</s>: Add one mana of any of the exiled card's colors.</property>
+      <property name="Artist" value="Princess Hidir" />
+      <property name="Number" value="102" />
+    </card>
+    <card name="Skysovereign, Consul Flagship" id="23fe1f78-2bd5-49a4-977d-c0f062a48a6b">
+      <property name="Cost">
+        <s value="5">{5}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Artifact" />
+      <property name="Subtype" value="Vehicle" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Flying
+Whenever Skysovereign, Consul Flagship enters or attacks, it deals 3 damage to target creature or planeswalker an opponent controls.
+Crew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)</property>
+      <property name="Power" value="6" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Imiri Sakabashira" />
+      <property name="Number" value="103" />
     </card>
   </cards>
 </set>

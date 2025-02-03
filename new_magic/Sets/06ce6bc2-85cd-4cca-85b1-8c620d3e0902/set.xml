@@ -286,7 +286,7 @@ Evoke <s value="3">{3}</s><s value="B">{B}</s> (You may cast this spell for its 
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">When you cast this spell, copy it for each time you've cast your commander from the command zone this game.
-Each opponent sacrifices a creature. Each opponent who can't loses half their life, rounded up.</property>
+Each opponent sacrifices a creature of their choice. Each opponent who can't loses half their life, rounded up.</property>
       <property name="Artist" value="Mark Poole" />
       <property name="Number" value="018" />
     </card>
@@ -1398,7 +1398,7 @@ Miracle <s value="1">{1}</s><s value="U">{U}</s> (You may cast this card for its
       <property name="Color" value="Blue" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Flash
+      <property name="Rules">Flash (You may cast this spell any time you could cast an instant.)
 At the beginning of each player's draw step, that player draws an additional card.</property>
       <property name="Artist" value="Daarken" />
       <property name="Number" value="086" />
@@ -2095,7 +2095,7 @@ Landfall — Whenever a land you control enters, you may put a +1/+1 counter on 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Landfall — Whenever a land you control enters, Baloth Woodcrasher gets +4/+4 and gains trample until end of turn.</property>
+      <property name="Rules">Landfall — Whenever a land you control enters, Baloth Woodcrasher gets +4/+4 and gains trample until end of turn. (It can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Zoltan Boros &amp; Gabor Szikszai" />
@@ -2555,7 +2555,7 @@ Landfall — Whenever a land you control enters, you may create a 4/4 green Beas
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Reclamation Sage enters, you may destroy target artifact or enchantment.</property>
+      <property name="Rules">When this creature enters, you may destroy target artifact or enchantment.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Christopher Moeller" />
@@ -3096,7 +3096,7 @@ Whenever Silent-Blade Oni deals combat damage to a player, look at that player's
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Enchant creature
-Enchanted creature gets +2/+2 and has trample and lifelink. (Damage dealt by a creature with lifelink also causes its controller to gain that much life.)</property>
+Enchanted creature gets +2/+2 and has trample and lifelink. (Damage dealt by the creature also causes its controller to gain that much life.)</property>
       <property name="Artist" value="Mike Bierek" />
       <property name="Number" value="192" />
     </card>
@@ -3300,7 +3300,7 @@ As long as a card exiled with Duplicant is a creature card, Duplicant has the po
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>.
-<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Hedron Archive: Draw two cards.</property>
+<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Draw two cards.</property>
       <property name="Artist" value="Craig J Spearing" />
       <property name="Number" value="206" />
     </card>
@@ -3554,8 +3554,8 @@ When Scuttling Doom Engine dies, it deals 6 damage to target opponent or planesw
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-<s value="2">{2}</s>: Steel Hellkite gets +1/+0 until end of turn.
-<s value="X">{X}</s>: Destroy each nonland permanent with mana value X whose controller was dealt combat damage by Steel Hellkite this turn. Activate only once each turn.</property>
+<s value="2">{2}</s>: This creature gets +1/+0 until end of turn.
+<s value="X">{X}</s>: Destroy each nonland permanent with mana value X whose controller was dealt combat damage by this creature this turn. Activate only once each turn.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="James Paick" />
@@ -3570,8 +3570,8 @@ When Scuttling Doom Engine dies, it deals 6 damage to target opponent or planesw
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control.)
-Equip <s value="1">{1}</s></property>
+      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and <s value="T">{T}</s> no matter when it came under your control.)
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="225" />
     </card>
@@ -3684,7 +3684,7 @@ When Azorius Chancery enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Azorius Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Drew Baker" />
       <property name="Number" value="234" />
@@ -3719,8 +3719,8 @@ Cycling <s value="B">{B}</s> (<s value="B">{B}</s>, Discard this card: Draw a ca
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Blossoming Sands enters tapped.
-When Blossoming Sands enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="237" />
@@ -3790,7 +3790,7 @@ When Dimir Aqueduct enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Dimir Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="243" />
@@ -3801,8 +3801,8 @@ When Dimir Aqueduct enters, return a land you control to its owner's hand.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Dismal Backwater enters tapped.
-When Dismal Backwater enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="244" />
@@ -3814,7 +3814,7 @@ When Dismal Backwater enters, you gain 1 life.
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="245" />
       <property name="Flags" value="C" />
@@ -3954,7 +3954,7 @@ When Izzet Boilerworks enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Izzet Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="257" />
@@ -3977,8 +3977,8 @@ When Izzet Boilerworks enters, return a land you control to its owner's hand.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Jungle Hollow enters tapped.
-When Jungle Hollow enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="259" />
@@ -4133,7 +4133,7 @@ When Orzhov Basilica enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Subtype" value="Gate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Orzhov Guildgate enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="272" />
@@ -4178,8 +4178,8 @@ When Rakdos Carnarium enters, return a land you control to its owner's hand.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Scoured Barrens enters tapped.
-When Scoured Barrens enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="276" />
@@ -4271,8 +4271,8 @@ When Simic Growth Chamber enters, return a land you control to its owner's hand.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Swiftwater Cliffs enters tapped.
-When Swiftwater Cliffs enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="284" />
@@ -4305,8 +4305,8 @@ When Swiftwater Cliffs enters, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Thornwood Falls enters tapped.
-When Thornwood Falls enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Eytan Zana" />
       <property name="Number" value="287" />
@@ -4317,8 +4317,8 @@ When Thornwood Falls enters, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Tranquil Cove enters tapped.
-When Tranquil Cove enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="288" />

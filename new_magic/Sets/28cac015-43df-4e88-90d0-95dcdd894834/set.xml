@@ -38,7 +38,7 @@
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When you cast this spell, you may return target creature card from your graveyard to the battlefield.
-Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents.)</property>
+Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)</property>
       <property name="Power" value="10" />
       <property name="Toughness" value="9" />
       <property name="Artist" value="Jason Felix" />
@@ -88,7 +88,7 @@ When Emrakul, the Aeons Torn is put into a graveyard from anywhere, its owner sh
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">When you cast this spell, draw four cards.
-Annihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents.)
+Annihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents of their choice.)
 When Kozilek, Butcher of Truth is put into a graveyard from anywhere, its owner shuffles their graveyard into their library.</property>
       <property name="Power" value="12" />
       <property name="Toughness" value="12" />
@@ -106,7 +106,7 @@ When Kozilek, Butcher of Truth is put into a graveyard from anywhere, its owner 
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">When you cast this spell, destroy target permanent.
 Indestructible
-Annihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents.)
+Annihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents of their choice.)
 When Ulamog, the Infinite Gyre is put into a graveyard from anywhere, its owner shuffles their graveyard into their library.</property>
       <property name="Power" value="10" />
       <property name="Toughness" value="10" />
@@ -122,7 +122,7 @@ When Ulamog, the Infinite Gyre is put into a graveyard from anywhere, its owner 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Eldrazi" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents.)
+      <property name="Rules">Annihilator 2 (Whenever this creature attacks, defending player sacrifices two permanents of their choice.)
 Ulamog's Crusher attacks each combat if able.</property>
       <property name="Power" value="8" />
       <property name="Toughness" value="8" />
@@ -560,7 +560,7 @@ When Oblivion Ring leaves the battlefield, return the exiled card to the battlef
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">As long as Sunspear Shikari is equipped, it has first strike and lifelink.</property>
+      <property name="Rules">As long as Sunspear Shikari is equipped, it has first strike and lifelink. (It deals combat damage before creatures without first strike. Damage dealt by it also causes you to gain that much life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Allen Williams" />
@@ -1472,7 +1472,7 @@ Persist (When this creature dies, if it had no -1/-1 counters on it, return it t
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="1">{1}</s>
-        <s value="B">{B}</s>: Return Reassembling Skeleton from your graveyard to the battlefield tapped.</property>
+        <s value="B">{B}</s>: Return this card from your graveyard to the battlefield tapped.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Austin Hsu" />
@@ -2131,7 +2131,7 @@ Persist (When this creature dies, if it had no -1/-1 counters on it, return it t
       <property name="Color" value="Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Each player sacrifices four lands. Wildfire deals 4 damage to each creature.</property>
+      <property name="Rules">Each player sacrifices four lands of their choice. Wildfire deals 4 damage to each creature.</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="134" />
     </card>
@@ -3215,9 +3215,10 @@ If a source would deal damage to Swans of Bryn Argoll, prevent that damage. The 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Knight" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Other green creatures you control get +1/+1.
+      <property name="Rules">(<s value="GW">{G/W}</s> can be paid with either <s value="G">{G}</s> or <s value="W">{W}</s>.)
+Other green creatures you control get +1/+1.
 Other white creatures you control get +1/+1.
-If a spell or ability an opponent controls causes you to discard Wilt-Leaf Liege, put it onto the battlefield instead of putting it into your graveyard.</property>
+If a spell or ability an opponent controls causes you to discard this card, put it onto the battlefield instead of putting it into your graveyard.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Jason Chan" />
@@ -3411,7 +3412,7 @@ Everflowing Chalice enters with a charge counter on it for each time it was kick
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Expedition Map: Search your library for a land card, reveal it, put it into your hand, then shuffle.</property>
+        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Search your library for a land card, reveal it, put it into your hand, then shuffle.</property>
       <property name="Artist" value="Franz Vohwinkel" />
       <property name="Number" value="213" />
     </card>
@@ -3796,7 +3797,7 @@ When Dimir Aqueduct enters, return a land you control to its owner's hand.
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="241" />
       <property name="Flags" value="C" />

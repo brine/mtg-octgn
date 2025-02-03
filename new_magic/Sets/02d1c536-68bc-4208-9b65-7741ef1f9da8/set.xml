@@ -144,7 +144,7 @@ If an opponent would search a library, that player searches the top four cards o
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant creature you control
 When Cartouche of Solidarity enters, create a 1/1 white Warrior creature token with vigilance.
-Enchanted creature gets +1/+1 and has first strike.</property>
+Enchanted creature gets +1/+1 and has first strike. (It deals combat damage before creatures without first strike.)</property>
       <property name="Artist" value="Kieran Yanner" />
       <property name="Number" value="007" />
     </card>
@@ -405,8 +405,8 @@ Embalm <s value="3">{3}</s><s value="W">{W}</s><s value="W">{W}</s> (<s value="3
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Cat" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Other Cats you control get +1/+1 and have lifelink.
-When Regal Caracal enters, create two 1/1 white Cat creature tokens with lifelink.</property>
+      <property name="Rules">Other Cats you control get +1/+1 and have lifelink. (Damage dealt by those creatures also causes you to gain that much life.)
+When this creature enters, create two 1/1 white Cat creature tokens with lifelink.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Filip Burburan" />
@@ -1362,7 +1362,7 @@ Enchanted creature gets +1/+1 and has lifelink.</property>
       <property name="Subtype" value="Aura Curse" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Enchant player
-At the beginning of enchanted player's upkeep, that player sacrifices a creature or planeswalker. If the player can't, they lose 5 life.</property>
+At the beginning of enchanted player's upkeep, that player sacrifices a creature or planeswalker of their choice. If the player can't, they lose 5 life.</property>
       <property name="Artist" value="Kieran Yanner" />
       <property name="Number" value="084" />
       <property name="Faction" value="Planeswalker" />
@@ -1795,7 +1795,7 @@ Whenever a creature enchanted player controls enters, that player loses 1 life a
       <property name="Color" value="Black" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Trial of Ambition enters, target opponent sacrifices a creature.
+      <property name="Rules">When Trial of Ambition enters, target opponent sacrifices a creature of their choice.
 When a Cartouche you control enters, return Trial of Ambition to its owner's hand.</property>
       <property name="Artist" value="Johann Bodin" />
       <property name="Number" value="113" />
@@ -1856,7 +1856,7 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Minotaur Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Haste
+      <property name="Rules">Haste (This creature can attack and <s value="T">{T}</s> as soon as it comes under your control.)
 You may exert Ahn-Crop Crasher as it attacks. When you do, target creature can't block this turn. (An exerted creature won't untap during your next untap step.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
@@ -1902,7 +1902,7 @@ Whenever you exert a creature, you may discard a card. If you do, draw a card.</
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Target creature gains haste until end of turn.</property>
+        <s value="T">{T}</s>: Target creature gains haste until end of turn. (It can attack and <s value="T">{T}</s> this turn.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Anthony Palumbo" />
@@ -1933,7 +1933,7 @@ Whenever you exert a creature, you may discard a card. If you do, draw a card.</
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Target creature gets +3/+1 and gains trample until end of turn.</property>
+      <property name="Rules">Target creature gets +3/+1 and gains trample until end of turn. (It can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Artist" value="Nils Hamm" />
       <property name="Number" value="122" />
     </card>
@@ -1962,7 +1962,7 @@ Whenever you exert a creature, you may discard a card. If you do, draw a card.</
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant creature you control
 When Cartouche of Zeal enters, target creature can't block this turn.
-Enchanted creature gets +1/+1 and has haste.</property>
+Enchanted creature gets +1/+1 and has haste. (It can attack and <s value="T">{T}</s> no matter when it came under your control.)</property>
       <property name="Artist" value="Kieran Yanner" />
       <property name="Number" value="124" />
     </card>
@@ -2050,7 +2050,7 @@ When you cycle Deem Worthy, you may have it deal 2 damage to target creature.</p
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Minotaur Warrior" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">You may exert Emberhorn Minotaur as it attacks. When you do, it gets +1/+1 and gains menace until end of turn. (An exerted creature won't untap during your next untap step.)</property>
+      <property name="Rules">You may exert Emberhorn Minotaur as it attacks. When you do, it gets +1/+1 and gains menace until end of turn. (An exerted creature won't untap during your next untap step. A creature with menace can't be blocked except by two or more creatures.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Viktor Titov" />
@@ -2268,7 +2268,7 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Trample
+      <property name="Rules">Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
 You may exert Nef-Crop Entangler as it attacks. When you do, it gets +1/+2 until end of turn. (An exerted creature won't untap during your next untap step.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
@@ -4193,7 +4193,7 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Christine Choi" />
       <property name="Number" value="242" />
       <property name="Flags" value="C" />

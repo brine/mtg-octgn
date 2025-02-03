@@ -1311,7 +1311,7 @@ Whenever you cast a spell of the chosen type, copy that spell. (A copy of a perm
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Choose one or both —
-• The owner of target nonland permanent puts it on the top or bottom of their library.
+• The owner of target nonland permanent puts it on their choice of the top or bottom of their library.
 • Return target nonland permanent to its owner's hand.</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="074" />
@@ -1373,7 +1373,7 @@ Foretell <s value="1">{1}</s><s value="U">{U}</s> (During your turn, you may pay
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Giant Rogue" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Flash
+      <property name="Rules">Flash (You may cast this spell any time you could cast an instant.)
 Undersea Invader enters tapped.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="6" />
@@ -1774,8 +1774,8 @@ Foretell <s value="1">{1}</s><s value="B">{B}</s> (During your turn, you may pay
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Cleric" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Lifelink
-When Koma's Faithful dies, each player mills three cards. (To mill a card, a player puts the top card of their library into their graveyard.)</property>
+      <property name="Rules">Lifelink (Damage dealt by this creature also causes you to gain that much life.)
+When Koma's Faithful dies, each player mills three cards. (They each put the top three cards of their library into their graveyard.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Caroline Gariba" />
@@ -1950,7 +1950,7 @@ Whenever an opponent sacrifices a nontoken permanent or discards a permanent car
         <property name="Color" value="Black" />
         <property name="Type" value="Legendary Artifact" />
         <property name="Rules">
-          <s value="T">{T}</s>: Target player loses 3 life unless they sacrifice a nonland permanent or discard a card.
+          <s value="T">{T}</s>: Target player loses 3 life unless they sacrifice a nonland permanent of their choice or discard a card.
 <s value="3">{3}</s><s value="B">{B}</s>: Untap Tergrid's Lantern.</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
@@ -2110,7 +2110,7 @@ Boast — <s value="1">{1}</s>: You may change Arni Brokenbrow's base power to 1
       <property name="Subtype" value="Dwarf Berserker" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>: Target creature gains haste until end of turn.</property>
+        <s value="T">{T}</s>: Target creature gains haste until end of turn. (It can attack and <s value="T">{T}</s> this turn.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Evyn Fong" />
@@ -2570,7 +2570,7 @@ As long as enchanted permanent is an Equipment, it has "Equipped creature gets +
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">As an additional cost to cast this spell, discard a card.
-Draw two cards and create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
+Draw two cards and create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")</property>
       <property name="Artist" value="Jesper Ejsing" />
       <property name="Number" value="149" />
     </card>
@@ -2919,7 +2919,7 @@ Crew 4</property>
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Deathtouch
+      <property name="Rules">Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
 Whenever a creature you control with deathtouch deals combat damage to a player, that player gets two poison counters. (A player with ten or more poison counters loses the game.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
@@ -3687,8 +3687,8 @@ III — Whenever an Elf you control attacks this turn, target creature an oppone
       <property name="Subtype" value="Vampire Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Immersturm Predator becomes tapped, exile up to one target card from a graveyard and put a +1/+1 counter on Immersturm Predator.
-Sacrifice another creature: Immersturm Predator gains indestructible until end of turn. Tap it.</property>
+Whenever this creature becomes tapped, exile up to one target card from a graveyard and put a +1/+1 counter on this creature.
+Sacrifice another creature: This creature gains indestructible until end of turn. Tap it.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Nicholas Gregory" />
@@ -4130,7 +4130,7 @@ Crew 1 (Tap any number of creatures you control with total power 1 or more: This
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Equipped creature gets +1/+1.
-Whenever equipped creature deals combat damage to a player, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")
+Whenever equipped creature deals combat damage to a player, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")
 Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Dan Murayama Scott" />
       <property name="Number" value="239" />
@@ -5246,7 +5246,7 @@ Whenever an opponent sacrifices a nontoken permanent or discards a permanent car
         <property name="Color" value="Black" />
         <property name="Type" value="Legendary Artifact" />
         <property name="Rules">
-          <s value="T">{T}</s>: Target player loses 3 life unless they sacrifice a nonland permanent or discard a card.
+          <s value="T">{T}</s>: Target player loses 3 life unless they sacrifice a nonland permanent of their choice or discard a card.
 <s value="3">{3}</s><s value="B">{B}</s>: Untap Tergrid's Lantern.</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
@@ -5467,7 +5467,7 @@ Crew 4</property>
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Deathtouch
+      <property name="Rules">Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
 Whenever a creature you control with deathtouch deals combat damage to a player, that player gets two poison counters. (A player with ten or more poison counters loses the game.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
@@ -6419,8 +6419,8 @@ You may cast creature spells of the chosen type from the top of your library.</p
       <property name="Subtype" value="Vampire Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Immersturm Predator becomes tapped, exile up to one target card from a graveyard and put a +1/+1 counter on Immersturm Predator.
-Sacrifice another creature: Immersturm Predator gains indestructible until end of turn. Tap it.</property>
+Whenever this creature becomes tapped, exile up to one target card from a graveyard and put a +1/+1 counter on this creature.
+Sacrifice another creature: This creature gains indestructible until end of turn. Tap it.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Nicholas Gregory" />
@@ -6520,7 +6520,8 @@ As long as you control six or more lands, lands you control have "<s value="T">{
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel Cleric" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Flying, lifelink
+      <property name="Rules">Flying
+Lifelink (Damage dealt by this creature also causes you to gain that much life.)
 At the beginning of each end step, if you gained 4 or more life this turn, create a 4/4 white Angel creature token with flying and vigilance.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
@@ -6661,7 +6662,7 @@ Pay 3 life: Return Cleaving Reaper from your graveyard to your hand. Activate on
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-Whenever another Angel you control enters, put a +1/+1 counter on Youthful Valkyrie.</property>
+Whenever another Angel you control enters, put a +1/+1 counter on this creature.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Anna Steinbauer" />
@@ -6846,7 +6847,7 @@ Whenever another creature you control named Gladewalker Ritualist enters, draw a
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When Rampage of the Valkyries enters, create a 4/4 white Angel creature token with flying and vigilance.
-Whenever an Angel you control dies, each other player sacrifices a creature.</property>
+Whenever an Angel you control dies, each other player sacrifices a creature of their choice.</property>
       <property name="Artist" value="Billy Christian" />
       <property name="Number" value="393" />
       <property name="Packaging" value="Special" />

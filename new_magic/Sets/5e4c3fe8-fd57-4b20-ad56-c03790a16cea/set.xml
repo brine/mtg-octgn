@@ -844,7 +844,7 @@ Keen Sight — When Scouting Hawk enters, if an opponent controls more lands tha
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="3">{3}</s>
-        <s value="W">{W}</s>: Creatures you control get +1/+1 and gain vigilance until end of turn. Activate only during your turn.</property>
+        <s value="W">{W}</s>: Creatures you control get +1/+1 and gain vigilance until end of turn. Activate only during your turn. (Attacking doesn't cause them to tap.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="John Thacker" />
@@ -2127,7 +2127,7 @@ Whenever Ancient Brass Dragon deals combat damage to a player, roll a d20. When 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Devil" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Animate Chains — When Chain Devil enters, each player sacrifices a nontoken creature.</property>
+      <property name="Rules">Animate Chains — When Chain Devil enters, each player sacrifices a nontoken creature of their choice.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Bartek Fedyczak" />
@@ -2398,8 +2398,8 @@ Mold Harvest — <s value="1">{1}</s>, Sacrifice another creature or an artifact
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Roll a d20.
-1—9 | Choose an opponent. That player sacrifices a creature.
-10—19 | Each opponent sacrifices a creature.
+1—9 | Choose an opponent. That player sacrifices a creature of their choice.
+10—19 | Each opponent sacrifices a creature of their choice.
 20 | Each opponent sacrifices a creature with the greatest power among creatures that player controls.</property>
       <property name="Artist" value="SUZHIHUI" />
       <property name="Number" value="135" />
@@ -2888,7 +2888,7 @@ Whenever Ancient Copper Dragon deals combat damage to a player, roll a d20. You 
       <property name="Rules">Flying
 Whenever Balor attacks or dies, choose one or more. Each mode must target a different player.
 • Target opponent draws three cards, then discards three cards at random.
-• Target opponent sacrifices a nontoken artifact.
+• Target opponent sacrifices a nontoken artifact of their choice.
 • Balor deals damage to target opponent equal to the number of cards in their hand.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
@@ -4535,7 +4535,7 @@ When Skullwinder enters, return target card from your graveyard to your hand, th
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Fungus" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Undercellar Myconid enters or dies, create a 1/1 green Saproling creature token.
+      <property name="Rules">Whenever Undercellar Myconid enters or dies, create a 1/1 green Saproling creature token.
 <s value="T">{T}</s>: Add one mana of any color.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
@@ -5047,7 +5047,7 @@ Minsc " Boo, Timeless Heroes can be your commander.</property>
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elf Cleric" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Ward <s value="X">{X}</s>, where X is the number of experience counters you have.
+      <property name="Rules">Minthara has ward <s value="X">{X}</s>, where X is the number of experience counters you have.
 At the beginning of your end step, if a permanent you controlled left the battlefield this turn, you get an experience counter.
 Creatures you control get +1/+0 for each experience counter you have.</property>
       <property name="Power" value="2" />
@@ -5302,8 +5302,8 @@ Whenever Thrakkus the Butcher attacks, double the power of each Dragon you contr
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Equipped creature has deathtouch and lifelink.
-Equip <s value="2">{2}</s></property>
+      <property name="Rules">Equipped creature has deathtouch and lifelink. (Any amount of damage it deals to a creature is enough to destroy it. Damage dealt by this creature also causes you to gain that much life.)
+Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Craig J Spearing" />
       <property name="Number" value="300" />
     </card>
@@ -5347,7 +5347,7 @@ Equip <s value="4">{4}</s></property>
       <property name="Subtype" value="Elk" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="3">{3}</s>, Sacrifice Burnished Hart: Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.</property>
+        <s value="3">{3}</s>, Sacrifice this creature: Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Jakub Kasper" />
@@ -5517,8 +5517,8 @@ At the beginning of each player's upkeep, that player may pay <s value="2">{2}</
       <property name="Subtype" value="Construct" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">This spell costs <s value="1">{1}</s> less to cast for each Gate you control.
-Gate Colossus can't be blocked by creatures with power 2 or less.
-Whenever a Gate you control enters, you may put Gate Colossus from your graveyard on top of your library.</property>
+This creature can't be blocked by creatures with power 2 or less.
+Whenever a Gate you control enters, you may put this card from your graveyard on top of your library.</property>
       <property name="Power" value="8" />
       <property name="Toughness" value="8" />
       <property name="Artist" value="Emmanuel Shiu" />
@@ -5639,7 +5639,7 @@ When Marut enters, if mana from a Treasure was spent to cast it, create a Treasu
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Meteor Golem enters, destroy target nonland permanent an opponent controls.</property>
+      <property name="Rules">When this creature enters, destroy target nonland permanent an opponent controls.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="James Paick" />
@@ -5865,8 +5865,8 @@ Whenever a player casts a spell, they lose 1 life for each spell they've cast th
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control.)
-Equip <s value="1">{1}</s></property>
+      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and <s value="T">{T}</s> no matter when it came under your control.)
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Manuel Castañón" />
       <property name="Number" value="339" />
     </card>
@@ -6033,7 +6033,7 @@ As Cliffgate enters, choose a color other than red.
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Mauricio Calle" />
       <property name="Number" value="352" />
       <property name="Flags" value="C" />
@@ -7461,7 +7461,7 @@ Whenever another nontoken Dragon you control enters, create a token that's a cop
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elf Cleric" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Ward <s value="X">{X}</s>, where X is the number of experience counters you have.
+      <property name="Rules">Minthara has ward <s value="X">{X}</s>, where X is the number of experience counters you have.
 At the beginning of your end step, if a permanent you controlled left the battlefield this turn, you get an experience counter.
 Creatures you control get +1/+0 for each experience counter you have.</property>
       <property name="Power" value="2" />
@@ -9290,7 +9290,7 @@ Whenever another nontoken Dragon you control enters, create a token that's a cop
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elf Cleric" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Ward <s value="X">{X}</s>, where X is the number of experience counters you have.
+      <property name="Rules">Minthara has ward <s value="X">{X}</s>, where X is the number of experience counters you have.
 At the beginning of your end step, if a permanent you controlled left the battlefield this turn, you get an experience counter.
 Creatures you control get +1/+0 for each experience counter you have.</property>
       <property name="Power" value="2" />
@@ -9940,7 +9940,7 @@ Whenever Ravenloft Adventurer attacks, if you've completed a dungeon, defending 
       <property name="Rules">Flying
 Whenever Balor attacks or dies, choose one or more. Each mode must target a different player.
 • Target opponent draws three cards, then discards three cards at random.
-• Target opponent sacrifices a nontoken artifact.
+• Target opponent sacrifices a nontoken artifact of their choice.
 • Balor deals damage to target opponent equal to the number of cards in their hand.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
@@ -10235,8 +10235,8 @@ When Undermountain Adventurer enters, you take the initiative.
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Equipped creature has deathtouch and lifelink.
-Equip <s value="2">{2}</s></property>
+      <property name="Rules">Equipped creature has deathtouch and lifelink. (Any amount of damage it deals to a creature is enough to destroy it. Damage dealt by this creature also causes you to gain that much life.)
+Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Craig J Spearing" />
       <property name="Number" value="595" />
       <property name="Packaging" value="Special" />
@@ -12049,7 +12049,7 @@ When Irregular Cohort enters, create a 2/2 colorless Shapeshifter creature token
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Cat Warrior" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">First strike
+      <property name="Rules">First strike (This creature deals combat damage before creatures without first strike.)
 <s value="3">{3}</s><s value="W">{W}</s><s value="W">{W}</s>: Attacking creatures you control get +X/+X until end of turn, where X is the number of attacking creatures.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -12815,7 +12815,7 @@ Raid — <s value="1">{1}</s><s value="B">{B}</s>: Return Bloodsoaked Champion f
       <property name="Subtype" value="Vampire Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Butcher of Malakir or another creature you control dies, each opponent sacrifices a creature.</property>
+Whenever Butcher of Malakir or another creature you control dies, each opponent sacrifices a creature of their choice.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Jason Chan" />
@@ -12993,7 +12993,7 @@ Whenever a creature dies, you gain 2 life.</property>
       <property name="Subtype" value="Horror" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">As an additional cost to cast this spell, sacrifice a creature, discard a card, or pay 4 life.
-When Dusk Mangler enters, each opponent sacrifices a creature, discards a card, and loses 4 life.</property>
+When Dusk Mangler enters, each opponent sacrifices a creature of their choice, discards a card, and loses 4 life.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Antonio José Manzanedo" />
@@ -13687,7 +13687,7 @@ When Dire Fleet Daredevil enters, exile target instant or sorcery card from an o
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Drakuseth, Maw of Flames attacks, it deals 4 damage to any target and 3 damage to each of up to two other targets.</property>
+Whenever Drakuseth attacks, it deals 4 damage to any target and 3 damage to each of up to two other targets.</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="7" />
       <property name="Artist" value="Grzegorz Rutkowski" />
@@ -13752,7 +13752,7 @@ Whenever Dream Pillager deals combat damage to a player, exile that many cards f
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elder Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Etali, Primal Storm attacks, exile the top card of each player's library, then you may cast any number of spells from among those cards without paying their mana costs.</property>
+      <property name="Rules">Whenever Etali attacks, exile the top card of each player's library, then you may cast any number of spells from among those cards without paying their mana costs.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Raymond Swanland" />
@@ -14568,7 +14568,7 @@ Rebound (If you cast this spell from your hand, exile it as it resolves. At the 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Berserker" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Haste
+      <property name="Rules">Haste (This creature can attack and <s value="T">{T}</s> as soon as it comes under your control.)
 Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
@@ -14938,7 +14938,7 @@ Everflowing Chalice enters with a charge counter on it for each time it was kick
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>.
-<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Hedron Archive: Draw two cards.</property>
+<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Draw two cards.</property>
       <property name="Artist" value="Craig J Spearing" />
       <property name="Number" value="861" />
       <property name="Packaging" value="Special" />
@@ -15101,8 +15101,8 @@ Equip <s value="1">{1}</s></property>
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Solemn Simulacrum enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
-When Solemn Simulacrum dies, you may draw a card.</property>
+      <property name="Rules">When this creature enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
+When this creature dies, you may draw a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Donato Giancola" />
@@ -15136,8 +15136,8 @@ When Solemn Simulacrum dies, you may draw a card.</property>
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-<s value="2">{2}</s>: Steel Hellkite gets +1/+0 until end of turn.
-<s value="X">{X}</s>: Destroy each nonland permanent with mana value X whose controller was dealt combat damage by Steel Hellkite this turn. Activate only once each turn.</property>
+<s value="2">{2}</s>: This creature gets +1/+0 until end of turn.
+<s value="X">{X}</s>: Destroy each nonland permanent with mana value X whose controller was dealt combat damage by this creature this turn. Activate only once each turn.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Jaime Jones" />
@@ -15755,8 +15755,8 @@ Sunken Hollow enters tapped unless you control two or more basic lands.</propert
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Abandon enters tapped.
-When Temple of Abandon enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="921" />
@@ -15768,8 +15768,8 @@ When Temple of Abandon enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Deceit enters tapped.
-When Temple of Deceit enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="922" />
@@ -15781,8 +15781,8 @@ When Temple of Deceit enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Epiphany enters tapped.
-When Temple of Epiphany enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="923" />
@@ -15794,8 +15794,8 @@ When Temple of Epiphany enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Silence enters tapped.
-When Temple of Silence enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="924" />

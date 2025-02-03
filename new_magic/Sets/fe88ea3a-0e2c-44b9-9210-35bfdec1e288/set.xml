@@ -120,7 +120,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Cleric" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Banisher Priest enters, exile target creature an opponent controls until Banisher Priest leaves the battlefield. (That creature returns under its owner's control.)</property>
+      <property name="Rules">When Banisher Priest enters, exile target creature an opponent controls until Banisher Priest leaves the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Willian Murai" />
@@ -283,7 +283,8 @@ Other creatures you control get +1/+1 for each Aura and Equipment attached to He
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying, vigilance</property>
+      <property name="Rules">Flying
+Vigilance (Attacking doesn't cause this creature to tap.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Donato Giancola" />
@@ -390,7 +391,7 @@ Creatures your opponents control attack each combat if able.</property>
       <property name="Subtype" value="Merfolk Pirate" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flash (You may cast this spell any time you could cast an instant.)
-Whenever you cast a spell during an opponent's turn, put a +1/+1 counter on Brineborn Cutthroat.</property>
+Whenever you cast a spell during an opponent's turn, put a +1/+1 counter on this creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Caio Monteiro" />
@@ -450,8 +451,9 @@ When Diluvian Primordial enters, for each opponent, you may cast up to one targe
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Defender, flying
-Prevent all combat damage that would be dealt to and dealt by Fog Bank.</property>
+      <property name="Rules">Defender (This creature can't attack.)
+Flying
+Prevent all combat damage that would be dealt to and dealt by this creature.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Howard Lyon" />
@@ -705,7 +707,7 @@ Enchanted creature gets +2/+2, has flying, and can't attack you or planeswalkers
       <property name="Subtype" value="Demon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying, trample
-Whenever Demon of Loathing deals combat damage to a player, that player sacrifices a creature.</property>
+Whenever Demon of Loathing deals combat damage to a player, that player sacrifices a creature of their choice.</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="7" />
       <property name="Artist" value="Tomasz Jedruszek" />
@@ -783,7 +785,7 @@ You may cast Demonic Embrace from your graveyard by paying 3 life and discarding
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie Warrior" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Fleshbag Marauder enters, each player sacrifices a creature.</property>
+      <property name="Rules">When Fleshbag Marauder enters, each player sacrifices a creature of their choice.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Mark Zug" />
@@ -881,7 +883,7 @@ When Liliana's Mastery enters, create two 2/2 black Zombie creature tokens.</pro
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Maalfeld Twins dies, create two 2/2 black Zombie creature tokens.</property>
+      <property name="Rules">When this creature dies, create two 2/2 black Zombie creature tokens.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Mike Sass" />
@@ -949,7 +951,7 @@ At the beginning of your upkeep, you lose 2 life.</property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="1">{1}</s>
-        <s value="B">{B}</s>: Return Reassembling Skeleton from your graveyard to the battlefield tapped.</property>
+        <s value="B">{B}</s>: Return this card from your graveyard to the battlefield tapped.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Austin Hsu" />
@@ -1134,7 +1136,7 @@ When Dragon Egg dies, create a 2/2 red Dragon creature token with flying and "<s
       <property name="Subtype" value="Dragon Wizard" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-Whenever Dragon Mage deals combat damage to a player, each player discards their hand, then draws seven cards.</property>
+Whenever this creature deals combat damage to a player, each player discards their hand, then draws seven cards.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Matthew D. Wilson" />
@@ -1184,7 +1186,7 @@ Whenever a Dragon you control enters, it deals X damage to any target, where X i
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Drakuseth, Maw of Flames attacks, it deals 4 damage to any target and 3 damage to each of up to two other targets.</property>
+Whenever Drakuseth attacks, it deals 4 damage to any target and 3 damage to each of up to two other targets.</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="7" />
       <property name="Artist" value="Grzegorz Rutkowski" />
@@ -1268,7 +1270,7 @@ Whenever Flameblast Dragon attacks, you may pay <s value="X">{X}</s><s value="R"
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Warrior" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">As long as you control a Dragon, Kargan Dragonrider has flying. (It can't be blocked except by creatures with flying or reach.)</property>
+      <property name="Rules">As long as you control a Dragon, this creature has flying.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Greg Opalinski" />
@@ -1329,7 +1331,7 @@ When Knollspine Dragon enters, you may discard your hand and draw cards equal to
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Flying
-When Rapacious Dragon enters, create two Treasure tokens. (They're artifacts with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
+When this creature enters, create two Treasure tokens. (They're artifacts with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Johan Grenier" />
@@ -1345,7 +1347,7 @@ When Rapacious Dragon enters, create two Treasure tokens. (They're artifacts wit
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
       <property name="Rules">As an additional cost to cast this spell, discard a card.
-Draw two cards and create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
+Draw two cards and create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")</property>
       <property name="Artist" value="Jesper Ejsing" />
       <property name="Number" value="086" />
     </card>
@@ -1360,8 +1362,8 @@ Draw two cards and create a Treasure token. (It's an artifact with "<s value="T"
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Flying (This creature can't be blocked except by creatures with flying or reach.)
-<s value="R">{R}</s>: Shivan Dragon gets +1/+0 until end of turn.</property>
+      <property name="Rules">Flying
+<s value="R">{R}</s>: This creature gets +1/+0 until end of turn.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Donato Giancola" />
@@ -1422,7 +1424,7 @@ Enchanted creature gets +2/+2, has first strike, and can't attack you or planesw
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Dwynen's Elite enters, if you control another Elf, create a 1/1 green Elf Warrior creature token.</property>
+      <property name="Rules">When this creature enters, if you control another Elf, create a 1/1 green Elf Warrior creature token.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Volkan Baǵa" />
@@ -1619,7 +1621,7 @@ Target creature gets +4/+4 until end of turn.</property>
       <property name="Color" value="Green" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Creatures you control get +3/+3 and gain trample until end of turn.</property>
+      <property name="Rules">Creatures you control get +3/+3 and gain trample until end of turn. (Each of those creatures can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Artist" value="Carl Critchlow" />
       <property name="Number" value="103" />
     </card>
@@ -1721,7 +1723,8 @@ When Sylvan Messenger enters, reveal the top four cards of your library. Put all
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Archer" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Reach, deathtouch</property>
+      <property name="Rules">Reach (This creature can block creatures with flying.)
+Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Dave Kendall" />

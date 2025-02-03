@@ -174,7 +174,7 @@ Whenever Steel-Plume Marshal attacks, other attacking creatures you control with
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Corsair Captain enters, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")
+      <property name="Rules">When this creature enters, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")
 Other Pirates you control get +1/+1.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -302,7 +302,7 @@ When Nocturnal Feeder dies, each opponent loses 2 life and you gain 2 life.</pro
       <property name="Subtype" value="Human Warlock" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Deathtouch
-At the beginning of your end step, if you gained life this turn, each opponent sacrifices a creature and you return up to one target creature card from your graveyard to your hand.</property>
+At the beginning of your end step, if you gained life this turn, each opponent sacrifices a creature of their choice and you return up to one target creature card from your graveyard to your hand.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Caio Monteiro" />
@@ -1255,7 +1255,7 @@ Whenever Archon of Redemption or another creature you control with flying enters
       <property name="Color" value="White" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Put a +1/+1 counter on target creature. That creature gains first strike until end of turn. You gain 2 life.</property>
+      <property name="Rules">Put a +1/+1 counter on target creature. That creature gains first strike until end of turn. You gain 2 life. (A creature with first strike deals combat damage before creatures without first strike.)</property>
       <property name="Artist" value="Scott Murphy" />
       <property name="Number" value="091" />
     </card>
@@ -1490,7 +1490,8 @@ Enchanted creature can't attack.
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Bird" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Flying, lifelink</property>
+      <property name="Rules">Flying
+Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Milivoj Ćeran" />
@@ -1524,7 +1525,7 @@ High Sentinels of Arashin gets +1/+1 for each other creature you control with a 
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Flash
+      <property name="Rules">Flash (You may cast this spell any time you could cast an instant.)
 Enchant creature
 Enchanted creature gets +1/+2.</property>
       <property name="Artist" value="Micah Epstein" />
@@ -1732,7 +1733,7 @@ Activated abilities of creatures your opponents control can't be activated.</pro
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Unicorn" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Lifelink</property>
+      <property name="Rules">Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Winona Nelson" />
@@ -1885,7 +1886,8 @@ If you would gain life, you gain twice that much life instead.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Angel" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Flying, vigilance</property>
+      <property name="Rules">Flying
+Vigilance (Attacking doesn't cause this creature to tap.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Donato Giancola" />
@@ -2205,7 +2207,7 @@ Draw a card.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Wizard" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Exclusion Mage enters, return target creature an opponent controls to its owner's hand.</property>
+      <property name="Rules">When this creature enters, return target creature an opponent controls to its owner's hand.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Chris Seaman" />
@@ -2239,7 +2241,7 @@ Creatures you control have "Whenever this creature becomes the target of a spell
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Kitesail Corsair has flying as long as it's attacking.</property>
+      <property name="Rules">This creature has flying as long as it's attacking.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Greg Opalinski" />
@@ -2793,8 +2795,8 @@ Draw a card.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Wall" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Defender
-When Wall of Lost Thoughts enters, target player mills four cards.</property>
+      <property name="Rules">Defender (This creature can't attack.)
+When Wall of Lost Thoughts enters, target player mills four cards. (They put the top four cards of their library into their graveyard.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Adam Paquette" />
@@ -2966,7 +2968,7 @@ Counter target spell.</property>
       <property name="Color" value="Black" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Destroy target creature. Create a Food token. (It's an artifact with "<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: You gain 3 life.")</property>
+      <property name="Rules">Destroy target creature. Create a Food token. (It's an artifact with "<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this token: You gain 3 life.")</property>
       <property name="Artist" value="Zoltan Boros" />
       <property name="Number" value="201" />
     </card>
@@ -2980,7 +2982,7 @@ Counter target spell.</property>
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Each player sacrifices two creatures.</property>
+      <property name="Rules">Each player sacrifices two creatures of their choice.</property>
       <property name="Artist" value="Eric Deschamps" />
       <property name="Number" value="202" />
     </card>
@@ -3172,7 +3174,7 @@ Destroy target creature.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Rat" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Burglar Rat enters, each opponent discards a card.</property>
+      <property name="Rules">When this creature enters, each opponent discards a card.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Tyler Walpole" />
@@ -3288,7 +3290,7 @@ Sacrifice a Food: Return Cauldron Familiar from your graveyard to the battlefiel
       <property name="Subtype" value="Zombie Bird" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Flying
-When Crow of Dark Tidings enters or dies, mill two cards. (Put the top two cards of your library into your graveyard.)</property>
+When this creature enters or dies, mill two cards. (Put the top two cards of your library into your graveyard.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Tianhua X" />
@@ -3642,7 +3644,7 @@ When Gonti, Lord of Luxury enters, look at the top four cards of target opponent
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Demon" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Deathtouch
+      <property name="Rules">Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)
 Whenever another nontoken creature dies, you may draw a card.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
@@ -3657,7 +3659,7 @@ Whenever another nontoken creature dies, you may draw a card.</property>
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Each player sacrifices a creature.</property>
+      <property name="Rules">Each player sacrifices a creature of their choice.</property>
       <property name="Artist" value="Carl Critchlow" />
       <property name="Number" value="244" />
     </card>
@@ -4202,7 +4204,7 @@ Whenever a creature dealt damage by Sengir Vampire this turn dies, put a +1/+1 c
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)
 At the beginning of your upkeep, return target creature card from your graveyard to the battlefield.
-At the beginning of each opponent's upkeep, that player sacrifices a creature.</property>
+At the beginning of each opponent's upkeep, that player sacrifices a creature of their choice.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Jana Schirmer &amp; Johannes Voss" />
@@ -4330,7 +4332,7 @@ Whenever another creature dies, put a +1/+1 counter on Swarm of Bloodflies.</pro
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Zombie" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Wailing Ghoul enters, mill two cards.</property>
+      <property name="Rules">When Wailing Ghoul enters, mill two cards. (Put the top two cards of your library into your graveyard.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Svetlin Velinov" />
@@ -4407,7 +4409,7 @@ Whenever another creature dies, put a +1/+1 counter on Swarm of Bloodflies.</pro
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)
 Haste (This creature can attack and <s value="T">{T}</s> as soon as it comes under your control.)
-At the beginning of the end step, sacrifice Ball Lightning.</property>
+At the beginning of the end step, sacrifice this creature.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Trevor Claxton" />
@@ -4759,7 +4761,7 @@ When Dualcaster Mage enters, copy target instant or sorcery spell. You may choos
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elder Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Etali, Primal Storm attacks, exile the top card of each player's library, then you may cast any number of spells from among those cards without paying their mana costs.</property>
+      <property name="Rules">Whenever Etali attacks, exile the top card of each player's library, then you may cast any number of spells from among those cards without paying their mana costs.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Raymond Swanland" />
@@ -4774,8 +4776,8 @@ When Dualcaster Mage enters, copy target instant or sorcery spell. You may choos
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin Pirate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Haste
-<s value="T">{T}</s>, Sacrifice Fanatical Firebrand: It deals 1 damage to any target.</property>
+      <property name="Rules">Haste (This creature can attack and <s value="T">{T}</s> as soon as it comes under your control.)
+<s value="T">{T}</s>, Sacrifice this creature: It deals 1 damage to any target.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Wayne Reynolds" />
@@ -5434,7 +5436,7 @@ Other Minotaur creatures you control get +1/+1 and have trample.</property>
       <property name="Subtype" value="Dragon" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-When Rapacious Dragon enters, create two Treasure tokens. (They're artifacts with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
+When this creature enters, create two Treasure tokens. (They're artifacts with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Johan Grenier" />
@@ -5605,7 +5607,7 @@ Volcanic Fallout deals 2 damage to each creature and each player.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Goblin Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Volley Veteran enters, it deals damage to target creature an opponent controls equal to the number of Goblins you control.</property>
+      <property name="Rules">When this creature enters, it deals damage to target creature an opponent controls equal to the number of Goblins you control.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Craig J Spearing" />
@@ -5637,7 +5639,7 @@ Volcanic Fallout deals 2 damage to each creature and each player.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Shaman" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Reach
+      <property name="Rules">Reach (This creature can block creatures with flying.)
 Whenever you cast an instant or sorcery spell, Weaver of Lightning deals 1 damage to target creature an opponent controls.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="4" />
@@ -5670,7 +5672,7 @@ Whenever you cast an instant or sorcery spell, Weaver of Lightning deals 1 damag
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Affectionate Indrik enters, you may have it fight target creature you don't control. (Each deals damage equal to its power to the other.)</property>
+      <property name="Rules">When this creature enters, you may have it fight target creature you don't control. (Each deals damage equal to its power to the other.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Steve Prescott" />
@@ -5714,7 +5716,7 @@ Draw a card.</property>
       <property name="Color" value="Green" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Put a +1/+1 counter on target creature. That creature gains reach until end of turn.</property>
+      <property name="Rules">Put a +1/+1 counter on target creature. That creature gains reach until end of turn. (It can block creatures with flying.)</property>
       <property name="Artist" value="Bayard Wu" />
       <property name="Number" value="376" />
     </card>
@@ -5791,7 +5793,7 @@ Draw a card.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Beast" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Vigilance</property>
+      <property name="Rules">Vigilance (Attacking doesn't cause this creature to tap.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Raoul Vitale" />
@@ -5923,7 +5925,7 @@ When Craterhoof Behemoth enters, creatures you control gain trample and get +X/+
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Elf Warrior" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Dwynen's Elite enters, if you control another Elf, create a 1/1 green Elf Warrior creature token.</property>
+      <property name="Rules">When this creature enters, if you control another Elf, create a 1/1 green Elf Warrior creature token.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Volkan Baǵa" />
@@ -6083,7 +6085,7 @@ Enchanted creature gets +2/+2.</property>
       <property name="Subtype" value="Elder Dinosaur" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">This spell costs <s value="X">{X}</s> less to cast, where X is the total power of creatures you control.
-Trample</property>
+Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="12" />
       <property name="Toughness" value="12" />
       <property name="Artist" value="Chase Stone" />
@@ -6294,7 +6296,7 @@ You draw cards equal to the sacrificed creature's power, then you gain life equa
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Insect" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">At the beginning of combat on your turn, if you control another creature with power 4 or greater, put a +1/+1 counter on Nessian Hornbeetle.</property>
+      <property name="Rules">At the beginning of combat on your turn, if you control another creature with power 4 or greater, put a +1/+1 counter on this creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Jason Felix" />
@@ -6311,7 +6313,7 @@ You draw cards equal to the sacrificed creature's power, then you gain life equa
       <property name="Subtype" value="Aura" />
       <property name="Rarity" value="Common" />
       <property name="Rules">Enchant land
-When New Horizons enters, put a +1/+1 counter on target creature you control.
+When this Aura enters, put a +1/+1 counter on target creature you control.
 Enchanted land has "<s value="T">{T}</s>: Add two mana of any one color."</property>
       <property name="Artist" value="Noah Bradley" />
       <property name="Number" value="414" />
@@ -6691,7 +6693,7 @@ When Thragtusk leaves the battlefield, create a 3/3 green Beast creature token.<
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Other Dinosaurs you control get +1/+1.
-<s value="5">{5}</s><s value="G">{G}</s>: Create a 3/3 green Dinosaur creature token with trample.</property>
+<s value="5">{5}</s><s value="G">{G}</s>: Create a 3/3 green Dinosaur creature token with trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Tomasz Jedruszek" />
@@ -6806,7 +6808,7 @@ Reach (This creature can block creatures with flying.)</property>
       <property name="Subtype" value="Elf Shaman" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="8">{8}</s>: Target creature gets +5/+5 and gains trample until end of turn.</property>
+        <s value="8">{8}</s>: Target creature gets +5/+5 and gains trample until end of turn. (It can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Erica Yang" />
@@ -7151,7 +7153,7 @@ Whenever Maelstrom Archangel deals combat damage to a player, you may cast a spe
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Food Golem" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Haste
+      <property name="Rules">Haste (This creature can attack and <s value="T">{T}</s> as soon as it comes under your control.)
 <s value="1">{1}</s>: Gingerbrute can't be blocked this turn except by creatures with haste.
 <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Gingerbrute: You gain 3 life.</property>
       <property name="Power" value="1" />
@@ -7183,7 +7185,7 @@ Whenever Maelstrom Archangel deals combat damage to a player, you may cast a spe
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>.
-<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Hedron Archive: Draw two cards.</property>
+<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Draw two cards.</property>
       <property name="Artist" value="Craig J Spearing" />
       <property name="Number" value="468" />
     </card>
@@ -7226,8 +7228,8 @@ At the beginning of your upkeep, look at the top card of your library. If it's a
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Juggernaut" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Juggernaut attacks each combat if able.
-Juggernaut can't be blocked by Walls.</property>
+      <property name="Rules">This creature attacks each combat if able.
+This creature can't be blocked by Walls.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Kev Walker" />
@@ -7269,7 +7271,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Golem" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Meteor Golem enters, destroy target nonland permanent an opponent controls.</property>
+      <property name="Rules">When this creature enters, destroy target nonland permanent an opponent controls.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Lake Hurwitz" />
@@ -7314,7 +7316,7 @@ Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you 
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Pirate's Cutlass enters, attach it to target Pirate you control.
+      <property name="Rules">When this Equipment enters, attach it to target Pirate you control.
 Equipped creature gets +2/+1.
 Equip <s value="2">{2}</s> (<s value="2">{2}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="John Stanko" />

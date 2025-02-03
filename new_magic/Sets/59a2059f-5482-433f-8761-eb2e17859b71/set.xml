@@ -341,7 +341,7 @@ At the beginning of your end step, you may pay <s value="1">{1}</s>. If you do, 
       <property name="Type" value="Enchantment Creature" />
       <property name="Subtype" value="Fox Monk" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Lifelink</property>
+      <property name="Rules">Lifelink (Damage dealt by this creature also causes you to gain that much life.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Jesper Ejsing" />
@@ -741,7 +741,7 @@ Flying</property>
       <property name="Type" value="Enchantment Creature" />
       <property name="Subtype" value="Human Samurai" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Vigilance
+      <property name="Rules">Vigilance (Attacking doesn't cause this creature to tap.)
 Channel — <s value="2">{2}</s>, Discard Sunblade Samurai: Search your library for a basic Plains card, reveal it, put it into your hand, then shuffle. You gain 2 life.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -1263,7 +1263,7 @@ Whenever Moonfolk Puzzlemaker becomes tapped, scry 1.</property>
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="T">{T}</s>, Tap an untapped artifact or creature you control: Add <s value="C">{C}</s>.
-Channel — <s value="4">{4}</s><s value="U">{U}</s>, Discard Moonsnare Prototype: The owner of target nonland permanent puts it on the top or bottom of their library.</property>
+Channel — <s value="4">{4}</s><s value="U">{U}</s>, Discard Moonsnare Prototype: The owner of target nonland permanent puts it on their choice of the top or bottom of their library.</property>
       <property name="Artist" value="Fariba Khamseh" />
       <property name="Number" value="069" />
     </card>
@@ -1731,7 +1731,7 @@ At the beginning of your end step, you may pay <s value="1">{1}</s>. When you do
       <property name="Subtype" value="Spirit" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-When Gravelighter enters, draw a card if a creature died this turn. Otherwise, each player sacrifices a creature.</property>
+When Gravelighter enters, draw a card if a creature died this turn. Otherwise, each player sacrifices a creature of their choice.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Miranda Meeks" />
@@ -1784,7 +1784,7 @@ When Gravelighter enters, draw a card if a creature died this turn. Otherwise, e
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target opponent sacrifices a creature. If they can't, they lose 2 life and you draw a card. Then repeat this process for an enchantment and a planeswalker.</property>
+      <property name="Rules">Target opponent sacrifices a creature of their choice. If they can't, they lose 2 life and you draw a card. Then repeat this process for an enchantment and a planeswalker.</property>
       <property name="Artist" value="Olivier Bernard" />
       <property name="Number" value="101" />
     </card>
@@ -1927,7 +1927,7 @@ III — Exile this Saga, then return it to the battlefield transformed under you
       <property name="Subtype" value="Saga" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
-I, II — Each opponent sacrifices a creature unless they discard a card.
+I, II — Each opponent sacrifices a creature of their choice unless they discard a card.
 III — Exile this Saga, then return it to the battlefield transformed under your control.</property>
       <property name="Artist" value="Tuan Duong Chu" />
       <property name="Number" value="109" />
@@ -2624,7 +2624,7 @@ Channel — <s value="1">{1}</s><s value="R">{R}</s>, Discard Ironhoof Boar: Tar
       <property name="Color" value="Red" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Target creature gets +1/+0 and gains first strike until end of turn.</property>
+      <property name="Rules">Target creature gets +1/+0 and gains first strike until end of turn. (It deals combat damage before creatures without first strike.)</property>
       <property name="Artist" value="Dmitry Burmak" />
       <property name="Number" value="151" />
     </card>
@@ -4580,8 +4580,8 @@ Walking Skyscraper has hexproof as long as it's untapped. (It can't be the targe
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Bloodfell Caves enters tapped.
-When Bloodfell Caves enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Julian Kok Joon Wen" />
       <property name="Number" value="264" />
@@ -4593,8 +4593,8 @@ When Bloodfell Caves enters, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Blossoming Sands enters tapped.
-When Blossoming Sands enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Sarah Finnigan" />
       <property name="Number" value="265" />
@@ -4618,8 +4618,8 @@ Channel — <s value="1">{1}</s><s value="G">{G}</s>, Discard Boseiju, Who Endur
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Dismal Backwater enters tapped.
-When Dismal Backwater enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Chris Ostrowski" />
       <property name="Number" value="267" />
@@ -4643,8 +4643,8 @@ Channel — <s value="2">{2}</s><s value="W">{W}</s>, Discard Eiganjo, Seat of t
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Jungle Hollow enters tapped.
-When Jungle Hollow enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Lucas Staniec" />
       <property name="Number" value="269" />
@@ -4693,8 +4693,8 @@ Channel — <s value="3">{3}</s><s value="U">{U}</s>, Discard Otawara, Soaring C
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Rugged Highlands enters tapped.
-When Rugged Highlands enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Alayna Danner" />
       <property name="Number" value="273" />
@@ -4706,8 +4706,8 @@ When Rugged Highlands enters, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Scoured Barrens enters tapped.
-When Scoured Barrens enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Julian Kok Joon Wen" />
       <property name="Number" value="274" />
@@ -4719,7 +4719,7 @@ When Scoured Barrens enters, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">As Secluded Courtyard enters, choose a creature type.
+      <property name="Rules">As this land enters, choose a creature type.
 <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type or activate an ability of a creature source of the chosen type.</property>
       <property name="Artist" value="Sam Burley" />
@@ -4743,8 +4743,8 @@ Channel — <s value="3">{3}</s><s value="R">{R}</s>, Discard Sokenzan, Crucible
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Swiftwater Cliffs enters tapped.
-When Swiftwater Cliffs enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Alayna Danner" />
       <property name="Number" value="277" />
@@ -4768,8 +4768,8 @@ Channel — <s value="3">{3}</s><s value="B">{B}</s>, Discard Takenuma, Abandone
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Thornwood Falls enters tapped.
-When Thornwood Falls enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="279" />
@@ -4781,8 +4781,8 @@ When Thornwood Falls enters, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Tranquil Cove enters tapped.
-When Tranquil Cove enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Alayna Danner" />
       <property name="Number" value="280" />
@@ -4794,7 +4794,7 @@ When Tranquil Cove enters, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Uncharted Haven enters tapped. As it enters, choose a color.
+      <property name="Rules">This land enters tapped. As it enters, choose a color.
 <s value="T">{T}</s>: Add one mana of the chosen color.</property>
       <property name="Artist" value="Lorenzo Lanfranconi" />
       <property name="Number" value="281" />
@@ -4805,8 +4805,8 @@ When Tranquil Cove enters, you gain 1 life.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Wind-Scarred Crag enters tapped.
-When Wind-Scarred Crag enters, you gain 1 life.
+      <property name="Rules">This land enters tapped.
+When this land enters, you gain 1 life.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Yeong-Hao Han" />
       <property name="Number" value="282" />
@@ -5264,7 +5264,7 @@ Flying</property>
       <property name="Type" value="Enchantment Creature" />
       <property name="Subtype" value="Human Samurai" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Vigilance
+      <property name="Rules">Vigilance (Attacking doesn't cause this creature to tap.)
 Channel — <s value="2">{2}</s>, Discard Sunblade Samurai: Search your library for a basic Plains card, reveal it, put it into your hand, then shuffle. You gain 2 life.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -6525,7 +6525,7 @@ Reconfigure <s value="2">{2}</s><s value="B">{B}</s><s value="B">{B}</s> (<s val
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target opponent sacrifices a creature. If they can't, they lose 2 life and you draw a card. Then repeat this process for an enchantment and a planeswalker.</property>
+      <property name="Rules">Target opponent sacrifices a creature of their choice. If they can't, they lose 2 life and you draw a card. Then repeat this process for an enchantment and a planeswalker.</property>
       <property name="Artist" value="Tomohito" />
       <property name="Number" value="379" />
       <property name="Packaging" value="Special" />
@@ -7088,7 +7088,7 @@ When Atsushi, the Blazing Sky dies, choose one —
 • Create three Treasure tokens.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
-      <property name="Artist" value="Toshiaki Takayama" />
+      <property name="Artist" value="Takayama Toshiaki" />
       <property name="Number" value="410" />
       <property name="Packaging" value="Special" />
     </card>
@@ -7919,7 +7919,7 @@ Reconfigure <s value="2">{2}</s><s value="B">{B}</s><s value="B">{B}</s> (<s val
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target opponent sacrifices a creature. If they can't, they lose 2 life and you draw a card. Then repeat this process for an enchantment and a planeswalker.</property>
+      <property name="Rules">Target opponent sacrifices a creature of their choice. If they can't, they lose 2 life and you draw a card. Then repeat this process for an enchantment and a planeswalker.</property>
       <property name="Artist" value="Olivier Bernard" />
       <property name="Number" value="455" />
       <property name="Packaging" value="Special" />
@@ -8894,7 +8894,7 @@ Channel — <s value="3">{3}</s><s value="B">{B}</s>, Discard Takenuma, Abandone
       <property name="Color" value="Black" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Target opponent sacrifices a creature. If they can't, they lose 2 life and you draw a card. Then repeat this process for an enchantment and a planeswalker.</property>
+      <property name="Rules">Target opponent sacrifices a creature of their choice. If they can't, they lose 2 life and you draw a card. Then repeat this process for an enchantment and a planeswalker.</property>
       <property name="Artist" value="Donato Giancola" />
       <property name="Number" value="506" />
       <property name="Packaging" value="Special" />
@@ -8999,7 +8999,7 @@ Other Ninja and Rogue creatures you control get +1/+1.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">As Secluded Courtyard enters, choose a creature type.
+      <property name="Rules">As this land enters, choose a creature type.
 <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type or activate an ability of a creature source of the chosen type.</property>
       <property name="Artist" value="Sam Burley" />

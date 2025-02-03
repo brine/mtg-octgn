@@ -94,7 +94,7 @@ Search your library for a creature card with mana value X or less, where X is 2 
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Counter target noncreature spell. Its controller creates two Treasure tokens. (They're artifacts with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
+      <property name="Rules">Counter target noncreature spell. Its controller creates two Treasure tokens. (They're artifacts with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")</property>
       <property name="Artist" value="Miho Irie" />
       <property name="Number" value="007" />
     </card>
@@ -436,6 +436,76 @@ Destroy all creatures that entered this turn.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="031" />
       <property name="Flags" value="W" />
+    </card>
+    <card name="Karn Liberated" id="c4a7d70f-387d-40c5-bb3a-ba49a2b89855">
+      <property name="Cost">
+        <s value="7">{7}</s>
+      </property>
+      <property name="CMC" value="7" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Planeswalker" />
+      <property name="Subtype" value="Karn" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">+4: Target player exiles a card from their hand.
+−3: Exile target permanent.
+−14: Restart the game, leaving in exile all non-Aura permanent cards exiled with Karn Liberated. Then put those cards onto the battlefield under your control.</property>
+      <property name="Loyalty" value="6" />
+      <property name="Artist" value="Kieran Yanner" />
+      <property name="Number" value="036" />
+    </card>
+    <card name="Lightning Bolt" id="b9399b98-a545-47b2-99bb-6d8251d9ae76">
+      <property name="Cost">
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Lightning Bolt deals 3 damage to any target.</property>
+      <property name="Artist" value="Peach Momoko" />
+      <property name="Number" value="037" />
+    </card>
+    <card name="Questing Druid" id="87776882-d3f6-4f80-8529-01feb416bb36">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Human Druid" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever you cast a spell that's white, blue, black, or red, put a +1/+1 counter on Questing Druid.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Jordan Speer" />
+      <property name="Number" value="038" />
+      <alternate name="Seek the Beast" type="adventure">
+        <property name="Cost">
+          <s value="1">{1}</s>
+          <s value="R">{R}</s>
+        </property>
+        <property name="Color" value="Red" />
+        <property name="Type" value="Instant" />
+        <property name="Subtype" value="Adventure" />
+        <property name="Rules">Exile the top two cards of your library. Until your next end step, you may play those cards.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
+    </card>
+    <card name="Sudden Edict" id="a4630fe2-f1d2-4ae5-9840-886a95c42aab">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Split second (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)
+Target player sacrifices a creature of their choice.</property>
+      <property name="Artist" value="Sadboi" />
+      <property name="Number" value="039" />
     </card>
     <card name="Convention Maro" id="c8eef19e-30a8-4e3d-abf7-a1435a6d6643">
       <property name="Cost">

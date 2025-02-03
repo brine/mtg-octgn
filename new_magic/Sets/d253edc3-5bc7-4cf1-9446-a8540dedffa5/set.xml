@@ -1950,7 +1950,7 @@ Everflowing Chalice enters with a charge counter on it for each time it was kick
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
-        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Expedition Map: Search your library for a land card, reveal it, put it into your hand, then shuffle.</property>
+        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Search your library for a land card, reveal it, put it into your hand, then shuffle.</property>
       <property name="Artist" value="Julian Kok Joon Wen" />
       <property name="Number" value="112" />
     </card>
@@ -2552,7 +2552,7 @@ Other Merfolk creatures you control get +1/+1.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Corsair Captain enters, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")
+      <property name="Rules">When this creature enters, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")
 Other Pirates you control get +1/+1.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -3177,7 +3177,7 @@ When Bloodtracker leaves the battlefield, draw a card for each +1/+1 counter on 
       <property name="Subtype" value="Vampire Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Butcher of Malakir or another creature you control dies, each opponent sacrifices a creature.</property>
+Whenever Butcher of Malakir or another creature you control dies, each opponent sacrifices a creature of their choice.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Jason Chan" />
@@ -3226,7 +3226,7 @@ Whenever Butcher of Malakir or another creature you control dies, each opponent 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Attacking Vampires you control have deathtouch and lifelink.
+      <property name="Rules">Attacking Vampires you control have deathtouch and lifelink. (Any amount of damage they deal to a creature is enough to destroy it. Damage dealt by those creatures also causes their controller to gain that much life.)
 Whenever a Vampire you control dies, you may pay 2 life. If you do, draw a card.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
@@ -3773,7 +3773,7 @@ When Dire Fleet Daredevil enters, exile target instant or sorcery card from an o
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Elder Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Etali, Primal Storm attacks, exile the top card of each player's library, then you may cast any number of spells from among those cards without paying their mana costs.</property>
+      <property name="Rules">Whenever Etali attacks, exile the top card of each player's library, then you may cast any number of spells from among those cards without paying their mana costs.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Raymond Swanland" />
@@ -4327,7 +4327,7 @@ Search your library for a basic land card, put it onto the battlefield tapped, t
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Other Dinosaurs you control get +1/+1.
-<s value="5">{5}</s><s value="G">{G}</s>: Create a 3/3 green Dinosaur creature token with trample.</property>
+<s value="5">{5}</s><s value="G">{G}</s>: Create a 3/3 green Dinosaur creature token with trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Brian Valeza" />
@@ -4344,7 +4344,7 @@ Search your library for a basic land card, put it onto the battlefield tapped, t
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Plant Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Vigilance
+      <property name="Rules">Vigilance (Attacking doesn't cause this creature to tap.)
 When Topiary Stomper enters, search your library for a basic land card, put it onto the battlefield tapped, then shuffle.
 Topiary Stomper can't attack or block unless you control seven or more lands.</property>
       <property name="Power" value="4" />
@@ -5220,8 +5220,8 @@ Each other creature you control of the chosen type enters with an additional +1/
       <property name="Type" value="Artifact" />
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control.)
-Equip <s value="1">{1}</s></property>
+      <property name="Rules">Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and <s value="T">{T}</s> no matter when it came under your control.)
+Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you control. Equip only as a sorcery.)</property>
       <property name="Artist" value="Svetlin Velinov" />
       <property name="Number" value="314" />
     </card>
@@ -5388,7 +5388,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Daniel Ljunggren" />
       <property name="Number" value="328" />
       <property name="Flags" value="C" />
@@ -5640,7 +5640,7 @@ When Orzhov Basilica enters, return a land you control to its owner's hand.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">As Secluded Courtyard enters, choose a creature type.
+      <property name="Rules">As this land enters, choose a creature type.
 <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type or activate an ability of a creature source of the chosen type.</property>
       <property name="Artist" value="Sam Burley" />
@@ -5722,8 +5722,8 @@ Sunken Hollow enters tapped unless you control two or more basic lands.</propert
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Mystery enters tapped.
-When Temple of Mystery enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Piotr Dura" />
       <property name="Number" value="357" />
@@ -5734,8 +5734,8 @@ When Temple of Mystery enters, scry 1.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Temple of Silence enters tapped.
-When Temple of Silence enters, scry 1.
+      <property name="Rules">This land enters tapped.
+When this land enters, scry 1. (Look at the top card of your library. You may put that card on the bottom.)
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="358" />
