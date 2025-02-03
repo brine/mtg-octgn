@@ -524,5 +524,8 @@ changelog = {
         ]),
     3060321: ("3.6.3.21", "November 1 2024", [
         "Added Foundations set"
+        ]),
+    3060322: ("3.6.3.22", "Feb 2 2024", [
+        "Added Aetherdrift and Innistrad Remastered"
         ])
 }
