@@ -13,7 +13,7 @@
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">When Admiral Brass, Unsinkable enters, mill four cards.
+      <property name="Rules">When Admiral Brass enters, mill four cards.
 At the beginning of combat on your turn, you may return target Pirate creature card from your graveyard to the battlefield with a finality counter on it. It has base power and toughness 4/4. It gains haste until end of turn. (If a creature with a finality counter on it would die, exile it instead.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -49,7 +49,7 @@ At the beginning of combat on your turn, you may return target Pirate creature c
       <property name="Subtype" value="Merfolk Scout" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">At the beginning of combat on your turn, each Merfolk creature you control explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on the exploring creature, then put the card back or put it into your graveyard.)
-Whenever Hakbal of the Surging Soul attacks, you may put a land card from your hand onto the battlefield. If you don't, draw a card.</property>
+Whenever Hakbal attacks, you may put a land card from your hand onto the battlefield. If you don't, draw a card.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Tyler Walpole" />
@@ -67,7 +67,7 @@ Whenever Hakbal of the Surging Soul attacks, you may put a land card from your h
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever Pantlaza, Sun-Favored or another Dinosaur you control enters, you may discover X, where X is that creature's toughness. Do this only once each turn. (Exile cards from the top of your library until you exile a nonland card with that mana value or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</property>
+      <property name="Rules">Whenever Pantlaza or another Dinosaur you control enters, you may discover X, where X is that creature's toughness. Do this only once each turn. (Exile cards from the top of your library until you exile a nonland card with that mana value or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Sam Burley" />
@@ -85,7 +85,7 @@ Whenever Hakbal of the Surging Soul attacks, you may put a land card from your h
       <property name="Subtype" value="Vampire Soldier" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Flying
-Whenever a player sacrifices a permanent, put a +1/+1 counter on Carmen, Cruel Skymarcher and you gain 1 life.
+Whenever a player sacrifices a permanent, put a +1/+1 counter on Carmen and you gain 1 life.
 Whenever Carmen attacks, return up to one target permanent card with mana value less than or equal to Carmen's power from your graveyard to the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -141,7 +141,7 @@ If a creature you control being dealt damage causes a triggered ability of a per
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Salamander Serpent" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever Xolatoyac, the Smiling Flood enters or attacks, put a flood counter on target land. That land is an Island in addition to its other types for as long as it has a flood counter on it.
+      <property name="Rules">Whenever Xolatoyac enters or attacks, put a flood counter on target land. That land is an Island in addition to its other types for as long as it has a flood counter on it.
 At the beginning of your end step, untap each permanent you control with a counter on it.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
@@ -175,8 +175,8 @@ At the beginning of each upkeep, create a 1/1 colorless Gnome artifact creature 
       <property name="Color" value="Black" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Altar of the Wretched enters, you may sacrifice a nontoken creature. If you do, draw X cards, then mill X cards, where X is that creature's power.
-Craft with one or more creatures <s value="2">{2}</s><s value="B">{B}</s><s value="B">{B}</s><s value="2">{2}</s><s value="B">{B}</s>: Return Altar of the Wretched from your graveyard to your hand.</property>
+      <property name="Rules">When this artifact enters, you may sacrifice a nontoken creature. If you do, draw X cards, then mill X cards, where X is that creature's power.
+Craft with one or more creatures <s value="2">{2}</s><s value="B">{B}</s><s value="B">{B}</s><s value="2">{2}</s><s value="B">{B}</s>: Return this card from your graveyard to your hand.</property>
       <property name="Artist" value="Helge C. Balzer" />
       <property name="Number" value="010" />
       <alternate name="Wretched Bonemass" type="transform">
@@ -185,7 +185,7 @@ Craft with one or more creatures <s value="2">{2}</s><s value="B">{B}</s><s valu
         <property name="Type" value="Creature" />
         <property name="Subtype" value="Skeleton Horror" />
         <property name="Rules">Wretched Bonemass's power and toughness are each equal to the total power of the exiled cards used to craft it.
-Wretched Bonemass has flying as long as an exiled card used to craft it has flying. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, protection, reach, trample, and vigilance.</property>
+This creature has flying as long as an exiled card used to craft it has flying. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, protection, reach, trample, and vigilance.</property>
         <property name="Power" value="*" />
         <property name="Toughness" value="*" />
       </alternate>
@@ -210,7 +210,7 @@ Craft with four or more red instant and/or sorcery cards <s value="3">{3}</s><s 
         <property name="Type" value="Artifact" />
         <property name="Rules">
           <s value="1">{1}</s>
-          <s value="R">{R}</s>, <s value="T">{T}</s>: Choose an exiled card used to craft Cosmium Catalyst at random. You may cast that card without paying its mana cost.</property>
+          <s value="R">{R}</s>, <s value="T">{T}</s>: Choose an exiled card used to craft this artifact at random. You may cast that card without paying its mana cost.</property>
       </alternate>
     </card>
     <card name="Contest of Claws" id="c6679e01-acd1-460a-a4c6-096059510288">
@@ -290,7 +290,7 @@ Craft with two that share a card type <s value="6">{6}</s> (<s value="6">{6}</s>
         <property name="Cost" />
         <property name="Color" value="Colorless" />
         <property name="Type" value="Artifact" />
-        <property name="Rules">Apex Observatory enters tapped. As it enters, choose a card type shared among two exiled cards used to craft it.
+        <property name="Rules">This artifact enters tapped. As it enters, choose a card type shared among two exiled cards used to craft it.
 <s value="T">{T}</s>: The next spell you cast this turn of the chosen type can be cast without paying its mana cost.</property>
       </alternate>
     </card>
@@ -313,8 +313,8 @@ Craft with one or more creatures <s value="5">{5}</s> (<s value="5">{5}</s>, Exi
         <property name="Color" value="Colorless" />
         <property name="Type" value="Artifact" />
         <property name="Subtype" value="Equipment" />
-        <property name="Rules">When Dinosaur Headdress enters, attach it to target creature you control.
-As Dinosaur Headdress becomes attached to a creature, choose an exiled creature card used to craft Dinosaur Headdress.
+        <property name="Rules">When this Equipment enters, attach it to target creature you control.
+As this Equipment becomes attached to a creature, choose an exiled creature card used to craft this Equipment.
 Equipped creature is a copy of the last chosen card.
 Equip <s value="2">{2}</s></property>
       </alternate>
@@ -331,7 +331,7 @@ Equip <s value="2">{2}</s></property>
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">When Admiral Brass, Unsinkable enters, mill four cards.
+      <property name="Rules">When Admiral Brass enters, mill four cards.
 At the beginning of combat on your turn, you may return target Pirate creature card from your graveyard to the battlefield with a finality counter on it. It has base power and toughness 4/4. It gains haste until end of turn. (If a creature with a finality counter on it would die, exile it instead.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -367,7 +367,7 @@ At the beginning of combat on your turn, you may return target Pirate creature c
       <property name="Subtype" value="Merfolk Scout" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">At the beginning of combat on your turn, each Merfolk creature you control explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on the exploring creature, then put the card back or put it into your graveyard.)
-Whenever Hakbal of the Surging Soul attacks, you may put a land card from your hand onto the battlefield. If you don't, draw a card.</property>
+Whenever Hakbal attacks, you may put a land card from your hand onto the battlefield. If you don't, draw a card.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Anditya Dita" />
@@ -385,7 +385,7 @@ Whenever Hakbal of the Surging Soul attacks, you may put a land card from your h
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever Pantlaza, Sun-Favored or another Dinosaur you control enters, you may discover X, where X is that creature's toughness. Do this only once each turn. (Exile cards from the top of your library until you exile a nonland card with that mana value or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</property>
+      <property name="Rules">Whenever Pantlaza or another Dinosaur you control enters, you may discover X, where X is that creature's toughness. Do this only once each turn. (Exile cards from the top of your library until you exile a nonland card with that mana value or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Sidharth Chaturvedi" />
@@ -418,8 +418,8 @@ At the beginning of each upkeep, create a 1/1 colorless Gnome artifact creature 
       <property name="Color" value="Black" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Altar of the Wretched enters, you may sacrifice a nontoken creature. If you do, draw X cards, then mill X cards, where X is that creature's power.
-Craft with one or more creatures <s value="2">{2}</s><s value="B">{B}</s><s value="B">{B}</s><s value="2">{2}</s><s value="B">{B}</s>: Return Altar of the Wretched from your graveyard to your hand.</property>
+      <property name="Rules">When this artifact enters, you may sacrifice a nontoken creature. If you do, draw X cards, then mill X cards, where X is that creature's power.
+Craft with one or more creatures <s value="2">{2}</s><s value="B">{B}</s><s value="B">{B}</s><s value="2">{2}</s><s value="B">{B}</s>: Return this card from your graveyard to your hand.</property>
       <property name="Artist" value="Helge C. Balzer" />
       <property name="Number" value="022" />
       <alternate name="Wretched Bonemass" type="transform">
@@ -428,7 +428,7 @@ Craft with one or more creatures <s value="2">{2}</s><s value="B">{B}</s><s valu
         <property name="Type" value="Creature" />
         <property name="Subtype" value="Skeleton Horror" />
         <property name="Rules">Wretched Bonemass's power and toughness are each equal to the total power of the exiled cards used to craft it.
-Wretched Bonemass has flying as long as an exiled card used to craft it has flying. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, protection, reach, trample, and vigilance.</property>
+This creature has flying as long as an exiled card used to craft it has flying. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, protection, reach, trample, and vigilance.</property>
         <property name="Power" value="*" />
         <property name="Toughness" value="*" />
       </alternate>
@@ -453,7 +453,7 @@ Craft with four or more red instant and/or sorcery cards <s value="3">{3}</s><s 
         <property name="Type" value="Artifact" />
         <property name="Rules">
           <s value="1">{1}</s>
-          <s value="R">{R}</s>, <s value="T">{T}</s>: Choose an exiled card used to craft Cosmium Catalyst at random. You may cast that card without paying its mana cost.</property>
+          <s value="R">{R}</s>, <s value="T">{T}</s>: Choose an exiled card used to craft this artifact at random. You may cast that card without paying its mana cost.</property>
       </alternate>
     </card>
     <card name="Contest of Claws" id="ec424c72-547a-4157-ad84-632216e53006">
@@ -481,7 +481,7 @@ Craft with four or more red instant and/or sorcery cards <s value="3">{3}</s><s 
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">When Admiral Brass, Unsinkable enters, mill four cards.
+      <property name="Rules">When Admiral Brass enters, mill four cards.
 At the beginning of combat on your turn, you may return target Pirate creature card from your graveyard to the battlefield with a finality counter on it. It has base power and toughness 4/4. It gains haste until end of turn. (If a creature with a finality counter on it would die, exile it instead.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -500,7 +500,7 @@ At the beginning of combat on your turn, you may return target Pirate creature c
       <property name="Subtype" value="Vampire Soldier" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Flying
-Whenever a player sacrifices a permanent, put a +1/+1 counter on Carmen, Cruel Skymarcher and you gain 1 life.
+Whenever a player sacrifices a permanent, put a +1/+1 counter on Carmen and you gain 1 life.
 Whenever Carmen attacks, return up to one target permanent card with mana value less than or equal to Carmen's power from your graveyard to the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -555,7 +555,7 @@ Whenever you cast a noncreature spell you don't own, create two tapped Treasure 
       <property name="Subtype" value="Merfolk Scout" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">At the beginning of combat on your turn, each Merfolk creature you control explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on the exploring creature, then put the card back or put it into your graveyard.)
-Whenever Hakbal of the Surging Soul attacks, you may put a land card from your hand onto the battlefield. If you don't, draw a card.</property>
+Whenever Hakbal attacks, you may put a land card from your hand onto the battlefield. If you don't, draw a card.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Tyler Walpole" />
@@ -573,7 +573,7 @@ Whenever Hakbal of the Surging Soul attacks, you may put a land card from your h
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever Pantlaza, Sun-Favored or another Dinosaur you control enters, you may discover X, where X is that creature's toughness. Do this only once each turn. (Exile cards from the top of your library until you exile a nonland card with that mana value or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</property>
+      <property name="Rules">Whenever Pantlaza or another Dinosaur you control enters, you may discover X, where X is that creature's toughness. Do this only once each turn. (Exile cards from the top of your library until you exile a nonland card with that mana value or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Sam Burley" />
@@ -656,7 +656,7 @@ If a creature you control being dealt damage causes a triggered ability of a per
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Salamander Serpent" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever Xolatoyac, the Smiling Flood enters or attacks, put a flood counter on target land. That land is an Island in addition to its other types for as long as it has a flood counter on it.
+      <property name="Rules">Whenever Xolatoyac enters or attacks, put a flood counter on target land. That land is an Island in addition to its other types for as long as it has a flood counter on it.
 At the beginning of your end step, untap each permanent you control with a counter on it.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
@@ -680,7 +680,7 @@ Craft with two that share a card type <s value="6">{6}</s> (<s value="6">{6}</s>
         <property name="Cost" />
         <property name="Color" value="Colorless" />
         <property name="Type" value="Artifact" />
-        <property name="Rules">Apex Observatory enters tapped. As it enters, choose a card type shared among two exiled cards used to craft it.
+        <property name="Rules">This artifact enters tapped. As it enters, choose a card type shared among two exiled cards used to craft it.
 <s value="T">{T}</s>: The next spell you cast this turn of the chosen type can be cast without paying its mana cost.</property>
       </alternate>
     </card>
@@ -703,8 +703,8 @@ Craft with one or more creatures <s value="5">{5}</s> (<s value="5">{5}</s>, Exi
         <property name="Color" value="Colorless" />
         <property name="Type" value="Artifact" />
         <property name="Subtype" value="Equipment" />
-        <property name="Rules">When Dinosaur Headdress enters, attach it to target creature you control.
-As Dinosaur Headdress becomes attached to a creature, choose an exiled creature card used to craft Dinosaur Headdress.
+        <property name="Rules">When this Equipment enters, attach it to target creature you control.
+As this Equipment becomes attached to a creature, choose an exiled creature card used to craft this Equipment.
 Equipped creature is a copy of the last chosen card.
 Equip <s value="2">{2}</s></property>
       </alternate>
@@ -719,8 +719,8 @@ Equip <s value="2">{2}</s></property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Bronzebeak Foragers enters, for each opponent, exile up to one target nonland permanent that player controls until Bronzebeak Foragers leaves the battlefield.
-<s value="X">{X}</s><s value="W">{W}</s>: Put target card with mana value X exiled with Bronzebeak Foragers into its owner's graveyard. You gain X life.</property>
+      <property name="Rules">When this creature enters, for each opponent, exile up to one target nonland permanent that player controls until this creature leaves the battlefield.
+<s value="X">{X}</s><s value="W">{W}</s>: Put target card with mana value X exiled with this creature into its owner's graveyard. You gain X life.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Brian Valeza" />
@@ -754,8 +754,8 @@ Whenever an artifact or creature an opponent controls enters untapped, they may 
       <property name="Subtype" value="Vampire Cleric" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever you gain life, put a +1/+1 counter on Elenda's Hierophant.
-When Elenda's Hierophant dies, create X 1/1 white Vampire creature tokens with lifelink, where X is its power.</property>
+Whenever you gain life, put a +1/+1 counter on this creature.
+When this creature dies, create X 1/1 white Vampire creature tokens with lifelink, where X is its power.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Miranda Meeks" />
@@ -771,7 +771,7 @@ When Elenda's Hierophant dies, create X 1/1 white Vampire creature tokens with l
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As From the Rubble enters, choose a creature type.
+      <property name="Rules">As this enchantment enters, choose a creature type.
 At the beginning of your end step, return target creature card of the chosen type from your graveyard to the battlefield with a finality counter on it. (If a creature with a finality counter on it would die, exile it instead.)</property>
       <property name="Artist" value="Ryan Valle" />
       <property name="Number" value="040" />
@@ -786,7 +786,7 @@ At the beginning of your end step, return target creature card of the chosen typ
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When March of the Canonized enters, create X 1/1 white Vampire creature tokens with lifelink.
+      <property name="Rules">When this enchantment enters, create X 1/1 white Vampire creature tokens with lifelink.
 At the beginning of your upkeep, if your devotion to white and black is seven or greater, create a 4/3 white and black Vampire Demon creature token with flying.</property>
       <property name="Artist" value="Dominik Mayer" />
       <property name="Number" value="041" />
@@ -803,7 +803,7 @@ At the beginning of your upkeep, if your devotion to white and black is seven or
       <property name="Subtype" value="Vampire Cleric" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Lifelink
-Coven — Whenever Redemption Choir enters or attacks, if you control three or more creatures with different powers, return target permanent card with mana value 3 or less from your graveyard to the battlefield.</property>
+Coven — Whenever this creature enters or attacks, if you control three or more creatures with different powers, return target permanent card with mana value 3 or less from your graveyard to the battlefield.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Michele Giorgi" />
@@ -823,7 +823,7 @@ Coven — Whenever Redemption Choir enters or attacks, if you control three or m
       <property name="Rules">Trample
 Whenever a creature you control deals combat damage to a player, draw a card.
 Crew 3
-You may cast The Indomitable from your graveyard as long as you control three or more tapped Pirates and/or Vehicles.</property>
+You may cast this card from your graveyard as long as you control three or more tapped Pirates and/or Vehicles.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Samuel Perin" />
@@ -871,7 +871,7 @@ Encore <s value="5">{5}</s><s value="U">{U}</s><s value="U">{U}</s> (<s value="5
       <property name="Subtype" value="Siren Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Parley — Whenever Storm Fleet Negotiator attacks, each player reveals the top card of their library. For each nonland card revealed this way, you create a Map token. Then each player draws a card. (A Map token is an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Target creature you control explores. Activate only as a sorcery.")</property>
+Parley — Whenever this creature attacks, each player reveals the top card of their library. For each nonland card revealed this way, you create a Map token. Then each player draws a card. (A Map token is an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this token: Target creature you control explores. Activate only as a sorcery.")</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Nino Vecia" />
@@ -902,7 +902,7 @@ Parley — Whenever Storm Fleet Negotiator attacks, each player reveals the top 
       <property name="Subtype" value="Vampire Soldier" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
-<s value="1">{1}</s><s value="B">{B}</s>, Sacrifice Dusk Legion Sergeant: Each nontoken Vampire creature you control gains persist until end of turn. (When it dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)</property>
+<s value="1">{1}</s><s value="B">{B}</s>, Sacrifice this creature: Each nontoken Vampire creature you control gains persist until end of turn. (When it dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Igor Kieryluk" />
@@ -919,7 +919,7 @@ Parley — Whenever Storm Fleet Negotiator attacks, each player reveals the top 
       <property name="Subtype" value="Bird Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Francisco, Fowl Marauder can't block.
+Francisco can't block.
 Whenever one or more Pirates you control deal damage to a player, Francisco explores.
 Partner (You can have two commanders if both have partner.)</property>
       <property name="Power" value="0" />
@@ -994,7 +994,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Each other creature you control that's a Skeleton or Pirate gets +1/+1.
 Whenever one or more creature cards leave your graveyard, create a 2/2 black Skeleton Pirate creature token. (This ability triggers only from the battlefield.)
-<s value="5">{5}</s><s value="B">{B}</s>: Return Skeleton Crew from your graveyard to the battlefield tapped.</property>
+<s value="5">{5}</s><s value="B">{B}</s>: Return this card from your graveyard to the battlefield tapped.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Camille Alquier" />
@@ -1011,7 +1011,7 @@ Whenever one or more creature cards leave your graveyard, create a 2/2 black Ske
       <property name="Subtype" value="Goblin Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace, haste
-Boast — Sacrifice another creature or artifact: Broadside Bombardiers deals damage equal to 2 plus the sacrificed permanent's mana value to any target. (Activate only if this creature attacked this turn and only once each turn.)</property>
+Boast — Sacrifice another creature or artifact: This creature deals damage equal to 2 plus the sacrificed permanent's mana value to any target. (Activate only if this creature attacked this turn and only once each turn.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Tomek Larek" />
@@ -1027,7 +1027,7 @@ Boast — Sacrifice another creature or artifact: Broadside Bombardiers deals da
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Orc Pirate Artificer" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Gemcutter Buccaneer or another Pirate you control enters, create a tapped Treasure token.
+      <property name="Rules">Whenever this creature or another Pirate you control enters, create a tapped Treasure token.
 Treasures you control are Equipment in addition to their other types and have "Equipped creature gets +2/+0," equip Pirate <s value="1">{1}</s>, and equip <s value="3">{3}</s>.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
@@ -1109,7 +1109,7 @@ Whenever a Dinosaur you control deals combat damage to a player, draw a card.</p
       <property name="Subtype" value="Dinosaur Egg" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)
-When Dinosaur Egg dies, you may discover X, where X is its toughness.</property>
+When this creature dies, you may discover X, where X is its toughness.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Alessandra Pisano" />
@@ -1127,7 +1127,7 @@ When Dinosaur Egg dies, you may discover X, where X is its toughness.</property>
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)
-Whenever Scion of Calamity deals combat damage to a player, destroy target artifact or enchantment that player controls.</property>
+Whenever this creature deals combat damage to a player, destroy target artifact or enchantment that player controls.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Crystal Sully" />
@@ -1143,7 +1143,7 @@ Whenever Scion of Calamity deals combat damage to a player, destroy target artif
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Sunfrill Imitator attacks, you may have it become a copy of another target Dinosaur you control, except its name is Sunfrill Imitator and it has this ability.</property>
+      <property name="Rules">Whenever this creature attacks, you may have it become a copy of another target Dinosaur you control, except its name is Sunfrill Imitator and it has this ability.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Brian Valeza" />
@@ -1159,7 +1159,7 @@ Whenever Scion of Calamity deals combat damage to a player, destroy target artif
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Merfolk Scout" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Topography Tracker enters, create a Map token. (It's an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Target creature you control explores. Activate only as a sorcery.")
+      <property name="Rules">When this creature enters, create a Map token. (It's an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this token: Target creature you control explores. Activate only as a sorcery.")
 If a creature you control would explore, instead it explores, then it explores again.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -1215,7 +1215,7 @@ Other Vampires you control have exalted.</property>
       <property name="Subtype" value="Merfolk Shaman" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flash
-When Singer of Swift Rivers enters, put a shield counter on another target creature you control. (If it would be dealt damage or destroyed, remove a shield counter from it instead.)
+When this creature enters, put a shield counter on another target creature you control. (If it would be dealt damage or destroyed, remove a shield counter from it instead.)
 You may cast Merfolk spells as though they had flash.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
@@ -1245,7 +1245,7 @@ Equip <s value="2">{2}</s>. This ability costs <s value="2">{2}</s> less to acti
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Progenitor's Icon enters, choose a creature type.
+      <property name="Rules">As this artifact enters, choose a creature type.
 <s value="T">{T}</s>: Add one mana of any color.
 <s value="T">{T}</s>: The next spell of the chosen type you cast this turn can be cast as though it had flash.</property>
       <property name="Artist" value="Stella Spente" />
@@ -1261,8 +1261,8 @@ Equip <s value="2">{2}</s>. This ability costs <s value="2">{2}</s> less to acti
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Bronzebeak Foragers enters, for each opponent, exile up to one target nonland permanent that player controls until Bronzebeak Foragers leaves the battlefield.
-<s value="X">{X}</s><s value="W">{W}</s>: Put target card with mana value X exiled with Bronzebeak Foragers into its owner's graveyard. You gain X life.</property>
+      <property name="Rules">When this creature enters, for each opponent, exile up to one target nonland permanent that player controls until this creature leaves the battlefield.
+<s value="X">{X}</s><s value="W">{W}</s>: Put target card with mana value X exiled with this creature into its owner's graveyard. You gain X life.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Brian Valeza" />
@@ -1296,8 +1296,8 @@ Whenever an artifact or creature an opponent controls enters untapped, they may 
       <property name="Subtype" value="Vampire Cleric" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever you gain life, put a +1/+1 counter on Elenda's Hierophant.
-When Elenda's Hierophant dies, create X 1/1 white Vampire creature tokens with lifelink, where X is its power.</property>
+Whenever you gain life, put a +1/+1 counter on this creature.
+When this creature dies, create X 1/1 white Vampire creature tokens with lifelink, where X is its power.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Miranda Meeks" />
@@ -1313,7 +1313,7 @@ When Elenda's Hierophant dies, create X 1/1 white Vampire creature tokens with l
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As From the Rubble enters, choose a creature type.
+      <property name="Rules">As this enchantment enters, choose a creature type.
 At the beginning of your end step, return target creature card of the chosen type from your graveyard to the battlefield with a finality counter on it. (If a creature with a finality counter on it would die, exile it instead.)</property>
       <property name="Artist" value="Ryan Valle" />
       <property name="Number" value="072" />
@@ -1328,7 +1328,7 @@ At the beginning of your end step, return target creature card of the chosen typ
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When March of the Canonized enters, create X 1/1 white Vampire creature tokens with lifelink.
+      <property name="Rules">When this enchantment enters, create X 1/1 white Vampire creature tokens with lifelink.
 At the beginning of your upkeep, if your devotion to white and black is seven or greater, create a 4/3 white and black Vampire Demon creature token with flying.</property>
       <property name="Artist" value="Dominik Mayer" />
       <property name="Number" value="073" />
@@ -1345,7 +1345,7 @@ At the beginning of your upkeep, if your devotion to white and black is seven or
       <property name="Subtype" value="Vampire Cleric" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Lifelink
-Coven — Whenever Redemption Choir enters or attacks, if you control three or more creatures with different powers, return target permanent card with mana value 3 or less from your graveyard to the battlefield.</property>
+Coven — Whenever this creature enters or attacks, if you control three or more creatures with different powers, return target permanent card with mana value 3 or less from your graveyard to the battlefield.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Michele Giorgi" />
@@ -1365,7 +1365,7 @@ Coven — Whenever Redemption Choir enters or attacks, if you control three or m
       <property name="Rules">Trample
 Whenever a creature you control deals combat damage to a player, draw a card.
 Crew 3
-You may cast The Indomitable from your graveyard as long as you control three or more tapped Pirates and/or Vehicles.</property>
+You may cast this card from your graveyard as long as you control three or more tapped Pirates and/or Vehicles.</property>
       <property name="Power" value="6" />
       <property name="Toughness" value="6" />
       <property name="Artist" value="Samuel Perin" />
@@ -1413,7 +1413,7 @@ Encore <s value="5">{5}</s><s value="U">{U}</s><s value="U">{U}</s> (<s value="5
       <property name="Subtype" value="Siren Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Parley — Whenever Storm Fleet Negotiator attacks, each player reveals the top card of their library. For each nonland card revealed this way, you create a Map token. Then each player draws a card. (A Map token is an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Target creature you control explores. Activate only as a sorcery.")</property>
+Parley — Whenever this creature attacks, each player reveals the top card of their library. For each nonland card revealed this way, you create a Map token. Then each player draws a card. (A Map token is an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this token: Target creature you control explores. Activate only as a sorcery.")</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Nino Vecia" />
@@ -1444,7 +1444,7 @@ Parley — Whenever Storm Fleet Negotiator attacks, each player reveals the top 
       <property name="Subtype" value="Vampire Soldier" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
-<s value="1">{1}</s><s value="B">{B}</s>, Sacrifice Dusk Legion Sergeant: Each nontoken Vampire creature you control gains persist until end of turn. (When it dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)</property>
+<s value="1">{1}</s><s value="B">{B}</s>, Sacrifice this creature: Each nontoken Vampire creature you control gains persist until end of turn. (When it dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Igor Kieryluk" />
@@ -1461,7 +1461,7 @@ Parley — Whenever Storm Fleet Negotiator attacks, each player reveals the top 
       <property name="Subtype" value="Bird Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Francisco, Fowl Marauder can't block.
+Francisco can't block.
 Whenever one or more Pirates you control deal damage to a player, Francisco explores.
 Partner (You can have two commanders if both have partner.)</property>
       <property name="Power" value="0" />
@@ -1536,7 +1536,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Rarity" value="Rare" />
       <property name="Rules">Each other creature you control that's a Skeleton or Pirate gets +1/+1.
 Whenever one or more creature cards leave your graveyard, create a 2/2 black Skeleton Pirate creature token. (This ability triggers only from the battlefield.)
-<s value="5">{5}</s><s value="B">{B}</s>: Return Skeleton Crew from your graveyard to the battlefield tapped.</property>
+<s value="5">{5}</s><s value="B">{B}</s>: Return this card from your graveyard to the battlefield tapped.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Camille Alquier" />
@@ -1553,7 +1553,7 @@ Whenever one or more creature cards leave your graveyard, create a 2/2 black Ske
       <property name="Subtype" value="Goblin Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace, haste
-Boast — Sacrifice another creature or artifact: Broadside Bombardiers deals damage equal to 2 plus the sacrificed permanent's mana value to any target. (Activate only if this creature attacked this turn and only once each turn.)</property>
+Boast — Sacrifice another creature or artifact: This creature deals damage equal to 2 plus the sacrificed permanent's mana value to any target. (Activate only if this creature attacked this turn and only once each turn.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Tomek Larek" />
@@ -1569,7 +1569,7 @@ Boast — Sacrifice another creature or artifact: Broadside Bombardiers deals da
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Orc Pirate Artificer" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Gemcutter Buccaneer or another Pirate you control enters, create a tapped Treasure token.
+      <property name="Rules">Whenever this creature or another Pirate you control enters, create a tapped Treasure token.
 Treasures you control are Equipment in addition to their other types and have "Equipped creature gets +2/+0," equip Pirate <s value="1">{1}</s>, and equip <s value="3">{3}</s>.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
@@ -1651,7 +1651,7 @@ Whenever a Dinosaur you control deals combat damage to a player, draw a card.</p
       <property name="Subtype" value="Dinosaur Egg" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)
-When Dinosaur Egg dies, you may discover X, where X is its toughness.</property>
+When this creature dies, you may discover X, where X is its toughness.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Alessandra Pisano" />
@@ -1669,7 +1669,7 @@ When Dinosaur Egg dies, you may discover X, where X is its toughness.</property>
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token copy that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)
-Whenever Scion of Calamity deals combat damage to a player, destroy target artifact or enchantment that player controls.</property>
+Whenever this creature deals combat damage to a player, destroy target artifact or enchantment that player controls.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Crystal Sully" />
@@ -1685,7 +1685,7 @@ Whenever Scion of Calamity deals combat damage to a player, destroy target artif
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Sunfrill Imitator attacks, you may have it become a copy of another target Dinosaur you control, except its name is Sunfrill Imitator and it has this ability.</property>
+      <property name="Rules">Whenever this creature attacks, you may have it become a copy of another target Dinosaur you control, except its name is Sunfrill Imitator and it has this ability.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Brian Valeza" />
@@ -1701,7 +1701,7 @@ Whenever Scion of Calamity deals combat damage to a player, destroy target artif
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Merfolk Scout" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Topography Tracker enters, create a Map token. (It's an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Target creature you control explores. Activate only as a sorcery.")
+      <property name="Rules">When this creature enters, create a Map token. (It's an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this token: Target creature you control explores. Activate only as a sorcery.")
 If a creature you control would explore, instead it explores, then it explores again.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -1757,7 +1757,7 @@ Other Vampires you control have exalted.</property>
       <property name="Subtype" value="Merfolk Shaman" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flash
-When Singer of Swift Rivers enters, put a shield counter on another target creature you control. (If it would be dealt damage or destroyed, remove a shield counter from it instead.)
+When this creature enters, put a shield counter on another target creature you control. (If it would be dealt damage or destroyed, remove a shield counter from it instead.)
 You may cast Merfolk spells as though they had flash.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
@@ -1787,7 +1787,7 @@ Equip <s value="2">{2}</s>. This ability costs <s value="2">{2}</s> less to acti
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Progenitor's Icon enters, choose a creature type.
+      <property name="Rules">As this artifact enters, choose a creature type.
 <s value="T">{T}</s>: Add one mana of any color.
 <s value="T">{T}</s>: The next spell of the chosen type you cast this turn can be cast as though it had flash.</property>
       <property name="Artist" value="Stella Spente" />
@@ -1802,7 +1802,7 @@ Equip <s value="2">{2}</s>. This ability costs <s value="2">{2}</s> less to acti
       <property name="Color" value="White" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Archaeomancer's Map enters, search your library for up to two basic Plains cards, reveal them, put them into your hand, then shuffle.
+      <property name="Rules">When this artifact enters, search your library for up to two basic Plains cards, reveal them, put them into your hand, then shuffle.
 Whenever a land an opponent controls enters, if that player controls more lands than you, you may put a land card from your hand onto the battlefield.</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="101" />
@@ -1817,7 +1817,7 @@ Whenever a land an opponent controls enters, if that player controls more lands 
       <property name="Color" value="White" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">When Wedding Ring enters, if it was cast, target opponent creates a token that's a copy of it.
+      <property name="Rules">When this artifact enters, if it was cast, target opponent creates a token that's a copy of it.
 Whenever an opponent who controls an artifact named Wedding Ring draws a card during their turn, you draw a card.
 Whenever an opponent who controls an artifact named Wedding Ring gains life during their turn, you gain that much life.</property>
       <property name="Artist" value="J.P. Targete" />
@@ -1857,8 +1857,8 @@ Whenever an opponent who controls an artifact named Wedding Ring gains life duri
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Chalice of the Void enters with X charge counters on it.
-Whenever a player casts a spell with mana value equal to the number of charge counters on Chalice of the Void, counter that spell.</property>
+      <property name="Rules">This artifact enters with X charge counters on it.
+Whenever a player casts a spell with mana value equal to the number of charge counters on this artifact, counter that spell.</property>
       <property name="Artist" value="Julie Dillon" />
       <property name="Number" value="105" />
     </card>
@@ -1909,7 +1909,7 @@ At the beginning of your end step, discover 5. (Exile cards from the top of your
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Will of the council — At the beginning of your upkeep, starting with you, each player votes for carnage or homage. If carnage gets more votes, sacrifice Coercive Portal and destroy all nonland permanents. If homage gets more votes or the vote is tied, draw a card.</property>
+      <property name="Rules">Will of the council — At the beginning of your upkeep, starting with you, each player votes for carnage or homage. If carnage gets more votes, sacrifice this artifact and destroy all nonland permanents. If homage gets more votes or the vote is tied, draw a card.</property>
       <property name="Artist" value="Chris Ostrowski" />
       <property name="Number" value="109" />
     </card>
@@ -1936,8 +1936,8 @@ Equip <s value="8">{8}</s> (<s value="8">{8}</s>: Attach to target creature you 
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Multikicker <s value="2">{2}</s> (You may pay an additional <s value="2">{2}</s> any number of times as you cast this spell.)
-Everflowing Chalice enters with a charge counter on it for each time it was kicked.
-<s value="T">{T}</s>: Add <s value="C">{C}</s> for each charge counter on Everflowing Chalice.</property>
+This artifact enters with a charge counter on it for each time it was kicked.
+<s value="T">{T}</s>: Add <s value="C">{C}</s> for each charge counter on this artifact.</property>
       <property name="Artist" value="Chris Seaman" />
       <property name="Number" value="111" />
     </card>
@@ -1988,8 +1988,8 @@ Equip <s value="0">{0}</s></property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Imprint — Whenever a nontoken creature dies, you may exile that card. If you do, return each other card exiled with Mimic Vat to its owner's graveyard.
-<s value="3">{3}</s>, <s value="T">{T}</s>: Create a token that's a copy of a card exiled with Mimic Vat. It gains haste. Exile it at the beginning of the next end step.</property>
+      <property name="Rules">Imprint — Whenever a nontoken creature dies, you may exile that card. If you do, return each other card exiled with this artifact to its owner's graveyard.
+<s value="3">{3}</s>, <s value="T">{T}</s>: Create a token that's a copy of a card exiled with this artifact. It gains haste. Exile it at the beginning of the next end step.</property>
       <property name="Artist" value="Chris Seaman" />
       <property name="Number" value="115" />
     </card>
@@ -2054,7 +2054,7 @@ Equip <s value="2">{2}</s></property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Worn Powerstone enters tapped.
+      <property name="Rules">This artifact enters tapped.
 <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>.</property>
       <property name="Artist" value="Chris Ostrowski" />
       <property name="Number" value="120" />
@@ -2071,7 +2071,7 @@ Equip <s value="2">{2}</s></property>
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">When Admiral Brass, Unsinkable enters, mill four cards.
+      <property name="Rules">When Admiral Brass enters, mill four cards.
 At the beginning of combat on your turn, you may return target Pirate creature card from your graveyard to the battlefield with a finality counter on it. It has base power and toughness 4/4. It gains haste until end of turn. (If a creature with a finality counter on it would die, exile it instead.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -2107,7 +2107,7 @@ At the beginning of combat on your turn, you may return target Pirate creature c
       <property name="Subtype" value="Merfolk Scout" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">At the beginning of combat on your turn, each Merfolk creature you control explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on the exploring creature, then put the card back or put it into your graveyard.)
-Whenever Hakbal of the Surging Soul attacks, you may put a land card from your hand onto the battlefield. If you don't, draw a card.</property>
+Whenever Hakbal attacks, you may put a land card from your hand onto the battlefield. If you don't, draw a card.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Tyler Walpole" />
@@ -2125,7 +2125,7 @@ Whenever Hakbal of the Surging Soul attacks, you may put a land card from your h
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever Pantlaza, Sun-Favored or another Dinosaur you control enters, you may discover X, where X is that creature's toughness. Do this only once each turn. (Exile cards from the top of your library until you exile a nonland card with that mana value or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</property>
+      <property name="Rules">Whenever Pantlaza or another Dinosaur you control enters, you may discover X, where X is that creature's toughness. Do this only once each turn. (Exile cards from the top of your library until you exile a nonland card with that mana value or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Sam Burley" />
@@ -2174,7 +2174,7 @@ Whenever Hakbal of the Surging Soul attacks, you may put a land card from your h
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Enrage — Whenever Bellowing Aegisaur is dealt damage, put a +1/+1 counter on each other creature you control.</property>
+      <property name="Rules">Enrage — Whenever this creature is dealt damage, put a +1/+1 counter on each other creature you control.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Craig J Spearing" />
@@ -2203,7 +2203,7 @@ Whenever Hakbal of the Surging Soul attacks, you may put a land card from your h
       <property name="Color" value="White" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Kindred Boon enters, choose a creature type.
+      <property name="Rules">As this enchantment enters, choose a creature type.
 <s value="1">{1}</s><s value="W">{W}</s>: Put a divinity counter on target creature you control of the chosen type.
 Each creature you control with a divinity counter on it has indestructible.</property>
       <property name="Artist" value="Carlos Palma Cruchaga" />
@@ -2237,7 +2237,7 @@ Creatures your opponents control enter tapped.</property>
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-Whenever Majestic Heliopterus attacks, another target Dinosaur you control gains flying until end of turn.</property>
+Whenever this creature attacks, another target Dinosaur you control gains flying until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Filip Burburan" />
@@ -2253,7 +2253,7 @@ Whenever Majestic Heliopterus attacks, another target Dinosaur you control gains
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Martyr of Dusk dies, create a 1/1 white Vampire creature token with lifelink.</property>
+      <property name="Rules">When this creature dies, create a 1/1 white Vampire creature token with lifelink.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Greg Staples" />
@@ -2297,7 +2297,7 @@ Whenever Majestic Heliopterus attacks, another target Dinosaur you control gains
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Ascend (If you control ten or more permanents, you get the city's blessing for the rest of the game.)
-As Radiant Destiny enters, choose a creature type.
+As this enchantment enters, choose a creature type.
 Creatures you control of the chosen type get +1/+1. As long as you have the city's blessing, they also have vigilance.</property>
       <property name="Artist" value="Emrah Elmasli" />
       <property name="Number" value="135" />
@@ -2356,7 +2356,7 @@ Creatures you control of the chosen type get +1/+1. As long as you have the city
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur Avatar" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">When Wakening Sun's Avatar enters, if you cast it from your hand, destroy all non-Dinosaur creatures.</property>
+      <property name="Rules">When this creature enters, if you cast it from your hand, destroy all non-Dinosaur creatures.</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="7" />
       <property name="Artist" value="Tyler Jacobson" />
@@ -2419,7 +2419,7 @@ Whenever one or more other creatures you control with power 2 or less enter, dra
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Salamander Pirate" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Amphin Mutineer enters, exile up to one target non-Salamander creature. That creature's controller creates a 4/3 blue Salamander Warrior creature token.
+      <property name="Rules">When this creature enters, exile up to one target non-Salamander creature. That creature's controller creates a 4/3 blue Salamander Warrior creature token.
 Encore <s value="4">{4}</s><s value="U">{U}</s><s value="U">{U}</s> (<s value="4">{4}</s><s value="U">{U}</s><s value="U">{U}</s>, Exile this card from your graveyard: For each opponent, create a token copy that attacks that opponent this turn if able. They gain haste. Sacrifice them at the beginning of the next end step. Activate only as a sorcery.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
@@ -2436,8 +2436,8 @@ Encore <s value="4">{4}</s><s value="U">{U}</s><s value="U">{U}</s> (<s value="4
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Azure Fleet Admiral enters, you become the monarch.
-Azure Fleet Admiral can't be blocked by creatures the monarch controls.</property>
+      <property name="Rules">When this creature enters, you become the monarch.
+This creature can't be blocked by creatures the monarch controls.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Sidharth Chaturvedi" />
@@ -2455,7 +2455,7 @@ Azure Fleet Admiral can't be blocked by creatures the monarch controls.</propert
       <property name="Rules">
         <s value="1">{1}</s>
         <s value="U">{U}</s>: Adapt 1. (If this creature has no +1/+1 counters on it, put a +1/+1 counter on it.)
-Whenever one or more +1/+1 counters are put on Benthic Biomancer, draw a card, then discard a card.</property>
+Whenever one or more +1/+1 counters are put on this creature, draw a card, then discard a card.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Daarken" />
@@ -2585,8 +2585,8 @@ Other Pirates you control get +1/+1.</property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="2">{2}</s>
-        <s value="U">{U}</s>: Daring Saboteur can't be blocked this turn.
-Whenever Daring Saboteur deals combat damage to a player, you may draw a card. If you do, discard a card.</property>
+        <s value="U">{U}</s>: This creature can't be blocked this turn.
+Whenever this creature deals combat damage to a player, you may draw a card. If you do, discard a card.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Victor Adame Minguez" />
@@ -2615,8 +2615,8 @@ Whenever Daring Saboteur deals combat damage to a player, you may draw a card. I
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Spirit Pirate" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Departed Deckhand becomes the target of a spell, sacrifice it.
-Departed Deckhand can't be blocked except by Spirits.
+      <property name="Rules">When this creature becomes the target of a spell, sacrifice it.
+This creature can't be blocked except by Spirits.
 <s value="3">{3}</s><s value="U">{U}</s>: Another target creature you control can't be blocked this turn except by Spirits.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -2713,7 +2713,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Kindred Discovery enters, choose a creature type.
+      <property name="Rules">As this enchantment enters, choose a creature type.
 Whenever a creature you control of the chosen type enters or attacks, draw a card.</property>
       <property name="Artist" value="Lake Hurwitz" />
       <property name="Number" value="159" />
@@ -2747,7 +2747,7 @@ Abilities your opponents activate that target a Merfolk you control cost <s valu
       <property name="Subtype" value="Siren Pirate" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-Whenever one or more Pirates you control deal damage to your opponents, you create a Treasure token for each opponent dealt damage. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")
+Whenever one or more Pirates you control deal damage to your opponents, you create a Treasure token for each opponent dealt damage. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")
 Partner (You can have two commanders if both have partner.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -2780,7 +2780,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever Merchant Raiders or another Pirate you control enters, tap up to one target creature. That creature doesn't untap during its controller's untap step for as long as you control Merchant Raiders.</property>
+      <property name="Rules">Whenever this creature or another Pirate you control enters, tap up to one target creature. That creature doesn't untap during its controller's untap step for as long as you control this creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Deruchenko Alexander" />
@@ -2857,7 +2857,7 @@ Foretell <s value="U">{U}</s> (During your turn, you may pay <s value="2">{2}</s
       <property name="Color" value="Blue" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Reflections of Littjara enters, choose a creature type.
+      <property name="Rules">As this enchantment enters, choose a creature type.
 Whenever you cast a spell of the chosen type, copy that spell. (A copy of a permanent spell becomes a token.)</property>
       <property name="Artist" value="Aaron Miller" />
       <property name="Number" value="168" />
@@ -2906,7 +2906,7 @@ Whenever you cast a spell of the chosen type, copy that spell. (A copy of a perm
       <property name="Subtype" value="Siren Pirate Wizard" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-<s value="U">{U}</s>, Sacrifice Siren Stormtamer: Counter target spell or ability that targets you or a creature you control.</property>
+<s value="U">{U}</s>, Sacrifice this creature: Counter target spell or ability that targets you or a creature you control.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Josu Hernaiz" />
@@ -2957,7 +2957,7 @@ Merfolk spells and Wizard spells you cast cost <s value="1">{1}</s> less to cast
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Merfolk Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Surgespanner becomes tapped, you may pay <s value="1">{1}</s><s value="U">{U}</s>. If you do, return target permanent to its owner's hand.</property>
+      <property name="Rules">Whenever this creature becomes tapped, you may pay <s value="1">{1}</s><s value="U">{U}</s>. If you do, return target permanent to its owner's hand.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Warren Mahy" />
@@ -2974,7 +2974,7 @@ Merfolk spells and Wizard spells you cast cost <s value="1">{1}</s> less to cast
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Merfolk God" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Svyelun of Sea and Sky has indestructible as long as you control at least two other Merfolk.
+      <property name="Rules">Svyelun has indestructible as long as you control at least two other Merfolk.
 Whenever Svyelun attacks, draw a card.
 Other Merfolk you control have ward <s value="1">{1}</s>. (Whenever another Merfolk you control becomes the target of a spell or ability an opponent controls, counter it unless that player pays <s value="1">{1}</s>.)</property>
       <property name="Power" value="3" />
@@ -3013,7 +3013,7 @@ At the beginning of your upkeep, scry 1.
       <property name="Rarity" value="Rare" />
       <property name="Rules">Kicker <s value="X">{X}</s>. X can't be 0. (You may pay an additional <s value="X">{X}</s> as you cast this spell.)
 Flying
-When Thieving Skydiver enters, if it was kicked, gain control of target artifact with mana value X or less. If that artifact is an Equipment, attach it to Thieving Skydiver.</property>
+When this creature enters, if it was kicked, gain control of target artifact with mana value X or less. If that artifact is an Equipment, attach it to this creature.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Kieran Yanner" />
@@ -3030,7 +3030,7 @@ When Thieving Skydiver enters, if it was kicked, gain control of target artifact
       <property name="Subtype" value="Human Pirate Wizard" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Ascend (If you control ten or more permanents, you get the city's blessing for the rest of the game.)
-<s value="2">{2}</s><s value="U">{U}</s><s value="U">{U}</s>, <s value="T">{T}</s>, Put Timestream Navigator on the bottom of its owner's library: Take an extra turn after this one. Activate only if you have the city's blessing.</property>
+<s value="2">{2}</s><s value="U">{U}</s><s value="U">{U}</s>, <s value="T">{T}</s>, Put this creature on the bottom of its owner's library: Take an extra turn after this one. Activate only if you have the city's blessing.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Zezhou Chen" />
@@ -3047,7 +3047,7 @@ When Thieving Skydiver enters, if it was kicked, gain control of target artifact
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Warkite Marauder attacks, target creature defending player controls loses all abilities and has base power and toughness 0/1 until end of turn.</property>
+Whenever this creature attacks, target creature defending player controls loses all abilities and has base power and toughness 0/1 until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Victor Adame Minguez" />
@@ -3092,7 +3092,7 @@ Whenever Warkite Marauder attacks, target creature defending player controls los
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever Blood Artist or another creature dies, target player loses 1 life and you gain 1 life.</property>
+      <property name="Rules">Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="LA Draws" />
@@ -3122,9 +3122,9 @@ Whenever Warkite Marauder attacks, target creature defending player controls los
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Spirit" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Bloodghast can't block.
-Bloodghast has haste as long as an opponent has 10 or less life.
-Landfall — Whenever a land you control enters, you may return Bloodghast from your graveyard to the battlefield.</property>
+      <property name="Rules">This creature can't block.
+This creature has haste as long as an opponent has 10 or less life.
+Landfall — Whenever a land you control enters, you may return this card from your graveyard to the battlefield.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Lixin Yin" />
@@ -3141,7 +3141,7 @@ Landfall — Whenever a land you control enters, you may return Bloodghast from 
       <property name="Subtype" value="Vampire Wizard" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Lifelink
-When Bloodline Necromancer enters, you may return target Vampire or Wizard creature card from your graveyard to the battlefield.</property>
+When this creature enters, you may return target Vampire or Wizard creature card from your graveyard to the battlefield.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="J.P. Targete" />
@@ -3158,8 +3158,8 @@ When Bloodline Necromancer enters, you may return target Vampire or Wizard creat
       <property name="Subtype" value="Vampire Wizard" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-<s value="B">{B}</s>, Pay 2 life: Put a +1/+1 counter on Bloodtracker.
-When Bloodtracker leaves the battlefield, draw a card for each +1/+1 counter on it.</property>
+<s value="B">{B}</s>, Pay 2 life: Put a +1/+1 counter on this creature.
+When this creature leaves the battlefield, draw a card for each +1/+1 counter on it.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Magali Villeneuve" />
@@ -3177,7 +3177,7 @@ When Bloodtracker leaves the battlefield, draw a card for each +1/+1 counter on 
       <property name="Subtype" value="Vampire Warrior" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Butcher of Malakir or another creature you control dies, each opponent sacrifices a creature of their choice.</property>
+Whenever this creature or another creature you control dies, each opponent sacrifices a creature of their choice.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Jason Chan" />
@@ -3194,7 +3194,7 @@ Whenever Butcher of Malakir or another creature you control dies, each opponent 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Knight" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Champion of Dusk enters, you draw X cards and you lose X life, where X is the number of Vampires you control.</property>
+      <property name="Rules">When this creature enters, you draw X cards and you lose X life, where X is the number of Vampires you control.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Josh Hass" />
@@ -3210,7 +3210,7 @@ Whenever Butcher of Malakir or another creature you control dies, each opponent 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Cordial Vampire or another creature dies, put a +1/+1 counter on each Vampire you control.</property>
+      <property name="Rules">Whenever this creature or another creature dies, put a +1/+1 counter on each Vampire you control.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Winona Nelson" />
@@ -3259,7 +3259,7 @@ Overload <s value="2">{2}</s><s value="W">{W}</s><s value="W">{W}</s> (You may c
       <property name="Subtype" value="Orc Pirate Wizard" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Menace, deathtouch
-When Dire Fleet Ravager enters, each player loses a third of their life, rounded up.</property>
+When this creature enters, each player loses a third of their life, rounded up.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Bram Sels" />
@@ -3277,7 +3277,7 @@ When Dire Fleet Ravager enters, each player loses a third of their life, rounded
       <property name="Subtype" value="Vampire Ally" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Flying, first strike
-Whenever Drana, Liberator of Malakir deals combat damage to a player, put a +1/+1 counter on each attacking creature you control.</property>
+Whenever Drana deals combat damage to a player, put a +1/+1 counter on each attacking creature you control.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Mike Bierek" />
@@ -3293,7 +3293,7 @@ Whenever Drana, Liberator of Malakir deals combat damage to a player, put a +1/+
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Soldier" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When Dusk Legion Zealot enters, you draw a card and you lose 1 life.</property>
+      <property name="Rules">When this creature enters, you draw a card and you lose 1 life.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Winona Nelson" />
@@ -3323,7 +3323,7 @@ Whenever Drana, Liberator of Malakir deals combat damage to a player, put a +1/+
       <property name="Subtype" value="Vampire Noble" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-Whenever Falkenrath Noble or another creature dies, target player loses 1 life and you gain 1 life.</property>
+Whenever this creature or another creature dies, target player loses 1 life and you gain 1 life.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Slawomir Maniak" />
@@ -3340,7 +3340,7 @@ Whenever Falkenrath Noble or another creature dies, target player loses 1 life a
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Menace
-Whenever Fathom Fleet Captain attacks, if you control another nontoken Pirate, you may pay <s value="2">{2}</s>. If you do, create a 2/2 black Pirate creature token with menace.</property>
+Whenever this creature attacks, if you control another nontoken Pirate, you may pay <s value="2">{2}</s>. If you do, create a 2/2 black Pirate creature token with menace.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Matt Stewart" />
@@ -3368,9 +3368,9 @@ Whenever Fathom Fleet Captain attacks, if you control another nontoken Pirate, y
       <property name="Color" value="Black" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever one or more Vampires you control attack, create a Blood token. (It's an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Discard a card, Sacrifice this artifact: Draw a card.")
+      <property name="Rules">Whenever one or more Vampires you control attack, create a Blood token. (It's an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Discard a card, Sacrifice this token: Draw a card.")
 <s value="B">{B}</s>, <s value="T">{T}</s>, Pay 1 life: Create a 1/1 white and black Vampire creature token with lifelink.
-<s value="B">{B}</s><s value="B">{B}</s>, <s value="T">{T}</s>, Sacrifice Glass-Cast Heart and thirteen Blood tokens: Each opponent loses 13 life and you gain 13 life.</property>
+<s value="B">{B}</s><s value="B">{B}</s>, <s value="T">{T}</s>, Sacrifice this artifact and thirteen Blood tokens: Each opponent loses 13 life and you gain 13 life.</property>
       <property name="Artist" value="Alayna Danner" />
       <property name="Number" value="199" />
     </card>
@@ -3448,8 +3448,8 @@ Nighthawk Scavenger's power is equal to 1 plus the number of card types among ca
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire Knight" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Oathsworn Vampire enters tapped.
-You may cast Oathsworn Vampire from your graveyard if you gained life this turn.</property>
+      <property name="Rules">This creature enters tapped.
+You may cast this card from your graveyard if you gained life this turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Greg Opalinski" />
@@ -3494,7 +3494,7 @@ You may cast Oathsworn Vampire from your graveyard if you gained life this turn.
       <property name="Subtype" value="Vampire Shaman" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-When Patron of the Vein enters, destroy target creature an opponent controls.
+When this creature enters, destroy target creature an opponent controls.
 Whenever a creature an opponent controls dies, exile it and put a +1/+1 counter on each Vampire you control.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
@@ -3511,7 +3511,7 @@ Whenever a creature an opponent controls dies, exile it and put a +1/+1 counter 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever another creature you control dies, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")</property>
+      <property name="Rules">Whenever another creature you control dies, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="David Palumbo" />
@@ -3546,7 +3546,7 @@ Whenever a creature an opponent controls dies, exile it and put a +1/+1 counter 
       <property name="Subtype" value="Vampire Noble" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Ward—Discard a card.
-Whenever another nontoken Vampire you control dies, you may pay <s value="1">{1}</s> and exile it. If you do, create a 1/1 black Bat creature token with flying. It gains "When this creature deals combat damage to a player, sacrifice it and return the exiled card to the battlefield tapped."</property>
+Whenever another nontoken Vampire you control dies, you may pay <s value="1">{1}</s> and exile it. If you do, create a 1/1 black Bat creature token with flying. It gains "When this token deals combat damage to a player, sacrifice it and return the exiled card to the battlefield tapped."</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Jason A. Engle" />
@@ -3610,7 +3610,7 @@ Draw two cards.</property>
       <property name="Subtype" value="Aetherborn Vampire" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Haste
-Whenever a creature an opponent controls dies, put a +1/+1 counter on Yahenni, Undying Partisan.
+Whenever a creature an opponent controls dies, put a +1/+1 counter on Yahenni.
 Sacrifice another creature: Yahenni gains indestructible until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -3677,7 +3677,7 @@ Partner (You can have two commanders if both have partner.)</property>
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Haste
-Whenever Captain Lannery Storm attacks, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this artifact: Add one mana of any color.")
+Whenever Captain Lannery Storm attacks, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")
 Whenever you sacrifice a Treasure, Captain Lannery Storm gets +1/+0 until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -3739,7 +3739,7 @@ Whenever you sacrifice a Treasure, Captain Lannery Storm gets +1/+0 until end of
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Orc Pirate" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Coercive Recruiter or another Pirate you control enters, gain control of target creature until end of turn. Untap that creature. Until end of turn, it gains haste and becomes a Pirate in addition to its other types.</property>
+      <property name="Rules">Whenever this creature or another Pirate you control enters, gain control of target creature until end of turn. Untap that creature. Until end of turn, it gains haste and becomes a Pirate in addition to its other types.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Randy Vargas" />
@@ -3756,7 +3756,7 @@ Whenever you sacrifice a Treasure, Captain Lannery Storm gets +1/+0 until end of
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">First strike
-When Dire Fleet Daredevil enters, exile target instant or sorcery card from an opponent's graveyard. You may cast it this turn, and mana of any type can be spent to cast that spell. If that spell would be put into a graveyard, exile it instead.</property>
+When this creature enters, exile target instant or sorcery card from an opponent's graveyard. You may cast it this turn, and mana of any type can be spent to cast that spell. If that spell would be put into a graveyard, exile it instead.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Zoltan Boros" />
@@ -3820,7 +3820,7 @@ Flashback <s value="2">{2}</s><s value="R">{R}</s> (You may cast this card from 
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">First strike, menace
-Whenever Kari Zev, Skyship Raider attacks, create Ragavan, a legendary 2/1 red Monkey creature token. Ragavan enters tapped and attacking. Exile that token at end of combat.</property>
+Whenever Kari Zev attacks, create Ragavan, a legendary 2/1 red Monkey creature token. Ragavan enters tapped and attacking. Exile that token at end of combat.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Brad Rigney" />
@@ -3837,7 +3837,7 @@ Whenever Kari Zev, Skyship Raider attacks, create Ragavan, a legendary 2/1 red M
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Creature spells you cast cost <s value="1">{1}</s> less to cast.
-Whenever another creature you control enters, Marauding Raptor deals 2 damage to it. If a Dinosaur is dealt damage this way, Marauding Raptor gets +2/+0 until end of turn.</property>
+Whenever another creature you control enters, this creature deals 2 damage to it. If a Dinosaur is dealt damage this way, this creature gets +2/+0 until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Bayard Wu" />
@@ -3871,8 +3871,8 @@ Whenever another creature you control enters, Marauding Raptor deals 2 damage to
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Orc Pirate" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever Port Razer deals combat damage to a player, untap each creature you control. After this phase, there is an additional combat phase.
-Port Razer can't attack a player it has already attacked this turn.</property>
+      <property name="Rules">Whenever this creature deals combat damage to a player, untap each creature you control. After this phase, there is an additional combat phase.
+This creature can't attack a player it has already attacked this turn.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Craig J Spearing" />
@@ -3902,8 +3902,8 @@ Port Razer can't attack a player it has already attacked this turn.</property>
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Apex Altisaur enters, it fights up to one target creature you don't control.
-Enrage — Whenever Apex Altisaur is dealt damage, it fights up to one target creature you don't control.</property>
+      <property name="Rules">When this creature enters, it fights up to one target creature you don't control.
+Enrage — Whenever this creature is dealt damage, it fights up to one target creature you don't control.</property>
       <property name="Power" value="10" />
       <property name="Toughness" value="10" />
       <property name="Artist" value="Simon Dominic" />
@@ -3958,7 +3958,7 @@ Enrage — Whenever Apex Altisaur is dealt damage, it fights up to one target cr
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Deathgorge Scavenger enters or attacks, you may exile target card from a graveyard. If a creature card is exiled this way, you gain 2 life. If a noncreature card is exiled this way, Deathgorge Scavenger gets +1/+1 until end of turn.</property>
+      <property name="Rules">Whenever this creature enters or attacks, you may exile target card from a graveyard. If a creature card is exiled this way, you gain 2 life. If a noncreature card is exiled this way, this creature gets +1/+1 until end of turn.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Tyler Jacobson" />
@@ -4003,7 +4003,7 @@ Enrage — Whenever Apex Altisaur is dealt damage, it fights up to one target cr
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Druid" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Drover of the Mighty gets +2/+2 as long as you control a Dinosaur.
+      <property name="Rules">This creature gets +2/+2 as long as you control a Dinosaur.
 <s value="T">{T}</s>: Add one mana of any color.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
@@ -4118,7 +4118,7 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample
-Whenever Rampaging Brontodon attacks, it gets +1/+1 until end of turn for each land you control.</property>
+Whenever this creature attacks, it gets +1/+1 until end of turn for each land you control.</property>
       <property name="Power" value="7" />
       <property name="Toughness" value="7" />
       <property name="Artist" value="Lars Grant-West" />
@@ -4147,7 +4147,7 @@ Whenever Rampaging Brontodon attacks, it gets +1/+1 until end of turn for each l
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Enrage — Whenever Ranging Raptors is dealt damage, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+      <property name="Rules">Enrage — Whenever this creature is dealt damage, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Simon Dominic" />
@@ -4164,7 +4164,7 @@ Whenever Rampaging Brontodon attacks, it gets +1/+1 until end of turn for each l
       <property name="Subtype" value="Shapeshifter" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Changeling (This card is every creature type.)
-As Realmwalker enters, choose a creature type.
+As this creature enters, choose a creature type.
 You may look at the top card of your library any time.
 You may cast creature spells of the chosen type from the top of your library.</property>
       <property name="Power" value="2" />
@@ -4184,7 +4184,7 @@ You may cast creature spells of the chosen type from the top of your library.</p
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Trample
-When Regal Behemoth enters, you become the monarch.
+When this creature enters, you become the monarch.
 Whenever you tap a land for mana while you're the monarch, add an additional one mana of any color.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
@@ -4217,7 +4217,7 @@ Whenever you tap a land for mana while you're the monarch, add an additional one
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Enrage — Whenever Ripjaw Raptor is dealt damage, draw a card.</property>
+      <property name="Rules">Enrage — Whenever this creature is dealt damage, draw a card.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Ryan Pancoast" />
@@ -4295,7 +4295,7 @@ Put a +1/+1 counter on target creature you control. Then that creature fights ta
       <property name="Rarity" value="Rare" />
       <property name="Rules">This spell can't be countered.
 Protection from blue (This creature can't be blocked, targeted, dealt damage, enchanted, or equipped by anything blue.)
-<s value="G">{G}</s>: Shifting Ceratops gains your choice of reach, trample, or haste until end of turn.</property>
+<s value="G">{G}</s>: This creature gains your choice of reach, trample, or haste until end of turn.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Izzy" />
@@ -4345,8 +4345,8 @@ Search your library for a basic land card, put it onto the battlefield tapped, t
       <property name="Subtype" value="Plant Dinosaur" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Vigilance (Attacking doesn't cause this creature to tap.)
-When Topiary Stomper enters, search your library for a basic land card, put it onto the battlefield tapped, then shuffle.
-Topiary Stomper can't attack or block unless you control seven or more lands.</property>
+When this creature enters, search your library for a basic land card, put it onto the battlefield tapped, then shuffle.
+This creature can't attack or block unless you control seven or more lands.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Robin Olausson" />
@@ -4363,7 +4363,7 @@ Topiary Stomper can't attack or block unless you control seven or more lands.</p
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur Avatar" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever Verdant Sun's Avatar or another creature you control enters, you gain life equal to that creature's toughness.</property>
+      <property name="Rules">Whenever this creature or another creature you control enters, you gain life equal to that creature's toughness.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Izzy" />
@@ -4381,7 +4381,7 @@ Topiary Stomper can't attack or block unless you control seven or more lands.</p
       <property name="Rarity" value="Rare" />
       <property name="Rules">Ascend (If you control ten or more permanents, you get the city's blessing for the rest of the game.)
 You may play an additional land on each of your turns.
-Wayward Swordtooth can't attack or block unless you have the city's blessing.</property>
+This creature can't attack or block unless you have the city's blessing.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Chris Rahn" />
@@ -4419,7 +4419,7 @@ At the beginning of your end step, gain control of target nonland permanent cont
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="T">{T}</s>: Add one mana of any color.
-Sacrifice Atzocan Seer: Return target Dinosaur card from your graveyard to your hand.</property>
+Sacrifice this creature: Return target Dinosaur card from your graveyard to your hand.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Joseph Meehan" />
@@ -4437,7 +4437,7 @@ Sacrifice Atzocan Seer: Return target Dinosaur card from your graveyard to your 
       <property name="Subtype" value="Merfolk Rogue" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Islandwalk (This creature can't be blocked as long as defending player controls an Island.)
-Whenever Cold-Eyed Selkie deals combat damage to a player, you may draw that many cards.</property>
+Whenever this creature deals combat damage to a player, you may draw that many cards.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Jaime Jones" />
@@ -4453,7 +4453,7 @@ Whenever Cold-Eyed Selkie deals combat damage to a player, you may draw that man
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Vampire" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever Cruel Celebrant or another creature or planeswalker you control dies, each opponent loses 1 life and you gain 1 life.</property>
+      <property name="Rules">Whenever this creature or another creature or planeswalker you control dies, each opponent loses 1 life and you gain 1 life.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Bastien L. Deharme" />
@@ -4471,7 +4471,7 @@ Whenever Cold-Eyed Selkie deals combat damage to a player, you may draw that man
       <property name="Subtype" value="Vampire Knight" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Lifelink
-Whenever another creature dies, put a +1/+1 counter on Elenda, the Dusk Rose.
+Whenever another creature dies, put a +1/+1 counter on Elenda.
 When Elenda dies, create X 1/1 white Vampire creature tokens with lifelink, where X is Elenda's power.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
@@ -4488,7 +4488,7 @@ When Elenda dies, create X 1/1 white Vampire creature tokens with lifelink, wher
       <property name="Color" value="Multicolor White Black" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">As Etchings of the Chosen enters, choose a creature type.
+      <property name="Rules">As this enchantment enters, choose a creature type.
 Creatures you control of the chosen type get +1/+1.
 <s value="1">{1}</s>, Sacrifice a creature of the chosen type: Target creature you control gains indestructible until end of turn. (Damage and effects that say "destroy" don't destroy it.)</property>
       <property name="Artist" value="Chuck Lukacs" />
@@ -4518,7 +4518,7 @@ Creatures you control of the chosen type get +1/+1.
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Hostage Taker enters, exile another target creature or artifact until Hostage Taker leaves the battlefield. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.</property>
+      <property name="Rules">When this creature enters, exile another target creature or artifact until this creature leaves the battlefield. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Wayne Reynolds" />
@@ -4537,7 +4537,7 @@ Creatures you control of the chosen type get +1/+1.
       <property name="Rarity" value="Rare" />
       <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
 I — Each player mills four cards. Then you may exile a creature or planeswalker card from each graveyard.
-II, III — Until end of turn, you may cast spells from among cards exiled with King Narfi's Betrayal, and you may spend mana as though it were mana of any color to cast those spells.</property>
+II, III — Until end of turn, you may cast spells from among cards exiled with this Saga, and you may spend mana as though it were mana of any color to cast those spells.</property>
       <property name="Artist" value="Chase Stone" />
       <property name="Number" value="272" />
     </card>
@@ -4569,7 +4569,7 @@ II, III — Until end of turn, you may cast spells from among cards exiled with 
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Merfolk Shaman" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Tap another untapped Merfolk you control: Kumena, Tyrant of Orazca can't be blocked this turn.
+      <property name="Rules">Tap another untapped Merfolk you control: Kumena can't be blocked this turn.
 Tap three untapped Merfolk you control: Draw a card.
 Tap five untapped Merfolk you control: Put a +1/+1 counter on each Merfolk you control.</property>
       <property name="Power" value="2" />
@@ -4620,7 +4620,7 @@ Tap five untapped Merfolk you control: Put a +1/+1 counter on each Merfolk you c
       <property name="Subtype" value="Merfolk Mutant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Flying
-When Merfolk Skydiver enters, put a +1/+1 counter on target creature you control.
+When this creature enters, put a +1/+1 counter on target creature you control.
 <s value="3">{3}</s><s value="G">{G}</s><s value="U">{U}</s>: Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
@@ -4713,7 +4713,7 @@ Whenever one or more creatures you control with trample deal combat damage to a 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Whenever Raging Regisaur attacks, it deals 1 damage to any target.</property>
+      <property name="Rules">Whenever this creature attacks, it deals 1 damage to any target.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Bayard Wu" />
@@ -4731,7 +4731,7 @@ Whenever one or more creatures you control with trample deal combat damage to a 
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Trample
-When Raging Swordtooth enters, it deals 1 damage to each other creature.</property>
+When this creature enters, it deals 1 damage to each other creature.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Izzy" />
@@ -4764,7 +4764,7 @@ When Raging Swordtooth enters, it deals 1 damage to each other creature.</proper
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When Ramirez DePietro, Pillager enters, you lose 2 life and create two Treasure tokens.
+      <property name="Rules">When Ramirez DePietro enters, you lose 2 life and create two Treasure tokens.
 Whenever one or more Pirates you control deal combat damage to a player, exile the top card of that player's library. You may cast that card for as long as it remains exiled.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
@@ -4783,7 +4783,7 @@ Whenever one or more Pirates you control deal combat damage to a player, exile t
       <property name="Subtype" value="Dinosaur" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Other Dinosaurs you control have haste.
-When Regisaur Alpha enters, create a 3/3 green Dinosaur creature token with trample.</property>
+When this creature enters, create a 3/3 green Dinosaur creature token with trample.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Jonathan Kuo" />
@@ -4817,8 +4817,8 @@ Nontoken creatures you control have riot. (They enter with your choice of a +1/+
         <s value="1">{1}</s>
         <s value="G">{G}</s>
         <s value="U">{U}</s>: Put a +1/+1 counter on target creature you control.
-Whenever one or more +1/+1 counters are put on a creature you control, put that many growth counters on Simic Ascendancy.
-At the beginning of your upkeep, if Simic Ascendancy has twenty or more growth counters on it, you win the game.</property>
+Whenever one or more +1/+1 counters are put on a creature you control, put that many growth counters on this enchantment.
+At the beginning of your upkeep, if this enchantment has twenty or more growth counters on it, you win the game.</property>
       <property name="Artist" value="Izzy" />
       <property name="Number" value="288" />
     </card>
@@ -4868,7 +4868,7 @@ At the beginning of your upkeep, if Simic Ascendancy has twenty or more growth c
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Merfolk Shaman" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Tishana, Voice of Thunder's power and toughness are each equal to the number of cards in your hand.
+      <property name="Rules">Tishana's power and toughness are each equal to the number of cards in your hand.
 You have no maximum hand size.
 When Tishana enters, draw a card for each creature you control.</property>
       <property name="Power" value="*" />
@@ -4959,7 +4959,7 @@ At the beginning of combat on your turn, another target creature you control gai
       <property name="Subtype" value="Elder Dinosaur" />
       <property name="Rarity" value="Mythic Rare" />
       <property name="Rules">Vigilance, reach, trample
-When Zacama, Primal Calamity enters, if you cast it, untap all lands you control.
+When Zacama enters, if you cast it, untap all lands you control.
 <s value="2">{2}</s><s value="R">{R}</s>: Zacama deals 3 damage to target creature.
 <s value="2">{2}</s><s value="G">{G}</s>: Destroy target artifact or enchantment.
 <s value="2">{2}</s><s value="W">{W}</s>: You gain 3 life.</property>
@@ -4980,7 +4980,7 @@ When Zacama, Primal Calamity enters, if you cast it, untap all lands you control
       <property name="Subtype" value="Human Pirate" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying
-Whenever Zara, Renegade Recruiter attacks, look at defending player's hand. You may put a creature card from it onto the battlefield under your control tapped and attacking that player or a planeswalker they control. Return that creature to its owner's hand at the beginning of the next end step.</property>
+Whenever Zara attacks, look at defending player's hand. You may put a creature card from it onto the battlefield under your control tapped and attacking that player or a planeswalker they control. Return that creature to its owner's hand at the beginning of the next end step.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Chris Rallis" />
@@ -4997,7 +4997,7 @@ Whenever Zara, Renegade Recruiter attacks, look at defending player's hand. You 
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Merfolk Wizard" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">When Zegana, Utopian Speaker enters, if you control another creature with a +1/+1 counter on it, draw a card.
+      <property name="Rules">When Zegana enters, if you control another creature with a +1/+1 counter on it, draw a card.
 <s value="4">{4}</s><s value="G">{G}</s><s value="U">{U}</s>: Adapt 4. (If this creature has no +1/+1 counters on it, put four +1/+1 counters on it.)
 Each creature you control with a +1/+1 counter on it has trample.</property>
       <property name="Power" value="4" />
@@ -5042,7 +5042,7 @@ Equip <s value="1">{1}</s></property>
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="T">{T}</s>: Add one mana of any color in your commander's color identity.
-Sacrifice Commander's Sphere: Draw a card.</property>
+Sacrifice this artifact: Draw a card.</property>
       <property name="Artist" value="Ryan Alexander Lee" />
       <property name="Number" value="301" />
     </card>
@@ -5082,7 +5082,7 @@ Equip <s value="1">{1}</s></property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">As Herald's Horn enters, choose a creature type.
+      <property name="Rules">As this artifact enters, choose a creature type.
 Creature spells you cast of the chosen type cost <s value="1">{1}</s> less to cast.
 At the beginning of your upkeep, look at the top card of your library. If it's a creature card of the chosen type, you may reveal it and put it into your hand.</property>
       <property name="Artist" value="Jason Felix" />
@@ -5096,7 +5096,7 @@ At the beginning of your upkeep, look at the top card of your library. If it's a
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Icon of Ancestry enters, choose a creature type.
+      <property name="Rules">As this artifact enters, choose a creature type.
 Creatures you control of the chosen type get +1/+1.
 <s value="3">{3}</s>, <s value="T">{T}</s>: Look at the top three cards of your library. You may reveal a creature card of the chosen type from among them and put it into your hand. Put the rest on the bottom of your library in a random order.</property>
       <property name="Artist" value="Chris Seaman" />
@@ -5137,8 +5137,8 @@ Whenever you cast a creature spell, you may pay <s value="G">{G}</s>. If you do,
       <property name="Type" value="Artifact Creature" />
       <property name="Subtype" value="Shapeshifter" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Metallic Mimic enters, choose a creature type.
-Metallic Mimic is the chosen type in addition to its other types.
+      <property name="Rules">As this creature enters, choose a creature type.
+This creature is the chosen type in addition to its other types.
 Each other creature you control of the chosen type enters with an additional +1/+1 counter on it.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
@@ -5155,7 +5155,7 @@ Each other creature you control of the chosen type enters with an additional +1/
       <property name="Rarity" value="Common" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice Mind Stone: Draw a card.</property>
+<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Draw a card.</property>
       <property name="Artist" value="Camille Alquier" />
       <property name="Number" value="309" />
     </card>
@@ -5235,7 +5235,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>. Talisman of Hierarchy deals 1 damage to you.</property>
+<s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>. This artifact deals 1 damage to you.</property>
       <property name="Artist" value="Lindsey Look" />
       <property name="Number" value="315" />
     </card>
@@ -5247,7 +5247,7 @@ Equip <s value="1">{1}</s> (<s value="1">{1}</s>: Attach to target creature you 
       <property name="Color" value="Colorless" />
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Vanquisher's Banner enters, choose a creature type.
+      <property name="Rules">As this artifact enters, choose a creature type.
 Creatures you control of the chosen type get +1/+1.
 Whenever you cast a creature spell of the chosen type, draw a card.</property>
       <property name="Artist" value="Milivoj Ćeran" />
@@ -5262,7 +5262,7 @@ Whenever you cast a creature spell of the chosen type, draw a card.</property>
       <property name="Type" value="Artifact" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Wayfarer's Bauble: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.</property>
+        <s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this artifact: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="David Sondered" />
       <property name="Number" value="317" />
     </card>
@@ -5295,8 +5295,8 @@ Whenever you cast a creature spell of the chosen type, draw a card.</property>
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Bojuka Bog enters tapped.
-When Bojuka Bog enters, exile target player's graveyard.
+      <property name="Rules">This land enters tapped.
+When this land enters, exile target player's graveyard.
 <s value="T">{T}</s>: Add <s value="B">{B}</s>.</property>
       <property name="Artist" value="Howard Lyon" />
       <property name="Number" value="320" />
@@ -5309,7 +5309,7 @@ When Bojuka Bog enters, exile target player's graveyard.
       <property name="Subtype" value="Forest Plains" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.)
-Canopy Vista enters tapped unless you control two or more basic lands.</property>
+This land enters tapped unless you control two or more basic lands.</property>
       <property name="Artist" value="Steven Belledin" />
       <property name="Number" value="321" />
       <property name="Flags" value="GW" />
@@ -5319,7 +5319,7 @@ Canopy Vista enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Choked Estuary enters, you may reveal an Island or Swamp card from your hand. If you don't, Choked Estuary enters tapped.
+      <property name="Rules">As this land enters, you may reveal an Island or Swamp card from your hand. If you don't, this land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Vincent Proce" />
       <property name="Number" value="322" />
@@ -5332,7 +5332,7 @@ Canopy Vista enters tapped unless you control two or more basic lands.</property
       <property name="Subtype" value="Mountain Forest" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.)
-Cinder Glade enters tapped unless you control two or more basic lands.</property>
+This land enters tapped unless you control two or more basic lands.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="323" />
       <property name="Flags" value="RG" />
@@ -5342,7 +5342,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Clifftop Retreat enters tapped unless you control a Mountain or a Plains.
+      <property name="Rules">This land enters tapped unless you control a Mountain or a Plains.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Constantin Marin" />
       <property name="Number" value="324" />
@@ -5364,7 +5364,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Crumbling Necropolis enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s>, <s value="B">{B}</s>, or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Volkan Baǵa" />
       <property name="Number" value="326" />
@@ -5409,7 +5409,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Foreboding Ruins enters, you may reveal a Swamp or Mountain card from your hand. If you don't, Foreboding Ruins enters tapped.
+      <property name="Rules">As this land enters, you may reveal a Swamp or Mountain card from your hand. If you don't, this land enters tapped.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="330" />
@@ -5420,7 +5420,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Fortified Village enters, you may reveal a Forest or Plains card from your hand. If you don't, Fortified Village enters tapped.
+      <property name="Rules">As this land enters, you may reveal a Forest or Plains card from your hand. If you don't, this land enters tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="331" />
@@ -5431,7 +5431,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Frostboil Snarl enters, you may reveal an Island or Mountain card from your hand. If you don't, Frostboil Snarl enters tapped.
+      <property name="Rules">As this land enters, you may reveal an Island or Mountain card from your hand. If you don't, this land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="332" />
@@ -5442,7 +5442,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Furycalm Snarl enters, you may reveal a Mountain or Plains card from your hand. If you don't, Furycalm Snarl enters tapped.
+      <property name="Rules">As this land enters, you may reveal a Mountain or Plains card from your hand. If you don't, this land enters tapped.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="333" />
@@ -5453,7 +5453,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Game Trail enters, you may reveal a Mountain or Forest card from your hand. If you don't, Game Trail enters tapped.
+      <property name="Rules">As this land enters, you may reveal a Mountain or Forest card from your hand. If you don't, this land enters tapped.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="G">{G}</s>.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="334" />
@@ -5476,7 +5476,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Hinterland Harbor enters tapped unless you control a Forest or an Island.
+      <property name="Rules">This land enters tapped unless you control a Forest or an Island.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Daniel Ljunggren" />
       <property name="Number" value="336" />
@@ -5487,7 +5487,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Isolated Chapel enters tapped unless you control a Plains or a Swamp.
+      <property name="Rules">This land enters tapped unless you control a Plains or a Swamp.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Richard Wright" />
       <property name="Number" value="337" />
@@ -5498,7 +5498,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Jungle Shrine enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="R">{R}</s>, <s value="G">{G}</s>, or <s value="W">{W}</s>.</property>
       <property name="Artist" value="Rob Alexander" />
       <property name="Number" value="338" />
@@ -5533,7 +5533,7 @@ Cinder Glade enters tapped unless you control two or more basic lands.</property
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Llanowar Reborn enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s>.
 Graft 1 (This land enters with a +1/+1 counter on it. Whenever a creature enters, you may move a +1/+1 counter from this land onto it.)</property>
       <property name="Artist" value="Philip Straub" />
@@ -5546,7 +5546,7 @@ Graft 1 (This land enters with a +1/+1 counter on it. Whenever a creature enters
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Hideaway 4 (When this land enters, look at the top four cards of your library, exile one face down, then put the rest on the bottom in a random order.)
-Mosswort Bridge enters tapped.
+This land enters tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s>.
 <s value="G">{G}</s>, <s value="T">{T}</s>: You may play the exiled card without paying its mana cost if creatures you control have total power 10 or greater.</property>
       <property name="Artist" value="Jeremy Jarvis" />
@@ -5558,9 +5558,9 @@ Mosswort Bridge enters tapped.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Myriad Landscape enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="C">{C}</s>.
-<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice Myriad Landscape: Search your library for up to two basic land cards that share a land type, put them onto the battlefield tapped, then shuffle.</property>
+<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this land: Search your library for up to two basic land cards that share a land type, put them onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Richard Wright" />
       <property name="Number" value="343" />
       <property name="Flags" value="C" />
@@ -5582,8 +5582,8 @@ Mosswort Bridge enters tapped.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Orzhov Basilica enters tapped.
-When Orzhov Basilica enters, return a land you control to its owner's hand.
+      <property name="Rules">This land enters tapped.
+When this land enters, return a land you control to its owner's hand.
 <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="B">{B}</s>.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="345" />
@@ -5594,7 +5594,7 @@ When Orzhov Basilica enters, return a land you control to its owner's hand.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Path of Ancestry enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add one mana of any color in your commander's color identity. When that mana is spent to cast a creature spell that shares a creature type with your commander, scry 1. (Look at the top card of your library. You may put that card on the bottom.)</property>
       <property name="Artist" value="Alayna Danner" />
       <property name="Number" value="346" />
@@ -5605,9 +5605,9 @@ When Orzhov Basilica enters, return a land you control to its owner's hand.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Port of Karfell enters tapped.
+      <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s>.
-<s value="3">{3}</s><s value="U">{U}</s><s value="B">{B}</s><s value="B">{B}</s>, <s value="T">{T}</s>, Sacrifice Port of Karfell: Mill four cards, then return a creature card from your graveyard to the battlefield tapped. (To mill a card, put the top card of your library into your graveyard.)</property>
+<s value="3">{3}</s><s value="U">{U}</s><s value="B">{B}</s><s value="B">{B}</s>, <s value="T">{T}</s>, Sacrifice this land: Mill four cards, then return a creature card from your graveyard to the battlefield tapped. (To mill a card, put the top card of your library into your graveyard.)</property>
       <property name="Artist" value="Mauricio Calle" />
       <property name="Number" value="347" />
       <property name="Flags" value="UB" />
@@ -5652,7 +5652,7 @@ When Orzhov Basilica enters, return a land you control to its owner's hand.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Shineshadow Snarl enters, you may reveal a Plains or Swamp card from your hand. If you don't, Shineshadow Snarl enters tapped.
+      <property name="Rules">As this land enters, you may reveal a Plains or Swamp card from your hand. If you don't, this land enters tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="351" />
@@ -5663,8 +5663,8 @@ When Orzhov Basilica enters, return a land you control to its owner's hand.
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Simic Growth Chamber enters tapped.
-When Simic Growth Chamber enters, return a land you control to its owner's hand.
+      <property name="Rules">This land enters tapped.
+When this land enters, return a land you control to its owner's hand.
 <s value="T">{T}</s>: Add <s value="G">{G}</s><s value="U">{U}</s>.</property>
       <property name="Artist" value="John Avon" />
       <property name="Number" value="352" />
@@ -5677,7 +5677,7 @@ When Simic Growth Chamber enters, return a land you control to its owner's hand.
       <property name="Subtype" value="Swamp Mountain" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="R">{R}</s>.)
-Smoldering Marsh enters tapped unless you control two or more basic lands.</property>
+This land enters tapped unless you control two or more basic lands.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="353" />
       <property name="Flags" value="BR" />
@@ -5687,7 +5687,7 @@ Smoldering Marsh enters tapped unless you control two or more basic lands.</prop
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Sulfur Falls enters tapped unless you control an Island or a Mountain.
+      <property name="Rules">This land enters tapped unless you control an Island or a Mountain.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.</property>
       <property name="Artist" value="Cliff Childs" />
       <property name="Number" value="354" />
@@ -5700,7 +5700,7 @@ Smoldering Marsh enters tapped unless you control two or more basic lands.</prop
       <property name="Subtype" value="Island Swamp" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">(<s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="B">{B}</s>.)
-Sunken Hollow enters tapped unless you control two or more basic lands.</property>
+This land enters tapped unless you control two or more basic lands.</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="355" />
       <property name="Flags" value="UB" />
@@ -5758,7 +5758,7 @@ When this land enters, scry 1. (Look at the top card of your library. You may pu
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
       <property name="Rules">
-        <s value="T">{T}</s>, Sacrifice Terramorphic Expanse: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+        <s value="T">{T}</s>, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
       <property name="Artist" value="Dan Murayama Scott" />
       <property name="Number" value="360" />
       <property name="Flags" value="C" />
@@ -5768,7 +5768,7 @@ When this land enters, scry 1. (Look at the top card of your library. You may pu
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Thriving Bluff enters tapped. As it enters, choose a color other than red.
+      <property name="Rules">This land enters tapped. As it enters, choose a color other than red.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or one mana of the chosen color.</property>
       <property name="Artist" value="Johannes Voss" />
       <property name="Number" value="361" />
@@ -5779,7 +5779,7 @@ When this land enters, scry 1. (Look at the top card of your library. You may pu
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Thriving Grove enters tapped. As it enters, choose a color other than green.
+      <property name="Rules">This land enters tapped. As it enters, choose a color other than green.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or one mana of the chosen color.</property>
       <property name="Artist" value="Ravenna Tran" />
       <property name="Number" value="362" />
@@ -5790,7 +5790,7 @@ When this land enters, scry 1. (Look at the top card of your library. You may pu
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Thriving Heath enters tapped. As it enters, choose a color other than white.
+      <property name="Rules">This land enters tapped. As it enters, choose a color other than white.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or one mana of the chosen color.</property>
       <property name="Artist" value="Alayna Danner" />
       <property name="Number" value="363" />
@@ -5801,7 +5801,7 @@ When this land enters, scry 1. (Look at the top card of your library. You may pu
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Thriving Isle enters tapped. As it enters, choose a color other than blue.
+      <property name="Rules">This land enters tapped. As it enters, choose a color other than blue.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or one mana of the chosen color.</property>
       <property name="Artist" value="Jonas De Ro" />
       <property name="Number" value="364" />
@@ -5812,7 +5812,7 @@ When this land enters, scry 1. (Look at the top card of your library. You may pu
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">Thriving Moor enters tapped. As it enters, choose a color other than black.
+      <property name="Rules">This land enters tapped. As it enters, choose a color other than black.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or one mana of the chosen color.</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="365" />
@@ -5823,7 +5823,7 @@ When this land enters, scry 1. (Look at the top card of your library. You may pu
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">As Unclaimed Territory enters, choose a creature type.
+      <property name="Rules">As this land enters, choose a creature type.
 <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="T">{T}</s>: Add one mana of any color. Spend this mana only to cast a creature spell of the chosen type.</property>
       <property name="Artist" value="Dimitar Marinski" />
@@ -5847,7 +5847,7 @@ When this land enters, scry 1. (Look at the top card of your library. You may pu
       <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">As Vineglimmer Snarl enters, you may reveal a Forest or Island card from your hand. If you don't, Vineglimmer Snarl enters tapped.
+      <property name="Rules">As this land enters, you may reveal a Forest or Island card from your hand. If you don't, this land enters tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.</property>
       <property name="Artist" value="Sam Burley" />
       <property name="Number" value="368" />
@@ -5861,7 +5861,7 @@ When this land enters, scry 1. (Look at the top card of your library. You may pu
       <property name="Rules">
         <s value="T">{T}</s>: Add <s value="C">{C}</s>.
 <s value="T">{T}</s>, Pay 1 life: Add one mana of any color. Spend this mana only to cast a Vampire spell.
-<s value="5">{5}</s>, <s value="T">{T}</s>: Create a Blood token. This ability costs <s value="1">{1}</s> less to activate for each Vampire you control. (It's an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Discard a card, Sacrifice this artifact: Draw a card.")</property>
+<s value="5">{5}</s>, <s value="T">{T}</s>: Create a Blood token. This ability costs <s value="1">{1}</s> less to activate for each Vampire you control. (It's an artifact with "<s value="1">{1}</s>, <s value="T">{T}</s>, Discard a card, Sacrifice this token: Draw a card.")</property>
       <property name="Artist" value="Richard Wright" />
       <property name="Number" value="369" />
       <property name="Flags" value="M" />
@@ -5872,7 +5872,7 @@ When this land enters, scry 1. (Look at the top card of your library. You may pu
       <property name="Type" value="Land" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Hideaway 4 (When this land enters, look at the top four cards of your library, exile one face down, then put the rest on the bottom in a random order.)
-Windbrisk Heights enters tapped.
+This land enters tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s>.
 <s value="W">{W}</s>, <s value="T">{T}</s>: You may play the exiled card without paying its mana cost if you attacked with three or more creatures this turn.</property>
       <property name="Artist" value="Omar Rayyan" />
