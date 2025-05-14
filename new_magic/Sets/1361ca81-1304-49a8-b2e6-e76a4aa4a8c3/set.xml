@@ -1107,7 +1107,7 @@ When this creature enters, return up to two other target nonland permanents to t
         <property name="Color" value="Blue" />
         <property name="Type" value="Instant" />
         <property name="Subtype" value="Omen" />
-        <property name="Rules">Draw three cards, then discard a card. (Then shuffle th is card into its owner's library.)</property>
+        <property name="Rules">Draw three cards, then discard a card. (Then shuffle this card into its owner's library.)</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
       </alternate>
@@ -1232,7 +1232,7 @@ Counter target spell unless its controller pays <s value="X">{X}</s>.</property>
       <property name="Color" value="Blue" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of your upkeep, mill three cards. Then if you have no cards in your library, exile this enchantment and put five cards from your graveyard on top of your library in any order.</property>
+      <property name="Rules">At the beginning of your upkeep, mill three cards. Then if your library has no cards in it, exile this enchantment and put five cards from your graveyard on top of your library in any order.</property>
       <property name="Artist" value="Kai Carpenter" />
       <property name="Number" value="059" />
     </card>
@@ -1395,7 +1395,8 @@ Harmonize <s value="4">{4}</s><s value="U">{U}</s> (You may cast this card from 
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Crocodile" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When this creature dies, create a 2/2 black Zombie Druid creature token. Renew -, Exile this card from your graveyard: Put a +1/+1 counter on target creature. Activate only as a sorcery.</property>
+      <property name="Rules">When this creature dies, create a 2/2 black Zombie Druid creature token.
+Renew — <s value="B">{B}</s>, Exile this card from your graveyard: Put a +1/+1 counter on target creature. Activate only as a sorcery.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Nathaniel Himawan" />
@@ -1642,7 +1643,7 @@ When this creature enters, it endures 1. (Put a +1/+1 counter on it or create a 
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">
         <s value="X">{X}</s>
-        <s value="B">{B}</s>, <s value="T">{T}</s>, Pay X life: This creature endures X. Activate only as a sorcery. (Put X+1/+1 counters on it or create an X/X white Spirit creature token.)</property>
+        <s value="B">{B}</s>, <s value="T">{T}</s>, Pay X life: This creature endures X. Activate only as a sorcery. (Put X +1/+1 counters on it or create an X/X white Spirit creature token.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Josu Solano" />
@@ -2052,7 +2053,7 @@ Enchanted creature gets +2/+0.</property>
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Haste
 At the beginning of your end step, return this creature to its owner's hand. (Return it only if it's on the battlefield.)
-2<s value="R">{R}</s>: This creature gets +2/+0 until end of turn.</property>
+<s value="2">{2}</s><s value="R">{R}</s>: This creature gets +2/+0 until end of turn.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Darren Tan" />
@@ -2489,7 +2490,7 @@ This creature's power is equal to the number of creatures you control.</property
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Dog Scout" />
       <property name="Rarity" value="Common" />
-      <property name="Rules">When this creature enters, mill three cards. You may put a land card from among them into your hand. If you don't, put a +1/+1 counter on this creature. (Το mill three cards, put the top three cards of your library into your graveyard.)</property>
+      <property name="Rules">When this creature enters, mill three cards. You may put a land card from among them into your hand. If you don't, put a +1/+1 counter on this creature. (To mill three cards, put the top three cards of your library into your graveyard.)</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="1" />
       <property name="Artist" value="Filipe Pagliuso" />
@@ -2538,7 +2539,7 @@ Whenever this creature or another Dragon you control enters, you gain 3 life.</p
         <property name="Color" value="Green" />
         <property name="Type" value="Sorcery" />
         <property name="Subtype" value="Omen" />
-        <property name="Rules">Search your library for up to two basic Forest cards, reveal them, put one onto the battlefield tapped and the other into your hand, then shuffle.</property>
+        <property name="Rules">Search your library for up to two basic Forest cards, reveal them, put one onto the battlefield tapped and the other into your hand, then shuffle. (Also shuffle this card.)</property>
         <property name="Power" value="" />
         <property name="Toughness" value="" />
       </alternate>
@@ -2842,7 +2843,7 @@ Harmonize <s value="4">{4}</s><s value="G">{G}</s> (You may cast this card from 
       <property name="Subtype" value="Human Druid" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When this creature enters, put a +1/+1 counter on target creature.
-Renew — <s value="3">{3}</s><s value="G">{G}</s>, Exile this card from your graveyard: Put a +1/+1 counter on target creature, then double the number of +1/+1 counters on that creature.</property>
+Renew — <s value="3">{3}</s><s value="G">{G}</s>, Exile this card from your graveyard: Put a +1/+1 counter on target creature, then double the number of +1/+1 counters on that creature. Activate only as a sorcery.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Ioannis Fiore" />
@@ -3035,11 +3036,12 @@ Harmonize <s value="4">{4}</s><s value="G">{G}</s> (You may cast this card from 
       <property name="Subtype" value="Hydra" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">At the beginning of your end step, put a +1/+1 counter on this creature.
-Whenever another nontoken creature you control enters, it endures X, where X is the number of counters on this creature. (Put X+1/+1 counters on the creature that entered or create an X/X white Spirit creature token.)</property>
+Whenever another nontoken creature you control enters, it endures X, where X is the number of counters on this creature. (Put X +1/+1 counters on the creature that entered or create an X/X white Spirit creature token.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Alexander Ostrowski" />
       <property name="Number" value="166" />
+      <property name="Faction" value="Abzan" />
     </card>
     <card name="All-Out Assault" id="b74876d8-f6a6-4b47-b960-b01a331bab01">
       <property name="Cost">
@@ -3280,12 +3282,12 @@ Landfall — Whenever a land you control enters, create a 4/4 red Dragon creatur
     </card>
     <card name="Dragonclaw Strike" id="bc7692ef-7091-4365-85a8-1edbd374f279">
       <property name="Cost">
+        <s value="2G">{2/G}</s>
         <s value="2U">{2/U}</s>
         <s value="2R">{2/R}</s>
-        <s value="2G">{2/G}</s>
       </property>
       <property name="CMC" value="6" />
-      <property name="Color" value="Multicolor Blue Red Green" />
+      <property name="Color" value="Multicolor Green Blue Red" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Double the power and toughness of target creature you control until end of turn. Then it fights up to one target creature an opponent controls. (Each deals damage equal to its power to the other.)</property>
@@ -3756,7 +3758,7 @@ Harmonize <s value="5">{5}</s><s value="G">{G}</s><s value="U">{U}</s><s value="
       <property name="Rarity" value="Rare" />
       <property name="Rules">Deathtouch, haste
 When this creature enters, exile up to one other target creature you control until this creature leaves the battlefield.
-Whenever this creature attacks, for each opponent, create a tapped token that's a copy of the exiled card attacking that opponent. At the beginning of your end step, sacrifice those tokens.</property>
+Whenever this creature attacks, for each opponent, create a tapped token that's a copy of the exiled card attacking that opponent. At the beginning of your next end step, sacrifice those tokens.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Chris Seaman" />
@@ -4237,7 +4239,7 @@ Whenever you cast a spell, you lose life equal to its mana value.</property>
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Saga" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">(As this Saga enters step, add a lore counter. Sacrifice after III.)
+      <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
 I — You draw two cards and you lose 2 life.
 II, III — Whenever a creature you control enters this turn, each opponent loses 1 life and you gain 1 life.</property>
       <property name="Artist" value="Clint Lockwood" />
@@ -5534,7 +5536,7 @@ Whenever one or more cards leave your graveyard during your turn, create a Treas
 Renew — <s value="2">{2}</s><s value="B">{B}</s><s value="G">{G}</s><s value="U">{U}</s>, Exile this card from your graveyard: Put two +1/+1 counters and a flying counter on target creature. Activate only as a sorcery.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
-      <property name="Artist" value="" />
+      <property name="Artist" value="Jarel Threat" />
       <property name="Number" value="313" />
       <property name="Packaging" value="Borderless" />
     </card>
@@ -5956,7 +5958,7 @@ Renew — <s value="2">{2}</s><s value="U">{U}</s>, Exile this card from your gr
       <property name="Color" value="Blue" />
       <property name="Type" value="Enchantment" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">At the beginning of your upkeep, mill three cards. Then if you have no cards in your library, exile this enchantment and put five cards from your graveyard on top of your library in any order.</property>
+      <property name="Rules">At the beginning of your upkeep, mill three cards. Then if your library has no cards in it, exile this enchantment and put five cards from your graveyard on top of your library in any order.</property>
       <property name="Artist" value="Kevin Glint" />
       <property name="Number" value="334" />
       <property name="Packaging" value="clan" />
@@ -6255,7 +6257,7 @@ Whenever a creature you control or a creature spell you control becomes the targ
       <property name="Subtype" value="Hydra" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">At the beginning of your end step, put a +1/+1 counter on this creature.
-Whenever another nontoken creature you control enters, it endures X, where X is the number of counters on this creature. (Put X+1/+1 counters on the creature that entered or create an X/X white Spirit creature token.)</property>
+Whenever another nontoken creature you control enters, it endures X, where X is the number of counters on this creature. (Put X +1/+1 counters on the creature that entered or create an X/X white Spirit creature token.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Kevin Glint" />
@@ -6500,7 +6502,7 @@ When this creature enters, search your library for a black card, a green card, a
       <property name="Rarity" value="Rare" />
       <property name="Rules">Deathtouch, haste
 When this creature enters, exile up to one other target creature you control until this creature leaves the battlefield.
-Whenever this creature attacks, for each opponent, create a tapped token that's a copy of the exiled card attacking that opponent. At the beginning of your end step, sacrifice those tokens.</property>
+Whenever this creature attacks, for each opponent, create a tapped token that's a copy of the exiled card attacking that opponent. At the beginning of your next end step, sacrifice those tokens.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Joshua Cairos" />
@@ -7080,7 +7082,7 @@ III — Double the power and toughness of each creature you control until end of
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Saga" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">(As this Saga enters step, add a lore counter. Sacrifice after III.)
+      <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
 I — You draw two cards and you lose 2 life.
 II, III — Whenever a creature you control enters this turn, each opponent loses 1 life and you gain 1 life.</property>
       <property name="Artist" value="Lie Setiawan" />
