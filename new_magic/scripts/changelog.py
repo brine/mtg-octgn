@@ -525,7 +525,13 @@ changelog = {
     3060321: ("3.6.3.21", "November 1 2024", [
         "Added Foundations set"
         ]),
-    3060322: ("3.6.3.22", "Feb 2 2024", [
+    3060322: ("3.6.3.22", "Feb 2 2025", [
         "Added Aetherdrift and Innistrad Remastered"
+        ]),
+    3060323: ("3.6.3.23", "March 28 2025", [
+        "Added Tarkir Dragonstorm"
+        ]),
+    3060324: ("3.6.3.24", "May 14 2025", [
+        "Added Final Fantasy Commander"
         ])
 }
