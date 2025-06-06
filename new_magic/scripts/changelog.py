@@ -533,5 +533,9 @@ changelog = {
         ]),
     3060324: ("3.6.3.24", "May 14 2025", [
         "Added Final Fantasy Commander"
+        ]),
+    3060325: ("3.6.3.25", "June 5 2025", [
+        "Added Final Fantasy",
+        "Note: Play boosters and tokens have not been finalized yet."
         ])
 }
