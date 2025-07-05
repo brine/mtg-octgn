@@ -537,5 +537,9 @@ changelog = {
     3060325: ("3.6.3.25", "June 5 2025", [
         "Added Final Fantasy",
         "Note: Play boosters and tokens have not been finalized yet."
+        ]),
+    3060327: ("3.6.3.27", "July 5 2025", [
+        "Fixed missing commander set cards and FIN tokens",
+        "Cleaned up some duplicate card arts in sets"
         ])
 }
