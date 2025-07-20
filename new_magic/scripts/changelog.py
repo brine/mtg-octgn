@@ -541,5 +541,8 @@ changelog = {
     3060327: ("3.6.3.27", "July 5 2025", [
         "Fixed missing commander set cards and FIN tokens",
         "Cleaned up some duplicate card arts in sets"
+        ]),
+    3060328: ("3.6.3.28", "July 20 2025", [
+        "Added Edge of Eternity"
         ])
 }

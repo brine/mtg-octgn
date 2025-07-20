@@ -614,6 +614,11 @@
                 <property name="Number" value="8" />
                 <property name="Flags" value="TMID" />
             </alternate>
+            <alternate name="Beast" type="4">
+                <property name="Artist" value="Xabi Gaztelua" />
+                <property name="Number" value="6" />
+                <property name="Flags" value="TEOC" />
+            </alternate>
         </card>
         <card name="Beast" id="87c369dd-05f6-43e9-add3-fd031bd76b7b">
             <property name="Color" value="Multicolor Red Green" />
@@ -843,6 +848,11 @@ Whenever this creature attacks, target attacking creature gains flying until end
                 <property name="Artist" value="Tuan Duong Chu" />
                 <property name="Number" value="11" />
                 <property name="Flags" value="TBLC"/>
+            </alternate>
+            <alternate name="Bird" type="5">
+                <property name="Artist" value="Alessandra Pisano" />
+                <property name="Number" value="3" />
+                <property name="Flags" value="TEOC"/>
             </alternate>
         </card>
         <card name="Bird" id="3aab274b-f3e8-48f5-89f3-5886d7ff06cd">
@@ -2379,6 +2389,19 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Artist" value="Steve Argyle" />
             <property name="Number" value="8" />
             <property name="Flags" value="TONE"/>
+        </card>
+        <card name="Drone" id="40e6e3b9-7ed0-4c08-83c8-51a1b9564757">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Drone" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying
+			This token can block only creatures with flying.</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Artur Nakhodkin" />
+            <property name="Number" value="3" />
+            <property name="Flags" value="TEOE"/>
         </card>
         <card name="Dwarf" id="6a94aefd-bdbb-4b30-9fe6-92b300ddf00c">
             <property name="Color" value="Red" />
@@ -3965,8 +3988,8 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Power" value="3" />
             <property name="Toughness" value="3" />
             <property name="Artist" value="Nic Klein" />
-            <property name="Number" value="6" />
-            <property name="Flags" value="TSOM"/>
+            <property name="Number" value="12" />
+            <property name="Flags" value="TEOC"/>
             <alternate name="Golem" type="1">
                 <property name="Artist" value="Volkan Baga" />
                 <property name="Number" value="9" />
@@ -4050,8 +4073,8 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Power" value="3" />
             <property name="Toughness" value="3" />
             <property name="Artist" value="Yeong-Hao Han" />
-            <property name="Number" value="10" />
-            <property name="Flags" value="TTHS"/>
+            <property name="Number" value="13" />
+            <property name="Flags" value="TEOC"/>
         </card>
         <card name="Golem" id="a7820eb9-6d7f-4bc4-b421-4e4420642fb7">
             <property name="Color" value="Colorless" />
@@ -4094,8 +4117,8 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Power" value="9" />
             <property name="Toughness" value="9" />
             <property name="Artist" value="Svetlin Velinov" />
-            <property name="Number" value="3" />
-            <property name="Flags" value="TMBS"/>
+            <property name="Number" value="14" />
+            <property name="Flags" value="TEOC"/>
         </card>
         <card name="Graveborn" id="9c2731ac-5832-45cd-87ef-e5be6c8f4b3b">
             <property name="Color" value="Multicolor Black Red" />
@@ -4555,6 +4578,11 @@ Whenever this creature deals combat damage to a player, gain control of target a
                 <property name="Number" value="1" />
                 <property name="Flags" value="TFIC"/>
             </alternate>
+            <alternate name="Human Soldier" type="9">
+                <property name="Artist" value="Deruchenko Alexander" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="TEOE"/>
+            </alternate>
         </card>
         <card name="Human Cleric" id="143a2f52-9de1-429b-abec-71cca5bbec90">
             <property name="Color" value="Multicolor White Black" />
@@ -4881,6 +4909,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Mila Pesic" />
             <property name="Number" value="7" />
             <property name="Flags" value="TDMU"/>
+            <alternate name="Insect" type="1">
+                <property name="Artist" value="Deruchenko Alexander" />
+                <property name="Number" value="4" />
+                <property name="Flags" value="TEOC"/>
+            </alternate>
         </card>
         <card name="Insect" id="6cd95e82-f30e-4a06-8d9b-ed11d1c08ad0">
             <property name="Color" value="Green" />
@@ -5360,6 +5393,36 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Number" value="12" />
             <property name="Flags" value="TM15"/>
         </card>
+        <card name="Lander" id="deba7649-34ff-41a4-bbd9-e9efbb2f7032">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact" />
+            <property name="Subtype" value="Lander" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules"><s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.</property>
+            <property name="Artist" value="Titus Lunter" />
+			<property name="Number" value="4" />
+			<property name="Flags" value="TEOE"/>
+            <alternate name="Lander" type="1">
+                <property name="Artist" value="Madeline Boni" />
+                <property name="Number" value="5" />
+                <property name="Flags" value="TEOE"/>
+            </alternate>
+            <alternate name="Lander" type="2">
+                <property name="Artist" value="Martin de Diego Sádaba" />
+                <property name="Number" value="6" />
+                <property name="Flags" value="TEOE"/>
+            </alternate>
+            <alternate name="Lander" type="3">
+                <property name="Artist" value="David Astruga" />
+                <property name="Number" value="7" />
+                <property name="Flags" value="TEOE"/>
+            </alternate>
+            <alternate name="Lander" type="4">
+                <property name="Artist" value="Jorge Jacinto" />
+                <property name="Number" value="8" />
+                <property name="Flags" value="TEOE"/>
+            </alternate>
+        </card>
         <card name="Lightning Rager" id="57a91893-a058-40e3-8f1d-a2b4f34631b3">
             <property name="Color" value="Red" />
             <property name="Type" value="Creature" />
@@ -5737,6 +5800,15 @@ Flying, vigilance, trample, lifelink, haste</property>
                 <property name="Number" value="4" />
                 <property name="Flags" value="TWOE"/>
             </alternate>
+        </card>
+        <card name="Munitions" id="0fe8bb4b-3309-4b76-9095-5ba28c896cbb">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">When this token leaves the battlefield, it deals 2 damage to any target.</property>
+            <property name="Artist" value="Leonardo Santanna" />
+            <property name="Number" value="9" />
+            <property name="Flags" value="TEOE"/>
         </card>
         <card name="Myr" id="16003e42-3ff7-478d-8f8c-2b5af4847da0">
             <property name="Color" value="Colorless" />
@@ -6765,6 +6837,17 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Number" value="11" />
             <property name="Flags" value="TSNC"/>
         </card>
+        <card name="Robot" id="4d2c4341-e945-48d0-b884-364e65ac4300">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Robot" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Leonardo Santanna" />
+            <property name="Number" value="10" />
+            <property name="Flags" value="TEOE"/>
+        </card>
         <card name="Robot Warrior" id="914b2a0c-a970-4f1a-aa65-7ea13cbdde23">
             <property name="Color" value="Blue" />
             <property name="Type" value="Artifact Creature" />
@@ -7329,6 +7412,11 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
 				<property name="Artist" value="Steve Ellis" />
                 <property name="Number" value="57" />
                 <property name="Flags" value="TCMM"/>
+            </alternate>
+            <alternate name="Sliver" type="5">
+				<property name="Artist" value="Igor Grechanyi" />
+                <property name="Number" value="1" />
+                <property name="Flags" value="TEOE"/>
             </alternate>
         </card>
         <card name="Sliver Army" id="3644cbb4-80f7-41f6-a52c-e3e123f498f4">
@@ -10633,6 +10721,16 @@ Equip <s value="2">{2}</s></property>
             <property name="Artist" value="Bryan Sola" />
             <property name="Number" value="19" />
             <property name="Flags" value="TNEO"/>
+        </card>
+        <card name="Tezzeret's Emblem" id="046b8b6a-9286-4f88-a870-ba62b3a40783">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Subtype" value="Tezzeret, Cruel Captain" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">At the beginning of combat on your turn, put three +1/+1 counters on target artifact you control. If it’s not a creature, it becomes a 0/0 Robot artifact creature.</property>
+            <property name="Artist" value="Bryan Sola" />
+            <property name="Number" value="11" />
+            <property name="Flags" value="TEOE"/>
         </card>
         <card name="Gideon's Emblem" id="5bb7cc16-9c2a-48d2-b8cd-766b880eecbe">
             <property name="Color" value="Colorless" />
