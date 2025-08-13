@@ -303,7 +303,7 @@ namespace MTGImageFetcher
                                         {
                                             newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate180FlipNone);
                                         }
-                                        else if (alt.Size.Name == "Plane")
+                                        else if (alt.Size.Name == "Plane" || alt.Size.Name == "Horizontal")
                                         {
                                             newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate90FlipNone);
                                         }

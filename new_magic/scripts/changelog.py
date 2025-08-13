@@ -544,5 +544,8 @@ changelog = {
         ]),
     3060328: ("3.6.3.28", "July 20 2025", [
         "Added Edge of Eternity"
+        ]),
+    3060329: ("3.6.3.29", "August 12 2025", [
+        "Split cards are now horizontally oriented.  NOTE You may need to re-download images to get the fixed rotated versions"
         ])
 }
