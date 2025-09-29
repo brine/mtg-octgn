@@ -547,5 +547,8 @@ changelog = {
         ]),
     3060329: ("3.6.3.29", "August 12 2025", [
         "Split cards are now horizontally oriented.  NOTE You may need to re-download images to get the fixed rotated versions"
+        ]),
+    3060330: ("3.6.3.30", "September 28 2025", [
+        "Spider-Man release"
         ])
 }
