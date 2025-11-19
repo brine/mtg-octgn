@@ -1,6 +1,783 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Secret Lair 30th Anniversary Countdown Kit" id="8224dce1-ca9c-45af-ac77-78bfc6042ae2" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="slc" releaseDate="2022-11-01">
+<set name="Secret Lair Countdown" id="8224dce1-ca9c-45af-ac77-78bfc6042ae2" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="slc" releaseDate="2022-11-01">
   <cards>
+    <card name="Altar of the Brood" id="0d656542-f0cd-485d-9d74-05573a2d49e4">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever another permanent you control enters, each opponent mills a card.</property>
+      <property name="Artist" value="Josh Freydkis" />
+      <property name="Number" value="001" />
+    </card>
+    <card name="Brain Freeze" id="a6382dfc-cadf-41da-ae42-0da9f98074b4">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Target player mills three cards.
+Storm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)</property>
+      <property name="Artist" value="Your Cinema" />
+      <property name="Number" value="002" />
+    </card>
+    <card name="Crop Rotation" id="8894eed8-fc6b-4bc4-a8d0-daa628911967">
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">As an additional cost to cast this spell, sacrifice a land.
+Search your library for a land card, put that card onto the battlefield, then shuffle.</property>
+      <property name="Artist" value="Marcuscus" />
+      <property name="Number" value="003" />
+    </card>
+    <card name="Demonic Consultation" id="4f2f0fda-592f-4420-9703-defa07ffa2dc">
+      <property name="Cost">
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Choose a card name. Exile the top six cards of your library, then reveal cards from the top of your library until you reveal a card with the chosen name. Put that card into your hand and exile all other cards revealed this way.</property>
+      <property name="Artist" value="Edward Steed" />
+      <property name="Number" value="004" />
+    </card>
+    <card name="Eerie Ultimatum" id="9d96d034-7c69-4aec-835c-233cf941db70">
+      <property name="Cost">
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="7" />
+      <property name="Color" value="Multicolor White Black Green" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Return any number of permanent cards with different names from your graveyard to the battlefield.</property>
+      <property name="Artist" value="Alexander Khabbazi" />
+      <property name="Number" value="005" />
+    </card>
+    <card name="Field of the Dead" id="1e1f470f-1194-4a87-ab6e-3574f5731642">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">This land enters tapped.
+<s value="T">{T}</s>: Add <s value="C">{C}</s>.
+Whenever this land or another land you control enters, if you control seven or more lands with different names, create a 2/2 black Zombie creature token.</property>
+      <property name="Artist" value="Colby Nichols" />
+      <property name="Number" value="006" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Gray Merchant of Asphodel" id="d7655424-a6c9-4c90-bc27-b4b4c3d78d12">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Zombie" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When this creature enters, each opponent loses X life, where X is your devotion to black. You gain life equal to the life lost this way. (Each <s value="B">{B}</s> in the mana costs of permanents you control counts toward your devotion to black.)</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Jack Hughes" />
+      <property name="Number" value="007" />
+    </card>
+    <card name="Hymn to Tourach" id="028a52c2-d641-49a5-a93b-4c5d01e67234">
+      <property name="Cost">
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Target player discards two cards at random.</property>
+      <property name="Artist" value="Sophy Hollington" />
+      <property name="Number" value="008" />
+    </card>
+    <card name="Isochron Scepter" id="d4f4ccdc-ffeb-4393-836d-f46204ad9b65">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Imprint — When this artifact enters, you may exile an instant card with mana value 2 or less from your hand.
+<s value="2">{2}</s>, <s value="T">{T}</s>: You may copy the exiled card. If you do, you may cast the copy without paying its mana cost.</property>
+      <property name="Artist" value="Kieran Yanner" />
+      <property name="Number" value="009" />
+    </card>
+    <card name="Junji, the Midnight Sky" id="1050fea7-307b-47fb-94f4-36f5cb481b2b">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Dragon Spirit" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Flying, menace
+When Junji dies, choose one —
+• Each opponent discards two cards and loses 2 life.
+• Put target non-Dragon creature card from a graveyard onto the battlefield under your control. You lose 2 life.</property>
+      <property name="Power" value="5" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Diego Andrade" />
+      <property name="Number" value="010" />
+    </card>
+    <card name="Krark-Clan Ironworks" id="8146d912-d493-4a18-a59e-75f55276c7b5">
+      <property name="Cost">
+        <s value="4">{4}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Sacrifice an artifact: Add <s value="C">{C}</s><s value="C">{C}</s>.</property>
+      <property name="Artist" value="Jimmy Knives" />
+      <property name="Number" value="011" />
+    </card>
+    <card name="Llanowar Elves" id="eea9251b-ca83-420f-ac5f-4fc3ea8dc190">
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elf Druid" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="G">{G}</s>.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Ampreh" />
+      <property name="Number" value="012" />
+    </card>
+    <card name="Myrel, Shield of Argive" id="14b4d558-11f2-46d0-8f25-d44f5e74f70c">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Soldier" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">During your turn, your opponents can't cast spells or activate abilities of artifacts, creatures, or enchantments.
+Whenever Myrel attacks, create X 1/1 colorless Soldier artifact creature tokens, where X is the number of Soldiers you control.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Molly Mendoza" />
+      <property name="Number" value="013" />
+    </card>
+    <card name="Narset's Reversal" id="3efbd60f-f1c0-4657-b2e4-902086b061b6">
+      <property name="Cost">
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Copy target instant or sorcery spell, then return it to its owner's hand. You may choose new targets for the copy.</property>
+      <property name="Artist" value="Ben Newman" />
+      <property name="Number" value="014" />
+    </card>
+    <card name="Ob Nixilis, the Fallen" id="c6c0bbd8-c428-4773-bd78-974d92f0e8bc">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Demon" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Landfall — Whenever a land you control enters, you may have target player lose 3 life. If you do, put three +1/+1 counters on Ob Nixilis.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="3" />
+      <property name="Artist" value="Skinner" />
+      <property name="Number" value="015" />
+    </card>
+    <card name="Phyrexian Altar" id="68875b43-6839-467c-909e-52fd2212b7de">
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Sacrifice a creature: Add one mana of any color.</property>
+      <property name="Artist" value="See Machine" />
+      <property name="Number" value="016" />
+    </card>
+    <card name="Questing Beast" id="faf48a1c-e130-475a-8a45-db82bd950ab7">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Beast" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Vigilance, deathtouch, haste
+Questing Beast can't be blocked by creatures with power 2 or less.
+Combat damage that would be dealt by creatures you control can't be prevented.
+Whenever Questing Beast deals combat damage to an opponent, it deals that much damage to target planeswalker that player controls.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Dan Hipp" />
+      <property name="Number" value="017" />
+    </card>
+    <card name="Retrofitter Foundry" id="2ad34311-c7ef-4333-8978-f82d0dfe2836">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="3">{3}</s>: Untap this artifact.
+<s value="2">{2}</s>, <s value="T">{T}</s>: Create a 1/1 colorless Servo artifact creature token.
+<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice a Servo: Create a 1/1 colorless Thopter artifact creature token with flying.
+<s value="T">{T}</s>, Sacrifice a Thopter: Create a 4/4 colorless Construct artifact creature token.</property>
+      <property name="Artist" value="Nikki Radan" />
+      <property name="Number" value="018" />
+    </card>
+    <card name="Sol Ring" id="193a5688-9e9b-48f4-9904-53134ec73c97">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>.</property>
+      <property name="Artist" value="Souther Salazar" />
+      <property name="Number" value="019" />
+    </card>
+    <card name="Temple of the False God" id="1308603d-169b-4e26-96aa-05c2a5b5accd">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>. Activate only if you control five or more lands.</property>
+      <property name="Artist" value="Jon Vermilyea" />
+      <property name="Number" value="020" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Urza's Saga" id="e9a213c8-f9b5-4fcb-969c-b6c574810f21">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Enchantment Land" />
+      <property name="Subtype" value="Urza's Saga" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
+I — This Saga gains "<s value="T">{T}</s>: Add <s value="C">{C}</s>."
+II — This Saga gains "<s value="2">{2}</s>, <s value="T">{T}</s>: Create a 0/0 colorless Construct artifact creature token with 'This token gets +1/+1 for each artifact you control.'"
+III — Search your library for an artifact card with mana cost <s value="0">{0}</s> or <s value="1">{1}</s>, put it onto the battlefield, then shuffle.</property>
+      <property name="Artist" value="Sadboi" />
+      <property name="Number" value="021" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Vesuva" id="2671eaa1-e6d5-4b70-a36c-3c7765695f1b">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">You may have this land enter tapped as a copy of any land on the battlefield.</property>
+      <property name="Artist" value="Stephen Andrade" />
+      <property name="Number" value="022" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Wasteland" id="b673bf01-aed0-4d5b-bdd2-35dc8a162dc6">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>, Sacrifice this land: Destroy target nonbasic land.</property>
+      <property name="Artist" value="Aaron J. Riley" />
+      <property name="Number" value="023" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Xantcha, Sleeper Agent" id="9e919d80-093a-4b11-a78d-1ce2d038f8fc">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor Black Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Phyrexian Minion" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Xantcha enters under the control of an opponent of your choice.
+Xantcha attacks each combat if able and can't attack its owner or planeswalkers its owner controls.
+<s value="3">{3}</s>: Xantcha's controller loses 2 life and you draw a card. Any player may activate this ability.</property>
+      <property name="Power" value="5" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Matthew Southworth" />
+      <property name="Number" value="024" />
+    </card>
+    <card name="Yarok, the Desecrated" id="f3b6a891-9206-4c7b-9331-fb652af9751f">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="G">{G}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Multicolor Black Green Blue" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Elemental Horror" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Deathtouch, lifelink
+If a permanent entering causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Cacho Rubione" />
+      <property name="Number" value="025" />
+    </card>
+    <card name="Zo-Zu the Punisher" id="c9a27fc2-f9d4-4645-8d50-98a2bf2db1ef">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Goblin Warrior" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever a land enters, Zo-Zu deals 2 damage to that land's controller.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Mattias Lindström" />
+      <property name="Number" value="026" />
+    </card>
+    <card name="Alhammarret's Archive" id="95d65164-0ce3-40cd-a647-7e7f355a5afb">
+      <property name="Cost">
+        <s value="5">{5}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Legendary Artifact" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">If you would gain life, you gain twice that much life instead.
+If you would draw a card except the first one you draw in each of your draw steps, draw two cards instead.</property>
+      <property name="Artist" value="Simen Meyer" />
+      <property name="Number" value="027" />
+    </card>
+    <card name="Altar of the Brood" id="d44825dd-8126-4a4b-bcd5-c89ef63084e2">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever another permanent you control enters, each opponent mills a card.</property>
+      <property name="Artist" value="Josh Freydkis" />
+      <property name="Number" value="028" />
+    </card>
+    <card name="Brain Freeze" id="6db339e8-1e48-4ad6-b536-bbbc41016038">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Target player mills three cards.
+Storm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)</property>
+      <property name="Artist" value="Your Cinema" />
+      <property name="Number" value="029" />
+    </card>
+    <card name="Crop Rotation" id="9077e683-27d6-4f8f-a852-2d0353688010">
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">As an additional cost to cast this spell, sacrifice a land.
+Search your library for a land card, put that card onto the battlefield, then shuffle.</property>
+      <property name="Artist" value="Marcuscus" />
+      <property name="Number" value="030" />
+    </card>
+    <card name="Demonic Consultation" id="5dae1584-bd49-44e8-9f94-f98060752132">
+      <property name="Cost">
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Choose a card name. Exile the top six cards of your library, then reveal cards from the top of your library until you reveal a card with the chosen name. Put that card into your hand and exile all other cards revealed this way.</property>
+      <property name="Artist" value="Edward Steed" />
+      <property name="Number" value="031" />
+    </card>
+    <card name="Eerie Ultimatum" id="8ed0f40a-7a06-4d13-8b66-260e1031c064">
+      <property name="Cost">
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="7" />
+      <property name="Color" value="Multicolor White Black Green" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Return any number of permanent cards with different names from your graveyard to the battlefield.</property>
+      <property name="Artist" value="Alexander Khabbazi" />
+      <property name="Number" value="032" />
+    </card>
+    <card name="Field of the Dead" id="539f8465-aa73-4242-999e-3960f694b172">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">This land enters tapped.
+<s value="T">{T}</s>: Add <s value="C">{C}</s>.
+Whenever this land or another land you control enters, if you control seven or more lands with different names, create a 2/2 black Zombie creature token.</property>
+      <property name="Artist" value="Colby Nichols" />
+      <property name="Number" value="033" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Gray Merchant of Asphodel" id="aabe12dc-59b7-4245-8369-9bfc6304cda8">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Zombie" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">When this creature enters, each opponent loses X life, where X is your devotion to black. You gain life equal to the life lost this way. (Each <s value="B">{B}</s> in the mana costs of permanents you control counts toward your devotion to black.)</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Jack Hughes" />
+      <property name="Number" value="034" />
+    </card>
+    <card name="Hymn to Tourach" id="d94b9887-1a47-423c-bc81-fe57b4637e21">
+      <property name="Cost">
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Sorcery" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Target player discards two cards at random.</property>
+      <property name="Artist" value="Sophy Hollington" />
+      <property name="Number" value="035" />
+    </card>
+    <card name="Isochron Scepter" id="6e8beae7-f1ca-4f21-ada4-2e625657571b">
+      <property name="Cost">
+        <s value="2">{2}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Imprint — When this artifact enters, you may exile an instant card with mana value 2 or less from your hand.
+<s value="2">{2}</s>, <s value="T">{T}</s>: You may copy the exiled card. If you do, you may cast the copy without paying its mana cost.</property>
+      <property name="Artist" value="Kieran Yanner" />
+      <property name="Number" value="036" />
+    </card>
+    <card name="Junji, the Midnight Sky" id="c67bc57d-67fb-4da0-9d8f-0b1e5c9f4e83">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Dragon Spirit" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Flying, menace
+When Junji dies, choose one —
+• Each opponent discards two cards and loses 2 life.
+• Put target non-Dragon creature card from a graveyard onto the battlefield under your control. You lose 2 life.</property>
+      <property name="Power" value="5" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Diego Andrade" />
+      <property name="Number" value="037" />
+    </card>
+    <card name="Krark-Clan Ironworks" id="f5b731dd-49ab-440b-b974-497e57122d4e">
+      <property name="Cost">
+        <s value="4">{4}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Sacrifice an artifact: Add <s value="C">{C}</s><s value="C">{C}</s>.</property>
+      <property name="Artist" value="Jimmy Knives" />
+      <property name="Number" value="038" />
+    </card>
+    <card name="Llanowar Elves" id="de7e17bc-9d4e-40c8-b8eb-a28882143d67">
+      <property name="Cost">
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Elf Druid" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="G">{G}</s>.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Ampreh" />
+      <property name="Number" value="039" />
+    </card>
+    <card name="Myrel, Shield of Argive" id="a3ed5007-a574-45cd-bd33-444f7b84fdfb">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Soldier" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">During your turn, your opponents can't cast spells or activate abilities of artifacts, creatures, or enchantments.
+Whenever Myrel attacks, create X 1/1 colorless Soldier artifact creature tokens, where X is the number of Soldiers you control.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Molly Mendoza" />
+      <property name="Number" value="040" />
+    </card>
+    <card name="Narset's Reversal" id="79122902-f80a-42a3-a907-493c67603c44">
+      <property name="Cost">
+        <s value="U">{U}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Instant" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Copy target instant or sorcery spell, then return it to its owner's hand. You may choose new targets for the copy.</property>
+      <property name="Artist" value="Ben Newman" />
+      <property name="Number" value="041" />
+    </card>
+    <card name="Ob Nixilis, the Fallen" id="79e0fbea-1f35-4db8-a5b0-0b1c016f4946">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="B">{B}</s>
+        <s value="B">{B}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Black" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Demon" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Landfall — Whenever a land you control enters, you may have target player lose 3 life. If you do, put three +1/+1 counters on Ob Nixilis.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="3" />
+      <property name="Artist" value="Skinner" />
+      <property name="Number" value="042" />
+    </card>
+    <card name="Phyrexian Altar" id="9890f538-0896-4814-8646-b29acc5852c7">
+      <property name="Cost">
+        <s value="3">{3}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Sacrifice a creature: Add one mana of any color.</property>
+      <property name="Artist" value="See Machine" />
+      <property name="Number" value="043" />
+    </card>
+    <card name="Questing Beast" id="f56d40b1-db8a-4ce9-b8a3-7fc196031e34">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Beast" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Vigilance, deathtouch, haste
+Questing Beast can't be blocked by creatures with power 2 or less.
+Combat damage that would be dealt by creatures you control can't be prevented.
+Whenever Questing Beast deals combat damage to an opponent, it deals that much damage to target planeswalker that player controls.</property>
+      <property name="Power" value="4" />
+      <property name="Toughness" value="4" />
+      <property name="Artist" value="Dan Hipp" />
+      <property name="Number" value="044" />
+    </card>
+    <card name="Retrofitter Foundry" id="5afffa6f-ae69-47c5-b79e-4a34f4acaf58">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="3">{3}</s>: Untap this artifact.
+<s value="2">{2}</s>, <s value="T">{T}</s>: Create a 1/1 colorless Servo artifact creature token.
+<s value="1">{1}</s>, <s value="T">{T}</s>, Sacrifice a Servo: Create a 1/1 colorless Thopter artifact creature token with flying.
+<s value="T">{T}</s>, Sacrifice a Thopter: Create a 4/4 colorless Construct artifact creature token.</property>
+      <property name="Artist" value="Nikki Radan" />
+      <property name="Number" value="045" />
+    </card>
+    <card name="Sol Ring" id="2f4e1e26-95cc-45bd-90e9-3ae00f1708cf">
+      <property name="Cost">
+        <s value="1">{1}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Artifact" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>.</property>
+      <property name="Artist" value="Souther Salazar" />
+      <property name="Number" value="046" />
+    </card>
+    <card name="Temple of the False God" id="8264efcb-4265-4ad7-a9fb-9d5d636e6a3c">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s><s value="C">{C}</s>. Activate only if you control five or more lands.</property>
+      <property name="Artist" value="Jon Vermilyea" />
+      <property name="Number" value="047" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Urza's Saga" id="3ec5d76d-58c0-4525-be90-b37f4a97e14c">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Enchantment Land" />
+      <property name="Subtype" value="Urza's Saga" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)
+I — This Saga gains "<s value="T">{T}</s>: Add <s value="C">{C}</s>."
+II — This Saga gains "<s value="2">{2}</s>, <s value="T">{T}</s>: Create a 0/0 colorless Construct artifact creature token with 'This token gets +1/+1 for each artifact you control.'"
+III — Search your library for an artifact card with mana cost <s value="0">{0}</s> or <s value="1">{1}</s>, put it onto the battlefield, then shuffle.</property>
+      <property name="Artist" value="Sadboi" />
+      <property name="Number" value="048" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Vesuva" id="72a9faff-d54a-4996-822d-ef1323059e3a">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">You may have this land enter tapped as a copy of any land on the battlefield.</property>
+      <property name="Artist" value="Stephen Andrade" />
+      <property name="Number" value="049" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Wasteland" id="96ad119e-d609-466b-8c2b-d540c3c11984">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Land" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">
+        <s value="T">{T}</s>: Add <s value="C">{C}</s>.
+<s value="T">{T}</s>, Sacrifice this land: Destroy target nonbasic land.</property>
+      <property name="Artist" value="Aaron J. Riley" />
+      <property name="Number" value="050" />
+      <property name="Flags" value="C" />
+    </card>
+    <card name="Xantcha, Sleeper Agent" id="1a3dd206-ac71-4e33-a326-5485a3308a4a">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="B">{B}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor Black Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Phyrexian Minion" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Xantcha enters under the control of an opponent of your choice.
+Xantcha attacks each combat if able and can't attack its owner or planeswalkers its owner controls.
+<s value="3">{3}</s>: Xantcha's controller loses 2 life and you draw a card. Any player may activate this ability.</property>
+      <property name="Power" value="5" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Matthew Southworth" />
+      <property name="Number" value="051" />
+    </card>
+    <card name="Yarok, the Desecrated" id="af247608-1935-4bb5-be13-20b7974a5245">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="B">{B}</s>
+        <s value="G">{G}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Multicolor Black Green Blue" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Elemental Horror" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Deathtouch, lifelink
+If a permanent entering causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Cacho Rubione" />
+      <property name="Number" value="052" />
+    </card>
+    <card name="Zo-Zu the Punisher" id="09d43f17-cec1-4a2e-96d7-34e67f2d5fde">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="R">{R}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Goblin Warrior" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever a land enters, Zo-Zu deals 2 damage to that land's controller.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Mattias Lindström" />
+      <property name="Number" value="053" />
+    </card>
     <card name="Shivan Dragon" id="c535f7f8-a57e-4ef1-91b4-5e3281bd4407">
       <property name="Cost">
         <s value="4">{4}</s>

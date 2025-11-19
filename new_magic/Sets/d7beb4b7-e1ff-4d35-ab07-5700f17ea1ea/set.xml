@@ -1552,7 +1552,7 @@ At the beginning of your end step, if eight or more cards are in your graveyard,
         <property name="Type" value="Artifact" />
         <property name="Subtype" value="Vehicle" />
         <property name="Rules">Flying
-Crew 1 (Tap any number of creatured you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)</property>
+Crew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)</property>
         <property name="Power" value="4" />
         <property name="Toughness" value="4" />
       </alternate>
@@ -1650,7 +1650,7 @@ III — Diamond Dust — Draw a card for each tapped creature your opponents con
       <property name="Color" value="Blue" />
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Choose target spell. Surveil 2, then counter the chosen spell unless its controller pays <s value="1">{1}</s> for each card in your graveyard. (To surveil 2, look at the top two cards of your library, then put any number of them into graveyard and the rest on top of your library in any order.)</property>
+      <property name="Rules">Choose target spell. Surveil 2, then counter the chosen spell unless its controller pays <s value="1">{1}</s> for each card in your graveyard. (To surveil 2, look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)</property>
       <property name="Artist" value="Sansyu" />
       <property name="Number" value="079" />
     </card>
@@ -1986,19 +1986,17 @@ As long as this creature has a counter on it, it can attack as though it didn't 
       <property name="Toughness" value="3" />
       <property name="Artist" value="Simon Dominic" />
       <property name="Number" value="099" />
-    </card>
-    <card name="Ragnarok, Divine Deliverance" id="01c5bafe-c995-4cef-90fb-7ccb95858511">
-      <property name="CMC" value="7" />
-      <property name="Color" value="Multicolor Black Green" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Beast Avatar" />
-      <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Vigilance, menace, trample, reach, haste
+      <alternate name="Ragnarok, Divine Deliverance" type="meld">
+        <property name="Cost" />
+        <property name="CMC" value="7" />
+        <property name="Color" value="Multicolor Black Green" />
+        <property name="Type" value="Legendary Creature" />
+        <property name="Subtype" value="Beast Avatar" />
+        <property name="Rules">Vigilance, menace, trample, reach, haste
 When Ragnarok dies, destroy target permanent and return target nonlegendary permanent card from your graveyard to the battlefield.</property>
-      <property name="Power" value="7" />
-      <property name="Toughness" value="6" />
-      <property name="Artist" value="Simon Dominic" />
-      <property name="Number" value="099" />
+        <property name="Power" value="7" />
+        <property name="Toughness" value="6" />
+      </alternate>
     </card>
     <card name="Fight On!" id="e1b0739a-dcc4-4034-96d7-69e551b2f36b">
       <property name="Cost">
@@ -3908,6 +3906,18 @@ At the beginning of your first main phase, if you both own and control Vanille a
       <property name="Toughness" value="2" />
       <property name="Artist" value="Simon Dominic" />
       <property name="Number" value="211" />
+      <alternate name="Ragnarok, Divine Deliverance" type="meld">
+        <property name="Cost" />
+        <property name="CMC" value="7" />
+        <property name="Color" value="Multicolor Black Green" />
+        <property name="Type" value="Legendary Creature" />
+        <property name="Subtype" value="Beast Avatar" />
+        <property name="Rules">Vigilance, menace, trample, reach, haste
+When Ragnarok dies, destroy target permanent and return target nonlegendary permanent card from your graveyard to the battlefield.</property>
+        <property name="Power" value="7" />
+        <property name="Toughness" value="6" />
+        <property name="Number" value="099" />
+      </alternate>
     </card>
     <card name="Absolute Virtue" id="aa192912-c9ee-403f-8a46-a338c9edb4b9">
       <property name="Cost">
@@ -7022,20 +7032,19 @@ Protect — Whenever Cecil attacks, other attacking creatures gain indestructibl
       <property name="Artist" value="ikeda_cpt" />
       <property name="Number" value="381" />
       <property name="Packaging" value="character" />
-    </card>
-    <card name="Ragnarok, Divine Deliverance" id="0f40e47b-32ed-4846-92b3-cc54e89368fe">
-      <property name="CMC" value="7" />
-      <property name="Color" value="Multicolor Black Green" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Beast Avatar" />
-      <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Vigilance, menace, trample, reach, haste
+      <alternate name="Ragnarok, Divine Deliverance" type="meld">
+        <property name="Cost" />
+        <property name="CMC" value="7" />
+        <property name="Color" value="Multicolor Black Green" />
+        <property name="Type" value="Legendary Creature" />
+        <property name="Subtype" value="Beast Avatar" />
+        <property name="Rules">Vigilance, menace, trample, reach, haste
 When Ragnarok dies, destroy target permanent and return target nonlegendary permanent card from your graveyard to the battlefield.</property>
-      <property name="Power" value="7" />
-      <property name="Toughness" value="6" />
-      <property name="Artist" value="ikeda_cpt" />
-      <property name="Number" value="381" />
-      <property name="Packaging" value="character" />
+        <property name="Power" value="7" />
+        <property name="Toughness" value="6" />
+        <property name="Artist" value="Simon Dominic" />
+        <property name="Number" value="099" />
+      </alternate>
     </card>
     <card name="Sephiroth, Fabled SOLDIER" id="f150d6e9-3da6-4655-9c63-dd34525d08a1">
       <property name="Cost">
@@ -7280,6 +7289,19 @@ At the beginning of your first main phase, if you both own and control Vanille a
       <property name="Artist" value="ikeda_cpt" />
       <property name="Number" value="392" />
       <property name="Packaging" value="character" />
+      <alternate name="Ragnarok, Divine Deliverance" type="meld">
+        <property name="Cost" />
+        <property name="CMC" value="7" />
+        <property name="Color" value="Multicolor Black Green" />
+        <property name="Type" value="Legendary Creature" />
+        <property name="Subtype" value="Beast Avatar" />
+        <property name="Rules">Vigilance, menace, trample, reach, haste
+When Ragnarok dies, destroy target permanent and return target nonlegendary permanent card from your graveyard to the battlefield.</property>
+        <property name="Power" value="7" />
+        <property name="Toughness" value="6" />
+        <property name="Artist" value="Simon Dominic" />
+        <property name="Number" value="099" />
+      </alternate>
     </card>
     <card name="Balthier and Fran" id="c8198264-150f-4f95-9de1-cbc7fa456535">
       <property name="Cost">
@@ -8386,20 +8408,18 @@ Protect — Whenever Cecil attacks, other attacking creatures gain indestructibl
       <property name="Artist" value="Simon Dominic" />
       <property name="Number" value="446" />
       <property name="Packaging" value="Special" />
-    </card>
-    <card name="Ragnarok, Divine Deliverance" id="cbcde2c1-e973-4ec0-b333-d71fa7452ef1">
-      <property name="CMC" value="7" />
-      <property name="Color" value="Multicolor Black Green" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Beast Avatar" />
-      <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Vigilance, menace, trample, reach, haste
+      <alternate name="Ragnarok, Divine Deliverance" type="meld">
+        <property name="Cost" />
+        <property name="CMC" value="7" />
+        <property name="Color" value="Multicolor Black Green" />
+        <property name="Type" value="Legendary Creature" />
+        <property name="Subtype" value="Beast Avatar" />
+        <property name="Rules">Vigilance, menace, trample, reach, haste
 When Ragnarok dies, destroy target permanent and return target nonlegendary permanent card from your graveyard to the battlefield.</property>
-      <property name="Power" value="7" />
-      <property name="Toughness" value="6" />
-      <property name="Artist" value="Simon Dominic" />
-      <property name="Number" value="446" />
-      <property name="Packaging" value="Special" />
+        <property name="Power" value="7" />
+        <property name="Toughness" value="6" />
+        <property name="Number" value="099" />
+      </alternate>
     </card>
     <card name="Gaius van Baelsar" id="42605473-e37d-46b3-8979-31cc6b21bc3c">
       <property name="Cost">
@@ -8999,6 +9019,18 @@ At the beginning of your first main phase, if you both own and control Vanille a
       <property name="Artist" value="Simon Dominic" />
       <property name="Number" value="475" />
       <property name="Packaging" value="Special" />
+      <alternate name="Ragnarok, Divine Deliverance" type="meld">
+        <property name="Cost" />
+        <property name="CMC" value="7" />
+        <property name="Color" value="Multicolor Black Green" />
+        <property name="Type" value="Legendary Creature" />
+        <property name="Subtype" value="Beast Avatar" />
+        <property name="Rules">Vigilance, menace, trample, reach, haste
+When Ragnarok dies, destroy target permanent and return target nonlegendary permanent card from your graveyard to the battlefield.</property>
+        <property name="Power" value="7" />
+        <property name="Toughness" value="6" />
+        <property name="Number" value="099" />
+      </alternate>
     </card>
     <card name="Absolute Virtue" id="50716867-4370-4c2f-aae5-9d791a5d5a2e">
       <property name="Cost">
@@ -10221,6 +10253,152 @@ Equipped creature gets +7/+7.
 Equip <s value="7">{7}</s></property>
       <property name="Artist" value="Fariba Khamseh" />
       <property name="Number" value="563" />
+      <property name="Packaging" value="Special" />
+    </card>
+    <card name="Cloud, Midgar Mercenary" id="b358dadc-9cc9-4baf-afec-3b50d0822609">
+      <property name="Cost">
+        <s value="W">{W}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Soldier Mercenary" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">When Cloud enters, search your library for an Equipment card, reveal it, put it into your hand, then shuffle.
+As long as Cloud is equipped, if an ability of Cloud or an Equipment attached to it triggers, that ability triggers an additional time.</property>
+      <property name="Power" value="2" />
+      <property name="Toughness" value="1" />
+      <property name="Artist" value="Inuchiyo Meimaru" />
+      <property name="Number" value="564" />
+      <property name="Packaging" value="Special" />
+    </card>
+    <card name="Stiltzkin, Moogle Merchant" id="c7d9c54d-edec-40a8-82d8-b12cee7daa21">
+      <property name="Cost">
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="White" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Moogle" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Lifelink
+<s value="2">{2}</s>, <s value="T">{T}</s>: Target opponent gains control of another target permanent you control. If they do, you draw a card.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Yukihiro Maruo" />
+      <property name="Number" value="565" />
+      <property name="Packaging" value="Special" />
+    </card>
+    <card name="A Realm Reborn" id="13f4b6f3-736f-4f33-9d05-9bfd0b05b214">
+      <property name="Cost">
+        <s value="4">{4}</s>
+        <s value="G">{G}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="6" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Enchantment" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Other permanents you control have "<s value="T">{T}</s>: Add one mana of any color."</property>
+      <property name="Artist" value="Susumu Kuroi" />
+      <property name="Number" value="566" />
+      <property name="Packaging" value="Special" />
+    </card>
+    <card name="Tifa Lockhart" id="39a038ed-9ed9-4a32-9613-989e4809ec94">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="2" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Monk" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Trample
+Landfall — Whenever a land you control enters, double Tifa Lockhart's power until end of turn.</property>
+      <property name="Power" value="1" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Yoshiro Ambe" />
+      <property name="Number" value="567" />
+      <property name="Packaging" value="Special" />
+    </card>
+    <card name="Traveling Chocobo" id="f58e882a-c59f-4f72-91b5-0291f8360a2c">
+      <property name="Cost">
+        <s value="2">{2}</s>
+        <s value="G">{G}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Green" />
+      <property name="Type" value="Creature" />
+      <property name="Subtype" value="Bird" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">You may look at the top card of your library any time.
+You may play lands and cast Bird spells from the top of your library.
+If a land or Bird you control entering the battlefield causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="2" />
+      <property name="Artist" value="Ishikawa Kenta" />
+      <property name="Number" value="568" />
+      <property name="Packaging" value="Special" />
+    </card>
+    <card name="Choco, Seeker of Paradise" id="1ce688fa-1fdb-4acd-b9b0-bf7325a6b8e0">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="4" />
+      <property name="Color" value="Multicolor Green White Blue" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Bird" />
+      <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever one or more Birds you control attack, look at that many cards from the top of your library. You may put one of them into your hand. Then put any number of land cards from among them onto the battlefield tapped and the rest into your graveyard.
+Landfall — Whenever a land you control enters, Choco gets +1/+0 until end of turn.</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Kemonomichi" />
+      <property name="Number" value="569" />
+      <property name="Packaging" value="Special" />
+    </card>
+    <card name="Vivi Ornitier" id="25ef2d44-c261-4511-b96f-85e7a291e318">
+      <property name="Cost">
+        <s value="1">{1}</s>
+        <s value="U">{U}</s>
+        <s value="R">{R}</s>
+      </property>
+      <property name="CMC" value="3" />
+      <property name="Color" value="Multicolor Blue Red" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Wizard" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">
+        <s value="0">{0}</s>: Add X mana in any combination of <s value="U">{U}</s> and/or <s value="R">{R}</s>, where X is Vivi Ornitier's power. Activate only during your turn and only once each turn.
+Whenever you cast a noncreature spell, put a +1/+1 counter on Vivi Ornitier and it deals 1 damage to each opponent.</property>
+      <property name="Power" value="0" />
+      <property name="Toughness" value="3" />
+      <property name="Artist" value="Ryanroro" />
+      <property name="Number" value="570" />
+      <property name="Packaging" value="Special" />
+    </card>
+    <card name="Yuna, Hope of Spira" id="d9228c15-06d1-4701-8619-1ad08d63275a">
+      <property name="Cost">
+        <s value="3">{3}</s>
+        <s value="G">{G}</s>
+        <s value="W">{W}</s>
+      </property>
+      <property name="CMC" value="5" />
+      <property name="Color" value="Multicolor Green White" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Human Cleric" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">During your turn, Yuna and enchantment creatures you control have trample, lifelink, and ward <s value="2">{2}</s>.
+At the beginning of your end step, return up to one target enchantment card from your graveyard to the battlefield with a finality counter on it. (If a permanent with a finality counter on it would be put into a graveyard from the battlefield, exile it instead.)</property>
+      <property name="Power" value="3" />
+      <property name="Toughness" value="5" />
+      <property name="Artist" value="Yuichi Murakami" />
+      <property name="Number" value="571" />
       <property name="Packaging" value="Special" />
     </card>
     <card name="Y'shtola Rhul" id="6d24956c-b123-4682-9f89-6821ae45fc00">

@@ -550,5 +550,8 @@ changelog = {
         ]),
     3060330: ("3.6.3.30", "September 28 2025", [
         "Spider-Man release"
+        ]),
+    3060331: ("3.6.3.31", "November 19 2025", [
+        "Spider-Man release"
         ])
 }
