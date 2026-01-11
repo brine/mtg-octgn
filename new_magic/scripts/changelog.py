@@ -556,5 +556,8 @@ changelog = {
         ]),
     3060332: ("3.6.3.32", "January 10 2026", [
         "Lorwyn Eclipsed release"
+        ]),
+    3060333: ("3.6.3.33", "January 11 2026", [
+        "Fixed ECL limited packs missing cards"
         ])
 }
