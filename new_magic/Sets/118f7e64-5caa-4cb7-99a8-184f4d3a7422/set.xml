@@ -570,7 +570,7 @@ Whenever you cast a spell from exile, create a 1/1 white Ally creature token.</p
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Choose up to one target creature, then airbend all other creatures. (Exile them. While each one is exiled, its owner may cast it for <s value="2">{2}</s> rather than its mana cost.)
-Until your next turn, your opponents can't cast spells from anywhere other than their hand.
+Until your next turn, your opponents can't cast spells from anywhere other than their hands.
 Exile Avatar's Wrath.</property>
       <property name="Artist" value="Ainezu" />
       <property name="Number" value="012" />
@@ -1179,7 +1179,7 @@ When this creature enters, scry 2.</property>
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">As an additional cost to cast this spell, waterbend <s value="X">{X}</s>. (While paying a waterbend cost, you can tap your artifacts and creatures to help. Each one pays for <s value="1">{1}</s>.)
-Tap up to X target creatures, then distribute three stun counters among tapped creatures your opponents control. (If a permanent with a stun counter would become untapped, remove one from it instead.)</property>
+Tap up to X target creatures, then distribute three stun counters among any number of tapped creatures your opponents control. (If a permanent with a stun counter would become untapped, remove one from it instead.)</property>
       <property name="Artist" value="Mitori" />
       <property name="Number" value="047" />
       <property name="Faction" value="Watertribe" />
@@ -1726,8 +1726,8 @@ When Ty Lee enters, tap up to one target creature. It doesn't untap during its c
       <property name="Subtype" value="Serpent" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flash
-Ward—Waterbend <s value="4">{4}</s> (While paying a waterbend cost, you can tap your artifacts and creatures to help. Each one pays for <s value="1">{1}</s>.)
-Whenever an opponent draws their second card each turn, draw two cards.</property>
+Ward—Waterbend <s value="4">{4}</s>. (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays <s value="4">{4}</s>. They can tap their artifacts and creatures to help. Each one pays for <s value="1">{1}</s>.)
+Whenever an opponent draws their second card each turn, you draw two cards.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Miho Midorikawa" />
@@ -1832,7 +1832,7 @@ Waterbend <s value="5">{5}</s>: Enchanted creature's owner shuffles it into thei
       <property name="Subtype" value="Spirit Ally" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying, vigilance
-Waterbend <s value="5">{5}</s>, <s value="T">{T}</s>: You may cast a noncreature spell from your hand without paying its mana cost.</property>
+Waterbend <s value="5">{5}</s>, <s value="T">{T}</s>: You may cast a noncreature spell from your hand without paying its mana cost. (While paying a waterbend cost, you can tap your artifacts and creatures to help. Each one pays for <s value="1">{1}</s>.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Yuumei" />
@@ -2877,7 +2877,7 @@ Creatures target player controls get +2/+0 until end of turn.</property>
       <property name="Subtype" value="Human Rebel Ally" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Firebending 1 (Whenever this creature attacks, add <s value="R">{R}</s>. This mana lasts until end of combat.)
-Exhaust — <s value="3">{3}</s>: Put a +1/+1 counter on Jeong Jeong. When you next cast a Lesson spell this turn, copy it and you may choose new targets for the copy.</property>
+Exhaust — <s value="3">{3}</s>: Put a +1/+1 counter on Jeong Jeong. When you next cast a Lesson spell this turn, copy it and you may choose new targets for the copy. (Activate each exhaust ability only once.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Danciao" />
@@ -3665,8 +3665,7 @@ III — Draw a card if there's a creature or Lesson card in your graveyard.</pro
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Saga" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">(As this Saga enters and after your draw
-step, add a lore counter.)
+      <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
 I — Draw cards equal to the greatest power among creatures you control.
 II — Earthbend X, where X is the number of cards in your hand. That land becomes an Island in addition to its other types.
 III — Exile this Saga, then return it to the battlefield transformed under your control.</property>
@@ -3930,7 +3929,7 @@ Create a Clue token. (It's an artifact with "<s value="2">{2}</s>, Sacrifice thi
       <property name="Type" value="Creature" />
       <property name="Subtype" value="Human Citizen" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">When this creature enters, create a Food token.
+      <property name="Rules">When this creature enters, create a Food token. (It's an artifact with "<s value="2">{2}</s>, <s value="T">{T}</s>, Sacrifice this token: You gain 3 life.")
 Whenever you sacrifice a Food, you may search your library for a basic land card and put it onto the battlefield tapped. If you search your library this way, put this creature on the bottom of its owner's library, then shuffle.</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
@@ -4079,7 +4078,7 @@ Whenever you waterbend, earthbend, firebend, or airbend, draw a card. Then if yo
         <property name="Type" value="Legendary Creature" />
         <property name="Subtype" value="Avatar Ally" />
         <property name="Rules">Flying
-Spells you cast cost <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s> less to cast.
+Spells you cast cost <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s> less to cast. (This can reduce generic costs.)
 At the beginning of each upkeep, you may transform Aang, Master of Elements. If you do, you gain 4 life, draw four cards, put four +1/+1 counters on him, and he deals 4 damage to each opponent.</property>
         <property name="Power" value="6" />
         <property name="Toughness" value="6" />
@@ -5634,7 +5633,7 @@ Flashback <s value="8">{8}</s><s value="R">{R}</s> (You may cast this card from 
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">As an additional cost to cast this spell, waterbend <s value="X">{X}</s>. (While paying a waterbend cost, you can tap your artifacts and creatures to help. Each one pays for <s value="1">{1}</s>.)
-Tap up to X target creatures, then distribute three stun counters among tapped creatures your opponents control. (If a permanent with a stun counter would become untapped, remove one from it instead.)</property>
+Tap up to X target creatures, then distribute three stun counters among any number of tapped creatures your opponents control. (If a permanent with a stun counter would become untapped, remove one from it instead.)</property>
       <property name="Artist" value="Claudiu-Antoniu Magherusan" />
       <property name="Number" value="300" />
       <property name="Packaging" value="Scene" />
@@ -5805,7 +5804,7 @@ Whenever you waterbend, earthbend, firebend, or airbend, draw a card. Then if yo
         <property name="Type" value="Legendary Creature" />
         <property name="Subtype" value="Avatar Ally" />
         <property name="Rules">Flying
-Spells you cast cost <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s> less to cast.
+Spells you cast cost <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s> less to cast. (This can reduce generic costs.)
 At the beginning of each upkeep, you may transform Aang, Master of Elements. If you do, you gain 4 life, draw four cards, put four +1/+1 counters on him, and he deals 4 damage to each opponent.</property>
         <property name="Power" value="6" />
         <property name="Toughness" value="6" />
@@ -6002,8 +6001,8 @@ Whenever you draw your second card each turn, untap this creature.</property>
       <property name="Subtype" value="Serpent" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flash
-Ward—Waterbend <s value="4">{4}</s> (While paying a waterbend cost, you can tap your artifacts and creatures to help. Each one pays for <s value="1">{1}</s>.)
-Whenever an opponent draws their second card each turn, draw two cards.</property>
+Ward—Waterbend <s value="4">{4}</s>. (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays <s value="4">{4}</s>. They can tap their artifacts and creatures to help. Each one pays for <s value="1">{1}</s>.)
+Whenever an opponent draws their second card each turn, you draw two cards.</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Antonio José Manzanedo" />
@@ -6357,7 +6356,7 @@ Exile Secret of Bloodbending.</property>
       <property name="Subtype" value="Spirit Ally" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Flying, vigilance
-Waterbend <s value="5">{5}</s>, <s value="T">{T}</s>: You may cast a noncreature spell from your hand without paying its mana cost.</property>
+Waterbend <s value="5">{5}</s>, <s value="T">{T}</s>: You may cast a noncreature spell from your hand without paying its mana cost. (While paying a waterbend cost, you can tap your artifacts and creatures to help. Each one pays for <s value="1">{1}</s>.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Barbara Rosiak" />
@@ -6792,8 +6791,7 @@ III — Exile this Saga, then return it to the battlefield transformed under you
       <property name="Type" value="Enchantment" />
       <property name="Subtype" value="Saga" />
       <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">(As this Saga enters and after your draw
-step, add a lore counter.)
+      <property name="Rules">(As this Saga enters and after your draw step, add a lore counter.)
 I — Draw cards equal to the greatest power among creatures you control.
 II — Earthbend X, where X is the number of cards in your hand. That land becomes an Island in addition to its other types.
 III — Exile this Saga, then return it to the battlefield transformed under your control.</property>
@@ -6924,7 +6922,7 @@ Whenever you waterbend, earthbend, firebend, or airbend, draw a card. Then if yo
         <property name="Type" value="Legendary Creature" />
         <property name="Subtype" value="Avatar Ally" />
         <property name="Rules">Flying
-Spells you cast cost <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s> less to cast.
+Spells you cast cost <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s> less to cast. (This can reduce generic costs.)
 At the beginning of each upkeep, you may transform Aang, Master of Elements. If you do, you gain 4 life, draw four cards, put four +1/+1 counters on him, and he deals 4 damage to each opponent.</property>
         <property name="Power" value="6" />
         <property name="Toughness" value="6" />
@@ -6958,7 +6956,7 @@ At the beginning of your end step, if this enchantment has four or more quest co
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Choose up to one target creature, then airbend all other creatures. (Exile them. While each one is exiled, its owner may cast it for <s value="2">{2}</s> rather than its mana cost.)
-Until your next turn, your opponents can't cast spells from anywhere other than their hand.
+Until your next turn, your opponents can't cast spells from anywhere other than their hands.
 Exile Avatar's Wrath.</property>
       <property name="Artist" value="Ainezu" />
       <property name="Number" value="365" />

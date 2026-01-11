@@ -967,7 +967,7 @@ Flying</property>
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Destroy all artifacts and creatures. End the turn.</property>
+      <property name="Rules">Destroy all artifacts and creatures. End the turn. (Exile all spells and abilities from the stack, including this card. The player whose turn it is discards down to their maximum hand size. Damage wears off, and "this turn" and "until end of turn" effects end.)</property>
       <property name="Artist" value="Gintas Galvanauskas" />
       <property name="Number" value="038" />
     </card>
@@ -2871,7 +2871,7 @@ Selfie Shot — Whenever you cast a noncreature spell, if at least four mana was
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Noble" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Prowess
+      <property name="Rules">Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
 Whenever Queen Brahne attacks, create a 0/1 black Wizard creature token with "Whenever you cast a noncreature spell, this token deals 1 damage to each opponent."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
@@ -4363,7 +4363,7 @@ Whenever an opponent loses life during your turn, you draw that many cards.</pro
         <property name="Color" value="Multicolor Black Red" />
         <property name="Type" value="Legendary Creature" />
         <property name="Subtype" value="Avatar Wizard" />
-        <property name="Rules">Flame Star — If a Wizard you control would deal damage to a permanent or player, it deals double that damage instead.</property>
+        <property name="Rules">Flare Star — If a Wizard you control would deal damage to a permanent or player, it deals double that damage instead.</property>
         <property name="Power" value="4" />
         <property name="Toughness" value="6" />
       </alternate>
@@ -4733,7 +4733,7 @@ At the beginning of your end step, return up to one target enchantment card from
       <property name="Subtype" value="Human Mutant Scout" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When Zidane enters, gain control of target creature an opponent controls until end of turn. Untap it. It gains lifelink and haste until end of turn.
-Whenever an opponent gains control of a permanent from you, create a Treasure token.</property>
+Whenever an opponent gains control of a permanent from you, you create a Treasure token.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Eiji Kaneda" />
@@ -5193,13 +5193,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Packaging" value="dual" />
     </card>
     <card name="Ishgard, the Holy See" id="068bc755-9d3d-430b-abc5-c775a5415bf9">
-      <property name="Cost">
-        <s value="3">{3}</s>
-        <s value="W">{W}</s>
-        <s value="W">{W}</s>
-      </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="White" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Subtype" value="Town" />
       <property name="Rarity" value="Rare" />
@@ -5209,21 +5204,21 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Number" value="283" />
       <property name="Flags" value="W" />
       <alternate name="Faith &amp; Grief" type="adventure">
-        <property name="Cost" />
-        <property name="Color" value="Colorless" />
+        <property name="Cost">
+          <s value="3">{3}</s>
+          <s value="W">{W}</s>
+          <s value="W">{W}</s>
+        </property>
+        <property name="CMC" value="5" />
+        <property name="Color" value="White" />
         <property name="Type" value="Sorcery" />
         <property name="Subtype" value="Adventure" />
         <property name="Rules">Return up to two target artifact and/or enchantment cards from your graveyard to your hand. (Then exile this card. You may play the land later from exile.)</property>
       </alternate>
     </card>
     <card name="Jidoor, Aristocratic Capital" id="98b2d5b5-f85b-4c42-a0f5-a76f6af304ba">
-      <property name="Cost">
-        <s value="4">{4}</s>
-        <s value="U">{U}</s>
-        <s value="U">{U}</s>
-      </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="Blue" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Subtype" value="Town" />
       <property name="Rarity" value="Rare" />
@@ -5233,20 +5228,21 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Number" value="284" />
       <property name="Flags" value="U" />
       <alternate name="Overture" type="adventure">
-        <property name="Cost" />
-        <property name="Color" value="Colorless" />
+        <property name="Cost">
+          <s value="4">{4}</s>
+          <s value="U">{U}</s>
+          <s value="U">{U}</s>
+        </property>
+        <property name="CMC" value="6" />
+        <property name="Color" value="Blue" />
         <property name="Type" value="Sorcery" />
         <property name="Subtype" value="Adventure" />
         <property name="Rules">Target opponent mills half their library, rounded down. (Then exile this card. You may play the land later from exile.)</property>
       </alternate>
     </card>
     <card name="Lindblum, Industrial Regency" id="548dd152-f0b6-4e8f-9afc-a4ec1671b648">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="R">{R}</s>
-      </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="Red" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Subtype" value="Town" />
       <property name="Rarity" value="Rare" />
@@ -5256,20 +5252,20 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Number" value="285" />
       <property name="Flags" value="R" />
       <alternate name="Mage Siege" type="adventure">
-        <property name="Cost" />
-        <property name="Color" value="Colorless" />
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="R">{R}</s>
+        </property>
+        <property name="CMC" value="3" />
+        <property name="Color" value="Red" />
         <property name="Type" value="Instant" />
         <property name="Subtype" value="Adventure" />
         <property name="Rules">Create a 0/1 black Wizard creature token with "Whenever you cast a noncreature spell, this token deals 1 damage to each opponent."</property>
       </alternate>
     </card>
     <card name="Midgar, City of Mako" id="8a837256-6bb4-4a60-962d-d2793548d26c">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="B">{B}</s>
-      </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="Black" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Subtype" value="Town" />
       <property name="Rarity" value="Rare" />
@@ -5279,8 +5275,12 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Number" value="286" />
       <property name="Flags" value="B" />
       <alternate name="Reactor Raid" type="adventure">
-        <property name="Cost" />
-        <property name="Color" value="Colorless" />
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="B">{B}</s>
+        </property>
+        <property name="CMC" value="3" />
+        <property name="Color" value="Black" />
         <property name="Type" value="Sorcery" />
         <property name="Subtype" value="Adventure" />
         <property name="Rules">You may sacrifice an artifact or creature. If you do, draw two cards. (Then exile this card. You may play the land later from exile.)</property>
@@ -5365,13 +5365,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Packaging" value="dual" />
     </card>
     <card name="Zanarkand, Ancient Metropolis" id="881e4c00-3b9a-47a1-bf66-1badda994c88">
-      <property name="Cost">
-        <s value="4">{4}</s>
-        <s value="G">{G}</s>
-        <s value="G">{G}</s>
-      </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="Green" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Subtype" value="Town" />
       <property name="Rarity" value="Rare" />
@@ -5381,8 +5376,13 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Number" value="293" />
       <property name="Flags" value="G" />
       <alternate name="Lasting Fayth" type="adventure">
-        <property name="Cost" />
-        <property name="Color" value="Colorless" />
+        <property name="Cost">
+          <s value="4">{4}</s>
+          <s value="G">{G}</s>
+          <s value="G">{G}</s>
+        </property>
+        <property name="CMC" value="6" />
+        <property name="Color" value="Green" />
         <property name="Type" value="Sorcery" />
         <property name="Subtype" value="Adventure" />
         <property name="Rules">Create a 1/1 colorless Hero creature token. Put a +1/+1 counter on it for each land you control. (Then exile this card. You may play the land later from exile.)</property>
@@ -5565,13 +5565,8 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Flags" value="C" />
     </card>
     <card name="Ishgard, the Holy See" id="b5327e09-2ea0-4365-bb20-087a08da8ce6">
-      <property name="Cost">
-        <s value="3">{3}</s>
-        <s value="W">{W}</s>
-        <s value="W">{W}</s>
-      </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="White" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Subtype" value="Town" />
       <property name="Rarity" value="Rare" />
@@ -5582,21 +5577,21 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Flags" value="W" />
       <property name="Packaging" value="Special" />
       <alternate name="Faith &amp; Grief" type="adventure">
-        <property name="Cost" />
-        <property name="Color" value="Colorless" />
+        <property name="Cost">
+          <s value="3">{3}</s>
+          <s value="W">{W}</s>
+          <s value="W">{W}</s>
+        </property>
+        <property name="CMC" value="5" />
+        <property name="Color" value="White" />
         <property name="Type" value="Sorcery" />
         <property name="Subtype" value="Adventure" />
         <property name="Rules">Return up to two target artifact and/or enchantment cards from your graveyard to your hand. (Then exile this card. You may play the land later from exile.)</property>
       </alternate>
     </card>
     <card name="Jidoor, Aristocratic Capital" id="72678d58-888e-4d3c-bc2c-78f5b7862e03">
-      <property name="Cost">
-        <s value="4">{4}</s>
-        <s value="U">{U}</s>
-        <s value="U">{U}</s>
-      </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="Blue" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Subtype" value="Town" />
       <property name="Rarity" value="Rare" />
@@ -5607,20 +5602,21 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Flags" value="U" />
       <property name="Packaging" value="Special" />
       <alternate name="Overture" type="adventure">
-        <property name="Cost" />
-        <property name="Color" value="Colorless" />
+        <property name="Cost">
+          <s value="4">{4}</s>
+          <s value="U">{U}</s>
+          <s value="U">{U}</s>
+        </property>
+        <property name="CMC" value="6" />
+        <property name="Color" value="Blue" />
         <property name="Type" value="Sorcery" />
         <property name="Subtype" value="Adventure" />
         <property name="Rules">Target opponent mills half their library, rounded down. (Then exile this card. You may play the land later from exile.)</property>
       </alternate>
     </card>
     <card name="Lindblum, Industrial Regency" id="b2ae92d9-7047-424e-a482-2311888a8c56">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="R">{R}</s>
-      </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="Red" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Subtype" value="Town" />
       <property name="Rarity" value="Rare" />
@@ -5631,20 +5627,20 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Flags" value="R" />
       <property name="Packaging" value="Special" />
       <alternate name="Mage Siege" type="adventure">
-        <property name="Cost" />
-        <property name="Color" value="Colorless" />
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="R">{R}</s>
+        </property>
+        <property name="CMC" value="3" />
+        <property name="Color" value="Red" />
         <property name="Type" value="Instant" />
         <property name="Subtype" value="Adventure" />
         <property name="Rules">Create a 0/1 black Wizard creature token with "Whenever you cast a noncreature spell, this token deals 1 damage to each opponent."</property>
       </alternate>
     </card>
     <card name="Midgar, City of Mako" id="fa605930-a7f0-410d-ac58-f5f0bd8caadf">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="B">{B}</s>
-      </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="Black" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Subtype" value="Town" />
       <property name="Rarity" value="Rare" />
@@ -5655,21 +5651,20 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Flags" value="B" />
       <property name="Packaging" value="Special" />
       <alternate name="Reactor Raid" type="adventure">
-        <property name="Cost" />
-        <property name="Color" value="Colorless" />
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="B">{B}</s>
+        </property>
+        <property name="CMC" value="3" />
+        <property name="Color" value="Black" />
         <property name="Type" value="Sorcery" />
         <property name="Subtype" value="Adventure" />
         <property name="Rules">You may sacrifice an artifact or creature. If you do, draw two cards. (Then exile this card. You may play the land later from exile.)</property>
       </alternate>
     </card>
     <card name="Zanarkand, Ancient Metropolis" id="c64bb94b-c1a7-4dd3-b2dc-b87d306d62ad">
-      <property name="Cost">
-        <s value="4">{4}</s>
-        <s value="G">{G}</s>
-        <s value="G">{G}</s>
-      </property>
       <property name="CMC" value="0" />
-      <property name="Color" value="Green" />
+      <property name="Color" value="Colorless" />
       <property name="Type" value="Land" />
       <property name="Subtype" value="Town" />
       <property name="Rarity" value="Rare" />
@@ -5680,8 +5675,13 @@ Cycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Draw a ca
       <property name="Flags" value="G" />
       <property name="Packaging" value="Special" />
       <alternate name="Lasting Fayth" type="adventure">
-        <property name="Cost" />
-        <property name="Color" value="Colorless" />
+        <property name="Cost">
+          <s value="4">{4}</s>
+          <s value="G">{G}</s>
+          <s value="G">{G}</s>
+        </property>
+        <property name="CMC" value="6" />
+        <property name="Color" value="Green" />
         <property name="Type" value="Sorcery" />
         <property name="Subtype" value="Adventure" />
         <property name="Rules">Create a 1/1 colorless Hero creature token. Put a +1/+1 counter on it for each land you control. (Then exile this card. You may play the land later from exile.)</property>
@@ -5983,7 +5983,7 @@ Landfall — Whenever a land you control enters, Ambrosia Whiteheart gets +1/+0 
       <property name="Color" value="White" />
       <property name="Type" value="Sorcery" />
       <property name="Rarity" value="Rare" />
-      <property name="Rules">Destroy all artifacts and creatures. End the turn.</property>
+      <property name="Rules">Destroy all artifacts and creatures. End the turn. (Exile all spells and abilities from the stack, including this card. The player whose turn it is discards down to their maximum hand size. Damage wears off, and "this turn" and "until end of turn" effects end.)</property>
       <property name="Artist" value="Hisashi Momose" />
       <property name="Number" value="328" />
       <property name="Packaging" value="woodblock" />
@@ -7473,7 +7473,7 @@ Whenever an opponent loses life during your turn, you draw that many cards.</pro
         <property name="Color" value="Multicolor Black Red" />
         <property name="Type" value="Legendary Creature" />
         <property name="Subtype" value="Avatar Wizard" />
-        <property name="Rules">Flame Star — If a Wizard you control would deal damage to a permanent or player, it deals double that damage instead.</property>
+        <property name="Rules">Flare Star — If a Wizard you control would deal damage to a permanent or player, it deals double that damage instead.</property>
         <property name="Power" value="4" />
         <property name="Toughness" value="6" />
         <property name="Artist" value="Robert Cornelius" />
@@ -7587,7 +7587,7 @@ At the beginning of your end step, return up to one target enchantment card from
       <property name="Subtype" value="Human Mutant Scout" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When Zidane enters, gain control of target creature an opponent controls until end of turn. Untap it. It gains lifelink and haste until end of turn.
-Whenever an opponent gains control of a permanent from you, create a Treasure token.</property>
+Whenever an opponent gains control of a permanent from you, you create a Treasure token.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Canata Katana" />
@@ -8810,7 +8810,7 @@ Selfie Shot — Whenever you cast a noncreature spell, if at least four mana was
       <property name="Type" value="Legendary Creature" />
       <property name="Subtype" value="Human Noble" />
       <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Prowess
+      <property name="Rules">Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
 Whenever Queen Brahne attacks, create a 0/1 black Wizard creature token with "Whenever you cast a noncreature spell, this token deals 1 damage to each opponent."</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="1" />
@@ -9516,7 +9516,7 @@ Whenever an opponent loses life during your turn, you draw that many cards.</pro
         <property name="Color" value="Multicolor Black Red" />
         <property name="Type" value="Legendary Creature" />
         <property name="Subtype" value="Avatar Wizard" />
-        <property name="Rules">Flame Star — If a Wizard you control would deal damage to a permanent or player, it deals double that damage instead.</property>
+        <property name="Rules">Flare Star — If a Wizard you control would deal damage to a permanent or player, it deals double that damage instead.</property>
         <property name="Power" value="4" />
         <property name="Toughness" value="6" />
       </alternate>
@@ -9943,7 +9943,7 @@ At the beginning of your end step, return up to one target enchantment card from
       <property name="Subtype" value="Human Mutant Scout" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">When Zidane enters, gain control of target creature an opponent controls until end of turn. Untap it. It gains lifelink and haste until end of turn.
-Whenever an opponent gains control of a permanent from you, create a Treasure token.</property>
+Whenever an opponent gains control of a permanent from you, you create a Treasure token.</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Eiji Kaneda" />

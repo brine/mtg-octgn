@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<set name="Secret Lair Showdown" id="c325b3f9-51e1-416b-83b1-138f11790dd1" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="slp" releaseDate="2023-02-17">
+<set name="Secret Lair Promo" id="c325b3f9-51e1-416b-83b1-138f11790dd1" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="slp" releaseDate="2023-02-17">
   <cards>
     <card name="Brainstorm" id="8c09e891-247f-43f2-8d9d-2187631fb083">
       <property name="Cost">
@@ -39,7 +39,7 @@ Dash <s value="1">{1}</s><s value="R">{R}</s> (You may cast this spell for its d
       <property name="Rarity" value="Rare" />
       <property name="Rules">Destroy target creature if it has mana value 2 or less.
 Revolt — Destroy that creature if it has mana value 4 or less instead if a permanent left the battlefield under your control this turn.</property>
-      <property name="Artist" value="Ryan Quickfall" />
+      <property name="Artist" value="Ryan Roadkill" />
       <property name="Number" value="003" />
     </card>
     <card name="Unholy Heat" id="f22650a0-278c-45a1-8e3c-66c2ae6e844a">
@@ -480,6 +480,17 @@ Each player exiles all creature cards from their graveyard, then sacrifices all 
       <property name="Number" value="034" />
       <property name="Flags" value="R" />
     </card>
+    <card name="Forest" id="aea42376-97f6-4313-b139-7eeaf427b22b">
+      <property name="CMC" value="0" />
+      <property name="Color" value="Colorless" />
+      <property name="Type" value="Basic Land" />
+      <property name="Subtype" value="Forest" />
+      <property name="Rarity" value="Basic Land" />
+      <property name="Rules">(<s value="T">{T}</s>: Add <s value="G">{G}</s>.)</property>
+      <property name="Artist" value="John Avon" />
+      <property name="Number" value="035" />
+      <property name="Flags" value="G" />
+    </card>
     <card name="Karn Liberated" id="c4a7d70f-387d-40c5-bb3a-ba49a2b89855">
       <property name="Cost">
         <s value="7">{7}</s>
@@ -684,6 +695,35 @@ At the beginning of combat on your turn, target Mouse you control gains your cho
       <property name="Toughness" value="2" />
       <property name="Artist" value="Neo.G" />
       <property name="Number" value="047" />
+    </card>
+    <card name="Tamiyo, Inquisitive Student" id="cdf8c817-3fdf-4121-96b6-869f9c0e496d">
+      <property name="Cost">
+        <s value="U">{U}</s>
+      </property>
+      <property name="CMC" value="1" />
+      <property name="Color" value="Blue" />
+      <property name="Type" value="Legendary Creature" />
+      <property name="Subtype" value="Moonfolk Wizard" />
+      <property name="Rarity" value="Mythic Rare" />
+      <property name="Rules">Flying
+Whenever Tamiyo attacks, investigate. (Create a Clue token. It's an artifact with "<s value="2">{2}</s>, Sacrifice this token: Draw a card.")
+When you draw your third card in a turn, exile Tamiyo, then return her to the battlefield transformed under her owner's control.</property>
+      <property name="Power" value="0" />
+      <property name="Toughness" value="3" />
+      <property name="Artist" value="Ampreh" />
+      <property name="Number" value="049" />
+      <alternate name="Tamiyo, Seasoned Scholar" type="transform">
+        <property name="Cost" />
+        <property name="Color" value="Multicolor Green Blue" />
+        <property name="Type" value="Legendary Planeswalker" />
+        <property name="Subtype" value="Tamiyo" />
+        <property name="Rules">+2: Until your next turn, whenever a creature attacks you or a planeswalker you control, it gets -1/-0 until end of turn.
+−3: Return target instant or sorcery card from your graveyard to your hand. If it's a green card, add one mana of any color.
+−7: Draw cards equal to half the number of cards in your library, rounded up. You get an emblem with "You have no maximum hand size."</property>
+        <property name="Loyalty" value="2" />
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
   </cards>
 </set>

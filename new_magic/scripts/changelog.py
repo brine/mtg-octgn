@@ -553,5 +553,8 @@ changelog = {
         ]),
     3060331: ("3.6.3.31", "November 19 2025", [
         "Spider-Man release"
+        ]),
+    3060332: ("3.6.3.32", "January 10 2026", [
+        "Lorwyn Eclipsed release"
         ])
 }
