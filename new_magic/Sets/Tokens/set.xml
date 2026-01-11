@@ -17,7 +17,7 @@
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Cat Soldier" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Whenever you gain life, put a +1/+1 counter on Ajani’s Pridemate.</property>
+            <property name="Rules">Whenever you gain life, put a +1/+1 counter on Ajani's Pridemate.</property>
             <property name="Power" value="2" />
             <property name="Toughness" value="2" />
             <property name="Artist" value="Howard Lyon" />
@@ -289,7 +289,7 @@
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Assassin" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Menace <i>(This creature can’t be blocked except by two or more creatures.)</i></property>
+            <property name="Rules">Menace <i>(This creature can't be blocked except by two or more creatures.)</i></property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="Rimas Valeikis" />
@@ -511,7 +511,7 @@
             <property name="Type" value="Legendary Creature" />
             <property name="Subtype" value="Ox" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">This creature’s power and toughness are each equal to the number of lands you control.</property>
+            <property name="Rules">This creature's power and toughness are each equal to the number of lands you control.</property>
             <property name="Power" value="*" />
             <property name="Toughness" value="*" />
             <property name="Artist" value="Loïc CanavaggiaLoïc Canavaggia" />
@@ -1811,7 +1811,7 @@ Whenever this creature attacks, target attacking creature gains flying until end
             <property name="Color" value="Colorless" />
             <property name="Type" value="Token" />
             <property name="Rarity" value="Token" />
-            <property name="Rules" ><i>(This token can be used to represent a token that’s a copy of a permanent.)</i></property>
+            <property name="Rules" ><i>(This token can be used to represent a token that's a copy of a permanent.)</i></property>
             <property name="Artist" value="David Palumbo" />
             <property name="Number" value="31" />
             <property name="Flags" value="T2XM"/>
@@ -1819,6 +1819,11 @@ Whenever this creature attacks, target attacking creature gains flying until end
                 <property name="Artist" value="Jason Rainville" />
                 <property name="Number" value="55" />
                 <property name="Flags" value="TCMM"/>
+            </alternate>
+            <alternate name="Copy" type="2">
+                <property name="Artist" value="Michelle Giorgi" />
+                <property name="Number" value="1" />
+                <property name="Flags" value="TECC"/>
             </alternate>
         </card>
         <card name="Crab" id="b4aeebe7-825d-4bc6-a7ea-f3aa5692aead">
@@ -2837,7 +2842,7 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Subtype" value="Elemental" />
             <property name="Rarity" value="Token" />
 			<property name="Rules">Trample
-			This creature’s power and toughness are each equal to the number of instant and sorcery cards in your graveyard plus the number of cards with flashback you own in exile.</property>
+			This creature's power and toughness are each equal to the number of instant and sorcery cards in your graveyard plus the number of cards with flashback you own in exile.</property>
             <property name="Power" value="*" />
             <property name="Toughness" value="*" />
             <property name="Artist" value="Deruchenko Alexander" />
@@ -3108,6 +3113,17 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Number" value="0" />
             <property name="Flags" value="TPCY?"/>
         </card>
+        <card name="Elf" id="666b725f-1c43-4074-864e-92ca63fa8f3d">
+            <property name="Color" value="Multicolor Black Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Elf" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Pete Venters" />
+            <property name="Number" value="4" />
+            <property name="Flags" value="TECL"/>
+        </card>
         <card name="Elf Druid" id="b0efd2ee-2797-4af7-926d-06aac2146186">
             <property name="Color" value="Green" />
             <property name="Type" value="Creature" />
@@ -3180,6 +3196,11 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Artist" value="Lie Setiawan" />
 			<property name="Number" value="13" />
 			<property name="Flags" value="TOTJ"/>
+            <alternate name="Elk" type="1">
+                <property name="Artist" value="Sam Guay" />
+                <property name="Number" value="2" />
+                <property name="Flags" value="TECL"/>
+            </alternate>
         </card>
         <card name="Etherium Cell" id="f5a47d46-8c87-4fa7-b09a-e6576d983ac7">
             <property name="Color" value="Colorless" />
@@ -3236,6 +3257,18 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Artist" value="Alessandra Pisano" />
             <property name="Number" value="5" />
             <property name="Flags" value="TWOE"/>
+        </card>
+        <card name="Faerie" id="2cafcdae-fee6-456e-ad9c-745b2376146f">
+            <property name="Color" value="Multicolor Blue Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Faerie" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Iris Compiet" />
+            <property name="Number" value="5" />
+            <property name="Flags" value="TECL"/>
         </card>
         <card name="Faerie Dragon" id="c4f1d4a3-4456-42e8-b3eb-bea8d1b9b3af">
             <property name="Color" value="Blue" />
@@ -3743,7 +3776,7 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Type" value="Artifact Creature" />
             <property name="Subtype" value="Gnome Soldier" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">This creature’s power and toughness are each equal to the number of artifacts and/or creatures you control.</property>
+            <property name="Rules">This creature's power and toughness are each equal to the number of artifacts and/or creatures you control.</property>
             <property name="Power" value="*" />
             <property name="Toughness" value="*" />
             <property name="Artist" value="Steve Ellis" />
@@ -3953,12 +3986,23 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Number" value="9" />
             <property name="Flags" value="TRVR"/>
         </card>
+        <card name="Goblin" id="72a72740-46cd-4ca4-b9cd-62fbefbd9a10">
+            <property name="Color" value="Multicolor Black Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Goblin" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Larry MacDougall" />
+            <property name="Number" value="6" />
+            <property name="Flags" value="TECL"/>
+        </card>
         <card name="Goblin Construct" id="06c6a299-6b3a-475a-a867-d83abe86e12f">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Artifact Creature" />
             <property name="Subtype" value="Goblin Construct" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">This creature can’t block.
+            <property name="Rules">This creature can't block.
             At the beginning of your upkeep, this creature deals 1 damage to you.</property>
             <property name="Power" value="0" />
             <property name="Toughness" value="1" />
@@ -4967,7 +5011,7 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Color" value="Colorless" />
             <property name="Rarity" value="Token" />
             <property name="Rules">Whenever one or more creatures a player controls deal combat damage to you, that player takes the initiative.
-			Whenever you take the initiative and at the beginning of your upkeep, venture into Undercity. <i>(If you’re in a dungeon, advance to the next room. If you’re not, enter Undercity. You can take the initiative even if you already have it.)</i></property>
+			Whenever you take the initiative and at the beginning of your upkeep, venture into Undercity. <i>(If you're in a dungeon, advance to the next room. If you're not, enter Undercity. You can take the initiative even if you already have it.)</i></property>
             <property name="Artist" value="Ioannis Fiore" />
             <property name="Number" value="20" />
             <property name="Flags" value="TCLB"/>
@@ -5131,7 +5175,7 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Insect" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Shroud <i>(This creature can’t be the target of spells or abilities.)</i></property>
+            <property name="Rules">Shroud <i>(This creature can't be the target of spells or abilities.)</i></property>
             <property name="Power" value="6" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="E.M. Gist" />
@@ -5248,6 +5292,17 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Milivoj Ćeran" />
             <property name="Number" value="13" />
             <property name="Flags" value="TNEO"/>
+        </card>
+        <card name="Kithkin" id="59f197c5-b7f3-4ae7-8f0d-58a0847f85d3">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Kithkin" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Jeff Laubenstein" />
+            <property name="Number" value="7" />
+            <property name="Flags" value="TECL"/>
         </card>
         <card name="Kithkin Soldier" id="90605de0-ce75-4a8c-a941-d1feefee7e09">
             <property name="Color" value="White" />
@@ -5627,7 +5682,7 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Type" value="Artifact" />
             <property name="Subtype" value="Map" />
             <property name="Rarity" value="Token" />
-            <property name="Rules"><s value="1">{1}</s><s value="T">{T}</s>, Sacrifice this artifact: Target creature you control explores. Activate only as a sorcery. <i>(Reveal the top card of your library. Put that card into your hand if it’s a land. Otherwise, put a +1/+1 counter on that creature, then put the card back or put it into your graveyard.)</i></property>
+            <property name="Rules"><s value="1">{1}</s><s value="T">{T}</s>, Sacrifice this artifact: Target creature you control explores. Activate only as a sorcery. <i>(Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on that creature, then put the card back or put it into your graveyard.)</i></property>
             <property name="Artist" value="Francesca Baerald" />
             <property name="Number" value="17" />
             <property name="Flags" value="TLCI"/>
@@ -5732,6 +5787,17 @@ Flying, vigilance, trample, lifelink, haste</property>
                 <property name="Number" value="5" />
                 <property name="Flags" value="TLCI"/>
             </alternate>
+        </card>
+        <card name="Merfolk" id="452cae2f-5d86-4b1e-9faf-7f7b03385a53">
+            <property name="Color" value="Multicolor White Blue" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Merfolk" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Julia Griffin" />
+            <property name="Number" value="8" />
+            <property name="Flags" value="TECL"/>
         </card>
         <card name="Merfolk Wizard" id="b53c1420-67a4-41b7-8d04-3461cdb65e36">
             <property name="Color" value="Blue" />
@@ -5940,6 +6006,16 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Number" value="9" />
             <property name="Flags" value="TEOE"/>
         </card>
+        <card name="Mutavault" id="7d6f9ad3-4ec0-4dd2-b771-3354ce011e3b">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Land" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules"><s value="T">{T}</s> Add <s value="C">{C}</s>.
+			<s value="1">{1}</s>: This token becomes a 2/2 creature with all creature types until end of turn. It's still a land.</property>
+            <property name="Artist" value="Mark Poole" />
+            <property name="Number" value="11" />
+            <property name="Flags" value="TECL"/>
+        </card>
         <card name="Myr" id="16003e42-3ff7-478d-8f8c-2b5af4847da0">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Artifact Creature" />
@@ -6016,7 +6092,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Rarity" value="Token" />
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
-            <property name="Rules">This creature can’t be blocked.</property>
+            <property name="Rules">This creature can't be blocked.</property>
             <property name="Artist" value="Manuel Castañón" />
             <property name="Number" value="4" />
             <property name="Flags" value="TNEO"/>
@@ -6137,7 +6213,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Ooze" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">This creature’s power is equal to the number of card types among cards in your graveyard and its toughness is equal to that number plus 1.</property>
+            <property name="Rules">This creature's power is equal to the number of card types among cards in your graveyard and its toughness is equal to that number plus 1.</property>
             <property name="Power" value="*" />
             <property name="Toughness" value="*+1" />
             <property name="Artist" value="Izzy" />
@@ -6467,7 +6543,7 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Subtype" value="Phyrexian Mite" />
             <property name="Rarity" value="Token" />
             <property name="Rules">Toxic 1 <i>(Players dealt combat damage by this creature also get a poison counter.)</i>
-This creature can’t block.</property>
+This creature can't block.</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="Oriana Menendez" />
@@ -6589,7 +6665,7 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Pirate" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">This creature can’t block.
+            <property name="Rules">This creature can't block.
             Creatures you control attack each combat if able.</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
@@ -6602,7 +6678,7 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Pirate" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">This creature can’t block.</property>
+            <property name="Rules">This creature can't block.</property>
             <property name="Power" value="4" />
             <property name="Toughness" value="2" />
             <property name="Artist" value="Igor Krstic" />
@@ -7214,6 +7290,17 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
 			<property name="Number" value="46" />
 			<property name="Flags" value="TCLB"/>
         </card>
+        <card name="Scarecrow" id="747d57a7-4f1d-4d5e-a7f5-15b743b0683b">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Scarecrow" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Alex Horley-Orlandelli" />
+			<property name="Number" value="11" />
+			<property name="Flags" value="TECC"/>
+        </card>
         <card name="Scarecrow" id="7de99fb5-7389-4454-be8c-f2c0449b20ae">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Artifact Creature" />
@@ -7250,7 +7337,7 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Type" value="Artifact Creature" />
             <property name="Subtype" value="Sculpture" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">This creature’s power and toughness are each equal to the number of Sculptures you control.</property>
+            <property name="Rules">This creature's power and toughness are each equal to the number of Sculptures you control.</property>
             <property name="Power" value="*" />
             <property name="Toughness" value="*" />
             <property name="Artist" value="Victor Adame Minguez" />
@@ -7339,6 +7426,11 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
                 <property name="Artist" value="Steve Prescott" />
                 <property name="Number" value="2" />
                 <property name="Flags" value="T2XM"/>
+            </alternate>
+            <alternate name="Shapeshifter" type="2">
+                <property name="Artist" value="Jeff Miracola" />
+                <property name="Number" value="1" />
+                <property name="Flags" value="TECL"/>
             </alternate>
         </card>
         <card name="Shapeshifter" id="f4b94def-f1be-4077-826f-f262b2edeb9e">
@@ -7507,7 +7599,7 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Skeleton" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Menace <i>(This creature can’t be blocked except by two or more creatures.)</i></property>
+            <property name="Rules">Menace <i>(This creature can't be blocked except by two or more creatures.)</i></property>
             <property name="Power" value="4" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="David Astruga" />
@@ -7658,9 +7750,9 @@ When this creature dies, create fourteen Treasure tokens.</property>
             <property name="Rules">Deathtouch</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
-            <property name="Artist" value="Slawomir Maniak" />
-            <property name="Number" value="23" />
-            <property name="Flags" value="TAKH"/>
+            <property name="Artist" value="Tyler Jacobson" />
+            <property name="Number" value="8" />
+            <property name="Flags" value="TECC"/>
         </card>
         <card name="Snake" id="2fd60da6-b9a3-43a1-87ce-b3780c3eb060">
             <property name="Color" value="Green" />
@@ -7999,7 +8091,7 @@ When this creature dies, create fourteen Treasure tokens.</property>
             <property name="Type" value="Creature" />
             <property name="Rarity" value="Weird" />
             <property name="Rules">Whenever you cast a noncreature spell, put a +1/+1 counter on this creature.
-			<i>(This token’s mana cost is <s value="2">{2}</s><s value="R">{R}</s>.)</i></property>
+			<i>(This token's mana cost is <s value="2">{2}</s><s value="R">{R}</s>.)</i></property>
             <property name="Power" value="2" />
             <property name="Toughness" value="2" />
             <property name="Artist" value="Steve Ellis" />
@@ -8157,7 +8249,7 @@ When this creature dies, create fourteen Treasure tokens.</property>
             <property name="Rarity" value="Token" />
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
-            <property name="Rules">This token can’t block or be blocked by non-Spirit creatures.</property>
+            <property name="Rules">This token can't block or be blocked by non-Spirit creatures.</property>
             <property name="Artist" value="Valera Lutfullina" />
             <property name="Number" value="3" />
             <property name="Flags" value="TTLA"/>
@@ -8393,7 +8485,7 @@ Whenever you draw a card, put a +1/+1 counter on this creature.</property>
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Spirit" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Menace <i>(This creature can’t be blocked except by two or more creatures.)</i></property>
+            <property name="Rules">Menace <i>(This creature can't be blocked except by two or more creatures.)</i></property>
             <property name="Power" value="2" />
             <property name="Toughness" value="2" />
             <property name="Artist" value="Helge C. Balzer" />
@@ -8535,7 +8627,7 @@ Whenever you draw a card, put a +1/+1 counter on this creature.</property>
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Spirit" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">This creature’s power and toughness are each equal to the number of Spirits you control.</property>
+            <property name="Rules">This creature's power and toughness are each equal to the number of Spirits you control.</property>
             <property name="Power" value="*" />
             <property name="Toughness" value="*" />
             <property name="Artist" value="Jarel Threat" />
@@ -8722,8 +8814,8 @@ Equip <s value="2">{2}</s></property>
             <property name="Color" value="Green" />
             <property name="Type" value="Creature" />
             <property name="Rarity" value="Llurgoyf" />
-            <property name="Rules">Tarmogoyf’s power is equal to the number of card types among cards in all graveyards and its toughness is equal to that number plus 1.
-			<i>(This token’s mana cost is <s value="1">{1}</s><s value="G">{G}</s>.)</i></property>
+            <property name="Rules">Tarmogoyf's power is equal to the number of card types among cards in all graveyards and its toughness is equal to that number plus 1.
+			<i>(This token's mana cost is <s value="1">{1}</s><s value="G">{G}</s>.)</i></property>
             <property name="Power" value="*" />
             <property name="Toughness" value="*+1" />
             <property name="Artist" value="Camille Alquier" />
@@ -9166,6 +9258,11 @@ Equip <s value="2">{2}</s></property>
                 <property name="Number" value="22" />
                 <property name="Flags" value="TTLA"/>
             </alternate>
+            <alternate name="Treasure" type="44">
+                <property name="Artist" value="Jeff Miracola" />
+                <property name="Number" value="10" />
+                <property name="Flags" value="TECL"/>
+            </alternate>
         </card>
         <card name="Treefolk" id="4d654a81-324b-4f57-bf9b-65c372e0e424">
             <property name="Color" value="Green" />
@@ -9183,13 +9280,26 @@ Equip <s value="2">{2}</s></property>
                 <property name="Flags" value="TLTC"/>
             </alternate>
         </card>
+        <card name="Treefolk" id="625458c8-9b15-4bf8-8af9-4a251869cb9a">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Treefolk" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Reach
+			This creature's power and toughness are each equal to the number of lands you control.</property>
+            <property name="Power" value="3" />
+            <property name="Toughness" value="4" />
+            <property name="Artist" value="Jeff Laubenstein" />
+            <property name="Number" value="3" />
+            <property name="Flags" value="TECL"/>
+        </card>
         <card name="Treefolk" id="a29daa23-1f5e-4a0e-86fd-5ba31305aae3">
             <property name="Color" value="Green" />
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Treefolk" />
             <property name="Rarity" value="Token" />
             <property name="Rules">Reach
-			This creature’s power and toughness are each equal to the number of lands you control.</property>
+			This creature's power and toughness are each equal to the number of lands you control.</property>
             <property name="Power" value="*" />
             <property name="Toughness" value="*" />
             <property name="Artist" value="Yeong-Hao Han" />
@@ -9517,7 +9627,7 @@ Equip <s value="2">{2}</s></property>
             <property name="Subtype" value="Wall" />
             <property name="Rarity" value="Token" />
             <property name="Rules">Hexproof
-			Whenever you cast a creature spell, note one of its creature types that hasn’t been noted for this artifact.</property>
+			Whenever you cast a creature spell, note one of its creature types that hasn't been noted for this artifact.</property>
             <property name="Power" value="5" />
             <property name="Toughness" value="5" />
             <property name="Artist" value="Brian Snoddy" />
@@ -9918,6 +10028,11 @@ Equip <s value="2">{2}</s></property>
             <property name="Artist" value="Chuck Lukacs" />
             <property name="Number" value="20" />
             <property name="Flags" value="T2X2"/>
+            <alternate name="Worm" type="1">
+                <property name="Artist" value="Edgar Sanchez Hidalgo" />
+                <property name="Number" value="9" />
+                <property name="Flags" value="TECL"/>
+            </alternate>
         </card>
         <card name="Wraith" id="b32680bc-c125-45d0-96bf-7d678f0ea5b6">
             <property name="Color" value="Black" />
@@ -10204,7 +10319,7 @@ Equip <s value="2">{2}</s></property>
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Zombie" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Decayed <i>(This creature can’t block. When it attacks, sacrifice it at end of combat.)</i></property>
+            <property name="Rules">Decayed <i>(This creature can't block. When it attacks, sacrifice it at end of combat.)</i></property>
             <property name="Power" value="2" />
             <property name="Toughness" value="2" />
             <property name="Artist" value="Sam White" />
@@ -10249,7 +10364,7 @@ Equip <s value="2">{2}</s></property>
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Zombie" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Menace <i>(This creature can’t be blocked except by two or more creatures.)</i></property>
+            <property name="Rules">Menace <i>(This creature can't be blocked except by two or more creatures.)</i></property>
             <property name="Power" value="*" />
             <property name="Toughness" value="*" />
             <property name="Artist" value="Ravenna Tran" />
@@ -10678,8 +10793,8 @@ Equip <s value="2">{2}</s></property>
             <property name="Type" value="Emblem" />
             <property name="Subtype" value="Teferi, Who Slows the Sunset" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Untap all permanents you control during each opponent’s untap step.
-			You draw a card during each opponent’s draw step.</property>
+            <property name="Rules">Untap all permanents you control during each opponent's untap step.
+			You draw a card during each opponent's draw step.</property>
             <property name="Artist" value="Heonhwa Choe" />
             <property name="Number" value="17" />
             <property name="Flags" value="TMID"/>
@@ -10699,7 +10814,7 @@ Equip <s value="2">{2}</s></property>
             <property name="Type" value="Emblem" />
             <property name="Subtype" value="Teferi's Talent" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">You may activate loyalty abilities of planeswalkers you control on any player’s turn any time you could cast an instant.</property>
+            <property name="Rules">You may activate loyalty abilities of planeswalkers you control on any player's turn any time you could cast an instant.</property>
             <property name="Artist" value="Dominik Mayer" />
             <property name="Number" value="44" />
             <property name="Flags" value="TMOC"/>
@@ -10926,7 +11041,7 @@ Equip <s value="2">{2}</s></property>
             <property name="Type" value="Emblem" />
             <property name="Subtype" value="Tezzeret, Cruel Captain" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">At the beginning of combat on your turn, put three +1/+1 counters on target artifact you control. If it’s not a creature, it becomes a 0/0 Robot artifact creature.</property>
+            <property name="Rules">At the beginning of combat on your turn, put three +1/+1 counters on target artifact you control. If it's not a creature, it becomes a 0/0 Robot artifact creature.</property>
             <property name="Artist" value="Bryan Sola" />
             <property name="Number" value="11" />
             <property name="Flags" value="TEOE"/>
@@ -10976,7 +11091,7 @@ Equip <s value="2">{2}</s></property>
             <property name="Type" value="Emblem" />
             <property name="Subtype" value="Rowan Kenrith" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Whenever you activate an ability that isn’t a mana ability, copy it. You may choose new targets for the copy.</property>
+            <property name="Rules">Whenever you activate an ability that isn't a mana ability, copy it. You may choose new targets for the copy.</property>
             <property name="Artist" value="Anna Steinbauer" />
             <property name="Number" value="8" />
             <property name="Flags" value="TBBD"/>
@@ -11273,6 +11388,16 @@ Artifact spells you cast cost <s value="1">{1}</s>: less to cast.</property>
             <property name="Number" value="24" />
             <property name="Flags" value="TFIN"/>
         </card>
+        <card name="Oko's Emblem" id="3b16ea9d-6480-48bf-ae2b-059587425011">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Subtype" value="Oko, Shadowmoor Scion" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Creatures you control of the chosen type get +3/+3 and have vigilance and hexproof.</property>
+            <property name="Artist" value="Kai Carpenter" />
+            <property name="Number" value="12" />
+            <property name="Flags" value="TECL"/>
+        </card>
         <card name="Monster" id="d45d96df-bccd-49e6-b369-f9dab16e7b69">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Enchantment" />
@@ -11372,12 +11497,12 @@ Enchanted creature gets +1/+1 for each enchantment you control.</property>
             <property name="Rules"><b>Yawning Portal</b> — You gain 1 life.
 <b>Dungeon Level</b> — Scry 1.
 <b>Goblin Bazaar</b> — Create a Treasure token.
-<b>Twisted Caverns</b> — Target creature can’t attack until your next turn.
+<b>Twisted Caverns</b> — Target creature can't attack until your next turn.
 <b>Lost Level</b> — Scry 2.
 <b>Runestone Caverns</b> — Exile the top two cards of your library. You may play them.
-<b>Muiral’s Graveyard</b> — Create two 1/1 black Skeleton creature tokens.
+<b>Muiral's Graveyard</b> — Create two 1/1 black Skeleton creature tokens.
 <b>Deep Mines</b> — Scry 3.
-<b>Mad Wizard’s Lair</b> — Draw three cards and reveal them. You may cast one of them without paying its mana cost.</property>
+<b>Mad Wizard's Lair</b> — Draw three cards and reveal them. You may cast one of them without paying its mana cost.</property>
             <property name="Number" value="20" />
             <property name="Flags" value="TAFR"/>
         </card>
@@ -11411,7 +11536,7 @@ Enchanted creature gets +1/+1 for each enchantment you control.</property>
             <property name="Color" value="Colorless" />
             <property name="Type" value="Dungeon" />
             <property name="Rarity" value="Token" />
-            <property name="Rules"><i>(You can’t enter this dungeon unless you “venture into Undercity”.)</i>
+            <property name="Rules"><i>(You can't enter this dungeon unless you “venture into Undercity”.)</i>
 <b>Secret Entrance</b> — Search your library for a basic land card, reveal it, put it into your hand, then shuffle.
 <b>Forge</b> — Put two +1/+1 counters on target creature.
 <b>Lost Well</b> — Scry 2.
@@ -11429,9 +11554,9 @@ Enchanted creature gets +1/+1 for each enchantment you control.</property>
             <property name="Color" value="Colorless" />
             <property name="Type" value="Emblem" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Your Ring-bearer is legendary and can’t be blocked by creatures with greater power.
+            <property name="Rules">Your Ring-bearer is legendary and can't be blocked by creatures with greater power.
 Whenever your Ring-bearer attacks, draw a card, then discard a card.
-Whenever your Ring-bearer becomes blocked by a creature, that creature’s controller sacrifices it at end of combat.
+Whenever your Ring-bearer becomes blocked by a creature, that creature's controller sacrifices it at end of combat.
 Whenever your Ring-bearer deals combat damage to a player, each opponent loses 3 life.</property>
 
             <property name="Artist" value="Viko Menezes" />
@@ -11664,7 +11789,7 @@ Whenever your Ring-bearer deals combat damage to a player, each opponent loses 3
             <property name="Subtype" value="Zombie Jackal Warrior" />
             <property name="Rarity" value="Token" />
             <property name="Rules">Haste
-            When Earthshaker Khenra enters the battlefield, target creature with power less than or equal to Earthshaker Khenra’s power can’t block this turn.</property>
+            When Earthshaker Khenra enters the battlefield, target creature with power less than or equal to Earthshaker Khenra's power can't block this turn.</property>
             <property name="Power" value="4" />
             <property name="Toughness" value="4" />
             <property name="Artist" value="Jason A. Engle" />
@@ -11700,7 +11825,7 @@ Whenever your Ring-bearer deals combat damage to a player, each opponent loses 3
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Zombie Jackal Wizard" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">When Resilient Khenra enters the battlefield, you may have target creature get +X/+X until end of turn, where X is Resilient Khenra’s power.</property>
+            <property name="Rules">When Resilient Khenra enters the battlefield, you may have target creature get +X/+X until end of turn, where X is Resilient Khenra's power.</property>
             <property name="Power" value="4" />
             <property name="Toughness" value="4" />
             <property name="Artist" value="Svetlin Velinov" />
@@ -11828,7 +11953,7 @@ Whenever your Ring-bearer deals combat damage to a player, each opponent loses 3
             <property name="Subtype" value="Rabbit Knight" />
             <property name="Rarity" value="Token" />
             <property name="Rules">Whenever you attack, choose one —
-• Create a 1/1 white Rabbit creature token that’s tapped and attacking.
+• Create a 1/1 white Rabbit creature token that's tapped and attacking.
 • Attacking creatures you control get +1/+1 until end of turn.</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
@@ -11931,7 +12056,7 @@ Whenever your Ring-bearer deals combat damage to a player, each opponent loses 3
             <property name="Subtype" value="Bat Cleric" />
             <property name="Rarity" value="Token" />
             <property name="Rules">Flying
-This creature can’t block.
+This creature can't block.
 Whenever you gain life, each opponent loses 1 life.</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
@@ -12051,7 +12176,7 @@ Whenever a creature you control becomes the target of a spell or ability an oppo
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Raccoon Warrior" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">This creature can’t be blocked by creatures with power 2 or less.</property>
+            <property name="Rules">This creature can't be blocked by creatures with power 2 or less.</property>
             <property name="Power" value="1" />
             <property name="Toughness" value="1" />
             <property name="Artist" value="Steve Ellis" />
@@ -12221,7 +12346,7 @@ Whenever Vanguard Suppressor deals combat damage to a player, draw a card.</prop
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Human" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Arco-Flagellant can’t block.
+            <property name="Rules">Arco-Flagellant can't block.
 Pay 3 life: Arco-Flagellant gains indestructible until end of turn.</property>
             <property name="Power" value="3" />
             <property name="Toughness" value="1" />
@@ -12349,7 +12474,7 @@ Pay 3 life: Arco-Flagellant gains indestructible until end of turn.</property>
             <property name="Type" value="Artifact Creature" />
             <property name="Subtype" value="Robot" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">This creature can’t block.</property>
+            <property name="Rules">This creature can't block.</property>
             <property name="Power" value="4" />
             <property name="Toughness" value="4" />
             <property name="Artist" value="Philip Helliwell" />
@@ -12407,7 +12532,7 @@ Pay 3 life: Arco-Flagellant gains indestructible until end of turn.</property>
             <property name="Type" value="Creature" />
             <property name="Subtype" value="Horse" />
             <property name="Rarity" value="Token" />
-            <property name="Rules">Doctors you control have horsemanship. <i>(They can’t be blocked except by creatures with horsemanship.)</i></property>
+            <property name="Rules">Doctors you control have horsemanship. <i>(They can't be blocked except by creatures with horsemanship.)</i></property>
             <property name="Power" value="2" />
             <property name="Toughness" value="2" />
             <property name="Artist" value="Anton Solovianchyk" />
@@ -12473,7 +12598,7 @@ Prevent all damage that would be dealt to this creature.</property>
             <property name="Subtype" value="Alien Angel" />
             <property name="Rarity" value="Token" />
             <property name="Rules">First strike, vigilance
-Whenever an opponent casts a creature spell, this permanent isn’t a creature until end of turn.</property>
+Whenever an opponent casts a creature spell, this permanent isn't a creature until end of turn.</property>
             <property name="Power" value="2" />
             <property name="Toughness" value="2" />
             <property name="Artist" value="Yulia Litvinova" />
@@ -12591,7 +12716,7 @@ Enchanted creature gets +2/+2 and is goaded.</property>
             <property name="Rarity" value="Token" />
             <property name="Rules"><s value="T">{T}</s>: Add <s value="C">{C}</s>. Spend this mana only to cast an artifact spell or activate an ability of an artifact.
 Paradox — Whenever you cast a spell from anywhere other than your hand, investigate.
-(This token’s mana cost is <s value="2">{2}</s><s value="U">{U}</s><s value="U">{U}</s>.)</property>
+(This token's mana cost is <s value="2">{2}</s><s value="U">{U}</s><s value="U">{U}</s>.)</property>
             <property name="Power" value="2" />
             <property name="Toughness" value="2" />
             <property name="Artist" value="Justyna Dura" />
