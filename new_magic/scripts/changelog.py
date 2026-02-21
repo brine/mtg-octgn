@@ -559,5 +559,9 @@ changelog = {
         ]),
     3060333: ("3.6.3.33", "January 11 2026", [
         "Fixed ECL limited packs missing cards"
+        ]),
+    3060334: ("3.6.3.34", "February 21 2026", [
+        "Added TMNT",
+        "Fixed image downloader not saving images"
         ])
 }

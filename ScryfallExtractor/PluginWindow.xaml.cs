@@ -70,7 +70,8 @@ namespace MTGImageFetcher
             this.InitializeComponent();
             this.DataContext = this;
             Client = new HttpClient(new HttpClientHandler() { AllowAutoRedirect = false });
-            Client.DefaultRequestHeaders.Add("User-Agent", "OCTGN MTG image downloader plugin");
+            Client.DefaultRequestHeaders.Add("User-Agent", "OCTGN");
+            Client.DefaultRequestHeaders.Add("Accept", "*/*");
             setList = new List<SetItem>();
             SetList.ItemsSource = setList;
 
