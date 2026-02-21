@@ -236,9 +236,9 @@ namespace MTGImageFetcher
                                                                                         card.GetProperty("Number", alt.Type).ToString().TrimStart('0'),
                                                                                         selectedLanguage,
                                                                                         imageParameters);
-
+                                Thread.Sleep(80);
                                 var header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, url)).Result;
-
+                                
                                 if (header.StatusCode != HttpStatusCode.Found)
                                 {
                                     webImageLanguage = "en";
@@ -247,7 +247,7 @@ namespace MTGImageFetcher
                                                                                             card.GetProperty("Number", alt.Type).ToString().TrimStart('0'),
                                                                                             "en",
                                                                                             imageParameters);
-
+                                    Thread.Sleep(80);
                                     header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, englishUrl)).Result;
 
                                     if (header.StatusCode != HttpStatusCode.Found)
@@ -255,6 +255,8 @@ namespace MTGImageFetcher
                                         var backupUrl = string.Format("https://api.scryfall.com/cards/{0}{1}",
                                                                                             card.Id,
                                                                                             imageParameters);
+
+                                        Thread.Sleep(80);
                                         header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, backupUrl)).Result;
                                         if (header.StatusCode != HttpStatusCode.Found)
                                         {
@@ -388,6 +390,7 @@ namespace MTGImageFetcher
                                                                     selectedLanguage ?? "en",
                                                                     xl ? "large" : "normal");
 
+            Thread.Sleep(80);
             var header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, url)).Result;
             if (header.StatusCode == HttpStatusCode.Found)
             {
