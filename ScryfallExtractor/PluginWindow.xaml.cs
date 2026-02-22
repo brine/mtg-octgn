@@ -236,120 +236,129 @@ namespace MTGImageFetcher
                                                                                         card.GetProperty("Number", alt.Type).ToString().TrimStart('0'),
                                                                                         selectedLanguage,
                                                                                         imageParameters);
-                                Thread.Sleep(80);
-                                var header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, url)).Result;
-                                
-                                if (header.StatusCode != HttpStatusCode.Found)
+
+                                try
                                 {
-                                    webImageLanguage = "en";
-                                    var englishUrl = string.Format("https://api.scryfall.com/cards/{0}/{1}/{2}{3}",
-                                                                                            setCode,
-                                                                                            card.GetProperty("Number", alt.Type).ToString().TrimStart('0'),
-                                                                                            "en",
-                                                                                            imageParameters);
                                     Thread.Sleep(80);
-                                    header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, englishUrl)).Result;
+                                    var header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, url)).Result;
 
                                     if (header.StatusCode != HttpStatusCode.Found)
                                     {
-                                        var backupUrl = string.Format("https://api.scryfall.com/cards/{0}{1}",
-                                                                                            card.Id,
-                                                                                            imageParameters);
-
+                                        webImageLanguage = "en";
+                                        var englishUrl = string.Format("https://api.scryfall.com/cards/{0}/{1}/{2}{3}",
+                                                                                                setCode,
+                                                                                                card.GetProperty("Number", alt.Type).ToString().TrimStart('0'),
+                                                                                                "en",
+                                                                                                imageParameters);
                                         Thread.Sleep(80);
-                                        header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, backupUrl)).Result;
+                                        header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, englishUrl)).Result;
+
                                         if (header.StatusCode != HttpStatusCode.Found)
                                         {
-                                            // no image found
-                                            webImageUpdater.Report(null);
-                                            continue;
+                                            var backupUrl = string.Format("https://api.scryfall.com/cards/{0}{1}",
+                                                                                                card.Id,
+                                                                                                imageParameters);
+
+                                            Thread.Sleep(80);
+                                            header = Client.SendAsync(new HttpRequestMessage(HttpMethod.Head, backupUrl)).Result;
+                                            if (header.StatusCode != HttpStatusCode.Found)
+                                            {
+                                                // no image found
+                                                webImageUpdater.Report(null);
+                                                continue;
+                                            }
                                         }
                                     }
-                                }
-                                var webImageUrl = header.Headers.Location;
-                                var webTimestamp = Convert.ToInt32(webImageUrl.Query.TrimStart('?'));
-                                var webId = webImageUrl.Segments.Last().Split('.')[0];
 
-                                // figure out if we should be downloading and updating this card image
+                                    var webImageUrl = header.Headers.Location;
+                                    var webTimestamp = Convert.ToInt32(webImageUrl.Query.TrimStart('?'));
+                                    var webId = webImageUrl.Segments.Last().Split('.')[0];
 
-                                if (localImagePath != null
-                                    && imageWidth != 0
-                                    && imageWidth > 600 == xl
-                                    && imageLanguage.Equals(webImageLanguage,StringComparison.InvariantCultureIgnoreCase)
-                                    && imageTimeStamp >= webTimestamp
-                                    && imageId.Equals(webId, StringComparison.CurrentCultureIgnoreCase))
-                                {
-                                    webImageUpdater.Report(null);
-                                    continue;
-                                }
+                                    // figure out if we should be downloading and updating this card image
 
-                                // download image
-
-                                var webResponse = Client.GetAsync(webImageUrl).Result;
-                                
-                                using (var webImageStream = webResponse.Content.ReadAsStreamAsync().Result)
-                                {
-                                    if (webImageStream == null)
+                                    if (localImagePath != null
+                                        && imageWidth != 0
+                                        && imageWidth > 600 == xl
+                                        && imageLanguage.Equals(webImageLanguage, StringComparison.InvariantCultureIgnoreCase)
+                                        && imageTimeStamp >= webTimestamp
+                                        && imageId.Equals(webId, StringComparison.CurrentCultureIgnoreCase))
                                     {
-                                        // if for whatever reason the image didn't download, skip the install.
                                         webImageUpdater.Report(null);
                                         continue;
                                     }
-                                    using (var ms = new MemoryStream())
+
+                                    // download image
+
+                                    var webResponse = Client.GetAsync(webImageUrl).Result;
+
+                                    using (var webImageStream = webResponse.Content.ReadAsStreamAsync().Result)
                                     {
-                                        webImageStream.CopyTo(ms);
-                                        webImageUpdater.Report(StreamToBitmapImage(ms));
+                                        if (webImageStream == null)
+                                        {
+                                            // if for whatever reason the image didn't download, skip the install.
+                                            webImageUpdater.Report(null);
+                                            continue;
+                                        }
+                                        using (var ms = new MemoryStream())
+                                        {
+                                            webImageStream.CopyTo(ms);
+                                            webImageUpdater.Report(StreamToBitmapImage(ms));
+                                        }
+                                        using (var newimg = Image.FromStream(webImageStream))
+                                        {
+                                            if (alt.Type == "flip")
+                                            {
+                                                newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate180FlipNone);
+                                            }
+                                            else if (alt.Size.Name == "Plane" || alt.Size.Name == "Horizontal")
+                                            {
+                                                newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate90FlipNone);
+                                            }
+
+                                            //comment metadata stores the timestamp data to compare updated images
+                                            var commentMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
+                                            commentMetadata.Id = 40092; // this is the comments field
+                                            commentMetadata.Value = Encoding.Unicode.GetBytes(webTimestamp.ToString());
+                                            commentMetadata.Len = commentMetadata.Value.Length;
+                                            commentMetadata.Type = 1;
+                                            newimg.SetPropertyItem(commentMetadata);
+
+                                            //keywords metadata stores language information
+                                            var keywordsMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
+                                            keywordsMetadata.Id = 40094; // this is the keywords field
+                                            keywordsMetadata.Value = Encoding.Unicode.GetBytes(webImageLanguage);
+                                            keywordsMetadata.Len = keywordsMetadata.Value.Length;
+                                            keywordsMetadata.Type = 1;
+                                            newimg.SetPropertyItem(keywordsMetadata);
+
+                                            //subject metadata stores scryfall's GUID to ensure the correct card 
+                                            var subjectMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
+                                            subjectMetadata.Id = 40095; // this is the Subject field
+                                            subjectMetadata.Value = Encoding.Unicode.GetBytes(webId);
+                                            subjectMetadata.Len = subjectMetadata.Value.Length;
+                                            subjectMetadata.Type = 1;
+                                            newimg.SetPropertyItem(subjectMetadata);
+
+                                            var garbage = Config.Instance.Paths.GraveyardPath;
+                                            if (!Directory.Exists(garbage)) Directory.CreateDirectory(garbage);
+
+                                            if (files.Count() == 0)
+                                                setItem.ImageCount++;
+
+                                            foreach (var f in files.Select(x => new FileInfo(x)))
+                                            {
+                                                f.MoveTo(Path.Combine(garbage, f.Name));
+                                            }
+
+                                            var imageUri = String.IsNullOrWhiteSpace(alt.Type) ? card.ImageUri : card.ImageUri + "." + alt.Type;
+                                            var newPath = Path.Combine(setItem.set.ImagePackUri, imageUri + ".jpg");
+                                            newimg.Save(newPath, ImageFormat.Jpeg);
+                                        }
                                     }
-                                    using (var newimg = Image.FromStream(webImageStream))
-                                    {
-                                        if (alt.Type == "flip")
-                                        {
-                                            newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate180FlipNone);
-                                        }
-                                        else if (alt.Size.Name == "Plane" || alt.Size.Name == "Horizontal")
-                                        {
-                                            newimg.RotateFlip(System.Drawing.RotateFlipType.Rotate90FlipNone);
-                                        }
-
-                                        //comment metadata stores the timestamp data to compare updated images
-                                        var commentMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
-                                        commentMetadata.Id = 40092; // this is the comments field
-                                        commentMetadata.Value = Encoding.Unicode.GetBytes(webTimestamp.ToString());
-                                        commentMetadata.Len = commentMetadata.Value.Length;
-                                        commentMetadata.Type = 1;
-                                        newimg.SetPropertyItem(commentMetadata);
-
-                                        //keywords metadata stores language information
-                                        var keywordsMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
-                                        keywordsMetadata.Id = 40094; // this is the keywords field
-                                        keywordsMetadata.Value = Encoding.Unicode.GetBytes(webImageLanguage);
-                                        keywordsMetadata.Len = keywordsMetadata.Value.Length;
-                                        keywordsMetadata.Type = 1;
-                                        newimg.SetPropertyItem(keywordsMetadata);
-
-                                        //subject metadata stores scryfall's GUID to ensure the correct card 
-                                        var subjectMetadata = (PropertyItem)FormatterServices.GetUninitializedObject(typeof(PropertyItem));
-                                        subjectMetadata.Id = 40095; // this is the Subject field
-                                        subjectMetadata.Value = Encoding.Unicode.GetBytes(webId);
-                                        subjectMetadata.Len = subjectMetadata.Value.Length;
-                                        subjectMetadata.Type = 1;
-                                        newimg.SetPropertyItem(subjectMetadata);
-
-                                        var garbage = Config.Instance.Paths.GraveyardPath;
-                                        if (!Directory.Exists(garbage)) Directory.CreateDirectory(garbage);
-
-                                        if (files.Count() == 0)
-                                            setItem.ImageCount++;
-
-                                        foreach (var f in files.Select(x => new FileInfo(x)))
-                                        {
-                                            f.MoveTo(Path.Combine(garbage, f.Name));
-                                        }
-
-                                        var imageUri = String.IsNullOrWhiteSpace(alt.Type) ? card.ImageUri : card.ImageUri + "." + alt.Type;
-                                        var newPath = Path.Combine(setItem.set.ImagePackUri, imageUri + ".jpg");
-                                        newimg.Save(newPath, ImageFormat.Jpeg);
-                                    }
+                                }
+                                catch (Exception e)
+                                {
+                                    throw e;
                                 }
                             }
                         }

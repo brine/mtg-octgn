@@ -8,6 +8,7 @@ using Octgn.Core.DataManagers;
 using Octgn.Core.Plugin;
 using System.Net;
 using System.Linq;
+using Octgn.DataNew;
 
 namespace MTGImageFetcher
 {
@@ -41,7 +42,10 @@ namespace MTGImageFetcher
         public void OnClick(IDeckBuilderPluginController con)
         {
             var game = con.GetLoadedGame();
-            if (game== null || game.Id != Guid.Parse("A6C8D2E8-7CD8-11DD-8F94-E62B56D89593")) throw new Exception("This plugin requires Magic: the Gathering to be loaded into the deck editor first.");
+            if (game== null || game.Id != Guid.Parse("A6C8D2E8-7CD8-11DD-8F94-E62B56D89593"))
+            {
+                game = DbContext.Get().GameById(Guid.Parse("A6C8D2E8-7CD8-11DD-8F94-E62B56D89593")) ?? throw new Exception("Magic: the Gathering game package is not installed!");
+            }    
             PluginWindow window = new PluginWindow(game);
             window.ShowDialog();
         }
