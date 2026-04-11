@@ -1812,6 +1812,17 @@ Whenever this creature attacks, target attacking creature gains flying until end
             <property name="Number" value="4" />
             <property name="Flags" value="TUNF"/>
         </card>
+        <card name="Contract" id="c6aa0e94-3618-46b5-a6af-d4145cdf354d">
+            <property name="Color" value="White" />
+            <property name="Type" value="Enchantment" />
+            <property name="Subtype" value="Aura" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules" >Enchant creature
+			Whenever enchanted creature attacks, it gets +2/+0 until end of turn if it’s attacking one of your opponents. Otherwise, its controller loses 2 life.</property>
+            <property name="Artist" value="Brian Valeza" />
+            <property name="Number" value="3" />
+            <property name="Flags" value="TSOC"/>
+        </card>
         <card name="Copy" id="2736e3d3-a2b6-4af6-a377-f7517da33a75">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Token" />
@@ -1829,6 +1840,11 @@ Whenever this creature attacks, target attacking creature gains flying until end
                 <property name="Artist" value="Michelle Giorgi" />
                 <property name="Number" value="1" />
                 <property name="Flags" value="TECC"/>
+            </alternate>
+            <alternate name="Copy" type="3">
+                <property name="Artist" value="Abz J Harding" />
+                <property name="Number" value="1" />
+                <property name="Flags" value="TSOS"/>
             </alternate>
         </card>
         <card name="Crab" id="b4aeebe7-825d-4bc6-a7ea-f3aa5692aead">
@@ -2942,6 +2958,27 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Artist" value="Ryan Valle" />
             <property name="Number" value="9" />
             <property name="Flags" value="TMOM"/>
+			<alternate name="Elemental" type="1">
+                <property name="Artist" value="Bram Sels" />
+                <property name="Number" value="21" />
+                <property name="Flags" value="TSOC"/>
+            </alternate>
+        </card>
+        <card name="Elemental" id="ed3e3f41-822e-4e83-95f3-8fc6c59ecd20">
+            <property name="Color" value="Multicolor Blue Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Elemental" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Andrew Mar" />
+            <property name="Number" value="2" />
+            <property name="Flags" value="TSOS"/>
+			<alternate name="Elemental" type="1">
+                <property name="Artist" value="Filipe Pagliuso" />
+                <property name="Number" value="3" />
+                <property name="Flags" value="TSOS"/>
+            </alternate>
         </card>
         <card name="Elemental" id="3acd4738-ef7e-4ab1-930c-7e6bd5f7a3d9">
             <property name="Color" value="Multicolor Blue Red" />
@@ -2953,6 +2990,11 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Artist" value="Alayna Danner" />
             <property name="Number" value="2" />
             <property name="Flags" value="TSTX"/>
+			<alternate name="Elemental" type="1">
+                <property name="Artist" value="Mila Pesic" />
+                <property name="Number" value="20" />
+                <property name="Flags" value="TSOC"/>
+            </alternate>
         </card>
         <card name="Elemental" id="3b8d25a0-4cb0-4f24-86b8-925e89d263f6">
             <property name="Color" value="Multicolor Blue Red" />
@@ -2965,6 +3007,18 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Artist" value="Randy Gallegos" />
 			<property name="Number" value="20" />
 			<property name="Flags" value="TC21"/>
+        </card>
+        <card name="Elemental" id="4f721dce-533b-49b5-b54e-53bc4d5e99ad">
+            <property name="Color" value="Multicolor Blue Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Elemental" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying, haste</property>
+            <property name="Power" value="*" />
+            <property name="Toughness" value="*" />
+            <property name="Artist" value="Andrew Mar" />
+			<property name="Number" value="19" />
+			<property name="Flags" value="TSOS"/>
         </card>
         <card name="Elemental" id="dd6b1a3e-4055-4d94-96a1-3f9628058fad">
             <property name="Color" value="Multicolor Black Red" />
@@ -3601,6 +3655,16 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Artist" value="Andreas Zafiratos" />
             <property name="Number" value="3" />
             <property name="Flags" value="TSTX"/>
+            <alternate name="Fractal" type="1">
+                <property name="Artist" value="Abz J Harding" />
+                <property name="Number" value="4" />
+                <property name="Flags" value="TSOS" />
+            </alternate>
+            <alternate name="Fractal" type="2">
+                <property name="Artist" value="Rudy Siswanto" />
+                <property name="Number" value="5" />
+                <property name="Flags" value="TSOS" />
+            </alternate>
         </card>
         <card name="Frog" id="b09331ec-c2f5-4739-85e6-41c0de63a653">
             <property name="Color" value="Green" />
@@ -5026,6 +5090,23 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Number" value="20" />
             <property name="Flags" value="TCLB"/>
         </card>
+        <card name="Inkling" id="4df1bfca6-fed7-4a07-97a2-b0d3b6269aa784573a">
+            <property name="Color" value="Multicolor White Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Inkling" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Billy Christian" />
+            <property name="Number" value="6" />
+            <property name="Flags" value="TSOS"/>
+            <alternate name="Inkling" type="1">
+                <property name="Artist" value="Nia Kovalevski" />
+                <property name="Number" value="7" />
+                <property name="Flags" value="TSOS" />
+            </alternate>
+        </card>
         <card name="Inkling" id="4495f827-3ec4-492f-9482-2e55b384573a">
             <property name="Color" value="Multicolor White Black" />
             <property name="Type" value="Creature" />
@@ -5037,6 +5118,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Artist" value="Scott Murphy" />
             <property name="Number" value="4" />
             <property name="Flags" value="TSTX"/>
+			<alternate name="Inkling" type="1">
+                <property name="Artist" value="Nia Kovalevski" />
+                <property name="Number" value="22" />
+                <property name="Flags" value="TSOC"/>
+            </alternate>
         </card>
         <card name="Insect" id="70dbdade-d9f1-476f-82b6-b996bcceb886">
             <property name="Color" value="White" />
@@ -6432,6 +6518,28 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Artist" value="Ilse Gort" />
             <property name="Number" value="5" />
             <property name="Flags" value="TSTX"/>
+			<alternate name="Pest" type="1">
+                <property name="Artist" value="Nino Vecia" />
+                <property name="Number" value="23" />
+                <property name="Flags" value="TSOC"/>
+            </alternate>
+        </card>
+        <card name="Pest" id="982860b5-241b-4b72-8a66-c2719978a36f">
+            <property name="Color" value="Multicolor Black Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Pest" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">When this creature attacks, you gain 1 life.</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Oriana Menendez" />
+            <property name="Number" value="8" />
+            <property name="Flags" value="TSOS"/>
+            <alternate name="Pest" type="1">
+                <property name="Artist" value="Nino Vecia" />
+                <property name="Number" value="9" />
+                <property name="Flags" value="TSOS" />
+            </alternate>
         </card>
         <card name="Pest" id="b211942a-dac7-4202-8039-4caa1ea567e6">
             <property name="Color" value="Colorless" />
@@ -8634,6 +8742,22 @@ Whenever you draw a card, put a +1/+1 counter on this creature.</property>
             <property name="Number" value="23" />
             <property name="Flags" value="TC15"/>
         </card>
+        <card name="Spirit" id="5fbde857-f11e-4442-8df1-e4afe5461ab1">
+            <property name="Color" value="Multicolor Red White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Spirit" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Marco Gorlei" />
+            <property name="Number" value="10" />
+            <property name="Flags" value="TSOS"/>
+            <alternate name="Spirit" type="1">
+                <property name="Artist" value="Filipe Pagliuso" />
+                <property name="Number" value="11" />
+                <property name="Flags" value="TSOS" />
+            </alternate>
+        </card>
         <card name="Spirit" id="88483e99-039a-4c6c-bef3-83caad221201">
             <property name="Color" value="Multicolor Red White" />
             <property name="Type" value="Creature" />
@@ -8653,6 +8777,11 @@ Whenever you draw a card, put a +1/+1 counter on this creature.</property>
                 <property name="Artist" value="Milivoi Ceran" />
                 <property name="Number" value="14" />
                 <property name="Flags" value="TLCI"/>
+            </alternate>
+            <alternate name="Spirit" type="3">
+                <property name="Artist" value="Flavio Greco Paglia" />
+                <property name="Number" value="25" />
+                <property name="Flags" value="TSOC"/>
             </alternate>
         </card>
         <card name="Spirit" id="c30cf64a-475d-4fa4-bfeb-8d7d65afc42f">
@@ -9332,6 +9461,11 @@ Equip <s value="2">{2}</s></property>
                 <property name="Artist" value="Kim Sokol" />
                 <property name="Number" value="3" />
                 <property name="Flags" value="TTMC"/>
+            </alternate>
+            <alternate name="Treasure" type="46">
+                <property name="Artist" value="Joseph Meehan" />
+                <property name="Number" value="12" />
+                <property name="Flags" value="TSOS"/>
             </alternate>
         </card>
         <card name="Treefolk" id="4d654a81-324b-4f57-bf9b-65c372e0e424">
@@ -11467,6 +11601,16 @@ Artifact spells you cast cost <s value="1">{1}</s>: less to cast.</property>
             <property name="Artist" value="Kai Carpenter" />
             <property name="Number" value="12" />
             <property name="Flags" value="TECL"/>
+        </card>
+        <card name="Dellian's Emblem" id="eeaaa361-d811-47fc-ba6e-0a676b501dff">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Emblem" />
+            <property name="Subtype" value="Professor Dellian Fel" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Whenever you gain life, target opponent loses that much life.</property>
+            <property name="Artist" value="Lie Setiawan" />
+            <property name="Number" value="13" />
+            <property name="Flags" value="TSOS"/>
         </card>
         <card name="Monster" id="d45d96df-bccd-49e6-b369-f9dab16e7b69">
             <property name="Color" value="Colorless" />
