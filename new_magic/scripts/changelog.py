@@ -567,5 +567,8 @@ changelog = {
     3060335: ("3.6.3.35", "February 22 2026", [
         "Another attempt at fixing the image downloader plugin",
         "image downloader plugin no longer requires MTG to be loaded in deck editor first"
+        ]),
+    3060336: ("3.6.3.36", "April 11 2026", [
+        "Secrets of Strixhaven"
         ])
 }
