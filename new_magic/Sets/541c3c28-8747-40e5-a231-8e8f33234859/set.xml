@@ -1475,7 +1475,7 @@ Exile target creature or planeswalker.</property>
       <property name="Type" value="Instant" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">As an additional cost to cast this spell, you may sacrifice one or more creatures. When you do, copy this spell for each creature sacrificed this way.
-You draw a card and you lose 1 life.</property>
+You draw a card and lose 1 life.</property>
       <property name="Artist" value="Andrey Kuzinskiy" />
       <property name="Number" value="081" />
     </card>
@@ -2013,7 +2013,7 @@ As long as this card is in your graveyard, if you would learn, you may instead r
       <property name="Subtype" value="Dwarf Shaman" />
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">This creature gets +1/+0 for each artifact you control.
-Magecraft — Whenever you cast or copy an instant or sorcery spell, create a Treasure token.</property>
+Magecraft — Whenever you cast or copy an instant or sorcery spell, create a Treasure token. (It's an artifact with "<s value="T">{T}</s>, Sacrifice this token: Add one mana of any color.")</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Manuel Castañón" />
@@ -4552,7 +4552,7 @@ When this creature enters, put up to one target instant or sorcery card from you
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Legendary Artifact Creature" />
-      <property name="Subtype" value="Construct" />
+      <property name="Subtype" value="Book Construct" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">You can't cast permanent spells.
 <s value="4">{4}</s>, <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s>. When you next cast a spell this turn, exile cards from the top of your library until you exile an instant or sorcery card with lesser mana value. Until end of turn, you may cast that card without paying its mana cost. Put each other card exiled this way on the bottom of your library in a random order.</property>
@@ -4761,7 +4761,7 @@ When this land enters, sacrifice it unless you pay <s value="1">{1}</s>.
       <property name="Rarity" value="Common" />
       <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="R">{R}</s> or <s value="W">{W}</s>.
-<s value="4">{4}</s>, <s value="T">{T}</s>: Scry 1.</property>
+<s value="4">{4}</s>, <s value="T">{T}</s>: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="268" />
       <property name="Faction" value="Lorehold" />
@@ -4786,7 +4786,7 @@ When this land enters, sacrifice it unless you pay <s value="1">{1}</s>.
       <property name="Rarity" value="Common" />
       <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="U">{U}</s> or <s value="R">{R}</s>.
-<s value="4">{4}</s>, <s value="T">{T}</s>: Scry 1.</property>
+<s value="4">{4}</s>, <s value="T">{T}</s>: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)</property>
       <property name="Artist" value="Adam Paquette" />
       <property name="Number" value="270" />
       <property name="Faction" value="Prismari" />
@@ -4799,7 +4799,7 @@ When this land enters, sacrifice it unless you pay <s value="1">{1}</s>.
       <property name="Rarity" value="Common" />
       <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="G">{G}</s> or <s value="U">{U}</s>.
-<s value="4">{4}</s>, <s value="T">{T}</s>: Scry 1.</property>
+<s value="4">{4}</s>, <s value="T">{T}</s>: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)</property>
       <property name="Artist" value="Piotr Dura" />
       <property name="Number" value="271" />
       <property name="Faction" value="Quandrix" />
@@ -4824,7 +4824,7 @@ When this land enters, sacrifice it unless you pay <s value="1">{1}</s>.
       <property name="Rarity" value="Common" />
       <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="W">{W}</s> or <s value="B">{B}</s>.
-<s value="4">{4}</s>, <s value="T">{T}</s>: Scry 1.</property>
+<s value="4">{4}</s>, <s value="T">{T}</s>: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)</property>
       <property name="Artist" value="Titus Lunter" />
       <property name="Number" value="273" />
       <property name="Faction" value="Silverquill" />
@@ -4849,7 +4849,7 @@ When this land enters, sacrifice it unless you pay <s value="1">{1}</s>.
       <property name="Rarity" value="Common" />
       <property name="Rules">This land enters tapped.
 <s value="T">{T}</s>: Add <s value="B">{B}</s> or <s value="G">{G}</s>.
-<s value="4">{4}</s>, <s value="T">{T}</s>: Scry 1.</property>
+<s value="4">{4}</s>, <s value="T">{T}</s>: Scry 1. (Look at the top card of your library. You may put that card on the bottom.)</property>
       <property name="Artist" value="Alayna Danner" />
       <property name="Number" value="275" />
       <property name="Faction" value="Witherbloom" />
@@ -5552,6 +5552,7 @@ Search your library for up to three cards, put them into your hand, shuffle, the
       <property name="Rules">Discard any number of cards, then draw that many cards. Then if there are seven or more cards in your graveyard, create a 3/2 red and white Spirit creature token.</property>
       <property name="Artist" value="Jokubas Uogintas" />
       <property name="Number" value="312" />
+      <property name="Faction" value="Lorehold" />
       <property name="Packaging" value="Special" />
     </card>
     <card name="Retriever Phoenix" id="a81c6751-b97e-4935-a18f-fb97ee9e8a68">
@@ -6539,7 +6540,7 @@ Whenever this creature deals combat damage to a player, you may return target cr
       <property name="CMC" value="3" />
       <property name="Color" value="Colorless" />
       <property name="Type" value="Legendary Artifact Creature" />
-      <property name="Subtype" value="Construct" />
+      <property name="Subtype" value="Book Construct" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">You can't cast permanent spells.
 <s value="4">{4}</s>, <s value="T">{T}</s>: Add <s value="W">{W}</s><s value="U">{U}</s><s value="B">{B}</s><s value="R">{R}</s><s value="G">{G}</s>. When you next cast a spell this turn, exile cards from the top of your library until you exile an instant or sorcery card with lesser mana value. Until end of turn, you may cast that card without paying its mana cost. Put each other card exiled this way on the bottom of your library in a random order.</property>
