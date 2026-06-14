@@ -570,5 +570,8 @@ changelog = {
         ]),
     3060336: ("3.6.3.36", "April 11 2026", [
         "Secrets of Strixhaven"
+        ]),
+    3060337: ("3.6.3.37", "June 14 2026", [
+        "Marvel Super Heroes"
         ])
 }
