@@ -165,6 +165,7 @@ namespace MTGImageFetcher
                                     switch (alt.Type)
                                     {
                                         case "modal_dfc":
+                                        case "reversible_card":
                                         case "meld":
                                         case "transform":
                                             {
@@ -236,7 +237,6 @@ namespace MTGImageFetcher
                                                                                         card.GetProperty("Number", alt.Type).ToString().TrimStart('0'),
                                                                                         selectedLanguage,
                                                                                         imageParameters);
-
                                 try
                                 {
                                     Thread.Sleep(80);
@@ -358,7 +358,6 @@ namespace MTGImageFetcher
                                 }
                                 catch (Exception e)
                                 {
-                                    throw e;
                                 }
                             }
                         }
