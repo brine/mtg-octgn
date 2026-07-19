@@ -573,5 +573,9 @@ changelog = {
         ]),
     3060337: ("3.6.3.37", "June 14 2026", [
         "Marvel Super Heroes"
+        ]),
+    3060338: ("3.6.3.38", "July 18 2026", [
+        "Fixed image downloader crash when hosted image files are broken",
+        "Fixed MSH missing booster packs"
         ])
 }
