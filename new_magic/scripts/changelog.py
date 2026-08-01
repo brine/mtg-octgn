@@ -577,5 +577,8 @@ changelog = {
     3060338: ("3.6.3.38", "July 18 2026", [
         "Fixed image downloader crash when hosted image files are broken",
         "Fixed MSH missing booster packs"
+        ]),
+    3060339: ("3.6.3.39", "July 31 2026", [
+        "Added HOB",
         ])
 }
