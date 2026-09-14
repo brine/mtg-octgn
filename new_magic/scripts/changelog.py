@@ -580,5 +580,8 @@ changelog = {
         ]),
     3060339: ("3.6.3.39", "July 31 2026", [
         "Added HOB",
+        ]),
+    3060340: ("3.6.3.40", "September 13 2026", [
+        "Added SLZ and MBC",
         ])
 }
