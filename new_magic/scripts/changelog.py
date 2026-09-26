@@ -586,5 +586,8 @@ changelog = {
         ]),
     3060341: ("3.6.3.41", "September 25 2026", [
         "Added FRA",
+        ]),
+    3060342: ("3.6.3.42", "September 25 2026", [
+        "Fix for broken Jace token",
         ])
 }
