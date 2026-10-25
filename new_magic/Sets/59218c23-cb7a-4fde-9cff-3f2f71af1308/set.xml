@@ -1,16 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <set name="The Hobbit" id="59218c23-cb7a-4fde-9cff-3f2f71af1308" gameId="A6C8D2E8-7CD8-11DD-8F94-E62B56D89593" shortName="hob" releaseDate="2026-08-14">
-
   <packaging>
     <pack name="Play Booster" id="ee095fbd-9da9-4ee8-a428-b60d8abfbc03">
-	
-	  <pick qty="7" key="Rarity" value="Common">
-		<property key="Packaging" value="" />
-	  </pick>
-	  <pick qty="3" key="Rarity" value="Uncommon">
-		<property key="Packaging" value="" />
-	  </pick>
-	  
+      <pick qty="7" key="Rarity" value="Common">
+        <property key="Packaging" value="" />
+      </pick>
+      <pick qty="3" key="Rarity" value="Uncommon">
+        <property key="Packaging" value="" />
+      </pick>
       <options>
         <option probability="0.745">
           <pick qty="1" key="Rarity" value="Common">
@@ -33,7 +30,6 @@
           </pick>
         </option>
       </options>
-	  
       <options>
         <option probability="0.87">
           <pick qty="1" key="Rarity" value="Rare">
@@ -46,14 +42,13 @@
           </pick>
         </option>
       </options>
-	  
       <options>
         <option probability="0.61">
           <pick qty="1" key="Rarity" value="Common">
             <property key="Packaging" value="" />
           </pick>
         </option>
-        <option probability="0.30">
+        <option probability="0.3">
           <pick qty="1" key="Rarity" value="Uncommon">
             <property key="Packaging" value="" />
           </pick>
@@ -68,7 +63,7 @@
             <property key="Packaging" value="" />
           </pick>
         </option>
-   	  </options>
+      </options>
       <options>
         <option probability="0.5">
           <pick qty="1" key="Rarity" value="Basic Land">
@@ -78,14 +73,12 @@
         <option probability="0.5">
           <pick qty="1" key="Packaging" value="Dual Land" />
         </option>
-   	  </options>
+      </options>
     </pack>
     <pack name="Lands" id="1fe7174e-4ecc-4192-9d9d-835f915a5fa4">
       <pick qty="unlimited" key="Rarity" value="Basic Land" />
     </pack>
   </packaging>
-
-
   <cards>
     <card name="Long-Bodied Grey Dog" id="d1a1e520-1fe2-4529-8afb-c187bb80da3c">
       <property name="Cost">
@@ -1110,7 +1103,7 @@ Target creature's owner puts it on their choice of the top or bottom of their li
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Equipped creature has prowess. (Whenever its controller casts a noncreature spell, that creature gets +1/+1 until end of turn.)
-If an ability of equipped creature triggers, that ability triggers an additional time.
+If a triggered ability of equipped creature triggers, that ability triggers an additional time.
 Equip Wizard <s value="1">{1}</s>
 Equip <s value="3">{3}</s></property>
       <property name="Artist" value="Gaboleps" />
@@ -2621,7 +2614,7 @@ Whenever this creature enters or attacks, recruit. (Draw a card, then discard a 
       <property name="Rarity" value="Uncommon" />
       <property name="Rules">Storied (If you control three or more artifacts, legendaries, and/or Sagas, you have an enduring story for the rest of the game.)
 Whenever Bifur enters or attacks, put a +1/+1 counter on target creature.
-As long as you have an enduring story, if an ability of a Dwarf you control triggers, that ability triggers an additional time.</property>
+As long as you have an enduring story, if a triggered ability of a Dwarf you control triggers, that ability triggers an additional time.</property>
       <property name="Power" value="4" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Kieran Yanner" />
@@ -4450,637 +4443,6 @@ At the beginning of your upkeep, create a Treasure token.</property>
       <property name="Number" value="249" />
       <property name="Packaging" value="Special" />
     </card>
-    <card name="Belladonna Took" id="f2522398-39d2-43d3-9019-349e22438f65">
-      <property name="Cost">
-        <s value="1">{1}</s>
-        <s value="W">{W}</s>
-      </property>
-      <property name="CMC" value="2" />
-      <property name="Color" value="White" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Halfling Citizen" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever a token you control enters, you gain 1 life if this is the first time this ability has resolved this turn. If it's the second time, draw a card. If it's the third time, put a +1/+1 counter on each creature you control.</property>
-      <property name="Power" value="2" />
-      <property name="Toughness" value="2" />
-      <property name="Artist" value="Kristina Carroll" />
-      <property name="Number" value="250" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Bofur, Reliable Guardian" id="7d9a89d1-3122-4fd8-b77f-5163c01b560c">
-      <property name="Cost">
-        <s value="W">{W}</s>
-      </property>
-      <property name="CMC" value="1" />
-      <property name="Color" value="White" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Dwarf Scout" />
-      <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Lifelink</property>
-      <property name="Power" value="1" />
-      <property name="Toughness" value="1" />
-      <property name="Artist" value="Cory Godbey" />
-      <property name="Number" value="251" />
-      <property name="Packaging" value="Special" />
-      <alternate name="Concerted Care" type="adventure">
-        <property name="Cost">
-          <s value="1">{1}</s>
-          <s value="W">{W}</s>
-        </property>
-        <property name="CMC" value="2" />
-        <property name="Color" value="White" />
-        <property name="Type" value="Instant" />
-        <property name="Subtype" value="Adventure" />
-        <property name="Rules">Target artifact or creature you control gains hexproof and indestructible until end of turn. (Then exile this card. You may cast the creature later from exile.)</property>
-        <property name="Power" value="" />
-        <property name="Toughness" value="" />
-      </alternate>
-    </card>
-    <card name="Iron Hills Blacksmith" id="8b592de0-0bf9-4972-9f43-c8ac1c3a1299">
-      <property name="Cost">
-        <s value="1">{1}</s>
-        <s value="W">{W}</s>
-      </property>
-      <property name="CMC" value="2" />
-      <property name="Color" value="White" />
-      <property name="Type" value="Creature" />
-      <property name="Subtype" value="Dwarf Artificer" />
-      <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Double strike
-When this creature enters, create a colorless Equipment artifact token named Axe with "Equipped creature gets +1/+0" and equip <s value="2">{2}</s>.</property>
-      <property name="Power" value="1" />
-      <property name="Toughness" value="1" />
-      <property name="Artist" value="Francisco Badilla" />
-      <property name="Number" value="252" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="The Queen of Dale" id="4cff1878-3f23-4a0a-ad79-28a44921cca8">
-      <property name="Cost">
-        <s value="1">{1}</s>
-        <s value="W">{W}</s>
-      </property>
-      <property name="CMC" value="2" />
-      <property name="Color" value="White" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Human Noble" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever an opponent casts their first noncreature spell each turn, you recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)</property>
-      <property name="Power" value="2" />
-      <property name="Toughness" value="1" />
-      <property name="Artist" value="Ashley Mackenzie" />
-      <property name="Number" value="253" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Bilbo, Luckwearer" id="79892a5d-80df-4ee1-b482-30e57aaabf21">
-      <property name="Cost">
-        <s value="1">{1}</s>
-        <s value="U">{U}</s>
-      </property>
-      <property name="CMC" value="2" />
-      <property name="Color" value="Blue" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Halfling Rogue" />
-      <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Bilbo can't be blocked.
-Whenever Bilbo deals combat damage to a player, draw a card, then discard a card.</property>
-      <property name="Power" value="1" />
-      <property name="Toughness" value="1" />
-      <property name="Artist" value="Cory Godbey" />
-      <property name="Number" value="254" />
-      <property name="Packaging" value="Special" />
-      <alternate name="Burglar's Plot" type="adventure">
-        <property name="Cost">
-          <s value="4">{4}</s>
-          <s value="U">{U}</s>
-        </property>
-        <property name="CMC" value="5" />
-        <property name="Color" value="Blue" />
-        <property name="Type" value="Sorcery" />
-        <property name="Subtype" value="Adventure" />
-        <property name="Rules">Exchange control of two target nonland permanents that share a card type. (Then exile this card. You may cast the creature later from exile.)</property>
-        <property name="Power" value="" />
-        <property name="Toughness" value="" />
-      </alternate>
-    </card>
-    <card name="Bilbo, Thief in the Night" id="c0c313d6-5a76-459d-9db1-9491c57861fe">
-      <property name="Cost">
-        <s value="1">{1}</s>
-        <s value="U">{U}</s>
-      </property>
-      <property name="CMC" value="2" />
-      <property name="Color" value="Blue" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Halfling Rogue" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Spells you cast from anywhere other than your hand cost <s value="1">{1}</s> less to cast.
-Whenever Bilbo attacks, you may cast an artifact, instant, or sorcery spell from your graveyard. If an instant or sorcery spell cast this way would be put into your graveyard, exile it instead.</property>
-      <property name="Power" value="2" />
-      <property name="Toughness" value="2" />
-      <property name="Artist" value="Ashley Mackenzie" />
-      <property name="Number" value="255" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Fateful Discovery" id="6a928a14-b906-402f-96e4-8b9391d6536c">
-      <property name="Cost">
-        <s value="3">{3}</s>
-        <s value="U">{U}</s>
-        <s value="U">{U}</s>
-      </property>
-      <property name="CMC" value="5" />
-      <property name="Color" value="Blue" />
-      <property name="Type" value="Enchantment" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever an artifact you control enters, draw a card.</property>
-      <property name="Artist" value="Ashley Mackenzie" />
-      <property name="Number" value="256" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Most Decrepit Old Bird" id="289a6c72-3d0d-402d-8e27-9ad0e254d5f6">
-      <property name="Cost">
-        <s value="U">{U}</s>
-      </property>
-      <property name="CMC" value="1" />
-      <property name="Color" value="Blue" />
-      <property name="Type" value="Creature" />
-      <property name="Subtype" value="Bird" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">Flying
-Threshold — This creature gets +1/+1 as long as there are seven or more cards in your graveyard.</property>
-      <property name="Power" value="1" />
-      <property name="Toughness" value="1" />
-      <property name="Artist" value="Andrea Radeck" />
-      <property name="Number" value="257" />
-      <property name="Packaging" value="Special" />
-      <alternate name="Speak Secrets" type="adventure">
-        <property name="Cost">
-          <s value="1">{1}</s>
-          <s value="U">{U}</s>
-        </property>
-        <property name="CMC" value="2" />
-        <property name="Color" value="Blue" />
-        <property name="Type" value="Sorcery" />
-        <property name="Subtype" value="Adventure" />
-        <property name="Rules">Mill four cards, then put an instant or sorcery card from among them into your hand.</property>
-        <property name="Power" value="" />
-        <property name="Toughness" value="" />
-      </alternate>
-    </card>
-    <card name="Azog, Moria's Ruin" id="2e359014-f003-4dd6-bc97-ef2a5c515a23">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="B">{B}</s>
-      </property>
-      <property name="CMC" value="3" />
-      <property name="Color" value="Black" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Goblin Soldier" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">When Azog enters, destroy up to one other target creature. Its controller amasses Goblins X, where X is that creature's power. If you controlled that creature, draw a card. (To amass Goblins X, that player puts X +1/+1 counters on an Army they control. It's also a Goblin. If they don't control an Army, they create a 0/0 black Goblin Army creature token first.)</property>
-      <property name="Power" value="1" />
-      <property name="Toughness" value="3" />
-      <property name="Artist" value="Dibujante Nocturno" />
-      <property name="Number" value="258" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Great Ugly-Looking Goblin" id="68fe7914-21b4-44eb-9432-3b1637864bc1">
-      <property name="Cost">
-        <s value="5">{5}</s>
-        <s value="B">{B}</s>
-      </property>
-      <property name="CMC" value="6" />
-      <property name="Color" value="Black" />
-      <property name="Type" value="Creature" />
-      <property name="Subtype" value="Goblin Soldier" />
-      <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Each creature you control with a +1/+1 counter on it has menace. (It can't be blocked except by two or more creatures.)</property>
-      <property name="Power" value="4" />
-      <property name="Toughness" value="4" />
-      <property name="Artist" value="Andrea Radeck" />
-      <property name="Number" value="259" />
-      <property name="Packaging" value="Special" />
-      <alternate name="Clap! Snap!" type="adventure">
-        <property name="Cost">
-          <s value="1">{1}</s>
-          <s value="B">{B}</s>
-        </property>
-        <property name="CMC" value="2" />
-        <property name="Color" value="Black" />
-        <property name="Type" value="Sorcery" />
-        <property name="Subtype" value="Adventure" />
-        <property name="Rules">Amass Goblins 2. (Then exile this card. You may cast the creature later from exile.)</property>
-        <property name="Power" value="" />
-        <property name="Toughness" value="" />
-      </alternate>
-    </card>
-    <card name="Head of the Hunt" id="77d2a543-d94f-4814-a60f-72c224e5768a">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="B">{B}</s>
-        <s value="B">{B}</s>
-      </property>
-      <property name="CMC" value="4" />
-      <property name="Color" value="Black" />
-      <property name="Type" value="Creature" />
-      <property name="Subtype" value="Wolf" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">Flash
-If a creature an opponent controls would die, exile it instead. When you do, create a 2/2 green Wolf creature token.</property>
-      <property name="Power" value="4" />
-      <property name="Toughness" value="3" />
-      <property name="Artist" value="Benjamin Ee" />
-      <property name="Number" value="260" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Desert Were-Worm" id="cfe91642-7651-4902-8386-b18cfb506925">
-      <property name="Cost">
-        <s value="4">{4}</s>
-        <s value="R">{R}</s>
-        <s value="R">{R}</s>
-      </property>
-      <property name="CMC" value="6" />
-      <property name="Color" value="Red" />
-      <property name="Type" value="Creature" />
-      <property name="Subtype" value="Dragon Wurm" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">This creature gets +2/+0 for each Mountain you control.
-Whenever you attack with creatures with total power 12 or greater for the first time each turn, untap all attacking creatures. After this phase, there is an additional combat phase.</property>
-      <property name="Power" value="0" />
-      <property name="Toughness" value="5" />
-      <property name="Artist" value="Dibujante Nocturno" />
-      <property name="Number" value="261" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Desolation of Smaug" id="4bb4033e-8b96-4c35-ab03-ff188002ae73">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="R">{R}</s>
-        <s value="R">{R}</s>
-      </property>
-      <property name="CMC" value="4" />
-      <property name="Color" value="Red" />
-      <property name="Type" value="Sorcery" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">Desolation of Smaug deals 3 damage to each non-Dragon creature.
-Add four mana in any combination of colors. Spend this mana only to cast Dragon spells.</property>
-      <property name="Artist" value="Dibujante Nocturno" />
-      <property name="Number" value="262" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Glóin the Mighty" id="5546390b-3957-4e3b-aa64-85692381f53f">
-      <property name="Cost">
-        <s value="3">{3}</s>
-        <s value="R">{R}</s>
-      </property>
-      <property name="CMC" value="4" />
-      <property name="Color" value="Red" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Dwarf Warrior" />
-      <property name="Rarity" value="Uncommon" />
-      <property name="Rules">At the beginning of your first main phase, add <s value="R">{R}</s><s value="R">{R}</s>.</property>
-      <property name="Power" value="4" />
-      <property name="Toughness" value="3" />
-      <property name="Artist" value="Francisco Badilla" />
-      <property name="Number" value="263" />
-      <property name="Packaging" value="Special" />
-      <alternate name="Easy Pickings" type="adventure">
-        <property name="Cost">
-          <s value="2">{2}</s>
-          <s value="R">{R}</s>
-        </property>
-        <property name="CMC" value="3" />
-        <property name="Color" value="Red" />
-        <property name="Type" value="Sorcery" />
-        <property name="Subtype" value="Adventure" />
-        <property name="Rules">Easy Pickings deals 1 damage to each creature your opponents control. (Then exile this card. You may cast the creature later from exile.)</property>
-        <property name="Power" value="" />
-        <property name="Toughness" value="" />
-      </alternate>
-    </card>
-    <card name="Last Light of Durin's Day" id="7cb22e85-8d54-48a9-a006-d6e2f3ff00e1">
-      <property name="Cost">
-        <s value="1">{1}</s>
-        <s value="R">{R}</s>
-      </property>
-      <property name="CMC" value="2" />
-      <property name="Color" value="Red" />
-      <property name="Type" value="Enchantment" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">Whenever a Mountain you control enters, put a quest counter on this enchantment. If it has six or more quest counters on it, sacrifice it. If you do, search your hand and/or library for a Dragon card and put it onto the battlefield. If you search your library this way, shuffle.
-Mountaincycling <s value="2">{2}</s> (<s value="2">{2}</s>, Discard this card: Search your library for a Mountain card, reveal it, put it into your hand, then shuffle.)</property>
-      <property name="Artist" value="Francisco Badilla" />
-      <property name="Number" value="264" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Smaug the Magnificent" id="b6529666-0ec8-45a8-8740-3bffc19d2265">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="R">{R}</s>
-        <s value="R">{R}</s>
-      </property>
-      <property name="CMC" value="4" />
-      <property name="Color" value="Red" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Dragon" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Flying, haste
-Whenever Smaug attacks, he deals damage equal to the number of Treasures you control to any target.
-At the beginning of your upkeep, create a Treasure token.</property>
-      <property name="Power" value="4" />
-      <property name="Toughness" value="3" />
-      <property name="Artist" value="John Tedrick" />
-      <property name="Number" value="265" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Dancing from Dark to Dawn" id="9fa9a9de-ca46-4ea1-8fdb-4ccd3ef86805">
-      <property name="Cost">
-        <s value="3">{3}</s>
-        <s value="G">{G}</s>
-        <s value="G">{G}</s>
-      </property>
-      <property name="CMC" value="5" />
-      <property name="Color" value="Green" />
-      <property name="Type" value="Enchantment" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever you cast a creature spell, put X +1/+1 counters on target creature you control, where X is that spell's mana value.
-Landfall — Whenever a land you control enters, create a 2/2 green Bear creature token.</property>
-      <property name="Artist" value="Francisco Badilla" />
-      <property name="Number" value="267" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="The Notary Hobbits" id="0e88b614-f5b3-4e1e-beed-3c49e366be11">
-      <property name="Cost">
-        <s value="3">{3}</s>
-        <s value="G">{G}</s>
-        <s value="G">{G}</s>
-      </property>
-      <property name="CMC" value="5" />
-      <property name="Color" value="Green" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Halfling Advisor" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">When The Notary Hobbits enter, if they're not a token, create two tokens that are copies of them, except the tokens aren't legendary.
-<s value="T">{T}</s>: Add <s value="C">{C}</s> for each Halfling you control.</property>
-      <property name="Power" value="1" />
-      <property name="Toughness" value="1" />
-      <property name="Artist" value="Ashley Mackenzie" />
-      <property name="Number" value="268" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Thranduil, Sindarin Liege" id="a84cd965-fe5f-42e5-9775-d0285fe84308">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="GU">{G/U}</s>
-        <s value="GU">{G/U}</s>
-      </property>
-      <property name="CMC" value="4" />
-      <property name="Color" value="Hybrid Green Blue" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Elf Noble" />
-      <property name="Rarity" value="Uncommon" />
-      <property name="Rules">Other Elves you control get +1/+1.
-Landfall — Whenever a land you control enters, create a 1/1 green Elf creature token.</property>
-      <property name="Power" value="2" />
-      <property name="Toughness" value="3" />
-      <property name="Artist" value="Cory Godbey" />
-      <property name="Number" value="269" />
-      <property name="Packaging" value="Special" />
-      <alternate name="Silvan Rally" type="adventure">
-        <property name="Cost">
-          <s value="1">{1}</s>
-          <s value="GU">{G/U}</s>
-          <s value="GU">{G/U}</s>
-        </property>
-        <property name="CMC" value="3" />
-        <property name="Color" value="Hybrid Green Blue" />
-        <property name="Type" value="Sorcery" />
-        <property name="Subtype" value="Adventure" />
-        <property name="Rules">Mill four cards, then put up to two land cards from among them into your hand. (Then exile this card. You may cast the creature later from exile.)</property>
-        <property name="Power" value="" />
-        <property name="Toughness" value="" />
-      </alternate>
-    </card>
-    <card name="Orcrist, Goblin-cleaver" id="a496a9e4-8dd7-44a2-a4b2-d4ecfc8ee7c8">
-      <property name="Cost">
-        <s value="3">{3}</s>
-      </property>
-      <property name="CMC" value="3" />
-      <property name="Color" value="Colorless" />
-      <property name="Type" value="Legendary Artifact" />
-      <property name="Subtype" value="Equipment" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Equipped creature gets +2/+2 and has trample.
-Whenever equipped creature deals combat damage to a player, choose a creature type. Create a Treasure token for each creature you control of that type.
-Equip <s value="3">{3}</s></property>
-      <property name="Artist" value="Francisco Badilla" />
-      <property name="Number" value="272" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Sting, Bilbo's Sword" id="7d57f11f-1698-4cf3-bb0e-bd9b0ea8442d">
-      <property name="Cost">
-        <s value="2">{2}</s>
-      </property>
-      <property name="CMC" value="2" />
-      <property name="Color" value="Colorless" />
-      <property name="Type" value="Legendary Artifact" />
-      <property name="Subtype" value="Equipment" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">Flash
-When Sting enters, put a hone counter on Sting for each creature target opponent controls. Attach Sting to up to one target creature you control. (Each hone counter on an Equipment grants +1/+0 to equipped creature.)
-Equip <s value="3">{3}</s></property>
-      <property name="Artist" value="Barbara Rosiak" />
-      <property name="Number" value="273" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Elven Passage" id="75cb4095-b252-49b0-ad2e-0ea52ae4709a">
-      <property name="CMC" value="0" />
-      <property name="Color" value="Colorless" />
-      <property name="Type" value="Land" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">
-        <s value="T">{T}</s>, Pay 1 life, Sacrifice this land: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle. You may behold an Elf. If you do, untap that land. (To behold an Elf, choose an Elf you control or reveal an Elf card from your hand.)</property>
-      <property name="Artist" value="Kristina Carroll" />
-      <property name="Number" value="274" />
-      <property name="Flags" value="C" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Gleaming Splendor" id="42a1986c-9585-4544-b5a7-bee4be5c4506">
-      <property name="Cost">
-        <s value="1">{1}</s>
-        <s value="W">{W}</s>
-      </property>
-      <property name="CMC" value="2" />
-      <property name="Color" value="White" />
-      <property name="Type" value="Enchantment" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever an opponent draws their second card each turn, you create a Treasure token.
-<s value="2">{2}</s><s value="W">{W}</s>: Two target players each draw a card.</property>
-      <property name="Artist" value="James Bousema" />
-      <property name="Number" value="275" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="The Lord of the Eagles" id="b0f29cce-324d-4229-8e29-692594b2e3c7">
-      <property name="Cost">
-        <s value="7">{7}</s>
-        <s value="U">{U}</s>
-        <s value="U">{U}</s>
-      </property>
-      <property name="CMC" value="9" />
-      <property name="Color" value="Blue" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Bird Noble" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">Flash
-This spell costs <s value="X">{X}</s> less to cast, where X is the total power of creatures you control with flying.
-Flying</property>
-      <property name="Power" value="8" />
-      <property name="Toughness" value="8" />
-      <property name="Artist" value="Tyler Jacobson" />
-      <property name="Number" value="276" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Gollum, Riddle Master" id="12d441b7-9349-47a1-b61e-9d563bc085b5">
-      <property name="Cost">
-        <s value="1">{1}</s>
-        <s value="B">{B}</s>
-      </property>
-      <property name="CMC" value="2" />
-      <property name="Color" value="Black" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Halfling Horror" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">As Gollum enters, choose odd or even. (Zero is even.)
-Whenever an opponent casts a spell with mana value of the chosen quality, choose one that hasn't been chosen —
-• Put a +1/+1 counter on Gollum.
-• Each opponent loses 2 life and you gain 2 life.
-• Draw a card.</property>
-      <property name="Power" value="3" />
-      <property name="Toughness" value="1" />
-      <property name="Artist" value="Tyler Jacobson" />
-      <property name="Number" value="277" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Gandalf, Goblins' Bane" id="0db45ef8-5bc5-4914-9918-dae4ebf48153">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="R">{R}</s>
-      </property>
-      <property name="CMC" value="3" />
-      <property name="Color" value="Red" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Avatar Wizard" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Whenever you cast a noncreature spell, Gandalf gets +1/+1 until end of turn and deals 1 damage to each opponent.</property>
-      <property name="Power" value="2" />
-      <property name="Toughness" value="3" />
-      <property name="Artist" value="James Bousema" />
-      <property name="Number" value="278" />
-      <property name="Packaging" value="Special" />
-      <alternate name="Flameshape" type="adventure">
-        <property name="Cost">
-          <s value="1">{1}</s>
-          <s value="R">{R}</s>
-        </property>
-        <property name="CMC" value="2" />
-        <property name="Color" value="Red" />
-        <property name="Type" value="Sorcery" />
-        <property name="Subtype" value="Adventure" />
-        <property name="Rules">Look at the top two cards of your library and exile them face down. For as long as they remain exiled, you may play them if you control a Wizard.</property>
-        <property name="Power" value="" />
-        <property name="Toughness" value="" />
-      </alternate>
-    </card>
-    <card name="Thorin, Mountain-king" id="0e29ba51-763c-48ec-95ec-9d6916f4db44">
-      <property name="Cost">
-        <s value="3">{3}</s>
-        <s value="R">{R}</s>
-      </property>
-      <property name="CMC" value="4" />
-      <property name="Color" value="Red" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Dwarf Noble" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Trample
-When Thorin enters, attach any number of target Equipment you control to target creature you control. When one or more Equipment become attached to that creature this way, that creature deals damage equal to its power to up to one target creature.</property>
-      <property name="Power" value="3" />
-      <property name="Toughness" value="4" />
-      <property name="Artist" value="James Bousema" />
-      <property name="Number" value="279" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Bard, King of Dale" id="f7c75c32-a24f-46e5-9128-2df9a2ec11f9">
-      <property name="Cost">
-        <s value="4">{4}</s>
-        <s value="W">{W}</s>
-        <s value="U">{U}</s>
-      </property>
-      <property name="CMC" value="6" />
-      <property name="Color" value="Multicolor White Blue" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Human Noble Archer" />
-      <property name="Rarity" value="Mythic Rare" />
-      <property name="Rules">Reach, vigilance
-If you would draw a card except the first one you draw in each of your draw steps, draw two cards instead.
-If one or more tokens would be created under your control, twice that many of those tokens are created instead.</property>
-      <property name="Power" value="3" />
-      <property name="Toughness" value="5" />
-      <property name="Artist" value="James Bousema" />
-      <property name="Number" value="280" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Smaug, Wicked Worm" id="5091e2bd-247d-4a1d-adf4-6e66324ee20b">
-      <property name="Cost">
-        <s value="3">{3}</s>
-        <s value="B">{B}</s>
-        <s value="R">{R}</s>
-      </property>
-      <property name="CMC" value="5" />
-      <property name="Color" value="Multicolor Black Red" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Dragon" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">Flying
-When Smaug enters, create X tapped Treasure tokens, where X is the number of artifacts your opponents control.
-Whenever you cast a spell, if mana from a Treasure was spent to cast it, you draw a card and lose 1 life.</property>
-      <property name="Power" value="5" />
-      <property name="Toughness" value="5" />
-      <property name="Artist" value="Tyler Jacobson" />
-      <property name="Number" value="281" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="Thranduil, the Elvenking" id="49539856-989e-4f95-8e67-9cff4408cd87">
-      <property name="Cost">
-        <s value="2">{2}</s>
-        <s value="B">{B}</s>
-        <s value="G">{G}</s>
-        <s value="U">{U}</s>
-      </property>
-      <property name="CMC" value="5" />
-      <property name="Color" value="Multicolor Black Green Blue" />
-      <property name="Type" value="Legendary Creature" />
-      <property name="Subtype" value="Elf Noble" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">Thranduil has all activated abilities of all Elf cards in your graveyard.
-Whenever another legendary Elf you control enters, draw two cards, then discard a card.</property>
-      <property name="Power" value="5" />
-      <property name="Toughness" value="6" />
-      <property name="Artist" value="James Bousema" />
-      <property name="Number" value="282" />
-      <property name="Packaging" value="Special" />
-    </card>
-    <card name="The Lonely Mountain" id="edff761b-2c2a-414f-b0a3-25c3fdbcb0bc">
-      <property name="CMC" value="0" />
-      <property name="Color" value="Colorless" />
-      <property name="Type" value="Land" />
-      <property name="Subtype" value="Mountain" />
-      <property name="Rarity" value="Rare" />
-      <property name="Rules">(<s value="T">{T}</s>: Add <s value="R">{R}</s>.)
-This land enters tapped unless you control an Equipment.
-<s value="4">{4}</s><s value="R">{R}</s>, <s value="T">{T}</s>: Create a 2/2 red Dwarf creature token. This ability costs <s value="1">{1}</s> less to activate for each Equipment you control. Activate only as a sorcery.</property>
-      <property name="Artist" value="Tyler Jacobson" />
-      <property name="Number" value="284" />
-      <property name="Flags" value="R" />
-      <property name="Packaging" value="Special" />
-    </card>
     <card name="Bilbo's Gambit" id="fa74ca8a-8bcd-4dc5-ab2b-a2e18a70978e">
       <property name="Cost">
         <s value="1">{1}</s>
@@ -5252,7 +4614,7 @@ Crew 2 (Tap any number of creatures you control with total power 2 or more: This
       <property name="Subtype" value="Equipment" />
       <property name="Rarity" value="Rare" />
       <property name="Rules">Equipped creature has prowess. (Whenever its controller casts a noncreature spell, that creature gets +1/+1 until end of turn.)
-If an ability of equipped creature triggers, that ability triggers an additional time.
+If a triggered ability of equipped creature triggers, that ability triggers an additional time.
 Equip Wizard <s value="1">{1}</s>
 Equip <s value="3">{3}</s></property>
       <property name="Artist" value="Gaboleps" />

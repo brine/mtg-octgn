@@ -216,19 +216,33 @@ Whenever Augusta attacks, each player exiles a card from their graveyard. When o
       <property name="Number" value="012" />
       <property name="Faction" value="Lorehold" />
     </card>
-    <card name="Eiganjo Dynastorian // Replenish" id="09d1f048-f411-4677-a0dc-dbddd06fe694">
+    <card name="Eiganjo Dynastorian" id="09d1f048-f411-4677-a0dc-dbddd06fe694">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="W">{W}</s> // <s value="3">{3}</s><s value="W">{W}</s></property>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Fox Advisor // Sorcery" />
+      <property name="Subtype" value="Fox Advisor" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Vigilance
+Whenever you attack with two or more creatures, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Aldo Domínguez" />
       <property name="Number" value="013" />
+      <alternate name="Replenish" type="prepare">
+        <property name="Cost">
+          <s value="3">{3}</s>
+          <s value="W">{W}</s>
+        </property>
+        <property name="Color" value="White" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Return all enchantment cards from your graveyard to the battlefield.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Forum Filibuster" id="1c2fcf3e-63ce-45bd-afc4-2c11f54c70c4">
       <property name="Cost">
@@ -294,19 +308,34 @@ Whenever a Spirit you control enters, you may pay <s value="2">{2}</s><s value="
       <property name="Artist" value="Alessandra Pisano" />
       <property name="Number" value="017" />
     </card>
-    <card name="Dirgur Focusmage // Braingeyser" id="7bdabeba-0cfb-4953-b725-50a48164a044">
+    <card name="Dirgur Focusmage" id="7bdabeba-0cfb-4953-b725-50a48164a044">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="U">{U}</s> // <s value="X">{X}</s><s value="U">{U}</s><s value="U">{U}</s></property>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Djinn Monk // Sorcery" />
+      <property name="Subtype" value="Djinn Monk" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Instant and sorcery spells you cast cost <s value="1">{1}</s> less to cast.
+Whenever you cast an instant or sorcery spell with mana value 5 or greater from your hand, this creature becomes prepared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Andrew Mar" />
       <property name="Number" value="018" />
+      <alternate name="Braingeyser" type="prepare">
+        <property name="Cost">
+          <s value="X">{X}</s>
+          <s value="U">{U}</s>
+          <s value="U">{U}</s>
+        </property>
+        <property name="Color" value="Blue" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Target player draws X cards.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Expansion Algorithm" id="ef261999-1c18-46f3-bbd6-72911e14328f">
       <property name="Cost">
@@ -475,19 +504,33 @@ Target player draws a card and loses 1 life.</property>
       <property name="Artist" value="Fajareka Setiawan" />
       <property name="Number" value="028" />
     </card>
-    <card name="Stensian Sanguinist // Exsanguinate" id="909a52bc-53f6-4654-9db7-e8f48333d765">
+    <card name="Stensian Sanguinist" id="909a52bc-53f6-4654-9db7-e8f48333d765">
       <property name="Cost">
         <s value="1">{1}</s>
-        <s value="B">{B}</s> // <s value="X">{X}</s><s value="B">{B}</s><s value="B">{B}</s></property>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Vampire Cleric // Sorcery" />
+      <property name="Subtype" value="Vampire Cleric" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever you attack, target creature gains deathtouch until end of turn. Whenever that creature deals combat damage to a player this combat, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Cristi Balanescu" />
       <property name="Number" value="029" />
+      <alternate name="Exsanguinate" type="prepare">
+        <property name="Cost">
+          <s value="X">{X}</s>
+          <s value="B">{B}</s>
+          <s value="B">{B}</s>
+        </property>
+        <property name="Color" value="Black" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Each opponent loses X life. You gain life equal to the life lost this way.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Advanced Reconstruction" id="cc912fec-827d-4deb-8430-79f5ea31ca9b">
       <property name="Cost">
@@ -537,19 +580,32 @@ For each opponent, create two 3/3 blue and red Elemental creature tokens with fl
       <property name="Number" value="032" />
       <property name="Faction" value="Prismari" />
     </card>
-    <card name="Naktamun Lorespinner // Wheel of Fortune" id="acca1fd4-6384-460e-905f-118f01aa76ed">
+    <card name="Naktamun Lorespinner" id="acca1fd4-6384-460e-905f-118f01aa76ed">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="R">{R}</s> // <s value="2">{2}</s><s value="R">{R}</s></property>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Jackal Wizard // Sorcery" />
+      <property name="Subtype" value="Jackal Wizard" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">At the beginning of your upkeep, if a player has one or fewer cards in hand, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Ekaterina Burmak" />
       <property name="Number" value="033" />
+      <alternate name="Wheel of Fortune" type="prepare">
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="R">{R}</s>
+        </property>
+        <property name="Color" value="Red" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Each player discards their hand, then draws seven cards.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Prismari Pianist" id="7e3e5990-ad48-4be2-af8a-4ff77177758d">
       <property name="Cost">
@@ -722,48 +778,90 @@ At the beginning of your end step, create a number of 1/1 black and green Pest c
       <property name="Number" value="043" />
       <property name="Faction" value="Witherbloom" />
     </card>
-    <card name="Yavimaya Bloomsage // Channel" id="fc962e45-ab71-47e2-b736-644901ffe7d6">
+    <card name="Yavimaya Bloomsage" id="fc962e45-ab71-47e2-b736-644901ffe7d6">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="G">{G}</s> // <s value="G">{G}</s><s value="G">{G}</s></property>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Dryad Druid // Sorcery" />
+      <property name="Subtype" value="Dryad Druid" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">At the beginning of your end step, put a +1/+1 counter on target creature you control. Then if that creature has power 7 or greater, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Justyna Dura" />
       <property name="Number" value="044" />
+      <alternate name="Channel" type="prepare">
+        <property name="Cost">
+          <s value="G">{G}</s>
+          <s value="G">{G}</s>
+        </property>
+        <property name="Color" value="Green" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add <s value="C">{C}</s>.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
-    <card name="Defacing Duskmage // Vandal's Edit" id="c35a1c6f-1656-4619-9ab8-40044c857a7f">
+    <card name="Defacing Duskmage" id="c35a1c6f-1656-4619-9ab8-40044c857a7f">
       <property name="Cost">
         <s value="W">{W}</s>
-        <s value="B">{B}</s> // <s value="1">{1}</s><s value="W">{W}</s><s value="B">{B}</s></property>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor White Black" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Dog Warlock // Instant" />
+      <property name="Subtype" value="Dog Warlock" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Deathtouch
+Whenever an opponent draws their second card each turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Daneen Wilkerson" />
       <property name="Number" value="045" />
+      <alternate name="Vandal's Edit" type="prepare">
+        <property name="Cost">
+          <s value="1">{1}</s>
+          <s value="W">{W}</s>
+          <s value="B">{B}</s>
+        </property>
+        <property name="Color" value="Multicolor White Black" />
+        <property name="Type" value="Instant" />
+        <property name="Rules">Draw two cards. Each player loses 2 life.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
-    <card name="Eccentric Pestfinder // Turn Stones" id="508e1dd7-edbd-4b76-90bc-ff58c55b58a3">
+    <card name="Eccentric Pestfinder" id="508e1dd7-edbd-4b76-90bc-ff58c55b58a3">
       <property name="Cost">
         <s value="2">{2}</s>
         <s value="B">{B}</s>
-        <s value="G">{G}</s> // <s value="B">{B}</s><s value="G">{G}</s></property>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Black Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Troll Druid // Sorcery" />
+      <property name="Subtype" value="Troll Druid" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Trample
+At the beginning of each end step, if you gained life this turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Nereida" />
       <property name="Number" value="046" />
+      <alternate name="Turn Stones" type="prepare">
+        <property name="Cost">
+          <s value="B">{B}</s>
+          <s value="G">{G}</s>
+        </property>
+        <property name="Color" value="Multicolor Black Green" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">For each opponent, you create a 1/1 black and green Pest creature token with "When this token dies, you gain 1 life."</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Immoral Bargain" id="fc01f092-80fb-4643-8ada-c2e5aeb68658">
       <property name="Cost">
@@ -781,48 +879,93 @@ Destroy X target nonland permanents.</property>
       <property name="Number" value="047" />
       <property name="Faction" value="Witherbloom" />
     </card>
-    <card name="Inspired Skypainter // Maestro's Gift" id="7fddd17b-8282-408e-a319-7f0bb437c52e">
+    <card name="Inspired Skypainter" id="7fddd17b-8282-408e-a319-7f0bb437c52e">
       <property name="Cost">
         <s value="U">{U}</s>
-        <s value="R">{R}</s> // <s value="3">{3}</s><s value="U">{U}</s><s value="R">{R}</s></property>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor Blue Red" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Lizard Wizard // Sorcery" />
+      <property name="Subtype" value="Lizard Wizard" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Flying
+When this creature enters and whenever one or more creature tokens you control deal combat damage to a player, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="April Prime" />
       <property name="Number" value="048" />
+      <alternate name="Maestro's Gift" type="prepare">
+        <property name="Cost">
+          <s value="3">{3}</s>
+          <s value="U">{U}</s>
+          <s value="R">{R}</s>
+        </property>
+        <property name="Color" value="Multicolor Blue Red" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Create a token that's a copy of target creature you control. That token gains haste until end of turn.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
-    <card name="Lorehold Archivist // Restore Relic" id="cb535433-f062-4c35-977e-2f896251b1d8">
+    <card name="Lorehold Archivist" id="cb535433-f062-4c35-977e-2f896251b1d8">
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="R">{R}</s>
-        <s value="W">{W}</s> // <s value="2">{2}</s><s value="R">{R}</s><s value="W">{W}</s></property>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Multicolor Red White" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Dwarf Artificer // Sorcery" />
+      <property name="Subtype" value="Dwarf Artificer" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">First strike
+At the beginning of your upkeep, if there are three or more artifact and/or creature cards in your graveyard, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Matheus Graef" />
       <property name="Number" value="049" />
+      <alternate name="Restore Relic" type="prepare">
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="R">{R}</s>
+          <s value="W">{W}</s>
+        </property>
+        <property name="Color" value="Multicolor Red White" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Exile target artifact or creature card from your graveyard. Create a token that's a copy of it.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
-    <card name="Striding Shotcaller // Run the Play" id="159c2891-c1e2-4ec3-8c20-d6b97315dd1c">
+    <card name="Striding Shotcaller" id="159c2891-c1e2-4ec3-8c20-d6b97315dd1c">
       <property name="Cost">
         <s value="G">{G}</s>
-        <s value="U">{U}</s> // <s value="X">{X}</s><s value="G">{G}</s><s value="U">{U}</s></property>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor Green Blue" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Troll Druid // Sorcery" />
+      <property name="Subtype" value="Troll Druid" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Reach
+Whenever one or more creatures you control deal combat damage to a player, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Brian Valeza" />
       <property name="Number" value="050" />
+      <alternate name="Run the Play" type="prepare">
+        <property name="Cost">
+          <s value="X">{X}</s>
+          <s value="G">{G}</s>
+          <s value="U">{U}</s>
+        </property>
+        <property name="Color" value="Multicolor Green Blue" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Put a +1/+1 counter on each of up to X target creatures. Those creatures gain flying until end of turn. Draw a card.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Brass Infiniscope" id="7dbab676-0bc4-47a8-9fd2-1f58c6bd71bd">
       <property name="Cost">
@@ -987,19 +1130,33 @@ Whenever Augusta attacks, each player exiles a card from their graveyard. When o
       <property name="Artist" value="Liiga Smilshkalne" />
       <property name="Number" value="062" />
     </card>
-    <card name="Eiganjo Dynastorian // Replenish" id="f6a504a6-2501-4384-9db9-da6abe1cf81d">
+    <card name="Eiganjo Dynastorian" id="f6a504a6-2501-4384-9db9-da6abe1cf81d">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="W">{W}</s> // <s value="3">{3}</s><s value="W">{W}</s></property>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="White" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Fox Advisor // Sorcery" />
+      <property name="Subtype" value="Fox Advisor" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Vigilance
+Whenever you attack with two or more creatures, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Aldo Domínguez" />
       <property name="Number" value="063" />
+      <alternate name="Replenish" type="prepare">
+        <property name="Cost">
+          <s value="3">{3}</s>
+          <s value="W">{W}</s>
+        </property>
+        <property name="Color" value="White" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Return all enchantment cards from your graveyard to the battlefield.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Forum Filibuster" id="5e3a5d72-afc2-47e7-a3a7-039afaf6f2a2">
       <property name="Cost">
@@ -1064,19 +1221,34 @@ Whenever a Spirit you control enters, you may pay <s value="2">{2}</s><s value="
       <property name="Artist" value="Alessandra Pisano" />
       <property name="Number" value="067" />
     </card>
-    <card name="Dirgur Focusmage // Braingeyser" id="baae3f8f-f282-40db-a1e0-cf6efc70bff0">
+    <card name="Dirgur Focusmage" id="baae3f8f-f282-40db-a1e0-cf6efc70bff0">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="U">{U}</s> // <s value="X">{X}</s><s value="U">{U}</s><s value="U">{U}</s></property>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Blue" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Djinn Monk // Sorcery" />
+      <property name="Subtype" value="Djinn Monk" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Instant and sorcery spells you cast cost <s value="1">{1}</s> less to cast.
+Whenever you cast an instant or sorcery spell with mana value 5 or greater from your hand, this creature becomes prepared.</property>
       <property name="Power" value="1" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Andrew Mar" />
       <property name="Number" value="068" />
+      <alternate name="Braingeyser" type="prepare">
+        <property name="Cost">
+          <s value="X">{X}</s>
+          <s value="U">{U}</s>
+          <s value="U">{U}</s>
+        </property>
+        <property name="Color" value="Blue" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Target player draws X cards.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Expansion Algorithm" id="06147ee1-0fe8-4daf-962a-317dc908add5">
       <property name="Cost">
@@ -1226,19 +1398,33 @@ Target player draws a card and loses 1 life.</property>
       <property name="Artist" value="Fajareka Setiawan" />
       <property name="Number" value="077" />
     </card>
-    <card name="Stensian Sanguinist // Exsanguinate" id="66d88104-c69d-4349-a4ae-4a3d855a3536">
+    <card name="Stensian Sanguinist" id="66d88104-c69d-4349-a4ae-4a3d855a3536">
       <property name="Cost">
         <s value="1">{1}</s>
-        <s value="B">{B}</s> // <s value="X">{X}</s><s value="B">{B}</s><s value="B">{B}</s></property>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Black" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Vampire Cleric // Sorcery" />
+      <property name="Subtype" value="Vampire Cleric" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Whenever you attack, target creature gains deathtouch until end of turn. Whenever that creature deals combat damage to a player this combat, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Cristi Balanescu" />
       <property name="Number" value="078" />
+      <alternate name="Exsanguinate" type="prepare">
+        <property name="Cost">
+          <s value="X">{X}</s>
+          <s value="B">{B}</s>
+          <s value="B">{B}</s>
+        </property>
+        <property name="Color" value="Black" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Each opponent loses X life. You gain life equal to the life lost this way.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Fateful Tempest" id="336ea696-43af-4efd-981a-6bf44c0a4286">
       <property name="Cost">
@@ -1268,19 +1454,32 @@ For each opponent, create two 3/3 blue and red Elemental creature tokens with fl
       <property name="Artist" value="Loïc Canavaggia" />
       <property name="Number" value="080" />
     </card>
-    <card name="Naktamun Lorespinner // Wheel of Fortune" id="f562fbca-9446-4074-bf00-faf581a18c72">
+    <card name="Naktamun Lorespinner" id="f562fbca-9446-4074-bf00-faf581a18c72">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="R">{R}</s> // <s value="2">{2}</s><s value="R">{R}</s></property>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Red" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Jackal Wizard // Sorcery" />
+      <property name="Subtype" value="Jackal Wizard" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">At the beginning of your upkeep, if a player has one or fewer cards in hand, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="3" />
       <property name="Artist" value="Ekaterina Burmak" />
       <property name="Number" value="081" />
+      <alternate name="Wheel of Fortune" type="prepare">
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="R">{R}</s>
+        </property>
+        <property name="Color" value="Red" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Each player discards their hand, then draws seven cards.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Prismari Pianist" id="6d3bfd1b-8ea8-43ad-8785-af29c807c935">
       <property name="Cost">
@@ -1447,48 +1646,90 @@ At the beginning of your end step, create a number of 1/1 black and green Pest c
       <property name="Artist" value="Steve Ellis" />
       <property name="Number" value="091" />
     </card>
-    <card name="Yavimaya Bloomsage // Channel" id="c243c2c4-f227-42a8-8b78-5f4b761106c2">
+    <card name="Yavimaya Bloomsage" id="c243c2c4-f227-42a8-8b78-5f4b761106c2">
       <property name="Cost">
         <s value="2">{2}</s>
-        <s value="G">{G}</s> // <s value="G">{G}</s><s value="G">{G}</s></property>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Dryad Druid // Sorcery" />
+      <property name="Subtype" value="Dryad Druid" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">At the beginning of your end step, put a +1/+1 counter on target creature you control. Then if that creature has power 7 or greater, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Justyna Dura" />
       <property name="Number" value="092" />
+      <alternate name="Channel" type="prepare">
+        <property name="Cost">
+          <s value="G">{G}</s>
+          <s value="G">{G}</s>
+        </property>
+        <property name="Color" value="Green" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Until end of turn, any time you could activate a mana ability, you may pay 1 life. If you do, add <s value="C">{C}</s>.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
-    <card name="Defacing Duskmage // Vandal's Edit" id="91493530-bc0a-4ed1-8a4a-9a732fcb3752">
+    <card name="Defacing Duskmage" id="91493530-bc0a-4ed1-8a4a-9a732fcb3752">
       <property name="Cost">
         <s value="W">{W}</s>
-        <s value="B">{B}</s> // <s value="1">{1}</s><s value="W">{W}</s><s value="B">{B}</s></property>
+        <s value="B">{B}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor White Black" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Dog Warlock // Instant" />
+      <property name="Subtype" value="Dog Warlock" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Deathtouch
+Whenever an opponent draws their second card each turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Daneen Wilkerson" />
       <property name="Number" value="093" />
+      <alternate name="Vandal's Edit" type="prepare">
+        <property name="Cost">
+          <s value="1">{1}</s>
+          <s value="W">{W}</s>
+          <s value="B">{B}</s>
+        </property>
+        <property name="Color" value="Multicolor White Black" />
+        <property name="Type" value="Instant" />
+        <property name="Rules">Draw two cards. Each player loses 2 life.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
-    <card name="Eccentric Pestfinder // Turn Stones" id="d9e6b777-e0f6-47e1-808e-81850039d891">
+    <card name="Eccentric Pestfinder" id="d9e6b777-e0f6-47e1-808e-81850039d891">
       <property name="Cost">
         <s value="2">{2}</s>
         <s value="B">{B}</s>
-        <s value="G">{G}</s> // <s value="B">{B}</s><s value="G">{G}</s></property>
+        <s value="G">{G}</s>
+      </property>
       <property name="CMC" value="4" />
       <property name="Color" value="Multicolor Black Green" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Troll Druid // Sorcery" />
+      <property name="Subtype" value="Troll Druid" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Trample
+At the beginning of each end step, if you gained life this turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="5" />
       <property name="Toughness" value="5" />
       <property name="Artist" value="Nereida" />
       <property name="Number" value="094" />
+      <alternate name="Turn Stones" type="prepare">
+        <property name="Cost">
+          <s value="B">{B}</s>
+          <s value="G">{G}</s>
+        </property>
+        <property name="Color" value="Multicolor Black Green" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">For each opponent, you create a 1/1 black and green Pest creature token with "When this token dies, you gain 1 life."</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Immoral Bargain" id="9d475a98-4561-4cbc-bd60-c3bfc33725be">
       <property name="Cost">
@@ -1505,48 +1746,93 @@ Destroy X target nonland permanents.</property>
       <property name="Artist" value="Diana Franco" />
       <property name="Number" value="095" />
     </card>
-    <card name="Inspired Skypainter // Maestro's Gift" id="29d2186c-c5fb-4439-95c6-ffe46b6dded9">
+    <card name="Inspired Skypainter" id="29d2186c-c5fb-4439-95c6-ffe46b6dded9">
       <property name="Cost">
         <s value="U">{U}</s>
-        <s value="R">{R}</s> // <s value="3">{3}</s><s value="U">{U}</s><s value="R">{R}</s></property>
+        <s value="R">{R}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor Blue Red" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Lizard Wizard // Sorcery" />
+      <property name="Subtype" value="Lizard Wizard" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Flying
+When this creature enters and whenever one or more creature tokens you control deal combat damage to a player, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="2" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="April Prime" />
       <property name="Number" value="096" />
+      <alternate name="Maestro's Gift" type="prepare">
+        <property name="Cost">
+          <s value="3">{3}</s>
+          <s value="U">{U}</s>
+          <s value="R">{R}</s>
+        </property>
+        <property name="Color" value="Multicolor Blue Red" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Create a token that's a copy of target creature you control. That token gains haste until end of turn.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
-    <card name="Lorehold Archivist // Restore Relic" id="e6498b64-7178-43e1-b317-0ad03f894db3">
+    <card name="Lorehold Archivist" id="e6498b64-7178-43e1-b317-0ad03f894db3">
       <property name="Cost">
         <s value="1">{1}</s>
         <s value="R">{R}</s>
-        <s value="W">{W}</s> // <s value="2">{2}</s><s value="R">{R}</s><s value="W">{W}</s></property>
+        <s value="W">{W}</s>
+      </property>
       <property name="CMC" value="3" />
       <property name="Color" value="Multicolor Red White" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Dwarf Artificer // Sorcery" />
+      <property name="Subtype" value="Dwarf Artificer" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">First strike
+At the beginning of your upkeep, if there are three or more artifact and/or creature cards in your graveyard, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="3" />
       <property name="Toughness" value="2" />
       <property name="Artist" value="Matheus Graef" />
       <property name="Number" value="097" />
+      <alternate name="Restore Relic" type="prepare">
+        <property name="Cost">
+          <s value="2">{2}</s>
+          <s value="R">{R}</s>
+          <s value="W">{W}</s>
+        </property>
+        <property name="Color" value="Multicolor Red White" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Exile target artifact or creature card from your graveyard. Create a token that's a copy of it.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
-    <card name="Striding Shotcaller // Run the Play" id="34303632-6062-4f6e-aeb4-bea74b7da0d7">
+    <card name="Striding Shotcaller" id="34303632-6062-4f6e-aeb4-bea74b7da0d7">
       <property name="Cost">
         <s value="G">{G}</s>
-        <s value="U">{U}</s> // <s value="X">{X}</s><s value="G">{G}</s><s value="U">{U}</s></property>
+        <s value="U">{U}</s>
+      </property>
       <property name="CMC" value="2" />
       <property name="Color" value="Multicolor Green Blue" />
       <property name="Type" value="Creature" />
-      <property name="Subtype" value="Troll Druid // Sorcery" />
+      <property name="Subtype" value="Troll Druid" />
       <property name="Rarity" value="Rare" />
+      <property name="Rules">Reach
+Whenever one or more creatures you control deal combat damage to a player, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)</property>
       <property name="Power" value="0" />
       <property name="Toughness" value="4" />
       <property name="Artist" value="Brian Valeza" />
       <property name="Number" value="098" />
+      <alternate name="Run the Play" type="prepare">
+        <property name="Cost">
+          <s value="X">{X}</s>
+          <s value="G">{G}</s>
+          <s value="U">{U}</s>
+        </property>
+        <property name="Color" value="Multicolor Green Blue" />
+        <property name="Type" value="Sorcery" />
+        <property name="Rules">Put a +1/+1 counter on each of up to X target creatures. Those creatures gain flying until end of turn. Draw a card.</property>
+        <property name="Power" value="" />
+        <property name="Toughness" value="" />
+      </alternate>
     </card>
     <card name="Brass Infiniscope" id="549f89a5-1558-4ce5-a579-329e89eeb8aa">
       <property name="Cost">
