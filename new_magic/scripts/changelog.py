@@ -589,5 +589,8 @@ changelog = {
         ]),
     3060342: ("3.6.3.42", "September 25 2026", [
         "Fix for broken Jace token",
+        ]),
+    3060343: ("3.6.3.43", "October 25 2026", [
+        "Fixed prepared cards missing card text",
         ])
 }
