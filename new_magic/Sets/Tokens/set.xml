@@ -273,8 +273,13 @@
             <property name="Power" value="3" />
             <property name="Toughness" value="3" />
             <property name="Artist" value="Lars Grant-West" />
-                <property name="Number" value="12" />
-                <property name="Flags" value="T2XM"/>
+			<property name="Number" value="12" />
+			<property name="Flags" value="T2XM"/>
+            <alternate name="Ape" type="1">
+                <property name="Artist" value="Brooklyn Smith" />
+                <property name="Number" value="3" />
+                <property name="Flags" value="TTRC"/>
+            </alternate>
         </card>
         <card name="Ape Villain" id="5cbd19a3-2547-4a41-b62c-b919f284253a">
             <property name="Color" value="Red" />
@@ -690,6 +695,11 @@ Equip <s value="2">{2}</s></property>
                 <property name="Artist" value="Thomas Chamberlain-Keen" />
                 <property name="Number" value="11" />
                 <property name="Flags" value="TMSC"/>
+            </alternate>
+            <alternate name="Beast" type="13">
+                <property name="Artist" value="Arthur Yuan" />
+                <property name="Number" value="4" />
+                <property name="Flags" value="TTRC"/>
             </alternate>
         </card>
         <card name="Beast" id="4f864f66-b573-4b03-8c6a-90918baf8d23">
@@ -1164,6 +1174,22 @@ Whenever this creature attacks, target attacking creature gains flying until end
             <property name="Number" value="10" />
             <property name="Flags" value="TAFR"/>
         </card>
+        <card name="Borg" id="af058113-d514-4433-ba72-ca6cd029a38c">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Borg" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Edouard" />
+            <property name="Number" value="19" />
+            <property name="Flags" value="TTRK"/>
+            <alternate name="Borg" type="1">
+                <property name="Artist" value="Henry Peters" />
+                <property name="Number" value="20" />
+                <property name="Flags" value="TTRK" />
+            </alternate>
+        </card>
         <card name="Brainiac" id="4021e93c-a09d-4564-b5f7-d337e4c7d188">
             <property name="Color" value="Red" />
             <property name="Type" value="Creature" />
@@ -1529,6 +1555,11 @@ Whenever this creature attacks, target attacking creature gains flying until end
             <property name="Artist" value="Maria Poliakova" />
             <property name="Number" value="12" />
             <property name="Flags" value="TSNC"/>
+			<alternate name="Citizen" type="1">
+				<property name="Artist" value="Charles Chaisson" />
+                <property name="Number" value="6" />
+                <property name="Flags" value="TTRC"/>
+            </alternate>
         </card>
         <card name="City's Blessing" id="ba64ed3e-93c5-406f-a38d-65cc68472122">
             <property name="Color" value="Colorless" />
@@ -1779,6 +1810,16 @@ Whenever this creature attacks, target attacking creature gains flying until end
                 <property name="Artist" value="Rafater" />
                 <property name="Number" value="17" />
                 <property name="Flags" value="TMSH"/>
+            </alternate>
+            <alternate name="Clue" type="32">
+                <property name="Artist" value="Joel Chaim Holtzman" />
+                <property name="Number" value="21" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
+            <alternate name="Clue" type="33">
+                <property name="Artist" value="Flavio Greco Paglia" />
+                <property name="Number" value="22" />
+                <property name="Flags" value="TTRK"/>
             </alternate>
         </card>
         <card name="Construct" id="e7ef7715-68bd-4aa5-872f-72405170d522">
@@ -3816,6 +3857,11 @@ Whenever this creature deals combat damage to a player, gain control of target a
                 <property name="Number" value="19" />
                 <property name="Flags" value="TMSH" />
             </alternate>
+            <alternate name="Food" type="32">
+                <property name="Artist" value="Flavio Greco Paglia" />
+                <property name="Number" value="23" />
+                <property name="Flags" value="TTRK" />
+            </alternate>
         </card>
         <card name="Forest Dryad" id="25845c50-fb84-4290-9ac8-553a73765cb1">
             <property name="Color" value="Green" />
@@ -4950,6 +4996,18 @@ Whenever this creature deals combat damage to a player, gain control of target a
             <property name="Number" value="0" />
             <property name="Flags" value="TTMP?"/>
         </card>
+        <card name="Human" id="07af55b8-dd48-43df-93a2-b303145c058c">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Human" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Permanents can't phase in.</property>
+            <property name="Power" value="0" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="David Alvarez" />
+            <property name="Number" value="1" />
+            <property name="Flags" value="TTRK"/>
+        </card>
         <card name="Human" id="b5ac6482-c72f-42c6-a5b6-983f4ecf5016">
             <property name="Color" value="White" />
             <property name="Type" value="Creature" />
@@ -5339,6 +5397,17 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
             <property name="Number" value="2" />
             <property name="Flags" value="TXLN"/>
         </card>    
+        <card name="Illusion" id="37f0a7ee-1795-4455-918e-bbcdd7c5aa8c">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Illusion" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="3" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Flavio Greco Paglia" />
+            <property name="Number" value="24" />
+            <property name="Flags" value="TTRK"/>
+        </card>    
         <card name="Illusion Villain" id="bd8eb68a-68e3-4346-a9cc-40335f2ce652">
             <property name="Color" value="Blue" />
             <property name="Type" value="Creature" />
@@ -5528,6 +5597,11 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
                 <property name="Artist" value="Milivoj Ceran" />
                 <property name="Number" value="12" />
                 <property name="Flags" value="TMSH"/>
+            </alternate>
+            <alternate name="Insect" type="10">
+                <property name="Artist" value="Kevin Glint" />
+                <property name="Number" value="5" />
+                <property name="Flags" value="TTRC"/>
             </alternate>
         </card>
         <card name="Insect" id="2bce1692-5bba-4c10-8e72-2f8c7107bca0">
@@ -5742,6 +5816,28 @@ When this creature enters the battlefield, it deals 1 damage to any target.</pro
 				<property name="Artist" value="Randy Gallegos" />
                 <property name="Number" value="1" />
                 <property name="Flags" value="TSHM"/>
+            </alternate>
+        </card>
+        <card name="Klingon Warrior" id="f189ac32-40b8-4271-be60-b005c1883378">
+            <property name="Color" value="Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Klingon Warrior" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Haste</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Ariel Orea" />
+            <property name="Number" value="3" />
+            <property name="Flags" value="TTRK"/>
+            <alternate name="Klingon Warrior" type="1">
+				<property name="Artist" value="Carlos C Diaz" />
+                <property name="Number" value="4" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
+            <alternate name="Klingon Warrior" type="2">
+				<property name="Artist" value="Henry Peters" />
+                <property name="Number" value="5" />
+                <property name="Flags" value="TTRK"/>
             </alternate>
         </card>
         <card name="Knight" id="b02c687e-33ad-4821-a005-d93b5d38263a">
@@ -6502,6 +6598,17 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Number" value="9" />
             <property name="Flags" value="TEOE"/>
         </card>
+        <card name="Murf" id="9414eaa4-74f0-4e1f-a8c9-0f15ba4ba7df">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Legendary Creature" />
+            <property name="Rarity" value="Ooze Slug" />
+            <property name="Rules">Indestructible</property>
+            <property name="Power" value="0" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Leesha Hannigan" />
+            <property name="Number" value="16" />
+            <property name="Flags" value="TTRK"/>
+        </card>
         <card name="Mutavault" id="7d6f9ad3-4ec0-4dd2-b771-3354ce011e3b">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Land" />
@@ -6555,6 +6662,26 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Artist" value="Raymond Swanland" />
             <property name="Number" value="6" />
             <property name="Flags" value="TWOE"/>
+        </card>
+        <card name="Neuroflux Heirloom" id="9eccf5e9-ba65-40cb-a5f5-0ec66f76be6d">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact" />
+            <property name="Subtype" value="Equipment" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Equipped creature gets +1/+1.
+            Equip <s value="2">{2}</s></property>
+            <property name="Artist" value="David Frasheski" />
+            <property name="Number" value="25" />
+            <property name="Flags" value="TTRK"/>
+        </card>
+        <card name="New Planet" id="c6ce1759-ae6b-40e2-9e77-573b88ec4e5d">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Land" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules"><s value="T">{T}</s>: Add one mana of any color.</property>
+            <property name="Artist" value="David Frasheski" />
+            <property name="Number" value="27" />
+            <property name="Flags" value="TTRK"/>
         </card>
         <card name="Nightmare" id="7982eddd-ed2d-46ef-b79c-7e328106c2fa">
             <property name="Color" value="Black" />
@@ -6679,6 +6806,62 @@ Flying, vigilance, trample, lifelink, haste</property>
             <property name="Artist" value="Dallas Williams" />
             <property name="Number" value="6" />
             <property name="Flags" value="TSNC"/>
+        </card>
+        <card name="Officer" id="f4d41366-d0eb-4f26-a87c-113d74c2139d">
+            <property name="Color" value="Red" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Officer" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Arthur Yuan" />
+			<property name="Number" value="6" />
+			<property name="Flags" value="TTRK"/>
+            <alternate name="Officer" type="1">
+                <property name="Artist" value="Nia Kovalevski" />
+                <property name="Number" value="7" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
+            <alternate name="Officer" type="2">
+                <property name="Artist" value="Nathaniel Himawan" />
+                <property name="Number" value="8" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
+            <alternate name="Officer" type="3">
+                <property name="Artist" value="Carlos Dattoli" />
+                <property name="Number" value="9" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
+            <alternate name="Officer" type="4">
+                <property name="Artist" value="Benjamin Ee" />
+                <property name="Number" value="10" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
+            <alternate name="Officer" type="5">
+                <property name="Artist" value="Charles Chaisson" />
+                <property name="Number" value="11" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
+            <alternate name="Officer" type="6">
+                <property name="Artist" value="Mushk Rizvi" />
+                <property name="Number" value="12" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
+            <alternate name="Officer" type="7">
+                <property name="Artist" value="Gregg Schigiel" />
+                <property name="Number" value="13" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
+            <alternate name="Officer" type="8">
+                <property name="Artist" value="Mushk Rizvi" />
+                <property name="Number" value="14" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
+            <alternate name="Officer" type="9">
+                <property name="Artist" value="Carlos Dattoli" />
+                <property name="Number" value="15" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
         </card>
         <card name="Ooze" id="206a2ff4-b577-4a5c-b52f-657ac510dac6">
             <property name="Color" value="Green" />
@@ -7337,6 +7520,16 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Number" value="0" />
             <property name="Flags" value="TLEG?"/>
         </card>
+        <card name="Porthos" id="00622f1f-788f-45c0-a4ef-a1cab7d5f836">
+            <property name="Color" value="Green" />
+            <property name="Type" value="Legendary Creature" />
+            <property name="Rarity" value="Dog" />
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Brooklyn Smith" />
+            <property name="Number" value="17" />
+            <property name="Flags" value="TTRK"/>
+        </card>
         <card name="Powerstone" id="c93bd99e-4eae-45aa-8c4c-2a0263e7d312">
             <property name="Color" value="Colorless" />
             <property name="Type" value="Artifact" />
@@ -7718,6 +7911,17 @@ Toxic 1 <i>(Players dealt combat damage by this creature also get a poison count
             <property name="Faction" value="Agentsofsneak" />
             <property name="Number" value="7" />
             <property name="Flags" value="TUST"/>
+        </card>
+        <card name="Romulan" id="5d695b9e-bd9a-4dcb-a70a-70eaac9d9ca2">
+            <property name="Color" value="Black" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Romulan" />
+            <property name="Rarity" value="Token" />
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Ariel Orea" />
+            <property name="Number" value="2" />
+            <property name="Flags" value="TTRK"/>
         </card>
         <card name="Rukh" id="64abc862-a3f4-4b4f-b137-33c2508e3eef">
             <property name="Color" value="Red" />
@@ -8698,6 +8902,18 @@ When this creature dies, create fourteen Treasure tokens.</property>
             <property name="Artist" value="Kekai Kotaki" />
             <property name="Number" value="1" />
             <property name="Flags" value="TWWK"/>
+        </card>
+        <card name="Spacecraft Illusion" id="2d37188f-9676-4f03-a1d7-8985f0cfc810">
+            <property name="Color" value="Colorless" />
+            <property name="Type" value="Artifact Creature" />
+            <property name="Subtype" value="Spacecraft Illusion" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">Flying</property>
+            <property name="Power" value="4" />
+            <property name="Toughness" value="3" />
+            <property name="Artist" value="Enora Mercier" />
+            <property name="Number" value="7" />
+            <property name="Flags" value="TTRC"/>
         </card>
         <card name="Spark Elemental" id="caecab65-fca4-40e3-8a7a-d2fd19a90bca">
             <property name="Color" value="Red" />
@@ -10004,6 +10220,11 @@ Equip <s value="2">{2}</s></property>
                 <property name="Number" value="13" />
                 <property name="Flags" value="THOB"/>
             </alternate>
+            <alternate name="Treasure" type="50">
+                <property name="Artist" value="David Frasheski" />
+                <property name="Number" value="26" />
+                <property name="Flags" value="TTRK"/>
+            </alternate>
         </card>
         <card name="Treefolk" id="4d654a81-324b-4f57-bf9b-65c372e0e424">
             <property name="Color" value="Green" />
@@ -10058,9 +10279,9 @@ Equip <s value="2">{2}</s></property>
             <property name="Number" value="3" />
             <property name="Flags" value="TMOR"/>
             <alternate name="Treefolk Shaman" type="1">
-                    <property name="Artist" value="Zack Stella" />
+				<property name="Artist" value="Zack Stella" />
                 <property name="Number" value="13" />
-                <property name="Flags" value="TMMA"/>
+				<property name="Flags" value="TMMA"/>
             </alternate>
         </card>
         <card name="Treefolk Warrior" id="d5fc0edf-c35f-467f-b092-61993ba98d31">
@@ -10074,6 +10295,18 @@ Equip <s value="2">{2}</s></property>
             <property name="Artist" value="Todd Lockwood" />
             <property name="Number" value="11" />
             <property name="Flags" value="TM15"/>
+        </card>
+        <card name="Tribble" id="4e266daa-9d03-4195-ad54-44e600eb67dd">
+            <property name="Color" value="White" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Tribble" />
+            <property name="Rarity" value="Token" />
+            <property name="Rules">This token can't block.</property>
+            <property name="Power" value="1" />
+            <property name="Toughness" value="1" />
+            <property name="Artist" value="Kevin Glint" />
+            <property name="Number" value="2" />
+            <property name="Flags" value="TTRC"/>
         </card>
         <card name="Triskelavite" id="fc10ee80-bee6-45da-a4c6-f55817043117">
             <property name="Color" value="Colorless" />
@@ -10108,8 +10341,8 @@ Equip <s value="2">{2}</s></property>
             <property name="Power" value="5" />
             <property name="Toughness" value="5" />
             <property name="Artist" value="Franz Vohwinkel" />
-                <property name="Number" value="28" />
-                <property name="Flags" value="T2XM"/>
+			<property name="Number" value="28" />
+			<property name="Flags" value="T2XM"/>
         </card>
         <card name="Twin" id="d04b89a0-704f-464e-92ca-4a9b37d1bc48">
             <property name="Color" value="Colorless" />
@@ -10803,6 +11036,18 @@ Equip <s value="2">{2}</s></property>
             <property name="Artist" value="Ron Orlando" />
             <property name="Number" value="0" />
             <property name="Flags" value="TLEG?"/>
+        </card>
+        <card name="Worm" id="773fc1db-9eae-40cf-b10c-b7ac867df4f9">
+            <property name="Color" value="Multicolor Red Green" />
+            <property name="Type" value="Creature" />
+            <property name="Subtype" value="Worm" />
+            <property name="Rarity" value="Token" />
+			<property name="Rules">This token can't block.</property>
+            <property name="Power" value="2" />
+            <property name="Toughness" value="2" />
+            <property name="Artist" value="Leesha Hannigan" />
+            <property name="Number" value="18" />
+            <property name="Flags" value="TTRK"/>
         </card>
         <card name="Worm" id="fd6aa5b4-3be4-4826-91af-48ad8472216a">
             <property name="Color" value="Multicolor Black Green" />

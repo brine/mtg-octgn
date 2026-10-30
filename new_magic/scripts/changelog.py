@@ -592,5 +592,8 @@ changelog = {
         ]),
     3060343: ("3.6.3.43", "October 25 2026", [
         "Fixed prepared cards missing card text",
+        ]),
+    3060344: ("3.6.3.44", "October 30 2026", [
+        "Added TRK and TRC",
         ])
 }
